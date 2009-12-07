@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Copyright (c) 2009, Intalio Inc.
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+  
+ Contributors:
+    Intalio Inc. - initial API and implementation
+ 
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.omg.org/bpmn20"
+            class="org.eclipse.mdt.bpmn2.Bpmn2Package"
+            genModel="model/bpmn2.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="bpmn"
+            class="org.eclipse.mdt.bpmn2.util.Bpmn2ResourceFactoryImpl"/>
+   </extension>
+
+</plugin>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"
+	xmlns="http://www.omg.org/bpmn20" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.omg.org/bpmn20">
+	
+	<xsd:include schemaLocation="../../Core/Infrastructure/Infrastructure.xsd"/>
+	<xsd:include schemaLocation="../../Core/Common/Common.xsd"/>
+	<xsd:include schemaLocation="../../Choreography/Choreography.xsd"/>
+	
+	<xsd:element name="conversation" type="tConversation" substitutionGroup="rootElement"/>
+	<xsd:complexType name="tConversation">
+		<xsd:complexContent>
+			<xsd:extension base="tRootElement">
+				<xsd:sequence>
+					<xsd:element name="childConversationRef" type="xsd:QName" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="participantRef" type="xsd:QName" minOccurs="2" maxOccurs="unbounded"/>
+					<xsd:element name="messageFlowRef" type="xsd:QName" minOccurs="0" maxOccurs="unbounded"/>
+               <!-- MK 2009.03.11 – Change correlationSet to correlationKey, adapted cardinality -->
+					<xsd:element name="correlationKeyRef" type="xsd:QName" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:element name="conversationLink" type="tConversationLink"/>
+	<xsd:complexType name="tConversationLink">
+		<xsd:complexContent>
+			<xsd:extension base="tBaseElement">
+				<xsd:attribute name="participantRef" type="xsd:QName" use="required"/>
+				<xsd:attribute name="conversationRef" type="xsd:QName" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:element name="conversationView" type="tConversationView"/>
+	<xsd:complexType name="tConversationView">
+		<xsd:complexContent>
+			<xsd:extension base="tCollaboration">
+				<xsd:sequence>
+					<xsd:element name="conversationRef" type="xsd:QName" minOccurs="2" maxOccurs="unbounded"/>
+					<xsd:element ref="conversationLink" minOccurs="2" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+</xsd:schema>

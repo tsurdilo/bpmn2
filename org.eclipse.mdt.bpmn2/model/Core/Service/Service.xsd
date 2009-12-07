@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"
+	xmlns="http://www.omg.org/bpmn20" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.omg.org/bpmn20">
+	
+	<xsd:include schemaLocation="../../Core/Infrastructure/Infrastructure.xsd"/>
+	
+	<xsd:element name="endPoint" type="tEndPoint" substitutionGroup="rootElement"/>
+	<xsd:complexType name="tEndPoint">
+		<xsd:complexContent>
+			<xsd:extension base="tRootElement"/>
+		</xsd:complexContent>
+	</xsd:complexType>		
+	
+	<xsd:element name="interface" type="tInterface" substitutionGroup="rootElement"/>
+	<xsd:complexType name="tInterface">
+		<xsd:complexContent>
+			<xsd:extension base="tRootElement">
+				<xsd:sequence>
+					<xsd:element ref="operation" minOccurs="1" maxOccurs="unbounded"/>
+				</xsd:sequence>
+				<xsd:attribute name="name" type="xsd:string" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:element name="operation" type="tOperation"/>
+	<xsd:complexType name="tOperation">
+		<xsd:complexContent>
+			<xsd:extension base="tBaseElement">
+				<xsd:sequence>
+					<xsd:element name="inMessageRef" type="xsd:QName" minOccurs="1" maxOccurs="1"/>
+					<xsd:element name="outMessageRef" type="xsd:QName" minOccurs="0" maxOccurs="1"/>
+					<xsd:element name="errorRef" type="xsd:QName" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+				<xsd:attribute name="name" type="xsd:string" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:element name="serviceReference" type="tServiceReference" substitutionGroup="rootElement"/>
+	<xsd:complexType name="tServiceReference">
+		<xsd:complexContent>
+			<xsd:extension base="tRootElement">
+				<xsd:sequence>
+					<xsd:element name="interfaceRef" type="xsd:QName" minOccurs="1" maxOccurs="1"/>
+					<xsd:element name="endPointRef" type="xsd:QName" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+				<xsd:attribute name="name" type="xsd:string" use="required"/>
+				<xsd:attribute name="implementation" type="tServiceImplementation"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>	
+	
+	<xsd:simpleType name="tServiceImplementation">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="WebService"/>
+			<xsd:enumeration value="Other"/>
+			<xsd:enumeration value="Unspecified"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+</xsd:schema>

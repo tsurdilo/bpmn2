@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"
+	xmlns="http://www.omg.org/bpmn20" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.omg.org/bpmn20">
+	
+	<xsd:include schemaLocation="../Core/Infrastructure/Infrastructure.xsd"/>
+	<xsd:include schemaLocation="../Choreography/Choreography.xsd"/>
+	
+	<xsd:element name="collaboration" type="tCollaboration" substitutionGroup="rootElement"/>
+	<xsd:complexType name="tCollaboration">
+		<xsd:complexContent>
+			<xsd:extension base="tRootElement">
+				<xsd:sequence>
+					<!-- MK Changed pool from reference (QName) to containment, adapting name to participant, according to schema of 0.9.7 spec, plus issue BPMN-4xx -->
+					<xsd:element ref="participant" minOccurs="2" maxOccurs="unbounded"/>
+					<xsd:element ref="messageFlow" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="artifact" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+				<xsd:attribute name="name" type="xsd:string"/>
+				<xsd:attribute name="choreographyRef" type="xsd:QName" use="optional"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+</xsd:schema>

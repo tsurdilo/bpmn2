@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"
+	xmlns="http://www.omg.org/bpmn20" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.omg.org/bpmn20">
+	
+	<xsd:include schemaLocation="../../Infrastructure/Infrastructure.xsd"/>
+	<xsd:include schemaLocation="../Common.xsd"/>
+	
+	<xsd:element name="boundaryEvent" type="tBoundaryEvent" substitutionGroup="flowElement"/>
+	<xsd:complexType name="tBoundaryEvent">
+		<xsd:complexContent>
+			<xsd:extension base="tCatchEvent">
+				<xsd:attribute name="cancelActivity" type="xsd:boolean" default="true"/>
+				<xsd:attribute name="attachedToRef" type="xsd:QName"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>			
+
+	<xsd:element name="cancelEventDefinition" type="tCancelEventDefinition" substitutionGroup="eventDefinition"/>
+	<xsd:complexType name="tCancelEventDefinition">
+		<xsd:complexContent>
+			<xsd:extension base="tEventDefinition"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+        <!-- RM: Added dataOutput element -->
+        <!-- MK 2009.03.18 Added inline eventDefinition, renamed trigger to eventDefinitionRef – as per BPMN-463 -->
+	<xsd:element name="catchEvent" type="tCatchEvent"/>
+	<xsd:complexType name="tCatchEvent" abstract="true">
+		<xsd:complexContent>
+			<xsd:extension base="tEvent">
+				<xsd:sequence>
+					<xsd:element ref="outputSet" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="dataOutput" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="dataOutputAssociation" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="eventDefinition" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="eventDefinitionRef" type="xsd:QName" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:element name="compensateEventDefinition" type="tCompensateEventDefinition" substitutionGroup="eventDefinition"/>
+	<xsd:complexType name="tCompensateEventDefinition">
+		<xsd:complexContent>
+			<xsd:extension base="tEventDefinition">
+				<xsd:attribute name="waitForCompletion" type="xsd:boolean"/>
+				<xsd:attribute name="activityRef" type="xsd:QName"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:element name="conditionalEventDefinition" type="tConditionalEventDefinition" substitutionGroup="eventDefinition"/>
+	<xsd:complexType name="tConditionalEventDefinition">
+		<xsd:complexContent>
+			<xsd:extension base="tEventDefinition">
+				<xsd:sequence>
+					<xsd:element name="condition" type="tExpression"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:element name="endEvent" type="tEndEvent" substitutionGroup="flowElement"/>
+	<xsd:complexType name="tEndEvent">
+		<xsd:complexContent>
+			<xsd:extension base="tThrowEvent"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:element name="errorEventDefinition" type="tErrorEventDefinition" substitutionGroup="eventDefinition"/>
+	<xsd:complexType name="tErrorEventDefinition">
+		<xsd:complexContent>
+			<xsd:extension base="tEventDefinition">
+				<xsd:attribute name="errorCode" type="xsd:string"/>
+				<xsd:attribute name="errorRef" type="xsd:QName"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:element name="escalation" type="tEscalation" substitutionGroup="rootElement"/>	
+	<xsd:complexType name="tEscalation">
+		<xsd:complexContent>
+			<xsd:extension base="tRootElement">
+				<xsd:attribute name="structureRef" type="xsd:QName"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>	
+
+	<xsd:element name="escalationEventDefinition" type="tEscalationEventDefinition" substitutionGroup="eventDefinition"/>
+	<xsd:complexType name="tEscalationEventDefinition">
+		<xsd:complexContent>
+			<xsd:extension base="tEventDefinition">
+				<xsd:attribute name="escalationCode" type="xsd:string"/>
+				<xsd:attribute name="escalationRef" type="xsd:QName"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:element name="event" type="tEvent" substitutionGroup="flowElement"/>
+	<xsd:complexType name="tEvent" abstract="true">
+		<xsd:complexContent>
+			<xsd:extension base="tFlowNode"/>
+		</xsd:complexContent>
+	</xsd:complexType>	
+	
+	<xsd:element name="eventDefinition" type="tEventDefinition" substitutionGroup="rootElement"/>
+	<xsd:complexType name="tEventDefinition" abstract="true">
+		<xsd:complexContent>
+			<xsd:extension base="tRootElement"/>
+		</xsd:complexContent>
+	</xsd:complexType>			
+
+	<xsd:element name="handler" type="tHandler" substitutionGroup="flowElement"/>
+	<xsd:complexType name="tHandler">
+		<xsd:complexContent>
+			<xsd:extension base="tFlowNode"/>
+		</xsd:complexContent>
+	</xsd:complexType>	
+	
+	<xsd:element name="intermediateCatchEvent" type="tIntermediateCatchEvent" substitutionGroup="flowElement"/>
+	<xsd:complexType name="tIntermediateCatchEvent">
+		<xsd:complexContent>
+			<xsd:extension base="tCatchEvent"/>
+		</xsd:complexContent>
+	</xsd:complexType>			
+
+	<xsd:element name="intermediateThrowEvent" type="tIntermediateThrowEvent" substitutionGroup="flowElement"/>
+	<xsd:complexType name="tIntermediateThrowEvent">
+		<xsd:complexContent>
+			<xsd:extension base="tThrowEvent"/>
+		</xsd:complexContent>
+	</xsd:complexType>				
+	
+	<xsd:element name="linkEventDefinition" type="tLinkEventDefinition" substitutionGroup="eventDefinition"/>
+	<xsd:complexType name="tLinkEventDefinition">
+		<xsd:complexContent>
+			<xsd:extension base="tEventDefinition">
+				<xsd:attribute name="name" type="xsd:string" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<!-- MK 2009.03.03 Added serviceReferenceRef, 03.18 Changed elements into attributes according to Suzette's rules -->
+	<xsd:element name="messageEventDefinition" type="tMessageEventDefinition" substitutionGroup="eventDefinition"/>
+	<xsd:complexType name="tMessageEventDefinition">
+		<xsd:complexContent>
+			<xsd:extension base="tEventDefinition">
+				<xsd:sequence/>
+				<xsd:attribute name="serviceReferenceRef" type="xsd:QName" use="optional"/>
+				<xsd:attribute name="messageRef" type="xsd:QName" use="optional"/>
+				<xsd:attribute name="operationRef" type="xsd:QName" use="optional"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:element name="signal" type="tSignal" substitutionGroup="rootElement"/>	
+	<xsd:complexType name="tSignal">
+		<xsd:complexContent>
+			<xsd:extension base="tRootElement">
+				<xsd:attribute name="name" type="xsd:string"/>
+				<xsd:attribute name="structureRef" type="xsd:QName"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>	
+
+	<xsd:element name="signalEventDefinition" type="tSignalEventDefinition" substitutionGroup="eventDefinition"/>
+	<xsd:complexType name="tSignalEventDefinition">
+		<xsd:complexContent>
+			<xsd:extension base="tEventDefinition">
+				<xsd:attribute name="signalRef" type="xsd:QName"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+   <!-- MK 2009.03.18 Added isInterrupting attribute, according to BPMN-387 -->
+	<xsd:element name="startEvent" type="tStartEvent" substitutionGroup="flowElement"/>
+	<xsd:complexType name="tStartEvent">
+		<xsd:complexContent>
+			<xsd:extension base="tCatchEvent">
+				<xsd:attribute name="isInterrupting" type="xsd:boolean" default="true"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>			
+	
+	<xsd:element name="terminateEventDefinition" type="tTerminateEventDefinition" substitutionGroup="eventDefinition"/>
+	<xsd:complexType name="tTerminateEventDefinition">
+		<xsd:complexContent>
+			<xsd:extension base="tEventDefinition"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+        <!-- RM: Added dataInput element -->
+        <!-- MK 2009.03.18 Added inline eventDefinition, renamed result to eventDefinitionRef – as per BPMN-463 -->
+	<xsd:element name="throwEvent" type="tThrowEvent"/>
+	<xsd:complexType name="tThrowEvent" abstract="true">
+		<xsd:complexContent>
+			<xsd:extension base="tEvent">
+				<xsd:sequence>
+					<xsd:element ref="inputSet" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="dataInput" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="dataInputAssociation" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="eventDefinition" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="eventDefinitionRef" type="xsd:QName" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>			
+	
+	<xsd:element name="timerEventDefinition" type="tTimerEventDefinition" substitutionGroup="eventDefinition"/>
+	<xsd:complexType name="tTimerEventDefinition">
+		<xsd:complexContent>
+			<xsd:extension base="tEventDefinition">
+				<xsd:choice>
+					<xsd:element name="timeDate" type="tExpression" minOccurs="0" maxOccurs="1"/>
+					<xsd:element name="timeCycle" type="tExpression" minOccurs="0" maxOccurs="1"/>
+				</xsd:choice>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+</xsd:schema>

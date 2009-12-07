@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"
+	xmlns="http://www.omg.org/bpmn20"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.omg.org/bpmn20">
+
+	<xsd:include schemaLocation="../../Infrastructure/Infrastructure.xsd"/>
+	<xsd:include schemaLocation="../Common.xsd"/>
+
+	<xsd:element name="complexGateway" type="tComplexGateway" substitutionGroup="flowElement"/>
+	<xsd:complexType name="tComplexGateway">
+		<xsd:complexContent>
+			<xsd:extension base="tGateway">
+				<xsd:sequence>
+					<xsd:element name="activationCondition"  type="tExpression" minOccurs="0" maxOccurs="1"/>
+				</xsd:sequence>
+				<xsd:attribute name="resetSequenceFlow" type="xsd:IDREF"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>	
+	
+	<xsd:element name="eventBasedGateway" type="tEventBasedGateway" substitutionGroup="flowElement"/>
+	<xsd:complexType name="tEventBasedGateway">
+		<xsd:complexContent>
+			<xsd:extension base="tGateway">
+				<xsd:attribute name="instantiate" type="xsd:boolean" default="false"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>	
+
+	<xsd:element name="exclusiveGateway" type="tExclusiveGateway" substitutionGroup="flowElement"/>
+	<xsd:complexType name="tExclusiveGateway">
+		<xsd:complexContent>
+			<xsd:extension base="tGateway">
+				<xsd:attribute name="default" type="xsd:IDREF" use="optional"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>	
+	
+	<xsd:element name="gateway" type="tGateway" abstract="true"/>
+	<xsd:complexType name="tGateway">
+		<xsd:complexContent>
+			<xsd:extension base="tFlowNode">
+				<xsd:attribute name="gatewayDirection" type="tGatewayDirection" default="unspecified"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>	
+	
+	<xsd:simpleType name="tGatewayDirection">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="unspecified"/>
+			<xsd:enumeration value="converging"/>
+			<xsd:enumeration value="diverging"/>
+			<xsd:enumeration value="mixed"/>
+		</xsd:restriction>
+	</xsd:simpleType>	
+	
+	<xsd:element name="inclusiveGateway" type="tInclusiveGateway" substitutionGroup="flowElement"/>
+	<xsd:complexType name="tInclusiveGateway">
+		<xsd:complexContent>
+			<xsd:extension base="tGateway">
+				<xsd:attribute name="default" type="xsd:IDREF" use="optional"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>	
+	
+	<xsd:element name="parallelGateway" type="tParallelGateway" substitutionGroup="flowElement"/>
+	<xsd:complexType name="tParallelGateway">
+		<xsd:complexContent>
+			<xsd:extension base="tGateway"/>
+		</xsd:complexContent>
+	</xsd:complexType>	
+	
+</xsd:schema>
