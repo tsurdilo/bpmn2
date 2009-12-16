@@ -1,0 +1,398 @@
+/**
+ *  Copyright (c) 2000-2009, Intalio Inc.
+ *  All rights reserved. This program and the accompanying materials
+ *  are made available under the terms of the Eclipse Public License v1.0
+ *  which accompanies this distribution, and is available at
+ *  http://www.eclipse.org/legal/epl-v10.html
+ *   
+ *  Contributors:
+ *     Intalio Inc. - initial API and implementation
+ *
+ * $Id$
+ */
+package org.eclipse.mdt.bpmn;
+
+import java.math.BigInteger;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.util.FeatureMap;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Activity</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link org.eclipse.mdt.bpmn.Activity#getIoSpecification <em>Io Specification</em>}</li>
+ *   <li>{@link org.eclipse.mdt.bpmn.Activity#getProperty <em>Property</em>}</li>
+ *   <li>{@link org.eclipse.mdt.bpmn.Activity#getDataInputAssociation <em>Data Input Association</em>}</li>
+ *   <li>{@link org.eclipse.mdt.bpmn.Activity#getDataOutputAssociation <em>Data Output Association</em>}</li>
+ *   <li>{@link org.eclipse.mdt.bpmn.Activity#getActivityResourceGroup <em>Activity Resource Group</em>}</li>
+ *   <li>{@link org.eclipse.mdt.bpmn.Activity#getActivityResource <em>Activity Resource</em>}</li>
+ *   <li>{@link org.eclipse.mdt.bpmn.Activity#getLoopCharacteristicsGroup <em>Loop Characteristics Group</em>}</li>
+ *   <li>{@link org.eclipse.mdt.bpmn.Activity#getLoopCharacteristics <em>Loop Characteristics</em>}</li>
+ *   <li>{@link org.eclipse.mdt.bpmn.Activity#getCompletionQuantity <em>Completion Quantity</em>}</li>
+ *   <li>{@link org.eclipse.mdt.bpmn.Activity#getDefault <em>Default</em>}</li>
+ *   <li>{@link org.eclipse.mdt.bpmn.Activity#isIsForCompensation <em>Is For Compensation</em>}</li>
+ *   <li>{@link org.eclipse.mdt.bpmn.Activity#getStartQuantity <em>Start Quantity</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivity()
+ * @model abstract="true"
+ *        extendedMetaData="name='tActivity' kind='elementOnly'"
+ * @generated
+ */
+public interface Activity extends FlowNode {
+    /**
+     * Returns the value of the '<em><b>Io Specification</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Io Specification</em>' containment reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Io Specification</em>' containment reference.
+     * @see #setIoSpecification(InputOutputSpecification)
+     * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivity_IoSpecification()
+     * @model containment="true"
+     *        extendedMetaData="kind='element' name='ioSpecification' namespace='##targetNamespace'"
+     * @generated
+     */
+    InputOutputSpecification getIoSpecification();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.mdt.bpmn.Activity#getIoSpecification <em>Io Specification</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Io Specification</em>' containment reference.
+     * @see #getIoSpecification()
+     * @generated
+     */
+    void setIoSpecification(InputOutputSpecification value);
+
+    /**
+     * Returns the value of the '<em><b>Property</b></em>' containment reference list.
+     * The list contents are of type {@link org.eclipse.mdt.bpmn.Property}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Property</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Property</em>' containment reference list.
+     * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivity_Property()
+     * @model containment="true"
+     *        extendedMetaData="kind='element' name='property' namespace='##targetNamespace'"
+     * @generated
+     */
+    EList<Property> getProperty();
+
+    /**
+     * Returns the value of the '<em><b>Data Input Association</b></em>' containment reference list.
+     * The list contents are of type {@link org.eclipse.mdt.bpmn.DataInputAssociation}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Data Input Association</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Data Input Association</em>' containment reference list.
+     * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivity_DataInputAssociation()
+     * @model containment="true"
+     *        extendedMetaData="kind='element' name='dataInputAssociation' namespace='##targetNamespace'"
+     * @generated
+     */
+    EList<DataInputAssociation> getDataInputAssociation();
+
+    /**
+     * Returns the value of the '<em><b>Data Output Association</b></em>' containment reference list.
+     * The list contents are of type {@link org.eclipse.mdt.bpmn.DataOutputAssociation}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Data Output Association</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Data Output Association</em>' containment reference list.
+     * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivity_DataOutputAssociation()
+     * @model containment="true"
+     *        extendedMetaData="kind='element' name='dataOutputAssociation' namespace='##targetNamespace'"
+     * @generated
+     */
+    EList<DataOutputAssociation> getDataOutputAssociation();
+
+    /**
+     * Returns the value of the '<em><b>Activity Resource Group</b></em>' attribute list.
+     * The list contents are of type {@link org.eclipse.emf.ecore.util.FeatureMap.Entry}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Activity Resource Group</em>' attribute list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Activity Resource Group</em>' attribute list.
+     * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivity_ActivityResourceGroup()
+     * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
+     *        extendedMetaData="kind='group' name='activityResource:group' namespace='##targetNamespace'"
+     * @generated
+     */
+    FeatureMap getActivityResourceGroup();
+
+    /**
+     * Returns the value of the '<em><b>Activity Resource</b></em>' containment reference list.
+     * The list contents are of type {@link org.eclipse.mdt.bpmn.ActivityResource}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Activity Resource</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Activity Resource</em>' containment reference list.
+     * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivity_ActivityResource()
+     * @model containment="true" transient="true" volatile="true" derived="true"
+     *        extendedMetaData="kind='element' name='activityResource' namespace='##targetNamespace' group='activityResource:group'"
+     * @generated
+     */
+    EList<ActivityResource> getActivityResource();
+
+    /**
+     * Returns the value of the '<em><b>Loop Characteristics Group</b></em>' attribute list.
+     * The list contents are of type {@link org.eclipse.emf.ecore.util.FeatureMap.Entry}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Loop Characteristics Group</em>' attribute list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Loop Characteristics Group</em>' attribute list.
+     * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivity_LoopCharacteristicsGroup()
+     * @model dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="false"
+     *        extendedMetaData="kind='group' name='loopCharacteristics:group' namespace='##targetNamespace'"
+     * @generated
+     */
+    FeatureMap getLoopCharacteristicsGroup();
+
+    /**
+     * Returns the value of the '<em><b>Loop Characteristics</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Loop Characteristics</em>' containment reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Loop Characteristics</em>' containment reference.
+     * @see #setLoopCharacteristics(LoopCharacteristics)
+     * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivity_LoopCharacteristics()
+     * @model containment="true" transient="true" volatile="true" derived="true"
+     *        extendedMetaData="kind='element' name='loopCharacteristics' namespace='##targetNamespace' group='loopCharacteristics:group'"
+     * @generated
+     */
+    LoopCharacteristics getLoopCharacteristics();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.mdt.bpmn.Activity#getLoopCharacteristics <em>Loop Characteristics</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Loop Characteristics</em>' containment reference.
+     * @see #getLoopCharacteristics()
+     * @generated
+     */
+    void setLoopCharacteristics(LoopCharacteristics value);
+
+    /**
+     * Returns the value of the '<em><b>Completion Quantity</b></em>' attribute.
+     * The default value is <code>"1"</code>.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Completion Quantity</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Completion Quantity</em>' attribute.
+     * @see #isSetCompletionQuantity()
+     * @see #unsetCompletionQuantity()
+     * @see #setCompletionQuantity(BigInteger)
+     * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivity_CompletionQuantity()
+     * @model default="1" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Integer"
+     *        extendedMetaData="kind='attribute' name='completionQuantity'"
+     * @generated
+     */
+    BigInteger getCompletionQuantity();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.mdt.bpmn.Activity#getCompletionQuantity <em>Completion Quantity</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Completion Quantity</em>' attribute.
+     * @see #isSetCompletionQuantity()
+     * @see #unsetCompletionQuantity()
+     * @see #getCompletionQuantity()
+     * @generated
+     */
+    void setCompletionQuantity(BigInteger value);
+
+    /**
+     * Unsets the value of the '{@link org.eclipse.mdt.bpmn.Activity#getCompletionQuantity <em>Completion Quantity</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #isSetCompletionQuantity()
+     * @see #getCompletionQuantity()
+     * @see #setCompletionQuantity(BigInteger)
+     * @generated
+     */
+    void unsetCompletionQuantity();
+
+    /**
+     * Returns whether the value of the '{@link org.eclipse.mdt.bpmn.Activity#getCompletionQuantity <em>Completion Quantity</em>}' attribute is set.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return whether the value of the '<em>Completion Quantity</em>' attribute is set.
+     * @see #unsetCompletionQuantity()
+     * @see #getCompletionQuantity()
+     * @see #setCompletionQuantity(BigInteger)
+     * @generated
+     */
+    boolean isSetCompletionQuantity();
+
+    /**
+     * Returns the value of the '<em><b>Default</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Default</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Default</em>' attribute.
+     * @see #setDefault(String)
+     * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivity_Default()
+     * @model dataType="org.eclipse.emf.ecore.xml.type.IDREF"
+     *        extendedMetaData="kind='attribute' name='default'"
+     * @generated
+     */
+    String getDefault();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.mdt.bpmn.Activity#getDefault <em>Default</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Default</em>' attribute.
+     * @see #getDefault()
+     * @generated
+     */
+    void setDefault(String value);
+
+    /**
+     * Returns the value of the '<em><b>Is For Compensation</b></em>' attribute.
+     * The default value is <code>"false"</code>.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Is For Compensation</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Is For Compensation</em>' attribute.
+     * @see #isSetIsForCompensation()
+     * @see #unsetIsForCompensation()
+     * @see #setIsForCompensation(boolean)
+     * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivity_IsForCompensation()
+     * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
+     *        extendedMetaData="kind='attribute' name='isForCompensation'"
+     * @generated
+     */
+    boolean isIsForCompensation();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.mdt.bpmn.Activity#isIsForCompensation <em>Is For Compensation</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Is For Compensation</em>' attribute.
+     * @see #isSetIsForCompensation()
+     * @see #unsetIsForCompensation()
+     * @see #isIsForCompensation()
+     * @generated
+     */
+    void setIsForCompensation(boolean value);
+
+    /**
+     * Unsets the value of the '{@link org.eclipse.mdt.bpmn.Activity#isIsForCompensation <em>Is For Compensation</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #isSetIsForCompensation()
+     * @see #isIsForCompensation()
+     * @see #setIsForCompensation(boolean)
+     * @generated
+     */
+    void unsetIsForCompensation();
+
+    /**
+     * Returns whether the value of the '{@link org.eclipse.mdt.bpmn.Activity#isIsForCompensation <em>Is For Compensation</em>}' attribute is set.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return whether the value of the '<em>Is For Compensation</em>' attribute is set.
+     * @see #unsetIsForCompensation()
+     * @see #isIsForCompensation()
+     * @see #setIsForCompensation(boolean)
+     * @generated
+     */
+    boolean isSetIsForCompensation();
+
+    /**
+     * Returns the value of the '<em><b>Start Quantity</b></em>' attribute.
+     * The default value is <code>"1"</code>.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Start Quantity</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Start Quantity</em>' attribute.
+     * @see #isSetStartQuantity()
+     * @see #unsetStartQuantity()
+     * @see #setStartQuantity(BigInteger)
+     * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivity_StartQuantity()
+     * @model default="1" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Integer"
+     *        extendedMetaData="kind='attribute' name='startQuantity'"
+     * @generated
+     */
+    BigInteger getStartQuantity();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.mdt.bpmn.Activity#getStartQuantity <em>Start Quantity</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Start Quantity</em>' attribute.
+     * @see #isSetStartQuantity()
+     * @see #unsetStartQuantity()
+     * @see #getStartQuantity()
+     * @generated
+     */
+    void setStartQuantity(BigInteger value);
+
+    /**
+     * Unsets the value of the '{@link org.eclipse.mdt.bpmn.Activity#getStartQuantity <em>Start Quantity</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #isSetStartQuantity()
+     * @see #getStartQuantity()
+     * @see #setStartQuantity(BigInteger)
+     * @generated
+     */
+    void unsetStartQuantity();
+
+    /**
+     * Returns whether the value of the '{@link org.eclipse.mdt.bpmn.Activity#getStartQuantity <em>Start Quantity</em>}' attribute is set.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return whether the value of the '<em>Start Quantity</em>' attribute is set.
+     * @see #unsetStartQuantity()
+     * @see #getStartQuantity()
+     * @see #setStartQuantity(BigInteger)
+     * @generated
+     */
+    boolean isSetStartQuantity();
+
+} // Activity

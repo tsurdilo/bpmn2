@@ -1,0 +1,1281 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xsd2ecore:XSD2EcoreMappingRoot xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsd2ecore="http://www.eclipse.org/emf/2002/XSD2Ecore" inputs="BPMN20.xsd#/ Semantic.xsd#/ DiagramInterchange.xsd#/"
+    outputs="bpmn.ecore#/ di.ecore#/" topToBottom="true">
+  <nested inputs="bundleentry://461.fwk1205807115/cache/www.w3.org/2001/XMLSchema.xsd#//ID;XSDSimpleTypeDefinition=37"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//ID"/>
+  <nested inputs="Semantic.xsd#//tDocumentation;XSDComplexTypeDefinition=46" outputs="bpmn.ecore#//Documentation">
+    <nested inputs="Semantic.xsd#//tDocumentation;XSDComplexTypeDefinition=46/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//Documentation/any"/>
+    <nested inputs="Semantic.xsd#//tDocumentation;XSDComplexTypeDefinition=46/XSDAttributeUse"
+        outputs="bpmn.ecore#//Documentation/id"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tBaseElement;XSDComplexTypeDefinition=7" outputs="bpmn.ecore#//BaseElement">
+    <nested inputs="Semantic.xsd#//tBaseElement;XSDComplexTypeDefinition=7/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//BaseElement/documentation"/>
+    <nested inputs="Semantic.xsd#//tBaseElement;XSDComplexTypeDefinition=7/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//BaseElement/any"/>
+    <nested inputs="Semantic.xsd#//tBaseElement;XSDComplexTypeDefinition=7/XSDAttributeUse"
+        outputs="bpmn.ecore#//BaseElement/id"/>
+    <nested inputs="Semantic.xsd#//tBaseElement;XSDComplexTypeDefinition=7/XSDWildcard"
+        outputs="bpmn.ecore#//BaseElement/anyAttribute"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tAuditing;XSDComplexTypeDefinition=6" outputs="bpmn.ecore#//Auditing"/>
+  <nested inputs="Semantic.xsd#//tMonitoring;XSDComplexTypeDefinition=90" outputs="bpmn.ecore#//Monitoring"/>
+  <nested inputs="bundleentry://461.fwk1205807115/cache/www.w3.org/2001/XMLSchema.xsd#//QName;XSDSimpleTypeDefinition=26"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//QName"/>
+  <nested inputs="bundleentry://461.fwk1205807115/cache/www.w3.org/2001/XMLSchema.xsd#//string;XSDSimpleTypeDefinition=9"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  <nested inputs="Semantic.xsd#//tFlowElement;XSDComplexTypeDefinition=59" outputs="bpmn.ecore#//FlowElement">
+    <nested inputs="Semantic.xsd#//tFlowElement;XSDComplexTypeDefinition=59/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//FlowElement/auditing"/>
+    <nested inputs="Semantic.xsd#//tFlowElement;XSDComplexTypeDefinition=59/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//FlowElement/monitoring"/>
+    <nested inputs="Semantic.xsd#//tFlowElement;XSDComplexTypeDefinition=59/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="bpmn.ecore#//FlowElement/categoryValueRef"/>
+    <nested inputs="Semantic.xsd#//tFlowElement;XSDComplexTypeDefinition=59/XSDAttributeUse"
+        outputs="bpmn.ecore#//FlowElement/name"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tFlowNode;XSDComplexTypeDefinition=60" outputs="bpmn.ecore#//FlowNode">
+    <nested inputs="Semantic.xsd#//tFlowNode;XSDComplexTypeDefinition=60/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//FlowNode/incoming"/>
+    <nested inputs="Semantic.xsd#//tFlowNode;XSDComplexTypeDefinition=60/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//FlowNode/outgoing"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tDataState;XSDComplexTypeDefinition=43" outputs="bpmn.ecore#//DataState">
+    <nested inputs="Semantic.xsd#//tDataState;XSDComplexTypeDefinition=43/XSDAttributeUse"
+        outputs="bpmn.ecore#//DataState/name"/>
+  </nested>
+  <nested inputs="bundleentry://461.fwk1205807115/cache/www.w3.org/2001/XMLSchema.xsd#//boolean;XSDSimpleTypeDefinition=10"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
+  <nested inputs="Semantic.xsd#//tDataInput;XSDComplexTypeDefinition=38" outputs="bpmn.ecore#//DataInput">
+    <nested inputs="Semantic.xsd#//tDataInput;XSDComplexTypeDefinition=38/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//DataInput/dataState"/>
+    <nested inputs="Semantic.xsd#//tDataInput;XSDComplexTypeDefinition=38/XSDAttributeUse=2"
+        outputs="bpmn.ecore#//DataInput/isCollection"/>
+    <nested inputs="Semantic.xsd#//tDataInput;XSDComplexTypeDefinition=38/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//DataInput/itemSubjectRef"/>
+    <nested inputs="Semantic.xsd#//tDataInput;XSDComplexTypeDefinition=38/XSDAttributeUse"
+        outputs="bpmn.ecore#//DataInput/name"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tDataOutput;XSDComplexTypeDefinition=41" outputs="bpmn.ecore#//DataOutput">
+    <nested inputs="Semantic.xsd#//tDataOutput;XSDComplexTypeDefinition=41/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//DataOutput/dataState"/>
+    <nested inputs="Semantic.xsd#//tDataOutput;XSDComplexTypeDefinition=41/XSDAttributeUse=2"
+        outputs="bpmn.ecore#//DataOutput/isCollection"/>
+    <nested inputs="Semantic.xsd#//tDataOutput;XSDComplexTypeDefinition=41/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//DataOutput/itemSubjectRef"/>
+    <nested inputs="Semantic.xsd#//tDataOutput;XSDComplexTypeDefinition=41/XSDAttributeUse"
+        outputs="bpmn.ecore#//DataOutput/name"/>
+  </nested>
+  <nested inputs="bundleentry://461.fwk1205807115/cache/www.w3.org/2001/XMLSchema.xsd#//IDREF;XSDSimpleTypeDefinition=38"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//IDREF"/>
+  <nested inputs="Semantic.xsd#//tInputSet;XSDComplexTypeDefinition=74" outputs="bpmn.ecore#//InputSet">
+    <nested inputs="Semantic.xsd#//tInputSet;XSDComplexTypeDefinition=74/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//InputSet/dataInputRefs"/>
+    <nested inputs="Semantic.xsd#//tInputSet;XSDComplexTypeDefinition=74/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//InputSet/optionalInputRefs"/>
+    <nested inputs="Semantic.xsd#//tInputSet;XSDComplexTypeDefinition=74/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="bpmn.ecore#//InputSet/whileExecutingInputRefs"/>
+    <nested inputs="Semantic.xsd#//tInputSet;XSDComplexTypeDefinition=74/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="bpmn.ecore#//InputSet/outputSetRefs"/>
+    <nested inputs="Semantic.xsd#//tInputSet;XSDComplexTypeDefinition=74/XSDAttributeUse"
+        outputs="bpmn.ecore#//InputSet/name"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tOutputSet;XSDComplexTypeDefinition=93" outputs="bpmn.ecore#//OutputSet">
+    <nested inputs="Semantic.xsd#//tOutputSet;XSDComplexTypeDefinition=93/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//OutputSet/dataOutputRefs"/>
+    <nested inputs="Semantic.xsd#//tOutputSet;XSDComplexTypeDefinition=93/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//OutputSet/optionalOutputRefs"/>
+    <nested inputs="Semantic.xsd#//tOutputSet;XSDComplexTypeDefinition=93/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="bpmn.ecore#//OutputSet/whileExecutingOutputRefs"/>
+    <nested inputs="Semantic.xsd#//tOutputSet;XSDComplexTypeDefinition=93/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="bpmn.ecore#//OutputSet/inputSetRefs"/>
+    <nested inputs="Semantic.xsd#//tOutputSet;XSDComplexTypeDefinition=93/XSDAttributeUse"
+        outputs="bpmn.ecore#//OutputSet/name"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tInputOutputSpecification;XSDComplexTypeDefinition=79"
+      outputs="bpmn.ecore#//InputOutputSpecification">
+    <nested inputs="Semantic.xsd#//tInputOutputSpecification;XSDComplexTypeDefinition=79/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//InputOutputSpecification/dataInput"/>
+    <nested inputs="Semantic.xsd#//tInputOutputSpecification;XSDComplexTypeDefinition=79/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//InputOutputSpecification/dataOutput"/>
+    <nested inputs="Semantic.xsd#//tInputOutputSpecification;XSDComplexTypeDefinition=79/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="bpmn.ecore#//InputOutputSpecification/inputSet"/>
+    <nested inputs="Semantic.xsd#//tInputOutputSpecification;XSDComplexTypeDefinition=79/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="bpmn.ecore#//InputOutputSpecification/outputSet"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tProperty;XSDComplexTypeDefinition=103" outputs="bpmn.ecore#//Property">
+    <nested inputs="Semantic.xsd#//tProperty;XSDComplexTypeDefinition=103/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//Property/dataState"/>
+    <nested inputs="Semantic.xsd#//tProperty;XSDComplexTypeDefinition=103/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//Property/itemSubjectRef"/>
+    <nested inputs="Semantic.xsd#//tProperty;XSDComplexTypeDefinition=103/XSDAttributeUse"
+        outputs="bpmn.ecore#//Property/name"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tRootElement;XSDComplexTypeDefinition=111" outputs="bpmn.ecore#//RootElement"/>
+  <nested inputs="Semantic.xsd#//tCategoryValue;XSDComplexTypeDefinition=18" outputs="bpmn.ecore#//CategoryValue">
+    <nested inputs="Semantic.xsd#//tCategoryValue;XSDComplexTypeDefinition=18/XSDAttributeUse"
+        outputs="bpmn.ecore#//CategoryValue/value"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tCategory;XSDComplexTypeDefinition=17" outputs="bpmn.ecore#//Category">
+    <nested inputs="Semantic.xsd#//tCategory;XSDComplexTypeDefinition=17/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//Category/categoryValue"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tBaseElementWithMixedContent;XSDComplexTypeDefinition=8"
+      outputs="bpmn.ecore#//BaseElementWithMixedContent">
+    <nested inputs="Semantic.xsd#//tBaseElementWithMixedContent;XSDComplexTypeDefinition=8/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//BaseElementWithMixedContent/documentation"/>
+    <nested inputs="Semantic.xsd#//tBaseElementWithMixedContent;XSDComplexTypeDefinition=8/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//BaseElementWithMixedContent/category"/>
+    <nested inputs="Semantic.xsd#//tBaseElementWithMixedContent;XSDComplexTypeDefinition=8/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="bpmn.ecore#//BaseElementWithMixedContent/any"/>
+    <nested inputs="Semantic.xsd#//tBaseElementWithMixedContent;XSDComplexTypeDefinition=8/XSDAttributeUse"
+        outputs="bpmn.ecore#//BaseElementWithMixedContent/id"/>
+    <nested inputs="Semantic.xsd#//tBaseElementWithMixedContent;XSDComplexTypeDefinition=8/XSDWildcard"
+        outputs="bpmn.ecore#//BaseElementWithMixedContent/anyAttribute"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tExpression;XSDComplexTypeDefinition=57" outputs="bpmn.ecore#//Expression"/>
+  <nested inputs="bundleentry://461.fwk1205807115/cache/www.w3.org/2001/XMLSchema.xsd#//anyURI;XSDSimpleTypeDefinition=25"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//AnyURI"/>
+  <nested inputs="Semantic.xsd#//tFormalExpression;XSDComplexTypeDefinition=61" outputs="bpmn.ecore#//FormalExpression">
+    <nested inputs="Semantic.xsd#//tFormalExpression;XSDComplexTypeDefinition=61/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//FormalExpression/evaluatesToTypeRef"/>
+    <nested inputs="Semantic.xsd#//tFormalExpression;XSDComplexTypeDefinition=61/XSDAttributeUse"
+        outputs="bpmn.ecore#//FormalExpression/language"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tAssignment;XSDComplexTypeDefinition=4" outputs="bpmn.ecore#//Assignment">
+    <nested inputs="Semantic.xsd#//tAssignment;XSDComplexTypeDefinition=4/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//Assignment/from"/>
+    <nested inputs="Semantic.xsd#//tAssignment;XSDComplexTypeDefinition=4/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//Assignment/to"/>
+    <nested inputs="Semantic.xsd#//tAssignment;XSDComplexTypeDefinition=4/XSDAttributeUse"
+        outputs="bpmn.ecore#//Assignment/language"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tDataAssociation;XSDComplexTypeDefinition=37" outputs="bpmn.ecore#//DataAssociation">
+    <nested inputs="Semantic.xsd#//tDataAssociation;XSDComplexTypeDefinition=37/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//DataAssociation/transformation"/>
+    <nested inputs="Semantic.xsd#//tDataAssociation;XSDComplexTypeDefinition=37/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//DataAssociation/assignment"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tDataInputAssociation;XSDComplexTypeDefinition=39"
+      outputs="bpmn.ecore#//DataInputAssociation">
+    <nested inputs="Semantic.xsd#//tDataInputAssociation;XSDComplexTypeDefinition=39/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//DataInputAssociation/sourceRef"/>
+    <nested inputs="Semantic.xsd#//tDataInputAssociation;XSDComplexTypeDefinition=39/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//DataInputAssociation/targetRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tDataOutputAssociation;XSDComplexTypeDefinition=42"
+      outputs="bpmn.ecore#//DataOutputAssociation">
+    <nested inputs="Semantic.xsd#//tDataOutputAssociation;XSDComplexTypeDefinition=42/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//DataOutputAssociation/sourceRef"/>
+    <nested inputs="Semantic.xsd#//tDataOutputAssociation;XSDComplexTypeDefinition=42/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//DataOutputAssociation/targetRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tResourceAssignmentExpression;XSDComplexTypeDefinition=108"
+      outputs="bpmn.ecore#//ResourceAssignmentExpression">
+    <nested inputs="Semantic.xsd#//tResourceAssignmentExpression;XSDComplexTypeDefinition=108/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//ResourceAssignmentExpression/expressionGroup"/>
+    <nested inputs="Semantic.xsd#//tResourceAssignmentExpression;XSDComplexTypeDefinition=108/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//ResourceAssignmentExpression/expression"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tResourceParameterBinding;XSDComplexTypeDefinition=110"
+      outputs="bpmn.ecore#//ResourceParameterBinding">
+    <nested inputs="Semantic.xsd#//tResourceParameterBinding;XSDComplexTypeDefinition=110/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//ResourceParameterBinding/expressionGroup"/>
+    <nested inputs="Semantic.xsd#//tResourceParameterBinding;XSDComplexTypeDefinition=110/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//ResourceParameterBinding/expression"/>
+    <nested inputs="Semantic.xsd#//tResourceParameterBinding;XSDComplexTypeDefinition=110/XSDAttributeUse"
+        outputs="bpmn.ecore#//ResourceParameterBinding/parameterRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tActivityResource;XSDComplexTypeDefinition=1" outputs="bpmn.ecore#//ActivityResource">
+    <nested inputs="Semantic.xsd#//tActivityResource;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//ActivityResource/resourceAssignmentExpression"/>
+    <nested inputs="Semantic.xsd#//tActivityResource;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//ActivityResource/resourceParameterBinding"/>
+    <nested inputs="Semantic.xsd#//tActivityResource;XSDComplexTypeDefinition=1/XSDAttributeUse"
+        outputs="bpmn.ecore#//ActivityResource/resourceRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tLoopCharacteristics;XSDComplexTypeDefinition=84"
+      outputs="bpmn.ecore#//LoopCharacteristics"/>
+  <nested inputs="bundleentry://461.fwk1205807115/cache/www.w3.org/2001/XMLSchema.xsd#//integer;XSDSimpleTypeDefinition=40"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//Integer"/>
+  <nested inputs="Semantic.xsd#//tActivity;XSDComplexTypeDefinition" outputs="bpmn.ecore#//Activity">
+    <nested inputs="Semantic.xsd#//tActivity;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//Activity/ioSpecification"/>
+    <nested inputs="Semantic.xsd#//tActivity;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//Activity/property"/>
+    <nested inputs="Semantic.xsd#//tActivity;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="bpmn.ecore#//Activity/dataInputAssociation"/>
+    <nested inputs="Semantic.xsd#//tActivity;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="bpmn.ecore#//Activity/dataOutputAssociation"/>
+    <nested inputs="Semantic.xsd#//tActivity;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=4"
+        outputs="bpmn.ecore#//Activity/activityResourceGroup"/>
+    <nested inputs="Semantic.xsd#//tActivity;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=4"
+        outputs="bpmn.ecore#//Activity/activityResource"/>
+    <nested inputs="Semantic.xsd#//tActivity;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=5"
+        outputs="bpmn.ecore#//Activity/loopCharacteristicsGroup"/>
+    <nested inputs="Semantic.xsd#//tActivity;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=5"
+        outputs="bpmn.ecore#//Activity/loopCharacteristics"/>
+    <nested inputs="Semantic.xsd#//tActivity;XSDComplexTypeDefinition/XSDAttributeUse=2"
+        outputs="bpmn.ecore#//Activity/completionQuantity"/>
+    <nested inputs="Semantic.xsd#//tActivity;XSDComplexTypeDefinition/XSDAttributeUse=3"
+        outputs="bpmn.ecore#//Activity/default"/>
+    <nested inputs="Semantic.xsd#//tActivity;XSDComplexTypeDefinition/XSDAttributeUse"
+        outputs="bpmn.ecore#//Activity/isForCompensation"/>
+    <nested inputs="Semantic.xsd#//tActivity;XSDComplexTypeDefinition/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//Activity/startQuantity"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//activity;XSDElementDeclaration" outputs="bpmn.ecore#//DocumentRoot/activity"/>
+  <nested inputs="Semantic.xsd#//activityResource;XSDElementDeclaration=1" outputs="bpmn.ecore#//DocumentRoot/activityResource"/>
+  <nested inputs="Semantic.xsd#//tArtifact;XSDComplexTypeDefinition=3" outputs="bpmn.ecore#//Artifact"/>
+  <nested inputs="Semantic.xsd#//tSubProcess;XSDComplexTypeDefinition=122" outputs="bpmn.ecore#//SubProcess">
+    <nested inputs="Semantic.xsd#//tSubProcess;XSDComplexTypeDefinition=122/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//SubProcess/flowElementGroup"/>
+    <nested inputs="Semantic.xsd#//tSubProcess;XSDComplexTypeDefinition=122/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//SubProcess/flowElement"/>
+    <nested inputs="Semantic.xsd#//tSubProcess;XSDComplexTypeDefinition=122/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//SubProcess/artifactGroup"/>
+    <nested inputs="Semantic.xsd#//tSubProcess;XSDComplexTypeDefinition=122/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//SubProcess/artifact"/>
+    <nested inputs="Semantic.xsd#//tSubProcess;XSDComplexTypeDefinition=122/XSDAttributeUse"
+        outputs="bpmn.ecore#//SubProcess/triggeredByEvent"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tAdHocOrdering;XSDSimpleTypeDefinition" outputs="bpmn.ecore#//AdHocOrdering">
+    <nested inputs="Semantic.xsd#//tAdHocOrdering;XSDSimpleTypeDefinition/XSDEnumerationFacet"
+        outputs="bpmn.ecore#//AdHocOrdering/parallel"/>
+    <nested inputs="Semantic.xsd#//tAdHocOrdering;XSDSimpleTypeDefinition/XSDEnumerationFacet=1"
+        outputs="bpmn.ecore#//AdHocOrdering/sequential"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tAdHocSubProcess;XSDComplexTypeDefinition=2" outputs="bpmn.ecore#//AdHocSubProcess">
+    <nested inputs="Semantic.xsd#//tAdHocSubProcess;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//AdHocSubProcess/completionCondition"/>
+    <nested inputs="Semantic.xsd#//tAdHocSubProcess;XSDComplexTypeDefinition=2/XSDAttributeUse"
+        outputs="bpmn.ecore#//AdHocSubProcess/cancelRemainingInstances"/>
+    <nested inputs="Semantic.xsd#//tAdHocSubProcess;XSDComplexTypeDefinition=2/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//AdHocSubProcess/ordering"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//adHocSubProcess;XSDElementDeclaration=2" outputs="bpmn.ecore#//DocumentRoot/adHocSubProcess"/>
+  <nested inputs="Semantic.xsd#//flowElement;XSDElementDeclaration=59" outputs="bpmn.ecore#//DocumentRoot/flowElement"/>
+  <nested inputs="Semantic.xsd#//artifact;XSDElementDeclaration=3" outputs="bpmn.ecore#//DocumentRoot/artifact"/>
+  <nested inputs="Semantic.xsd#//assignment;XSDElementDeclaration=4" outputs="bpmn.ecore#//DocumentRoot/assignment"/>
+  <nested inputs="Semantic.xsd#//tAssociationDirection;XSDSimpleTypeDefinition=1"
+      outputs="bpmn.ecore#//AssociationDirection">
+    <nested inputs="Semantic.xsd#//tAssociationDirection;XSDSimpleTypeDefinition=1/XSDEnumerationFacet"
+        outputs="bpmn.ecore#//AssociationDirection/none"/>
+    <nested inputs="Semantic.xsd#//tAssociationDirection;XSDSimpleTypeDefinition=1/XSDEnumerationFacet=1"
+        outputs="bpmn.ecore#//AssociationDirection/one"/>
+    <nested inputs="Semantic.xsd#//tAssociationDirection;XSDSimpleTypeDefinition=1/XSDEnumerationFacet=2"
+        outputs="bpmn.ecore#//AssociationDirection/both"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tAssociation;XSDComplexTypeDefinition=5" outputs="bpmn.ecore#//Association">
+    <nested inputs="Semantic.xsd#//tAssociation;XSDComplexTypeDefinition=5/XSDAttributeUse=2"
+        outputs="bpmn.ecore#//Association/associationDirection"/>
+    <nested inputs="Semantic.xsd#//tAssociation;XSDComplexTypeDefinition=5/XSDAttributeUse"
+        outputs="bpmn.ecore#//Association/sourceRef"/>
+    <nested inputs="Semantic.xsd#//tAssociation;XSDComplexTypeDefinition=5/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//Association/targetRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//association;XSDElementDeclaration=5" outputs="bpmn.ecore#//DocumentRoot/association"/>
+  <nested inputs="Semantic.xsd#//auditing;XSDElementDeclaration=6" outputs="bpmn.ecore#//DocumentRoot/auditing"/>
+  <nested inputs="Semantic.xsd#//baseElement;XSDElementDeclaration=7" outputs="bpmn.ecore#//DocumentRoot/baseElement"/>
+  <nested inputs="Semantic.xsd#//baseElementWithMixedContent;XSDElementDeclaration=8"
+      outputs="bpmn.ecore#//DocumentRoot/baseElementWithMixedContent"/>
+  <nested inputs="bundleentry://461.fwk1205807115/cache/www.w3.org/2001/XMLSchema.xsd#//int;XSDSimpleTypeDefinition=44"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//Int"/>
+  <nested inputs="DiagramInterchange.xsd#//Bendpoint;XSDComplexTypeDefinition=5" outputs="di.ecore#//Bendpoint">
+    <nested inputs="DiagramInterchange.xsd#//Bendpoint;XSDComplexTypeDefinition=5/XSDAttributeUse"
+        outputs="di.ecore#//Bendpoint/sourceX"/>
+    <nested inputs="DiagramInterchange.xsd#//Bendpoint;XSDComplexTypeDefinition=5/XSDAttributeUse=1"
+        outputs="di.ecore#//Bendpoint/sourceY"/>
+    <nested inputs="DiagramInterchange.xsd#//Bendpoint;XSDComplexTypeDefinition=5/XSDAttributeUse=2"
+        outputs="di.ecore#//Bendpoint/targetX"/>
+    <nested inputs="DiagramInterchange.xsd#//Bendpoint;XSDComplexTypeDefinition=5/XSDAttributeUse=3"
+        outputs="di.ecore#//Bendpoint/targetY"/>
+  </nested>
+  <nested inputs="DiagramInterchange.xsd#//bendpoint;XSDElementDeclaration=5" outputs="di.ecore#//DocumentRoot/bendpoint"/>
+  <nested inputs="Semantic.xsd#//tEvent;XSDComplexTypeDefinition=53" outputs="bpmn.ecore#//Event"/>
+  <nested inputs="Semantic.xsd#//tEventDefinition;XSDComplexTypeDefinition=55" outputs="bpmn.ecore#//EventDefinition"/>
+  <nested inputs="Semantic.xsd#//tCatchEvent;XSDComplexTypeDefinition=16" outputs="bpmn.ecore#//CatchEvent">
+    <nested inputs="Semantic.xsd#//tCatchEvent;XSDComplexTypeDefinition=16/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//CatchEvent/dataOutput"/>
+    <nested inputs="Semantic.xsd#//tCatchEvent;XSDComplexTypeDefinition=16/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//CatchEvent/dataOutputAssociation"/>
+    <nested inputs="Semantic.xsd#//tCatchEvent;XSDComplexTypeDefinition=16/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="bpmn.ecore#//CatchEvent/outputSet"/>
+    <nested inputs="Semantic.xsd#//tCatchEvent;XSDComplexTypeDefinition=16/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="bpmn.ecore#//CatchEvent/eventDefinitionGroup"/>
+    <nested inputs="Semantic.xsd#//tCatchEvent;XSDComplexTypeDefinition=16/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="bpmn.ecore#//CatchEvent/eventDefinition"/>
+    <nested inputs="Semantic.xsd#//tCatchEvent;XSDComplexTypeDefinition=16/XSDParticle/XSDModelGroup/XSDParticle=4"
+        outputs="bpmn.ecore#//CatchEvent/eventDefinitionRef"/>
+    <nested inputs="Semantic.xsd#//tCatchEvent;XSDComplexTypeDefinition=16/XSDAttributeUse"
+        outputs="bpmn.ecore#//CatchEvent/parallelMultiple"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tBoundaryEvent;XSDComplexTypeDefinition=9" outputs="bpmn.ecore#//BoundaryEvent">
+    <nested inputs="Semantic.xsd#//tBoundaryEvent;XSDComplexTypeDefinition=9/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//BoundaryEvent/attachedToRef"/>
+    <nested inputs="Semantic.xsd#//tBoundaryEvent;XSDComplexTypeDefinition=9/XSDAttributeUse"
+        outputs="bpmn.ecore#//BoundaryEvent/cancelActivity"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//boundaryEvent;XSDElementDeclaration=9" outputs="bpmn.ecore#//DocumentRoot/boundaryEvent"/>
+  <nested inputs="Semantic.xsd#//tTask;XSDComplexTypeDefinition=123" outputs="bpmn.ecore#//Task"/>
+  <nested inputs="Semantic.xsd#//tBusinessRuleTask;XSDComplexTypeDefinition=10" outputs="bpmn.ecore#//BusinessRuleTask"/>
+  <nested inputs="Semantic.xsd#//businessRuleTask;XSDElementDeclaration=10" outputs="bpmn.ecore#//DocumentRoot/businessRuleTask"/>
+  <nested inputs="Semantic.xsd#//tInputOutputBinding;XSDComplexTypeDefinition=78"
+      outputs="bpmn.ecore#//InputOutputBinding">
+    <nested inputs="Semantic.xsd#//tInputOutputBinding;XSDComplexTypeDefinition=78/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//InputOutputBinding/inputDataRef"/>
+    <nested inputs="Semantic.xsd#//tInputOutputBinding;XSDComplexTypeDefinition=78/XSDAttributeUse"
+        outputs="bpmn.ecore#//InputOutputBinding/operationRef"/>
+    <nested inputs="Semantic.xsd#//tInputOutputBinding;XSDComplexTypeDefinition=78/XSDAttributeUse=2"
+        outputs="bpmn.ecore#//InputOutputBinding/outputDataRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tCallableElement;XSDComplexTypeDefinition=11" outputs="bpmn.ecore#//CallableElement">
+    <nested inputs="Semantic.xsd#//tCallableElement;XSDComplexTypeDefinition=11/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//CallableElement/supportedInterfaceRef"/>
+    <nested inputs="Semantic.xsd#//tCallableElement;XSDComplexTypeDefinition=11/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//CallableElement/ioSpecification"/>
+    <nested inputs="Semantic.xsd#//tCallableElement;XSDComplexTypeDefinition=11/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="bpmn.ecore#//CallableElement/ioBinding"/>
+    <nested inputs="Semantic.xsd#//tCallableElement;XSDComplexTypeDefinition=11/XSDAttributeUse"
+        outputs="bpmn.ecore#//CallableElement/name"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//callableElement;XSDElementDeclaration=11" outputs="bpmn.ecore#//DocumentRoot/callableElement"/>
+  <nested inputs="Semantic.xsd#//tCallActivity;XSDComplexTypeDefinition=12" outputs="bpmn.ecore#//CallActivity">
+    <nested inputs="Semantic.xsd#//tCallActivity;XSDComplexTypeDefinition=12/XSDAttributeUse"
+        outputs="bpmn.ecore#//CallActivity/calledElement"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//callActivity;XSDElementDeclaration=12" outputs="bpmn.ecore#//DocumentRoot/callActivity"/>
+  <nested inputs="Semantic.xsd#//tChoreographyActivity;XSDComplexTypeDefinition=20"
+      outputs="bpmn.ecore#//ChoreographyActivity">
+    <nested inputs="Semantic.xsd#//tChoreographyActivity;XSDComplexTypeDefinition=20/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//ChoreographyActivity/participantRef"/>
+    <nested inputs="Semantic.xsd#//tChoreographyActivity;XSDComplexTypeDefinition=20/XSDAttributeUse"
+        outputs="bpmn.ecore#//ChoreographyActivity/initiatingParticipantRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tParticipantAssociation;XSDComplexTypeDefinition=96"
+      outputs="bpmn.ecore#//ParticipantAssociation">
+    <nested inputs="Semantic.xsd#//tParticipantAssociation;XSDComplexTypeDefinition=96/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//ParticipantAssociation/innerParticipantRef"/>
+    <nested inputs="Semantic.xsd#//tParticipantAssociation;XSDComplexTypeDefinition=96/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//ParticipantAssociation/outerParticipantRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tCallChoreographyActivity;XSDComplexTypeDefinition=13"
+      outputs="bpmn.ecore#//CallChoreographyActivity">
+    <nested inputs="Semantic.xsd#//tCallChoreographyActivity;XSDComplexTypeDefinition=13/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//CallChoreographyActivity/participantAssociation"/>
+    <nested inputs="Semantic.xsd#//tCallChoreographyActivity;XSDComplexTypeDefinition=13/XSDAttributeUse"
+        outputs="bpmn.ecore#//CallChoreographyActivity/calledElement"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//callChoreographyActivity;XSDElementDeclaration=13"
+      outputs="bpmn.ecore#//DocumentRoot/callChoreographyActivity"/>
+  <nested inputs="Semantic.xsd#//tConversationNode;XSDComplexTypeDefinition=31" outputs="bpmn.ecore#//ConversationNode">
+    <nested inputs="Semantic.xsd#//tConversationNode;XSDComplexTypeDefinition=31/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//ConversationNode/participantRef"/>
+    <nested inputs="Semantic.xsd#//tConversationNode;XSDComplexTypeDefinition=31/XSDAttributeUse"
+        outputs="bpmn.ecore#//ConversationNode/name"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tCallConversation;XSDComplexTypeDefinition=14" outputs="bpmn.ecore#//CallConversation">
+    <nested inputs="Semantic.xsd#//tCallConversation;XSDComplexTypeDefinition=14/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//CallConversation/participantAssociation"/>
+    <nested inputs="Semantic.xsd#//tCallConversation;XSDComplexTypeDefinition=14/XSDAttributeUse"
+        outputs="bpmn.ecore#//CallConversation/calledElementRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//callConversation;XSDElementDeclaration=14" outputs="bpmn.ecore#//DocumentRoot/callConversation"/>
+  <nested inputs="Semantic.xsd#//conversationNode;XSDElementDeclaration=31" outputs="bpmn.ecore#//DocumentRoot/conversationNode"/>
+  <nested inputs="Semantic.xsd#//tCancelEventDefinition;XSDComplexTypeDefinition=15"
+      outputs="bpmn.ecore#//CancelEventDefinition"/>
+  <nested inputs="Semantic.xsd#//cancelEventDefinition;XSDElementDeclaration=15" outputs="bpmn.ecore#//DocumentRoot/cancelEventDefinition"/>
+  <nested inputs="Semantic.xsd#//eventDefinition;XSDElementDeclaration=55" outputs="bpmn.ecore#//DocumentRoot/eventDefinition"/>
+  <nested inputs="Semantic.xsd#//rootElement;XSDElementDeclaration=111" outputs="bpmn.ecore#//DocumentRoot/rootElement"/>
+  <nested inputs="Semantic.xsd#//catchEvent;XSDElementDeclaration=16" outputs="bpmn.ecore#//DocumentRoot/catchEvent"/>
+  <nested inputs="Semantic.xsd#//category;XSDElementDeclaration=17" outputs="bpmn.ecore#//DocumentRoot/category"/>
+  <nested inputs="Semantic.xsd#//categoryValue;XSDElementDeclaration=18" outputs="bpmn.ecore#//DocumentRoot/categoryValue"/>
+  <nested inputs="Semantic.xsd#//tMessageFlow;XSDComplexTypeDefinition=88" outputs="bpmn.ecore#//MessageFlow">
+    <nested inputs="Semantic.xsd#//tMessageFlow;XSDComplexTypeDefinition=88/XSDAttributeUse=3"
+        outputs="bpmn.ecore#//MessageFlow/messageRef"/>
+    <nested inputs="Semantic.xsd#//tMessageFlow;XSDComplexTypeDefinition=88/XSDAttributeUse"
+        outputs="bpmn.ecore#//MessageFlow/name"/>
+    <nested inputs="Semantic.xsd#//tMessageFlow;XSDComplexTypeDefinition=88/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//MessageFlow/sourceRef"/>
+    <nested inputs="Semantic.xsd#//tMessageFlow;XSDComplexTypeDefinition=88/XSDAttributeUse=2"
+        outputs="bpmn.ecore#//MessageFlow/targetRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tParticipantMultiplicity;XSDComplexTypeDefinition=97"
+      outputs="bpmn.ecore#//ParticipantMultiplicity">
+    <nested inputs="Semantic.xsd#//tParticipantMultiplicity;XSDComplexTypeDefinition=97/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//ParticipantMultiplicity/maximum"/>
+    <nested inputs="Semantic.xsd#//tParticipantMultiplicity;XSDComplexTypeDefinition=97/XSDAttributeUse"
+        outputs="bpmn.ecore#//ParticipantMultiplicity/minimum"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tParticipant;XSDComplexTypeDefinition=95" outputs="bpmn.ecore#//Participant">
+    <nested inputs="Semantic.xsd#//tParticipant;XSDComplexTypeDefinition=95/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//Participant/interfaceRef"/>
+    <nested inputs="Semantic.xsd#//tParticipant;XSDComplexTypeDefinition=95/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//Participant/endPointRef"/>
+    <nested inputs="Semantic.xsd#//tParticipant;XSDComplexTypeDefinition=95/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="bpmn.ecore#//Participant/participantMultiplicity"/>
+    <nested inputs="Semantic.xsd#//tParticipant;XSDComplexTypeDefinition=95/XSDAttributeUse"
+        outputs="bpmn.ecore#//Participant/name"/>
+    <nested inputs="Semantic.xsd#//tParticipant;XSDComplexTypeDefinition=95/XSDAttributeUse=2"
+        outputs="bpmn.ecore#//Participant/partnerEntityRef"/>
+    <nested inputs="Semantic.xsd#//tParticipant;XSDComplexTypeDefinition=95/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//Participant/partnerRoleRef"/>
+    <nested inputs="Semantic.xsd#//tParticipant;XSDComplexTypeDefinition=95/XSDAttributeUse=3"
+        outputs="bpmn.ecore#//Participant/processRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tCorrelationKey;XSDComplexTypeDefinition=32" outputs="bpmn.ecore#//CorrelationKey">
+    <nested inputs="Semantic.xsd#//tCorrelationKey;XSDComplexTypeDefinition=32/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//CorrelationKey/correlationPropertyRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tConversation;XSDComplexTypeDefinition=29" outputs="bpmn.ecore#//Conversation">
+    <nested inputs="Semantic.xsd#//tConversation;XSDComplexTypeDefinition=29/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//Conversation/conversationNodeGroup"/>
+    <nested inputs="Semantic.xsd#//tConversation;XSDComplexTypeDefinition=29/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//Conversation/conversationNode"/>
+    <nested inputs="Semantic.xsd#//tConversation;XSDComplexTypeDefinition=29/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//Conversation/participant"/>
+    <nested inputs="Semantic.xsd#//tConversation;XSDComplexTypeDefinition=29/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="bpmn.ecore#//Conversation/artifactGroup"/>
+    <nested inputs="Semantic.xsd#//tConversation;XSDComplexTypeDefinition=29/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="bpmn.ecore#//Conversation/artifact"/>
+    <nested inputs="Semantic.xsd#//tConversation;XSDComplexTypeDefinition=29/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="bpmn.ecore#//Conversation/messageFlow"/>
+    <nested inputs="Semantic.xsd#//tConversation;XSDComplexTypeDefinition=29/XSDParticle/XSDModelGroup/XSDParticle=4"
+        outputs="bpmn.ecore#//Conversation/messageFlowRef"/>
+    <nested inputs="Semantic.xsd#//tConversation;XSDComplexTypeDefinition=29/XSDParticle/XSDModelGroup/XSDParticle=5"
+        outputs="bpmn.ecore#//Conversation/correlationKey"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tConversationAssociation;XSDComplexTypeDefinition=30"
+      outputs="bpmn.ecore#//ConversationAssociation">
+    <nested inputs="Semantic.xsd#//tConversationAssociation;XSDComplexTypeDefinition=30/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//ConversationAssociation/messageFlowRef"/>
+    <nested inputs="Semantic.xsd#//tConversationAssociation;XSDComplexTypeDefinition=30/XSDAttributeUse"
+        outputs="bpmn.ecore#//ConversationAssociation/conversationRef"/>
+    <nested inputs="Semantic.xsd#//tConversationAssociation;XSDComplexTypeDefinition=30/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//ConversationAssociation/correlationKeyRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tMessageFlowAssociation;XSDComplexTypeDefinition=89"
+      outputs="bpmn.ecore#//MessageFlowAssociation">
+    <nested inputs="Semantic.xsd#//tMessageFlowAssociation;XSDComplexTypeDefinition=89/XSDAttributeUse"
+        outputs="bpmn.ecore#//MessageFlowAssociation/innerMessageFlowRef"/>
+    <nested inputs="Semantic.xsd#//tMessageFlowAssociation;XSDComplexTypeDefinition=89/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//MessageFlowAssociation/outerMessageFlowRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tChoreography;XSDComplexTypeDefinition=19" outputs="bpmn.ecore#//Choreography">
+    <nested inputs="Semantic.xsd#//tChoreography;XSDComplexTypeDefinition=19/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//Choreography/flowElementGroup"/>
+    <nested inputs="Semantic.xsd#//tChoreography;XSDComplexTypeDefinition=19/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//Choreography/flowElement"/>
+    <nested inputs="Semantic.xsd#//tChoreography;XSDComplexTypeDefinition=19/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//Choreography/artifactGroup"/>
+    <nested inputs="Semantic.xsd#//tChoreography;XSDComplexTypeDefinition=19/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//Choreography/artifact"/>
+    <nested inputs="Semantic.xsd#//tChoreography;XSDComplexTypeDefinition=19/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="bpmn.ecore#//Choreography/messageFlow"/>
+    <nested inputs="Semantic.xsd#//tChoreography;XSDComplexTypeDefinition=19/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="bpmn.ecore#//Choreography/participant"/>
+    <nested inputs="Semantic.xsd#//tChoreography;XSDComplexTypeDefinition=19/XSDParticle/XSDModelGroup/XSDParticle=4"
+        outputs="bpmn.ecore#//Choreography/conversation"/>
+    <nested inputs="Semantic.xsd#//tChoreography;XSDComplexTypeDefinition=19/XSDParticle/XSDModelGroup/XSDParticle=5"
+        outputs="bpmn.ecore#//Choreography/conversationAssociation"/>
+    <nested inputs="Semantic.xsd#//tChoreography;XSDComplexTypeDefinition=19/XSDParticle/XSDModelGroup/XSDParticle=6"
+        outputs="bpmn.ecore#//Choreography/messageFlowAssociation"/>
+    <nested inputs="Semantic.xsd#//tChoreography;XSDComplexTypeDefinition=19/XSDParticle/XSDModelGroup/XSDParticle=7"
+        outputs="bpmn.ecore#//Choreography/participantAssociation"/>
+    <nested inputs="Semantic.xsd#//tChoreography;XSDComplexTypeDefinition=19/XSDAttributeUse"
+        outputs="bpmn.ecore#//Choreography/isClosed"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//choreography;XSDElementDeclaration=19" outputs="bpmn.ecore#//DocumentRoot/choreography"/>
+  <nested inputs="Semantic.xsd#//choreographyActivity;XSDElementDeclaration=20" outputs="bpmn.ecore#//DocumentRoot/choreographyActivity"/>
+  <nested inputs="Semantic.xsd#//tChoreographySubProcess;XSDComplexTypeDefinition=21"
+      outputs="bpmn.ecore#//ChoreographySubProcess">
+    <nested inputs="Semantic.xsd#//tChoreographySubProcess;XSDComplexTypeDefinition=21/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//ChoreographySubProcess/flowElementGroup"/>
+    <nested inputs="Semantic.xsd#//tChoreographySubProcess;XSDComplexTypeDefinition=21/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//ChoreographySubProcess/flowElement"/>
+    <nested inputs="Semantic.xsd#//tChoreographySubProcess;XSDComplexTypeDefinition=21/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//ChoreographySubProcess/artifactGroup"/>
+    <nested inputs="Semantic.xsd#//tChoreographySubProcess;XSDComplexTypeDefinition=21/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//ChoreographySubProcess/artifact"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//choreographySubProcess;XSDElementDeclaration=21"
+      outputs="bpmn.ecore#//DocumentRoot/choreographySubProcess"/>
+  <nested inputs="Semantic.xsd#//tChoreographyTask;XSDComplexTypeDefinition=22" outputs="bpmn.ecore#//ChoreographyTask">
+    <nested inputs="Semantic.xsd#//tChoreographyTask;XSDComplexTypeDefinition=22/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//ChoreographyTask/messageFlowRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//choreographyTask;XSDElementDeclaration=22" outputs="bpmn.ecore#//DocumentRoot/choreographyTask"/>
+  <nested inputs="Semantic.xsd#//tCollaboration;XSDComplexTypeDefinition=23" outputs="bpmn.ecore#//Collaboration">
+    <nested inputs="Semantic.xsd#//tCollaboration;XSDComplexTypeDefinition=23/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//Collaboration/participant"/>
+    <nested inputs="Semantic.xsd#//tCollaboration;XSDComplexTypeDefinition=23/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//Collaboration/messageFlow"/>
+    <nested inputs="Semantic.xsd#//tCollaboration;XSDComplexTypeDefinition=23/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="bpmn.ecore#//Collaboration/artifactGroup"/>
+    <nested inputs="Semantic.xsd#//tCollaboration;XSDComplexTypeDefinition=23/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="bpmn.ecore#//Collaboration/artifact"/>
+    <nested inputs="Semantic.xsd#//tCollaboration;XSDComplexTypeDefinition=23/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="bpmn.ecore#//Collaboration/conversation"/>
+    <nested inputs="Semantic.xsd#//tCollaboration;XSDComplexTypeDefinition=23/XSDParticle/XSDModelGroup/XSDParticle=4"
+        outputs="bpmn.ecore#//Collaboration/conversationAssociation"/>
+    <nested inputs="Semantic.xsd#//tCollaboration;XSDComplexTypeDefinition=23/XSDParticle/XSDModelGroup/XSDParticle=5"
+        outputs="bpmn.ecore#//Collaboration/participantAssociation"/>
+    <nested inputs="Semantic.xsd#//tCollaboration;XSDComplexTypeDefinition=23/XSDParticle/XSDModelGroup/XSDParticle=6"
+        outputs="bpmn.ecore#//Collaboration/messageFlowAssociation"/>
+    <nested inputs="Semantic.xsd#//tCollaboration;XSDComplexTypeDefinition=23/XSDAttributeUse=2"
+        outputs="bpmn.ecore#//Collaboration/choreographyRef"/>
+    <nested inputs="Semantic.xsd#//tCollaboration;XSDComplexTypeDefinition=23/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//Collaboration/isClosed"/>
+    <nested inputs="Semantic.xsd#//tCollaboration;XSDComplexTypeDefinition=23/XSDAttributeUse"
+        outputs="bpmn.ecore#//Collaboration/name"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//collaboration;XSDElementDeclaration=23" outputs="bpmn.ecore#//DocumentRoot/collaboration"/>
+  <nested inputs="Semantic.xsd#//tCommunication;XSDComplexTypeDefinition=24" outputs="bpmn.ecore#//Communication">
+    <nested inputs="Semantic.xsd#//tCommunication;XSDComplexTypeDefinition=24/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//Communication/messageFlowRef"/>
+    <nested inputs="Semantic.xsd#//tCommunication;XSDComplexTypeDefinition=24/XSDAttributeUse"
+        outputs="bpmn.ecore#//Communication/correlationKeyRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//communication;XSDElementDeclaration=24" outputs="bpmn.ecore#//DocumentRoot/communication"/>
+  <nested inputs="Semantic.xsd#//tCompensateEventDefinition;XSDComplexTypeDefinition=25"
+      outputs="bpmn.ecore#//CompensateEventDefinition">
+    <nested inputs="Semantic.xsd#//tCompensateEventDefinition;XSDComplexTypeDefinition=25/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//CompensateEventDefinition/activityRef"/>
+    <nested inputs="Semantic.xsd#//tCompensateEventDefinition;XSDComplexTypeDefinition=25/XSDAttributeUse"
+        outputs="bpmn.ecore#//CompensateEventDefinition/waitForCompletion"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//compensateEventDefinition;XSDElementDeclaration=25"
+      outputs="bpmn.ecore#//DocumentRoot/compensateEventDefinition"/>
+  <nested inputs="Semantic.xsd#//tThrowEvent;XSDComplexTypeDefinition=127" outputs="bpmn.ecore#//ThrowEvent">
+    <nested inputs="Semantic.xsd#//tThrowEvent;XSDComplexTypeDefinition=127/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//ThrowEvent/dataInput"/>
+    <nested inputs="Semantic.xsd#//tThrowEvent;XSDComplexTypeDefinition=127/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//ThrowEvent/dataInputAssociation"/>
+    <nested inputs="Semantic.xsd#//tThrowEvent;XSDComplexTypeDefinition=127/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="bpmn.ecore#//ThrowEvent/inputSet"/>
+    <nested inputs="Semantic.xsd#//tThrowEvent;XSDComplexTypeDefinition=127/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="bpmn.ecore#//ThrowEvent/eventDefinitionGroup"/>
+    <nested inputs="Semantic.xsd#//tThrowEvent;XSDComplexTypeDefinition=127/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="bpmn.ecore#//ThrowEvent/eventDefinition"/>
+    <nested inputs="Semantic.xsd#//tThrowEvent;XSDComplexTypeDefinition=127/XSDParticle/XSDModelGroup/XSDParticle=4"
+        outputs="bpmn.ecore#//ThrowEvent/eventDefinitionRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tImplicitThrowEvent;XSDComplexTypeDefinition=72"
+      outputs="bpmn.ecore#//ImplicitThrowEvent"/>
+  <nested inputs="Semantic.xsd#//tComplexBehaviorDefinition;XSDComplexTypeDefinition=26"
+      outputs="bpmn.ecore#//ComplexBehaviorDefinition">
+    <nested inputs="Semantic.xsd#//tComplexBehaviorDefinition;XSDComplexTypeDefinition=26/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//ComplexBehaviorDefinition/condition"/>
+    <nested inputs="Semantic.xsd#//tComplexBehaviorDefinition;XSDComplexTypeDefinition=26/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//ComplexBehaviorDefinition/event"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//complexBehaviorDefinition;XSDElementDeclaration=26"
+      outputs="bpmn.ecore#//DocumentRoot/complexBehaviorDefinition"/>
+  <nested inputs="Semantic.xsd#//tGatewayDirection;XSDSimpleTypeDefinition=3" outputs="bpmn.ecore#//GatewayDirection">
+    <nested inputs="Semantic.xsd#//tGatewayDirection;XSDSimpleTypeDefinition=3/XSDEnumerationFacet"
+        outputs="bpmn.ecore#//GatewayDirection/unspecified"/>
+    <nested inputs="Semantic.xsd#//tGatewayDirection;XSDSimpleTypeDefinition=3/XSDEnumerationFacet=1"
+        outputs="bpmn.ecore#//GatewayDirection/converging"/>
+    <nested inputs="Semantic.xsd#//tGatewayDirection;XSDSimpleTypeDefinition=3/XSDEnumerationFacet=2"
+        outputs="bpmn.ecore#//GatewayDirection/diverging"/>
+    <nested inputs="Semantic.xsd#//tGatewayDirection;XSDSimpleTypeDefinition=3/XSDEnumerationFacet=3"
+        outputs="bpmn.ecore#//GatewayDirection/mixed"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tGateway;XSDComplexTypeDefinition=62" outputs="bpmn.ecore#//Gateway">
+    <nested inputs="Semantic.xsd#//tGateway;XSDComplexTypeDefinition=62/XSDAttributeUse"
+        outputs="bpmn.ecore#//Gateway/gatewayDirection"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tComplexGateway;XSDComplexTypeDefinition=27" outputs="bpmn.ecore#//ComplexGateway">
+    <nested inputs="Semantic.xsd#//tComplexGateway;XSDComplexTypeDefinition=27/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//ComplexGateway/activationCondition"/>
+    <nested inputs="Semantic.xsd#//tComplexGateway;XSDComplexTypeDefinition=27/XSDAttributeUse"
+        outputs="bpmn.ecore#//ComplexGateway/default"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//complexGateway;XSDElementDeclaration=27" outputs="bpmn.ecore#//DocumentRoot/complexGateway"/>
+  <nested inputs="Semantic.xsd#//tConditionalEventDefinition;XSDComplexTypeDefinition=28"
+      outputs="bpmn.ecore#//ConditionalEventDefinition">
+    <nested inputs="Semantic.xsd#//tConditionalEventDefinition;XSDComplexTypeDefinition=28/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//ConditionalEventDefinition/condition"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//conditionalEventDefinition;XSDElementDeclaration=28"
+      outputs="bpmn.ecore#//DocumentRoot/conditionalEventDefinition"/>
+  <nested inputs="bundleentry://461.fwk1205807115/cache/www.w3.org/2001/XMLSchema.xsd#//NCName;XSDSimpleTypeDefinition=36"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//NCName"/>
+  <nested inputs="DiagramInterchange.xsd#//Style;XSDComplexTypeDefinition=4" outputs="di.ecore#//Style">
+    <nested inputs="DiagramInterchange.xsd#//Style;XSDComplexTypeDefinition=4/XSDAttributeUse"
+        outputs="di.ecore#//Style/name"/>
+    <nested inputs="DiagramInterchange.xsd#//Style;XSDComplexTypeDefinition=4/XSDAttributeUse=1"
+        outputs="di.ecore#//Style/value"/>
+  </nested>
+  <nested inputs="DiagramInterchange.xsd#//Node;XSDComplexTypeDefinition=2" outputs="di.ecore#//Node"/>
+  <nested inputs="DiagramInterchange.xsd#//View;XSDComplexTypeDefinition/XSDAttributeUse=2/definition;XSDAttributeDeclaration/XSDSimpleTypeDefinition"
+      outputs="di.ecore#//DefinitionType"/>
+  <nested inputs="DiagramInterchange.xsd#//View;XSDComplexTypeDefinition/XSDAttributeUse=4/sourceConnector;XSDAttributeDeclaration/XSDSimpleTypeDefinition"
+      outputs="di.ecore#//SourceConnectorType"/>
+  <nested inputs="DiagramInterchange.xsd#//View;XSDComplexTypeDefinition/XSDAttributeUse=3/targetConnector;XSDAttributeDeclaration/XSDSimpleTypeDefinition"
+      outputs="di.ecore#//TargetConnectorType"/>
+  <nested inputs="DiagramInterchange.xsd#//View;XSDComplexTypeDefinition" outputs="di.ecore#//View">
+    <nested inputs="DiagramInterchange.xsd#//View;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="di.ecore#//View/style"/>
+    <nested inputs="DiagramInterchange.xsd#//View;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="di.ecore#//View/child"/>
+    <nested inputs="DiagramInterchange.xsd#//View;XSDComplexTypeDefinition/XSDAttributeUse=1"
+        outputs="di.ecore#//View/context"/>
+    <nested inputs="DiagramInterchange.xsd#//View;XSDComplexTypeDefinition/XSDAttributeUse=2"
+        outputs="di.ecore#//View/definition"/>
+    <nested inputs="DiagramInterchange.xsd#//View;XSDComplexTypeDefinition/XSDAttributeUse"
+        outputs="di.ecore#//View/id"/>
+    <nested inputs="DiagramInterchange.xsd#//View;XSDComplexTypeDefinition/XSDAttributeUse=4"
+        outputs="di.ecore#//View/sourceConnector"/>
+    <nested inputs="DiagramInterchange.xsd#//View;XSDComplexTypeDefinition/XSDAttributeUse=3"
+        outputs="di.ecore#//View/targetConnector"/>
+  </nested>
+  <nested inputs="DiagramInterchange.xsd#//Connector;XSDComplexTypeDefinition=3" outputs="di.ecore#//Connector">
+    <nested inputs="DiagramInterchange.xsd#//Connector;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="di.ecore#//Connector/bendpoint"/>
+    <nested inputs="DiagramInterchange.xsd#//Connector;XSDComplexTypeDefinition=3/XSDAttributeUse"
+        outputs="di.ecore#//Connector/source"/>
+    <nested inputs="DiagramInterchange.xsd#//Connector;XSDComplexTypeDefinition=3/XSDAttributeUse=1"
+        outputs="di.ecore#//Connector/target"/>
+  </nested>
+  <nested inputs="DiagramInterchange.xsd#//connector;XSDElementDeclaration=3" outputs="di.ecore#//DocumentRoot/connector"/>
+  <nested inputs="DiagramInterchange.xsd#//view;XSDElementDeclaration" outputs="di.ecore#//DocumentRoot/view"/>
+  <nested inputs="Semantic.xsd#//conversation;XSDElementDeclaration=29" outputs="bpmn.ecore#//DocumentRoot/conversation"/>
+  <nested inputs="Semantic.xsd#//conversationAssociation;XSDElementDeclaration=30"
+      outputs="bpmn.ecore#//DocumentRoot/conversationAssociation"/>
+  <nested inputs="Semantic.xsd#//correlationKey;XSDElementDeclaration=32" outputs="bpmn.ecore#//DocumentRoot/correlationKey"/>
+  <nested inputs="Semantic.xsd#//tCorrelationPropertyRetrievalExpression;XSDComplexTypeDefinition=35"
+      outputs="bpmn.ecore#//CorrelationPropertyRetrievalExpression">
+    <nested inputs="Semantic.xsd#//tCorrelationPropertyRetrievalExpression;XSDComplexTypeDefinition=35/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//CorrelationPropertyRetrievalExpression/messagePath"/>
+    <nested inputs="Semantic.xsd#//tCorrelationPropertyRetrievalExpression;XSDComplexTypeDefinition=35/XSDAttributeUse"
+        outputs="bpmn.ecore#//CorrelationPropertyRetrievalExpression/messageRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tCorrelationProperty;XSDComplexTypeDefinition=33"
+      outputs="bpmn.ecore#//CorrelationProperty">
+    <nested inputs="Semantic.xsd#//tCorrelationProperty;XSDComplexTypeDefinition=33/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//CorrelationProperty/correlationPropertyRetrievalExpression"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//correlationProperty;XSDElementDeclaration=33" outputs="bpmn.ecore#//DocumentRoot/correlationProperty"/>
+  <nested inputs="Semantic.xsd#//tCorrelationPropertyBinding;XSDComplexTypeDefinition=34"
+      outputs="bpmn.ecore#//CorrelationPropertyBinding">
+    <nested inputs="Semantic.xsd#//tCorrelationPropertyBinding;XSDComplexTypeDefinition=34/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//CorrelationPropertyBinding/dataPath"/>
+    <nested inputs="Semantic.xsd#//tCorrelationPropertyBinding;XSDComplexTypeDefinition=34/XSDAttributeUse"
+        outputs="bpmn.ecore#//CorrelationPropertyBinding/correlationPropertyRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//correlationPropertyBinding;XSDElementDeclaration=34"
+      outputs="bpmn.ecore#//DocumentRoot/correlationPropertyBinding"/>
+  <nested inputs="Semantic.xsd#//correlationPropertyRetrievalExpression;XSDElementDeclaration=35"
+      outputs="bpmn.ecore#//DocumentRoot/correlationPropertyRetrievalExpression"/>
+  <nested inputs="Semantic.xsd#//tCorrelationSubscription;XSDComplexTypeDefinition=36"
+      outputs="bpmn.ecore#//CorrelationSubscription">
+    <nested inputs="Semantic.xsd#//tCorrelationSubscription;XSDComplexTypeDefinition=36/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//CorrelationSubscription/correlationPropertyBinding"/>
+    <nested inputs="Semantic.xsd#//tCorrelationSubscription;XSDComplexTypeDefinition=36/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//CorrelationSubscription/correlationKeyRef"/>
+    <nested inputs="Semantic.xsd#//tCorrelationSubscription;XSDComplexTypeDefinition=36/XSDAttributeUse"
+        outputs="bpmn.ecore#//CorrelationSubscription/process"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//correlationSubscription;XSDElementDeclaration=36"
+      outputs="bpmn.ecore#//DocumentRoot/correlationSubscription"/>
+  <nested inputs="Semantic.xsd#//dataAssociation;XSDElementDeclaration=37" outputs="bpmn.ecore#//DocumentRoot/dataAssociation"/>
+  <nested inputs="Semantic.xsd#//dataInput;XSDElementDeclaration=38" outputs="bpmn.ecore#//DocumentRoot/dataInput"/>
+  <nested inputs="Semantic.xsd#//dataInputAssociation;XSDElementDeclaration=39" outputs="bpmn.ecore#//DocumentRoot/dataInputAssociation"/>
+  <nested inputs="Semantic.xsd#//tDataObject;XSDComplexTypeDefinition=40" outputs="bpmn.ecore#//DataObject">
+    <nested inputs="Semantic.xsd#//tDataObject;XSDComplexTypeDefinition=40/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//DataObject/dataState"/>
+    <nested inputs="Semantic.xsd#//tDataObject;XSDComplexTypeDefinition=40/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//DataObject/isCollection"/>
+    <nested inputs="Semantic.xsd#//tDataObject;XSDComplexTypeDefinition=40/XSDAttributeUse"
+        outputs="bpmn.ecore#//DataObject/itemSubjectRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//dataObject;XSDElementDeclaration=40" outputs="bpmn.ecore#//DocumentRoot/dataObject"/>
+  <nested inputs="Semantic.xsd#//dataOutput;XSDElementDeclaration=41" outputs="bpmn.ecore#//DocumentRoot/dataOutput"/>
+  <nested inputs="Semantic.xsd#//dataOutputAssociation;XSDElementDeclaration=42" outputs="bpmn.ecore#//DocumentRoot/dataOutputAssociation"/>
+  <nested inputs="Semantic.xsd#//dataState;XSDElementDeclaration=43" outputs="bpmn.ecore#//DocumentRoot/dataState"/>
+  <nested inputs="Semantic.xsd#//tDataStore;XSDComplexTypeDefinition=44" outputs="bpmn.ecore#//DataStore">
+    <nested inputs="Semantic.xsd#//tDataStore;XSDComplexTypeDefinition=44/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//DataStore/dataState"/>
+    <nested inputs="Semantic.xsd#//tDataStore;XSDComplexTypeDefinition=44/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//DataStore/capacity"/>
+    <nested inputs="Semantic.xsd#//tDataStore;XSDComplexTypeDefinition=44/XSDAttributeUse=2"
+        outputs="bpmn.ecore#//DataStore/isUnlimited"/>
+    <nested inputs="Semantic.xsd#//tDataStore;XSDComplexTypeDefinition=44/XSDAttributeUse=3"
+        outputs="bpmn.ecore#//DataStore/itemSubjectRef"/>
+    <nested inputs="Semantic.xsd#//tDataStore;XSDComplexTypeDefinition=44/XSDAttributeUse"
+        outputs="bpmn.ecore#//DataStore/name"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//dataStore;XSDElementDeclaration=44" outputs="bpmn.ecore#//DocumentRoot/dataStore"/>
+  <nested inputs="Semantic.xsd#//tDataStoreReference;XSDComplexTypeDefinition=45"
+      outputs="bpmn.ecore#//DataStoreReference">
+    <nested inputs="Semantic.xsd#//tDataStoreReference;XSDComplexTypeDefinition=45/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//DataStoreReference/dataState"/>
+    <nested inputs="Semantic.xsd#//tDataStoreReference;XSDComplexTypeDefinition=45/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//DataStoreReference/dataStoreRef"/>
+    <nested inputs="Semantic.xsd#//tDataStoreReference;XSDComplexTypeDefinition=45/XSDAttributeUse"
+        outputs="bpmn.ecore#//DataStoreReference/itemSubjectRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//dataStoreReference;XSDElementDeclaration=45" outputs="bpmn.ecore#//DocumentRoot/dataStoreReference"/>
+  <nested inputs="BPMN20.xsd#//tImport;XSDComplexTypeDefinition=1" outputs="bpmn.ecore#//Import">
+    <nested inputs="BPMN20.xsd#//tImport;XSDComplexTypeDefinition=1/XSDAttributeUse=2"
+        outputs="bpmn.ecore#//Import/importType"/>
+    <nested inputs="BPMN20.xsd#//tImport;XSDComplexTypeDefinition=1/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//Import/location"/>
+    <nested inputs="BPMN20.xsd#//tImport;XSDComplexTypeDefinition=1/XSDAttributeUse"
+        outputs="bpmn.ecore#//Import/namespace"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tExtension;XSDComplexTypeDefinition=58" outputs="bpmn.ecore#//Extension">
+    <nested inputs="Semantic.xsd#//tExtension;XSDComplexTypeDefinition=58/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//Extension/documentation"/>
+    <nested inputs="Semantic.xsd#//tExtension;XSDComplexTypeDefinition=58/XSDAttributeUse"
+        outputs="bpmn.ecore#//Extension/definition"/>
+    <nested inputs="Semantic.xsd#//tExtension;XSDComplexTypeDefinition=58/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//Extension/mustUnderstand"/>
+  </nested>
+  <nested inputs="DiagramInterchange.xsd#//Diagram;XSDComplexTypeDefinition=1" outputs="di.ecore#//Diagram">
+    <nested inputs="DiagramInterchange.xsd#//Diagram;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="di.ecore#//Diagram/connector"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tRelationshipDirection;XSDSimpleTypeDefinition=7"
+      outputs="bpmn.ecore#//RelationshipDirection">
+    <nested inputs="Semantic.xsd#//tRelationshipDirection;XSDSimpleTypeDefinition=7/XSDEnumerationFacet"
+        outputs="bpmn.ecore#//RelationshipDirection/none"/>
+    <nested inputs="Semantic.xsd#//tRelationshipDirection;XSDSimpleTypeDefinition=7/XSDEnumerationFacet=1"
+        outputs="bpmn.ecore#//RelationshipDirection/forward"/>
+    <nested inputs="Semantic.xsd#//tRelationshipDirection;XSDSimpleTypeDefinition=7/XSDEnumerationFacet=2"
+        outputs="bpmn.ecore#//RelationshipDirection/backward"/>
+    <nested inputs="Semantic.xsd#//tRelationshipDirection;XSDSimpleTypeDefinition=7/XSDEnumerationFacet=3"
+        outputs="bpmn.ecore#//RelationshipDirection/both"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tRelationship;XSDComplexTypeDefinition=105" outputs="bpmn.ecore#//Relationship">
+    <nested inputs="Semantic.xsd#//tRelationship;XSDComplexTypeDefinition=105/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//Relationship/source"/>
+    <nested inputs="Semantic.xsd#//tRelationship;XSDComplexTypeDefinition=105/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//Relationship/target"/>
+    <nested inputs="Semantic.xsd#//tRelationship;XSDComplexTypeDefinition=105/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//Relationship/direction"/>
+    <nested inputs="Semantic.xsd#//tRelationship;XSDComplexTypeDefinition=105/XSDAttributeUse"
+        outputs="bpmn.ecore#//Relationship/type"/>
+  </nested>
+  <nested inputs="BPMN20.xsd#//tDefinitions;XSDComplexTypeDefinition" outputs="bpmn.ecore#//Definitions">
+    <nested inputs="BPMN20.xsd#//tDefinitions;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//Definitions/import"/>
+    <nested inputs="BPMN20.xsd#//tDefinitions;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//Definitions/extension"/>
+    <nested inputs="BPMN20.xsd#//tDefinitions;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="bpmn.ecore#//Definitions/rootElementGroup"/>
+    <nested inputs="BPMN20.xsd#//tDefinitions;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="bpmn.ecore#//Definitions/rootElement"/>
+    <nested inputs="BPMN20.xsd#//tDefinitions;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="bpmn.ecore#//Definitions/diagram"/>
+    <nested inputs="BPMN20.xsd#//tDefinitions;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=4"
+        outputs="bpmn.ecore#//Definitions/relationship"/>
+    <nested inputs="BPMN20.xsd#//tDefinitions;XSDComplexTypeDefinition/XSDAttributeUse=2"
+        outputs="bpmn.ecore#//Definitions/expressionLanguage"/>
+    <nested inputs="BPMN20.xsd#//tDefinitions;XSDComplexTypeDefinition/XSDAttributeUse"
+        outputs="bpmn.ecore#//Definitions/id"/>
+    <nested inputs="BPMN20.xsd#//tDefinitions;XSDComplexTypeDefinition/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//Definitions/targetNamespace"/>
+    <nested inputs="BPMN20.xsd#//tDefinitions;XSDComplexTypeDefinition/XSDAttributeUse=3"
+        outputs="bpmn.ecore#//Definitions/typeLanguage"/>
+    <nested inputs="BPMN20.xsd#//tDefinitions;XSDComplexTypeDefinition/XSDWildcard"
+        outputs="bpmn.ecore#//Definitions/anyAttribute"/>
+  </nested>
+  <nested inputs="BPMN20.xsd#//definitions;XSDElementDeclaration" outputs="bpmn.ecore#//DocumentRoot/definitions"/>
+  <nested inputs="DiagramInterchange.xsd#//diagram;XSDElementDeclaration=1" outputs="di.ecore#//DocumentRoot/diagram"/>
+  <nested inputs="Semantic.xsd#//documentation;XSDElementDeclaration=46" outputs="bpmn.ecore#//DocumentRoot/documentation"/>
+  <nested inputs="Semantic.xsd#//tEndEvent;XSDComplexTypeDefinition=47" outputs="bpmn.ecore#//EndEvent"/>
+  <nested inputs="Semantic.xsd#//endEvent;XSDElementDeclaration=47" outputs="bpmn.ecore#//DocumentRoot/endEvent"/>
+  <nested inputs="Semantic.xsd#//tEndPoint;XSDComplexTypeDefinition=48" outputs="bpmn.ecore#//EndPoint"/>
+  <nested inputs="Semantic.xsd#//endPoint;XSDElementDeclaration=48" outputs="bpmn.ecore#//DocumentRoot/endPoint"/>
+  <nested inputs="Semantic.xsd#//tError;XSDComplexTypeDefinition=49" outputs="bpmn.ecore#//Error">
+    <nested inputs="Semantic.xsd#//tError;XSDComplexTypeDefinition=49/XSDAttributeUse"
+        outputs="bpmn.ecore#//Error/structureRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//error;XSDElementDeclaration=49" outputs="bpmn.ecore#//DocumentRoot/error"/>
+  <nested inputs="Semantic.xsd#//tErrorEventDefinition;XSDComplexTypeDefinition=50"
+      outputs="bpmn.ecore#//ErrorEventDefinition">
+    <nested inputs="Semantic.xsd#//tErrorEventDefinition;XSDComplexTypeDefinition=50/XSDAttributeUse"
+        outputs="bpmn.ecore#//ErrorEventDefinition/errorCode"/>
+    <nested inputs="Semantic.xsd#//tErrorEventDefinition;XSDComplexTypeDefinition=50/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//ErrorEventDefinition/errorRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//errorEventDefinition;XSDElementDeclaration=50" outputs="bpmn.ecore#//DocumentRoot/errorEventDefinition"/>
+  <nested inputs="Semantic.xsd#//tEscalation;XSDComplexTypeDefinition=51" outputs="bpmn.ecore#//Escalation">
+    <nested inputs="Semantic.xsd#//tEscalation;XSDComplexTypeDefinition=51/XSDAttributeUse"
+        outputs="bpmn.ecore#//Escalation/structureRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//escalation;XSDElementDeclaration=51" outputs="bpmn.ecore#//DocumentRoot/escalation"/>
+  <nested inputs="Semantic.xsd#//tEscalationEventDefinition;XSDComplexTypeDefinition=52"
+      outputs="bpmn.ecore#//EscalationEventDefinition">
+    <nested inputs="Semantic.xsd#//tEscalationEventDefinition;XSDComplexTypeDefinition=52/XSDAttributeUse"
+        outputs="bpmn.ecore#//EscalationEventDefinition/escalationCode"/>
+    <nested inputs="Semantic.xsd#//tEscalationEventDefinition;XSDComplexTypeDefinition=52/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//EscalationEventDefinition/escalationRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//escalationEventDefinition;XSDElementDeclaration=52"
+      outputs="bpmn.ecore#//DocumentRoot/escalationEventDefinition"/>
+  <nested inputs="Semantic.xsd#//event;XSDElementDeclaration=53" outputs="bpmn.ecore#//DocumentRoot/event"/>
+  <nested inputs="Semantic.xsd#//tEventBasedGatewayType;XSDSimpleTypeDefinition=2"
+      outputs="bpmn.ecore#//EventBasedGatewayType">
+    <nested inputs="Semantic.xsd#//tEventBasedGatewayType;XSDSimpleTypeDefinition=2/XSDEnumerationFacet"
+        outputs="bpmn.ecore#//EventBasedGatewayType/Exclusive"/>
+    <nested inputs="Semantic.xsd#//tEventBasedGatewayType;XSDSimpleTypeDefinition=2/XSDEnumerationFacet=1"
+        outputs="bpmn.ecore#//EventBasedGatewayType/Parallel"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tEventBasedGateway;XSDComplexTypeDefinition=54" outputs="bpmn.ecore#//EventBasedGateway">
+    <nested inputs="Semantic.xsd#//tEventBasedGateway;XSDComplexTypeDefinition=54/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//EventBasedGateway/eventGatewayType"/>
+    <nested inputs="Semantic.xsd#//tEventBasedGateway;XSDComplexTypeDefinition=54/XSDAttributeUse"
+        outputs="bpmn.ecore#//EventBasedGateway/instantiate"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//eventBasedGateway;XSDElementDeclaration=54" outputs="bpmn.ecore#//DocumentRoot/eventBasedGateway"/>
+  <nested inputs="Semantic.xsd#//tExclusiveGateway;XSDComplexTypeDefinition=56" outputs="bpmn.ecore#//ExclusiveGateway">
+    <nested inputs="Semantic.xsd#//tExclusiveGateway;XSDComplexTypeDefinition=56/XSDAttributeUse"
+        outputs="bpmn.ecore#//ExclusiveGateway/default"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//exclusiveGateway;XSDElementDeclaration=56" outputs="bpmn.ecore#//DocumentRoot/exclusiveGateway"/>
+  <nested inputs="Semantic.xsd#//expression;XSDElementDeclaration=57" outputs="bpmn.ecore#//DocumentRoot/expression"/>
+  <nested inputs="Semantic.xsd#//extension;XSDElementDeclaration=58" outputs="bpmn.ecore#//DocumentRoot/extension"/>
+  <nested inputs="Semantic.xsd#//flowNode;XSDElementDeclaration=60" outputs="bpmn.ecore#//DocumentRoot/flowNode"/>
+  <nested inputs="Semantic.xsd#//formalExpression;XSDElementDeclaration=61" outputs="bpmn.ecore#//DocumentRoot/formalExpression"/>
+  <nested inputs="Semantic.xsd#//gateway;XSDElementDeclaration=62" outputs="bpmn.ecore#//DocumentRoot/gateway"/>
+  <nested inputs="Semantic.xsd#//tPerformer;XSDComplexTypeDefinition=100" outputs="bpmn.ecore#//Performer"/>
+  <nested inputs="Semantic.xsd#//tGlobalTask;XSDComplexTypeDefinition=68" outputs="bpmn.ecore#//GlobalTask">
+    <nested inputs="Semantic.xsd#//tGlobalTask;XSDComplexTypeDefinition=68/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//GlobalTask/performerGroup"/>
+    <nested inputs="Semantic.xsd#//tGlobalTask;XSDComplexTypeDefinition=68/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//GlobalTask/performer"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tGlobalBusinessRuleTask;XSDComplexTypeDefinition=63"
+      outputs="bpmn.ecore#//GlobalBusinessRuleTask"/>
+  <nested inputs="Semantic.xsd#//globalBusinessRuleTask;XSDElementDeclaration=63"
+      outputs="bpmn.ecore#//DocumentRoot/globalBusinessRuleTask"/>
+  <nested inputs="Semantic.xsd#//tGlobalChoreographyTask;XSDComplexTypeDefinition=64"
+      outputs="bpmn.ecore#//GlobalChoreographyTask">
+    <nested inputs="Semantic.xsd#//tGlobalChoreographyTask;XSDComplexTypeDefinition=64/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//GlobalChoreographyTask/participant"/>
+    <nested inputs="Semantic.xsd#//tGlobalChoreographyTask;XSDComplexTypeDefinition=64/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//GlobalChoreographyTask/messageFlow"/>
+    <nested inputs="Semantic.xsd#//tGlobalChoreographyTask;XSDComplexTypeDefinition=64/XSDAttributeUse"
+        outputs="bpmn.ecore#//GlobalChoreographyTask/initiatingParticipantRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//globalChoreographyTask;XSDElementDeclaration=64"
+      outputs="bpmn.ecore#//DocumentRoot/globalChoreographyTask"/>
+  <nested inputs="Semantic.xsd#//tGlobalCommunication;XSDComplexTypeDefinition=65"
+      outputs="bpmn.ecore#//GlobalCommunication">
+    <nested inputs="Semantic.xsd#//tGlobalCommunication;XSDComplexTypeDefinition=65/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//GlobalCommunication/participant"/>
+    <nested inputs="Semantic.xsd#//tGlobalCommunication;XSDComplexTypeDefinition=65/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//GlobalCommunication/messageFlow"/>
+    <nested inputs="Semantic.xsd#//tGlobalCommunication;XSDComplexTypeDefinition=65/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="bpmn.ecore#//GlobalCommunication/correlationKey"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//globalCommunication;XSDElementDeclaration=65" outputs="bpmn.ecore#//DocumentRoot/globalCommunication"/>
+  <nested inputs="Semantic.xsd#//tGlobalManualTask;XSDComplexTypeDefinition=66" outputs="bpmn.ecore#//GlobalManualTask"/>
+  <nested inputs="Semantic.xsd#//globalManualTask;XSDElementDeclaration=66" outputs="bpmn.ecore#//DocumentRoot/globalManualTask"/>
+  <nested inputs="Semantic.xsd#//tScript;XSDComplexTypeDefinition=113" outputs="bpmn.ecore#//Script">
+    <nested inputs="Semantic.xsd#//tScript;XSDComplexTypeDefinition=113/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//Script/any"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tGlobalScriptTask;XSDComplexTypeDefinition=67" outputs="bpmn.ecore#//GlobalScriptTask">
+    <nested inputs="Semantic.xsd#//tGlobalScriptTask;XSDComplexTypeDefinition=67/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//GlobalScriptTask/script"/>
+    <nested inputs="Semantic.xsd#//tGlobalScriptTask;XSDComplexTypeDefinition=67/XSDAttributeUse"
+        outputs="bpmn.ecore#//GlobalScriptTask/scriptLanguage"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//globalScriptTask;XSDElementDeclaration=67" outputs="bpmn.ecore#//DocumentRoot/globalScriptTask"/>
+  <nested inputs="Semantic.xsd#//globalTask;XSDElementDeclaration=68" outputs="bpmn.ecore#//DocumentRoot/globalTask"/>
+  <nested inputs="Semantic.xsd#//tRendering;XSDComplexTypeDefinition=106" outputs="bpmn.ecore#//Rendering"/>
+  <nested inputs="Semantic.xsd#//tUserTaskImplementation;XSDSimpleTypeDefinition=10"
+      outputs="bpmn.ecore#//UserTaskImplementation">
+    <nested inputs="Semantic.xsd#//tUserTaskImplementation;XSDSimpleTypeDefinition=10/XSDEnumerationFacet"
+        outputs="bpmn.ecore#//UserTaskImplementation/unspecified"/>
+    <nested inputs="Semantic.xsd#//tUserTaskImplementation;XSDSimpleTypeDefinition=10/XSDEnumerationFacet=1"
+        outputs="bpmn.ecore#//UserTaskImplementation/other"/>
+    <nested inputs="Semantic.xsd#//tUserTaskImplementation;XSDSimpleTypeDefinition=10/XSDEnumerationFacet=2"
+        outputs="bpmn.ecore#//UserTaskImplementation/webService"/>
+    <nested inputs="Semantic.xsd#//tUserTaskImplementation;XSDSimpleTypeDefinition=10/XSDEnumerationFacet=3"
+        outputs="bpmn.ecore#//UserTaskImplementation/humanTaskWebService"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tGlobalUserTask;XSDComplexTypeDefinition=69" outputs="bpmn.ecore#//GlobalUserTask">
+    <nested inputs="Semantic.xsd#//tGlobalUserTask;XSDComplexTypeDefinition=69/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//GlobalUserTask/rendering"/>
+    <nested inputs="Semantic.xsd#//tGlobalUserTask;XSDComplexTypeDefinition=69/XSDAttributeUse"
+        outputs="bpmn.ecore#//GlobalUserTask/implementation"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//globalUserTask;XSDElementDeclaration=69" outputs="bpmn.ecore#//DocumentRoot/globalUserTask"/>
+  <nested inputs="Semantic.xsd#//tGroup;XSDComplexTypeDefinition=70" outputs="bpmn.ecore#//Group">
+    <nested inputs="Semantic.xsd#//tGroup;XSDComplexTypeDefinition=70/XSDAttributeUse"
+        outputs="bpmn.ecore#//Group/categoryRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//group;XSDElementDeclaration=70" outputs="bpmn.ecore#//DocumentRoot/group"/>
+  <nested inputs="Semantic.xsd#//tHumanPerformer;XSDComplexTypeDefinition=71" outputs="bpmn.ecore#//HumanPerformer"/>
+  <nested inputs="Semantic.xsd#//humanPerformer;XSDElementDeclaration=71" outputs="bpmn.ecore#//DocumentRoot/humanPerformer"/>
+  <nested inputs="Semantic.xsd#//performer;XSDElementDeclaration=100" outputs="bpmn.ecore#//DocumentRoot/performer"/>
+  <nested inputs="Semantic.xsd#//implicitThrowEvent;XSDElementDeclaration=72" outputs="bpmn.ecore#//DocumentRoot/implicitThrowEvent"/>
+  <nested inputs="BPMN20.xsd#//import;XSDElementDeclaration=1" outputs="bpmn.ecore#//DocumentRoot/import"/>
+  <nested inputs="Semantic.xsd#//tInclusiveGateway;XSDComplexTypeDefinition=73" outputs="bpmn.ecore#//InclusiveGateway">
+    <nested inputs="Semantic.xsd#//tInclusiveGateway;XSDComplexTypeDefinition=73/XSDAttributeUse"
+        outputs="bpmn.ecore#//InclusiveGateway/default"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//inclusiveGateway;XSDElementDeclaration=73" outputs="bpmn.ecore#//DocumentRoot/inclusiveGateway"/>
+  <nested inputs="Semantic.xsd#//inputSet;XSDElementDeclaration=74" outputs="bpmn.ecore#//DocumentRoot/inputSet"/>
+  <nested inputs="Semantic.xsd#//tOperation;XSDComplexTypeDefinition=92" outputs="bpmn.ecore#//Operation">
+    <nested inputs="Semantic.xsd#//tOperation;XSDComplexTypeDefinition=92/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//Operation/inMessageRef"/>
+    <nested inputs="Semantic.xsd#//tOperation;XSDComplexTypeDefinition=92/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//Operation/outMessageRef"/>
+    <nested inputs="Semantic.xsd#//tOperation;XSDComplexTypeDefinition=92/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="bpmn.ecore#//Operation/errorRef"/>
+    <nested inputs="Semantic.xsd#//tOperation;XSDComplexTypeDefinition=92/XSDAttributeUse"
+        outputs="bpmn.ecore#//Operation/name"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tInterface;XSDComplexTypeDefinition=75" outputs="bpmn.ecore#//Interface">
+    <nested inputs="Semantic.xsd#//tInterface;XSDComplexTypeDefinition=75/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//Interface/operation"/>
+    <nested inputs="Semantic.xsd#//tInterface;XSDComplexTypeDefinition=75/XSDAttributeUse"
+        outputs="bpmn.ecore#//Interface/name"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//interface;XSDElementDeclaration=75" outputs="bpmn.ecore#//DocumentRoot/interface"/>
+  <nested inputs="Semantic.xsd#//tIntermediateCatchEvent;XSDComplexTypeDefinition=76"
+      outputs="bpmn.ecore#//IntermediateCatchEvent"/>
+  <nested inputs="Semantic.xsd#//intermediateCatchEvent;XSDElementDeclaration=76"
+      outputs="bpmn.ecore#//DocumentRoot/intermediateCatchEvent"/>
+  <nested inputs="Semantic.xsd#//tIntermediateThrowEvent;XSDComplexTypeDefinition=77"
+      outputs="bpmn.ecore#//IntermediateThrowEvent"/>
+  <nested inputs="Semantic.xsd#//intermediateThrowEvent;XSDElementDeclaration=77"
+      outputs="bpmn.ecore#//DocumentRoot/intermediateThrowEvent"/>
+  <nested inputs="Semantic.xsd#//ioBinding;XSDElementDeclaration=78" outputs="bpmn.ecore#//DocumentRoot/ioBinding"/>
+  <nested inputs="Semantic.xsd#//ioSpecification;XSDElementDeclaration=79" outputs="bpmn.ecore#//DocumentRoot/ioSpecification"/>
+  <nested inputs="Semantic.xsd#//tItemKind;XSDSimpleTypeDefinition=4" outputs="bpmn.ecore#//ItemKind">
+    <nested inputs="Semantic.xsd#//tItemKind;XSDSimpleTypeDefinition=4/XSDEnumerationFacet"
+        outputs="bpmn.ecore#//ItemKind/Information"/>
+    <nested inputs="Semantic.xsd#//tItemKind;XSDSimpleTypeDefinition=4/XSDEnumerationFacet=1"
+        outputs="bpmn.ecore#//ItemKind/Physical"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tItemDefinition;XSDComplexTypeDefinition=80" outputs="bpmn.ecore#//ItemDefinition">
+    <nested inputs="Semantic.xsd#//tItemDefinition;XSDComplexTypeDefinition=80/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//ItemDefinition/isCollection"/>
+    <nested inputs="Semantic.xsd#//tItemDefinition;XSDComplexTypeDefinition=80/XSDAttributeUse=2"
+        outputs="bpmn.ecore#//ItemDefinition/itemKind"/>
+    <nested inputs="Semantic.xsd#//tItemDefinition;XSDComplexTypeDefinition=80/XSDAttributeUse"
+        outputs="bpmn.ecore#//ItemDefinition/structureRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//itemDefinition;XSDElementDeclaration=80" outputs="bpmn.ecore#//DocumentRoot/itemDefinition"/>
+  <nested inputs="Semantic.xsd#//tLaneSet;XSDComplexTypeDefinition=82" outputs="bpmn.ecore#//LaneSet">
+    <nested inputs="Semantic.xsd#//tLaneSet;XSDComplexTypeDefinition=82/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//LaneSet/lane"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tLane;XSDComplexTypeDefinition=81" outputs="bpmn.ecore#//Lane">
+    <nested inputs="Semantic.xsd#//tLane;XSDComplexTypeDefinition=81/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//Lane/partitionElement"/>
+    <nested inputs="Semantic.xsd#//tLane;XSDComplexTypeDefinition=81/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//Lane/flowElementRef"/>
+    <nested inputs="Semantic.xsd#//tLane;XSDComplexTypeDefinition=81/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="bpmn.ecore#//Lane/childLaneSet"/>
+    <nested inputs="Semantic.xsd#//tLane;XSDComplexTypeDefinition=81/XSDAttributeUse"
+        outputs="bpmn.ecore#//Lane/name"/>
+    <nested inputs="Semantic.xsd#//tLane;XSDComplexTypeDefinition=81/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//Lane/partitionElementRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//lane;XSDElementDeclaration=81" outputs="bpmn.ecore#//DocumentRoot/lane"/>
+  <nested inputs="Semantic.xsd#//laneSet;XSDElementDeclaration=82" outputs="bpmn.ecore#//DocumentRoot/laneSet"/>
+  <nested inputs="Semantic.xsd#//tLinkEventDefinition;XSDComplexTypeDefinition=83"
+      outputs="bpmn.ecore#//LinkEventDefinition">
+    <nested inputs="Semantic.xsd#//tLinkEventDefinition;XSDComplexTypeDefinition=83/XSDAttributeUse"
+        outputs="bpmn.ecore#//LinkEventDefinition/name"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//linkEventDefinition;XSDElementDeclaration=83" outputs="bpmn.ecore#//DocumentRoot/linkEventDefinition"/>
+  <nested inputs="Semantic.xsd#//loopCharacteristics;XSDElementDeclaration=84" outputs="bpmn.ecore#//DocumentRoot/loopCharacteristics"/>
+  <nested inputs="Semantic.xsd#//tManualTask;XSDComplexTypeDefinition=85" outputs="bpmn.ecore#//ManualTask"/>
+  <nested inputs="Semantic.xsd#//manualTask;XSDElementDeclaration=85" outputs="bpmn.ecore#//DocumentRoot/manualTask"/>
+  <nested inputs="Semantic.xsd#//tMessage;XSDComplexTypeDefinition=86" outputs="bpmn.ecore#//Message">
+    <nested inputs="Semantic.xsd#//tMessage;XSDComplexTypeDefinition=86/XSDAttributeUse"
+        outputs="bpmn.ecore#//Message/name"/>
+    <nested inputs="Semantic.xsd#//tMessage;XSDComplexTypeDefinition=86/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//Message/structureRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//message;XSDElementDeclaration=86" outputs="bpmn.ecore#//DocumentRoot/message"/>
+  <nested inputs="Semantic.xsd#//tMessageEventDefinition;XSDComplexTypeDefinition=87"
+      outputs="bpmn.ecore#//MessageEventDefinition">
+    <nested inputs="Semantic.xsd#//tMessageEventDefinition;XSDComplexTypeDefinition=87/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//MessageEventDefinition/operationRef"/>
+    <nested inputs="Semantic.xsd#//tMessageEventDefinition;XSDComplexTypeDefinition=87/XSDAttributeUse"
+        outputs="bpmn.ecore#//MessageEventDefinition/messageRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//messageEventDefinition;XSDElementDeclaration=87"
+      outputs="bpmn.ecore#//DocumentRoot/messageEventDefinition"/>
+  <nested inputs="Semantic.xsd#//messageFlow;XSDElementDeclaration=88" outputs="bpmn.ecore#//DocumentRoot/messageFlow"/>
+  <nested inputs="Semantic.xsd#//messageFlowAssociation;XSDElementDeclaration=89"
+      outputs="bpmn.ecore#//DocumentRoot/messageFlowAssociation"/>
+  <nested inputs="Semantic.xsd#//monitoring;XSDElementDeclaration=90" outputs="bpmn.ecore#//DocumentRoot/monitoring"/>
+  <nested inputs="Semantic.xsd#//tMultiInstanceFlowCondition;XSDSimpleTypeDefinition=5"
+      outputs="bpmn.ecore#//MultiInstanceFlowCondition">
+    <nested inputs="Semantic.xsd#//tMultiInstanceFlowCondition;XSDSimpleTypeDefinition=5/XSDEnumerationFacet"
+        outputs="bpmn.ecore#//MultiInstanceFlowCondition/none"/>
+    <nested inputs="Semantic.xsd#//tMultiInstanceFlowCondition;XSDSimpleTypeDefinition=5/XSDEnumerationFacet=1"
+        outputs="bpmn.ecore#//MultiInstanceFlowCondition/one"/>
+    <nested inputs="Semantic.xsd#//tMultiInstanceFlowCondition;XSDSimpleTypeDefinition=5/XSDEnumerationFacet=2"
+        outputs="bpmn.ecore#//MultiInstanceFlowCondition/all"/>
+    <nested inputs="Semantic.xsd#//tMultiInstanceFlowCondition;XSDSimpleTypeDefinition=5/XSDEnumerationFacet=3"
+        outputs="bpmn.ecore#//MultiInstanceFlowCondition/complex"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tMultiInstanceLoopCharacteristics;XSDComplexTypeDefinition=91"
+      outputs="bpmn.ecore#//MultiInstanceLoopCharacteristics">
+    <nested inputs="Semantic.xsd#//tMultiInstanceLoopCharacteristics;XSDComplexTypeDefinition=91/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//MultiInstanceLoopCharacteristics/loopCardinality"/>
+    <nested inputs="Semantic.xsd#//tMultiInstanceLoopCharacteristics;XSDComplexTypeDefinition=91/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//MultiInstanceLoopCharacteristics/loopDataInput"/>
+    <nested inputs="Semantic.xsd#//tMultiInstanceLoopCharacteristics;XSDComplexTypeDefinition=91/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="bpmn.ecore#//MultiInstanceLoopCharacteristics/loopDataOutput"/>
+    <nested inputs="Semantic.xsd#//tMultiInstanceLoopCharacteristics;XSDComplexTypeDefinition=91/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="bpmn.ecore#//MultiInstanceLoopCharacteristics/inputDataItem"/>
+    <nested inputs="Semantic.xsd#//tMultiInstanceLoopCharacteristics;XSDComplexTypeDefinition=91/XSDParticle/XSDModelGroup/XSDParticle=4"
+        outputs="bpmn.ecore#//MultiInstanceLoopCharacteristics/outputDataItem"/>
+    <nested inputs="Semantic.xsd#//tMultiInstanceLoopCharacteristics;XSDComplexTypeDefinition=91/XSDParticle/XSDModelGroup/XSDParticle=5"
+        outputs="bpmn.ecore#//MultiInstanceLoopCharacteristics/complexBehaviorDefinition"/>
+    <nested inputs="Semantic.xsd#//tMultiInstanceLoopCharacteristics;XSDComplexTypeDefinition=91/XSDParticle/XSDModelGroup/XSDParticle=6"
+        outputs="bpmn.ecore#//MultiInstanceLoopCharacteristics/completionCondition"/>
+    <nested inputs="Semantic.xsd#//tMultiInstanceLoopCharacteristics;XSDComplexTypeDefinition=91/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//MultiInstanceLoopCharacteristics/behavior"/>
+    <nested inputs="Semantic.xsd#//tMultiInstanceLoopCharacteristics;XSDComplexTypeDefinition=91/XSDAttributeUse"
+        outputs="bpmn.ecore#//MultiInstanceLoopCharacteristics/isSequential"/>
+    <nested inputs="Semantic.xsd#//tMultiInstanceLoopCharacteristics;XSDComplexTypeDefinition=91/XSDAttributeUse=3"
+        outputs="bpmn.ecore#//MultiInstanceLoopCharacteristics/noneBehaviorEventRef"/>
+    <nested inputs="Semantic.xsd#//tMultiInstanceLoopCharacteristics;XSDComplexTypeDefinition=91/XSDAttributeUse=2"
+        outputs="bpmn.ecore#//MultiInstanceLoopCharacteristics/oneBehaviorEventRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//multiInstanceLoopCharacteristics;XSDElementDeclaration=91"
+      outputs="bpmn.ecore#//DocumentRoot/multiInstanceLoopCharacteristics"/>
+  <nested inputs="DiagramInterchange.xsd#//node;XSDElementDeclaration=2" outputs="di.ecore#//DocumentRoot/node"/>
+  <nested inputs="Semantic.xsd#//operation;XSDElementDeclaration=92" outputs="bpmn.ecore#//DocumentRoot/operation"/>
+  <nested inputs="Semantic.xsd#//outputSet;XSDElementDeclaration=93" outputs="bpmn.ecore#//DocumentRoot/outputSet"/>
+  <nested inputs="Semantic.xsd#//tParallelGateway;XSDComplexTypeDefinition=94" outputs="bpmn.ecore#//ParallelGateway"/>
+  <nested inputs="Semantic.xsd#//parallelGateway;XSDElementDeclaration=94" outputs="bpmn.ecore#//DocumentRoot/parallelGateway"/>
+  <nested inputs="Semantic.xsd#//participant;XSDElementDeclaration=95" outputs="bpmn.ecore#//DocumentRoot/participant"/>
+  <nested inputs="Semantic.xsd#//participantAssociation;XSDElementDeclaration=96"
+      outputs="bpmn.ecore#//DocumentRoot/participantAssociation"/>
+  <nested inputs="Semantic.xsd#//participantMultiplicity;XSDElementDeclaration=97"
+      outputs="bpmn.ecore#//DocumentRoot/participantMultiplicity"/>
+  <nested inputs="Semantic.xsd#//tPartnerEntity;XSDComplexTypeDefinition=98" outputs="bpmn.ecore#//PartnerEntity">
+    <nested inputs="Semantic.xsd#//tPartnerEntity;XSDComplexTypeDefinition=98/XSDAttributeUse"
+        outputs="bpmn.ecore#//PartnerEntity/name"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//partnerEntity;XSDElementDeclaration=98" outputs="bpmn.ecore#//DocumentRoot/partnerEntity"/>
+  <nested inputs="Semantic.xsd#//tPartnerRole;XSDComplexTypeDefinition=99" outputs="bpmn.ecore#//PartnerRole">
+    <nested inputs="Semantic.xsd#//tPartnerRole;XSDComplexTypeDefinition=99/XSDAttributeUse"
+        outputs="bpmn.ecore#//PartnerRole/name"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//partnerRole;XSDElementDeclaration=99" outputs="bpmn.ecore#//DocumentRoot/partnerRole"/>
+  <nested inputs="Semantic.xsd#//tPotentialOwner;XSDComplexTypeDefinition=101" outputs="bpmn.ecore#//PotentialOwner"/>
+  <nested inputs="Semantic.xsd#//potentialOwner;XSDElementDeclaration=101" outputs="bpmn.ecore#//DocumentRoot/potentialOwner"/>
+  <nested inputs="Semantic.xsd#//tProcessType;XSDSimpleTypeDefinition=6" outputs="bpmn.ecore#//ProcessType">
+    <nested inputs="Semantic.xsd#//tProcessType;XSDSimpleTypeDefinition=6/XSDEnumerationFacet"
+        outputs="bpmn.ecore#//ProcessType/none"/>
+    <nested inputs="Semantic.xsd#//tProcessType;XSDSimpleTypeDefinition=6/XSDEnumerationFacet=1"
+        outputs="bpmn.ecore#//ProcessType/executable"/>
+    <nested inputs="Semantic.xsd#//tProcessType;XSDSimpleTypeDefinition=6/XSDEnumerationFacet=2"
+        outputs="bpmn.ecore#//ProcessType/nonExecutable"/>
+    <nested inputs="Semantic.xsd#//tProcessType;XSDSimpleTypeDefinition=6/XSDEnumerationFacet=3"
+        outputs="bpmn.ecore#//ProcessType/public"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tProcess;XSDComplexTypeDefinition=102" outputs="bpmn.ecore#//Process">
+    <nested inputs="Semantic.xsd#//tProcess;XSDComplexTypeDefinition=102/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//Process/auditing"/>
+    <nested inputs="Semantic.xsd#//tProcess;XSDComplexTypeDefinition=102/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//Process/monitoring"/>
+    <nested inputs="Semantic.xsd#//tProcess;XSDComplexTypeDefinition=102/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="bpmn.ecore#//Process/property"/>
+    <nested inputs="Semantic.xsd#//tProcess;XSDComplexTypeDefinition=102/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="bpmn.ecore#//Process/laneSet"/>
+    <nested inputs="Semantic.xsd#//tProcess;XSDComplexTypeDefinition=102/XSDParticle/XSDModelGroup/XSDParticle=4"
+        outputs="bpmn.ecore#//Process/flowElementGroup"/>
+    <nested inputs="Semantic.xsd#//tProcess;XSDComplexTypeDefinition=102/XSDParticle/XSDModelGroup/XSDParticle=4"
+        outputs="bpmn.ecore#//Process/flowElement"/>
+    <nested inputs="Semantic.xsd#//tProcess;XSDComplexTypeDefinition=102/XSDParticle/XSDModelGroup/XSDParticle=5"
+        outputs="bpmn.ecore#//Process/artifactGroup"/>
+    <nested inputs="Semantic.xsd#//tProcess;XSDComplexTypeDefinition=102/XSDParticle/XSDModelGroup/XSDParticle=5"
+        outputs="bpmn.ecore#//Process/artifact"/>
+    <nested inputs="Semantic.xsd#//tProcess;XSDComplexTypeDefinition=102/XSDParticle/XSDModelGroup/XSDParticle=6"
+        outputs="bpmn.ecore#//Process/supports"/>
+    <nested inputs="Semantic.xsd#//tProcess;XSDComplexTypeDefinition=102/XSDAttributeUse=2"
+        outputs="bpmn.ecore#//Process/definitionalCollaborationRef"/>
+    <nested inputs="Semantic.xsd#//tProcess;XSDComplexTypeDefinition=102/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//Process/isClosed"/>
+    <nested inputs="Semantic.xsd#//tProcess;XSDComplexTypeDefinition=102/XSDAttributeUse"
+        outputs="bpmn.ecore#//Process/processType"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//process;XSDElementDeclaration=102" outputs="bpmn.ecore#//DocumentRoot/process"/>
+  <nested inputs="Semantic.xsd#//property;XSDElementDeclaration=103" outputs="bpmn.ecore#//DocumentRoot/property"/>
+  <nested inputs="Semantic.xsd#//tServiceImplementation;XSDSimpleTypeDefinition=8"
+      outputs="bpmn.ecore#//ServiceImplementation">
+    <nested inputs="Semantic.xsd#//tServiceImplementation;XSDSimpleTypeDefinition=8/XSDEnumerationFacet"
+        outputs="bpmn.ecore#//ServiceImplementation/WebService"/>
+    <nested inputs="Semantic.xsd#//tServiceImplementation;XSDSimpleTypeDefinition=8/XSDEnumerationFacet=1"
+        outputs="bpmn.ecore#//ServiceImplementation/Other"/>
+    <nested inputs="Semantic.xsd#//tServiceImplementation;XSDSimpleTypeDefinition=8/XSDEnumerationFacet=2"
+        outputs="bpmn.ecore#//ServiceImplementation/Unspecified"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tReceiveTask;XSDComplexTypeDefinition=104" outputs="bpmn.ecore#//ReceiveTask">
+    <nested inputs="Semantic.xsd#//tReceiveTask;XSDComplexTypeDefinition=104/XSDAttributeUse"
+        outputs="bpmn.ecore#//ReceiveTask/implementation"/>
+    <nested inputs="Semantic.xsd#//tReceiveTask;XSDComplexTypeDefinition=104/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//ReceiveTask/instantiate"/>
+    <nested inputs="Semantic.xsd#//tReceiveTask;XSDComplexTypeDefinition=104/XSDAttributeUse=2"
+        outputs="bpmn.ecore#//ReceiveTask/messageRef"/>
+    <nested inputs="Semantic.xsd#//tReceiveTask;XSDComplexTypeDefinition=104/XSDAttributeUse=3"
+        outputs="bpmn.ecore#//ReceiveTask/operationRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//receiveTask;XSDElementDeclaration=104" outputs="bpmn.ecore#//DocumentRoot/receiveTask"/>
+  <nested inputs="Semantic.xsd#//relationship;XSDElementDeclaration=105" outputs="bpmn.ecore#//DocumentRoot/relationship"/>
+  <nested inputs="Semantic.xsd#//rendering;XSDElementDeclaration=106" outputs="bpmn.ecore#//DocumentRoot/rendering"/>
+  <nested inputs="Semantic.xsd#//tResourceParameter;XSDComplexTypeDefinition=109"
+      outputs="bpmn.ecore#//ResourceParameter">
+    <nested inputs="Semantic.xsd#//tResourceParameter;XSDComplexTypeDefinition=109/XSDAttributeUse=2"
+        outputs="bpmn.ecore#//ResourceParameter/isRequired"/>
+    <nested inputs="Semantic.xsd#//tResourceParameter;XSDComplexTypeDefinition=109/XSDAttributeUse"
+        outputs="bpmn.ecore#//ResourceParameter/name"/>
+    <nested inputs="Semantic.xsd#//tResourceParameter;XSDComplexTypeDefinition=109/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//ResourceParameter/type"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tResource;XSDComplexTypeDefinition=107" outputs="bpmn.ecore#//Resource">
+    <nested inputs="Semantic.xsd#//tResource;XSDComplexTypeDefinition=107/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//Resource/resourceParameter"/>
+    <nested inputs="Semantic.xsd#//tResource;XSDComplexTypeDefinition=107/XSDAttributeUse"
+        outputs="bpmn.ecore#//Resource/name"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//resource;XSDElementDeclaration=107" outputs="bpmn.ecore#//DocumentRoot/resource"/>
+  <nested inputs="Semantic.xsd#//resourceAssignmentExpression;XSDElementDeclaration=108"
+      outputs="bpmn.ecore#//DocumentRoot/resourceAssignmentExpression"/>
+  <nested inputs="Semantic.xsd#//resourceParameter;XSDElementDeclaration=109" outputs="bpmn.ecore#//DocumentRoot/resourceParameter"/>
+  <nested inputs="Semantic.xsd#//resourceParameterBinding;XSDElementDeclaration=110"
+      outputs="bpmn.ecore#//DocumentRoot/resourceParameterBinding"/>
+  <nested inputs="Semantic.xsd#//script;XSDElementDeclaration=113" outputs="bpmn.ecore#//DocumentRoot/script"/>
+  <nested inputs="Semantic.xsd#//tScriptTask;XSDComplexTypeDefinition=112" outputs="bpmn.ecore#//ScriptTask">
+    <nested inputs="Semantic.xsd#//tScriptTask;XSDComplexTypeDefinition=112/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//ScriptTask/script"/>
+    <nested inputs="Semantic.xsd#//tScriptTask;XSDComplexTypeDefinition=112/XSDAttributeUse"
+        outputs="bpmn.ecore#//ScriptTask/scriptLanguage"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//scriptTask;XSDElementDeclaration=112" outputs="bpmn.ecore#//DocumentRoot/scriptTask"/>
+  <nested inputs="Semantic.xsd#//tSendTask;XSDComplexTypeDefinition=114" outputs="bpmn.ecore#//SendTask">
+    <nested inputs="Semantic.xsd#//tSendTask;XSDComplexTypeDefinition=114/XSDAttributeUse"
+        outputs="bpmn.ecore#//SendTask/implementation"/>
+    <nested inputs="Semantic.xsd#//tSendTask;XSDComplexTypeDefinition=114/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//SendTask/messageRef"/>
+    <nested inputs="Semantic.xsd#//tSendTask;XSDComplexTypeDefinition=114/XSDAttributeUse=2"
+        outputs="bpmn.ecore#//SendTask/operationRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//sendTask;XSDElementDeclaration=114" outputs="bpmn.ecore#//DocumentRoot/sendTask"/>
+  <nested inputs="Semantic.xsd#//tSequenceFlow;XSDComplexTypeDefinition=115" outputs="bpmn.ecore#//SequenceFlow">
+    <nested inputs="Semantic.xsd#//tSequenceFlow;XSDComplexTypeDefinition=115/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//SequenceFlow/conditionExpression"/>
+    <nested inputs="Semantic.xsd#//tSequenceFlow;XSDComplexTypeDefinition=115/XSDAttributeUse=2"
+        outputs="bpmn.ecore#//SequenceFlow/isImmediate"/>
+    <nested inputs="Semantic.xsd#//tSequenceFlow;XSDComplexTypeDefinition=115/XSDAttributeUse"
+        outputs="bpmn.ecore#//SequenceFlow/sourceRef"/>
+    <nested inputs="Semantic.xsd#//tSequenceFlow;XSDComplexTypeDefinition=115/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//SequenceFlow/targetRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//sequenceFlow;XSDElementDeclaration=115" outputs="bpmn.ecore#//DocumentRoot/sequenceFlow"/>
+  <nested inputs="Semantic.xsd#//tServiceTask;XSDComplexTypeDefinition=116" outputs="bpmn.ecore#//ServiceTask">
+    <nested inputs="Semantic.xsd#//tServiceTask;XSDComplexTypeDefinition=116/XSDAttributeUse"
+        outputs="bpmn.ecore#//ServiceTask/implementation"/>
+    <nested inputs="Semantic.xsd#//tServiceTask;XSDComplexTypeDefinition=116/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//ServiceTask/operationRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//serviceTask;XSDElementDeclaration=116" outputs="bpmn.ecore#//DocumentRoot/serviceTask"/>
+  <nested inputs="Semantic.xsd#//tSignal;XSDComplexTypeDefinition=117" outputs="bpmn.ecore#//Signal">
+    <nested inputs="Semantic.xsd#//tSignal;XSDComplexTypeDefinition=117/XSDAttributeUse"
+        outputs="bpmn.ecore#//Signal/name"/>
+    <nested inputs="Semantic.xsd#//tSignal;XSDComplexTypeDefinition=117/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//Signal/structureRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//signal;XSDElementDeclaration=117" outputs="bpmn.ecore#//DocumentRoot/signal"/>
+  <nested inputs="Semantic.xsd#//tSignalEventDefinition;XSDComplexTypeDefinition=118"
+      outputs="bpmn.ecore#//SignalEventDefinition">
+    <nested inputs="Semantic.xsd#//tSignalEventDefinition;XSDComplexTypeDefinition=118/XSDAttributeUse"
+        outputs="bpmn.ecore#//SignalEventDefinition/signalRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//signalEventDefinition;XSDElementDeclaration=118"
+      outputs="bpmn.ecore#//DocumentRoot/signalEventDefinition"/>
+  <nested inputs="Semantic.xsd#//tStandardLoopCharacteristics;XSDComplexTypeDefinition=119"
+      outputs="bpmn.ecore#//StandardLoopCharacteristics">
+    <nested inputs="Semantic.xsd#//tStandardLoopCharacteristics;XSDComplexTypeDefinition=119/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//StandardLoopCharacteristics/loopCondition"/>
+    <nested inputs="Semantic.xsd#//tStandardLoopCharacteristics;XSDComplexTypeDefinition=119/XSDAttributeUse=1"
+        outputs="bpmn.ecore#//StandardLoopCharacteristics/loopMaximum"/>
+    <nested inputs="Semantic.xsd#//tStandardLoopCharacteristics;XSDComplexTypeDefinition=119/XSDAttributeUse"
+        outputs="bpmn.ecore#//StandardLoopCharacteristics/testBefore"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//standardLoopCharacteristics;XSDElementDeclaration=119"
+      outputs="bpmn.ecore#//DocumentRoot/standardLoopCharacteristics"/>
+  <nested inputs="Semantic.xsd#//tStartEvent;XSDComplexTypeDefinition=120" outputs="bpmn.ecore#//StartEvent">
+    <nested inputs="Semantic.xsd#//tStartEvent;XSDComplexTypeDefinition=120/XSDAttributeUse"
+        outputs="bpmn.ecore#//StartEvent/isInterrupting"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//startEvent;XSDElementDeclaration=120" outputs="bpmn.ecore#//DocumentRoot/startEvent"/>
+  <nested inputs="DiagramInterchange.xsd#//style;XSDElementDeclaration=4" outputs="di.ecore#//DocumentRoot/style"/>
+  <nested inputs="Semantic.xsd#//tSubConversation;XSDComplexTypeDefinition=121" outputs="bpmn.ecore#//SubConversation">
+    <nested inputs="Semantic.xsd#//tSubConversation;XSDComplexTypeDefinition=121/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//SubConversation/conversationNodeGroup"/>
+    <nested inputs="Semantic.xsd#//tSubConversation;XSDComplexTypeDefinition=121/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//SubConversation/conversationNode"/>
+    <nested inputs="Semantic.xsd#//tSubConversation;XSDComplexTypeDefinition=121/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//SubConversation/artifactGroup"/>
+    <nested inputs="Semantic.xsd#//tSubConversation;XSDComplexTypeDefinition=121/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//SubConversation/artifact"/>
+    <nested inputs="Semantic.xsd#//tSubConversation;XSDComplexTypeDefinition=121/XSDAttributeUse"
+        outputs="bpmn.ecore#//SubConversation/correlationKeyRef"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//subConversation;XSDElementDeclaration=121" outputs="bpmn.ecore#//DocumentRoot/subConversation"/>
+  <nested inputs="Semantic.xsd#//subProcess;XSDElementDeclaration=122" outputs="bpmn.ecore#//DocumentRoot/subProcess"/>
+  <nested inputs="Semantic.xsd#//task;XSDElementDeclaration=123" outputs="bpmn.ecore#//DocumentRoot/task"/>
+  <nested inputs="Semantic.xsd#//tTerminateEventDefinition;XSDComplexTypeDefinition=124"
+      outputs="bpmn.ecore#//TerminateEventDefinition"/>
+  <nested inputs="Semantic.xsd#//terminateEventDefinition;XSDElementDeclaration=124"
+      outputs="bpmn.ecore#//DocumentRoot/terminateEventDefinition"/>
+  <nested inputs="Semantic.xsd#//tText;XSDComplexTypeDefinition=126" outputs="bpmn.ecore#//Text">
+    <nested inputs="Semantic.xsd#//tText;XSDComplexTypeDefinition=126/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//Text/any"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//text;XSDElementDeclaration=126" outputs="bpmn.ecore#//DocumentRoot/text"/>
+  <nested inputs="Semantic.xsd#//tTextAnnotation;XSDComplexTypeDefinition=125" outputs="bpmn.ecore#//TextAnnotation">
+    <nested inputs="Semantic.xsd#//tTextAnnotation;XSDComplexTypeDefinition=125/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//TextAnnotation/text"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//textAnnotation;XSDElementDeclaration=125" outputs="bpmn.ecore#//DocumentRoot/textAnnotation"/>
+  <nested inputs="Semantic.xsd#//throwEvent;XSDElementDeclaration=127" outputs="bpmn.ecore#//DocumentRoot/throwEvent"/>
+  <nested inputs="Semantic.xsd#//tTimerEventDefinition;XSDComplexTypeDefinition=128"
+      outputs="bpmn.ecore#//TimerEventDefinition">
+    <nested inputs="Semantic.xsd#//tTimerEventDefinition;XSDComplexTypeDefinition=128/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//TimerEventDefinition/timeDate"/>
+    <nested inputs="Semantic.xsd#//tTimerEventDefinition;XSDComplexTypeDefinition=128/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="bpmn.ecore#//TimerEventDefinition/timeCycle"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//timerEventDefinition;XSDElementDeclaration=128" outputs="bpmn.ecore#//DocumentRoot/timerEventDefinition"/>
+  <nested inputs="Semantic.xsd#//tTransactionMethod;XSDSimpleTypeDefinition=9" outputs="bpmn.ecore#//TransactionMethod">
+    <nested inputs="Semantic.xsd#//tTransactionMethod;XSDSimpleTypeDefinition=9/XSDEnumerationFacet"
+        outputs="bpmn.ecore#//TransactionMethod/compensate"/>
+    <nested inputs="Semantic.xsd#//tTransactionMethod;XSDSimpleTypeDefinition=9/XSDEnumerationFacet=1"
+        outputs="bpmn.ecore#//TransactionMethod/image"/>
+    <nested inputs="Semantic.xsd#//tTransactionMethod;XSDSimpleTypeDefinition=9/XSDEnumerationFacet=2"
+        outputs="bpmn.ecore#//TransactionMethod/store"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//tTransaction;XSDComplexTypeDefinition=129" outputs="bpmn.ecore#//Transaction">
+    <nested inputs="Semantic.xsd#//tTransaction;XSDComplexTypeDefinition=129/XSDAttributeUse"
+        outputs="bpmn.ecore#//Transaction/method"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//transaction;XSDElementDeclaration=129" outputs="bpmn.ecore#//DocumentRoot/transaction"/>
+  <nested inputs="Semantic.xsd#//tUserTask;XSDComplexTypeDefinition=130" outputs="bpmn.ecore#//UserTask">
+    <nested inputs="Semantic.xsd#//tUserTask;XSDComplexTypeDefinition=130/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="bpmn.ecore#//UserTask/rendering"/>
+    <nested inputs="Semantic.xsd#//tUserTask;XSDComplexTypeDefinition=130/XSDAttributeUse"
+        outputs="bpmn.ecore#//UserTask/implementation"/>
+  </nested>
+  <nested inputs="Semantic.xsd#//userTask;XSDElementDeclaration=130" outputs="bpmn.ecore#//DocumentRoot/userTask"/>
+</xsd2ecore:XSD2EcoreMappingRoot>
