@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -20,8 +19,8 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.MessageFlow;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -136,7 +135,7 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getMessageFlow();
+        return BpmnPackage.eINSTANCE.getMessageFlow();
     }
 
     /**
@@ -157,7 +156,9 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
         QName oldMessageRef = messageRef;
         messageRef = newMessageRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.MESSAGE_FLOW__MESSAGE_REF, oldMessageRef, messageRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.MESSAGE_FLOW__MESSAGE_REF, oldMessageRef,
+                    messageRef));
     }
 
     /**
@@ -178,7 +179,8 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.MESSAGE_FLOW__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.MESSAGE_FLOW__NAME, oldName, name));
     }
 
     /**
@@ -199,7 +201,9 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
         QName oldSourceRef = sourceRef;
         sourceRef = newSourceRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.MESSAGE_FLOW__SOURCE_REF, oldSourceRef, sourceRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.MESSAGE_FLOW__SOURCE_REF, oldSourceRef,
+                    sourceRef));
     }
 
     /**
@@ -220,7 +224,9 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
         QName oldTargetRef = targetRef;
         targetRef = newTargetRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.MESSAGE_FLOW__TARGET_REF, oldTargetRef, targetRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.MESSAGE_FLOW__TARGET_REF, oldTargetRef,
+                    targetRef));
     }
 
     /**
@@ -231,14 +237,14 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.MESSAGE_FLOW__MESSAGE_REF:
-                return getMessageRef();
-            case bpmnPackage.MESSAGE_FLOW__NAME:
-                return getName();
-            case bpmnPackage.MESSAGE_FLOW__SOURCE_REF:
-                return getSourceRef();
-            case bpmnPackage.MESSAGE_FLOW__TARGET_REF:
-                return getTargetRef();
+        case BpmnPackage.MESSAGE_FLOW__MESSAGE_REF:
+            return getMessageRef();
+        case BpmnPackage.MESSAGE_FLOW__NAME:
+            return getName();
+        case BpmnPackage.MESSAGE_FLOW__SOURCE_REF:
+            return getSourceRef();
+        case BpmnPackage.MESSAGE_FLOW__TARGET_REF:
+            return getTargetRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -251,18 +257,18 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.MESSAGE_FLOW__MESSAGE_REF:
-                setMessageRef((QName)newValue);
-                return;
-            case bpmnPackage.MESSAGE_FLOW__NAME:
-                setName((String)newValue);
-                return;
-            case bpmnPackage.MESSAGE_FLOW__SOURCE_REF:
-                setSourceRef((QName)newValue);
-                return;
-            case bpmnPackage.MESSAGE_FLOW__TARGET_REF:
-                setTargetRef((QName)newValue);
-                return;
+        case BpmnPackage.MESSAGE_FLOW__MESSAGE_REF:
+            setMessageRef((QName) newValue);
+            return;
+        case BpmnPackage.MESSAGE_FLOW__NAME:
+            setName((String) newValue);
+            return;
+        case BpmnPackage.MESSAGE_FLOW__SOURCE_REF:
+            setSourceRef((QName) newValue);
+            return;
+        case BpmnPackage.MESSAGE_FLOW__TARGET_REF:
+            setTargetRef((QName) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -275,18 +281,18 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.MESSAGE_FLOW__MESSAGE_REF:
-                setMessageRef(MESSAGE_REF_EDEFAULT);
-                return;
-            case bpmnPackage.MESSAGE_FLOW__NAME:
-                setName(NAME_EDEFAULT);
-                return;
-            case bpmnPackage.MESSAGE_FLOW__SOURCE_REF:
-                setSourceRef(SOURCE_REF_EDEFAULT);
-                return;
-            case bpmnPackage.MESSAGE_FLOW__TARGET_REF:
-                setTargetRef(TARGET_REF_EDEFAULT);
-                return;
+        case BpmnPackage.MESSAGE_FLOW__MESSAGE_REF:
+            setMessageRef(MESSAGE_REF_EDEFAULT);
+            return;
+        case BpmnPackage.MESSAGE_FLOW__NAME:
+            setName(NAME_EDEFAULT);
+            return;
+        case BpmnPackage.MESSAGE_FLOW__SOURCE_REF:
+            setSourceRef(SOURCE_REF_EDEFAULT);
+            return;
+        case BpmnPackage.MESSAGE_FLOW__TARGET_REF:
+            setTargetRef(TARGET_REF_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -299,14 +305,18 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.MESSAGE_FLOW__MESSAGE_REF:
-                return MESSAGE_REF_EDEFAULT == null ? messageRef != null : !MESSAGE_REF_EDEFAULT.equals(messageRef);
-            case bpmnPackage.MESSAGE_FLOW__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-            case bpmnPackage.MESSAGE_FLOW__SOURCE_REF:
-                return SOURCE_REF_EDEFAULT == null ? sourceRef != null : !SOURCE_REF_EDEFAULT.equals(sourceRef);
-            case bpmnPackage.MESSAGE_FLOW__TARGET_REF:
-                return TARGET_REF_EDEFAULT == null ? targetRef != null : !TARGET_REF_EDEFAULT.equals(targetRef);
+        case BpmnPackage.MESSAGE_FLOW__MESSAGE_REF:
+            return MESSAGE_REF_EDEFAULT == null ? messageRef != null
+                    : !MESSAGE_REF_EDEFAULT.equals(messageRef);
+        case BpmnPackage.MESSAGE_FLOW__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
+                    .equals(name);
+        case BpmnPackage.MESSAGE_FLOW__SOURCE_REF:
+            return SOURCE_REF_EDEFAULT == null ? sourceRef != null
+                    : !SOURCE_REF_EDEFAULT.equals(sourceRef);
+        case BpmnPackage.MESSAGE_FLOW__TARGET_REF:
+            return TARGET_REF_EDEFAULT == null ? targetRef != null
+                    : !TARGET_REF_EDEFAULT.equals(targetRef);
         }
         return super.eIsSet(featureID);
     }
@@ -318,7 +328,8 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (messageRef: "); //$NON-NLS-1$

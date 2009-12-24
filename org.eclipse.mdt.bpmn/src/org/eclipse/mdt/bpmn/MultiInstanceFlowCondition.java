@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -23,7 +22,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Multi Instance Flow Condition</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getMultiInstanceFlowCondition()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getMultiInstanceFlowCondition()
  * @model extendedMetaData="name='tMultiInstanceFlowCondition'"
  * @generated
  */
@@ -134,13 +133,8 @@ public enum MultiInstanceFlowCondition implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    private static final MultiInstanceFlowCondition[] VALUES_ARRAY =
-        new MultiInstanceFlowCondition[] {
-            NONE,
-            ONE,
-            ALL,
-            COMPLEX,
-        };
+    private static final MultiInstanceFlowCondition[] VALUES_ARRAY = new MultiInstanceFlowCondition[] {
+            NONE, ONE, ALL, COMPLEX, };
 
     /**
      * A public read-only list of all the '<em><b>Multi Instance Flow Condition</b></em>' enumerators.
@@ -148,7 +142,8 @@ public enum MultiInstanceFlowCondition implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final List<MultiInstanceFlowCondition> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+    public static final List<MultiInstanceFlowCondition> VALUES = Collections
+            .unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
     /**
      * Returns the '<em><b>Multi Instance Flow Condition</b></em>' literal with the specified literal value.
@@ -190,10 +185,14 @@ public enum MultiInstanceFlowCondition implements Enumerator {
      */
     public static MultiInstanceFlowCondition get(int value) {
         switch (value) {
-            case NONE_VALUE: return NONE;
-            case ONE_VALUE: return ONE;
-            case ALL_VALUE: return ALL;
-            case COMPLEX_VALUE: return COMPLEX;
+        case NONE_VALUE:
+            return NONE;
+        case ONE_VALUE:
+            return ONE;
+        case ALL_VALUE:
+            return ALL;
+        case COMPLEX_VALUE:
+            return COMPLEX;
         }
         return null;
     }
@@ -237,7 +236,7 @@ public enum MultiInstanceFlowCondition implements Enumerator {
      * @generated
      */
     public int getValue() {
-      return value;
+        return value;
     }
 
     /**
@@ -246,7 +245,7 @@ public enum MultiInstanceFlowCondition implements Enumerator {
      * @generated
      */
     public String getName() {
-      return name;
+        return name;
     }
 
     /**
@@ -255,7 +254,7 @@ public enum MultiInstanceFlowCondition implements Enumerator {
      * @generated
      */
     public String getLiteral() {
-      return literal;
+        return literal;
     }
 
     /**
@@ -268,5 +267,5 @@ public enum MultiInstanceFlowCondition implements Enumerator {
     public String toString() {
         return literal;
     }
-    
+
 } //MultiInstanceFlowCondition

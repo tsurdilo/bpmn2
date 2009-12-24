@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -26,7 +25,7 @@ import javax.xml.namespace.QName;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getSignalEventDefinition()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getSignalEventDefinition()
  * @model extendedMetaData="name='tSignalEventDefinition' kind='elementOnly'"
  * @generated
  */
@@ -41,7 +40,7 @@ public interface SignalEventDefinition extends EventDefinition {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Signal Ref</em>' attribute.
      * @see #setSignalRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getSignalEventDefinition_SignalRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getSignalEventDefinition_SignalRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='signalRef'"
      * @generated

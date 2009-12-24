@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -27,7 +26,7 @@ import javax.xml.namespace.QName;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getEscalationEventDefinition()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getEscalationEventDefinition()
  * @model extendedMetaData="name='tEscalationEventDefinition' kind='elementOnly'"
  * @generated
  */
@@ -42,7 +41,7 @@ public interface EscalationEventDefinition extends EventDefinition {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Escalation Code</em>' attribute.
      * @see #setEscalationCode(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getEscalationEventDefinition_EscalationCode()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getEscalationEventDefinition_EscalationCode()
      * @model dataType="org.eclipse.emf.ecore.xml.type.String"
      *        extendedMetaData="kind='attribute' name='escalationCode'"
      * @generated
@@ -69,7 +68,7 @@ public interface EscalationEventDefinition extends EventDefinition {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Escalation Ref</em>' attribute.
      * @see #setEscalationRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getEscalationEventDefinition_EscalationRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getEscalationEventDefinition_EscalationRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='escalationRef'"
      * @generated

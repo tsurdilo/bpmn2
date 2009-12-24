@@ -8,10 +8,8 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +24,7 @@ package org.eclipse.mdt.bpmn;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getEventBasedGateway()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getEventBasedGateway()
  * @model extendedMetaData="name='tEventBasedGateway' kind='elementOnly'"
  * @generated
  */
@@ -46,7 +44,7 @@ public interface EventBasedGateway extends Gateway {
      * @see #isSetEventGatewayType()
      * @see #unsetEventGatewayType()
      * @see #setEventGatewayType(EventBasedGatewayType)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getEventBasedGateway_EventGatewayType()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getEventBasedGateway_EventGatewayType()
      * @model default="Exclusive" unsettable="true"
      *        extendedMetaData="kind='attribute' name='eventGatewayType'"
      * @generated
@@ -102,7 +100,7 @@ public interface EventBasedGateway extends Gateway {
      * @see #isSetInstantiate()
      * @see #unsetInstantiate()
      * @see #setInstantiate(boolean)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getEventBasedGateway_Instantiate()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getEventBasedGateway_Instantiate()
      * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
      *        extendedMetaData="kind='attribute' name='instantiate'"
      * @generated

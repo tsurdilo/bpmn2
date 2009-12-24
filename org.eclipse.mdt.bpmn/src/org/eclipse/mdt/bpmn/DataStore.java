@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -32,7 +31,7 @@ import javax.xml.namespace.QName;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getDataStore()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getDataStore()
  * @model extendedMetaData="name='tDataStore' kind='elementOnly'"
  * @generated
  */
@@ -47,7 +46,7 @@ public interface DataStore extends RootElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data State</em>' containment reference.
      * @see #setDataState(DataState)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDataStore_DataState()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDataStore_DataState()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='dataState' namespace='##targetNamespace'"
      * @generated
@@ -74,7 +73,7 @@ public interface DataStore extends RootElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Capacity</em>' attribute.
      * @see #setCapacity(BigInteger)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDataStore_Capacity()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDataStore_Capacity()
      * @model dataType="org.eclipse.emf.ecore.xml.type.Integer"
      *        extendedMetaData="kind='attribute' name='capacity'"
      * @generated
@@ -104,7 +103,7 @@ public interface DataStore extends RootElement {
      * @see #isSetIsUnlimited()
      * @see #unsetIsUnlimited()
      * @see #setIsUnlimited(boolean)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDataStore_IsUnlimited()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDataStore_IsUnlimited()
      * @model default="true" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
      *        extendedMetaData="kind='attribute' name='isUnlimited'"
      * @generated
@@ -156,7 +155,7 @@ public interface DataStore extends RootElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Item Subject Ref</em>' attribute.
      * @see #setItemSubjectRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDataStore_ItemSubjectRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDataStore_ItemSubjectRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='itemSubjectRef'"
      * @generated
@@ -183,7 +182,7 @@ public interface DataStore extends RootElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDataStore_Name()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDataStore_Name()
      * @model dataType="org.eclipse.emf.ecore.xml.type.String"
      *        extendedMetaData="kind='attribute' name='name'"
      * @generated

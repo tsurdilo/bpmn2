@@ -8,14 +8,13 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Expression;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +25,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class ExpressionImpl extends BaseElementWithMixedContentImpl implements Expression {
+public class ExpressionImpl extends BaseElementWithMixedContentImpl implements
+        Expression {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -43,7 +43,7 @@ public class ExpressionImpl extends BaseElementWithMixedContentImpl implements E
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getExpression();
+        return BpmnPackage.eINSTANCE.getExpression();
     }
 
 } //ExpressionImpl

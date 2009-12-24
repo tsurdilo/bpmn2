@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -27,7 +26,7 @@ import javax.xml.namespace.QName;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getFormalExpression()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getFormalExpression()
  * @model extendedMetaData="name='tFormalExpression' kind='mixed'"
  * @generated
  */
@@ -42,7 +41,7 @@ public interface FormalExpression extends Expression {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Evaluates To Type Ref</em>' attribute.
      * @see #setEvaluatesToTypeRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getFormalExpression_EvaluatesToTypeRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getFormalExpression_EvaluatesToTypeRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='evaluatesToTypeRef'"
      * @generated
@@ -69,7 +68,7 @@ public interface FormalExpression extends Expression {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Language</em>' attribute.
      * @see #setLanguage(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getFormalExpression_Language()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getFormalExpression_Language()
      * @model dataType="org.eclipse.emf.ecore.xml.type.AnyURI"
      *        extendedMetaData="kind='attribute' name='language'"
      * @generated

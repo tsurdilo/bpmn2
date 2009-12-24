@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -29,7 +28,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getGlobalTask()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getGlobalTask()
  * @model extendedMetaData="name='tGlobalTask' kind='elementOnly'"
  * @generated
  */
@@ -44,7 +43,7 @@ public interface GlobalTask extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Performer Group</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getGlobalTask_PerformerGroup()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getGlobalTask_PerformerGroup()
      * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
      *        extendedMetaData="kind='group' name='performer:group' namespace='##targetNamespace'"
      * @generated
@@ -61,7 +60,7 @@ public interface GlobalTask extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Performer</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getGlobalTask_Performer()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getGlobalTask_Performer()
      * @model containment="true" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='performer' namespace='##targetNamespace' group='performer:group'"
      * @generated

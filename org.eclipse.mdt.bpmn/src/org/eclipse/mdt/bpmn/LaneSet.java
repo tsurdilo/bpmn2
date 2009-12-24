@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -26,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getLaneSet()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getLaneSet()
  * @model extendedMetaData="name='tLaneSet' kind='elementOnly'"
  * @generated
  */
@@ -41,7 +40,7 @@ public interface LaneSet extends BaseElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Lane</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getLaneSet_Lane()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getLaneSet_Lane()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='lane' namespace='##targetNamespace'"
      * @generated

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -29,7 +28,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getCallConversation()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getCallConversation()
  * @model extendedMetaData="name='tCallConversation' kind='elementOnly'"
  * @generated
  */
@@ -44,7 +43,7 @@ public interface CallConversation extends ConversationNode {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Participant Association</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCallConversation_ParticipantAssociation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCallConversation_ParticipantAssociation()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='participantAssociation' namespace='##targetNamespace'"
      * @generated
@@ -61,7 +60,7 @@ public interface CallConversation extends ConversationNode {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Called Element Ref</em>' attribute.
      * @see #setCalledElementRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCallConversation_CalledElementRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCallConversation_CalledElementRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='calledElementRef'"
      * @generated

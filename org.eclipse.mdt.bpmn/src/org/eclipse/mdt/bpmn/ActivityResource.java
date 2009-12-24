@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -30,7 +29,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivityResource()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getActivityResource()
  * @model extendedMetaData="name='tActivityResource' kind='elementOnly'"
  * @generated
  */
@@ -45,7 +44,7 @@ public interface ActivityResource extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Resource Assignment Expression</em>' containment reference.
      * @see #setResourceAssignmentExpression(ResourceAssignmentExpression)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivityResource_ResourceAssignmentExpression()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getActivityResource_ResourceAssignmentExpression()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='resourceAssignmentExpression' namespace='##targetNamespace'"
      * @generated
@@ -72,7 +71,7 @@ public interface ActivityResource extends BaseElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Resource Parameter Binding</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivityResource_ResourceParameterBinding()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getActivityResource_ResourceParameterBinding()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='resourceParameterBinding' namespace='##targetNamespace'"
      * @generated
@@ -89,7 +88,7 @@ public interface ActivityResource extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Resource Ref</em>' attribute.
      * @see #setResourceRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivityResource_ResourceRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getActivityResource_ResourceRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName" required="true"
      *        extendedMetaData="kind='attribute' name='resourceRef'"
      * @generated

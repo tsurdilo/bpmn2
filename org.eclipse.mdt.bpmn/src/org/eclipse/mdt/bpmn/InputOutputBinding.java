@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -28,7 +27,7 @@ import javax.xml.namespace.QName;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getInputOutputBinding()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getInputOutputBinding()
  * @model extendedMetaData="name='tInputOutputBinding' kind='elementOnly'"
  * @generated
  */
@@ -43,7 +42,7 @@ public interface InputOutputBinding extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Input Data Ref</em>' attribute.
      * @see #setInputDataRef(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getInputOutputBinding_InputDataRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getInputOutputBinding_InputDataRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.IDREF" required="true"
      *        extendedMetaData="kind='attribute' name='inputDataRef'"
      * @generated
@@ -70,7 +69,7 @@ public interface InputOutputBinding extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Operation Ref</em>' attribute.
      * @see #setOperationRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getInputOutputBinding_OperationRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getInputOutputBinding_OperationRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName" required="true"
      *        extendedMetaData="kind='attribute' name='operationRef'"
      * @generated
@@ -97,7 +96,7 @@ public interface InputOutputBinding extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Output Data Ref</em>' attribute.
      * @see #setOutputDataRef(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getInputOutputBinding_OutputDataRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getInputOutputBinding_OutputDataRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.IDREF" required="true"
      *        extendedMetaData="kind='attribute' name='outputDataRef'"
      * @generated

@@ -8,10 +8,8 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +23,7 @@ package org.eclipse.mdt.bpmn;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getLinkEventDefinition()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getLinkEventDefinition()
  * @model extendedMetaData="name='tLinkEventDefinition' kind='elementOnly'"
  * @generated
  */
@@ -40,7 +38,7 @@ public interface LinkEventDefinition extends EventDefinition {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getLinkEventDefinition_Name()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getLinkEventDefinition_Name()
      * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
      *        extendedMetaData="kind='attribute' name='name'"
      * @generated

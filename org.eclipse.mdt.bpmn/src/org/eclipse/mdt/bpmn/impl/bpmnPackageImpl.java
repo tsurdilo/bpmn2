@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -35,12 +34,12 @@ import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
-import org.eclipse.mdt.bpmn.bpmnFactory;
-import org.eclipse.mdt.bpmn.bpmnPackage;
+import org.eclipse.mdt.bpmn.BpmnFactory;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
-import org.eclipse.mdt.bpmn.di.impl.diPackageImpl;
+import org.eclipse.mdt.bpmn.di.impl.DIPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -48,7 +47,7 @@ import org.eclipse.mdt.bpmn.di.impl.diPackageImpl;
  * <!-- end-user-doc -->
  * @generated
  */
-public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
+public class BpmnPackageImpl extends EPackageImpl implements BpmnPackage {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1159,12 +1158,12 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.emf.ecore.EPackage.Registry
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#eNS_URI
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#eNS_URI
      * @see #init()
      * @generated
      */
-    private bpmnPackageImpl() {
-        super(eNS_URI, bpmnFactory.eINSTANCE);
+    private BpmnPackageImpl() {
+        super(eNS_URI, BpmnFactory.eINSTANCE);
     }
 
     /**
@@ -1177,18 +1176,23 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
     /**
      * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
      * 
-     * <p>This method is used to initialize {@link bpmnPackage#eINSTANCE} when that field is accessed.
+     * <p>This method is used to initialize {@link BpmnPackage#eINSTANCE} when that field is accessed.
      * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see #eNS_URI
      * @generated
      */
-    public static bpmnPackage init() {
-        if (isInited) return (bpmnPackage)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI);
+    public static BpmnPackage init() {
+        if (isInited)
+            return (BpmnPackage) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI);
 
         // Obtain or create and register package
-        bpmnPackageImpl thebpmnPackage = (bpmnPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof bpmnPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new bpmnPackageImpl());
+        BpmnPackageImpl theBpmnPackage = (BpmnPackageImpl) (EPackage.Registry.INSTANCE
+                .get(eNS_URI) instanceof BpmnPackageImpl ? EPackage.Registry.INSTANCE
+                .get(eNS_URI)
+                : new BpmnPackageImpl());
 
         isInited = true;
 
@@ -1196,27 +1200,29 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
         XMLTypePackage.eINSTANCE.eClass();
 
         // Obtain or create and register interdependencies
-        diPackageImpl thediPackage = (diPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(diPackage.eNS_URI) instanceof diPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(diPackage.eNS_URI) : diPackage.eINSTANCE);
+        DIPackageImpl theDIPackage = (DIPackageImpl) (EPackage.Registry.INSTANCE
+                .getEPackage(DIPackage.eNS_URI) instanceof DIPackageImpl ? EPackage.Registry.INSTANCE
+                .getEPackage(DIPackage.eNS_URI)
+                : DIPackage.eINSTANCE);
 
         // Load packages
-        thebpmnPackage.loadPackage();
+        theBpmnPackage.loadPackage();
 
         // Create package meta-data objects
-        thediPackage.createPackageContents();
+        theDIPackage.createPackageContents();
 
         // Initialize created meta-data
-        thediPackage.initializePackageContents();
+        theDIPackage.initializePackageContents();
 
         // Fix loaded packages
-        thebpmnPackage.fixPackageContents();
+        theBpmnPackage.fixPackageContents();
 
         // Mark meta-data to indicate it can't be changed
-        thebpmnPackage.freeze();
+        theBpmnPackage.freeze();
 
-  
         // Update the registry and return the package
-        EPackage.Registry.INSTANCE.put(bpmnPackage.eNS_URI, thebpmnPackage);
-        return thebpmnPackage;
+        EPackage.Registry.INSTANCE.put(BpmnPackage.eNS_URI, theBpmnPackage);
+        return theBpmnPackage;
     }
 
     /**
@@ -1226,7 +1232,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getDocumentRoot() {
         if (documentRootEClass == null) {
-            documentRootEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(0);
+            documentRootEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(0);
         }
         return documentRootEClass;
     }
@@ -1237,7 +1244,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDocumentRoot_Mixed() {
-        return (EAttribute)getDocumentRoot().getEStructuralFeatures().get(0);
+        return (EAttribute) getDocumentRoot().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -1246,7 +1253,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_XMLNSPrefixMap() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(1);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -1255,7 +1262,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_XSISchemaLocation() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(2);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -1264,7 +1271,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Activity() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(3);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(3);
     }
 
     /**
@@ -1273,7 +1280,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_ActivityResource() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(4);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(4);
     }
 
     /**
@@ -1282,7 +1289,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_AdHocSubProcess() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(5);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(5);
     }
 
     /**
@@ -1291,7 +1298,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_FlowElement() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(6);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(6);
     }
 
     /**
@@ -1300,7 +1307,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Artifact() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(7);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(7);
     }
 
     /**
@@ -1309,7 +1316,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Assignment() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(8);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(8);
     }
 
     /**
@@ -1318,7 +1325,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Association() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(9);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(9);
     }
 
     /**
@@ -1327,7 +1334,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Auditing() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(10);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(10);
     }
 
     /**
@@ -1336,7 +1343,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_BaseElement() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(11);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(11);
     }
 
     /**
@@ -1345,7 +1352,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_BaseElementWithMixedContent() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(12);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(12);
     }
 
     /**
@@ -1354,7 +1361,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_BoundaryEvent() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(13);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(13);
     }
 
     /**
@@ -1363,7 +1370,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_BusinessRuleTask() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(14);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(14);
     }
 
     /**
@@ -1372,7 +1379,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_CallableElement() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(15);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(15);
     }
 
     /**
@@ -1381,7 +1388,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_CallActivity() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(16);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(16);
     }
 
     /**
@@ -1390,7 +1397,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_CallChoreographyActivity() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(17);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(17);
     }
 
     /**
@@ -1399,7 +1406,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_CallConversation() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(18);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(18);
     }
 
     /**
@@ -1408,7 +1415,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_ConversationNode() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(19);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(19);
     }
 
     /**
@@ -1417,7 +1424,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_CancelEventDefinition() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(20);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(20);
     }
 
     /**
@@ -1426,7 +1433,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_EventDefinition() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(21);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(21);
     }
 
     /**
@@ -1435,7 +1442,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_RootElement() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(22);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(22);
     }
 
     /**
@@ -1444,7 +1451,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_CatchEvent() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(23);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(23);
     }
 
     /**
@@ -1453,7 +1460,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Category() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(24);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(24);
     }
 
     /**
@@ -1462,7 +1469,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_CategoryValue() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(25);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(25);
     }
 
     /**
@@ -1471,7 +1478,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Choreography() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(26);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(26);
     }
 
     /**
@@ -1480,7 +1487,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_ChoreographyActivity() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(27);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(27);
     }
 
     /**
@@ -1489,7 +1496,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_ChoreographySubProcess() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(28);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(28);
     }
 
     /**
@@ -1498,7 +1505,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_ChoreographyTask() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(29);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(29);
     }
 
     /**
@@ -1507,7 +1514,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Collaboration() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(30);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(30);
     }
 
     /**
@@ -1516,7 +1523,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Communication() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(31);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(31);
     }
 
     /**
@@ -1525,7 +1532,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_CompensateEventDefinition() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(32);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(32);
     }
 
     /**
@@ -1534,7 +1541,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_ComplexBehaviorDefinition() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(33);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(33);
     }
 
     /**
@@ -1543,7 +1550,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_ComplexGateway() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(34);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(34);
     }
 
     /**
@@ -1552,7 +1559,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_ConditionalEventDefinition() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(35);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(35);
     }
 
     /**
@@ -1561,7 +1568,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Conversation() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(36);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(36);
     }
 
     /**
@@ -1570,7 +1577,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_ConversationAssociation() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(37);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(37);
     }
 
     /**
@@ -1579,7 +1586,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_CorrelationKey() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(38);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(38);
     }
 
     /**
@@ -1588,7 +1595,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_CorrelationProperty() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(39);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(39);
     }
 
     /**
@@ -1597,7 +1604,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_CorrelationPropertyBinding() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(40);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(40);
     }
 
     /**
@@ -1606,7 +1613,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_CorrelationPropertyRetrievalExpression() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(41);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(41);
     }
 
     /**
@@ -1615,7 +1622,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_CorrelationSubscription() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(42);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(42);
     }
 
     /**
@@ -1624,7 +1631,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_DataAssociation() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(43);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(43);
     }
 
     /**
@@ -1633,7 +1640,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_DataInput() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(44);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(44);
     }
 
     /**
@@ -1642,7 +1649,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_DataInputAssociation() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(45);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(45);
     }
 
     /**
@@ -1651,7 +1658,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_DataObject() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(46);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(46);
     }
 
     /**
@@ -1660,7 +1667,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_DataOutput() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(47);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(47);
     }
 
     /**
@@ -1669,7 +1676,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_DataOutputAssociation() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(48);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(48);
     }
 
     /**
@@ -1678,7 +1685,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_DataState() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(49);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(49);
     }
 
     /**
@@ -1687,7 +1694,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_DataStore() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(50);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(50);
     }
 
     /**
@@ -1696,7 +1703,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_DataStoreReference() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(51);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(51);
     }
 
     /**
@@ -1705,7 +1712,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Definitions() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(52);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(52);
     }
 
     /**
@@ -1714,7 +1721,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Documentation() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(53);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(53);
     }
 
     /**
@@ -1723,7 +1730,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_EndEvent() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(54);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(54);
     }
 
     /**
@@ -1732,7 +1739,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_EndPoint() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(55);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(55);
     }
 
     /**
@@ -1741,7 +1748,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Error() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(56);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(56);
     }
 
     /**
@@ -1750,7 +1757,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_ErrorEventDefinition() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(57);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(57);
     }
 
     /**
@@ -1759,7 +1766,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Escalation() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(58);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(58);
     }
 
     /**
@@ -1768,7 +1775,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_EscalationEventDefinition() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(59);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(59);
     }
 
     /**
@@ -1777,7 +1784,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Event() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(60);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(60);
     }
 
     /**
@@ -1786,7 +1793,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_EventBasedGateway() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(61);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(61);
     }
 
     /**
@@ -1795,7 +1802,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_ExclusiveGateway() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(62);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(62);
     }
 
     /**
@@ -1804,7 +1811,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Expression() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(63);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(63);
     }
 
     /**
@@ -1813,7 +1820,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Extension() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(64);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(64);
     }
 
     /**
@@ -1822,7 +1829,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_FlowNode() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(65);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(65);
     }
 
     /**
@@ -1831,7 +1838,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_FormalExpression() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(66);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(66);
     }
 
     /**
@@ -1840,7 +1847,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Gateway() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(67);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(67);
     }
 
     /**
@@ -1849,7 +1856,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_GlobalBusinessRuleTask() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(68);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(68);
     }
 
     /**
@@ -1858,7 +1865,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_GlobalChoreographyTask() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(69);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(69);
     }
 
     /**
@@ -1867,7 +1874,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_GlobalCommunication() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(70);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(70);
     }
 
     /**
@@ -1876,7 +1883,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_GlobalManualTask() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(71);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(71);
     }
 
     /**
@@ -1885,7 +1892,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_GlobalScriptTask() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(72);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(72);
     }
 
     /**
@@ -1894,7 +1901,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_GlobalTask() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(73);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(73);
     }
 
     /**
@@ -1903,7 +1910,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_GlobalUserTask() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(74);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(74);
     }
 
     /**
@@ -1912,7 +1919,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Group() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(75);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(75);
     }
 
     /**
@@ -1921,7 +1928,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_HumanPerformer() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(76);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(76);
     }
 
     /**
@@ -1930,7 +1937,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Performer() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(77);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(77);
     }
 
     /**
@@ -1939,7 +1946,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_ImplicitThrowEvent() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(78);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(78);
     }
 
     /**
@@ -1948,7 +1955,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Import() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(79);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(79);
     }
 
     /**
@@ -1957,7 +1964,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_InclusiveGateway() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(80);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(80);
     }
 
     /**
@@ -1966,7 +1973,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_InputSet() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(81);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(81);
     }
 
     /**
@@ -1975,7 +1982,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Interface() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(82);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(82);
     }
 
     /**
@@ -1984,7 +1991,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_IntermediateCatchEvent() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(83);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(83);
     }
 
     /**
@@ -1993,7 +2000,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_IntermediateThrowEvent() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(84);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(84);
     }
 
     /**
@@ -2002,7 +2009,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_IoBinding() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(85);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(85);
     }
 
     /**
@@ -2011,7 +2018,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_IoSpecification() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(86);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(86);
     }
 
     /**
@@ -2020,7 +2027,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_ItemDefinition() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(87);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(87);
     }
 
     /**
@@ -2029,7 +2036,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Lane() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(88);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(88);
     }
 
     /**
@@ -2038,7 +2045,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_LaneSet() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(89);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(89);
     }
 
     /**
@@ -2047,7 +2054,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_LinkEventDefinition() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(90);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(90);
     }
 
     /**
@@ -2056,7 +2063,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_LoopCharacteristics() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(91);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(91);
     }
 
     /**
@@ -2065,7 +2072,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_ManualTask() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(92);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(92);
     }
 
     /**
@@ -2074,7 +2081,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Message() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(93);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(93);
     }
 
     /**
@@ -2083,7 +2090,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_MessageEventDefinition() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(94);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(94);
     }
 
     /**
@@ -2092,7 +2099,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_MessageFlow() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(95);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(95);
     }
 
     /**
@@ -2101,7 +2108,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_MessageFlowAssociation() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(96);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(96);
     }
 
     /**
@@ -2110,7 +2117,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Monitoring() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(97);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(97);
     }
 
     /**
@@ -2119,7 +2126,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_MultiInstanceLoopCharacteristics() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(98);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(98);
     }
 
     /**
@@ -2128,7 +2135,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Operation() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(99);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(99);
     }
 
     /**
@@ -2137,7 +2144,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_OutputSet() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(100);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(100);
     }
 
     /**
@@ -2146,7 +2153,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_ParallelGateway() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(101);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(101);
     }
 
     /**
@@ -2155,7 +2162,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Participant() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(102);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(102);
     }
 
     /**
@@ -2164,7 +2171,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_ParticipantAssociation() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(103);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(103);
     }
 
     /**
@@ -2173,7 +2180,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_ParticipantMultiplicity() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(104);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(104);
     }
 
     /**
@@ -2182,7 +2189,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_PartnerEntity() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(105);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(105);
     }
 
     /**
@@ -2191,7 +2198,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_PartnerRole() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(106);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(106);
     }
 
     /**
@@ -2200,7 +2207,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_PotentialOwner() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(107);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(107);
     }
 
     /**
@@ -2209,7 +2216,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Process() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(108);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(108);
     }
 
     /**
@@ -2218,7 +2225,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Property() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(109);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(109);
     }
 
     /**
@@ -2227,7 +2234,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_ReceiveTask() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(110);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(110);
     }
 
     /**
@@ -2236,7 +2243,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Relationship() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(111);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(111);
     }
 
     /**
@@ -2245,7 +2252,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Rendering() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(112);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(112);
     }
 
     /**
@@ -2254,7 +2261,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Resource() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(113);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(113);
     }
 
     /**
@@ -2263,7 +2270,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_ResourceAssignmentExpression() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(114);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(114);
     }
 
     /**
@@ -2272,7 +2279,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_ResourceParameter() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(115);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(115);
     }
 
     /**
@@ -2281,7 +2288,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_ResourceParameterBinding() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(116);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(116);
     }
 
     /**
@@ -2290,7 +2297,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Script() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(117);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(117);
     }
 
     /**
@@ -2299,7 +2306,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_ScriptTask() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(118);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(118);
     }
 
     /**
@@ -2308,7 +2315,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_SendTask() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(119);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(119);
     }
 
     /**
@@ -2317,7 +2324,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_SequenceFlow() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(120);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(120);
     }
 
     /**
@@ -2326,7 +2333,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_ServiceTask() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(121);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(121);
     }
 
     /**
@@ -2335,7 +2342,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Signal() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(122);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(122);
     }
 
     /**
@@ -2344,7 +2351,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_SignalEventDefinition() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(123);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(123);
     }
 
     /**
@@ -2353,7 +2360,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_StandardLoopCharacteristics() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(124);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(124);
     }
 
     /**
@@ -2362,7 +2369,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_StartEvent() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(125);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(125);
     }
 
     /**
@@ -2371,7 +2378,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_SubConversation() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(126);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(126);
     }
 
     /**
@@ -2380,7 +2387,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_SubProcess() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(127);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(127);
     }
 
     /**
@@ -2389,7 +2396,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Task() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(128);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(128);
     }
 
     /**
@@ -2398,7 +2405,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_TerminateEventDefinition() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(129);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(129);
     }
 
     /**
@@ -2407,7 +2414,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Text() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(130);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(130);
     }
 
     /**
@@ -2416,7 +2423,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_TextAnnotation() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(131);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(131);
     }
 
     /**
@@ -2425,7 +2432,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_ThrowEvent() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(132);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(132);
     }
 
     /**
@@ -2434,7 +2441,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_TimerEventDefinition() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(133);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(133);
     }
 
     /**
@@ -2443,7 +2450,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_Transaction() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(134);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(134);
     }
 
     /**
@@ -2452,7 +2459,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDocumentRoot_UserTask() {
-        return (EReference)getDocumentRoot().getEStructuralFeatures().get(135);
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(135);
     }
 
     /**
@@ -2462,7 +2469,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getActivity() {
         if (activityEClass == null) {
-            activityEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(1);
+            activityEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(1);
         }
         return activityEClass;
     }
@@ -2473,7 +2481,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getActivity_IoSpecification() {
-        return (EReference)getActivity().getEStructuralFeatures().get(0);
+        return (EReference) getActivity().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -2481,8 +2489,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getActivity_Property() {
-        return (EReference)getActivity().getEStructuralFeatures().get(1);
+    public EReference getActivity_Properties() {
+        return (EReference) getActivity().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -2490,8 +2498,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getActivity_DataInputAssociation() {
-        return (EReference)getActivity().getEStructuralFeatures().get(2);
+    public EReference getActivity_DataInputAssociations() {
+        return (EReference) getActivity().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -2499,8 +2507,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getActivity_DataOutputAssociation() {
-        return (EReference)getActivity().getEStructuralFeatures().get(3);
+    public EReference getActivity_DataOutputAssociations() {
+        return (EReference) getActivity().getEStructuralFeatures().get(3);
     }
 
     /**
@@ -2508,8 +2516,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EAttribute getActivity_ActivityResourceGroup() {
-        return (EAttribute)getActivity().getEStructuralFeatures().get(4);
+    public EAttribute getActivity_ActivityResourceGroups() {
+        return (EAttribute) getActivity().getEStructuralFeatures().get(4);
     }
 
     /**
@@ -2517,8 +2525,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getActivity_ActivityResource() {
-        return (EReference)getActivity().getEStructuralFeatures().get(5);
+    public EReference getActivity_ActivityResources() {
+        return (EReference) getActivity().getEStructuralFeatures().get(5);
     }
 
     /**
@@ -2527,7 +2535,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getActivity_LoopCharacteristicsGroup() {
-        return (EAttribute)getActivity().getEStructuralFeatures().get(6);
+        return (EAttribute) getActivity().getEStructuralFeatures().get(6);
     }
 
     /**
@@ -2536,7 +2544,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getActivity_LoopCharacteristics() {
-        return (EReference)getActivity().getEStructuralFeatures().get(7);
+        return (EReference) getActivity().getEStructuralFeatures().get(7);
     }
 
     /**
@@ -2545,7 +2553,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getActivity_CompletionQuantity() {
-        return (EAttribute)getActivity().getEStructuralFeatures().get(8);
+        return (EAttribute) getActivity().getEStructuralFeatures().get(8);
     }
 
     /**
@@ -2554,7 +2562,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getActivity_Default() {
-        return (EAttribute)getActivity().getEStructuralFeatures().get(9);
+        return (EAttribute) getActivity().getEStructuralFeatures().get(9);
     }
 
     /**
@@ -2563,7 +2571,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getActivity_IsForCompensation() {
-        return (EAttribute)getActivity().getEStructuralFeatures().get(10);
+        return (EAttribute) getActivity().getEStructuralFeatures().get(10);
     }
 
     /**
@@ -2572,7 +2580,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getActivity_StartQuantity() {
-        return (EAttribute)getActivity().getEStructuralFeatures().get(11);
+        return (EAttribute) getActivity().getEStructuralFeatures().get(11);
     }
 
     /**
@@ -2582,7 +2590,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getActivityResource() {
         if (activityResourceEClass == null) {
-            activityResourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(2);
+            activityResourceEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(2);
         }
         return activityResourceEClass;
     }
@@ -2593,7 +2602,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getActivityResource_ResourceAssignmentExpression() {
-        return (EReference)getActivityResource().getEStructuralFeatures().get(0);
+        return (EReference) getActivityResource().getEStructuralFeatures().get(
+                0);
     }
 
     /**
@@ -2602,7 +2612,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getActivityResource_ResourceParameterBinding() {
-        return (EReference)getActivityResource().getEStructuralFeatures().get(1);
+        return (EReference) getActivityResource().getEStructuralFeatures().get(
+                1);
     }
 
     /**
@@ -2611,7 +2622,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getActivityResource_ResourceRef() {
-        return (EAttribute)getActivityResource().getEStructuralFeatures().get(2);
+        return (EAttribute) getActivityResource().getEStructuralFeatures().get(
+                2);
     }
 
     /**
@@ -2621,7 +2633,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getAdHocSubProcess() {
         if (adHocSubProcessEClass == null) {
-            adHocSubProcessEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(5);
+            adHocSubProcessEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(5);
         }
         return adHocSubProcessEClass;
     }
@@ -2632,7 +2645,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getAdHocSubProcess_CompletionCondition() {
-        return (EReference)getAdHocSubProcess().getEStructuralFeatures().get(0);
+        return (EReference) getAdHocSubProcess().getEStructuralFeatures()
+                .get(0);
     }
 
     /**
@@ -2641,7 +2655,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getAdHocSubProcess_CancelRemainingInstances() {
-        return (EAttribute)getAdHocSubProcess().getEStructuralFeatures().get(1);
+        return (EAttribute) getAdHocSubProcess().getEStructuralFeatures()
+                .get(1);
     }
 
     /**
@@ -2650,7 +2665,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getAdHocSubProcess_Ordering() {
-        return (EAttribute)getAdHocSubProcess().getEStructuralFeatures().get(2);
+        return (EAttribute) getAdHocSubProcess().getEStructuralFeatures()
+                .get(2);
     }
 
     /**
@@ -2660,7 +2676,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getArtifact() {
         if (artifactEClass == null) {
-            artifactEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(6);
+            artifactEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(6);
         }
         return artifactEClass;
     }
@@ -2672,7 +2689,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getAssignment() {
         if (assignmentEClass == null) {
-            assignmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(7);
+            assignmentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(7);
         }
         return assignmentEClass;
     }
@@ -2683,7 +2701,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getAssignment_From() {
-        return (EReference)getAssignment().getEStructuralFeatures().get(0);
+        return (EReference) getAssignment().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -2692,7 +2710,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getAssignment_To() {
-        return (EReference)getAssignment().getEStructuralFeatures().get(1);
+        return (EReference) getAssignment().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -2701,7 +2719,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getAssignment_Language() {
-        return (EAttribute)getAssignment().getEStructuralFeatures().get(2);
+        return (EAttribute) getAssignment().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -2711,7 +2729,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getAssociation() {
         if (associationEClass == null) {
-            associationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(8);
+            associationEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(8);
         }
         return associationEClass;
     }
@@ -2722,7 +2741,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getAssociation_AssociationDirection() {
-        return (EAttribute)getAssociation().getEStructuralFeatures().get(0);
+        return (EAttribute) getAssociation().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -2731,7 +2750,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getAssociation_SourceRef() {
-        return (EAttribute)getAssociation().getEStructuralFeatures().get(1);
+        return (EAttribute) getAssociation().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -2740,7 +2759,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getAssociation_TargetRef() {
-        return (EAttribute)getAssociation().getEStructuralFeatures().get(2);
+        return (EAttribute) getAssociation().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -2750,7 +2769,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getAuditing() {
         if (auditingEClass == null) {
-            auditingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(11);
+            auditingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(11);
         }
         return auditingEClass;
     }
@@ -2762,7 +2782,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getBaseElement() {
         if (baseElementEClass == null) {
-            baseElementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(12);
+            baseElementEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(12);
         }
         return baseElementEClass;
     }
@@ -2773,7 +2794,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getBaseElement_Documentation() {
-        return (EReference)getBaseElement().getEStructuralFeatures().get(0);
+        return (EReference) getBaseElement().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -2782,7 +2803,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getBaseElement_Any() {
-        return (EAttribute)getBaseElement().getEStructuralFeatures().get(1);
+        return (EAttribute) getBaseElement().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -2791,7 +2812,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getBaseElement_Id() {
-        return (EAttribute)getBaseElement().getEStructuralFeatures().get(2);
+        return (EAttribute) getBaseElement().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -2800,7 +2821,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getBaseElement_AnyAttribute() {
-        return (EAttribute)getBaseElement().getEStructuralFeatures().get(3);
+        return (EAttribute) getBaseElement().getEStructuralFeatures().get(3);
     }
 
     /**
@@ -2810,7 +2831,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getBaseElementWithMixedContent() {
         if (baseElementWithMixedContentEClass == null) {
-            baseElementWithMixedContentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(13);
+            baseElementWithMixedContentEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(13);
         }
         return baseElementWithMixedContentEClass;
     }
@@ -2821,7 +2843,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getBaseElementWithMixedContent_Mixed() {
-        return (EAttribute)getBaseElementWithMixedContent().getEStructuralFeatures().get(0);
+        return (EAttribute) getBaseElementWithMixedContent()
+                .getEStructuralFeatures().get(0);
     }
 
     /**
@@ -2830,7 +2853,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getBaseElementWithMixedContent_Documentation() {
-        return (EReference)getBaseElementWithMixedContent().getEStructuralFeatures().get(1);
+        return (EReference) getBaseElementWithMixedContent()
+                .getEStructuralFeatures().get(1);
     }
 
     /**
@@ -2839,7 +2863,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getBaseElementWithMixedContent_Category() {
-        return (EReference)getBaseElementWithMixedContent().getEStructuralFeatures().get(2);
+        return (EReference) getBaseElementWithMixedContent()
+                .getEStructuralFeatures().get(2);
     }
 
     /**
@@ -2848,7 +2873,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getBaseElementWithMixedContent_Any() {
-        return (EAttribute)getBaseElementWithMixedContent().getEStructuralFeatures().get(3);
+        return (EAttribute) getBaseElementWithMixedContent()
+                .getEStructuralFeatures().get(3);
     }
 
     /**
@@ -2857,7 +2883,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getBaseElementWithMixedContent_Id() {
-        return (EAttribute)getBaseElementWithMixedContent().getEStructuralFeatures().get(4);
+        return (EAttribute) getBaseElementWithMixedContent()
+                .getEStructuralFeatures().get(4);
     }
 
     /**
@@ -2866,7 +2893,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getBaseElementWithMixedContent_AnyAttribute() {
-        return (EAttribute)getBaseElementWithMixedContent().getEStructuralFeatures().get(5);
+        return (EAttribute) getBaseElementWithMixedContent()
+                .getEStructuralFeatures().get(5);
     }
 
     /**
@@ -2876,7 +2904,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getBoundaryEvent() {
         if (boundaryEventEClass == null) {
-            boundaryEventEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(14);
+            boundaryEventEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(14);
         }
         return boundaryEventEClass;
     }
@@ -2887,7 +2916,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getBoundaryEvent_AttachedToRef() {
-        return (EAttribute)getBoundaryEvent().getEStructuralFeatures().get(0);
+        return (EAttribute) getBoundaryEvent().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -2896,7 +2925,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getBoundaryEvent_CancelActivity() {
-        return (EAttribute)getBoundaryEvent().getEStructuralFeatures().get(1);
+        return (EAttribute) getBoundaryEvent().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -2906,7 +2935,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getBusinessRuleTask() {
         if (businessRuleTaskEClass == null) {
-            businessRuleTaskEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(15);
+            businessRuleTaskEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(15);
         }
         return businessRuleTaskEClass;
     }
@@ -2918,7 +2948,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getCallableElement() {
         if (callableElementEClass == null) {
-            callableElementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(16);
+            callableElementEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(16);
         }
         return callableElementEClass;
     }
@@ -2929,7 +2960,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getCallableElement_SupportedInterfaceRef() {
-        return (EAttribute)getCallableElement().getEStructuralFeatures().get(0);
+        return (EAttribute) getCallableElement().getEStructuralFeatures()
+                .get(0);
     }
 
     /**
@@ -2938,7 +2970,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getCallableElement_IoSpecification() {
-        return (EReference)getCallableElement().getEStructuralFeatures().get(1);
+        return (EReference) getCallableElement().getEStructuralFeatures()
+                .get(1);
     }
 
     /**
@@ -2947,7 +2980,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getCallableElement_IoBinding() {
-        return (EReference)getCallableElement().getEStructuralFeatures().get(2);
+        return (EReference) getCallableElement().getEStructuralFeatures()
+                .get(2);
     }
 
     /**
@@ -2956,7 +2990,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getCallableElement_Name() {
-        return (EAttribute)getCallableElement().getEStructuralFeatures().get(3);
+        return (EAttribute) getCallableElement().getEStructuralFeatures()
+                .get(3);
     }
 
     /**
@@ -2966,7 +3001,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getCallActivity() {
         if (callActivityEClass == null) {
-            callActivityEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(17);
+            callActivityEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(17);
         }
         return callActivityEClass;
     }
@@ -2977,7 +3013,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getCallActivity_CalledElement() {
-        return (EAttribute)getCallActivity().getEStructuralFeatures().get(0);
+        return (EAttribute) getCallActivity().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -2987,7 +3023,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getCallChoreographyActivity() {
         if (callChoreographyActivityEClass == null) {
-            callChoreographyActivityEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(18);
+            callChoreographyActivityEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(18);
         }
         return callChoreographyActivityEClass;
     }
@@ -2998,7 +3035,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getCallChoreographyActivity_ParticipantAssociation() {
-        return (EReference)getCallChoreographyActivity().getEStructuralFeatures().get(0);
+        return (EReference) getCallChoreographyActivity()
+                .getEStructuralFeatures().get(0);
     }
 
     /**
@@ -3007,7 +3045,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getCallChoreographyActivity_CalledElement() {
-        return (EAttribute)getCallChoreographyActivity().getEStructuralFeatures().get(1);
+        return (EAttribute) getCallChoreographyActivity()
+                .getEStructuralFeatures().get(1);
     }
 
     /**
@@ -3017,7 +3056,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getCallConversation() {
         if (callConversationEClass == null) {
-            callConversationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(19);
+            callConversationEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(19);
         }
         return callConversationEClass;
     }
@@ -3028,7 +3068,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getCallConversation_ParticipantAssociation() {
-        return (EReference)getCallConversation().getEStructuralFeatures().get(0);
+        return (EReference) getCallConversation().getEStructuralFeatures().get(
+                0);
     }
 
     /**
@@ -3037,7 +3078,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getCallConversation_CalledElementRef() {
-        return (EAttribute)getCallConversation().getEStructuralFeatures().get(1);
+        return (EAttribute) getCallConversation().getEStructuralFeatures().get(
+                1);
     }
 
     /**
@@ -3047,7 +3089,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getCancelEventDefinition() {
         if (cancelEventDefinitionEClass == null) {
-            cancelEventDefinitionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(20);
+            cancelEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(20);
         }
         return cancelEventDefinitionEClass;
     }
@@ -3059,7 +3102,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getCatchEvent() {
         if (catchEventEClass == null) {
-            catchEventEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(21);
+            catchEventEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(21);
         }
         return catchEventEClass;
     }
@@ -3070,7 +3114,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getCatchEvent_DataOutput() {
-        return (EReference)getCatchEvent().getEStructuralFeatures().get(0);
+        return (EReference) getCatchEvent().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -3079,7 +3123,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getCatchEvent_DataOutputAssociation() {
-        return (EReference)getCatchEvent().getEStructuralFeatures().get(1);
+        return (EReference) getCatchEvent().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -3088,7 +3132,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getCatchEvent_OutputSet() {
-        return (EReference)getCatchEvent().getEStructuralFeatures().get(2);
+        return (EReference) getCatchEvent().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -3097,7 +3141,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getCatchEvent_EventDefinitionGroup() {
-        return (EAttribute)getCatchEvent().getEStructuralFeatures().get(3);
+        return (EAttribute) getCatchEvent().getEStructuralFeatures().get(3);
     }
 
     /**
@@ -3106,7 +3150,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getCatchEvent_EventDefinition() {
-        return (EReference)getCatchEvent().getEStructuralFeatures().get(4);
+        return (EReference) getCatchEvent().getEStructuralFeatures().get(4);
     }
 
     /**
@@ -3115,7 +3159,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getCatchEvent_EventDefinitionRef() {
-        return (EAttribute)getCatchEvent().getEStructuralFeatures().get(5);
+        return (EAttribute) getCatchEvent().getEStructuralFeatures().get(5);
     }
 
     /**
@@ -3124,7 +3168,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getCatchEvent_ParallelMultiple() {
-        return (EAttribute)getCatchEvent().getEStructuralFeatures().get(6);
+        return (EAttribute) getCatchEvent().getEStructuralFeatures().get(6);
     }
 
     /**
@@ -3134,7 +3178,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getCategory() {
         if (categoryEClass == null) {
-            categoryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(22);
+            categoryEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(22);
         }
         return categoryEClass;
     }
@@ -3145,7 +3190,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getCategory_CategoryValue() {
-        return (EReference)getCategory().getEStructuralFeatures().get(0);
+        return (EReference) getCategory().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -3155,7 +3200,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getCategoryValue() {
         if (categoryValueEClass == null) {
-            categoryValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(23);
+            categoryValueEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(23);
         }
         return categoryValueEClass;
     }
@@ -3166,7 +3212,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getCategoryValue_Value() {
-        return (EAttribute)getCategoryValue().getEStructuralFeatures().get(0);
+        return (EAttribute) getCategoryValue().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -3176,7 +3222,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getChoreography() {
         if (choreographyEClass == null) {
-            choreographyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(24);
+            choreographyEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(24);
         }
         return choreographyEClass;
     }
@@ -3187,7 +3234,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getChoreography_FlowElementGroup() {
-        return (EAttribute)getChoreography().getEStructuralFeatures().get(0);
+        return (EAttribute) getChoreography().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -3196,7 +3243,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getChoreography_FlowElement() {
-        return (EReference)getChoreography().getEStructuralFeatures().get(1);
+        return (EReference) getChoreography().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -3205,7 +3252,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getChoreography_ArtifactGroup() {
-        return (EAttribute)getChoreography().getEStructuralFeatures().get(2);
+        return (EAttribute) getChoreography().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -3214,7 +3261,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getChoreography_Artifact() {
-        return (EReference)getChoreography().getEStructuralFeatures().get(3);
+        return (EReference) getChoreography().getEStructuralFeatures().get(3);
     }
 
     /**
@@ -3223,7 +3270,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getChoreography_MessageFlow() {
-        return (EReference)getChoreography().getEStructuralFeatures().get(4);
+        return (EReference) getChoreography().getEStructuralFeatures().get(4);
     }
 
     /**
@@ -3232,7 +3279,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getChoreography_Participant() {
-        return (EReference)getChoreography().getEStructuralFeatures().get(5);
+        return (EReference) getChoreography().getEStructuralFeatures().get(5);
     }
 
     /**
@@ -3241,7 +3288,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getChoreography_Conversation() {
-        return (EReference)getChoreography().getEStructuralFeatures().get(6);
+        return (EReference) getChoreography().getEStructuralFeatures().get(6);
     }
 
     /**
@@ -3250,7 +3297,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getChoreography_ConversationAssociation() {
-        return (EReference)getChoreography().getEStructuralFeatures().get(7);
+        return (EReference) getChoreography().getEStructuralFeatures().get(7);
     }
 
     /**
@@ -3259,7 +3306,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getChoreography_MessageFlowAssociation() {
-        return (EReference)getChoreography().getEStructuralFeatures().get(8);
+        return (EReference) getChoreography().getEStructuralFeatures().get(8);
     }
 
     /**
@@ -3268,7 +3315,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getChoreography_ParticipantAssociation() {
-        return (EReference)getChoreography().getEStructuralFeatures().get(9);
+        return (EReference) getChoreography().getEStructuralFeatures().get(9);
     }
 
     /**
@@ -3277,7 +3324,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getChoreography_IsClosed() {
-        return (EAttribute)getChoreography().getEStructuralFeatures().get(10);
+        return (EAttribute) getChoreography().getEStructuralFeatures().get(10);
     }
 
     /**
@@ -3287,7 +3334,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getChoreographyActivity() {
         if (choreographyActivityEClass == null) {
-            choreographyActivityEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(25);
+            choreographyActivityEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(25);
         }
         return choreographyActivityEClass;
     }
@@ -3298,7 +3346,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getChoreographyActivity_ParticipantRef() {
-        return (EAttribute)getChoreographyActivity().getEStructuralFeatures().get(0);
+        return (EAttribute) getChoreographyActivity().getEStructuralFeatures()
+                .get(0);
     }
 
     /**
@@ -3307,7 +3356,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getChoreographyActivity_InitiatingParticipantRef() {
-        return (EAttribute)getChoreographyActivity().getEStructuralFeatures().get(1);
+        return (EAttribute) getChoreographyActivity().getEStructuralFeatures()
+                .get(1);
     }
 
     /**
@@ -3317,7 +3367,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getChoreographySubProcess() {
         if (choreographySubProcessEClass == null) {
-            choreographySubProcessEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(26);
+            choreographySubProcessEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(26);
         }
         return choreographySubProcessEClass;
     }
@@ -3328,7 +3379,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getChoreographySubProcess_FlowElementGroup() {
-        return (EAttribute)getChoreographySubProcess().getEStructuralFeatures().get(0);
+        return (EAttribute) getChoreographySubProcess()
+                .getEStructuralFeatures().get(0);
     }
 
     /**
@@ -3337,7 +3389,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getChoreographySubProcess_FlowElement() {
-        return (EReference)getChoreographySubProcess().getEStructuralFeatures().get(1);
+        return (EReference) getChoreographySubProcess()
+                .getEStructuralFeatures().get(1);
     }
 
     /**
@@ -3346,7 +3399,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getChoreographySubProcess_ArtifactGroup() {
-        return (EAttribute)getChoreographySubProcess().getEStructuralFeatures().get(2);
+        return (EAttribute) getChoreographySubProcess()
+                .getEStructuralFeatures().get(2);
     }
 
     /**
@@ -3355,7 +3409,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getChoreographySubProcess_Artifact() {
-        return (EReference)getChoreographySubProcess().getEStructuralFeatures().get(3);
+        return (EReference) getChoreographySubProcess()
+                .getEStructuralFeatures().get(3);
     }
 
     /**
@@ -3365,7 +3420,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getChoreographyTask() {
         if (choreographyTaskEClass == null) {
-            choreographyTaskEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(27);
+            choreographyTaskEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(27);
         }
         return choreographyTaskEClass;
     }
@@ -3376,7 +3432,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getChoreographyTask_MessageFlowRef() {
-        return (EAttribute)getChoreographyTask().getEStructuralFeatures().get(0);
+        return (EAttribute) getChoreographyTask().getEStructuralFeatures().get(
+                0);
     }
 
     /**
@@ -3386,7 +3443,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getCollaboration() {
         if (collaborationEClass == null) {
-            collaborationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(28);
+            collaborationEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(28);
         }
         return collaborationEClass;
     }
@@ -3397,7 +3455,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getCollaboration_Participant() {
-        return (EReference)getCollaboration().getEStructuralFeatures().get(0);
+        return (EReference) getCollaboration().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -3406,7 +3464,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getCollaboration_MessageFlow() {
-        return (EReference)getCollaboration().getEStructuralFeatures().get(1);
+        return (EReference) getCollaboration().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -3415,7 +3473,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getCollaboration_ArtifactGroup() {
-        return (EAttribute)getCollaboration().getEStructuralFeatures().get(2);
+        return (EAttribute) getCollaboration().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -3424,7 +3482,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getCollaboration_Artifact() {
-        return (EReference)getCollaboration().getEStructuralFeatures().get(3);
+        return (EReference) getCollaboration().getEStructuralFeatures().get(3);
     }
 
     /**
@@ -3433,7 +3491,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getCollaboration_Conversation() {
-        return (EReference)getCollaboration().getEStructuralFeatures().get(4);
+        return (EReference) getCollaboration().getEStructuralFeatures().get(4);
     }
 
     /**
@@ -3442,7 +3500,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getCollaboration_ConversationAssociation() {
-        return (EReference)getCollaboration().getEStructuralFeatures().get(5);
+        return (EReference) getCollaboration().getEStructuralFeatures().get(5);
     }
 
     /**
@@ -3451,7 +3509,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getCollaboration_ParticipantAssociation() {
-        return (EReference)getCollaboration().getEStructuralFeatures().get(6);
+        return (EReference) getCollaboration().getEStructuralFeatures().get(6);
     }
 
     /**
@@ -3460,7 +3518,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getCollaboration_MessageFlowAssociation() {
-        return (EReference)getCollaboration().getEStructuralFeatures().get(7);
+        return (EReference) getCollaboration().getEStructuralFeatures().get(7);
     }
 
     /**
@@ -3469,7 +3527,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getCollaboration_ChoreographyRef() {
-        return (EAttribute)getCollaboration().getEStructuralFeatures().get(8);
+        return (EAttribute) getCollaboration().getEStructuralFeatures().get(8);
     }
 
     /**
@@ -3478,7 +3536,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getCollaboration_IsClosed() {
-        return (EAttribute)getCollaboration().getEStructuralFeatures().get(9);
+        return (EAttribute) getCollaboration().getEStructuralFeatures().get(9);
     }
 
     /**
@@ -3487,7 +3545,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getCollaboration_Name() {
-        return (EAttribute)getCollaboration().getEStructuralFeatures().get(10);
+        return (EAttribute) getCollaboration().getEStructuralFeatures().get(10);
     }
 
     /**
@@ -3497,7 +3555,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getCommunication() {
         if (communicationEClass == null) {
-            communicationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(29);
+            communicationEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(29);
         }
         return communicationEClass;
     }
@@ -3508,7 +3567,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getCommunication_MessageFlowRef() {
-        return (EAttribute)getCommunication().getEStructuralFeatures().get(0);
+        return (EAttribute) getCommunication().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -3517,7 +3576,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getCommunication_CorrelationKeyRef() {
-        return (EAttribute)getCommunication().getEStructuralFeatures().get(1);
+        return (EAttribute) getCommunication().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -3527,7 +3586,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getCompensateEventDefinition() {
         if (compensateEventDefinitionEClass == null) {
-            compensateEventDefinitionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(30);
+            compensateEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(30);
         }
         return compensateEventDefinitionEClass;
     }
@@ -3538,7 +3598,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getCompensateEventDefinition_ActivityRef() {
-        return (EAttribute)getCompensateEventDefinition().getEStructuralFeatures().get(0);
+        return (EAttribute) getCompensateEventDefinition()
+                .getEStructuralFeatures().get(0);
     }
 
     /**
@@ -3547,7 +3608,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getCompensateEventDefinition_WaitForCompletion() {
-        return (EAttribute)getCompensateEventDefinition().getEStructuralFeatures().get(1);
+        return (EAttribute) getCompensateEventDefinition()
+                .getEStructuralFeatures().get(1);
     }
 
     /**
@@ -3557,7 +3619,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getComplexBehaviorDefinition() {
         if (complexBehaviorDefinitionEClass == null) {
-            complexBehaviorDefinitionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(31);
+            complexBehaviorDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(31);
         }
         return complexBehaviorDefinitionEClass;
     }
@@ -3568,7 +3631,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getComplexBehaviorDefinition_Condition() {
-        return (EReference)getComplexBehaviorDefinition().getEStructuralFeatures().get(0);
+        return (EReference) getComplexBehaviorDefinition()
+                .getEStructuralFeatures().get(0);
     }
 
     /**
@@ -3577,7 +3641,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getComplexBehaviorDefinition_Event() {
-        return (EReference)getComplexBehaviorDefinition().getEStructuralFeatures().get(1);
+        return (EReference) getComplexBehaviorDefinition()
+                .getEStructuralFeatures().get(1);
     }
 
     /**
@@ -3587,7 +3652,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getComplexGateway() {
         if (complexGatewayEClass == null) {
-            complexGatewayEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(32);
+            complexGatewayEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(32);
         }
         return complexGatewayEClass;
     }
@@ -3598,7 +3664,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getComplexGateway_ActivationCondition() {
-        return (EReference)getComplexGateway().getEStructuralFeatures().get(0);
+        return (EReference) getComplexGateway().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -3607,7 +3673,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getComplexGateway_Default() {
-        return (EAttribute)getComplexGateway().getEStructuralFeatures().get(1);
+        return (EAttribute) getComplexGateway().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -3617,7 +3683,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getConditionalEventDefinition() {
         if (conditionalEventDefinitionEClass == null) {
-            conditionalEventDefinitionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(33);
+            conditionalEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(33);
         }
         return conditionalEventDefinitionEClass;
     }
@@ -3628,7 +3695,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getConditionalEventDefinition_Condition() {
-        return (EReference)getConditionalEventDefinition().getEStructuralFeatures().get(0);
+        return (EReference) getConditionalEventDefinition()
+                .getEStructuralFeatures().get(0);
     }
 
     /**
@@ -3638,7 +3706,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getConversation() {
         if (conversationEClass == null) {
-            conversationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(34);
+            conversationEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(34);
         }
         return conversationEClass;
     }
@@ -3649,7 +3718,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getConversation_ConversationNodeGroup() {
-        return (EAttribute)getConversation().getEStructuralFeatures().get(0);
+        return (EAttribute) getConversation().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -3658,7 +3727,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getConversation_ConversationNode() {
-        return (EReference)getConversation().getEStructuralFeatures().get(1);
+        return (EReference) getConversation().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -3667,7 +3736,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getConversation_Participant() {
-        return (EReference)getConversation().getEStructuralFeatures().get(2);
+        return (EReference) getConversation().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -3676,7 +3745,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getConversation_ArtifactGroup() {
-        return (EAttribute)getConversation().getEStructuralFeatures().get(3);
+        return (EAttribute) getConversation().getEStructuralFeatures().get(3);
     }
 
     /**
@@ -3685,7 +3754,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getConversation_Artifact() {
-        return (EReference)getConversation().getEStructuralFeatures().get(4);
+        return (EReference) getConversation().getEStructuralFeatures().get(4);
     }
 
     /**
@@ -3694,7 +3763,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getConversation_MessageFlow() {
-        return (EReference)getConversation().getEStructuralFeatures().get(5);
+        return (EReference) getConversation().getEStructuralFeatures().get(5);
     }
 
     /**
@@ -3703,7 +3772,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getConversation_MessageFlowRef() {
-        return (EAttribute)getConversation().getEStructuralFeatures().get(6);
+        return (EAttribute) getConversation().getEStructuralFeatures().get(6);
     }
 
     /**
@@ -3712,7 +3781,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getConversation_CorrelationKey() {
-        return (EReference)getConversation().getEStructuralFeatures().get(7);
+        return (EReference) getConversation().getEStructuralFeatures().get(7);
     }
 
     /**
@@ -3722,7 +3791,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getConversationAssociation() {
         if (conversationAssociationEClass == null) {
-            conversationAssociationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(35);
+            conversationAssociationEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(35);
         }
         return conversationAssociationEClass;
     }
@@ -3733,7 +3803,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getConversationAssociation_MessageFlowRef() {
-        return (EAttribute)getConversationAssociation().getEStructuralFeatures().get(0);
+        return (EAttribute) getConversationAssociation()
+                .getEStructuralFeatures().get(0);
     }
 
     /**
@@ -3742,7 +3813,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getConversationAssociation_ConversationRef() {
-        return (EAttribute)getConversationAssociation().getEStructuralFeatures().get(1);
+        return (EAttribute) getConversationAssociation()
+                .getEStructuralFeatures().get(1);
     }
 
     /**
@@ -3751,7 +3823,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getConversationAssociation_CorrelationKeyRef() {
-        return (EAttribute)getConversationAssociation().getEStructuralFeatures().get(2);
+        return (EAttribute) getConversationAssociation()
+                .getEStructuralFeatures().get(2);
     }
 
     /**
@@ -3761,7 +3834,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getConversationNode() {
         if (conversationNodeEClass == null) {
-            conversationNodeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(36);
+            conversationNodeEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(36);
         }
         return conversationNodeEClass;
     }
@@ -3772,7 +3846,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getConversationNode_ParticipantRef() {
-        return (EAttribute)getConversationNode().getEStructuralFeatures().get(0);
+        return (EAttribute) getConversationNode().getEStructuralFeatures().get(
+                0);
     }
 
     /**
@@ -3781,7 +3856,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getConversationNode_Name() {
-        return (EAttribute)getConversationNode().getEStructuralFeatures().get(1);
+        return (EAttribute) getConversationNode().getEStructuralFeatures().get(
+                1);
     }
 
     /**
@@ -3791,7 +3867,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getCorrelationKey() {
         if (correlationKeyEClass == null) {
-            correlationKeyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(37);
+            correlationKeyEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(37);
         }
         return correlationKeyEClass;
     }
@@ -3802,7 +3879,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getCorrelationKey_CorrelationPropertyRef() {
-        return (EAttribute)getCorrelationKey().getEStructuralFeatures().get(0);
+        return (EAttribute) getCorrelationKey().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -3812,7 +3889,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getCorrelationProperty() {
         if (correlationPropertyEClass == null) {
-            correlationPropertyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(38);
+            correlationPropertyEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(38);
         }
         return correlationPropertyEClass;
     }
@@ -3823,7 +3901,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getCorrelationProperty_CorrelationPropertyRetrievalExpression() {
-        return (EReference)getCorrelationProperty().getEStructuralFeatures().get(0);
+        return (EReference) getCorrelationProperty().getEStructuralFeatures()
+                .get(0);
     }
 
     /**
@@ -3833,7 +3912,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getCorrelationPropertyBinding() {
         if (correlationPropertyBindingEClass == null) {
-            correlationPropertyBindingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(39);
+            correlationPropertyBindingEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(39);
         }
         return correlationPropertyBindingEClass;
     }
@@ -3844,7 +3924,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getCorrelationPropertyBinding_DataPath() {
-        return (EReference)getCorrelationPropertyBinding().getEStructuralFeatures().get(0);
+        return (EReference) getCorrelationPropertyBinding()
+                .getEStructuralFeatures().get(0);
     }
 
     /**
@@ -3853,7 +3934,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getCorrelationPropertyBinding_CorrelationPropertyRef() {
-        return (EAttribute)getCorrelationPropertyBinding().getEStructuralFeatures().get(1);
+        return (EAttribute) getCorrelationPropertyBinding()
+                .getEStructuralFeatures().get(1);
     }
 
     /**
@@ -3863,7 +3945,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getCorrelationPropertyRetrievalExpression() {
         if (correlationPropertyRetrievalExpressionEClass == null) {
-            correlationPropertyRetrievalExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(40);
+            correlationPropertyRetrievalExpressionEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(40);
         }
         return correlationPropertyRetrievalExpressionEClass;
     }
@@ -3874,7 +3957,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getCorrelationPropertyRetrievalExpression_MessagePath() {
-        return (EReference)getCorrelationPropertyRetrievalExpression().getEStructuralFeatures().get(0);
+        return (EReference) getCorrelationPropertyRetrievalExpression()
+                .getEStructuralFeatures().get(0);
     }
 
     /**
@@ -3883,7 +3967,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getCorrelationPropertyRetrievalExpression_MessageRef() {
-        return (EAttribute)getCorrelationPropertyRetrievalExpression().getEStructuralFeatures().get(1);
+        return (EAttribute) getCorrelationPropertyRetrievalExpression()
+                .getEStructuralFeatures().get(1);
     }
 
     /**
@@ -3893,7 +3978,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getCorrelationSubscription() {
         if (correlationSubscriptionEClass == null) {
-            correlationSubscriptionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(41);
+            correlationSubscriptionEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(41);
         }
         return correlationSubscriptionEClass;
     }
@@ -3904,7 +3990,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getCorrelationSubscription_CorrelationPropertyBinding() {
-        return (EReference)getCorrelationSubscription().getEStructuralFeatures().get(0);
+        return (EReference) getCorrelationSubscription()
+                .getEStructuralFeatures().get(0);
     }
 
     /**
@@ -3913,7 +4000,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getCorrelationSubscription_CorrelationKeyRef() {
-        return (EAttribute)getCorrelationSubscription().getEStructuralFeatures().get(1);
+        return (EAttribute) getCorrelationSubscription()
+                .getEStructuralFeatures().get(1);
     }
 
     /**
@@ -3922,7 +4010,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getCorrelationSubscription_Process() {
-        return (EAttribute)getCorrelationSubscription().getEStructuralFeatures().get(2);
+        return (EAttribute) getCorrelationSubscription()
+                .getEStructuralFeatures().get(2);
     }
 
     /**
@@ -3932,7 +4021,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getDataAssociation() {
         if (dataAssociationEClass == null) {
-            dataAssociationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(42);
+            dataAssociationEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(42);
         }
         return dataAssociationEClass;
     }
@@ -3943,7 +4033,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDataAssociation_Transformation() {
-        return (EReference)getDataAssociation().getEStructuralFeatures().get(0);
+        return (EReference) getDataAssociation().getEStructuralFeatures()
+                .get(0);
     }
 
     /**
@@ -3952,7 +4043,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDataAssociation_Assignment() {
-        return (EReference)getDataAssociation().getEStructuralFeatures().get(1);
+        return (EReference) getDataAssociation().getEStructuralFeatures()
+                .get(1);
     }
 
     /**
@@ -3962,7 +4054,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getDataInput() {
         if (dataInputEClass == null) {
-            dataInputEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(43);
+            dataInputEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(43);
         }
         return dataInputEClass;
     }
@@ -3973,7 +4066,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDataInput_DataState() {
-        return (EReference)getDataInput().getEStructuralFeatures().get(0);
+        return (EReference) getDataInput().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -3982,7 +4075,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDataInput_IsCollection() {
-        return (EAttribute)getDataInput().getEStructuralFeatures().get(1);
+        return (EAttribute) getDataInput().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -3991,7 +4084,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDataInput_ItemSubjectRef() {
-        return (EAttribute)getDataInput().getEStructuralFeatures().get(2);
+        return (EAttribute) getDataInput().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -4000,7 +4093,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDataInput_Name() {
-        return (EAttribute)getDataInput().getEStructuralFeatures().get(3);
+        return (EAttribute) getDataInput().getEStructuralFeatures().get(3);
     }
 
     /**
@@ -4010,7 +4103,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getDataInputAssociation() {
         if (dataInputAssociationEClass == null) {
-            dataInputAssociationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(44);
+            dataInputAssociationEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(44);
         }
         return dataInputAssociationEClass;
     }
@@ -4021,7 +4115,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDataInputAssociation_SourceRef() {
-        return (EAttribute)getDataInputAssociation().getEStructuralFeatures().get(0);
+        return (EAttribute) getDataInputAssociation().getEStructuralFeatures()
+                .get(0);
     }
 
     /**
@@ -4030,7 +4125,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDataInputAssociation_TargetRef() {
-        return (EAttribute)getDataInputAssociation().getEStructuralFeatures().get(1);
+        return (EAttribute) getDataInputAssociation().getEStructuralFeatures()
+                .get(1);
     }
 
     /**
@@ -4040,7 +4136,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getDataObject() {
         if (dataObjectEClass == null) {
-            dataObjectEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(45);
+            dataObjectEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(45);
         }
         return dataObjectEClass;
     }
@@ -4051,7 +4148,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDataObject_DataState() {
-        return (EReference)getDataObject().getEStructuralFeatures().get(0);
+        return (EReference) getDataObject().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -4060,7 +4157,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDataObject_IsCollection() {
-        return (EAttribute)getDataObject().getEStructuralFeatures().get(1);
+        return (EAttribute) getDataObject().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -4069,7 +4166,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDataObject_ItemSubjectRef() {
-        return (EAttribute)getDataObject().getEStructuralFeatures().get(2);
+        return (EAttribute) getDataObject().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -4079,7 +4176,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getDataOutput() {
         if (dataOutputEClass == null) {
-            dataOutputEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(46);
+            dataOutputEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(46);
         }
         return dataOutputEClass;
     }
@@ -4090,7 +4188,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDataOutput_DataState() {
-        return (EReference)getDataOutput().getEStructuralFeatures().get(0);
+        return (EReference) getDataOutput().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -4099,7 +4197,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDataOutput_IsCollection() {
-        return (EAttribute)getDataOutput().getEStructuralFeatures().get(1);
+        return (EAttribute) getDataOutput().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -4108,7 +4206,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDataOutput_ItemSubjectRef() {
-        return (EAttribute)getDataOutput().getEStructuralFeatures().get(2);
+        return (EAttribute) getDataOutput().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -4117,7 +4215,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDataOutput_Name() {
-        return (EAttribute)getDataOutput().getEStructuralFeatures().get(3);
+        return (EAttribute) getDataOutput().getEStructuralFeatures().get(3);
     }
 
     /**
@@ -4127,7 +4225,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getDataOutputAssociation() {
         if (dataOutputAssociationEClass == null) {
-            dataOutputAssociationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(47);
+            dataOutputAssociationEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(47);
         }
         return dataOutputAssociationEClass;
     }
@@ -4138,7 +4237,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDataOutputAssociation_SourceRef() {
-        return (EAttribute)getDataOutputAssociation().getEStructuralFeatures().get(0);
+        return (EAttribute) getDataOutputAssociation().getEStructuralFeatures()
+                .get(0);
     }
 
     /**
@@ -4147,7 +4247,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDataOutputAssociation_TargetRef() {
-        return (EAttribute)getDataOutputAssociation().getEStructuralFeatures().get(1);
+        return (EAttribute) getDataOutputAssociation().getEStructuralFeatures()
+                .get(1);
     }
 
     /**
@@ -4157,7 +4258,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getDataState() {
         if (dataStateEClass == null) {
-            dataStateEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(48);
+            dataStateEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(48);
         }
         return dataStateEClass;
     }
@@ -4168,7 +4270,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDataState_Name() {
-        return (EAttribute)getDataState().getEStructuralFeatures().get(0);
+        return (EAttribute) getDataState().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -4178,7 +4280,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getDataStore() {
         if (dataStoreEClass == null) {
-            dataStoreEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(49);
+            dataStoreEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(49);
         }
         return dataStoreEClass;
     }
@@ -4189,7 +4292,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDataStore_DataState() {
-        return (EReference)getDataStore().getEStructuralFeatures().get(0);
+        return (EReference) getDataStore().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -4198,7 +4301,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDataStore_Capacity() {
-        return (EAttribute)getDataStore().getEStructuralFeatures().get(1);
+        return (EAttribute) getDataStore().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -4207,7 +4310,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDataStore_IsUnlimited() {
-        return (EAttribute)getDataStore().getEStructuralFeatures().get(2);
+        return (EAttribute) getDataStore().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -4216,7 +4319,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDataStore_ItemSubjectRef() {
-        return (EAttribute)getDataStore().getEStructuralFeatures().get(3);
+        return (EAttribute) getDataStore().getEStructuralFeatures().get(3);
     }
 
     /**
@@ -4225,7 +4328,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDataStore_Name() {
-        return (EAttribute)getDataStore().getEStructuralFeatures().get(4);
+        return (EAttribute) getDataStore().getEStructuralFeatures().get(4);
     }
 
     /**
@@ -4235,7 +4338,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getDataStoreReference() {
         if (dataStoreReferenceEClass == null) {
-            dataStoreReferenceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(50);
+            dataStoreReferenceEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(50);
         }
         return dataStoreReferenceEClass;
     }
@@ -4246,7 +4350,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDataStoreReference_DataState() {
-        return (EReference)getDataStoreReference().getEStructuralFeatures().get(0);
+        return (EReference) getDataStoreReference().getEStructuralFeatures()
+                .get(0);
     }
 
     /**
@@ -4255,7 +4360,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDataStoreReference_DataStoreRef() {
-        return (EAttribute)getDataStoreReference().getEStructuralFeatures().get(1);
+        return (EAttribute) getDataStoreReference().getEStructuralFeatures()
+                .get(1);
     }
 
     /**
@@ -4264,7 +4370,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDataStoreReference_ItemSubjectRef() {
-        return (EAttribute)getDataStoreReference().getEStructuralFeatures().get(2);
+        return (EAttribute) getDataStoreReference().getEStructuralFeatures()
+                .get(2);
     }
 
     /**
@@ -4274,7 +4381,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getDefinitions() {
         if (definitionsEClass == null) {
-            definitionsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(51);
+            definitionsEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(51);
         }
         return definitionsEClass;
     }
@@ -4285,7 +4393,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDefinitions_Import() {
-        return (EReference)getDefinitions().getEStructuralFeatures().get(0);
+        return (EReference) getDefinitions().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -4294,7 +4402,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDefinitions_Extension() {
-        return (EReference)getDefinitions().getEStructuralFeatures().get(1);
+        return (EReference) getDefinitions().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -4303,7 +4411,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDefinitions_RootElementGroup() {
-        return (EAttribute)getDefinitions().getEStructuralFeatures().get(2);
+        return (EAttribute) getDefinitions().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -4312,7 +4420,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDefinitions_RootElement() {
-        return (EReference)getDefinitions().getEStructuralFeatures().get(3);
+        return (EReference) getDefinitions().getEStructuralFeatures().get(3);
     }
 
     /**
@@ -4321,7 +4429,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDefinitions_Diagram() {
-        return (EReference)getDefinitions().getEStructuralFeatures().get(4);
+        return (EReference) getDefinitions().getEStructuralFeatures().get(4);
     }
 
     /**
@@ -4330,7 +4438,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getDefinitions_Relationship() {
-        return (EReference)getDefinitions().getEStructuralFeatures().get(5);
+        return (EReference) getDefinitions().getEStructuralFeatures().get(5);
     }
 
     /**
@@ -4339,7 +4447,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDefinitions_ExpressionLanguage() {
-        return (EAttribute)getDefinitions().getEStructuralFeatures().get(6);
+        return (EAttribute) getDefinitions().getEStructuralFeatures().get(6);
     }
 
     /**
@@ -4348,7 +4456,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDefinitions_Id() {
-        return (EAttribute)getDefinitions().getEStructuralFeatures().get(7);
+        return (EAttribute) getDefinitions().getEStructuralFeatures().get(7);
     }
 
     /**
@@ -4357,7 +4465,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDefinitions_TargetNamespace() {
-        return (EAttribute)getDefinitions().getEStructuralFeatures().get(8);
+        return (EAttribute) getDefinitions().getEStructuralFeatures().get(8);
     }
 
     /**
@@ -4366,7 +4474,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDefinitions_TypeLanguage() {
-        return (EAttribute)getDefinitions().getEStructuralFeatures().get(9);
+        return (EAttribute) getDefinitions().getEStructuralFeatures().get(9);
     }
 
     /**
@@ -4375,7 +4483,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDefinitions_AnyAttribute() {
-        return (EAttribute)getDefinitions().getEStructuralFeatures().get(10);
+        return (EAttribute) getDefinitions().getEStructuralFeatures().get(10);
     }
 
     /**
@@ -4385,7 +4493,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getDocumentation() {
         if (documentationEClass == null) {
-            documentationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(52);
+            documentationEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(52);
         }
         return documentationEClass;
     }
@@ -4396,7 +4505,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDocumentation_Mixed() {
-        return (EAttribute)getDocumentation().getEStructuralFeatures().get(0);
+        return (EAttribute) getDocumentation().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -4405,7 +4514,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDocumentation_Any() {
-        return (EAttribute)getDocumentation().getEStructuralFeatures().get(1);
+        return (EAttribute) getDocumentation().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -4414,7 +4523,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getDocumentation_Id() {
-        return (EAttribute)getDocumentation().getEStructuralFeatures().get(2);
+        return (EAttribute) getDocumentation().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -4424,7 +4533,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getEndEvent() {
         if (endEventEClass == null) {
-            endEventEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(53);
+            endEventEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(53);
         }
         return endEventEClass;
     }
@@ -4436,7 +4546,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getEndPoint() {
         if (endPointEClass == null) {
-            endPointEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(54);
+            endPointEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(54);
         }
         return endPointEClass;
     }
@@ -4448,7 +4559,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getError() {
         if (errorEClass == null) {
-            errorEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(55);
+            errorEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(55);
         }
         return errorEClass;
     }
@@ -4459,7 +4571,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getError_StructureRef() {
-        return (EAttribute)getError().getEStructuralFeatures().get(0);
+        return (EAttribute) getError().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -4469,7 +4581,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getErrorEventDefinition() {
         if (errorEventDefinitionEClass == null) {
-            errorEventDefinitionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(56);
+            errorEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(56);
         }
         return errorEventDefinitionEClass;
     }
@@ -4480,7 +4593,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getErrorEventDefinition_ErrorCode() {
-        return (EAttribute)getErrorEventDefinition().getEStructuralFeatures().get(0);
+        return (EAttribute) getErrorEventDefinition().getEStructuralFeatures()
+                .get(0);
     }
 
     /**
@@ -4489,7 +4603,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getErrorEventDefinition_ErrorRef() {
-        return (EAttribute)getErrorEventDefinition().getEStructuralFeatures().get(1);
+        return (EAttribute) getErrorEventDefinition().getEStructuralFeatures()
+                .get(1);
     }
 
     /**
@@ -4499,7 +4614,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getEscalation() {
         if (escalationEClass == null) {
-            escalationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(57);
+            escalationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(57);
         }
         return escalationEClass;
     }
@@ -4510,7 +4626,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getEscalation_StructureRef() {
-        return (EAttribute)getEscalation().getEStructuralFeatures().get(0);
+        return (EAttribute) getEscalation().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -4520,7 +4636,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getEscalationEventDefinition() {
         if (escalationEventDefinitionEClass == null) {
-            escalationEventDefinitionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(58);
+            escalationEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(58);
         }
         return escalationEventDefinitionEClass;
     }
@@ -4531,7 +4648,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getEscalationEventDefinition_EscalationCode() {
-        return (EAttribute)getEscalationEventDefinition().getEStructuralFeatures().get(0);
+        return (EAttribute) getEscalationEventDefinition()
+                .getEStructuralFeatures().get(0);
     }
 
     /**
@@ -4540,7 +4658,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getEscalationEventDefinition_EscalationRef() {
-        return (EAttribute)getEscalationEventDefinition().getEStructuralFeatures().get(1);
+        return (EAttribute) getEscalationEventDefinition()
+                .getEStructuralFeatures().get(1);
     }
 
     /**
@@ -4550,7 +4669,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getEvent() {
         if (eventEClass == null) {
-            eventEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(59);
+            eventEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(59);
         }
         return eventEClass;
     }
@@ -4562,7 +4682,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getEventBasedGateway() {
         if (eventBasedGatewayEClass == null) {
-            eventBasedGatewayEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(60);
+            eventBasedGatewayEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(60);
         }
         return eventBasedGatewayEClass;
     }
@@ -4573,7 +4694,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getEventBasedGateway_EventGatewayType() {
-        return (EAttribute)getEventBasedGateway().getEStructuralFeatures().get(0);
+        return (EAttribute) getEventBasedGateway().getEStructuralFeatures()
+                .get(0);
     }
 
     /**
@@ -4582,7 +4704,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getEventBasedGateway_Instantiate() {
-        return (EAttribute)getEventBasedGateway().getEStructuralFeatures().get(1);
+        return (EAttribute) getEventBasedGateway().getEStructuralFeatures()
+                .get(1);
     }
 
     /**
@@ -4592,7 +4715,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getEventDefinition() {
         if (eventDefinitionEClass == null) {
-            eventDefinitionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(63);
+            eventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(63);
         }
         return eventDefinitionEClass;
     }
@@ -4604,7 +4728,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getExclusiveGateway() {
         if (exclusiveGatewayEClass == null) {
-            exclusiveGatewayEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(64);
+            exclusiveGatewayEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(64);
         }
         return exclusiveGatewayEClass;
     }
@@ -4615,7 +4740,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getExclusiveGateway_Default() {
-        return (EAttribute)getExclusiveGateway().getEStructuralFeatures().get(0);
+        return (EAttribute) getExclusiveGateway().getEStructuralFeatures().get(
+                0);
     }
 
     /**
@@ -4625,7 +4751,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getExpression() {
         if (expressionEClass == null) {
-            expressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(65);
+            expressionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(65);
         }
         return expressionEClass;
     }
@@ -4637,7 +4764,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getExtension() {
         if (extensionEClass == null) {
-            extensionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(66);
+            extensionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(66);
         }
         return extensionEClass;
     }
@@ -4648,7 +4776,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getExtension_Documentation() {
-        return (EReference)getExtension().getEStructuralFeatures().get(0);
+        return (EReference) getExtension().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -4657,7 +4785,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getExtension_Definition() {
-        return (EAttribute)getExtension().getEStructuralFeatures().get(1);
+        return (EAttribute) getExtension().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -4666,7 +4794,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getExtension_MustUnderstand() {
-        return (EAttribute)getExtension().getEStructuralFeatures().get(2);
+        return (EAttribute) getExtension().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -4676,7 +4804,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getFlowElement() {
         if (flowElementEClass == null) {
-            flowElementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(67);
+            flowElementEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(67);
         }
         return flowElementEClass;
     }
@@ -4687,7 +4816,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getFlowElement_Auditing() {
-        return (EReference)getFlowElement().getEStructuralFeatures().get(0);
+        return (EReference) getFlowElement().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -4696,7 +4825,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getFlowElement_Monitoring() {
-        return (EReference)getFlowElement().getEStructuralFeatures().get(1);
+        return (EReference) getFlowElement().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -4705,7 +4834,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getFlowElement_CategoryValueRef() {
-        return (EAttribute)getFlowElement().getEStructuralFeatures().get(2);
+        return (EAttribute) getFlowElement().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -4714,7 +4843,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getFlowElement_Name() {
-        return (EAttribute)getFlowElement().getEStructuralFeatures().get(3);
+        return (EAttribute) getFlowElement().getEStructuralFeatures().get(3);
     }
 
     /**
@@ -4724,7 +4853,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getFlowNode() {
         if (flowNodeEClass == null) {
-            flowNodeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(68);
+            flowNodeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(68);
         }
         return flowNodeEClass;
     }
@@ -4735,7 +4865,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getFlowNode_Incoming() {
-        return (EAttribute)getFlowNode().getEStructuralFeatures().get(0);
+        return (EAttribute) getFlowNode().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -4744,7 +4874,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getFlowNode_Outgoing() {
-        return (EAttribute)getFlowNode().getEStructuralFeatures().get(1);
+        return (EAttribute) getFlowNode().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -4754,7 +4884,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getFormalExpression() {
         if (formalExpressionEClass == null) {
-            formalExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(69);
+            formalExpressionEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(69);
         }
         return formalExpressionEClass;
     }
@@ -4765,7 +4896,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getFormalExpression_EvaluatesToTypeRef() {
-        return (EAttribute)getFormalExpression().getEStructuralFeatures().get(0);
+        return (EAttribute) getFormalExpression().getEStructuralFeatures().get(
+                0);
     }
 
     /**
@@ -4774,7 +4906,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getFormalExpression_Language() {
-        return (EAttribute)getFormalExpression().getEStructuralFeatures().get(1);
+        return (EAttribute) getFormalExpression().getEStructuralFeatures().get(
+                1);
     }
 
     /**
@@ -4784,7 +4917,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getGateway() {
         if (gatewayEClass == null) {
-            gatewayEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(70);
+            gatewayEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(70);
         }
         return gatewayEClass;
     }
@@ -4795,7 +4929,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getGateway_GatewayDirection() {
-        return (EAttribute)getGateway().getEStructuralFeatures().get(0);
+        return (EAttribute) getGateway().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -4805,7 +4939,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getGlobalBusinessRuleTask() {
         if (globalBusinessRuleTaskEClass == null) {
-            globalBusinessRuleTaskEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(73);
+            globalBusinessRuleTaskEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(73);
         }
         return globalBusinessRuleTaskEClass;
     }
@@ -4817,7 +4952,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getGlobalChoreographyTask() {
         if (globalChoreographyTaskEClass == null) {
-            globalChoreographyTaskEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(74);
+            globalChoreographyTaskEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(74);
         }
         return globalChoreographyTaskEClass;
     }
@@ -4828,7 +4964,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getGlobalChoreographyTask_Participant() {
-        return (EReference)getGlobalChoreographyTask().getEStructuralFeatures().get(0);
+        return (EReference) getGlobalChoreographyTask()
+                .getEStructuralFeatures().get(0);
     }
 
     /**
@@ -4837,7 +4974,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getGlobalChoreographyTask_MessageFlow() {
-        return (EReference)getGlobalChoreographyTask().getEStructuralFeatures().get(1);
+        return (EReference) getGlobalChoreographyTask()
+                .getEStructuralFeatures().get(1);
     }
 
     /**
@@ -4846,7 +4984,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getGlobalChoreographyTask_InitiatingParticipantRef() {
-        return (EAttribute)getGlobalChoreographyTask().getEStructuralFeatures().get(2);
+        return (EAttribute) getGlobalChoreographyTask()
+                .getEStructuralFeatures().get(2);
     }
 
     /**
@@ -4856,7 +4995,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getGlobalCommunication() {
         if (globalCommunicationEClass == null) {
-            globalCommunicationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(75);
+            globalCommunicationEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(75);
         }
         return globalCommunicationEClass;
     }
@@ -4867,7 +5007,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getGlobalCommunication_Participant() {
-        return (EReference)getGlobalCommunication().getEStructuralFeatures().get(0);
+        return (EReference) getGlobalCommunication().getEStructuralFeatures()
+                .get(0);
     }
 
     /**
@@ -4876,7 +5017,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getGlobalCommunication_MessageFlow() {
-        return (EReference)getGlobalCommunication().getEStructuralFeatures().get(1);
+        return (EReference) getGlobalCommunication().getEStructuralFeatures()
+                .get(1);
     }
 
     /**
@@ -4885,7 +5027,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getGlobalCommunication_CorrelationKey() {
-        return (EReference)getGlobalCommunication().getEStructuralFeatures().get(2);
+        return (EReference) getGlobalCommunication().getEStructuralFeatures()
+                .get(2);
     }
 
     /**
@@ -4895,7 +5038,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getGlobalManualTask() {
         if (globalManualTaskEClass == null) {
-            globalManualTaskEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(76);
+            globalManualTaskEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(76);
         }
         return globalManualTaskEClass;
     }
@@ -4907,7 +5051,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getGlobalScriptTask() {
         if (globalScriptTaskEClass == null) {
-            globalScriptTaskEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(77);
+            globalScriptTaskEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(77);
         }
         return globalScriptTaskEClass;
     }
@@ -4918,7 +5063,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getGlobalScriptTask_Script() {
-        return (EReference)getGlobalScriptTask().getEStructuralFeatures().get(0);
+        return (EReference) getGlobalScriptTask().getEStructuralFeatures().get(
+                0);
     }
 
     /**
@@ -4927,7 +5073,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getGlobalScriptTask_ScriptLanguage() {
-        return (EAttribute)getGlobalScriptTask().getEStructuralFeatures().get(1);
+        return (EAttribute) getGlobalScriptTask().getEStructuralFeatures().get(
+                1);
     }
 
     /**
@@ -4937,7 +5084,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getGlobalTask() {
         if (globalTaskEClass == null) {
-            globalTaskEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(78);
+            globalTaskEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(78);
         }
         return globalTaskEClass;
     }
@@ -4948,7 +5096,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getGlobalTask_PerformerGroup() {
-        return (EAttribute)getGlobalTask().getEStructuralFeatures().get(0);
+        return (EAttribute) getGlobalTask().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -4957,7 +5105,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getGlobalTask_Performer() {
-        return (EReference)getGlobalTask().getEStructuralFeatures().get(1);
+        return (EReference) getGlobalTask().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -4967,7 +5115,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getGlobalUserTask() {
         if (globalUserTaskEClass == null) {
-            globalUserTaskEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(79);
+            globalUserTaskEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(79);
         }
         return globalUserTaskEClass;
     }
@@ -4978,7 +5127,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getGlobalUserTask_Rendering() {
-        return (EReference)getGlobalUserTask().getEStructuralFeatures().get(0);
+        return (EReference) getGlobalUserTask().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -4987,7 +5136,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getGlobalUserTask_Implementation() {
-        return (EAttribute)getGlobalUserTask().getEStructuralFeatures().get(1);
+        return (EAttribute) getGlobalUserTask().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -4997,7 +5146,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getGroup() {
         if (groupEClass == null) {
-            groupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(80);
+            groupEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(80);
         }
         return groupEClass;
     }
@@ -5008,7 +5158,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getGroup_CategoryRef() {
-        return (EAttribute)getGroup().getEStructuralFeatures().get(0);
+        return (EAttribute) getGroup().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -5018,7 +5168,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getHumanPerformer() {
         if (humanPerformerEClass == null) {
-            humanPerformerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(81);
+            humanPerformerEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(81);
         }
         return humanPerformerEClass;
     }
@@ -5030,7 +5181,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getImplicitThrowEvent() {
         if (implicitThrowEventEClass == null) {
-            implicitThrowEventEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(82);
+            implicitThrowEventEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(82);
         }
         return implicitThrowEventEClass;
     }
@@ -5042,7 +5194,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getImport() {
         if (importEClass == null) {
-            importEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(83);
+            importEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(83);
         }
         return importEClass;
     }
@@ -5053,7 +5206,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getImport_ImportType() {
-        return (EAttribute)getImport().getEStructuralFeatures().get(0);
+        return (EAttribute) getImport().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -5062,7 +5215,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getImport_Location() {
-        return (EAttribute)getImport().getEStructuralFeatures().get(1);
+        return (EAttribute) getImport().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -5071,7 +5224,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getImport_Namespace() {
-        return (EAttribute)getImport().getEStructuralFeatures().get(2);
+        return (EAttribute) getImport().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -5081,7 +5234,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getInclusiveGateway() {
         if (inclusiveGatewayEClass == null) {
-            inclusiveGatewayEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(84);
+            inclusiveGatewayEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(84);
         }
         return inclusiveGatewayEClass;
     }
@@ -5092,7 +5246,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getInclusiveGateway_Default() {
-        return (EAttribute)getInclusiveGateway().getEStructuralFeatures().get(0);
+        return (EAttribute) getInclusiveGateway().getEStructuralFeatures().get(
+                0);
     }
 
     /**
@@ -5102,7 +5257,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getInputOutputBinding() {
         if (inputOutputBindingEClass == null) {
-            inputOutputBindingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(85);
+            inputOutputBindingEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(85);
         }
         return inputOutputBindingEClass;
     }
@@ -5113,7 +5269,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getInputOutputBinding_InputDataRef() {
-        return (EAttribute)getInputOutputBinding().getEStructuralFeatures().get(0);
+        return (EAttribute) getInputOutputBinding().getEStructuralFeatures()
+                .get(0);
     }
 
     /**
@@ -5122,7 +5279,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getInputOutputBinding_OperationRef() {
-        return (EAttribute)getInputOutputBinding().getEStructuralFeatures().get(1);
+        return (EAttribute) getInputOutputBinding().getEStructuralFeatures()
+                .get(1);
     }
 
     /**
@@ -5131,7 +5289,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getInputOutputBinding_OutputDataRef() {
-        return (EAttribute)getInputOutputBinding().getEStructuralFeatures().get(2);
+        return (EAttribute) getInputOutputBinding().getEStructuralFeatures()
+                .get(2);
     }
 
     /**
@@ -5141,7 +5300,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getInputOutputSpecification() {
         if (inputOutputSpecificationEClass == null) {
-            inputOutputSpecificationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(86);
+            inputOutputSpecificationEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(86);
         }
         return inputOutputSpecificationEClass;
     }
@@ -5152,7 +5312,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getInputOutputSpecification_DataInput() {
-        return (EReference)getInputOutputSpecification().getEStructuralFeatures().get(0);
+        return (EReference) getInputOutputSpecification()
+                .getEStructuralFeatures().get(0);
     }
 
     /**
@@ -5161,7 +5322,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getInputOutputSpecification_DataOutput() {
-        return (EReference)getInputOutputSpecification().getEStructuralFeatures().get(1);
+        return (EReference) getInputOutputSpecification()
+                .getEStructuralFeatures().get(1);
     }
 
     /**
@@ -5170,7 +5332,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getInputOutputSpecification_InputSet() {
-        return (EReference)getInputOutputSpecification().getEStructuralFeatures().get(2);
+        return (EReference) getInputOutputSpecification()
+                .getEStructuralFeatures().get(2);
     }
 
     /**
@@ -5179,7 +5342,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getInputOutputSpecification_OutputSet() {
-        return (EReference)getInputOutputSpecification().getEStructuralFeatures().get(3);
+        return (EReference) getInputOutputSpecification()
+                .getEStructuralFeatures().get(3);
     }
 
     /**
@@ -5189,7 +5353,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getInputSet() {
         if (inputSetEClass == null) {
-            inputSetEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(87);
+            inputSetEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(87);
         }
         return inputSetEClass;
     }
@@ -5200,7 +5365,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getInputSet_DataInputRefs() {
-        return (EAttribute)getInputSet().getEStructuralFeatures().get(0);
+        return (EAttribute) getInputSet().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -5209,7 +5374,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getInputSet_OptionalInputRefs() {
-        return (EAttribute)getInputSet().getEStructuralFeatures().get(1);
+        return (EAttribute) getInputSet().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -5218,7 +5383,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getInputSet_WhileExecutingInputRefs() {
-        return (EAttribute)getInputSet().getEStructuralFeatures().get(2);
+        return (EAttribute) getInputSet().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -5227,7 +5392,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getInputSet_OutputSetRefs() {
-        return (EAttribute)getInputSet().getEStructuralFeatures().get(3);
+        return (EAttribute) getInputSet().getEStructuralFeatures().get(3);
     }
 
     /**
@@ -5236,7 +5401,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getInputSet_Name() {
-        return (EAttribute)getInputSet().getEStructuralFeatures().get(4);
+        return (EAttribute) getInputSet().getEStructuralFeatures().get(4);
     }
 
     /**
@@ -5246,7 +5411,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getInterface() {
         if (interfaceEClass == null) {
-            interfaceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(88);
+            interfaceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(88);
         }
         return interfaceEClass;
     }
@@ -5257,7 +5423,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getInterface_Operation() {
-        return (EReference)getInterface().getEStructuralFeatures().get(0);
+        return (EReference) getInterface().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -5266,7 +5432,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getInterface_Name() {
-        return (EAttribute)getInterface().getEStructuralFeatures().get(1);
+        return (EAttribute) getInterface().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -5276,7 +5442,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getIntermediateCatchEvent() {
         if (intermediateCatchEventEClass == null) {
-            intermediateCatchEventEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(89);
+            intermediateCatchEventEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(89);
         }
         return intermediateCatchEventEClass;
     }
@@ -5288,7 +5455,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getIntermediateThrowEvent() {
         if (intermediateThrowEventEClass == null) {
-            intermediateThrowEventEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(90);
+            intermediateThrowEventEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(90);
         }
         return intermediateThrowEventEClass;
     }
@@ -5300,7 +5468,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getItemDefinition() {
         if (itemDefinitionEClass == null) {
-            itemDefinitionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(91);
+            itemDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(91);
         }
         return itemDefinitionEClass;
     }
@@ -5311,7 +5480,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getItemDefinition_IsCollection() {
-        return (EAttribute)getItemDefinition().getEStructuralFeatures().get(0);
+        return (EAttribute) getItemDefinition().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -5320,7 +5489,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getItemDefinition_ItemKind() {
-        return (EAttribute)getItemDefinition().getEStructuralFeatures().get(1);
+        return (EAttribute) getItemDefinition().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -5329,7 +5498,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getItemDefinition_StructureRef() {
-        return (EAttribute)getItemDefinition().getEStructuralFeatures().get(2);
+        return (EAttribute) getItemDefinition().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -5339,7 +5508,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getLane() {
         if (laneEClass == null) {
-            laneEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(94);
+            laneEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(94);
         }
         return laneEClass;
     }
@@ -5350,7 +5520,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getLane_PartitionElement() {
-        return (EReference)getLane().getEStructuralFeatures().get(0);
+        return (EReference) getLane().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -5359,7 +5529,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getLane_FlowElementRef() {
-        return (EAttribute)getLane().getEStructuralFeatures().get(1);
+        return (EAttribute) getLane().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -5368,7 +5538,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getLane_ChildLaneSet() {
-        return (EReference)getLane().getEStructuralFeatures().get(2);
+        return (EReference) getLane().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -5377,7 +5547,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getLane_Name() {
-        return (EAttribute)getLane().getEStructuralFeatures().get(3);
+        return (EAttribute) getLane().getEStructuralFeatures().get(3);
     }
 
     /**
@@ -5386,7 +5556,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getLane_PartitionElementRef() {
-        return (EAttribute)getLane().getEStructuralFeatures().get(4);
+        return (EAttribute) getLane().getEStructuralFeatures().get(4);
     }
 
     /**
@@ -5396,7 +5566,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getLaneSet() {
         if (laneSetEClass == null) {
-            laneSetEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(95);
+            laneSetEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(95);
         }
         return laneSetEClass;
     }
@@ -5407,7 +5578,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getLaneSet_Lane() {
-        return (EReference)getLaneSet().getEStructuralFeatures().get(0);
+        return (EReference) getLaneSet().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -5417,7 +5588,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getLinkEventDefinition() {
         if (linkEventDefinitionEClass == null) {
-            linkEventDefinitionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(96);
+            linkEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(96);
         }
         return linkEventDefinitionEClass;
     }
@@ -5428,7 +5600,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getLinkEventDefinition_Name() {
-        return (EAttribute)getLinkEventDefinition().getEStructuralFeatures().get(0);
+        return (EAttribute) getLinkEventDefinition().getEStructuralFeatures()
+                .get(0);
     }
 
     /**
@@ -5438,7 +5611,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getLoopCharacteristics() {
         if (loopCharacteristicsEClass == null) {
-            loopCharacteristicsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(97);
+            loopCharacteristicsEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(97);
         }
         return loopCharacteristicsEClass;
     }
@@ -5450,7 +5624,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getManualTask() {
         if (manualTaskEClass == null) {
-            manualTaskEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(98);
+            manualTaskEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(98);
         }
         return manualTaskEClass;
     }
@@ -5462,7 +5637,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getMessage() {
         if (messageEClass == null) {
-            messageEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(99);
+            messageEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(99);
         }
         return messageEClass;
     }
@@ -5473,7 +5649,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getMessage_Name() {
-        return (EAttribute)getMessage().getEStructuralFeatures().get(0);
+        return (EAttribute) getMessage().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -5482,7 +5658,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getMessage_StructureRef() {
-        return (EAttribute)getMessage().getEStructuralFeatures().get(1);
+        return (EAttribute) getMessage().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -5492,7 +5668,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getMessageEventDefinition() {
         if (messageEventDefinitionEClass == null) {
-            messageEventDefinitionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(100);
+            messageEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(100);
         }
         return messageEventDefinitionEClass;
     }
@@ -5503,7 +5681,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getMessageEventDefinition_OperationRef() {
-        return (EAttribute)getMessageEventDefinition().getEStructuralFeatures().get(0);
+        return (EAttribute) getMessageEventDefinition()
+                .getEStructuralFeatures().get(0);
     }
 
     /**
@@ -5512,7 +5691,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getMessageEventDefinition_MessageRef() {
-        return (EAttribute)getMessageEventDefinition().getEStructuralFeatures().get(1);
+        return (EAttribute) getMessageEventDefinition()
+                .getEStructuralFeatures().get(1);
     }
 
     /**
@@ -5522,7 +5702,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getMessageFlow() {
         if (messageFlowEClass == null) {
-            messageFlowEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(101);
+            messageFlowEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(101);
         }
         return messageFlowEClass;
     }
@@ -5533,7 +5715,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getMessageFlow_MessageRef() {
-        return (EAttribute)getMessageFlow().getEStructuralFeatures().get(0);
+        return (EAttribute) getMessageFlow().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -5542,7 +5724,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getMessageFlow_Name() {
-        return (EAttribute)getMessageFlow().getEStructuralFeatures().get(1);
+        return (EAttribute) getMessageFlow().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -5551,7 +5733,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getMessageFlow_SourceRef() {
-        return (EAttribute)getMessageFlow().getEStructuralFeatures().get(2);
+        return (EAttribute) getMessageFlow().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -5560,7 +5742,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getMessageFlow_TargetRef() {
-        return (EAttribute)getMessageFlow().getEStructuralFeatures().get(3);
+        return (EAttribute) getMessageFlow().getEStructuralFeatures().get(3);
     }
 
     /**
@@ -5570,7 +5752,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getMessageFlowAssociation() {
         if (messageFlowAssociationEClass == null) {
-            messageFlowAssociationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(102);
+            messageFlowAssociationEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(102);
         }
         return messageFlowAssociationEClass;
     }
@@ -5581,7 +5765,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getMessageFlowAssociation_InnerMessageFlowRef() {
-        return (EAttribute)getMessageFlowAssociation().getEStructuralFeatures().get(0);
+        return (EAttribute) getMessageFlowAssociation()
+                .getEStructuralFeatures().get(0);
     }
 
     /**
@@ -5590,7 +5775,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getMessageFlowAssociation_OuterMessageFlowRef() {
-        return (EAttribute)getMessageFlowAssociation().getEStructuralFeatures().get(1);
+        return (EAttribute) getMessageFlowAssociation()
+                .getEStructuralFeatures().get(1);
     }
 
     /**
@@ -5600,7 +5786,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getMonitoring() {
         if (monitoringEClass == null) {
-            monitoringEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(103);
+            monitoringEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(103);
         }
         return monitoringEClass;
     }
@@ -5612,7 +5799,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getMultiInstanceLoopCharacteristics() {
         if (multiInstanceLoopCharacteristicsEClass == null) {
-            multiInstanceLoopCharacteristicsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(106);
+            multiInstanceLoopCharacteristicsEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(106);
         }
         return multiInstanceLoopCharacteristicsEClass;
     }
@@ -5623,7 +5812,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getMultiInstanceLoopCharacteristics_LoopCardinality() {
-        return (EReference)getMultiInstanceLoopCharacteristics().getEStructuralFeatures().get(0);
+        return (EReference) getMultiInstanceLoopCharacteristics()
+                .getEStructuralFeatures().get(0);
     }
 
     /**
@@ -5632,7 +5822,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getMultiInstanceLoopCharacteristics_LoopDataInput() {
-        return (EReference)getMultiInstanceLoopCharacteristics().getEStructuralFeatures().get(1);
+        return (EReference) getMultiInstanceLoopCharacteristics()
+                .getEStructuralFeatures().get(1);
     }
 
     /**
@@ -5641,7 +5832,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getMultiInstanceLoopCharacteristics_LoopDataOutput() {
-        return (EReference)getMultiInstanceLoopCharacteristics().getEStructuralFeatures().get(2);
+        return (EReference) getMultiInstanceLoopCharacteristics()
+                .getEStructuralFeatures().get(2);
     }
 
     /**
@@ -5650,7 +5842,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getMultiInstanceLoopCharacteristics_InputDataItem() {
-        return (EReference)getMultiInstanceLoopCharacteristics().getEStructuralFeatures().get(3);
+        return (EReference) getMultiInstanceLoopCharacteristics()
+                .getEStructuralFeatures().get(3);
     }
 
     /**
@@ -5659,7 +5852,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getMultiInstanceLoopCharacteristics_OutputDataItem() {
-        return (EReference)getMultiInstanceLoopCharacteristics().getEStructuralFeatures().get(4);
+        return (EReference) getMultiInstanceLoopCharacteristics()
+                .getEStructuralFeatures().get(4);
     }
 
     /**
@@ -5668,7 +5862,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getMultiInstanceLoopCharacteristics_ComplexBehaviorDefinition() {
-        return (EReference)getMultiInstanceLoopCharacteristics().getEStructuralFeatures().get(5);
+        return (EReference) getMultiInstanceLoopCharacteristics()
+                .getEStructuralFeatures().get(5);
     }
 
     /**
@@ -5677,7 +5872,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getMultiInstanceLoopCharacteristics_CompletionCondition() {
-        return (EReference)getMultiInstanceLoopCharacteristics().getEStructuralFeatures().get(6);
+        return (EReference) getMultiInstanceLoopCharacteristics()
+                .getEStructuralFeatures().get(6);
     }
 
     /**
@@ -5686,7 +5882,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getMultiInstanceLoopCharacteristics_Behavior() {
-        return (EAttribute)getMultiInstanceLoopCharacteristics().getEStructuralFeatures().get(7);
+        return (EAttribute) getMultiInstanceLoopCharacteristics()
+                .getEStructuralFeatures().get(7);
     }
 
     /**
@@ -5695,7 +5892,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getMultiInstanceLoopCharacteristics_IsSequential() {
-        return (EAttribute)getMultiInstanceLoopCharacteristics().getEStructuralFeatures().get(8);
+        return (EAttribute) getMultiInstanceLoopCharacteristics()
+                .getEStructuralFeatures().get(8);
     }
 
     /**
@@ -5704,7 +5902,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getMultiInstanceLoopCharacteristics_NoneBehaviorEventRef() {
-        return (EAttribute)getMultiInstanceLoopCharacteristics().getEStructuralFeatures().get(9);
+        return (EAttribute) getMultiInstanceLoopCharacteristics()
+                .getEStructuralFeatures().get(9);
     }
 
     /**
@@ -5713,7 +5912,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getMultiInstanceLoopCharacteristics_OneBehaviorEventRef() {
-        return (EAttribute)getMultiInstanceLoopCharacteristics().getEStructuralFeatures().get(10);
+        return (EAttribute) getMultiInstanceLoopCharacteristics()
+                .getEStructuralFeatures().get(10);
     }
 
     /**
@@ -5723,7 +5923,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getOperation() {
         if (operationEClass == null) {
-            operationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(107);
+            operationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(107);
         }
         return operationEClass;
     }
@@ -5734,7 +5935,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getOperation_InMessageRef() {
-        return (EAttribute)getOperation().getEStructuralFeatures().get(0);
+        return (EAttribute) getOperation().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -5743,7 +5944,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getOperation_OutMessageRef() {
-        return (EAttribute)getOperation().getEStructuralFeatures().get(1);
+        return (EAttribute) getOperation().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -5752,7 +5953,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getOperation_ErrorRef() {
-        return (EAttribute)getOperation().getEStructuralFeatures().get(2);
+        return (EAttribute) getOperation().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -5761,7 +5962,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getOperation_Name() {
-        return (EAttribute)getOperation().getEStructuralFeatures().get(3);
+        return (EAttribute) getOperation().getEStructuralFeatures().get(3);
     }
 
     /**
@@ -5771,7 +5972,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getOutputSet() {
         if (outputSetEClass == null) {
-            outputSetEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(108);
+            outputSetEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(108);
         }
         return outputSetEClass;
     }
@@ -5782,7 +5984,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getOutputSet_DataOutputRefs() {
-        return (EAttribute)getOutputSet().getEStructuralFeatures().get(0);
+        return (EAttribute) getOutputSet().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -5791,7 +5993,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getOutputSet_OptionalOutputRefs() {
-        return (EAttribute)getOutputSet().getEStructuralFeatures().get(1);
+        return (EAttribute) getOutputSet().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -5800,7 +6002,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getOutputSet_WhileExecutingOutputRefs() {
-        return (EAttribute)getOutputSet().getEStructuralFeatures().get(2);
+        return (EAttribute) getOutputSet().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -5809,7 +6011,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getOutputSet_InputSetRefs() {
-        return (EAttribute)getOutputSet().getEStructuralFeatures().get(3);
+        return (EAttribute) getOutputSet().getEStructuralFeatures().get(3);
     }
 
     /**
@@ -5818,7 +6020,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getOutputSet_Name() {
-        return (EAttribute)getOutputSet().getEStructuralFeatures().get(4);
+        return (EAttribute) getOutputSet().getEStructuralFeatures().get(4);
     }
 
     /**
@@ -5828,7 +6030,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getParallelGateway() {
         if (parallelGatewayEClass == null) {
-            parallelGatewayEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(109);
+            parallelGatewayEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(109);
         }
         return parallelGatewayEClass;
     }
@@ -5840,7 +6044,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getParticipant() {
         if (participantEClass == null) {
-            participantEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(110);
+            participantEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(110);
         }
         return participantEClass;
     }
@@ -5851,7 +6057,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getParticipant_InterfaceRef() {
-        return (EAttribute)getParticipant().getEStructuralFeatures().get(0);
+        return (EAttribute) getParticipant().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -5860,7 +6066,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getParticipant_EndPointRef() {
-        return (EAttribute)getParticipant().getEStructuralFeatures().get(1);
+        return (EAttribute) getParticipant().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -5869,7 +6075,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getParticipant_ParticipantMultiplicity() {
-        return (EReference)getParticipant().getEStructuralFeatures().get(2);
+        return (EReference) getParticipant().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -5878,7 +6084,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getParticipant_Name() {
-        return (EAttribute)getParticipant().getEStructuralFeatures().get(3);
+        return (EAttribute) getParticipant().getEStructuralFeatures().get(3);
     }
 
     /**
@@ -5887,7 +6093,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getParticipant_PartnerEntityRef() {
-        return (EAttribute)getParticipant().getEStructuralFeatures().get(4);
+        return (EAttribute) getParticipant().getEStructuralFeatures().get(4);
     }
 
     /**
@@ -5896,7 +6102,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getParticipant_PartnerRoleRef() {
-        return (EAttribute)getParticipant().getEStructuralFeatures().get(5);
+        return (EAttribute) getParticipant().getEStructuralFeatures().get(5);
     }
 
     /**
@@ -5905,7 +6111,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getParticipant_ProcessRef() {
-        return (EAttribute)getParticipant().getEStructuralFeatures().get(6);
+        return (EAttribute) getParticipant().getEStructuralFeatures().get(6);
     }
 
     /**
@@ -5915,7 +6121,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getParticipantAssociation() {
         if (participantAssociationEClass == null) {
-            participantAssociationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(111);
+            participantAssociationEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(111);
         }
         return participantAssociationEClass;
     }
@@ -5926,7 +6134,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getParticipantAssociation_InnerParticipantRef() {
-        return (EAttribute)getParticipantAssociation().getEStructuralFeatures().get(0);
+        return (EAttribute) getParticipantAssociation()
+                .getEStructuralFeatures().get(0);
     }
 
     /**
@@ -5935,7 +6144,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getParticipantAssociation_OuterParticipantRef() {
-        return (EAttribute)getParticipantAssociation().getEStructuralFeatures().get(1);
+        return (EAttribute) getParticipantAssociation()
+                .getEStructuralFeatures().get(1);
     }
 
     /**
@@ -5945,7 +6155,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getParticipantMultiplicity() {
         if (participantMultiplicityEClass == null) {
-            participantMultiplicityEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(112);
+            participantMultiplicityEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(112);
         }
         return participantMultiplicityEClass;
     }
@@ -5956,7 +6168,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getParticipantMultiplicity_Maximum() {
-        return (EAttribute)getParticipantMultiplicity().getEStructuralFeatures().get(0);
+        return (EAttribute) getParticipantMultiplicity()
+                .getEStructuralFeatures().get(0);
     }
 
     /**
@@ -5965,7 +6178,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getParticipantMultiplicity_Minimum() {
-        return (EAttribute)getParticipantMultiplicity().getEStructuralFeatures().get(1);
+        return (EAttribute) getParticipantMultiplicity()
+                .getEStructuralFeatures().get(1);
     }
 
     /**
@@ -5975,7 +6189,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getPartnerEntity() {
         if (partnerEntityEClass == null) {
-            partnerEntityEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(113);
+            partnerEntityEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(113);
         }
         return partnerEntityEClass;
     }
@@ -5986,7 +6202,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getPartnerEntity_Name() {
-        return (EAttribute)getPartnerEntity().getEStructuralFeatures().get(0);
+        return (EAttribute) getPartnerEntity().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -5996,7 +6212,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getPartnerRole() {
         if (partnerRoleEClass == null) {
-            partnerRoleEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(114);
+            partnerRoleEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(114);
         }
         return partnerRoleEClass;
     }
@@ -6007,7 +6225,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getPartnerRole_Name() {
-        return (EAttribute)getPartnerRole().getEStructuralFeatures().get(0);
+        return (EAttribute) getPartnerRole().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -6017,7 +6235,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getPerformer() {
         if (performerEClass == null) {
-            performerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(115);
+            performerEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(115);
         }
         return performerEClass;
     }
@@ -6029,7 +6248,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getPotentialOwner() {
         if (potentialOwnerEClass == null) {
-            potentialOwnerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(116);
+            potentialOwnerEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(116);
         }
         return potentialOwnerEClass;
     }
@@ -6041,7 +6262,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getProcess() {
         if (processEClass == null) {
-            processEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(117);
+            processEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(117);
         }
         return processEClass;
     }
@@ -6052,7 +6274,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getProcess_Auditing() {
-        return (EReference)getProcess().getEStructuralFeatures().get(0);
+        return (EReference) getProcess().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -6061,7 +6283,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getProcess_Monitoring() {
-        return (EReference)getProcess().getEStructuralFeatures().get(1);
+        return (EReference) getProcess().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -6070,7 +6292,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getProcess_Property() {
-        return (EReference)getProcess().getEStructuralFeatures().get(2);
+        return (EReference) getProcess().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -6079,7 +6301,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getProcess_LaneSet() {
-        return (EReference)getProcess().getEStructuralFeatures().get(3);
+        return (EReference) getProcess().getEStructuralFeatures().get(3);
     }
 
     /**
@@ -6088,7 +6310,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getProcess_FlowElementGroup() {
-        return (EAttribute)getProcess().getEStructuralFeatures().get(4);
+        return (EAttribute) getProcess().getEStructuralFeatures().get(4);
     }
 
     /**
@@ -6097,7 +6319,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getProcess_FlowElement() {
-        return (EReference)getProcess().getEStructuralFeatures().get(5);
+        return (EReference) getProcess().getEStructuralFeatures().get(5);
     }
 
     /**
@@ -6106,7 +6328,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getProcess_ArtifactGroup() {
-        return (EAttribute)getProcess().getEStructuralFeatures().get(6);
+        return (EAttribute) getProcess().getEStructuralFeatures().get(6);
     }
 
     /**
@@ -6115,7 +6337,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getProcess_Artifact() {
-        return (EReference)getProcess().getEStructuralFeatures().get(7);
+        return (EReference) getProcess().getEStructuralFeatures().get(7);
     }
 
     /**
@@ -6124,7 +6346,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getProcess_Supports() {
-        return (EAttribute)getProcess().getEStructuralFeatures().get(8);
+        return (EAttribute) getProcess().getEStructuralFeatures().get(8);
     }
 
     /**
@@ -6133,7 +6355,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getProcess_DefinitionalCollaborationRef() {
-        return (EAttribute)getProcess().getEStructuralFeatures().get(9);
+        return (EAttribute) getProcess().getEStructuralFeatures().get(9);
     }
 
     /**
@@ -6142,7 +6364,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getProcess_IsClosed() {
-        return (EAttribute)getProcess().getEStructuralFeatures().get(10);
+        return (EAttribute) getProcess().getEStructuralFeatures().get(10);
     }
 
     /**
@@ -6151,7 +6373,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getProcess_ProcessType() {
-        return (EAttribute)getProcess().getEStructuralFeatures().get(11);
+        return (EAttribute) getProcess().getEStructuralFeatures().get(11);
     }
 
     /**
@@ -6161,7 +6383,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getProperty() {
         if (propertyEClass == null) {
-            propertyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(120);
+            propertyEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(120);
         }
         return propertyEClass;
     }
@@ -6172,7 +6395,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getProperty_DataState() {
-        return (EReference)getProperty().getEStructuralFeatures().get(0);
+        return (EReference) getProperty().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -6181,7 +6404,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getProperty_ItemSubjectRef() {
-        return (EAttribute)getProperty().getEStructuralFeatures().get(1);
+        return (EAttribute) getProperty().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -6190,7 +6413,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getProperty_Name() {
-        return (EAttribute)getProperty().getEStructuralFeatures().get(2);
+        return (EAttribute) getProperty().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -6200,7 +6423,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getReceiveTask() {
         if (receiveTaskEClass == null) {
-            receiveTaskEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(121);
+            receiveTaskEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(121);
         }
         return receiveTaskEClass;
     }
@@ -6211,7 +6436,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getReceiveTask_Implementation() {
-        return (EAttribute)getReceiveTask().getEStructuralFeatures().get(0);
+        return (EAttribute) getReceiveTask().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -6220,7 +6445,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getReceiveTask_Instantiate() {
-        return (EAttribute)getReceiveTask().getEStructuralFeatures().get(1);
+        return (EAttribute) getReceiveTask().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -6229,7 +6454,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getReceiveTask_MessageRef() {
-        return (EAttribute)getReceiveTask().getEStructuralFeatures().get(2);
+        return (EAttribute) getReceiveTask().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -6238,7 +6463,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getReceiveTask_OperationRef() {
-        return (EAttribute)getReceiveTask().getEStructuralFeatures().get(3);
+        return (EAttribute) getReceiveTask().getEStructuralFeatures().get(3);
     }
 
     /**
@@ -6248,7 +6473,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getRelationship() {
         if (relationshipEClass == null) {
-            relationshipEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(122);
+            relationshipEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(122);
         }
         return relationshipEClass;
     }
@@ -6259,7 +6486,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getRelationship_Source() {
-        return (EAttribute)getRelationship().getEStructuralFeatures().get(0);
+        return (EAttribute) getRelationship().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -6268,7 +6495,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getRelationship_Target() {
-        return (EAttribute)getRelationship().getEStructuralFeatures().get(1);
+        return (EAttribute) getRelationship().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -6277,7 +6504,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getRelationship_Direction() {
-        return (EAttribute)getRelationship().getEStructuralFeatures().get(2);
+        return (EAttribute) getRelationship().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -6286,7 +6513,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getRelationship_Type() {
-        return (EAttribute)getRelationship().getEStructuralFeatures().get(3);
+        return (EAttribute) getRelationship().getEStructuralFeatures().get(3);
     }
 
     /**
@@ -6296,7 +6523,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getRendering() {
         if (renderingEClass == null) {
-            renderingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(125);
+            renderingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(125);
         }
         return renderingEClass;
     }
@@ -6308,7 +6536,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getResource() {
         if (resourceEClass == null) {
-            resourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(126);
+            resourceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(126);
         }
         return resourceEClass;
     }
@@ -6319,7 +6548,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getResource_ResourceParameter() {
-        return (EReference)getResource().getEStructuralFeatures().get(0);
+        return (EReference) getResource().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -6328,7 +6557,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getResource_Name() {
-        return (EAttribute)getResource().getEStructuralFeatures().get(1);
+        return (EAttribute) getResource().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -6338,7 +6567,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getResourceAssignmentExpression() {
         if (resourceAssignmentExpressionEClass == null) {
-            resourceAssignmentExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(127);
+            resourceAssignmentExpressionEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(127);
         }
         return resourceAssignmentExpressionEClass;
     }
@@ -6349,7 +6580,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getResourceAssignmentExpression_ExpressionGroup() {
-        return (EAttribute)getResourceAssignmentExpression().getEStructuralFeatures().get(0);
+        return (EAttribute) getResourceAssignmentExpression()
+                .getEStructuralFeatures().get(0);
     }
 
     /**
@@ -6358,7 +6590,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getResourceAssignmentExpression_Expression() {
-        return (EReference)getResourceAssignmentExpression().getEStructuralFeatures().get(1);
+        return (EReference) getResourceAssignmentExpression()
+                .getEStructuralFeatures().get(1);
     }
 
     /**
@@ -6368,7 +6601,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getResourceParameter() {
         if (resourceParameterEClass == null) {
-            resourceParameterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(128);
+            resourceParameterEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(128);
         }
         return resourceParameterEClass;
     }
@@ -6379,7 +6614,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getResourceParameter_IsRequired() {
-        return (EAttribute)getResourceParameter().getEStructuralFeatures().get(0);
+        return (EAttribute) getResourceParameter().getEStructuralFeatures()
+                .get(0);
     }
 
     /**
@@ -6388,7 +6624,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getResourceParameter_Name() {
-        return (EAttribute)getResourceParameter().getEStructuralFeatures().get(1);
+        return (EAttribute) getResourceParameter().getEStructuralFeatures()
+                .get(1);
     }
 
     /**
@@ -6397,7 +6634,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getResourceParameter_Type() {
-        return (EAttribute)getResourceParameter().getEStructuralFeatures().get(2);
+        return (EAttribute) getResourceParameter().getEStructuralFeatures()
+                .get(2);
     }
 
     /**
@@ -6407,7 +6645,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getResourceParameterBinding() {
         if (resourceParameterBindingEClass == null) {
-            resourceParameterBindingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(129);
+            resourceParameterBindingEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(129);
         }
         return resourceParameterBindingEClass;
     }
@@ -6418,7 +6658,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getResourceParameterBinding_ExpressionGroup() {
-        return (EAttribute)getResourceParameterBinding().getEStructuralFeatures().get(0);
+        return (EAttribute) getResourceParameterBinding()
+                .getEStructuralFeatures().get(0);
     }
 
     /**
@@ -6427,7 +6668,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getResourceParameterBinding_Expression() {
-        return (EReference)getResourceParameterBinding().getEStructuralFeatures().get(1);
+        return (EReference) getResourceParameterBinding()
+                .getEStructuralFeatures().get(1);
     }
 
     /**
@@ -6436,7 +6678,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getResourceParameterBinding_ParameterRef() {
-        return (EAttribute)getResourceParameterBinding().getEStructuralFeatures().get(2);
+        return (EAttribute) getResourceParameterBinding()
+                .getEStructuralFeatures().get(2);
     }
 
     /**
@@ -6446,7 +6689,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getRootElement() {
         if (rootElementEClass == null) {
-            rootElementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(130);
+            rootElementEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(130);
         }
         return rootElementEClass;
     }
@@ -6458,7 +6703,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getScript() {
         if (scriptEClass == null) {
-            scriptEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(131);
+            scriptEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(131);
         }
         return scriptEClass;
     }
@@ -6469,7 +6715,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getScript_Mixed() {
-        return (EAttribute)getScript().getEStructuralFeatures().get(0);
+        return (EAttribute) getScript().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -6478,7 +6724,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getScript_Any() {
-        return (EAttribute)getScript().getEStructuralFeatures().get(1);
+        return (EAttribute) getScript().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -6488,7 +6734,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getScriptTask() {
         if (scriptTaskEClass == null) {
-            scriptTaskEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(132);
+            scriptTaskEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(132);
         }
         return scriptTaskEClass;
     }
@@ -6499,7 +6746,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getScriptTask_Script() {
-        return (EReference)getScriptTask().getEStructuralFeatures().get(0);
+        return (EReference) getScriptTask().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -6508,7 +6755,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getScriptTask_ScriptLanguage() {
-        return (EAttribute)getScriptTask().getEStructuralFeatures().get(1);
+        return (EAttribute) getScriptTask().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -6518,7 +6765,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getSendTask() {
         if (sendTaskEClass == null) {
-            sendTaskEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(133);
+            sendTaskEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(133);
         }
         return sendTaskEClass;
     }
@@ -6529,7 +6777,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getSendTask_Implementation() {
-        return (EAttribute)getSendTask().getEStructuralFeatures().get(0);
+        return (EAttribute) getSendTask().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -6538,7 +6786,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getSendTask_MessageRef() {
-        return (EAttribute)getSendTask().getEStructuralFeatures().get(1);
+        return (EAttribute) getSendTask().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -6547,7 +6795,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getSendTask_OperationRef() {
-        return (EAttribute)getSendTask().getEStructuralFeatures().get(2);
+        return (EAttribute) getSendTask().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -6557,7 +6805,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getSequenceFlow() {
         if (sequenceFlowEClass == null) {
-            sequenceFlowEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(134);
+            sequenceFlowEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(134);
         }
         return sequenceFlowEClass;
     }
@@ -6568,7 +6818,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getSequenceFlow_ConditionExpression() {
-        return (EReference)getSequenceFlow().getEStructuralFeatures().get(0);
+        return (EReference) getSequenceFlow().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -6577,7 +6827,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getSequenceFlow_IsImmediate() {
-        return (EAttribute)getSequenceFlow().getEStructuralFeatures().get(1);
+        return (EAttribute) getSequenceFlow().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -6586,7 +6836,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getSequenceFlow_SourceRef() {
-        return (EAttribute)getSequenceFlow().getEStructuralFeatures().get(2);
+        return (EAttribute) getSequenceFlow().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -6595,7 +6845,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getSequenceFlow_TargetRef() {
-        return (EAttribute)getSequenceFlow().getEStructuralFeatures().get(3);
+        return (EAttribute) getSequenceFlow().getEStructuralFeatures().get(3);
     }
 
     /**
@@ -6605,7 +6855,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getServiceTask() {
         if (serviceTaskEClass == null) {
-            serviceTaskEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(137);
+            serviceTaskEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(137);
         }
         return serviceTaskEClass;
     }
@@ -6616,7 +6868,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getServiceTask_Implementation() {
-        return (EAttribute)getServiceTask().getEStructuralFeatures().get(0);
+        return (EAttribute) getServiceTask().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -6625,7 +6877,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getServiceTask_OperationRef() {
-        return (EAttribute)getServiceTask().getEStructuralFeatures().get(1);
+        return (EAttribute) getServiceTask().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -6635,7 +6887,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getSignal() {
         if (signalEClass == null) {
-            signalEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(138);
+            signalEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(138);
         }
         return signalEClass;
     }
@@ -6646,7 +6899,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getSignal_Name() {
-        return (EAttribute)getSignal().getEStructuralFeatures().get(0);
+        return (EAttribute) getSignal().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -6655,7 +6908,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getSignal_StructureRef() {
-        return (EAttribute)getSignal().getEStructuralFeatures().get(1);
+        return (EAttribute) getSignal().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -6665,7 +6918,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getSignalEventDefinition() {
         if (signalEventDefinitionEClass == null) {
-            signalEventDefinitionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(139);
+            signalEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(139);
         }
         return signalEventDefinitionEClass;
     }
@@ -6676,7 +6931,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getSignalEventDefinition_SignalRef() {
-        return (EAttribute)getSignalEventDefinition().getEStructuralFeatures().get(0);
+        return (EAttribute) getSignalEventDefinition().getEStructuralFeatures()
+                .get(0);
     }
 
     /**
@@ -6686,7 +6942,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getStandardLoopCharacteristics() {
         if (standardLoopCharacteristicsEClass == null) {
-            standardLoopCharacteristicsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(140);
+            standardLoopCharacteristicsEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(140);
         }
         return standardLoopCharacteristicsEClass;
     }
@@ -6697,7 +6955,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getStandardLoopCharacteristics_LoopCondition() {
-        return (EReference)getStandardLoopCharacteristics().getEStructuralFeatures().get(0);
+        return (EReference) getStandardLoopCharacteristics()
+                .getEStructuralFeatures().get(0);
     }
 
     /**
@@ -6706,7 +6965,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getStandardLoopCharacteristics_LoopMaximum() {
-        return (EAttribute)getStandardLoopCharacteristics().getEStructuralFeatures().get(1);
+        return (EAttribute) getStandardLoopCharacteristics()
+                .getEStructuralFeatures().get(1);
     }
 
     /**
@@ -6715,7 +6975,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getStandardLoopCharacteristics_TestBefore() {
-        return (EAttribute)getStandardLoopCharacteristics().getEStructuralFeatures().get(2);
+        return (EAttribute) getStandardLoopCharacteristics()
+                .getEStructuralFeatures().get(2);
     }
 
     /**
@@ -6725,7 +6986,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getStartEvent() {
         if (startEventEClass == null) {
-            startEventEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(141);
+            startEventEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(141);
         }
         return startEventEClass;
     }
@@ -6736,7 +6998,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getStartEvent_IsInterrupting() {
-        return (EAttribute)getStartEvent().getEStructuralFeatures().get(0);
+        return (EAttribute) getStartEvent().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -6746,7 +7008,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getSubConversation() {
         if (subConversationEClass == null) {
-            subConversationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(142);
+            subConversationEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(142);
         }
         return subConversationEClass;
     }
@@ -6757,7 +7021,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getSubConversation_ConversationNodeGroup() {
-        return (EAttribute)getSubConversation().getEStructuralFeatures().get(0);
+        return (EAttribute) getSubConversation().getEStructuralFeatures()
+                .get(0);
     }
 
     /**
@@ -6766,7 +7031,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getSubConversation_ConversationNode() {
-        return (EReference)getSubConversation().getEStructuralFeatures().get(1);
+        return (EReference) getSubConversation().getEStructuralFeatures()
+                .get(1);
     }
 
     /**
@@ -6775,7 +7041,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getSubConversation_ArtifactGroup() {
-        return (EAttribute)getSubConversation().getEStructuralFeatures().get(2);
+        return (EAttribute) getSubConversation().getEStructuralFeatures()
+                .get(2);
     }
 
     /**
@@ -6784,7 +7051,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getSubConversation_Artifact() {
-        return (EReference)getSubConversation().getEStructuralFeatures().get(3);
+        return (EReference) getSubConversation().getEStructuralFeatures()
+                .get(3);
     }
 
     /**
@@ -6793,7 +7061,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getSubConversation_CorrelationKeyRef() {
-        return (EAttribute)getSubConversation().getEStructuralFeatures().get(4);
+        return (EAttribute) getSubConversation().getEStructuralFeatures()
+                .get(4);
     }
 
     /**
@@ -6803,7 +7072,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getSubProcess() {
         if (subProcessEClass == null) {
-            subProcessEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(143);
+            subProcessEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(143);
         }
         return subProcessEClass;
     }
@@ -6814,7 +7084,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getSubProcess_FlowElementGroup() {
-        return (EAttribute)getSubProcess().getEStructuralFeatures().get(0);
+        return (EAttribute) getSubProcess().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -6822,8 +7092,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getSubProcess_FlowElement() {
-        return (EReference)getSubProcess().getEStructuralFeatures().get(1);
+    public EReference getSubProcess_FlowElements() {
+        return (EReference) getSubProcess().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -6832,7 +7102,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getSubProcess_ArtifactGroup() {
-        return (EAttribute)getSubProcess().getEStructuralFeatures().get(2);
+        return (EAttribute) getSubProcess().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -6840,8 +7110,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getSubProcess_Artifact() {
-        return (EReference)getSubProcess().getEStructuralFeatures().get(3);
+    public EReference getSubProcess_Artifacts() {
+        return (EReference) getSubProcess().getEStructuralFeatures().get(3);
     }
 
     /**
@@ -6850,7 +7120,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getSubProcess_TriggeredByEvent() {
-        return (EAttribute)getSubProcess().getEStructuralFeatures().get(4);
+        return (EAttribute) getSubProcess().getEStructuralFeatures().get(4);
     }
 
     /**
@@ -6860,7 +7130,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getTask() {
         if (taskEClass == null) {
-            taskEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(144);
+            taskEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(144);
         }
         return taskEClass;
     }
@@ -6872,7 +7143,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getTerminateEventDefinition() {
         if (terminateEventDefinitionEClass == null) {
-            terminateEventDefinitionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(145);
+            terminateEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(145);
         }
         return terminateEventDefinitionEClass;
     }
@@ -6884,7 +7157,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getText() {
         if (textEClass == null) {
-            textEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(146);
+            textEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(146);
         }
         return textEClass;
     }
@@ -6895,7 +7169,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getText_Mixed() {
-        return (EAttribute)getText().getEStructuralFeatures().get(0);
+        return (EAttribute) getText().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -6904,7 +7178,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getText_Any() {
-        return (EAttribute)getText().getEStructuralFeatures().get(1);
+        return (EAttribute) getText().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -6914,7 +7188,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getTextAnnotation() {
         if (textAnnotationEClass == null) {
-            textAnnotationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(147);
+            textAnnotationEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(147);
         }
         return textAnnotationEClass;
     }
@@ -6925,7 +7201,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getTextAnnotation_Text() {
-        return (EReference)getTextAnnotation().getEStructuralFeatures().get(0);
+        return (EReference) getTextAnnotation().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -6935,7 +7211,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getThrowEvent() {
         if (throwEventEClass == null) {
-            throwEventEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(148);
+            throwEventEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(148);
         }
         return throwEventEClass;
     }
@@ -6946,7 +7223,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getThrowEvent_DataInput() {
-        return (EReference)getThrowEvent().getEStructuralFeatures().get(0);
+        return (EReference) getThrowEvent().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -6955,7 +7232,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getThrowEvent_DataInputAssociation() {
-        return (EReference)getThrowEvent().getEStructuralFeatures().get(1);
+        return (EReference) getThrowEvent().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -6964,7 +7241,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getThrowEvent_InputSet() {
-        return (EReference)getThrowEvent().getEStructuralFeatures().get(2);
+        return (EReference) getThrowEvent().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -6973,7 +7250,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getThrowEvent_EventDefinitionGroup() {
-        return (EAttribute)getThrowEvent().getEStructuralFeatures().get(3);
+        return (EAttribute) getThrowEvent().getEStructuralFeatures().get(3);
     }
 
     /**
@@ -6982,7 +7259,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getThrowEvent_EventDefinition() {
-        return (EReference)getThrowEvent().getEStructuralFeatures().get(4);
+        return (EReference) getThrowEvent().getEStructuralFeatures().get(4);
     }
 
     /**
@@ -6991,7 +7268,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getThrowEvent_EventDefinitionRef() {
-        return (EAttribute)getThrowEvent().getEStructuralFeatures().get(5);
+        return (EAttribute) getThrowEvent().getEStructuralFeatures().get(5);
     }
 
     /**
@@ -7001,7 +7278,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getTimerEventDefinition() {
         if (timerEventDefinitionEClass == null) {
-            timerEventDefinitionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(149);
+            timerEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(149);
         }
         return timerEventDefinitionEClass;
     }
@@ -7012,7 +7291,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getTimerEventDefinition_TimeDate() {
-        return (EReference)getTimerEventDefinition().getEStructuralFeatures().get(0);
+        return (EReference) getTimerEventDefinition().getEStructuralFeatures()
+                .get(0);
     }
 
     /**
@@ -7021,7 +7301,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getTimerEventDefinition_TimeCycle() {
-        return (EReference)getTimerEventDefinition().getEStructuralFeatures().get(1);
+        return (EReference) getTimerEventDefinition().getEStructuralFeatures()
+                .get(1);
     }
 
     /**
@@ -7031,7 +7312,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getTransaction() {
         if (transactionEClass == null) {
-            transactionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(150);
+            transactionEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(150);
         }
         return transactionEClass;
     }
@@ -7042,7 +7325,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getTransaction_Method() {
-        return (EAttribute)getTransaction().getEStructuralFeatures().get(0);
+        return (EAttribute) getTransaction().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -7052,7 +7335,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EClass getUserTask() {
         if (userTaskEClass == null) {
-            userTaskEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(153);
+            userTaskEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(153);
         }
         return userTaskEClass;
     }
@@ -7063,7 +7347,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EReference getUserTask_Rendering() {
-        return (EReference)getUserTask().getEStructuralFeatures().get(0);
+        return (EReference) getUserTask().getEStructuralFeatures().get(0);
     }
 
     /**
@@ -7072,7 +7356,7 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public EAttribute getUserTask_Implementation() {
-        return (EAttribute)getUserTask().getEStructuralFeatures().get(1);
+        return (EAttribute) getUserTask().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -7082,7 +7366,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EEnum getAdHocOrdering() {
         if (adHocOrderingEEnum == null) {
-            adHocOrderingEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(3);
+            adHocOrderingEEnum = (EEnum) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(3);
         }
         return adHocOrderingEEnum;
     }
@@ -7094,7 +7379,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EEnum getAssociationDirection() {
         if (associationDirectionEEnum == null) {
-            associationDirectionEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(9);
+            associationDirectionEEnum = (EEnum) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(9);
         }
         return associationDirectionEEnum;
     }
@@ -7106,7 +7392,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EEnum getEventBasedGatewayType() {
         if (eventBasedGatewayTypeEEnum == null) {
-            eventBasedGatewayTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(61);
+            eventBasedGatewayTypeEEnum = (EEnum) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(61);
         }
         return eventBasedGatewayTypeEEnum;
     }
@@ -7118,7 +7405,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EEnum getGatewayDirection() {
         if (gatewayDirectionEEnum == null) {
-            gatewayDirectionEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(71);
+            gatewayDirectionEEnum = (EEnum) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(71);
         }
         return gatewayDirectionEEnum;
     }
@@ -7130,7 +7418,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EEnum getItemKind() {
         if (itemKindEEnum == null) {
-            itemKindEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(92);
+            itemKindEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(92);
         }
         return itemKindEEnum;
     }
@@ -7142,7 +7431,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EEnum getMultiInstanceFlowCondition() {
         if (multiInstanceFlowConditionEEnum == null) {
-            multiInstanceFlowConditionEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(104);
+            multiInstanceFlowConditionEEnum = (EEnum) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(104);
         }
         return multiInstanceFlowConditionEEnum;
     }
@@ -7154,7 +7445,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EEnum getProcessType() {
         if (processTypeEEnum == null) {
-            processTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(118);
+            processTypeEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(
+                    BpmnPackage.eNS_URI).getEClassifiers().get(118);
         }
         return processTypeEEnum;
     }
@@ -7166,7 +7458,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EEnum getRelationshipDirection() {
         if (relationshipDirectionEEnum == null) {
-            relationshipDirectionEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(123);
+            relationshipDirectionEEnum = (EEnum) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(123);
         }
         return relationshipDirectionEEnum;
     }
@@ -7178,7 +7472,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EEnum getServiceImplementation() {
         if (serviceImplementationEEnum == null) {
-            serviceImplementationEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(135);
+            serviceImplementationEEnum = (EEnum) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(135);
         }
         return serviceImplementationEEnum;
     }
@@ -7190,7 +7486,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EEnum getTransactionMethod() {
         if (transactionMethodEEnum == null) {
-            transactionMethodEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(151);
+            transactionMethodEEnum = (EEnum) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(151);
         }
         return transactionMethodEEnum;
     }
@@ -7202,7 +7500,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EEnum getUserTaskImplementation() {
         if (userTaskImplementationEEnum == null) {
-            userTaskImplementationEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(154);
+            userTaskImplementationEEnum = (EEnum) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(154);
         }
         return userTaskImplementationEEnum;
     }
@@ -7214,7 +7514,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EDataType getAdHocOrderingObject() {
         if (adHocOrderingObjectEDataType == null) {
-            adHocOrderingObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(4);
+            adHocOrderingObjectEDataType = (EDataType) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(4);
         }
         return adHocOrderingObjectEDataType;
     }
@@ -7226,7 +7527,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EDataType getAssociationDirectionObject() {
         if (associationDirectionObjectEDataType == null) {
-            associationDirectionObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(10);
+            associationDirectionObjectEDataType = (EDataType) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(10);
         }
         return associationDirectionObjectEDataType;
     }
@@ -7238,7 +7540,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EDataType getEventBasedGatewayTypeObject() {
         if (eventBasedGatewayTypeObjectEDataType == null) {
-            eventBasedGatewayTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(62);
+            eventBasedGatewayTypeObjectEDataType = (EDataType) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(62);
         }
         return eventBasedGatewayTypeObjectEDataType;
     }
@@ -7250,7 +7553,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EDataType getGatewayDirectionObject() {
         if (gatewayDirectionObjectEDataType == null) {
-            gatewayDirectionObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(72);
+            gatewayDirectionObjectEDataType = (EDataType) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(72);
         }
         return gatewayDirectionObjectEDataType;
     }
@@ -7262,7 +7566,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EDataType getItemKindObject() {
         if (itemKindObjectEDataType == null) {
-            itemKindObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(93);
+            itemKindObjectEDataType = (EDataType) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers().get(93);
         }
         return itemKindObjectEDataType;
     }
@@ -7274,7 +7579,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EDataType getMultiInstanceFlowConditionObject() {
         if (multiInstanceFlowConditionObjectEDataType == null) {
-            multiInstanceFlowConditionObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(105);
+            multiInstanceFlowConditionObjectEDataType = (EDataType) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(105);
         }
         return multiInstanceFlowConditionObjectEDataType;
     }
@@ -7286,7 +7593,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EDataType getProcessTypeObject() {
         if (processTypeObjectEDataType == null) {
-            processTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(119);
+            processTypeObjectEDataType = (EDataType) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(119);
         }
         return processTypeObjectEDataType;
     }
@@ -7298,7 +7607,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EDataType getRelationshipDirectionObject() {
         if (relationshipDirectionObjectEDataType == null) {
-            relationshipDirectionObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(124);
+            relationshipDirectionObjectEDataType = (EDataType) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(124);
         }
         return relationshipDirectionObjectEDataType;
     }
@@ -7310,7 +7621,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EDataType getServiceImplementationObject() {
         if (serviceImplementationObjectEDataType == null) {
-            serviceImplementationObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(136);
+            serviceImplementationObjectEDataType = (EDataType) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(136);
         }
         return serviceImplementationObjectEDataType;
     }
@@ -7322,7 +7635,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EDataType getTransactionMethodObject() {
         if (transactionMethodObjectEDataType == null) {
-            transactionMethodObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(152);
+            transactionMethodObjectEDataType = (EDataType) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(152);
         }
         return transactionMethodObjectEDataType;
     }
@@ -7334,7 +7649,9 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      */
     public EDataType getUserTaskImplementationObject() {
         if (userTaskImplementationObjectEDataType == null) {
-            userTaskImplementationObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(bpmnPackage.eNS_URI).getEClassifiers().get(155);
+            userTaskImplementationObjectEDataType = (EDataType) EPackage.Registry.INSTANCE
+                    .getEPackage(BpmnPackage.eNS_URI).getEClassifiers()
+                    .get(155);
         }
         return userTaskImplementationObjectEDataType;
     }
@@ -7344,8 +7661,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    public bpmnFactory getbpmnFactory() {
-        return (bpmnFactory)getEFactoryInstance();
+    public BpmnFactory getBpmnFactory() {
+        return (BpmnFactory) getEFactoryInstance();
     }
 
     /**
@@ -7362,25 +7679,26 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public void loadPackage() {
-        if (isLoaded) return;
+        if (isLoaded)
+            return;
         isLoaded = true;
 
         URL url = getClass().getResource(packageFilename);
         if (url == null) {
-            throw new RuntimeException("Missing serialized package: " + packageFilename); //$NON-NLS-1$
+            throw new RuntimeException(
+                    "Missing serialized package: " + packageFilename); //$NON-NLS-1$
         }
         URI uri = URI.createURI(url.toString());
         Resource resource = new EcoreResourceFactoryImpl().createResource(uri);
         try {
             resource.load(null);
-        }
-        catch (IOException exception) {
+        } catch (IOException exception) {
             throw new WrappedException(exception);
         }
-        initializeFromLoadedEPackage(this, (EPackage)resource.getContents().get(0));
+        initializeFromLoadedEPackage(this, (EPackage) resource.getContents()
+                .get(0));
         createResource(eNS_URI);
     }
-
 
     /**
      * <!-- begin-user-doc -->
@@ -7396,7 +7714,8 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
      * @generated
      */
     public void fixPackageContents() {
-        if (isFixed) return;
+        if (isFixed)
+            return;
         isFixed = true;
         fixEClassifiers();
     }
@@ -7410,9 +7729,10 @@ public class bpmnPackageImpl extends EPackageImpl implements bpmnPackage {
     @Override
     protected void fixInstanceClass(EClassifier eClassifier) {
         if (eClassifier.getInstanceClassName() == null) {
-            eClassifier.setInstanceClassName("org.eclipse.mdt.bpmn." + eClassifier.getName()); //$NON-NLS-1$
+            eClassifier
+                    .setInstanceClassName("org.eclipse.mdt.bpmn." + eClassifier.getName()); //$NON-NLS-1$
             setGeneratedClassName(eClassifier);
         }
     }
 
-} //bpmnPackageImpl
+} //BpmnPackageImpl

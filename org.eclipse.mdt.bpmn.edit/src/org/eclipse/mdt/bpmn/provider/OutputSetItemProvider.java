@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -33,10 +32,10 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.OutputSet;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.OutputSet} object.
@@ -92,7 +91,7 @@ public class OutputSetItemProvider extends BaseElementItemProvider implements
                         getString("_UI_OutputSet_dataOutputRefs_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_OutputSet_dataOutputRefs_feature", "_UI_OutputSet_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getOutputSet_DataOutputRefs(),
+                        BpmnPackage.eINSTANCE.getOutputSet_DataOutputRefs(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -112,7 +111,7 @@ public class OutputSetItemProvider extends BaseElementItemProvider implements
                         getString("_UI_OutputSet_optionalOutputRefs_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_OutputSet_optionalOutputRefs_feature", "_UI_OutputSet_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getOutputSet_OptionalOutputRefs(),
+                        BpmnPackage.eINSTANCE.getOutputSet_OptionalOutputRefs(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -132,7 +131,7 @@ public class OutputSetItemProvider extends BaseElementItemProvider implements
                         getString("_UI_OutputSet_whileExecutingOutputRefs_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_OutputSet_whileExecutingOutputRefs_feature", "_UI_OutputSet_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE
+                        BpmnPackage.eINSTANCE
                                 .getOutputSet_WhileExecutingOutputRefs(), true,
                         false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
@@ -153,7 +152,7 @@ public class OutputSetItemProvider extends BaseElementItemProvider implements
                         getString("_UI_OutputSet_inputSetRefs_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_OutputSet_inputSetRefs_feature", "_UI_OutputSet_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getOutputSet_InputSetRefs(),
+                        BpmnPackage.eINSTANCE.getOutputSet_InputSetRefs(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -173,7 +172,7 @@ public class OutputSetItemProvider extends BaseElementItemProvider implements
                         getString("_UI_OutputSet_name_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_OutputSet_name_feature", "_UI_OutputSet_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getOutputSet_Name(), true, false,
+                        BpmnPackage.eINSTANCE.getOutputSet_Name(), true, false,
                         false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                         null, null));
     }
@@ -215,11 +214,11 @@ public class OutputSetItemProvider extends BaseElementItemProvider implements
         updateChildren(notification);
 
         switch (notification.getFeatureID(OutputSet.class)) {
-        case bpmnPackage.OUTPUT_SET__DATA_OUTPUT_REFS:
-        case bpmnPackage.OUTPUT_SET__OPTIONAL_OUTPUT_REFS:
-        case bpmnPackage.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS:
-        case bpmnPackage.OUTPUT_SET__INPUT_SET_REFS:
-        case bpmnPackage.OUTPUT_SET__NAME:
+        case BpmnPackage.OUTPUT_SET__DATA_OUTPUT_REFS:
+        case BpmnPackage.OUTPUT_SET__OPTIONAL_OUTPUT_REFS:
+        case BpmnPackage.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS:
+        case BpmnPackage.OUTPUT_SET__INPUT_SET_REFS:
+        case BpmnPackage.OUTPUT_SET__NAME:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
@@ -260,10 +259,10 @@ public class OutputSetItemProvider extends BaseElementItemProvider implements
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE;
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE;
 
         if (qualify) {
             return getString("_UI_CreateChild_text2", //$NON-NLS-1$

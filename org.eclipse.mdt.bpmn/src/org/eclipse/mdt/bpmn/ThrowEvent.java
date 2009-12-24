@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -35,7 +34,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getThrowEvent()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getThrowEvent()
  * @model abstract="true"
  *        extendedMetaData="name='tThrowEvent' kind='elementOnly'"
  * @generated
@@ -51,7 +50,7 @@ public interface ThrowEvent extends Event {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data Input</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getThrowEvent_DataInput()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getThrowEvent_DataInput()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='dataInput' namespace='##targetNamespace'"
      * @generated
@@ -68,7 +67,7 @@ public interface ThrowEvent extends Event {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data Input Association</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getThrowEvent_DataInputAssociation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getThrowEvent_DataInputAssociation()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='dataInputAssociation' namespace='##targetNamespace'"
      * @generated
@@ -85,7 +84,7 @@ public interface ThrowEvent extends Event {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Input Set</em>' containment reference.
      * @see #setInputSet(InputSet)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getThrowEvent_InputSet()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getThrowEvent_InputSet()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='inputSet' namespace='##targetNamespace'"
      * @generated
@@ -112,7 +111,7 @@ public interface ThrowEvent extends Event {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Event Definition Group</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getThrowEvent_EventDefinitionGroup()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getThrowEvent_EventDefinitionGroup()
      * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
      *        extendedMetaData="kind='group' name='eventDefinition:group' namespace='##targetNamespace'"
      * @generated
@@ -129,7 +128,7 @@ public interface ThrowEvent extends Event {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Event Definition</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getThrowEvent_EventDefinition()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getThrowEvent_EventDefinition()
      * @model containment="true" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='eventDefinition' namespace='##targetNamespace' group='eventDefinition:group'"
      * @generated
@@ -146,7 +145,7 @@ public interface ThrowEvent extends Event {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Event Definition Ref</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getThrowEvent_EventDefinitionRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getThrowEvent_EventDefinitionRef()
      * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='element' name='eventDefinitionRef' namespace='##targetNamespace'"
      * @generated

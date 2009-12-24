@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -34,7 +33,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getParticipant()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getParticipant()
  * @model extendedMetaData="name='tParticipant' kind='elementOnly'"
  * @generated
  */
@@ -49,7 +48,7 @@ public interface Participant extends BaseElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Interface Ref</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getParticipant_InterfaceRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getParticipant_InterfaceRef()
      * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='element' name='interfaceRef' namespace='##targetNamespace'"
      * @generated
@@ -66,7 +65,7 @@ public interface Participant extends BaseElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>End Point Ref</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getParticipant_EndPointRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getParticipant_EndPointRef()
      * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='element' name='endPointRef' namespace='##targetNamespace'"
      * @generated
@@ -83,7 +82,7 @@ public interface Participant extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Participant Multiplicity</em>' containment reference.
      * @see #setParticipantMultiplicity(ParticipantMultiplicity)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getParticipant_ParticipantMultiplicity()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getParticipant_ParticipantMultiplicity()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='participantMultiplicity' namespace='##targetNamespace'"
      * @generated
@@ -110,7 +109,7 @@ public interface Participant extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getParticipant_Name()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getParticipant_Name()
      * @model dataType="org.eclipse.emf.ecore.xml.type.String"
      *        extendedMetaData="kind='attribute' name='name'"
      * @generated
@@ -137,7 +136,7 @@ public interface Participant extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Partner Entity Ref</em>' attribute.
      * @see #setPartnerEntityRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getParticipant_PartnerEntityRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getParticipant_PartnerEntityRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='partnerEntityRef'"
      * @generated
@@ -164,7 +163,7 @@ public interface Participant extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Partner Role Ref</em>' attribute.
      * @see #setPartnerRoleRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getParticipant_PartnerRoleRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getParticipant_PartnerRoleRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='partnerRoleRef'"
      * @generated
@@ -191,7 +190,7 @@ public interface Participant extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Process Ref</em>' attribute.
      * @see #setProcessRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getParticipant_ProcessRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getParticipant_ProcessRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='processRef'"
      * @generated

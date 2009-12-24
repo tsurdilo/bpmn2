@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -33,10 +32,10 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Transaction;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.Transaction} object.
@@ -88,7 +87,7 @@ public class TransactionItemProvider extends ActivityItemProvider implements
                         getString("_UI_Transaction_method_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Transaction_method_feature", "_UI_Transaction_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getTransaction_Method(), true,
+                        BpmnPackage.eINSTANCE.getTransaction_Method(), true,
                         false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -130,7 +129,7 @@ public class TransactionItemProvider extends ActivityItemProvider implements
         updateChildren(notification);
 
         switch (notification.getFeatureID(Transaction.class)) {
-        case bpmnPackage.TRANSACTION__METHOD:
+        case BpmnPackage.TRANSACTION__METHOD:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
@@ -171,23 +170,23 @@ public class TransactionItemProvider extends ActivityItemProvider implements
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE
-                || childFeature == bpmnPackage.eINSTANCE
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getActivity_ActivityResource()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_Performer()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_HumanPerformer()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_PotentialOwner()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getActivity_LoopCharacteristics()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_MultiInstanceLoopCharacteristics()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_StandardLoopCharacteristics();
 
         if (qualify) {

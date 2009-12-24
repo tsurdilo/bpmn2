@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -24,8 +23,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.OutputSet;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -121,7 +120,7 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getOutputSet();
+        return BpmnPackage.eINSTANCE.getOutputSet();
     }
 
     /**
@@ -131,7 +130,8 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
      */
     public EList<String> getDataOutputRefs() {
         if (dataOutputRefs == null) {
-            dataOutputRefs = new EDataTypeEList<String>(String.class, this, bpmnPackage.OUTPUT_SET__DATA_OUTPUT_REFS);
+            dataOutputRefs = new EDataTypeEList<String>(String.class, this,
+                    BpmnPackage.OUTPUT_SET__DATA_OUTPUT_REFS);
         }
         return dataOutputRefs;
     }
@@ -143,7 +143,8 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
      */
     public EList<String> getOptionalOutputRefs() {
         if (optionalOutputRefs == null) {
-            optionalOutputRefs = new EDataTypeEList<String>(String.class, this, bpmnPackage.OUTPUT_SET__OPTIONAL_OUTPUT_REFS);
+            optionalOutputRefs = new EDataTypeEList<String>(String.class, this,
+                    BpmnPackage.OUTPUT_SET__OPTIONAL_OUTPUT_REFS);
         }
         return optionalOutputRefs;
     }
@@ -155,7 +156,8 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
      */
     public EList<String> getWhileExecutingOutputRefs() {
         if (whileExecutingOutputRefs == null) {
-            whileExecutingOutputRefs = new EDataTypeEList<String>(String.class, this, bpmnPackage.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS);
+            whileExecutingOutputRefs = new EDataTypeEList<String>(String.class,
+                    this, BpmnPackage.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS);
         }
         return whileExecutingOutputRefs;
     }
@@ -167,7 +169,8 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
      */
     public EList<String> getInputSetRefs() {
         if (inputSetRefs == null) {
-            inputSetRefs = new EDataTypeEList<String>(String.class, this, bpmnPackage.OUTPUT_SET__INPUT_SET_REFS);
+            inputSetRefs = new EDataTypeEList<String>(String.class, this,
+                    BpmnPackage.OUTPUT_SET__INPUT_SET_REFS);
         }
         return inputSetRefs;
     }
@@ -190,7 +193,8 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.OUTPUT_SET__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.OUTPUT_SET__NAME, oldName, name));
     }
 
     /**
@@ -201,16 +205,16 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.OUTPUT_SET__DATA_OUTPUT_REFS:
-                return getDataOutputRefs();
-            case bpmnPackage.OUTPUT_SET__OPTIONAL_OUTPUT_REFS:
-                return getOptionalOutputRefs();
-            case bpmnPackage.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS:
-                return getWhileExecutingOutputRefs();
-            case bpmnPackage.OUTPUT_SET__INPUT_SET_REFS:
-                return getInputSetRefs();
-            case bpmnPackage.OUTPUT_SET__NAME:
-                return getName();
+        case BpmnPackage.OUTPUT_SET__DATA_OUTPUT_REFS:
+            return getDataOutputRefs();
+        case BpmnPackage.OUTPUT_SET__OPTIONAL_OUTPUT_REFS:
+            return getOptionalOutputRefs();
+        case BpmnPackage.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS:
+            return getWhileExecutingOutputRefs();
+        case BpmnPackage.OUTPUT_SET__INPUT_SET_REFS:
+            return getInputSetRefs();
+        case BpmnPackage.OUTPUT_SET__NAME:
+            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -224,25 +228,27 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.OUTPUT_SET__DATA_OUTPUT_REFS:
-                getDataOutputRefs().clear();
-                getDataOutputRefs().addAll((Collection<? extends String>)newValue);
-                return;
-            case bpmnPackage.OUTPUT_SET__OPTIONAL_OUTPUT_REFS:
-                getOptionalOutputRefs().clear();
-                getOptionalOutputRefs().addAll((Collection<? extends String>)newValue);
-                return;
-            case bpmnPackage.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS:
-                getWhileExecutingOutputRefs().clear();
-                getWhileExecutingOutputRefs().addAll((Collection<? extends String>)newValue);
-                return;
-            case bpmnPackage.OUTPUT_SET__INPUT_SET_REFS:
-                getInputSetRefs().clear();
-                getInputSetRefs().addAll((Collection<? extends String>)newValue);
-                return;
-            case bpmnPackage.OUTPUT_SET__NAME:
-                setName((String)newValue);
-                return;
+        case BpmnPackage.OUTPUT_SET__DATA_OUTPUT_REFS:
+            getDataOutputRefs().clear();
+            getDataOutputRefs().addAll((Collection<? extends String>) newValue);
+            return;
+        case BpmnPackage.OUTPUT_SET__OPTIONAL_OUTPUT_REFS:
+            getOptionalOutputRefs().clear();
+            getOptionalOutputRefs().addAll(
+                    (Collection<? extends String>) newValue);
+            return;
+        case BpmnPackage.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS:
+            getWhileExecutingOutputRefs().clear();
+            getWhileExecutingOutputRefs().addAll(
+                    (Collection<? extends String>) newValue);
+            return;
+        case BpmnPackage.OUTPUT_SET__INPUT_SET_REFS:
+            getInputSetRefs().clear();
+            getInputSetRefs().addAll((Collection<? extends String>) newValue);
+            return;
+        case BpmnPackage.OUTPUT_SET__NAME:
+            setName((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -255,21 +261,21 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.OUTPUT_SET__DATA_OUTPUT_REFS:
-                getDataOutputRefs().clear();
-                return;
-            case bpmnPackage.OUTPUT_SET__OPTIONAL_OUTPUT_REFS:
-                getOptionalOutputRefs().clear();
-                return;
-            case bpmnPackage.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS:
-                getWhileExecutingOutputRefs().clear();
-                return;
-            case bpmnPackage.OUTPUT_SET__INPUT_SET_REFS:
-                getInputSetRefs().clear();
-                return;
-            case bpmnPackage.OUTPUT_SET__NAME:
-                setName(NAME_EDEFAULT);
-                return;
+        case BpmnPackage.OUTPUT_SET__DATA_OUTPUT_REFS:
+            getDataOutputRefs().clear();
+            return;
+        case BpmnPackage.OUTPUT_SET__OPTIONAL_OUTPUT_REFS:
+            getOptionalOutputRefs().clear();
+            return;
+        case BpmnPackage.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS:
+            getWhileExecutingOutputRefs().clear();
+            return;
+        case BpmnPackage.OUTPUT_SET__INPUT_SET_REFS:
+            getInputSetRefs().clear();
+            return;
+        case BpmnPackage.OUTPUT_SET__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -282,16 +288,18 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.OUTPUT_SET__DATA_OUTPUT_REFS:
-                return dataOutputRefs != null && !dataOutputRefs.isEmpty();
-            case bpmnPackage.OUTPUT_SET__OPTIONAL_OUTPUT_REFS:
-                return optionalOutputRefs != null && !optionalOutputRefs.isEmpty();
-            case bpmnPackage.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS:
-                return whileExecutingOutputRefs != null && !whileExecutingOutputRefs.isEmpty();
-            case bpmnPackage.OUTPUT_SET__INPUT_SET_REFS:
-                return inputSetRefs != null && !inputSetRefs.isEmpty();
-            case bpmnPackage.OUTPUT_SET__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case BpmnPackage.OUTPUT_SET__DATA_OUTPUT_REFS:
+            return dataOutputRefs != null && !dataOutputRefs.isEmpty();
+        case BpmnPackage.OUTPUT_SET__OPTIONAL_OUTPUT_REFS:
+            return optionalOutputRefs != null && !optionalOutputRefs.isEmpty();
+        case BpmnPackage.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS:
+            return whileExecutingOutputRefs != null
+                    && !whileExecutingOutputRefs.isEmpty();
+        case BpmnPackage.OUTPUT_SET__INPUT_SET_REFS:
+            return inputSetRefs != null && !inputSetRefs.isEmpty();
+        case BpmnPackage.OUTPUT_SET__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
+                    .equals(name);
         }
         return super.eIsSet(featureID);
     }
@@ -303,7 +311,8 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (dataOutputRefs: "); //$NON-NLS-1$

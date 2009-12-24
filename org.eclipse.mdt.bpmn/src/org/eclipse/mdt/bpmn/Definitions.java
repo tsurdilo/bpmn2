@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -42,7 +41,7 @@ import org.eclipse.mdt.bpmn.di.Diagram;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getDefinitions()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getDefinitions()
  * @model extendedMetaData="name='tDefinitions' kind='elementOnly'"
  * @generated
  */
@@ -57,7 +56,7 @@ public interface Definitions extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Import</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDefinitions_Import()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDefinitions_Import()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='import' namespace='##targetNamespace'"
      * @generated
@@ -74,7 +73,7 @@ public interface Definitions extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Extension</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDefinitions_Extension()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDefinitions_Extension()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='extension' namespace='##targetNamespace'"
      * @generated
@@ -91,7 +90,7 @@ public interface Definitions extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Root Element Group</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDefinitions_RootElementGroup()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDefinitions_RootElementGroup()
      * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
      *        extendedMetaData="kind='group' name='rootElement:group' namespace='##targetNamespace'"
      * @generated
@@ -108,7 +107,7 @@ public interface Definitions extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Root Element</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDefinitions_RootElement()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDefinitions_RootElement()
      * @model containment="true" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='rootElement' namespace='##targetNamespace' group='rootElement:group'"
      * @generated
@@ -125,7 +124,7 @@ public interface Definitions extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Diagram</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDefinitions_Diagram()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDefinitions_Diagram()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='diagram' namespace='http://www.omg.com/di/1.0.0'"
      * @generated
@@ -142,7 +141,7 @@ public interface Definitions extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Relationship</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDefinitions_Relationship()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDefinitions_Relationship()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='relationship' namespace='##targetNamespace'"
      * @generated
@@ -162,7 +161,7 @@ public interface Definitions extends EObject {
      * @see #isSetExpressionLanguage()
      * @see #unsetExpressionLanguage()
      * @see #setExpressionLanguage(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDefinitions_ExpressionLanguage()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDefinitions_ExpressionLanguage()
      * @model default="http://www.w3.org/1999/XPath" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.AnyURI"
      *        extendedMetaData="kind='attribute' name='expressionLanguage'"
      * @generated
@@ -214,7 +213,7 @@ public interface Definitions extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Id</em>' attribute.
      * @see #setId(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDefinitions_Id()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDefinitions_Id()
      * @model id="true" dataType="org.eclipse.emf.ecore.xml.type.ID"
      *        extendedMetaData="kind='attribute' name='id'"
      * @generated
@@ -241,7 +240,7 @@ public interface Definitions extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Target Namespace</em>' attribute.
      * @see #setTargetNamespace(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDefinitions_TargetNamespace()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDefinitions_TargetNamespace()
      * @model dataType="org.eclipse.emf.ecore.xml.type.AnyURI" required="true"
      *        extendedMetaData="kind='attribute' name='targetNamespace'"
      * @generated
@@ -271,7 +270,7 @@ public interface Definitions extends EObject {
      * @see #isSetTypeLanguage()
      * @see #unsetTypeLanguage()
      * @see #setTypeLanguage(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDefinitions_TypeLanguage()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDefinitions_TypeLanguage()
      * @model default="http://www.w3.org/2001/XMLSchema" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.AnyURI"
      *        extendedMetaData="kind='attribute' name='typeLanguage'"
      * @generated
@@ -323,7 +322,7 @@ public interface Definitions extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Any Attribute</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDefinitions_AnyAttribute()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDefinitions_AnyAttribute()
      * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
      *        extendedMetaData="kind='attributeWildcard' wildcards='##other' name=':10' processing='lax'"
      * @generated

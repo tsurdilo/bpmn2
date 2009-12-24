@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di.impl;
 
@@ -20,7 +19,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import org.eclipse.mdt.bpmn.di.Bendpoint;
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -171,7 +170,7 @@ public class BendpointImpl extends EObjectImpl implements Bendpoint {
      */
     @Override
     protected EClass eStaticClass() {
-        return diPackage.Literals.BENDPOINT;
+        return DIPackage.Literals.BENDPOINT;
     }
 
     /**
@@ -194,7 +193,9 @@ public class BendpointImpl extends EObjectImpl implements Bendpoint {
         boolean oldSourceXESet = sourceXESet;
         sourceXESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, diPackage.BENDPOINT__SOURCE_X, oldSourceX, sourceX, !oldSourceXESet));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    DIPackage.BENDPOINT__SOURCE_X, oldSourceX, sourceX,
+                    !oldSourceXESet));
     }
 
     /**
@@ -208,7 +209,9 @@ public class BendpointImpl extends EObjectImpl implements Bendpoint {
         sourceX = SOURCE_X_EDEFAULT;
         sourceXESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, diPackage.BENDPOINT__SOURCE_X, oldSourceX, SOURCE_X_EDEFAULT, oldSourceXESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET,
+                    DIPackage.BENDPOINT__SOURCE_X, oldSourceX,
+                    SOURCE_X_EDEFAULT, oldSourceXESet));
     }
 
     /**
@@ -240,7 +243,9 @@ public class BendpointImpl extends EObjectImpl implements Bendpoint {
         boolean oldSourceYESet = sourceYESet;
         sourceYESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, diPackage.BENDPOINT__SOURCE_Y, oldSourceY, sourceY, !oldSourceYESet));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    DIPackage.BENDPOINT__SOURCE_Y, oldSourceY, sourceY,
+                    !oldSourceYESet));
     }
 
     /**
@@ -254,7 +259,9 @@ public class BendpointImpl extends EObjectImpl implements Bendpoint {
         sourceY = SOURCE_Y_EDEFAULT;
         sourceYESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, diPackage.BENDPOINT__SOURCE_Y, oldSourceY, SOURCE_Y_EDEFAULT, oldSourceYESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET,
+                    DIPackage.BENDPOINT__SOURCE_Y, oldSourceY,
+                    SOURCE_Y_EDEFAULT, oldSourceYESet));
     }
 
     /**
@@ -286,7 +293,9 @@ public class BendpointImpl extends EObjectImpl implements Bendpoint {
         boolean oldTargetXESet = targetXESet;
         targetXESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, diPackage.BENDPOINT__TARGET_X, oldTargetX, targetX, !oldTargetXESet));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    DIPackage.BENDPOINT__TARGET_X, oldTargetX, targetX,
+                    !oldTargetXESet));
     }
 
     /**
@@ -300,7 +309,9 @@ public class BendpointImpl extends EObjectImpl implements Bendpoint {
         targetX = TARGET_X_EDEFAULT;
         targetXESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, diPackage.BENDPOINT__TARGET_X, oldTargetX, TARGET_X_EDEFAULT, oldTargetXESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET,
+                    DIPackage.BENDPOINT__TARGET_X, oldTargetX,
+                    TARGET_X_EDEFAULT, oldTargetXESet));
     }
 
     /**
@@ -332,7 +343,9 @@ public class BendpointImpl extends EObjectImpl implements Bendpoint {
         boolean oldTargetYESet = targetYESet;
         targetYESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, diPackage.BENDPOINT__TARGET_Y, oldTargetY, targetY, !oldTargetYESet));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    DIPackage.BENDPOINT__TARGET_Y, oldTargetY, targetY,
+                    !oldTargetYESet));
     }
 
     /**
@@ -346,7 +359,9 @@ public class BendpointImpl extends EObjectImpl implements Bendpoint {
         targetY = TARGET_Y_EDEFAULT;
         targetYESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, diPackage.BENDPOINT__TARGET_Y, oldTargetY, TARGET_Y_EDEFAULT, oldTargetYESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET,
+                    DIPackage.BENDPOINT__TARGET_Y, oldTargetY,
+                    TARGET_Y_EDEFAULT, oldTargetYESet));
     }
 
     /**
@@ -366,14 +381,14 @@ public class BendpointImpl extends EObjectImpl implements Bendpoint {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case diPackage.BENDPOINT__SOURCE_X:
-                return getSourceX();
-            case diPackage.BENDPOINT__SOURCE_Y:
-                return getSourceY();
-            case diPackage.BENDPOINT__TARGET_X:
-                return getTargetX();
-            case diPackage.BENDPOINT__TARGET_Y:
-                return getTargetY();
+        case DIPackage.BENDPOINT__SOURCE_X:
+            return getSourceX();
+        case DIPackage.BENDPOINT__SOURCE_Y:
+            return getSourceY();
+        case DIPackage.BENDPOINT__TARGET_X:
+            return getTargetX();
+        case DIPackage.BENDPOINT__TARGET_Y:
+            return getTargetY();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -386,18 +401,18 @@ public class BendpointImpl extends EObjectImpl implements Bendpoint {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case diPackage.BENDPOINT__SOURCE_X:
-                setSourceX((Integer)newValue);
-                return;
-            case diPackage.BENDPOINT__SOURCE_Y:
-                setSourceY((Integer)newValue);
-                return;
-            case diPackage.BENDPOINT__TARGET_X:
-                setTargetX((Integer)newValue);
-                return;
-            case diPackage.BENDPOINT__TARGET_Y:
-                setTargetY((Integer)newValue);
-                return;
+        case DIPackage.BENDPOINT__SOURCE_X:
+            setSourceX((Integer) newValue);
+            return;
+        case DIPackage.BENDPOINT__SOURCE_Y:
+            setSourceY((Integer) newValue);
+            return;
+        case DIPackage.BENDPOINT__TARGET_X:
+            setTargetX((Integer) newValue);
+            return;
+        case DIPackage.BENDPOINT__TARGET_Y:
+            setTargetY((Integer) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -410,18 +425,18 @@ public class BendpointImpl extends EObjectImpl implements Bendpoint {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case diPackage.BENDPOINT__SOURCE_X:
-                unsetSourceX();
-                return;
-            case diPackage.BENDPOINT__SOURCE_Y:
-                unsetSourceY();
-                return;
-            case diPackage.BENDPOINT__TARGET_X:
-                unsetTargetX();
-                return;
-            case diPackage.BENDPOINT__TARGET_Y:
-                unsetTargetY();
-                return;
+        case DIPackage.BENDPOINT__SOURCE_X:
+            unsetSourceX();
+            return;
+        case DIPackage.BENDPOINT__SOURCE_Y:
+            unsetSourceY();
+            return;
+        case DIPackage.BENDPOINT__TARGET_X:
+            unsetTargetX();
+            return;
+        case DIPackage.BENDPOINT__TARGET_Y:
+            unsetTargetY();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -434,14 +449,14 @@ public class BendpointImpl extends EObjectImpl implements Bendpoint {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case diPackage.BENDPOINT__SOURCE_X:
-                return isSetSourceX();
-            case diPackage.BENDPOINT__SOURCE_Y:
-                return isSetSourceY();
-            case diPackage.BENDPOINT__TARGET_X:
-                return isSetTargetX();
-            case diPackage.BENDPOINT__TARGET_Y:
-                return isSetTargetY();
+        case DIPackage.BENDPOINT__SOURCE_X:
+            return isSetSourceX();
+        case DIPackage.BENDPOINT__SOURCE_Y:
+            return isSetSourceY();
+        case DIPackage.BENDPOINT__TARGET_X:
+            return isSetTargetX();
+        case DIPackage.BENDPOINT__TARGET_Y:
+            return isSetTargetY();
         }
         return super.eIsSet(featureID);
     }
@@ -453,17 +468,30 @@ public class BendpointImpl extends EObjectImpl implements Bendpoint {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (sourceX: "); //$NON-NLS-1$
-        if (sourceXESet) result.append(sourceX); else result.append("<unset>"); //$NON-NLS-1$
+        if (sourceXESet)
+            result.append(sourceX);
+        else
+            result.append("<unset>"); //$NON-NLS-1$
         result.append(", sourceY: "); //$NON-NLS-1$
-        if (sourceYESet) result.append(sourceY); else result.append("<unset>"); //$NON-NLS-1$
+        if (sourceYESet)
+            result.append(sourceY);
+        else
+            result.append("<unset>"); //$NON-NLS-1$
         result.append(", targetX: "); //$NON-NLS-1$
-        if (targetXESet) result.append(targetX); else result.append("<unset>"); //$NON-NLS-1$
+        if (targetXESet)
+            result.append(targetX);
+        else
+            result.append("<unset>"); //$NON-NLS-1$
         result.append(", targetY: "); //$NON-NLS-1$
-        if (targetYESet) result.append(targetY); else result.append("<unset>"); //$NON-NLS-1$
+        if (targetYESet)
+            result.append(targetY);
+        else
+            result.append("<unset>"); //$NON-NLS-1$
         result.append(')');
         return result.toString();
     }

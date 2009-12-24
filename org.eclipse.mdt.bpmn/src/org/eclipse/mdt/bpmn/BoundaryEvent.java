@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -27,7 +26,7 @@ import javax.xml.namespace.QName;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getBoundaryEvent()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getBoundaryEvent()
  * @model extendedMetaData="name='tBoundaryEvent' kind='elementOnly'"
  * @generated
  */
@@ -42,7 +41,7 @@ public interface BoundaryEvent extends CatchEvent {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Attached To Ref</em>' attribute.
      * @see #setAttachedToRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getBoundaryEvent_AttachedToRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getBoundaryEvent_AttachedToRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName" required="true"
      *        extendedMetaData="kind='attribute' name='attachedToRef'"
      * @generated
@@ -72,7 +71,7 @@ public interface BoundaryEvent extends CatchEvent {
      * @see #isSetCancelActivity()
      * @see #unsetCancelActivity()
      * @see #setCancelActivity(boolean)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getBoundaryEvent_CancelActivity()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getBoundaryEvent_CancelActivity()
      * @model default="true" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
      *        extendedMetaData="kind='attribute' name='cancelActivity'"
      * @generated

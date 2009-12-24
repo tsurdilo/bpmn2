@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -29,7 +28,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getCommunication()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getCommunication()
  * @model extendedMetaData="name='tCommunication' kind='elementOnly'"
  * @generated
  */
@@ -44,7 +43,7 @@ public interface Communication extends ConversationNode {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Message Flow Ref</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCommunication_MessageFlowRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCommunication_MessageFlowRef()
      * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='element' name='messageFlowRef' namespace='##targetNamespace'"
      * @generated
@@ -61,7 +60,7 @@ public interface Communication extends ConversationNode {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Correlation Key Ref</em>' attribute.
      * @see #setCorrelationKeyRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCommunication_CorrelationKeyRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCommunication_CorrelationKeyRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='correlationKeyRef'"
      * @generated

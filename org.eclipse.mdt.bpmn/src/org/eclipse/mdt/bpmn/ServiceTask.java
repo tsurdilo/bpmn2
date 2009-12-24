@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -27,7 +26,7 @@ import javax.xml.namespace.QName;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getServiceTask()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getServiceTask()
  * @model extendedMetaData="name='tServiceTask' kind='elementOnly'"
  * @generated
  */
@@ -47,7 +46,7 @@ public interface ServiceTask extends Task {
      * @see #isSetImplementation()
      * @see #unsetImplementation()
      * @see #setImplementation(ServiceImplementation)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getServiceTask_Implementation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getServiceTask_Implementation()
      * @model default="WebService" unsettable="true"
      *        extendedMetaData="kind='attribute' name='implementation'"
      * @generated
@@ -100,7 +99,7 @@ public interface ServiceTask extends Task {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Operation Ref</em>' attribute.
      * @see #setOperationRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getServiceTask_OperationRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getServiceTask_OperationRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='operationRef'"
      * @generated

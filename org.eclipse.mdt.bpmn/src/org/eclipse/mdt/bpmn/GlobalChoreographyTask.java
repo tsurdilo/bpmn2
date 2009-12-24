@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -30,7 +29,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getGlobalChoreographyTask()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getGlobalChoreographyTask()
  * @model extendedMetaData="name='tGlobalChoreographyTask' kind='elementOnly'"
  * @generated
  */
@@ -45,7 +44,7 @@ public interface GlobalChoreographyTask extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Participant</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getGlobalChoreographyTask_Participant()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getGlobalChoreographyTask_Participant()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='participant' namespace='##targetNamespace'"
      * @generated
@@ -62,7 +61,7 @@ public interface GlobalChoreographyTask extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Message Flow</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getGlobalChoreographyTask_MessageFlow()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getGlobalChoreographyTask_MessageFlow()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='messageFlow' namespace='##targetNamespace'"
      * @generated
@@ -79,7 +78,7 @@ public interface GlobalChoreographyTask extends CallableElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Initiating Participant Ref</em>' attribute.
      * @see #setInitiatingParticipantRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getGlobalChoreographyTask_InitiatingParticipantRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getGlobalChoreographyTask_InitiatingParticipantRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='initiatingParticipantRef'"
      * @generated

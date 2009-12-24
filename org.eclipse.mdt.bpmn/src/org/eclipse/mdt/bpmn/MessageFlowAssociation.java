@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -27,7 +26,7 @@ import javax.xml.namespace.QName;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getMessageFlowAssociation()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getMessageFlowAssociation()
  * @model extendedMetaData="name='tMessageFlowAssociation' kind='elementOnly'"
  * @generated
  */
@@ -42,7 +41,7 @@ public interface MessageFlowAssociation extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Inner Message Flow Ref</em>' attribute.
      * @see #setInnerMessageFlowRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getMessageFlowAssociation_InnerMessageFlowRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getMessageFlowAssociation_InnerMessageFlowRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName" required="true"
      *        extendedMetaData="kind='attribute' name='innerMessageFlowRef'"
      * @generated
@@ -69,7 +68,7 @@ public interface MessageFlowAssociation extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Outer Message Flow Ref</em>' attribute.
      * @see #setOuterMessageFlowRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getMessageFlowAssociation_OuterMessageFlowRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getMessageFlowAssociation_OuterMessageFlowRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName" required="true"
      *        extendedMetaData="kind='attribute' name='outerMessageFlowRef'"
      * @generated

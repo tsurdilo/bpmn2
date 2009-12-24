@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -29,7 +28,7 @@ import javax.xml.namespace.QName;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getMessageFlow()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getMessageFlow()
  * @model extendedMetaData="name='tMessageFlow' kind='elementOnly'"
  * @generated
  */
@@ -44,7 +43,7 @@ public interface MessageFlow extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Message Ref</em>' attribute.
      * @see #setMessageRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getMessageFlow_MessageRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getMessageFlow_MessageRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='messageRef'"
      * @generated
@@ -71,7 +70,7 @@ public interface MessageFlow extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getMessageFlow_Name()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getMessageFlow_Name()
      * @model dataType="org.eclipse.emf.ecore.xml.type.String"
      *        extendedMetaData="kind='attribute' name='name'"
      * @generated
@@ -98,7 +97,7 @@ public interface MessageFlow extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Source Ref</em>' attribute.
      * @see #setSourceRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getMessageFlow_SourceRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getMessageFlow_SourceRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName" required="true"
      *        extendedMetaData="kind='attribute' name='sourceRef'"
      * @generated
@@ -125,7 +124,7 @@ public interface MessageFlow extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Target Ref</em>' attribute.
      * @see #setTargetRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getMessageFlow_TargetRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getMessageFlow_TargetRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName" required="true"
      *        extendedMetaData="kind='attribute' name='targetRef'"
      * @generated

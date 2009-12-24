@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -33,10 +32,10 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.ItemDefinition;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.ItemDefinition} object.
@@ -90,7 +89,7 @@ public class ItemDefinitionItemProvider extends RootElementItemProvider
                         getString("_UI_ItemDefinition_isCollection_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_ItemDefinition_isCollection_feature", "_UI_ItemDefinition_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getItemDefinition_IsCollection(),
+                        BpmnPackage.eINSTANCE.getItemDefinition_IsCollection(),
                         true, false, false,
                         ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
@@ -110,7 +109,7 @@ public class ItemDefinitionItemProvider extends RootElementItemProvider
                         getString("_UI_ItemDefinition_itemKind_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_ItemDefinition_itemKind_feature", "_UI_ItemDefinition_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getItemDefinition_ItemKind(),
+                        BpmnPackage.eINSTANCE.getItemDefinition_ItemKind(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -130,7 +129,7 @@ public class ItemDefinitionItemProvider extends RootElementItemProvider
                         getString("_UI_ItemDefinition_structureRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_ItemDefinition_structureRef_feature", "_UI_ItemDefinition_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getItemDefinition_StructureRef(),
+                        BpmnPackage.eINSTANCE.getItemDefinition_StructureRef(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -172,9 +171,9 @@ public class ItemDefinitionItemProvider extends RootElementItemProvider
         updateChildren(notification);
 
         switch (notification.getFeatureID(ItemDefinition.class)) {
-        case bpmnPackage.ITEM_DEFINITION__IS_COLLECTION:
-        case bpmnPackage.ITEM_DEFINITION__ITEM_KIND:
-        case bpmnPackage.ITEM_DEFINITION__STRUCTURE_REF:
+        case BpmnPackage.ITEM_DEFINITION__IS_COLLECTION:
+        case BpmnPackage.ITEM_DEFINITION__ITEM_KIND:
+        case BpmnPackage.ITEM_DEFINITION__STRUCTURE_REF:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
@@ -215,10 +214,10 @@ public class ItemDefinitionItemProvider extends RootElementItemProvider
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE;
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE;
 
         if (qualify) {
             return getString("_UI_CreateChild_text2", //$NON-NLS-1$

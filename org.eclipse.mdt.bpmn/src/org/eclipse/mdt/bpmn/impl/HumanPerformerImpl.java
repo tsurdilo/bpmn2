@@ -8,14 +8,13 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.HumanPerformer;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,7 +42,7 @@ public class HumanPerformerImpl extends PerformerImpl implements HumanPerformer 
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getHumanPerformer();
+        return BpmnPackage.eINSTANCE.getHumanPerformer();
     }
 
 } //HumanPerformerImpl

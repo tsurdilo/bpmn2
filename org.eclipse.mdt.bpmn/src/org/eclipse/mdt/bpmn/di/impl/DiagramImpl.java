@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di.impl;
 
@@ -25,8 +24,8 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.mdt.bpmn.di.Connector;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 import org.eclipse.mdt.bpmn.di.Diagram;
-import org.eclipse.mdt.bpmn.di.diPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -68,7 +67,7 @@ public class DiagramImpl extends ViewImpl implements Diagram {
      */
     @Override
     protected EClass eStaticClass() {
-        return diPackage.Literals.DIAGRAM;
+        return DIPackage.Literals.DIAGRAM;
     }
 
     /**
@@ -78,7 +77,8 @@ public class DiagramImpl extends ViewImpl implements Diagram {
      */
     public EList<Connector> getConnector() {
         if (connector == null) {
-            connector = new EObjectContainmentEList<Connector>(Connector.class, this, diPackage.DIAGRAM__CONNECTOR);
+            connector = new EObjectContainmentEList<Connector>(Connector.class,
+                    this, DIPackage.DIAGRAM__CONNECTOR);
         }
         return connector;
     }
@@ -89,10 +89,12 @@ public class DiagramImpl extends ViewImpl implements Diagram {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case diPackage.DIAGRAM__CONNECTOR:
-                return ((InternalEList<?>)getConnector()).basicRemove(otherEnd, msgs);
+        case DIPackage.DIAGRAM__CONNECTOR:
+            return ((InternalEList<?>) getConnector()).basicRemove(otherEnd,
+                    msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -105,8 +107,8 @@ public class DiagramImpl extends ViewImpl implements Diagram {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case diPackage.DIAGRAM__CONNECTOR:
-                return getConnector();
+        case DIPackage.DIAGRAM__CONNECTOR:
+            return getConnector();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -120,10 +122,10 @@ public class DiagramImpl extends ViewImpl implements Diagram {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case diPackage.DIAGRAM__CONNECTOR:
-                getConnector().clear();
-                getConnector().addAll((Collection<? extends Connector>)newValue);
-                return;
+        case DIPackage.DIAGRAM__CONNECTOR:
+            getConnector().clear();
+            getConnector().addAll((Collection<? extends Connector>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -136,9 +138,9 @@ public class DiagramImpl extends ViewImpl implements Diagram {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case diPackage.DIAGRAM__CONNECTOR:
-                getConnector().clear();
-                return;
+        case DIPackage.DIAGRAM__CONNECTOR:
+            getConnector().clear();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -151,8 +153,8 @@ public class DiagramImpl extends ViewImpl implements Diagram {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case diPackage.DIAGRAM__CONNECTOR:
-                return connector != null && !connector.isEmpty();
+        case DIPackage.DIAGRAM__CONNECTOR:
+            return connector != null && !connector.isEmpty();
         }
         return super.eIsSet(featureID);
     }

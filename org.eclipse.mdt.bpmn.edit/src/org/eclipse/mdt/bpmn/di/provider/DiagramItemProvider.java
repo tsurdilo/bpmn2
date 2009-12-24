@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di.provider;
 
@@ -28,9 +27,9 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.di.DIFactory;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 import org.eclipse.mdt.bpmn.di.Diagram;
-import org.eclipse.mdt.bpmn.di.diFactory;
-import org.eclipse.mdt.bpmn.di.diPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.di.Diagram} object.
@@ -79,7 +78,7 @@ public class DiagramItemProvider extends ViewItemProvider implements
             Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(diPackage.Literals.DIAGRAM__CONNECTOR);
+            childrenFeatures.add(DIPackage.Literals.DIAGRAM__CONNECTOR);
         }
         return childrenFeatures;
     }
@@ -134,7 +133,7 @@ public class DiagramItemProvider extends ViewItemProvider implements
         updateChildren(notification);
 
         switch (notification.getFeatureID(Diagram.class)) {
-        case diPackage.DIAGRAM__CONNECTOR:
+        case DIPackage.DIAGRAM__CONNECTOR:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -155,7 +154,7 @@ public class DiagramItemProvider extends ViewItemProvider implements
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
         newChildDescriptors.add(createChildParameter(
-                diPackage.Literals.DIAGRAM__CONNECTOR, diFactory.eINSTANCE
+                DIPackage.Literals.DIAGRAM__CONNECTOR, DIFactory.eINSTANCE
                         .createConnector()));
     }
 

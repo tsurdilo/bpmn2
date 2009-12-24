@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -33,11 +32,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnFactory;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Resource;
-import org.eclipse.mdt.bpmn.bpmnFactory;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.Resource} object.
@@ -89,7 +88,7 @@ public class ResourceItemProvider extends RootElementItemProvider implements
                         getString("_UI_Resource_name_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Resource_name_feature", "_UI_Resource_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getResource_Name(), true, false,
+                        BpmnPackage.eINSTANCE.getResource_Name(), true, false,
                         false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                         null, null));
     }
@@ -107,7 +106,7 @@ public class ResourceItemProvider extends RootElementItemProvider implements
             Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getResource_ResourceParameter());
         }
         return childrenFeatures;
@@ -163,11 +162,11 @@ public class ResourceItemProvider extends RootElementItemProvider implements
         updateChildren(notification);
 
         switch (notification.getFeatureID(Resource.class)) {
-        case bpmnPackage.RESOURCE__NAME:
+        case BpmnPackage.RESOURCE__NAME:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
-        case bpmnPackage.RESOURCE__RESOURCE_PARAMETER:
+        case BpmnPackage.RESOURCE__RESOURCE_PARAMETER:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -187,8 +186,8 @@ public class ResourceItemProvider extends RootElementItemProvider implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getResource_ResourceParameter(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getResource_ResourceParameter(), BpmnFactory.eINSTANCE
                 .createResourceParameter()));
     }
 
@@ -212,10 +211,10 @@ public class ResourceItemProvider extends RootElementItemProvider implements
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE;
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE;
 
         if (qualify) {
             return getString("_UI_CreateChild_text2", //$NON-NLS-1$

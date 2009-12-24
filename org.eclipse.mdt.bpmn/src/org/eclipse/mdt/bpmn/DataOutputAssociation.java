@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -29,7 +28,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getDataOutputAssociation()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getDataOutputAssociation()
  * @model extendedMetaData="name='tDataOutputAssociation' kind='elementOnly'"
  * @generated
  */
@@ -44,7 +43,7 @@ public interface DataOutputAssociation extends DataAssociation {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Source Ref</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDataOutputAssociation_SourceRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDataOutputAssociation_SourceRef()
      * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.QName" required="true"
      *        extendedMetaData="kind='element' name='sourceRef' namespace='##targetNamespace'"
      * @generated
@@ -61,7 +60,7 @@ public interface DataOutputAssociation extends DataAssociation {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Target Ref</em>' attribute.
      * @see #setTargetRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDataOutputAssociation_TargetRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDataOutputAssociation_TargetRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName" required="true"
      *        extendedMetaData="kind='element' name='targetRef' namespace='##targetNamespace'"
      * @generated

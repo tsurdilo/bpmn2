@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -33,11 +32,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnFactory;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.SequenceFlow;
-import org.eclipse.mdt.bpmn.bpmnFactory;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.SequenceFlow} object.
@@ -91,7 +90,7 @@ public class SequenceFlowItemProvider extends FlowElementItemProvider implements
                         getString("_UI_SequenceFlow_isImmediate_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_SequenceFlow_isImmediate_feature", "_UI_SequenceFlow_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getSequenceFlow_IsImmediate(),
+                        BpmnPackage.eINSTANCE.getSequenceFlow_IsImmediate(),
                         true, false, false,
                         ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
@@ -111,7 +110,7 @@ public class SequenceFlowItemProvider extends FlowElementItemProvider implements
                         getString("_UI_SequenceFlow_sourceRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_SequenceFlow_sourceRef_feature", "_UI_SequenceFlow_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getSequenceFlow_SourceRef(),
+                        BpmnPackage.eINSTANCE.getSequenceFlow_SourceRef(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -131,7 +130,7 @@ public class SequenceFlowItemProvider extends FlowElementItemProvider implements
                         getString("_UI_SequenceFlow_targetRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_SequenceFlow_targetRef_feature", "_UI_SequenceFlow_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getSequenceFlow_TargetRef(),
+                        BpmnPackage.eINSTANCE.getSequenceFlow_TargetRef(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -149,7 +148,7 @@ public class SequenceFlowItemProvider extends FlowElementItemProvider implements
             Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getSequenceFlow_ConditionExpression());
         }
         return childrenFeatures;
@@ -205,13 +204,13 @@ public class SequenceFlowItemProvider extends FlowElementItemProvider implements
         updateChildren(notification);
 
         switch (notification.getFeatureID(SequenceFlow.class)) {
-        case bpmnPackage.SEQUENCE_FLOW__IS_IMMEDIATE:
-        case bpmnPackage.SEQUENCE_FLOW__SOURCE_REF:
-        case bpmnPackage.SEQUENCE_FLOW__TARGET_REF:
+        case BpmnPackage.SEQUENCE_FLOW__IS_IMMEDIATE:
+        case BpmnPackage.SEQUENCE_FLOW__SOURCE_REF:
+        case BpmnPackage.SEQUENCE_FLOW__TARGET_REF:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
-        case bpmnPackage.SEQUENCE_FLOW__CONDITION_EXPRESSION:
+        case BpmnPackage.SEQUENCE_FLOW__CONDITION_EXPRESSION:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -231,12 +230,12 @@ public class SequenceFlowItemProvider extends FlowElementItemProvider implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getSequenceFlow_ConditionExpression(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getSequenceFlow_ConditionExpression(), BpmnFactory.eINSTANCE
                 .createExpression()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getSequenceFlow_ConditionExpression(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getSequenceFlow_ConditionExpression(), BpmnFactory.eINSTANCE
                 .createFormalExpression()));
     }
 
@@ -260,10 +259,10 @@ public class SequenceFlowItemProvider extends FlowElementItemProvider implements
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE;
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE;
 
         if (qualify) {
             return getString("_UI_CreateChild_text2", //$NON-NLS-1$

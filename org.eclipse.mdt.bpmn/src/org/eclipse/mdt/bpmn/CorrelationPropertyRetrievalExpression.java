@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -27,7 +26,7 @@ import javax.xml.namespace.QName;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getCorrelationPropertyRetrievalExpression()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getCorrelationPropertyRetrievalExpression()
  * @model extendedMetaData="name='tCorrelationPropertyRetrievalExpression' kind='elementOnly'"
  * @generated
  */
@@ -42,7 +41,7 @@ public interface CorrelationPropertyRetrievalExpression extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Message Path</em>' containment reference.
      * @see #setMessagePath(FormalExpression)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCorrelationPropertyRetrievalExpression_MessagePath()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCorrelationPropertyRetrievalExpression_MessagePath()
      * @model containment="true" required="true"
      *        extendedMetaData="kind='element' name='messagePath' namespace='##targetNamespace'"
      * @generated
@@ -69,7 +68,7 @@ public interface CorrelationPropertyRetrievalExpression extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Message Ref</em>' attribute.
      * @see #setMessageRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCorrelationPropertyRetrievalExpression_MessageRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCorrelationPropertyRetrievalExpression_MessageRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName" required="true"
      *        extendedMetaData="kind='attribute' name='messageRef'"
      * @generated

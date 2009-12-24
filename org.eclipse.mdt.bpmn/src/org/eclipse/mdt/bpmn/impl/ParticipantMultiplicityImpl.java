@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -18,8 +17,8 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.ParticipantMultiplicity;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +34,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class ParticipantMultiplicityImpl extends BaseElementImpl implements ParticipantMultiplicity {
+public class ParticipantMultiplicityImpl extends BaseElementImpl implements
+        ParticipantMultiplicity {
     /**
      * The default value of the '{@link #getMaximum() <em>Maximum</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -110,7 +110,7 @@ public class ParticipantMultiplicityImpl extends BaseElementImpl implements Part
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getParticipantMultiplicity();
+        return BpmnPackage.eINSTANCE.getParticipantMultiplicity();
     }
 
     /**
@@ -133,7 +133,9 @@ public class ParticipantMultiplicityImpl extends BaseElementImpl implements Part
         boolean oldMaximumESet = maximumESet;
         maximumESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.PARTICIPANT_MULTIPLICITY__MAXIMUM, oldMaximum, maximum, !oldMaximumESet));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.PARTICIPANT_MULTIPLICITY__MAXIMUM, oldMaximum,
+                    maximum, !oldMaximumESet));
     }
 
     /**
@@ -147,7 +149,9 @@ public class ParticipantMultiplicityImpl extends BaseElementImpl implements Part
         maximum = MAXIMUM_EDEFAULT;
         maximumESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, bpmnPackage.PARTICIPANT_MULTIPLICITY__MAXIMUM, oldMaximum, MAXIMUM_EDEFAULT, oldMaximumESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET,
+                    BpmnPackage.PARTICIPANT_MULTIPLICITY__MAXIMUM, oldMaximum,
+                    MAXIMUM_EDEFAULT, oldMaximumESet));
     }
 
     /**
@@ -179,7 +183,9 @@ public class ParticipantMultiplicityImpl extends BaseElementImpl implements Part
         boolean oldMinimumESet = minimumESet;
         minimumESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.PARTICIPANT_MULTIPLICITY__MINIMUM, oldMinimum, minimum, !oldMinimumESet));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.PARTICIPANT_MULTIPLICITY__MINIMUM, oldMinimum,
+                    minimum, !oldMinimumESet));
     }
 
     /**
@@ -193,7 +199,9 @@ public class ParticipantMultiplicityImpl extends BaseElementImpl implements Part
         minimum = MINIMUM_EDEFAULT;
         minimumESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, bpmnPackage.PARTICIPANT_MULTIPLICITY__MINIMUM, oldMinimum, MINIMUM_EDEFAULT, oldMinimumESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET,
+                    BpmnPackage.PARTICIPANT_MULTIPLICITY__MINIMUM, oldMinimum,
+                    MINIMUM_EDEFAULT, oldMinimumESet));
     }
 
     /**
@@ -213,10 +221,10 @@ public class ParticipantMultiplicityImpl extends BaseElementImpl implements Part
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.PARTICIPANT_MULTIPLICITY__MAXIMUM:
-                return getMaximum();
-            case bpmnPackage.PARTICIPANT_MULTIPLICITY__MINIMUM:
-                return getMinimum();
+        case BpmnPackage.PARTICIPANT_MULTIPLICITY__MAXIMUM:
+            return getMaximum();
+        case BpmnPackage.PARTICIPANT_MULTIPLICITY__MINIMUM:
+            return getMinimum();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -229,12 +237,12 @@ public class ParticipantMultiplicityImpl extends BaseElementImpl implements Part
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.PARTICIPANT_MULTIPLICITY__MAXIMUM:
-                setMaximum((Integer)newValue);
-                return;
-            case bpmnPackage.PARTICIPANT_MULTIPLICITY__MINIMUM:
-                setMinimum((Integer)newValue);
-                return;
+        case BpmnPackage.PARTICIPANT_MULTIPLICITY__MAXIMUM:
+            setMaximum((Integer) newValue);
+            return;
+        case BpmnPackage.PARTICIPANT_MULTIPLICITY__MINIMUM:
+            setMinimum((Integer) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -247,12 +255,12 @@ public class ParticipantMultiplicityImpl extends BaseElementImpl implements Part
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.PARTICIPANT_MULTIPLICITY__MAXIMUM:
-                unsetMaximum();
-                return;
-            case bpmnPackage.PARTICIPANT_MULTIPLICITY__MINIMUM:
-                unsetMinimum();
-                return;
+        case BpmnPackage.PARTICIPANT_MULTIPLICITY__MAXIMUM:
+            unsetMaximum();
+            return;
+        case BpmnPackage.PARTICIPANT_MULTIPLICITY__MINIMUM:
+            unsetMinimum();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -265,10 +273,10 @@ public class ParticipantMultiplicityImpl extends BaseElementImpl implements Part
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.PARTICIPANT_MULTIPLICITY__MAXIMUM:
-                return isSetMaximum();
-            case bpmnPackage.PARTICIPANT_MULTIPLICITY__MINIMUM:
-                return isSetMinimum();
+        case BpmnPackage.PARTICIPANT_MULTIPLICITY__MAXIMUM:
+            return isSetMaximum();
+        case BpmnPackage.PARTICIPANT_MULTIPLICITY__MINIMUM:
+            return isSetMinimum();
         }
         return super.eIsSet(featureID);
     }
@@ -280,13 +288,20 @@ public class ParticipantMultiplicityImpl extends BaseElementImpl implements Part
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (maximum: "); //$NON-NLS-1$
-        if (maximumESet) result.append(maximum); else result.append("<unset>"); //$NON-NLS-1$
+        if (maximumESet)
+            result.append(maximum);
+        else
+            result.append("<unset>"); //$NON-NLS-1$
         result.append(", minimum: "); //$NON-NLS-1$
-        if (minimumESet) result.append(minimum); else result.append("<unset>"); //$NON-NLS-1$
+        if (minimumESet)
+            result.append(minimum);
+        else
+            result.append("<unset>"); //$NON-NLS-1$
         result.append(')');
         return result.toString();
     }

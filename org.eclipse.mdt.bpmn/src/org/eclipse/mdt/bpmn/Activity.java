@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -27,11 +26,11 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.eclipse.mdt.bpmn.Activity#getIoSpecification <em>Io Specification</em>}</li>
- *   <li>{@link org.eclipse.mdt.bpmn.Activity#getProperty <em>Property</em>}</li>
- *   <li>{@link org.eclipse.mdt.bpmn.Activity#getDataInputAssociation <em>Data Input Association</em>}</li>
- *   <li>{@link org.eclipse.mdt.bpmn.Activity#getDataOutputAssociation <em>Data Output Association</em>}</li>
- *   <li>{@link org.eclipse.mdt.bpmn.Activity#getActivityResourceGroup <em>Activity Resource Group</em>}</li>
- *   <li>{@link org.eclipse.mdt.bpmn.Activity#getActivityResource <em>Activity Resource</em>}</li>
+ *   <li>{@link org.eclipse.mdt.bpmn.Activity#getProperties <em>Properties</em>}</li>
+ *   <li>{@link org.eclipse.mdt.bpmn.Activity#getDataInputAssociations <em>Data Input Associations</em>}</li>
+ *   <li>{@link org.eclipse.mdt.bpmn.Activity#getDataOutputAssociations <em>Data Output Associations</em>}</li>
+ *   <li>{@link org.eclipse.mdt.bpmn.Activity#getActivityResourceGroups <em>Activity Resource Groups</em>}</li>
+ *   <li>{@link org.eclipse.mdt.bpmn.Activity#getActivityResources <em>Activity Resources</em>}</li>
  *   <li>{@link org.eclipse.mdt.bpmn.Activity#getLoopCharacteristicsGroup <em>Loop Characteristics Group</em>}</li>
  *   <li>{@link org.eclipse.mdt.bpmn.Activity#getLoopCharacteristics <em>Loop Characteristics</em>}</li>
  *   <li>{@link org.eclipse.mdt.bpmn.Activity#getCompletionQuantity <em>Completion Quantity</em>}</li>
@@ -41,7 +40,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivity()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getActivity()
  * @model abstract="true"
  *        extendedMetaData="name='tActivity' kind='elementOnly'"
  * @generated
@@ -57,7 +56,7 @@ public interface Activity extends FlowNode {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Io Specification</em>' containment reference.
      * @see #setIoSpecification(InputOutputSpecification)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivity_IoSpecification()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getActivity_IoSpecification()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='ioSpecification' namespace='##targetNamespace'"
      * @generated
@@ -75,89 +74,89 @@ public interface Activity extends FlowNode {
     void setIoSpecification(InputOutputSpecification value);
 
     /**
-     * Returns the value of the '<em><b>Property</b></em>' containment reference list.
+     * Returns the value of the '<em><b>Properties</b></em>' containment reference list.
      * The list contents are of type {@link org.eclipse.mdt.bpmn.Property}.
      * <!-- begin-user-doc -->
      * <p>
-     * If the meaning of the '<em>Property</em>' containment reference list isn't clear,
+     * If the meaning of the '<em>Properties</em>' containment reference list isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Property</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivity_Property()
+     * @return the value of the '<em>Properties</em>' containment reference list.
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getActivity_Properties()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='property' namespace='##targetNamespace'"
      * @generated
      */
-    EList<Property> getProperty();
+    EList<Property> getProperties();
 
     /**
-     * Returns the value of the '<em><b>Data Input Association</b></em>' containment reference list.
+     * Returns the value of the '<em><b>Data Input Associations</b></em>' containment reference list.
      * The list contents are of type {@link org.eclipse.mdt.bpmn.DataInputAssociation}.
      * <!-- begin-user-doc -->
      * <p>
-     * If the meaning of the '<em>Data Input Association</em>' containment reference list isn't clear,
+     * If the meaning of the '<em>Data Input Associations</em>' containment reference list isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Data Input Association</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivity_DataInputAssociation()
+     * @return the value of the '<em>Data Input Associations</em>' containment reference list.
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getActivity_DataInputAssociations()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='dataInputAssociation' namespace='##targetNamespace'"
      * @generated
      */
-    EList<DataInputAssociation> getDataInputAssociation();
+    EList<DataInputAssociation> getDataInputAssociations();
 
     /**
-     * Returns the value of the '<em><b>Data Output Association</b></em>' containment reference list.
+     * Returns the value of the '<em><b>Data Output Associations</b></em>' containment reference list.
      * The list contents are of type {@link org.eclipse.mdt.bpmn.DataOutputAssociation}.
      * <!-- begin-user-doc -->
      * <p>
-     * If the meaning of the '<em>Data Output Association</em>' containment reference list isn't clear,
+     * If the meaning of the '<em>Data Output Associations</em>' containment reference list isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Data Output Association</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivity_DataOutputAssociation()
+     * @return the value of the '<em>Data Output Associations</em>' containment reference list.
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getActivity_DataOutputAssociations()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='dataOutputAssociation' namespace='##targetNamespace'"
      * @generated
      */
-    EList<DataOutputAssociation> getDataOutputAssociation();
+    EList<DataOutputAssociation> getDataOutputAssociations();
 
     /**
-     * Returns the value of the '<em><b>Activity Resource Group</b></em>' attribute list.
+     * Returns the value of the '<em><b>Activity Resource Groups</b></em>' attribute list.
      * The list contents are of type {@link org.eclipse.emf.ecore.util.FeatureMap.Entry}.
      * <!-- begin-user-doc -->
      * <p>
-     * If the meaning of the '<em>Activity Resource Group</em>' attribute list isn't clear,
+     * If the meaning of the '<em>Activity Resource Groups</em>' attribute list isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Activity Resource Group</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivity_ActivityResourceGroup()
+     * @return the value of the '<em>Activity Resource Groups</em>' attribute list.
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getActivity_ActivityResourceGroups()
      * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
      *        extendedMetaData="kind='group' name='activityResource:group' namespace='##targetNamespace'"
      * @generated
      */
-    FeatureMap getActivityResourceGroup();
+    FeatureMap getActivityResourceGroups();
 
     /**
-     * Returns the value of the '<em><b>Activity Resource</b></em>' containment reference list.
+     * Returns the value of the '<em><b>Activity Resources</b></em>' containment reference list.
      * The list contents are of type {@link org.eclipse.mdt.bpmn.ActivityResource}.
      * <!-- begin-user-doc -->
      * <p>
-     * If the meaning of the '<em>Activity Resource</em>' containment reference list isn't clear,
+     * If the meaning of the '<em>Activity Resources</em>' containment reference list isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Activity Resource</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivity_ActivityResource()
+     * @return the value of the '<em>Activity Resources</em>' containment reference list.
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getActivity_ActivityResources()
      * @model containment="true" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='activityResource' namespace='##targetNamespace' group='activityResource:group'"
      * @generated
      */
-    EList<ActivityResource> getActivityResource();
+    EList<ActivityResource> getActivityResources();
 
     /**
      * Returns the value of the '<em><b>Loop Characteristics Group</b></em>' attribute list.
@@ -169,7 +168,7 @@ public interface Activity extends FlowNode {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Loop Characteristics Group</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivity_LoopCharacteristicsGroup()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getActivity_LoopCharacteristicsGroup()
      * @model dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="false"
      *        extendedMetaData="kind='group' name='loopCharacteristics:group' namespace='##targetNamespace'"
      * @generated
@@ -186,7 +185,7 @@ public interface Activity extends FlowNode {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Loop Characteristics</em>' containment reference.
      * @see #setLoopCharacteristics(LoopCharacteristics)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivity_LoopCharacteristics()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getActivity_LoopCharacteristics()
      * @model containment="true" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='loopCharacteristics' namespace='##targetNamespace' group='loopCharacteristics:group'"
      * @generated
@@ -216,7 +215,7 @@ public interface Activity extends FlowNode {
      * @see #isSetCompletionQuantity()
      * @see #unsetCompletionQuantity()
      * @see #setCompletionQuantity(BigInteger)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivity_CompletionQuantity()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getActivity_CompletionQuantity()
      * @model default="1" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Integer"
      *        extendedMetaData="kind='attribute' name='completionQuantity'"
      * @generated
@@ -268,7 +267,7 @@ public interface Activity extends FlowNode {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Default</em>' attribute.
      * @see #setDefault(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivity_Default()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getActivity_Default()
      * @model dataType="org.eclipse.emf.ecore.xml.type.IDREF"
      *        extendedMetaData="kind='attribute' name='default'"
      * @generated
@@ -298,7 +297,7 @@ public interface Activity extends FlowNode {
      * @see #isSetIsForCompensation()
      * @see #unsetIsForCompensation()
      * @see #setIsForCompensation(boolean)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivity_IsForCompensation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getActivity_IsForCompensation()
      * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
      *        extendedMetaData="kind='attribute' name='isForCompensation'"
      * @generated
@@ -353,7 +352,7 @@ public interface Activity extends FlowNode {
      * @see #isSetStartQuantity()
      * @see #unsetStartQuantity()
      * @see #setStartQuantity(BigInteger)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getActivity_StartQuantity()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getActivity_StartQuantity()
      * @model default="1" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Integer"
      *        extendedMetaData="kind='attribute' name='startQuantity'"
      * @generated

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -29,7 +28,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getCallChoreographyActivity()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getCallChoreographyActivity()
  * @model extendedMetaData="name='tCallChoreographyActivity' kind='elementOnly'"
  * @generated
  */
@@ -44,7 +43,7 @@ public interface CallChoreographyActivity extends ChoreographyActivity {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Participant Association</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCallChoreographyActivity_ParticipantAssociation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCallChoreographyActivity_ParticipantAssociation()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='participantAssociation' namespace='##targetNamespace'"
      * @generated
@@ -61,7 +60,7 @@ public interface CallChoreographyActivity extends ChoreographyActivity {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Called Element</em>' attribute.
      * @see #setCalledElement(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCallChoreographyActivity_CalledElement()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCallChoreographyActivity_CalledElement()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='calledElement'"
      * @generated

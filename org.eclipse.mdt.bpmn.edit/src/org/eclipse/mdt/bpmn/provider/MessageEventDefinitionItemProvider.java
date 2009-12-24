@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -33,10 +32,10 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.MessageEventDefinition;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.MessageEventDefinition} object.
@@ -90,7 +89,7 @@ public class MessageEventDefinitionItemProvider extends
                         getString("_UI_MessageEventDefinition_operationRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_MessageEventDefinition_operationRef_feature", "_UI_MessageEventDefinition_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE
+                        BpmnPackage.eINSTANCE
                                 .getMessageEventDefinition_OperationRef(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
@@ -111,7 +110,7 @@ public class MessageEventDefinitionItemProvider extends
                         getString("_UI_MessageEventDefinition_messageRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_MessageEventDefinition_messageRef_feature", "_UI_MessageEventDefinition_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE
+                        BpmnPackage.eINSTANCE
                                 .getMessageEventDefinition_MessageRef(), true,
                         false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
@@ -154,8 +153,8 @@ public class MessageEventDefinitionItemProvider extends
         updateChildren(notification);
 
         switch (notification.getFeatureID(MessageEventDefinition.class)) {
-        case bpmnPackage.MESSAGE_EVENT_DEFINITION__OPERATION_REF:
-        case bpmnPackage.MESSAGE_EVENT_DEFINITION__MESSAGE_REF:
+        case BpmnPackage.MESSAGE_EVENT_DEFINITION__OPERATION_REF:
+        case BpmnPackage.MESSAGE_EVENT_DEFINITION__MESSAGE_REF:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
@@ -196,10 +195,10 @@ public class MessageEventDefinitionItemProvider extends
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE;
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE;
 
         if (qualify) {
             return getString("_UI_CreateChild_text2", //$NON-NLS-1$

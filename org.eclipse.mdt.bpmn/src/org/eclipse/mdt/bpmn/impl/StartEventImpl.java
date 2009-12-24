@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -18,8 +17,8 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.StartEvent;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -80,7 +79,7 @@ public class StartEventImpl extends CatchEventImpl implements StartEvent {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getStartEvent();
+        return BpmnPackage.eINSTANCE.getStartEvent();
     }
 
     /**
@@ -103,7 +102,9 @@ public class StartEventImpl extends CatchEventImpl implements StartEvent {
         boolean oldIsInterruptingESet = isInterruptingESet;
         isInterruptingESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.START_EVENT__IS_INTERRUPTING, oldIsInterrupting, isInterrupting, !oldIsInterruptingESet));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.START_EVENT__IS_INTERRUPTING,
+                    oldIsInterrupting, isInterrupting, !oldIsInterruptingESet));
     }
 
     /**
@@ -117,7 +118,10 @@ public class StartEventImpl extends CatchEventImpl implements StartEvent {
         isInterrupting = IS_INTERRUPTING_EDEFAULT;
         isInterruptingESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, bpmnPackage.START_EVENT__IS_INTERRUPTING, oldIsInterrupting, IS_INTERRUPTING_EDEFAULT, oldIsInterruptingESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET,
+                    BpmnPackage.START_EVENT__IS_INTERRUPTING,
+                    oldIsInterrupting, IS_INTERRUPTING_EDEFAULT,
+                    oldIsInterruptingESet));
     }
 
     /**
@@ -137,8 +141,8 @@ public class StartEventImpl extends CatchEventImpl implements StartEvent {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.START_EVENT__IS_INTERRUPTING:
-                return isIsInterrupting();
+        case BpmnPackage.START_EVENT__IS_INTERRUPTING:
+            return isIsInterrupting();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -151,9 +155,9 @@ public class StartEventImpl extends CatchEventImpl implements StartEvent {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.START_EVENT__IS_INTERRUPTING:
-                setIsInterrupting((Boolean)newValue);
-                return;
+        case BpmnPackage.START_EVENT__IS_INTERRUPTING:
+            setIsInterrupting((Boolean) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -166,9 +170,9 @@ public class StartEventImpl extends CatchEventImpl implements StartEvent {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.START_EVENT__IS_INTERRUPTING:
-                unsetIsInterrupting();
-                return;
+        case BpmnPackage.START_EVENT__IS_INTERRUPTING:
+            unsetIsInterrupting();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -181,8 +185,8 @@ public class StartEventImpl extends CatchEventImpl implements StartEvent {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.START_EVENT__IS_INTERRUPTING:
-                return isSetIsInterrupting();
+        case BpmnPackage.START_EVENT__IS_INTERRUPTING:
+            return isSetIsInterrupting();
         }
         return super.eIsSet(featureID);
     }
@@ -194,11 +198,15 @@ public class StartEventImpl extends CatchEventImpl implements StartEvent {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (isInterrupting: "); //$NON-NLS-1$
-        if (isInterruptingESet) result.append(isInterrupting); else result.append("<unset>"); //$NON-NLS-1$
+        if (isInterruptingESet)
+            result.append(isInterrupting);
+        else
+            result.append("<unset>"); //$NON-NLS-1$
         result.append(')');
         return result.toString();
     }

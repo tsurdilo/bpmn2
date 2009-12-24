@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -18,9 +17,9 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Transaction;
 import org.eclipse.mdt.bpmn.TransactionMethod;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -81,7 +80,7 @@ public class TransactionImpl extends ActivityImpl implements Transaction {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getTransaction();
+        return BpmnPackage.eINSTANCE.getTransaction();
     }
 
     /**
@@ -104,7 +103,9 @@ public class TransactionImpl extends ActivityImpl implements Transaction {
         boolean oldMethodESet = methodESet;
         methodESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.TRANSACTION__METHOD, oldMethod, method, !oldMethodESet));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.TRANSACTION__METHOD, oldMethod, method,
+                    !oldMethodESet));
     }
 
     /**
@@ -118,7 +119,9 @@ public class TransactionImpl extends ActivityImpl implements Transaction {
         method = METHOD_EDEFAULT;
         methodESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, bpmnPackage.TRANSACTION__METHOD, oldMethod, METHOD_EDEFAULT, oldMethodESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET,
+                    BpmnPackage.TRANSACTION__METHOD, oldMethod,
+                    METHOD_EDEFAULT, oldMethodESet));
     }
 
     /**
@@ -138,8 +141,8 @@ public class TransactionImpl extends ActivityImpl implements Transaction {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.TRANSACTION__METHOD:
-                return getMethod();
+        case BpmnPackage.TRANSACTION__METHOD:
+            return getMethod();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -152,9 +155,9 @@ public class TransactionImpl extends ActivityImpl implements Transaction {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.TRANSACTION__METHOD:
-                setMethod((TransactionMethod)newValue);
-                return;
+        case BpmnPackage.TRANSACTION__METHOD:
+            setMethod((TransactionMethod) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -167,9 +170,9 @@ public class TransactionImpl extends ActivityImpl implements Transaction {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.TRANSACTION__METHOD:
-                unsetMethod();
-                return;
+        case BpmnPackage.TRANSACTION__METHOD:
+            unsetMethod();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -182,8 +185,8 @@ public class TransactionImpl extends ActivityImpl implements Transaction {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.TRANSACTION__METHOD:
-                return isSetMethod();
+        case BpmnPackage.TRANSACTION__METHOD:
+            return isSetMethod();
         }
         return super.eIsSet(featureID);
     }
@@ -195,11 +198,15 @@ public class TransactionImpl extends ActivityImpl implements Transaction {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (method: "); //$NON-NLS-1$
-        if (methodESet) result.append(method); else result.append("<unset>"); //$NON-NLS-1$
+        if (methodESet)
+            result.append(method);
+        else
+            result.append("<unset>"); //$NON-NLS-1$
         result.append(')');
         return result.toString();
     }

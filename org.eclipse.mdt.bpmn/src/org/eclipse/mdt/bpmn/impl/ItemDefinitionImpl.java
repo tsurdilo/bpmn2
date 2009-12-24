@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -20,9 +19,9 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.ItemDefinition;
 import org.eclipse.mdt.bpmn.ItemKind;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,7 +38,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinition {
+public class ItemDefinitionImpl extends RootElementImpl implements
+        ItemDefinition {
     /**
      * The default value of the '{@link #isIsCollection() <em>Is Collection</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -134,7 +134,7 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getItemDefinition();
+        return BpmnPackage.eINSTANCE.getItemDefinition();
     }
 
     /**
@@ -157,7 +157,9 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
         boolean oldIsCollectionESet = isCollectionESet;
         isCollectionESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.ITEM_DEFINITION__IS_COLLECTION, oldIsCollection, isCollection, !oldIsCollectionESet));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.ITEM_DEFINITION__IS_COLLECTION,
+                    oldIsCollection, isCollection, !oldIsCollectionESet));
     }
 
     /**
@@ -171,7 +173,10 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
         isCollection = IS_COLLECTION_EDEFAULT;
         isCollectionESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, bpmnPackage.ITEM_DEFINITION__IS_COLLECTION, oldIsCollection, IS_COLLECTION_EDEFAULT, oldIsCollectionESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET,
+                    BpmnPackage.ITEM_DEFINITION__IS_COLLECTION,
+                    oldIsCollection, IS_COLLECTION_EDEFAULT,
+                    oldIsCollectionESet));
     }
 
     /**
@@ -203,7 +208,9 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
         boolean oldItemKindESet = itemKindESet;
         itemKindESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.ITEM_DEFINITION__ITEM_KIND, oldItemKind, itemKind, !oldItemKindESet));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.ITEM_DEFINITION__ITEM_KIND, oldItemKind,
+                    itemKind, !oldItemKindESet));
     }
 
     /**
@@ -217,7 +224,9 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
         itemKind = ITEM_KIND_EDEFAULT;
         itemKindESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, bpmnPackage.ITEM_DEFINITION__ITEM_KIND, oldItemKind, ITEM_KIND_EDEFAULT, oldItemKindESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET,
+                    BpmnPackage.ITEM_DEFINITION__ITEM_KIND, oldItemKind,
+                    ITEM_KIND_EDEFAULT, oldItemKindESet));
     }
 
     /**
@@ -247,7 +256,9 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
         QName oldStructureRef = structureRef;
         structureRef = newStructureRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.ITEM_DEFINITION__STRUCTURE_REF, oldStructureRef, structureRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.ITEM_DEFINITION__STRUCTURE_REF,
+                    oldStructureRef, structureRef));
     }
 
     /**
@@ -258,12 +269,12 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.ITEM_DEFINITION__IS_COLLECTION:
-                return isIsCollection();
-            case bpmnPackage.ITEM_DEFINITION__ITEM_KIND:
-                return getItemKind();
-            case bpmnPackage.ITEM_DEFINITION__STRUCTURE_REF:
-                return getStructureRef();
+        case BpmnPackage.ITEM_DEFINITION__IS_COLLECTION:
+            return isIsCollection();
+        case BpmnPackage.ITEM_DEFINITION__ITEM_KIND:
+            return getItemKind();
+        case BpmnPackage.ITEM_DEFINITION__STRUCTURE_REF:
+            return getStructureRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -276,15 +287,15 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.ITEM_DEFINITION__IS_COLLECTION:
-                setIsCollection((Boolean)newValue);
-                return;
-            case bpmnPackage.ITEM_DEFINITION__ITEM_KIND:
-                setItemKind((ItemKind)newValue);
-                return;
-            case bpmnPackage.ITEM_DEFINITION__STRUCTURE_REF:
-                setStructureRef((QName)newValue);
-                return;
+        case BpmnPackage.ITEM_DEFINITION__IS_COLLECTION:
+            setIsCollection((Boolean) newValue);
+            return;
+        case BpmnPackage.ITEM_DEFINITION__ITEM_KIND:
+            setItemKind((ItemKind) newValue);
+            return;
+        case BpmnPackage.ITEM_DEFINITION__STRUCTURE_REF:
+            setStructureRef((QName) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -297,15 +308,15 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.ITEM_DEFINITION__IS_COLLECTION:
-                unsetIsCollection();
-                return;
-            case bpmnPackage.ITEM_DEFINITION__ITEM_KIND:
-                unsetItemKind();
-                return;
-            case bpmnPackage.ITEM_DEFINITION__STRUCTURE_REF:
-                setStructureRef(STRUCTURE_REF_EDEFAULT);
-                return;
+        case BpmnPackage.ITEM_DEFINITION__IS_COLLECTION:
+            unsetIsCollection();
+            return;
+        case BpmnPackage.ITEM_DEFINITION__ITEM_KIND:
+            unsetItemKind();
+            return;
+        case BpmnPackage.ITEM_DEFINITION__STRUCTURE_REF:
+            setStructureRef(STRUCTURE_REF_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -318,12 +329,13 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.ITEM_DEFINITION__IS_COLLECTION:
-                return isSetIsCollection();
-            case bpmnPackage.ITEM_DEFINITION__ITEM_KIND:
-                return isSetItemKind();
-            case bpmnPackage.ITEM_DEFINITION__STRUCTURE_REF:
-                return STRUCTURE_REF_EDEFAULT == null ? structureRef != null : !STRUCTURE_REF_EDEFAULT.equals(structureRef);
+        case BpmnPackage.ITEM_DEFINITION__IS_COLLECTION:
+            return isSetIsCollection();
+        case BpmnPackage.ITEM_DEFINITION__ITEM_KIND:
+            return isSetItemKind();
+        case BpmnPackage.ITEM_DEFINITION__STRUCTURE_REF:
+            return STRUCTURE_REF_EDEFAULT == null ? structureRef != null
+                    : !STRUCTURE_REF_EDEFAULT.equals(structureRef);
         }
         return super.eIsSet(featureID);
     }
@@ -335,13 +347,20 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (isCollection: "); //$NON-NLS-1$
-        if (isCollectionESet) result.append(isCollection); else result.append("<unset>"); //$NON-NLS-1$
+        if (isCollectionESet)
+            result.append(isCollection);
+        else
+            result.append("<unset>"); //$NON-NLS-1$
         result.append(", itemKind: "); //$NON-NLS-1$
-        if (itemKindESet) result.append(itemKind); else result.append("<unset>"); //$NON-NLS-1$
+        if (itemKindESet)
+            result.append(itemKind);
+        else
+            result.append("<unset>"); //$NON-NLS-1$
         result.append(", structureRef: "); //$NON-NLS-1$
         result.append(structureRef);
         result.append(')');

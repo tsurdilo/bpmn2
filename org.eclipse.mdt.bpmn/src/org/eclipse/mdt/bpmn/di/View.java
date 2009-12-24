@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di;
 
@@ -38,7 +37,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.di.diPackage#getView()
+ * @see org.eclipse.mdt.bpmn.di.DIPackage#getView()
  * @model abstract="true"
  *        extendedMetaData="name='View' kind='elementOnly'"
  * @generated
@@ -54,7 +53,7 @@ public interface View extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Style</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.di.diPackage#getView_Style()
+     * @see org.eclipse.mdt.bpmn.di.DIPackage#getView_Style()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='style' namespace='##targetNamespace'"
      * @generated
@@ -71,7 +70,7 @@ public interface View extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Child</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.di.diPackage#getView_Child()
+     * @see org.eclipse.mdt.bpmn.di.DIPackage#getView_Child()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='child' namespace='##targetNamespace'"
      * @generated
@@ -88,7 +87,7 @@ public interface View extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Context</em>' attribute.
      * @see #setContext(String)
-     * @see org.eclipse.mdt.bpmn.di.diPackage#getView_Context()
+     * @see org.eclipse.mdt.bpmn.di.DIPackage#getView_Context()
      * @model dataType="org.eclipse.emf.ecore.xml.type.AnyURI"
      *        extendedMetaData="kind='attribute' name='context'"
      * @generated
@@ -115,7 +114,7 @@ public interface View extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Definition</em>' attribute.
      * @see #setDefinition(List)
-     * @see org.eclipse.mdt.bpmn.di.diPackage#getView_Definition()
+     * @see org.eclipse.mdt.bpmn.di.DIPackage#getView_Definition()
      * @model dataType="org.eclipse.mdt.bpmn.di.DefinitionType" required="true" many="false"
      *        extendedMetaData="kind='attribute' name='definition'"
      * @generated
@@ -142,7 +141,7 @@ public interface View extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Id</em>' attribute.
      * @see #setId(String)
-     * @see org.eclipse.mdt.bpmn.di.diPackage#getView_Id()
+     * @see org.eclipse.mdt.bpmn.di.DIPackage#getView_Id()
      * @model dataType="org.eclipse.emf.ecore.xml.type.NCName" required="true"
      *        extendedMetaData="kind='attribute' name='id'"
      * @generated
@@ -169,7 +168,7 @@ public interface View extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Source Connector</em>' attribute.
      * @see #setSourceConnector(List)
-     * @see org.eclipse.mdt.bpmn.di.diPackage#getView_SourceConnector()
+     * @see org.eclipse.mdt.bpmn.di.DIPackage#getView_SourceConnector()
      * @model dataType="org.eclipse.mdt.bpmn.di.SourceConnectorType" many="false"
      *        extendedMetaData="kind='attribute' name='sourceConnector'"
      * @generated
@@ -196,7 +195,7 @@ public interface View extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Target Connector</em>' attribute.
      * @see #setTargetConnector(List)
-     * @see org.eclipse.mdt.bpmn.di.diPackage#getView_TargetConnector()
+     * @see org.eclipse.mdt.bpmn.di.DIPackage#getView_TargetConnector()
      * @model dataType="org.eclipse.mdt.bpmn.di.TargetConnectorType" many="false"
      *        extendedMetaData="kind='attribute' name='targetConnector'"
      * @generated

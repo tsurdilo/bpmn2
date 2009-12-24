@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -20,9 +19,9 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.ReceiveTask;
 import org.eclipse.mdt.bpmn.ServiceImplementation;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -155,7 +154,7 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getReceiveTask();
+        return BpmnPackage.eINSTANCE.getReceiveTask();
     }
 
     /**
@@ -174,11 +173,14 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
      */
     public void setImplementation(ServiceImplementation newImplementation) {
         ServiceImplementation oldImplementation = implementation;
-        implementation = newImplementation == null ? IMPLEMENTATION_EDEFAULT : newImplementation;
+        implementation = newImplementation == null ? IMPLEMENTATION_EDEFAULT
+                : newImplementation;
         boolean oldImplementationESet = implementationESet;
         implementationESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.RECEIVE_TASK__IMPLEMENTATION, oldImplementation, implementation, !oldImplementationESet));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.RECEIVE_TASK__IMPLEMENTATION,
+                    oldImplementation, implementation, !oldImplementationESet));
     }
 
     /**
@@ -192,7 +194,10 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
         implementation = IMPLEMENTATION_EDEFAULT;
         implementationESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, bpmnPackage.RECEIVE_TASK__IMPLEMENTATION, oldImplementation, IMPLEMENTATION_EDEFAULT, oldImplementationESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET,
+                    BpmnPackage.RECEIVE_TASK__IMPLEMENTATION,
+                    oldImplementation, IMPLEMENTATION_EDEFAULT,
+                    oldImplementationESet));
     }
 
     /**
@@ -224,7 +229,9 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
         boolean oldInstantiateESet = instantiateESet;
         instantiateESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.RECEIVE_TASK__INSTANTIATE, oldInstantiate, instantiate, !oldInstantiateESet));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.RECEIVE_TASK__INSTANTIATE, oldInstantiate,
+                    instantiate, !oldInstantiateESet));
     }
 
     /**
@@ -238,7 +245,9 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
         instantiate = INSTANTIATE_EDEFAULT;
         instantiateESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, bpmnPackage.RECEIVE_TASK__INSTANTIATE, oldInstantiate, INSTANTIATE_EDEFAULT, oldInstantiateESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET,
+                    BpmnPackage.RECEIVE_TASK__INSTANTIATE, oldInstantiate,
+                    INSTANTIATE_EDEFAULT, oldInstantiateESet));
     }
 
     /**
@@ -268,7 +277,9 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
         QName oldMessageRef = messageRef;
         messageRef = newMessageRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.RECEIVE_TASK__MESSAGE_REF, oldMessageRef, messageRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.RECEIVE_TASK__MESSAGE_REF, oldMessageRef,
+                    messageRef));
     }
 
     /**
@@ -289,7 +300,9 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
         QName oldOperationRef = operationRef;
         operationRef = newOperationRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.RECEIVE_TASK__OPERATION_REF, oldOperationRef, operationRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.RECEIVE_TASK__OPERATION_REF, oldOperationRef,
+                    operationRef));
     }
 
     /**
@@ -300,14 +313,14 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.RECEIVE_TASK__IMPLEMENTATION:
-                return getImplementation();
-            case bpmnPackage.RECEIVE_TASK__INSTANTIATE:
-                return isInstantiate();
-            case bpmnPackage.RECEIVE_TASK__MESSAGE_REF:
-                return getMessageRef();
-            case bpmnPackage.RECEIVE_TASK__OPERATION_REF:
-                return getOperationRef();
+        case BpmnPackage.RECEIVE_TASK__IMPLEMENTATION:
+            return getImplementation();
+        case BpmnPackage.RECEIVE_TASK__INSTANTIATE:
+            return isInstantiate();
+        case BpmnPackage.RECEIVE_TASK__MESSAGE_REF:
+            return getMessageRef();
+        case BpmnPackage.RECEIVE_TASK__OPERATION_REF:
+            return getOperationRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -320,18 +333,18 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.RECEIVE_TASK__IMPLEMENTATION:
-                setImplementation((ServiceImplementation)newValue);
-                return;
-            case bpmnPackage.RECEIVE_TASK__INSTANTIATE:
-                setInstantiate((Boolean)newValue);
-                return;
-            case bpmnPackage.RECEIVE_TASK__MESSAGE_REF:
-                setMessageRef((QName)newValue);
-                return;
-            case bpmnPackage.RECEIVE_TASK__OPERATION_REF:
-                setOperationRef((QName)newValue);
-                return;
+        case BpmnPackage.RECEIVE_TASK__IMPLEMENTATION:
+            setImplementation((ServiceImplementation) newValue);
+            return;
+        case BpmnPackage.RECEIVE_TASK__INSTANTIATE:
+            setInstantiate((Boolean) newValue);
+            return;
+        case BpmnPackage.RECEIVE_TASK__MESSAGE_REF:
+            setMessageRef((QName) newValue);
+            return;
+        case BpmnPackage.RECEIVE_TASK__OPERATION_REF:
+            setOperationRef((QName) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -344,18 +357,18 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.RECEIVE_TASK__IMPLEMENTATION:
-                unsetImplementation();
-                return;
-            case bpmnPackage.RECEIVE_TASK__INSTANTIATE:
-                unsetInstantiate();
-                return;
-            case bpmnPackage.RECEIVE_TASK__MESSAGE_REF:
-                setMessageRef(MESSAGE_REF_EDEFAULT);
-                return;
-            case bpmnPackage.RECEIVE_TASK__OPERATION_REF:
-                setOperationRef(OPERATION_REF_EDEFAULT);
-                return;
+        case BpmnPackage.RECEIVE_TASK__IMPLEMENTATION:
+            unsetImplementation();
+            return;
+        case BpmnPackage.RECEIVE_TASK__INSTANTIATE:
+            unsetInstantiate();
+            return;
+        case BpmnPackage.RECEIVE_TASK__MESSAGE_REF:
+            setMessageRef(MESSAGE_REF_EDEFAULT);
+            return;
+        case BpmnPackage.RECEIVE_TASK__OPERATION_REF:
+            setOperationRef(OPERATION_REF_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -368,14 +381,16 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.RECEIVE_TASK__IMPLEMENTATION:
-                return isSetImplementation();
-            case bpmnPackage.RECEIVE_TASK__INSTANTIATE:
-                return isSetInstantiate();
-            case bpmnPackage.RECEIVE_TASK__MESSAGE_REF:
-                return MESSAGE_REF_EDEFAULT == null ? messageRef != null : !MESSAGE_REF_EDEFAULT.equals(messageRef);
-            case bpmnPackage.RECEIVE_TASK__OPERATION_REF:
-                return OPERATION_REF_EDEFAULT == null ? operationRef != null : !OPERATION_REF_EDEFAULT.equals(operationRef);
+        case BpmnPackage.RECEIVE_TASK__IMPLEMENTATION:
+            return isSetImplementation();
+        case BpmnPackage.RECEIVE_TASK__INSTANTIATE:
+            return isSetInstantiate();
+        case BpmnPackage.RECEIVE_TASK__MESSAGE_REF:
+            return MESSAGE_REF_EDEFAULT == null ? messageRef != null
+                    : !MESSAGE_REF_EDEFAULT.equals(messageRef);
+        case BpmnPackage.RECEIVE_TASK__OPERATION_REF:
+            return OPERATION_REF_EDEFAULT == null ? operationRef != null
+                    : !OPERATION_REF_EDEFAULT.equals(operationRef);
         }
         return super.eIsSet(featureID);
     }
@@ -387,13 +402,20 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (implementation: "); //$NON-NLS-1$
-        if (implementationESet) result.append(implementation); else result.append("<unset>"); //$NON-NLS-1$
+        if (implementationESet)
+            result.append(implementation);
+        else
+            result.append("<unset>"); //$NON-NLS-1$
         result.append(", instantiate: "); //$NON-NLS-1$
-        if (instantiateESet) result.append(instantiate); else result.append("<unset>"); //$NON-NLS-1$
+        if (instantiateESet)
+            result.append(instantiate);
+        else
+            result.append("<unset>"); //$NON-NLS-1$
         result.append(", messageRef: "); //$NON-NLS-1$
         result.append(messageRef);
         result.append(", operationRef: "); //$NON-NLS-1$

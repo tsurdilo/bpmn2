@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di.util;
 
@@ -20,7 +19,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 
 import org.eclipse.emf.ecore.xmi.util.XMLProcessor;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This class contains helper methods to serialize and deserialize XML documents
@@ -28,7 +27,7 @@ import org.eclipse.mdt.bpmn.di.diPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class diXMLProcessor extends XMLProcessor {
+public class DIXMLProcessor extends XMLProcessor {
 
     /**
      * Public constructor to instantiate the helper.
@@ -36,13 +35,13 @@ public class diXMLProcessor extends XMLProcessor {
      * <!-- end-user-doc -->
      * @generated
      */
-    public diXMLProcessor() {
+    public DIXMLProcessor() {
         super((EPackage.Registry.INSTANCE));
-        diPackage.eINSTANCE.eClass();
+        DIPackage.eINSTANCE.eClass();
     }
-    
+
     /**
-     * Register for "*" and "xml" file extensions the diResourceFactoryImpl factory.
+     * Register for "*" and "xml" file extensions the DIResourceFactoryImpl factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -51,10 +50,10 @@ public class diXMLProcessor extends XMLProcessor {
     protected Map<String, Resource.Factory> getRegistrations() {
         if (registrations == null) {
             super.getRegistrations();
-            registrations.put(XML_EXTENSION, new diResourceFactoryImpl());
-            registrations.put(STAR_EXTENSION, new diResourceFactoryImpl());
+            registrations.put(XML_EXTENSION, new DIResourceFactoryImpl());
+            registrations.put(STAR_EXTENSION, new DIResourceFactoryImpl());
         }
         return registrations;
     }
 
-} //diXMLProcessor
+} //DIXMLProcessor

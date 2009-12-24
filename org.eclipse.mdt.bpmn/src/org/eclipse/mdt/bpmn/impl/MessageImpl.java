@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -20,8 +19,8 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Message;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -94,7 +93,7 @@ public class MessageImpl extends RootElementImpl implements Message {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getMessage();
+        return BpmnPackage.eINSTANCE.getMessage();
     }
 
     /**
@@ -115,7 +114,8 @@ public class MessageImpl extends RootElementImpl implements Message {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.MESSAGE__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.MESSAGE__NAME, oldName, name));
     }
 
     /**
@@ -136,7 +136,9 @@ public class MessageImpl extends RootElementImpl implements Message {
         QName oldStructureRef = structureRef;
         structureRef = newStructureRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.MESSAGE__STRUCTURE_REF, oldStructureRef, structureRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.MESSAGE__STRUCTURE_REF, oldStructureRef,
+                    structureRef));
     }
 
     /**
@@ -147,10 +149,10 @@ public class MessageImpl extends RootElementImpl implements Message {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.MESSAGE__NAME:
-                return getName();
-            case bpmnPackage.MESSAGE__STRUCTURE_REF:
-                return getStructureRef();
+        case BpmnPackage.MESSAGE__NAME:
+            return getName();
+        case BpmnPackage.MESSAGE__STRUCTURE_REF:
+            return getStructureRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -163,12 +165,12 @@ public class MessageImpl extends RootElementImpl implements Message {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.MESSAGE__NAME:
-                setName((String)newValue);
-                return;
-            case bpmnPackage.MESSAGE__STRUCTURE_REF:
-                setStructureRef((QName)newValue);
-                return;
+        case BpmnPackage.MESSAGE__NAME:
+            setName((String) newValue);
+            return;
+        case BpmnPackage.MESSAGE__STRUCTURE_REF:
+            setStructureRef((QName) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -181,12 +183,12 @@ public class MessageImpl extends RootElementImpl implements Message {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.MESSAGE__NAME:
-                setName(NAME_EDEFAULT);
-                return;
-            case bpmnPackage.MESSAGE__STRUCTURE_REF:
-                setStructureRef(STRUCTURE_REF_EDEFAULT);
-                return;
+        case BpmnPackage.MESSAGE__NAME:
+            setName(NAME_EDEFAULT);
+            return;
+        case BpmnPackage.MESSAGE__STRUCTURE_REF:
+            setStructureRef(STRUCTURE_REF_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -199,10 +201,12 @@ public class MessageImpl extends RootElementImpl implements Message {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.MESSAGE__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-            case bpmnPackage.MESSAGE__STRUCTURE_REF:
-                return STRUCTURE_REF_EDEFAULT == null ? structureRef != null : !STRUCTURE_REF_EDEFAULT.equals(structureRef);
+        case BpmnPackage.MESSAGE__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
+                    .equals(name);
+        case BpmnPackage.MESSAGE__STRUCTURE_REF:
+            return STRUCTURE_REF_EDEFAULT == null ? structureRef != null
+                    : !STRUCTURE_REF_EDEFAULT.equals(structureRef);
         }
         return super.eIsSet(featureID);
     }
@@ -214,7 +218,8 @@ public class MessageImpl extends RootElementImpl implements Message {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (name: "); //$NON-NLS-1$

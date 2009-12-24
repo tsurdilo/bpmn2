@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -27,7 +26,7 @@ import javax.xml.namespace.QName;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getMessage()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getMessage()
  * @model extendedMetaData="name='tMessage' kind='elementOnly'"
  * @generated
  */
@@ -42,7 +41,7 @@ public interface Message extends RootElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getMessage_Name()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getMessage_Name()
      * @model dataType="org.eclipse.emf.ecore.xml.type.String"
      *        extendedMetaData="kind='attribute' name='name'"
      * @generated
@@ -69,7 +68,7 @@ public interface Message extends RootElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Structure Ref</em>' attribute.
      * @see #setStructureRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getMessage_StructureRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getMessage_StructureRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='structureRef'"
      * @generated

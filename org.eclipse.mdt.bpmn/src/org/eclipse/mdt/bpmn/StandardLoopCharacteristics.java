@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -28,7 +27,7 @@ import java.math.BigInteger;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getStandardLoopCharacteristics()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getStandardLoopCharacteristics()
  * @model extendedMetaData="name='tStandardLoopCharacteristics' kind='elementOnly'"
  * @generated
  */
@@ -43,7 +42,7 @@ public interface StandardLoopCharacteristics extends LoopCharacteristics {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Loop Condition</em>' containment reference.
      * @see #setLoopCondition(Expression)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getStandardLoopCharacteristics_LoopCondition()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getStandardLoopCharacteristics_LoopCondition()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='loopCondition' namespace='##targetNamespace'"
      * @generated
@@ -70,7 +69,7 @@ public interface StandardLoopCharacteristics extends LoopCharacteristics {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Loop Maximum</em>' attribute.
      * @see #setLoopMaximum(BigInteger)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getStandardLoopCharacteristics_LoopMaximum()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getStandardLoopCharacteristics_LoopMaximum()
      * @model dataType="org.eclipse.emf.ecore.xml.type.Integer"
      *        extendedMetaData="kind='attribute' name='loopMaximum'"
      * @generated
@@ -100,7 +99,7 @@ public interface StandardLoopCharacteristics extends LoopCharacteristics {
      * @see #isSetTestBefore()
      * @see #unsetTestBefore()
      * @see #setTestBefore(boolean)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getStandardLoopCharacteristics_TestBefore()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getStandardLoopCharacteristics_TestBefore()
      * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
      *        extendedMetaData="kind='attribute' name='testBefore'"
      * @generated

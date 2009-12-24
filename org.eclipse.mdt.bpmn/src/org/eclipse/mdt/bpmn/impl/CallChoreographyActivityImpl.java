@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -29,9 +28,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.CallChoreographyActivity;
 import org.eclipse.mdt.bpmn.ParticipantAssociation;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -47,7 +46,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class CallChoreographyActivityImpl extends ChoreographyActivityImpl implements CallChoreographyActivity {
+public class CallChoreographyActivityImpl extends ChoreographyActivityImpl
+        implements CallChoreographyActivity {
     /**
      * The cached value of the '{@link #getParticipantAssociation() <em>Participant Association</em>}' containment reference list.
      * <!-- begin-user-doc -->
@@ -94,7 +94,7 @@ public class CallChoreographyActivityImpl extends ChoreographyActivityImpl imple
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getCallChoreographyActivity();
+        return BpmnPackage.eINSTANCE.getCallChoreographyActivity();
     }
 
     /**
@@ -104,7 +104,10 @@ public class CallChoreographyActivityImpl extends ChoreographyActivityImpl imple
      */
     public EList<ParticipantAssociation> getParticipantAssociation() {
         if (participantAssociation == null) {
-            participantAssociation = new EObjectContainmentEList<ParticipantAssociation>(ParticipantAssociation.class, this, bpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__PARTICIPANT_ASSOCIATION);
+            participantAssociation = new EObjectContainmentEList<ParticipantAssociation>(
+                    ParticipantAssociation.class,
+                    this,
+                    BpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__PARTICIPANT_ASSOCIATION);
         }
         return participantAssociation;
     }
@@ -127,7 +130,9 @@ public class CallChoreographyActivityImpl extends ChoreographyActivityImpl imple
         QName oldCalledElement = calledElement;
         calledElement = newCalledElement;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__CALLED_ELEMENT, oldCalledElement, calledElement));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__CALLED_ELEMENT,
+                    oldCalledElement, calledElement));
     }
 
     /**
@@ -136,10 +141,12 @@ public class CallChoreographyActivityImpl extends ChoreographyActivityImpl imple
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__PARTICIPANT_ASSOCIATION:
-                return ((InternalEList<?>)getParticipantAssociation()).basicRemove(otherEnd, msgs);
+        case BpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__PARTICIPANT_ASSOCIATION:
+            return ((InternalEList<?>) getParticipantAssociation())
+                    .basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -152,10 +159,10 @@ public class CallChoreographyActivityImpl extends ChoreographyActivityImpl imple
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__PARTICIPANT_ASSOCIATION:
-                return getParticipantAssociation();
-            case bpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__CALLED_ELEMENT:
-                return getCalledElement();
+        case BpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__PARTICIPANT_ASSOCIATION:
+            return getParticipantAssociation();
+        case BpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__CALLED_ELEMENT:
+            return getCalledElement();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -169,13 +176,14 @@ public class CallChoreographyActivityImpl extends ChoreographyActivityImpl imple
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__PARTICIPANT_ASSOCIATION:
-                getParticipantAssociation().clear();
-                getParticipantAssociation().addAll((Collection<? extends ParticipantAssociation>)newValue);
-                return;
-            case bpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__CALLED_ELEMENT:
-                setCalledElement((QName)newValue);
-                return;
+        case BpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__PARTICIPANT_ASSOCIATION:
+            getParticipantAssociation().clear();
+            getParticipantAssociation().addAll(
+                    (Collection<? extends ParticipantAssociation>) newValue);
+            return;
+        case BpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__CALLED_ELEMENT:
+            setCalledElement((QName) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -188,12 +196,12 @@ public class CallChoreographyActivityImpl extends ChoreographyActivityImpl imple
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__PARTICIPANT_ASSOCIATION:
-                getParticipantAssociation().clear();
-                return;
-            case bpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__CALLED_ELEMENT:
-                setCalledElement(CALLED_ELEMENT_EDEFAULT);
-                return;
+        case BpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__PARTICIPANT_ASSOCIATION:
+            getParticipantAssociation().clear();
+            return;
+        case BpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__CALLED_ELEMENT:
+            setCalledElement(CALLED_ELEMENT_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -206,10 +214,12 @@ public class CallChoreographyActivityImpl extends ChoreographyActivityImpl imple
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__PARTICIPANT_ASSOCIATION:
-                return participantAssociation != null && !participantAssociation.isEmpty();
-            case bpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__CALLED_ELEMENT:
-                return CALLED_ELEMENT_EDEFAULT == null ? calledElement != null : !CALLED_ELEMENT_EDEFAULT.equals(calledElement);
+        case BpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__PARTICIPANT_ASSOCIATION:
+            return participantAssociation != null
+                    && !participantAssociation.isEmpty();
+        case BpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__CALLED_ELEMENT:
+            return CALLED_ELEMENT_EDEFAULT == null ? calledElement != null
+                    : !CALLED_ELEMENT_EDEFAULT.equals(calledElement);
         }
         return super.eIsSet(featureID);
     }
@@ -221,7 +231,8 @@ public class CallChoreographyActivityImpl extends ChoreographyActivityImpl imple
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (calledElement: "); //$NON-NLS-1$

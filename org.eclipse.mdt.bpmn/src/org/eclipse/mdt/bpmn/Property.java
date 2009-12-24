@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -28,7 +27,7 @@ import javax.xml.namespace.QName;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getProperty()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getProperty()
  * @model extendedMetaData="name='tProperty' kind='elementOnly'"
  * @generated
  */
@@ -43,7 +42,7 @@ public interface Property extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data State</em>' containment reference.
      * @see #setDataState(DataState)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getProperty_DataState()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getProperty_DataState()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='dataState' namespace='##targetNamespace'"
      * @generated
@@ -70,7 +69,7 @@ public interface Property extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Item Subject Ref</em>' attribute.
      * @see #setItemSubjectRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getProperty_ItemSubjectRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getProperty_ItemSubjectRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='itemSubjectRef'"
      * @generated
@@ -97,7 +96,7 @@ public interface Property extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getProperty_Name()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getProperty_Name()
      * @model dataType="org.eclipse.emf.ecore.xml.type.String"
      *        extendedMetaData="kind='attribute' name='name'"
      * @generated

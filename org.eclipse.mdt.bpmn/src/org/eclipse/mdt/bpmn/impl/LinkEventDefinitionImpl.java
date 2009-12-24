@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -18,8 +17,8 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.LinkEventDefinition;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +33,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class LinkEventDefinitionImpl extends EventDefinitionImpl implements LinkEventDefinition {
+public class LinkEventDefinitionImpl extends EventDefinitionImpl implements
+        LinkEventDefinition {
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -71,7 +71,7 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements Link
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getLinkEventDefinition();
+        return BpmnPackage.eINSTANCE.getLinkEventDefinition();
     }
 
     /**
@@ -92,7 +92,8 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements Link
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.LINK_EVENT_DEFINITION__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.LINK_EVENT_DEFINITION__NAME, oldName, name));
     }
 
     /**
@@ -103,8 +104,8 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements Link
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.LINK_EVENT_DEFINITION__NAME:
-                return getName();
+        case BpmnPackage.LINK_EVENT_DEFINITION__NAME:
+            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -117,9 +118,9 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements Link
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.LINK_EVENT_DEFINITION__NAME:
-                setName((String)newValue);
-                return;
+        case BpmnPackage.LINK_EVENT_DEFINITION__NAME:
+            setName((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -132,9 +133,9 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements Link
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.LINK_EVENT_DEFINITION__NAME:
-                setName(NAME_EDEFAULT);
-                return;
+        case BpmnPackage.LINK_EVENT_DEFINITION__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -147,8 +148,9 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements Link
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.LINK_EVENT_DEFINITION__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case BpmnPackage.LINK_EVENT_DEFINITION__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
+                    .equals(name);
         }
         return super.eIsSet(featureID);
     }
@@ -160,7 +162,8 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements Link
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (name: "); //$NON-NLS-1$

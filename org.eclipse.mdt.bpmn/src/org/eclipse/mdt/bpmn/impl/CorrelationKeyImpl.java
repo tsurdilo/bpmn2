@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -22,8 +21,8 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.CorrelationKey;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,7 +37,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class CorrelationKeyImpl extends BaseElementImpl implements CorrelationKey {
+public class CorrelationKeyImpl extends BaseElementImpl implements
+        CorrelationKey {
     /**
      * The cached value of the '{@link #getCorrelationPropertyRef() <em>Correlation Property Ref</em>}' attribute list.
      * <!-- begin-user-doc -->
@@ -65,7 +65,7 @@ public class CorrelationKeyImpl extends BaseElementImpl implements CorrelationKe
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getCorrelationKey();
+        return BpmnPackage.eINSTANCE.getCorrelationKey();
     }
 
     /**
@@ -75,7 +75,8 @@ public class CorrelationKeyImpl extends BaseElementImpl implements CorrelationKe
      */
     public EList<QName> getCorrelationPropertyRef() {
         if (correlationPropertyRef == null) {
-            correlationPropertyRef = new EDataTypeEList<QName>(QName.class, this, bpmnPackage.CORRELATION_KEY__CORRELATION_PROPERTY_REF);
+            correlationPropertyRef = new EDataTypeEList<QName>(QName.class,
+                    this, BpmnPackage.CORRELATION_KEY__CORRELATION_PROPERTY_REF);
         }
         return correlationPropertyRef;
     }
@@ -88,8 +89,8 @@ public class CorrelationKeyImpl extends BaseElementImpl implements CorrelationKe
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.CORRELATION_KEY__CORRELATION_PROPERTY_REF:
-                return getCorrelationPropertyRef();
+        case BpmnPackage.CORRELATION_KEY__CORRELATION_PROPERTY_REF:
+            return getCorrelationPropertyRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -103,10 +104,11 @@ public class CorrelationKeyImpl extends BaseElementImpl implements CorrelationKe
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.CORRELATION_KEY__CORRELATION_PROPERTY_REF:
-                getCorrelationPropertyRef().clear();
-                getCorrelationPropertyRef().addAll((Collection<? extends QName>)newValue);
-                return;
+        case BpmnPackage.CORRELATION_KEY__CORRELATION_PROPERTY_REF:
+            getCorrelationPropertyRef().clear();
+            getCorrelationPropertyRef().addAll(
+                    (Collection<? extends QName>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -119,9 +121,9 @@ public class CorrelationKeyImpl extends BaseElementImpl implements CorrelationKe
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CORRELATION_KEY__CORRELATION_PROPERTY_REF:
-                getCorrelationPropertyRef().clear();
-                return;
+        case BpmnPackage.CORRELATION_KEY__CORRELATION_PROPERTY_REF:
+            getCorrelationPropertyRef().clear();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -134,8 +136,9 @@ public class CorrelationKeyImpl extends BaseElementImpl implements CorrelationKe
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CORRELATION_KEY__CORRELATION_PROPERTY_REF:
-                return correlationPropertyRef != null && !correlationPropertyRef.isEmpty();
+        case BpmnPackage.CORRELATION_KEY__CORRELATION_PROPERTY_REF:
+            return correlationPropertyRef != null
+                    && !correlationPropertyRef.isEmpty();
         }
         return super.eIsSet(featureID);
     }
@@ -147,7 +150,8 @@ public class CorrelationKeyImpl extends BaseElementImpl implements CorrelationKe
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (correlationPropertyRef: "); //$NON-NLS-1$

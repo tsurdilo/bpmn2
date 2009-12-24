@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -20,9 +19,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Expression;
 import org.eclipse.mdt.bpmn.TimerEventDefinition;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,7 +37,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class TimerEventDefinitionImpl extends EventDefinitionImpl implements TimerEventDefinition {
+public class TimerEventDefinitionImpl extends EventDefinitionImpl implements
+        TimerEventDefinition {
     /**
      * The cached value of the '{@link #getTimeDate() <em>Time Date</em>}' containment reference.
      * <!-- begin-user-doc -->
@@ -75,7 +75,7 @@ public class TimerEventDefinitionImpl extends EventDefinitionImpl implements Tim
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getTimerEventDefinition();
+        return BpmnPackage.eINSTANCE.getTimerEventDefinition();
     }
 
     /**
@@ -92,12 +92,19 @@ public class TimerEventDefinitionImpl extends EventDefinitionImpl implements Tim
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetTimeDate(Expression newTimeDate, NotificationChain msgs) {
+    public NotificationChain basicSetTimeDate(Expression newTimeDate,
+            NotificationChain msgs) {
         Expression oldTimeDate = timeDate;
         timeDate = newTimeDate;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, bpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE, oldTimeDate, newTimeDate);
-            if (msgs == null) msgs = notification; else msgs.add(notification);
+            ENotificationImpl notification = new ENotificationImpl(this,
+                    Notification.SET,
+                    BpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE, oldTimeDate,
+                    newTimeDate);
+            if (msgs == null)
+                msgs = notification;
+            else
+                msgs.add(notification);
         }
         return msgs;
     }
@@ -111,14 +118,26 @@ public class TimerEventDefinitionImpl extends EventDefinitionImpl implements Tim
         if (newTimeDate != timeDate) {
             NotificationChain msgs = null;
             if (timeDate != null)
-                msgs = ((InternalEObject)timeDate).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - bpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE, null, msgs);
+                msgs = ((InternalEObject) timeDate)
+                        .eInverseRemove(
+                                this,
+                                EOPPOSITE_FEATURE_BASE
+                                        - BpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE,
+                                null, msgs);
             if (newTimeDate != null)
-                msgs = ((InternalEObject)newTimeDate).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - bpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE, null, msgs);
+                msgs = ((InternalEObject) newTimeDate)
+                        .eInverseAdd(
+                                this,
+                                EOPPOSITE_FEATURE_BASE
+                                        - BpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE,
+                                null, msgs);
             msgs = basicSetTimeDate(newTimeDate, msgs);
-            if (msgs != null) msgs.dispatch();
-        }
-        else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE, newTimeDate, newTimeDate));
+            if (msgs != null)
+                msgs.dispatch();
+        } else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE, newTimeDate,
+                    newTimeDate));
     }
 
     /**
@@ -135,12 +154,19 @@ public class TimerEventDefinitionImpl extends EventDefinitionImpl implements Tim
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetTimeCycle(Expression newTimeCycle, NotificationChain msgs) {
+    public NotificationChain basicSetTimeCycle(Expression newTimeCycle,
+            NotificationChain msgs) {
         Expression oldTimeCycle = timeCycle;
         timeCycle = newTimeCycle;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, bpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE, oldTimeCycle, newTimeCycle);
-            if (msgs == null) msgs = notification; else msgs.add(notification);
+            ENotificationImpl notification = new ENotificationImpl(this,
+                    Notification.SET,
+                    BpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE,
+                    oldTimeCycle, newTimeCycle);
+            if (msgs == null)
+                msgs = notification;
+            else
+                msgs.add(notification);
         }
         return msgs;
     }
@@ -154,14 +180,26 @@ public class TimerEventDefinitionImpl extends EventDefinitionImpl implements Tim
         if (newTimeCycle != timeCycle) {
             NotificationChain msgs = null;
             if (timeCycle != null)
-                msgs = ((InternalEObject)timeCycle).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - bpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE, null, msgs);
+                msgs = ((InternalEObject) timeCycle)
+                        .eInverseRemove(
+                                this,
+                                EOPPOSITE_FEATURE_BASE
+                                        - BpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE,
+                                null, msgs);
             if (newTimeCycle != null)
-                msgs = ((InternalEObject)newTimeCycle).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - bpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE, null, msgs);
+                msgs = ((InternalEObject) newTimeCycle)
+                        .eInverseAdd(
+                                this,
+                                EOPPOSITE_FEATURE_BASE
+                                        - BpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE,
+                                null, msgs);
             msgs = basicSetTimeCycle(newTimeCycle, msgs);
-            if (msgs != null) msgs.dispatch();
-        }
-        else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE, newTimeCycle, newTimeCycle));
+            if (msgs != null)
+                msgs.dispatch();
+        } else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE,
+                    newTimeCycle, newTimeCycle));
     }
 
     /**
@@ -170,12 +208,13 @@ public class TimerEventDefinitionImpl extends EventDefinitionImpl implements Tim
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE:
-                return basicSetTimeDate(null, msgs);
-            case bpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE:
-                return basicSetTimeCycle(null, msgs);
+        case BpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE:
+            return basicSetTimeDate(null, msgs);
+        case BpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE:
+            return basicSetTimeCycle(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -188,10 +227,10 @@ public class TimerEventDefinitionImpl extends EventDefinitionImpl implements Tim
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE:
-                return getTimeDate();
-            case bpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE:
-                return getTimeCycle();
+        case BpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE:
+            return getTimeDate();
+        case BpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE:
+            return getTimeCycle();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -204,12 +243,12 @@ public class TimerEventDefinitionImpl extends EventDefinitionImpl implements Tim
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE:
-                setTimeDate((Expression)newValue);
-                return;
-            case bpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE:
-                setTimeCycle((Expression)newValue);
-                return;
+        case BpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE:
+            setTimeDate((Expression) newValue);
+            return;
+        case BpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE:
+            setTimeCycle((Expression) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -222,12 +261,12 @@ public class TimerEventDefinitionImpl extends EventDefinitionImpl implements Tim
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE:
-                setTimeDate((Expression)null);
-                return;
-            case bpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE:
-                setTimeCycle((Expression)null);
-                return;
+        case BpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE:
+            setTimeDate((Expression) null);
+            return;
+        case BpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE:
+            setTimeCycle((Expression) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -240,10 +279,10 @@ public class TimerEventDefinitionImpl extends EventDefinitionImpl implements Tim
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE:
-                return timeDate != null;
-            case bpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE:
-                return timeCycle != null;
+        case BpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE:
+            return timeDate != null;
+        case BpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE:
+            return timeCycle != null;
         }
         return super.eIsSet(featureID);
     }

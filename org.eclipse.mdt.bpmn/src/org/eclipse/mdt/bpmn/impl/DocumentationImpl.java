@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -25,8 +24,8 @@ import org.eclipse.emf.ecore.util.BasicFeatureMap;
 import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Documentation;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -90,7 +89,7 @@ public class DocumentationImpl extends EObjectImpl implements Documentation {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getDocumentation();
+        return BpmnPackage.eINSTANCE.getDocumentation();
     }
 
     /**
@@ -100,7 +99,7 @@ public class DocumentationImpl extends EObjectImpl implements Documentation {
      */
     public FeatureMap getMixed() {
         if (mixed == null) {
-            mixed = new BasicFeatureMap(this, bpmnPackage.DOCUMENTATION__MIXED);
+            mixed = new BasicFeatureMap(this, BpmnPackage.DOCUMENTATION__MIXED);
         }
         return mixed;
     }
@@ -111,7 +110,8 @@ public class DocumentationImpl extends EObjectImpl implements Documentation {
      * @generated
      */
     public FeatureMap getAny() {
-        return (FeatureMap)getMixed().<FeatureMap.Entry>list(bpmnPackage.eINSTANCE.getDocumentation_Any());
+        return (FeatureMap) getMixed().<FeatureMap.Entry> list(
+                BpmnPackage.eINSTANCE.getDocumentation_Any());
     }
 
     /**
@@ -132,7 +132,8 @@ public class DocumentationImpl extends EObjectImpl implements Documentation {
         String oldId = id;
         id = newId;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.DOCUMENTATION__ID, oldId, id));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.DOCUMENTATION__ID, oldId, id));
     }
 
     /**
@@ -141,12 +142,13 @@ public class DocumentationImpl extends EObjectImpl implements Documentation {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.DOCUMENTATION__MIXED:
-                return ((InternalEList<?>)getMixed()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.DOCUMENTATION__ANY:
-                return ((InternalEList<?>)getAny()).basicRemove(otherEnd, msgs);
+        case BpmnPackage.DOCUMENTATION__MIXED:
+            return ((InternalEList<?>) getMixed()).basicRemove(otherEnd, msgs);
+        case BpmnPackage.DOCUMENTATION__ANY:
+            return ((InternalEList<?>) getAny()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -159,14 +161,16 @@ public class DocumentationImpl extends EObjectImpl implements Documentation {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.DOCUMENTATION__MIXED:
-                if (coreType) return getMixed();
-                return ((FeatureMap.Internal)getMixed()).getWrapper();
-            case bpmnPackage.DOCUMENTATION__ANY:
-                if (coreType) return getAny();
-                return ((FeatureMap.Internal)getAny()).getWrapper();
-            case bpmnPackage.DOCUMENTATION__ID:
-                return getId();
+        case BpmnPackage.DOCUMENTATION__MIXED:
+            if (coreType)
+                return getMixed();
+            return ((FeatureMap.Internal) getMixed()).getWrapper();
+        case BpmnPackage.DOCUMENTATION__ANY:
+            if (coreType)
+                return getAny();
+            return ((FeatureMap.Internal) getAny()).getWrapper();
+        case BpmnPackage.DOCUMENTATION__ID:
+            return getId();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -179,15 +183,15 @@ public class DocumentationImpl extends EObjectImpl implements Documentation {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.DOCUMENTATION__MIXED:
-                ((FeatureMap.Internal)getMixed()).set(newValue);
-                return;
-            case bpmnPackage.DOCUMENTATION__ANY:
-                ((FeatureMap.Internal)getAny()).set(newValue);
-                return;
-            case bpmnPackage.DOCUMENTATION__ID:
-                setId((String)newValue);
-                return;
+        case BpmnPackage.DOCUMENTATION__MIXED:
+            ((FeatureMap.Internal) getMixed()).set(newValue);
+            return;
+        case BpmnPackage.DOCUMENTATION__ANY:
+            ((FeatureMap.Internal) getAny()).set(newValue);
+            return;
+        case BpmnPackage.DOCUMENTATION__ID:
+            setId((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -200,15 +204,15 @@ public class DocumentationImpl extends EObjectImpl implements Documentation {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.DOCUMENTATION__MIXED:
-                getMixed().clear();
-                return;
-            case bpmnPackage.DOCUMENTATION__ANY:
-                getAny().clear();
-                return;
-            case bpmnPackage.DOCUMENTATION__ID:
-                setId(ID_EDEFAULT);
-                return;
+        case BpmnPackage.DOCUMENTATION__MIXED:
+            getMixed().clear();
+            return;
+        case BpmnPackage.DOCUMENTATION__ANY:
+            getAny().clear();
+            return;
+        case BpmnPackage.DOCUMENTATION__ID:
+            setId(ID_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -221,12 +225,12 @@ public class DocumentationImpl extends EObjectImpl implements Documentation {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.DOCUMENTATION__MIXED:
-                return mixed != null && !mixed.isEmpty();
-            case bpmnPackage.DOCUMENTATION__ANY:
-                return !getAny().isEmpty();
-            case bpmnPackage.DOCUMENTATION__ID:
-                return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+        case BpmnPackage.DOCUMENTATION__MIXED:
+            return mixed != null && !mixed.isEmpty();
+        case BpmnPackage.DOCUMENTATION__ANY:
+            return !getAny().isEmpty();
+        case BpmnPackage.DOCUMENTATION__ID:
+            return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
         }
         return super.eIsSet(featureID);
     }
@@ -238,7 +242,8 @@ public class DocumentationImpl extends EObjectImpl implements Documentation {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (mixed: "); //$NON-NLS-1$

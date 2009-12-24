@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -20,8 +19,8 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.EscalationEventDefinition;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,7 +36,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class EscalationEventDefinitionImpl extends EventDefinitionImpl implements EscalationEventDefinition {
+public class EscalationEventDefinitionImpl extends EventDefinitionImpl
+        implements EscalationEventDefinition {
     /**
      * The default value of the '{@link #getEscalationCode() <em>Escalation Code</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -94,7 +94,7 @@ public class EscalationEventDefinitionImpl extends EventDefinitionImpl implement
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getEscalationEventDefinition();
+        return BpmnPackage.eINSTANCE.getEscalationEventDefinition();
     }
 
     /**
@@ -115,7 +115,9 @@ public class EscalationEventDefinitionImpl extends EventDefinitionImpl implement
         String oldEscalationCode = escalationCode;
         escalationCode = newEscalationCode;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.ESCALATION_EVENT_DEFINITION__ESCALATION_CODE, oldEscalationCode, escalationCode));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.ESCALATION_EVENT_DEFINITION__ESCALATION_CODE,
+                    oldEscalationCode, escalationCode));
     }
 
     /**
@@ -136,7 +138,9 @@ public class EscalationEventDefinitionImpl extends EventDefinitionImpl implement
         QName oldEscalationRef = escalationRef;
         escalationRef = newEscalationRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.ESCALATION_EVENT_DEFINITION__ESCALATION_REF, oldEscalationRef, escalationRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.ESCALATION_EVENT_DEFINITION__ESCALATION_REF,
+                    oldEscalationRef, escalationRef));
     }
 
     /**
@@ -147,10 +151,10 @@ public class EscalationEventDefinitionImpl extends EventDefinitionImpl implement
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.ESCALATION_EVENT_DEFINITION__ESCALATION_CODE:
-                return getEscalationCode();
-            case bpmnPackage.ESCALATION_EVENT_DEFINITION__ESCALATION_REF:
-                return getEscalationRef();
+        case BpmnPackage.ESCALATION_EVENT_DEFINITION__ESCALATION_CODE:
+            return getEscalationCode();
+        case BpmnPackage.ESCALATION_EVENT_DEFINITION__ESCALATION_REF:
+            return getEscalationRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -163,12 +167,12 @@ public class EscalationEventDefinitionImpl extends EventDefinitionImpl implement
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.ESCALATION_EVENT_DEFINITION__ESCALATION_CODE:
-                setEscalationCode((String)newValue);
-                return;
-            case bpmnPackage.ESCALATION_EVENT_DEFINITION__ESCALATION_REF:
-                setEscalationRef((QName)newValue);
-                return;
+        case BpmnPackage.ESCALATION_EVENT_DEFINITION__ESCALATION_CODE:
+            setEscalationCode((String) newValue);
+            return;
+        case BpmnPackage.ESCALATION_EVENT_DEFINITION__ESCALATION_REF:
+            setEscalationRef((QName) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -181,12 +185,12 @@ public class EscalationEventDefinitionImpl extends EventDefinitionImpl implement
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.ESCALATION_EVENT_DEFINITION__ESCALATION_CODE:
-                setEscalationCode(ESCALATION_CODE_EDEFAULT);
-                return;
-            case bpmnPackage.ESCALATION_EVENT_DEFINITION__ESCALATION_REF:
-                setEscalationRef(ESCALATION_REF_EDEFAULT);
-                return;
+        case BpmnPackage.ESCALATION_EVENT_DEFINITION__ESCALATION_CODE:
+            setEscalationCode(ESCALATION_CODE_EDEFAULT);
+            return;
+        case BpmnPackage.ESCALATION_EVENT_DEFINITION__ESCALATION_REF:
+            setEscalationRef(ESCALATION_REF_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -199,10 +203,12 @@ public class EscalationEventDefinitionImpl extends EventDefinitionImpl implement
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.ESCALATION_EVENT_DEFINITION__ESCALATION_CODE:
-                return ESCALATION_CODE_EDEFAULT == null ? escalationCode != null : !ESCALATION_CODE_EDEFAULT.equals(escalationCode);
-            case bpmnPackage.ESCALATION_EVENT_DEFINITION__ESCALATION_REF:
-                return ESCALATION_REF_EDEFAULT == null ? escalationRef != null : !ESCALATION_REF_EDEFAULT.equals(escalationRef);
+        case BpmnPackage.ESCALATION_EVENT_DEFINITION__ESCALATION_CODE:
+            return ESCALATION_CODE_EDEFAULT == null ? escalationCode != null
+                    : !ESCALATION_CODE_EDEFAULT.equals(escalationCode);
+        case BpmnPackage.ESCALATION_EVENT_DEFINITION__ESCALATION_REF:
+            return ESCALATION_REF_EDEFAULT == null ? escalationRef != null
+                    : !ESCALATION_REF_EDEFAULT.equals(escalationRef);
         }
         return super.eIsSet(featureID);
     }
@@ -214,7 +220,8 @@ public class EscalationEventDefinitionImpl extends EventDefinitionImpl implement
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (escalationCode: "); //$NON-NLS-1$

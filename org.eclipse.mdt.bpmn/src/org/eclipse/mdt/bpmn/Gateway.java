@@ -8,10 +8,8 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +23,7 @@ package org.eclipse.mdt.bpmn;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getGateway()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getGateway()
  * @model extendedMetaData="name='tGateway' kind='elementOnly'"
  * @generated
  */
@@ -45,7 +43,7 @@ public interface Gateway extends FlowNode {
      * @see #isSetGatewayDirection()
      * @see #unsetGatewayDirection()
      * @see #setGatewayDirection(GatewayDirection)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getGateway_GatewayDirection()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getGateway_GatewayDirection()
      * @model default="unspecified" unsettable="true"
      *        extendedMetaData="kind='attribute' name='gatewayDirection'"
      * @generated

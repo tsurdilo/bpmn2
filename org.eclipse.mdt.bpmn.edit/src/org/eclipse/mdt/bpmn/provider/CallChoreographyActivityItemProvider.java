@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -33,11 +32,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnFactory;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.CallChoreographyActivity;
-import org.eclipse.mdt.bpmn.bpmnFactory;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.CallChoreographyActivity} object.
@@ -90,7 +89,7 @@ public class CallChoreographyActivityItemProvider extends
                         getString("_UI_CallChoreographyActivity_calledElement_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_CallChoreographyActivity_calledElement_feature", "_UI_CallChoreographyActivity_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE
+                        BpmnPackage.eINSTANCE
                                 .getCallChoreographyActivity_CalledElement(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
@@ -109,7 +108,7 @@ public class CallChoreographyActivityItemProvider extends
             Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getCallChoreographyActivity_ParticipantAssociation());
         }
         return childrenFeatures;
@@ -165,11 +164,11 @@ public class CallChoreographyActivityItemProvider extends
         updateChildren(notification);
 
         switch (notification.getFeatureID(CallChoreographyActivity.class)) {
-        case bpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__CALLED_ELEMENT:
+        case BpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__CALLED_ELEMENT:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
-        case bpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__PARTICIPANT_ASSOCIATION:
+        case BpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__PARTICIPANT_ASSOCIATION:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -189,9 +188,9 @@ public class CallChoreographyActivityItemProvider extends
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getCallChoreographyActivity_ParticipantAssociation(),
-                bpmnFactory.eINSTANCE.createParticipantAssociation()));
+                BpmnFactory.eINSTANCE.createParticipantAssociation()));
     }
 
     /**
@@ -214,10 +213,10 @@ public class CallChoreographyActivityItemProvider extends
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE;
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE;
 
         if (qualify) {
             return getString("_UI_CreateChild_text2", //$NON-NLS-1$

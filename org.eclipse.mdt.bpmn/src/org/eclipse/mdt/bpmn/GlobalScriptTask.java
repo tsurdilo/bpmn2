@@ -8,10 +8,8 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +24,7 @@ package org.eclipse.mdt.bpmn;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getGlobalScriptTask()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getGlobalScriptTask()
  * @model extendedMetaData="name='tGlobalScriptTask' kind='elementOnly'"
  * @generated
  */
@@ -41,7 +39,7 @@ public interface GlobalScriptTask extends GlobalTask {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Script</em>' containment reference.
      * @see #setScript(Script)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getGlobalScriptTask_Script()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getGlobalScriptTask_Script()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='script' namespace='##targetNamespace'"
      * @generated
@@ -68,7 +66,7 @@ public interface GlobalScriptTask extends GlobalTask {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Script Language</em>' attribute.
      * @see #setScriptLanguage(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getGlobalScriptTask_ScriptLanguage()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getGlobalScriptTask_ScriptLanguage()
      * @model dataType="org.eclipse.emf.ecore.xml.type.AnyURI"
      *        extendedMetaData="kind='attribute' name='scriptLanguage'"
      * @generated

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -33,11 +32,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnFactory;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.GlobalChoreographyTask;
-import org.eclipse.mdt.bpmn.bpmnFactory;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.GlobalChoreographyTask} object.
@@ -90,7 +89,7 @@ public class GlobalChoreographyTaskItemProvider extends
                         getString("_UI_GlobalChoreographyTask_initiatingParticipantRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_GlobalChoreographyTask_initiatingParticipantRef_feature", "_UI_GlobalChoreographyTask_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE
+                        BpmnPackage.eINSTANCE
                                 .getGlobalChoreographyTask_InitiatingParticipantRef(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
@@ -109,9 +108,9 @@ public class GlobalChoreographyTaskItemProvider extends
             Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getGlobalChoreographyTask_Participant());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getGlobalChoreographyTask_MessageFlow());
         }
         return childrenFeatures;
@@ -167,12 +166,12 @@ public class GlobalChoreographyTaskItemProvider extends
         updateChildren(notification);
 
         switch (notification.getFeatureID(GlobalChoreographyTask.class)) {
-        case bpmnPackage.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF:
+        case BpmnPackage.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
-        case bpmnPackage.GLOBAL_CHOREOGRAPHY_TASK__PARTICIPANT:
-        case bpmnPackage.GLOBAL_CHOREOGRAPHY_TASK__MESSAGE_FLOW:
+        case BpmnPackage.GLOBAL_CHOREOGRAPHY_TASK__PARTICIPANT:
+        case BpmnPackage.GLOBAL_CHOREOGRAPHY_TASK__MESSAGE_FLOW:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -192,12 +191,12 @@ public class GlobalChoreographyTaskItemProvider extends
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getGlobalChoreographyTask_Participant(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getGlobalChoreographyTask_Participant(), BpmnFactory.eINSTANCE
                 .createParticipant()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getGlobalChoreographyTask_MessageFlow(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getGlobalChoreographyTask_MessageFlow(), BpmnFactory.eINSTANCE
                 .createMessageFlow()));
     }
 
@@ -221,10 +220,10 @@ public class GlobalChoreographyTaskItemProvider extends
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE;
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE;
 
         if (qualify) {
             return getString("_UI_CreateChild_text2", //$NON-NLS-1$

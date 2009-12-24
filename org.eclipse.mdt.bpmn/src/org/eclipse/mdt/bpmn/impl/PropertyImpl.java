@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -22,9 +21,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.DataState;
 import org.eclipse.mdt.bpmn.Property;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -108,7 +107,7 @@ public class PropertyImpl extends BaseElementImpl implements Property {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getProperty();
+        return BpmnPackage.eINSTANCE.getProperty();
     }
 
     /**
@@ -125,12 +124,18 @@ public class PropertyImpl extends BaseElementImpl implements Property {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetDataState(DataState newDataState, NotificationChain msgs) {
+    public NotificationChain basicSetDataState(DataState newDataState,
+            NotificationChain msgs) {
         DataState oldDataState = dataState;
         dataState = newDataState;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, bpmnPackage.PROPERTY__DATA_STATE, oldDataState, newDataState);
-            if (msgs == null) msgs = notification; else msgs.add(notification);
+            ENotificationImpl notification = new ENotificationImpl(this,
+                    Notification.SET, BpmnPackage.PROPERTY__DATA_STATE,
+                    oldDataState, newDataState);
+            if (msgs == null)
+                msgs = notification;
+            else
+                msgs.add(notification);
         }
         return msgs;
     }
@@ -144,14 +149,20 @@ public class PropertyImpl extends BaseElementImpl implements Property {
         if (newDataState != dataState) {
             NotificationChain msgs = null;
             if (dataState != null)
-                msgs = ((InternalEObject)dataState).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - bpmnPackage.PROPERTY__DATA_STATE, null, msgs);
+                msgs = ((InternalEObject) dataState).eInverseRemove(this,
+                        EOPPOSITE_FEATURE_BASE
+                                - BpmnPackage.PROPERTY__DATA_STATE, null, msgs);
             if (newDataState != null)
-                msgs = ((InternalEObject)newDataState).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - bpmnPackage.PROPERTY__DATA_STATE, null, msgs);
+                msgs = ((InternalEObject) newDataState).eInverseAdd(this,
+                        EOPPOSITE_FEATURE_BASE
+                                - BpmnPackage.PROPERTY__DATA_STATE, null, msgs);
             msgs = basicSetDataState(newDataState, msgs);
-            if (msgs != null) msgs.dispatch();
-        }
-        else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.PROPERTY__DATA_STATE, newDataState, newDataState));
+            if (msgs != null)
+                msgs.dispatch();
+        } else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.PROPERTY__DATA_STATE, newDataState,
+                    newDataState));
     }
 
     /**
@@ -172,7 +183,9 @@ public class PropertyImpl extends BaseElementImpl implements Property {
         QName oldItemSubjectRef = itemSubjectRef;
         itemSubjectRef = newItemSubjectRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.PROPERTY__ITEM_SUBJECT_REF, oldItemSubjectRef, itemSubjectRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.PROPERTY__ITEM_SUBJECT_REF, oldItemSubjectRef,
+                    itemSubjectRef));
     }
 
     /**
@@ -193,7 +206,8 @@ public class PropertyImpl extends BaseElementImpl implements Property {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.PROPERTY__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.PROPERTY__NAME, oldName, name));
     }
 
     /**
@@ -202,10 +216,11 @@ public class PropertyImpl extends BaseElementImpl implements Property {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.PROPERTY__DATA_STATE:
-                return basicSetDataState(null, msgs);
+        case BpmnPackage.PROPERTY__DATA_STATE:
+            return basicSetDataState(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -218,12 +233,12 @@ public class PropertyImpl extends BaseElementImpl implements Property {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.PROPERTY__DATA_STATE:
-                return getDataState();
-            case bpmnPackage.PROPERTY__ITEM_SUBJECT_REF:
-                return getItemSubjectRef();
-            case bpmnPackage.PROPERTY__NAME:
-                return getName();
+        case BpmnPackage.PROPERTY__DATA_STATE:
+            return getDataState();
+        case BpmnPackage.PROPERTY__ITEM_SUBJECT_REF:
+            return getItemSubjectRef();
+        case BpmnPackage.PROPERTY__NAME:
+            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -236,15 +251,15 @@ public class PropertyImpl extends BaseElementImpl implements Property {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.PROPERTY__DATA_STATE:
-                setDataState((DataState)newValue);
-                return;
-            case bpmnPackage.PROPERTY__ITEM_SUBJECT_REF:
-                setItemSubjectRef((QName)newValue);
-                return;
-            case bpmnPackage.PROPERTY__NAME:
-                setName((String)newValue);
-                return;
+        case BpmnPackage.PROPERTY__DATA_STATE:
+            setDataState((DataState) newValue);
+            return;
+        case BpmnPackage.PROPERTY__ITEM_SUBJECT_REF:
+            setItemSubjectRef((QName) newValue);
+            return;
+        case BpmnPackage.PROPERTY__NAME:
+            setName((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -257,15 +272,15 @@ public class PropertyImpl extends BaseElementImpl implements Property {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.PROPERTY__DATA_STATE:
-                setDataState((DataState)null);
-                return;
-            case bpmnPackage.PROPERTY__ITEM_SUBJECT_REF:
-                setItemSubjectRef(ITEM_SUBJECT_REF_EDEFAULT);
-                return;
-            case bpmnPackage.PROPERTY__NAME:
-                setName(NAME_EDEFAULT);
-                return;
+        case BpmnPackage.PROPERTY__DATA_STATE:
+            setDataState((DataState) null);
+            return;
+        case BpmnPackage.PROPERTY__ITEM_SUBJECT_REF:
+            setItemSubjectRef(ITEM_SUBJECT_REF_EDEFAULT);
+            return;
+        case BpmnPackage.PROPERTY__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -278,12 +293,14 @@ public class PropertyImpl extends BaseElementImpl implements Property {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.PROPERTY__DATA_STATE:
-                return dataState != null;
-            case bpmnPackage.PROPERTY__ITEM_SUBJECT_REF:
-                return ITEM_SUBJECT_REF_EDEFAULT == null ? itemSubjectRef != null : !ITEM_SUBJECT_REF_EDEFAULT.equals(itemSubjectRef);
-            case bpmnPackage.PROPERTY__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case BpmnPackage.PROPERTY__DATA_STATE:
+            return dataState != null;
+        case BpmnPackage.PROPERTY__ITEM_SUBJECT_REF:
+            return ITEM_SUBJECT_REF_EDEFAULT == null ? itemSubjectRef != null
+                    : !ITEM_SUBJECT_REF_EDEFAULT.equals(itemSubjectRef);
+        case BpmnPackage.PROPERTY__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
+                    .equals(name);
         }
         return super.eIsSet(featureID);
     }
@@ -295,7 +312,8 @@ public class PropertyImpl extends BaseElementImpl implements Property {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (itemSubjectRef: "); //$NON-NLS-1$

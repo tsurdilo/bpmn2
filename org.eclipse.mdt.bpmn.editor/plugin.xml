@@ -22,11 +22,11 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="org.eclipse.mdt.bpmn2.presentation.Bpmn2ModelWizardID"
+            id="org.eclipse.mdt.bpmn.presentation.BpmnModelWizardID"
             name="%_UI_Bpmn2ModelWizard_label"
-            class="org.eclipse.mdt.bpmn2.presentation.Bpmn2ModelWizard"
+            class="org.eclipse.mdt.bpmn.presentation.BpmnModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/Bpmn2ModelFile.gif">
+            icon="icons/full/obj16/BpmnModelFile.gif">
          <description>%_UI_Bpmn2ModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
@@ -34,12 +34,12 @@
 
    <extension point="org.eclipse.ui.editors">
       <editor
-            id="org.eclipse.mdt.bpmn2.presentation.Bpmn2EditorID"
+            id="org.eclipse.mdt.bpmn.presentation.BpmnEditorID"
             name="%_UI_Bpmn2Editor_label"
-            icon="icons/full/obj16/Bpmn2ModelFile.gif"
+            icon="icons/full/obj16/BpmnModelFile.gif"
             extensions="bpmn"
-            class="org.eclipse.mdt.bpmn2.presentation.Bpmn2Editor"
-            contributorClass="org.eclipse.mdt.bpmn2.presentation.Bpmn2ActionBarContributor">
+            class="org.eclipse.mdt.bpmn.presentation.BpmnEditor"
+            contributorClass="org.eclipse.mdt.bpmn.presentation.BpmnActionBarContributor">
       </editor>
    </extension>
 

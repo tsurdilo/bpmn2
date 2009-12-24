@@ -8,14 +8,13 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Rendering;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,7 +42,7 @@ public class RenderingImpl extends BaseElementImpl implements Rendering {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getRendering();
+        return BpmnPackage.eINSTANCE.getRendering();
     }
 
 } //RenderingImpl

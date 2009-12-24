@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -30,10 +29,10 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.CallableElement;
 import org.eclipse.mdt.bpmn.InputOutputBinding;
 import org.eclipse.mdt.bpmn.InputOutputSpecification;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -51,7 +50,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class CallableElementImpl extends RootElementImpl implements CallableElement {
+public class CallableElementImpl extends RootElementImpl implements
+        CallableElement {
     /**
      * The cached value of the '{@link #getSupportedInterfaceRef() <em>Supported Interface Ref</em>}' attribute list.
      * <!-- begin-user-doc -->
@@ -118,7 +118,7 @@ public class CallableElementImpl extends RootElementImpl implements CallableElem
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getCallableElement();
+        return BpmnPackage.eINSTANCE.getCallableElement();
     }
 
     /**
@@ -128,7 +128,8 @@ public class CallableElementImpl extends RootElementImpl implements CallableElem
      */
     public EList<QName> getSupportedInterfaceRef() {
         if (supportedInterfaceRef == null) {
-            supportedInterfaceRef = new EDataTypeEList<QName>(QName.class, this, bpmnPackage.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REF);
+            supportedInterfaceRef = new EDataTypeEList<QName>(QName.class,
+                    this, BpmnPackage.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REF);
         }
         return supportedInterfaceRef;
     }
@@ -147,12 +148,19 @@ public class CallableElementImpl extends RootElementImpl implements CallableElem
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetIoSpecification(InputOutputSpecification newIoSpecification, NotificationChain msgs) {
+    public NotificationChain basicSetIoSpecification(
+            InputOutputSpecification newIoSpecification, NotificationChain msgs) {
         InputOutputSpecification oldIoSpecification = ioSpecification;
         ioSpecification = newIoSpecification;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, bpmnPackage.CALLABLE_ELEMENT__IO_SPECIFICATION, oldIoSpecification, newIoSpecification);
-            if (msgs == null) msgs = notification; else msgs.add(notification);
+            ENotificationImpl notification = new ENotificationImpl(this,
+                    Notification.SET,
+                    BpmnPackage.CALLABLE_ELEMENT__IO_SPECIFICATION,
+                    oldIoSpecification, newIoSpecification);
+            if (msgs == null)
+                msgs = notification;
+            else
+                msgs.add(notification);
         }
         return msgs;
     }
@@ -166,14 +174,26 @@ public class CallableElementImpl extends RootElementImpl implements CallableElem
         if (newIoSpecification != ioSpecification) {
             NotificationChain msgs = null;
             if (ioSpecification != null)
-                msgs = ((InternalEObject)ioSpecification).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - bpmnPackage.CALLABLE_ELEMENT__IO_SPECIFICATION, null, msgs);
+                msgs = ((InternalEObject) ioSpecification)
+                        .eInverseRemove(
+                                this,
+                                EOPPOSITE_FEATURE_BASE
+                                        - BpmnPackage.CALLABLE_ELEMENT__IO_SPECIFICATION,
+                                null, msgs);
             if (newIoSpecification != null)
-                msgs = ((InternalEObject)newIoSpecification).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - bpmnPackage.CALLABLE_ELEMENT__IO_SPECIFICATION, null, msgs);
+                msgs = ((InternalEObject) newIoSpecification)
+                        .eInverseAdd(
+                                this,
+                                EOPPOSITE_FEATURE_BASE
+                                        - BpmnPackage.CALLABLE_ELEMENT__IO_SPECIFICATION,
+                                null, msgs);
             msgs = basicSetIoSpecification(newIoSpecification, msgs);
-            if (msgs != null) msgs.dispatch();
-        }
-        else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.CALLABLE_ELEMENT__IO_SPECIFICATION, newIoSpecification, newIoSpecification));
+            if (msgs != null)
+                msgs.dispatch();
+        } else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.CALLABLE_ELEMENT__IO_SPECIFICATION,
+                    newIoSpecification, newIoSpecification));
     }
 
     /**
@@ -183,7 +203,9 @@ public class CallableElementImpl extends RootElementImpl implements CallableElem
      */
     public EList<InputOutputBinding> getIoBinding() {
         if (ioBinding == null) {
-            ioBinding = new EObjectContainmentEList<InputOutputBinding>(InputOutputBinding.class, this, bpmnPackage.CALLABLE_ELEMENT__IO_BINDING);
+            ioBinding = new EObjectContainmentEList<InputOutputBinding>(
+                    InputOutputBinding.class, this,
+                    BpmnPackage.CALLABLE_ELEMENT__IO_BINDING);
         }
         return ioBinding;
     }
@@ -206,7 +228,8 @@ public class CallableElementImpl extends RootElementImpl implements CallableElem
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.CALLABLE_ELEMENT__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.CALLABLE_ELEMENT__NAME, oldName, name));
     }
 
     /**
@@ -215,12 +238,14 @@ public class CallableElementImpl extends RootElementImpl implements CallableElem
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.CALLABLE_ELEMENT__IO_SPECIFICATION:
-                return basicSetIoSpecification(null, msgs);
-            case bpmnPackage.CALLABLE_ELEMENT__IO_BINDING:
-                return ((InternalEList<?>)getIoBinding()).basicRemove(otherEnd, msgs);
+        case BpmnPackage.CALLABLE_ELEMENT__IO_SPECIFICATION:
+            return basicSetIoSpecification(null, msgs);
+        case BpmnPackage.CALLABLE_ELEMENT__IO_BINDING:
+            return ((InternalEList<?>) getIoBinding()).basicRemove(otherEnd,
+                    msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -233,14 +258,14 @@ public class CallableElementImpl extends RootElementImpl implements CallableElem
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REF:
-                return getSupportedInterfaceRef();
-            case bpmnPackage.CALLABLE_ELEMENT__IO_SPECIFICATION:
-                return getIoSpecification();
-            case bpmnPackage.CALLABLE_ELEMENT__IO_BINDING:
-                return getIoBinding();
-            case bpmnPackage.CALLABLE_ELEMENT__NAME:
-                return getName();
+        case BpmnPackage.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REF:
+            return getSupportedInterfaceRef();
+        case BpmnPackage.CALLABLE_ELEMENT__IO_SPECIFICATION:
+            return getIoSpecification();
+        case BpmnPackage.CALLABLE_ELEMENT__IO_BINDING:
+            return getIoBinding();
+        case BpmnPackage.CALLABLE_ELEMENT__NAME:
+            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -254,20 +279,22 @@ public class CallableElementImpl extends RootElementImpl implements CallableElem
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REF:
-                getSupportedInterfaceRef().clear();
-                getSupportedInterfaceRef().addAll((Collection<? extends QName>)newValue);
-                return;
-            case bpmnPackage.CALLABLE_ELEMENT__IO_SPECIFICATION:
-                setIoSpecification((InputOutputSpecification)newValue);
-                return;
-            case bpmnPackage.CALLABLE_ELEMENT__IO_BINDING:
-                getIoBinding().clear();
-                getIoBinding().addAll((Collection<? extends InputOutputBinding>)newValue);
-                return;
-            case bpmnPackage.CALLABLE_ELEMENT__NAME:
-                setName((String)newValue);
-                return;
+        case BpmnPackage.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REF:
+            getSupportedInterfaceRef().clear();
+            getSupportedInterfaceRef().addAll(
+                    (Collection<? extends QName>) newValue);
+            return;
+        case BpmnPackage.CALLABLE_ELEMENT__IO_SPECIFICATION:
+            setIoSpecification((InputOutputSpecification) newValue);
+            return;
+        case BpmnPackage.CALLABLE_ELEMENT__IO_BINDING:
+            getIoBinding().clear();
+            getIoBinding().addAll(
+                    (Collection<? extends InputOutputBinding>) newValue);
+            return;
+        case BpmnPackage.CALLABLE_ELEMENT__NAME:
+            setName((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -280,18 +307,18 @@ public class CallableElementImpl extends RootElementImpl implements CallableElem
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REF:
-                getSupportedInterfaceRef().clear();
-                return;
-            case bpmnPackage.CALLABLE_ELEMENT__IO_SPECIFICATION:
-                setIoSpecification((InputOutputSpecification)null);
-                return;
-            case bpmnPackage.CALLABLE_ELEMENT__IO_BINDING:
-                getIoBinding().clear();
-                return;
-            case bpmnPackage.CALLABLE_ELEMENT__NAME:
-                setName(NAME_EDEFAULT);
-                return;
+        case BpmnPackage.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REF:
+            getSupportedInterfaceRef().clear();
+            return;
+        case BpmnPackage.CALLABLE_ELEMENT__IO_SPECIFICATION:
+            setIoSpecification((InputOutputSpecification) null);
+            return;
+        case BpmnPackage.CALLABLE_ELEMENT__IO_BINDING:
+            getIoBinding().clear();
+            return;
+        case BpmnPackage.CALLABLE_ELEMENT__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -304,14 +331,16 @@ public class CallableElementImpl extends RootElementImpl implements CallableElem
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REF:
-                return supportedInterfaceRef != null && !supportedInterfaceRef.isEmpty();
-            case bpmnPackage.CALLABLE_ELEMENT__IO_SPECIFICATION:
-                return ioSpecification != null;
-            case bpmnPackage.CALLABLE_ELEMENT__IO_BINDING:
-                return ioBinding != null && !ioBinding.isEmpty();
-            case bpmnPackage.CALLABLE_ELEMENT__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case BpmnPackage.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REF:
+            return supportedInterfaceRef != null
+                    && !supportedInterfaceRef.isEmpty();
+        case BpmnPackage.CALLABLE_ELEMENT__IO_SPECIFICATION:
+            return ioSpecification != null;
+        case BpmnPackage.CALLABLE_ELEMENT__IO_BINDING:
+            return ioBinding != null && !ioBinding.isEmpty();
+        case BpmnPackage.CALLABLE_ELEMENT__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
+                    .equals(name);
         }
         return super.eIsSet(featureID);
     }
@@ -323,7 +352,8 @@ public class CallableElementImpl extends RootElementImpl implements CallableElem
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (supportedInterfaceRef: "); //$NON-NLS-1$

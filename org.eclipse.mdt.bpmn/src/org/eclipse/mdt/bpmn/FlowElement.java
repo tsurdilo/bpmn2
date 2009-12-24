@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -31,7 +30,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getFlowElement()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getFlowElement()
  * @model abstract="true"
  *        extendedMetaData="name='tFlowElement' kind='elementOnly'"
  * @generated
@@ -47,7 +46,7 @@ public interface FlowElement extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Auditing</em>' containment reference.
      * @see #setAuditing(Auditing)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getFlowElement_Auditing()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getFlowElement_Auditing()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='auditing' namespace='##targetNamespace'"
      * @generated
@@ -74,7 +73,7 @@ public interface FlowElement extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Monitoring</em>' containment reference.
      * @see #setMonitoring(Monitoring)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getFlowElement_Monitoring()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getFlowElement_Monitoring()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='monitoring' namespace='##targetNamespace'"
      * @generated
@@ -101,7 +100,7 @@ public interface FlowElement extends BaseElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Category Value Ref</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getFlowElement_CategoryValueRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getFlowElement_CategoryValueRef()
      * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='element' name='categoryValueRef' namespace='##targetNamespace'"
      * @generated
@@ -118,7 +117,7 @@ public interface FlowElement extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getFlowElement_Name()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getFlowElement_Name()
      * @model dataType="org.eclipse.emf.ecore.xml.type.String"
      *        extendedMetaData="kind='attribute' name='name'"
      * @generated

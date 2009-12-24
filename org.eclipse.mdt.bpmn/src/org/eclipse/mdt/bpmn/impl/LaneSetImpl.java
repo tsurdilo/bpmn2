@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -24,9 +23,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Lane;
 import org.eclipse.mdt.bpmn.LaneSet;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -68,7 +67,7 @@ public class LaneSetImpl extends BaseElementImpl implements LaneSet {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getLaneSet();
+        return BpmnPackage.eINSTANCE.getLaneSet();
     }
 
     /**
@@ -78,7 +77,8 @@ public class LaneSetImpl extends BaseElementImpl implements LaneSet {
      */
     public EList<Lane> getLane() {
         if (lane == null) {
-            lane = new EObjectContainmentEList<Lane>(Lane.class, this, bpmnPackage.LANE_SET__LANE);
+            lane = new EObjectContainmentEList<Lane>(Lane.class, this,
+                    BpmnPackage.LANE_SET__LANE);
         }
         return lane;
     }
@@ -89,10 +89,11 @@ public class LaneSetImpl extends BaseElementImpl implements LaneSet {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.LANE_SET__LANE:
-                return ((InternalEList<?>)getLane()).basicRemove(otherEnd, msgs);
+        case BpmnPackage.LANE_SET__LANE:
+            return ((InternalEList<?>) getLane()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -105,8 +106,8 @@ public class LaneSetImpl extends BaseElementImpl implements LaneSet {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.LANE_SET__LANE:
-                return getLane();
+        case BpmnPackage.LANE_SET__LANE:
+            return getLane();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -120,10 +121,10 @@ public class LaneSetImpl extends BaseElementImpl implements LaneSet {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.LANE_SET__LANE:
-                getLane().clear();
-                getLane().addAll((Collection<? extends Lane>)newValue);
-                return;
+        case BpmnPackage.LANE_SET__LANE:
+            getLane().clear();
+            getLane().addAll((Collection<? extends Lane>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -136,9 +137,9 @@ public class LaneSetImpl extends BaseElementImpl implements LaneSet {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.LANE_SET__LANE:
-                getLane().clear();
-                return;
+        case BpmnPackage.LANE_SET__LANE:
+            getLane().clear();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -151,8 +152,8 @@ public class LaneSetImpl extends BaseElementImpl implements LaneSet {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.LANE_SET__LANE:
-                return lane != null && !lane.isEmpty();
+        case BpmnPackage.LANE_SET__LANE:
+            return lane != null && !lane.isEmpty();
         }
         return super.eIsSet(featureID);
     }

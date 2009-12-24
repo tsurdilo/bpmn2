@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.util;
 
@@ -29,6 +28,7 @@ import org.eclipse.mdt.bpmn.Auditing;
 import org.eclipse.mdt.bpmn.BaseElement;
 import org.eclipse.mdt.bpmn.BaseElementWithMixedContent;
 import org.eclipse.mdt.bpmn.BoundaryEvent;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.BusinessRuleTask;
 import org.eclipse.mdt.bpmn.CallActivity;
 import org.eclipse.mdt.bpmn.CallChoreographyActivity;
@@ -151,24 +151,23 @@ import org.eclipse.mdt.bpmn.ThrowEvent;
 import org.eclipse.mdt.bpmn.TimerEventDefinition;
 import org.eclipse.mdt.bpmn.Transaction;
 import org.eclipse.mdt.bpmn.UserTask;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.mdt.bpmn.bpmnPackage
+ * @see org.eclipse.mdt.bpmn.BpmnPackage
  * @generated
  */
-public class bpmnAdapterFactory extends AdapterFactoryImpl {
+public class BpmnAdapterFactory extends AdapterFactoryImpl {
     /**
      * The cached model package.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected static bpmnPackage modelPackage;
+    protected static BpmnPackage modelPackage;
 
     /**
      * Creates an instance of the adapter factory.
@@ -176,9 +175,9 @@ public class bpmnAdapterFactory extends AdapterFactoryImpl {
      * <!-- end-user-doc -->
      * @generated
      */
-    public bpmnAdapterFactory() {
+    public BpmnAdapterFactory() {
         if (modelPackage == null) {
-            modelPackage = bpmnPackage.eINSTANCE;
+            modelPackage = BpmnPackage.eINSTANCE;
         }
     }
 
@@ -196,7 +195,7 @@ public class bpmnAdapterFactory extends AdapterFactoryImpl {
             return true;
         }
         if (object instanceof EObject) {
-            return ((EObject)object).eClass().getEPackage() == modelPackage;
+            return ((EObject) object).eClass().getEPackage() == modelPackage;
         }
         return false;
     }
@@ -207,549 +206,699 @@ public class bpmnAdapterFactory extends AdapterFactoryImpl {
      * <!-- end-user-doc -->
      * @generated
      */
-    protected bpmnSwitch<Adapter> modelSwitch =
-        new bpmnSwitch<Adapter>() {
-            @Override
-            public Adapter caseDocumentRoot(DocumentRoot object) {
-                return createDocumentRootAdapter();
-            }
-            @Override
-            public Adapter caseActivity(Activity object) {
-                return createActivityAdapter();
-            }
-            @Override
-            public Adapter caseActivityResource(ActivityResource object) {
-                return createActivityResourceAdapter();
-            }
-            @Override
-            public Adapter caseAdHocSubProcess(AdHocSubProcess object) {
-                return createAdHocSubProcessAdapter();
-            }
-            @Override
-            public Adapter caseArtifact(Artifact object) {
-                return createArtifactAdapter();
-            }
-            @Override
-            public Adapter caseAssignment(Assignment object) {
-                return createAssignmentAdapter();
-            }
-            @Override
-            public Adapter caseAssociation(Association object) {
-                return createAssociationAdapter();
-            }
-            @Override
-            public Adapter caseAuditing(Auditing object) {
-                return createAuditingAdapter();
-            }
-            @Override
-            public Adapter caseBaseElement(BaseElement object) {
-                return createBaseElementAdapter();
-            }
-            @Override
-            public Adapter caseBaseElementWithMixedContent(BaseElementWithMixedContent object) {
-                return createBaseElementWithMixedContentAdapter();
-            }
-            @Override
-            public Adapter caseBoundaryEvent(BoundaryEvent object) {
-                return createBoundaryEventAdapter();
-            }
-            @Override
-            public Adapter caseBusinessRuleTask(BusinessRuleTask object) {
-                return createBusinessRuleTaskAdapter();
-            }
-            @Override
-            public Adapter caseCallableElement(CallableElement object) {
-                return createCallableElementAdapter();
-            }
-            @Override
-            public Adapter caseCallActivity(CallActivity object) {
-                return createCallActivityAdapter();
-            }
-            @Override
-            public Adapter caseCallChoreographyActivity(CallChoreographyActivity object) {
-                return createCallChoreographyActivityAdapter();
-            }
-            @Override
-            public Adapter caseCallConversation(CallConversation object) {
-                return createCallConversationAdapter();
-            }
-            @Override
-            public Adapter caseCancelEventDefinition(CancelEventDefinition object) {
-                return createCancelEventDefinitionAdapter();
-            }
-            @Override
-            public Adapter caseCatchEvent(CatchEvent object) {
-                return createCatchEventAdapter();
-            }
-            @Override
-            public Adapter caseCategory(Category object) {
-                return createCategoryAdapter();
-            }
-            @Override
-            public Adapter caseCategoryValue(CategoryValue object) {
-                return createCategoryValueAdapter();
-            }
-            @Override
-            public Adapter caseChoreography(Choreography object) {
-                return createChoreographyAdapter();
-            }
-            @Override
-            public Adapter caseChoreographyActivity(ChoreographyActivity object) {
-                return createChoreographyActivityAdapter();
-            }
-            @Override
-            public Adapter caseChoreographySubProcess(ChoreographySubProcess object) {
-                return createChoreographySubProcessAdapter();
-            }
-            @Override
-            public Adapter caseChoreographyTask(ChoreographyTask object) {
-                return createChoreographyTaskAdapter();
-            }
-            @Override
-            public Adapter caseCollaboration(Collaboration object) {
-                return createCollaborationAdapter();
-            }
-            @Override
-            public Adapter caseCommunication(Communication object) {
-                return createCommunicationAdapter();
-            }
-            @Override
-            public Adapter caseCompensateEventDefinition(CompensateEventDefinition object) {
-                return createCompensateEventDefinitionAdapter();
-            }
-            @Override
-            public Adapter caseComplexBehaviorDefinition(ComplexBehaviorDefinition object) {
-                return createComplexBehaviorDefinitionAdapter();
-            }
-            @Override
-            public Adapter caseComplexGateway(ComplexGateway object) {
-                return createComplexGatewayAdapter();
-            }
-            @Override
-            public Adapter caseConditionalEventDefinition(ConditionalEventDefinition object) {
-                return createConditionalEventDefinitionAdapter();
-            }
-            @Override
-            public Adapter caseConversation(Conversation object) {
-                return createConversationAdapter();
-            }
-            @Override
-            public Adapter caseConversationAssociation(ConversationAssociation object) {
-                return createConversationAssociationAdapter();
-            }
-            @Override
-            public Adapter caseConversationNode(ConversationNode object) {
-                return createConversationNodeAdapter();
-            }
-            @Override
-            public Adapter caseCorrelationKey(CorrelationKey object) {
-                return createCorrelationKeyAdapter();
-            }
-            @Override
-            public Adapter caseCorrelationProperty(CorrelationProperty object) {
-                return createCorrelationPropertyAdapter();
-            }
-            @Override
-            public Adapter caseCorrelationPropertyBinding(CorrelationPropertyBinding object) {
-                return createCorrelationPropertyBindingAdapter();
-            }
-            @Override
-            public Adapter caseCorrelationPropertyRetrievalExpression(CorrelationPropertyRetrievalExpression object) {
-                return createCorrelationPropertyRetrievalExpressionAdapter();
-            }
-            @Override
-            public Adapter caseCorrelationSubscription(CorrelationSubscription object) {
-                return createCorrelationSubscriptionAdapter();
-            }
-            @Override
-            public Adapter caseDataAssociation(DataAssociation object) {
-                return createDataAssociationAdapter();
-            }
-            @Override
-            public Adapter caseDataInput(DataInput object) {
-                return createDataInputAdapter();
-            }
-            @Override
-            public Adapter caseDataInputAssociation(DataInputAssociation object) {
-                return createDataInputAssociationAdapter();
-            }
-            @Override
-            public Adapter caseDataObject(DataObject object) {
-                return createDataObjectAdapter();
-            }
-            @Override
-            public Adapter caseDataOutput(DataOutput object) {
-                return createDataOutputAdapter();
-            }
-            @Override
-            public Adapter caseDataOutputAssociation(DataOutputAssociation object) {
-                return createDataOutputAssociationAdapter();
-            }
-            @Override
-            public Adapter caseDataState(DataState object) {
-                return createDataStateAdapter();
-            }
-            @Override
-            public Adapter caseDataStore(DataStore object) {
-                return createDataStoreAdapter();
-            }
-            @Override
-            public Adapter caseDataStoreReference(DataStoreReference object) {
-                return createDataStoreReferenceAdapter();
-            }
-            @Override
-            public Adapter caseDefinitions(Definitions object) {
-                return createDefinitionsAdapter();
-            }
-            @Override
-            public Adapter caseDocumentation(Documentation object) {
-                return createDocumentationAdapter();
-            }
-            @Override
-            public Adapter caseEndEvent(EndEvent object) {
-                return createEndEventAdapter();
-            }
-            @Override
-            public Adapter caseEndPoint(EndPoint object) {
-                return createEndPointAdapter();
-            }
-            @Override
-            public Adapter caseError(org.eclipse.mdt.bpmn.Error object) {
-                return createErrorAdapter();
-            }
-            @Override
-            public Adapter caseErrorEventDefinition(ErrorEventDefinition object) {
-                return createErrorEventDefinitionAdapter();
-            }
-            @Override
-            public Adapter caseEscalation(Escalation object) {
-                return createEscalationAdapter();
-            }
-            @Override
-            public Adapter caseEscalationEventDefinition(EscalationEventDefinition object) {
-                return createEscalationEventDefinitionAdapter();
-            }
-            @Override
-            public Adapter caseEvent(Event object) {
-                return createEventAdapter();
-            }
-            @Override
-            public Adapter caseEventBasedGateway(EventBasedGateway object) {
-                return createEventBasedGatewayAdapter();
-            }
-            @Override
-            public Adapter caseEventDefinition(EventDefinition object) {
-                return createEventDefinitionAdapter();
-            }
-            @Override
-            public Adapter caseExclusiveGateway(ExclusiveGateway object) {
-                return createExclusiveGatewayAdapter();
-            }
-            @Override
-            public Adapter caseExpression(Expression object) {
-                return createExpressionAdapter();
-            }
-            @Override
-            public Adapter caseExtension(Extension object) {
-                return createExtensionAdapter();
-            }
-            @Override
-            public Adapter caseFlowElement(FlowElement object) {
-                return createFlowElementAdapter();
-            }
-            @Override
-            public Adapter caseFlowNode(FlowNode object) {
-                return createFlowNodeAdapter();
-            }
-            @Override
-            public Adapter caseFormalExpression(FormalExpression object) {
-                return createFormalExpressionAdapter();
-            }
-            @Override
-            public Adapter caseGateway(Gateway object) {
-                return createGatewayAdapter();
-            }
-            @Override
-            public Adapter caseGlobalBusinessRuleTask(GlobalBusinessRuleTask object) {
-                return createGlobalBusinessRuleTaskAdapter();
-            }
-            @Override
-            public Adapter caseGlobalChoreographyTask(GlobalChoreographyTask object) {
-                return createGlobalChoreographyTaskAdapter();
-            }
-            @Override
-            public Adapter caseGlobalCommunication(GlobalCommunication object) {
-                return createGlobalCommunicationAdapter();
-            }
-            @Override
-            public Adapter caseGlobalManualTask(GlobalManualTask object) {
-                return createGlobalManualTaskAdapter();
-            }
-            @Override
-            public Adapter caseGlobalScriptTask(GlobalScriptTask object) {
-                return createGlobalScriptTaskAdapter();
-            }
-            @Override
-            public Adapter caseGlobalTask(GlobalTask object) {
-                return createGlobalTaskAdapter();
-            }
-            @Override
-            public Adapter caseGlobalUserTask(GlobalUserTask object) {
-                return createGlobalUserTaskAdapter();
-            }
-            @Override
-            public Adapter caseGroup(Group object) {
-                return createGroupAdapter();
-            }
-            @Override
-            public Adapter caseHumanPerformer(HumanPerformer object) {
-                return createHumanPerformerAdapter();
-            }
-            @Override
-            public Adapter caseImplicitThrowEvent(ImplicitThrowEvent object) {
-                return createImplicitThrowEventAdapter();
-            }
-            @Override
-            public Adapter caseImport(Import object) {
-                return createImportAdapter();
-            }
-            @Override
-            public Adapter caseInclusiveGateway(InclusiveGateway object) {
-                return createInclusiveGatewayAdapter();
-            }
-            @Override
-            public Adapter caseInputOutputBinding(InputOutputBinding object) {
-                return createInputOutputBindingAdapter();
-            }
-            @Override
-            public Adapter caseInputOutputSpecification(InputOutputSpecification object) {
-                return createInputOutputSpecificationAdapter();
-            }
-            @Override
-            public Adapter caseInputSet(InputSet object) {
-                return createInputSetAdapter();
-            }
-            @Override
-            public Adapter caseInterface(Interface object) {
-                return createInterfaceAdapter();
-            }
-            @Override
-            public Adapter caseIntermediateCatchEvent(IntermediateCatchEvent object) {
-                return createIntermediateCatchEventAdapter();
-            }
-            @Override
-            public Adapter caseIntermediateThrowEvent(IntermediateThrowEvent object) {
-                return createIntermediateThrowEventAdapter();
-            }
-            @Override
-            public Adapter caseItemDefinition(ItemDefinition object) {
-                return createItemDefinitionAdapter();
-            }
-            @Override
-            public Adapter caseLane(Lane object) {
-                return createLaneAdapter();
-            }
-            @Override
-            public Adapter caseLaneSet(LaneSet object) {
-                return createLaneSetAdapter();
-            }
-            @Override
-            public Adapter caseLinkEventDefinition(LinkEventDefinition object) {
-                return createLinkEventDefinitionAdapter();
-            }
-            @Override
-            public Adapter caseLoopCharacteristics(LoopCharacteristics object) {
-                return createLoopCharacteristicsAdapter();
-            }
-            @Override
-            public Adapter caseManualTask(ManualTask object) {
-                return createManualTaskAdapter();
-            }
-            @Override
-            public Adapter caseMessage(Message object) {
-                return createMessageAdapter();
-            }
-            @Override
-            public Adapter caseMessageEventDefinition(MessageEventDefinition object) {
-                return createMessageEventDefinitionAdapter();
-            }
-            @Override
-            public Adapter caseMessageFlow(MessageFlow object) {
-                return createMessageFlowAdapter();
-            }
-            @Override
-            public Adapter caseMessageFlowAssociation(MessageFlowAssociation object) {
-                return createMessageFlowAssociationAdapter();
-            }
-            @Override
-            public Adapter caseMonitoring(Monitoring object) {
-                return createMonitoringAdapter();
-            }
-            @Override
-            public Adapter caseMultiInstanceLoopCharacteristics(MultiInstanceLoopCharacteristics object) {
-                return createMultiInstanceLoopCharacteristicsAdapter();
-            }
-            @Override
-            public Adapter caseOperation(Operation object) {
-                return createOperationAdapter();
-            }
-            @Override
-            public Adapter caseOutputSet(OutputSet object) {
-                return createOutputSetAdapter();
-            }
-            @Override
-            public Adapter caseParallelGateway(ParallelGateway object) {
-                return createParallelGatewayAdapter();
-            }
-            @Override
-            public Adapter caseParticipant(Participant object) {
-                return createParticipantAdapter();
-            }
-            @Override
-            public Adapter caseParticipantAssociation(ParticipantAssociation object) {
-                return createParticipantAssociationAdapter();
-            }
-            @Override
-            public Adapter caseParticipantMultiplicity(ParticipantMultiplicity object) {
-                return createParticipantMultiplicityAdapter();
-            }
-            @Override
-            public Adapter casePartnerEntity(PartnerEntity object) {
-                return createPartnerEntityAdapter();
-            }
-            @Override
-            public Adapter casePartnerRole(PartnerRole object) {
-                return createPartnerRoleAdapter();
-            }
-            @Override
-            public Adapter casePerformer(Performer object) {
-                return createPerformerAdapter();
-            }
-            @Override
-            public Adapter casePotentialOwner(PotentialOwner object) {
-                return createPotentialOwnerAdapter();
-            }
-            @Override
-            public Adapter caseProcess(org.eclipse.mdt.bpmn.Process object) {
-                return createProcessAdapter();
-            }
-            @Override
-            public Adapter caseProperty(Property object) {
-                return createPropertyAdapter();
-            }
-            @Override
-            public Adapter caseReceiveTask(ReceiveTask object) {
-                return createReceiveTaskAdapter();
-            }
-            @Override
-            public Adapter caseRelationship(Relationship object) {
-                return createRelationshipAdapter();
-            }
-            @Override
-            public Adapter caseRendering(Rendering object) {
-                return createRenderingAdapter();
-            }
-            @Override
-            public Adapter caseResource(Resource object) {
-                return createResourceAdapter();
-            }
-            @Override
-            public Adapter caseResourceAssignmentExpression(ResourceAssignmentExpression object) {
-                return createResourceAssignmentExpressionAdapter();
-            }
-            @Override
-            public Adapter caseResourceParameter(ResourceParameter object) {
-                return createResourceParameterAdapter();
-            }
-            @Override
-            public Adapter caseResourceParameterBinding(ResourceParameterBinding object) {
-                return createResourceParameterBindingAdapter();
-            }
-            @Override
-            public Adapter caseRootElement(RootElement object) {
-                return createRootElementAdapter();
-            }
-            @Override
-            public Adapter caseScript(Script object) {
-                return createScriptAdapter();
-            }
-            @Override
-            public Adapter caseScriptTask(ScriptTask object) {
-                return createScriptTaskAdapter();
-            }
-            @Override
-            public Adapter caseSendTask(SendTask object) {
-                return createSendTaskAdapter();
-            }
-            @Override
-            public Adapter caseSequenceFlow(SequenceFlow object) {
-                return createSequenceFlowAdapter();
-            }
-            @Override
-            public Adapter caseServiceTask(ServiceTask object) {
-                return createServiceTaskAdapter();
-            }
-            @Override
-            public Adapter caseSignal(Signal object) {
-                return createSignalAdapter();
-            }
-            @Override
-            public Adapter caseSignalEventDefinition(SignalEventDefinition object) {
-                return createSignalEventDefinitionAdapter();
-            }
-            @Override
-            public Adapter caseStandardLoopCharacteristics(StandardLoopCharacteristics object) {
-                return createStandardLoopCharacteristicsAdapter();
-            }
-            @Override
-            public Adapter caseStartEvent(StartEvent object) {
-                return createStartEventAdapter();
-            }
-            @Override
-            public Adapter caseSubConversation(SubConversation object) {
-                return createSubConversationAdapter();
-            }
-            @Override
-            public Adapter caseSubProcess(SubProcess object) {
-                return createSubProcessAdapter();
-            }
-            @Override
-            public Adapter caseTask(Task object) {
-                return createTaskAdapter();
-            }
-            @Override
-            public Adapter caseTerminateEventDefinition(TerminateEventDefinition object) {
-                return createTerminateEventDefinitionAdapter();
-            }
-            @Override
-            public Adapter caseText(Text object) {
-                return createTextAdapter();
-            }
-            @Override
-            public Adapter caseTextAnnotation(TextAnnotation object) {
-                return createTextAnnotationAdapter();
-            }
-            @Override
-            public Adapter caseThrowEvent(ThrowEvent object) {
-                return createThrowEventAdapter();
-            }
-            @Override
-            public Adapter caseTimerEventDefinition(TimerEventDefinition object) {
-                return createTimerEventDefinitionAdapter();
-            }
-            @Override
-            public Adapter caseTransaction(Transaction object) {
-                return createTransactionAdapter();
-            }
-            @Override
-            public Adapter caseUserTask(UserTask object) {
-                return createUserTaskAdapter();
-            }
-            @Override
-            public Adapter defaultCase(EObject object) {
-                return createEObjectAdapter();
-            }
-        };
+    protected BpmnSwitch<Adapter> modelSwitch = new BpmnSwitch<Adapter>() {
+        @Override
+        public Adapter caseDocumentRoot(DocumentRoot object) {
+            return createDocumentRootAdapter();
+        }
+
+        @Override
+        public Adapter caseActivity(Activity object) {
+            return createActivityAdapter();
+        }
+
+        @Override
+        public Adapter caseActivityResource(ActivityResource object) {
+            return createActivityResourceAdapter();
+        }
+
+        @Override
+        public Adapter caseAdHocSubProcess(AdHocSubProcess object) {
+            return createAdHocSubProcessAdapter();
+        }
+
+        @Override
+        public Adapter caseArtifact(Artifact object) {
+            return createArtifactAdapter();
+        }
+
+        @Override
+        public Adapter caseAssignment(Assignment object) {
+            return createAssignmentAdapter();
+        }
+
+        @Override
+        public Adapter caseAssociation(Association object) {
+            return createAssociationAdapter();
+        }
+
+        @Override
+        public Adapter caseAuditing(Auditing object) {
+            return createAuditingAdapter();
+        }
+
+        @Override
+        public Adapter caseBaseElement(BaseElement object) {
+            return createBaseElementAdapter();
+        }
+
+        @Override
+        public Adapter caseBaseElementWithMixedContent(
+                BaseElementWithMixedContent object) {
+            return createBaseElementWithMixedContentAdapter();
+        }
+
+        @Override
+        public Adapter caseBoundaryEvent(BoundaryEvent object) {
+            return createBoundaryEventAdapter();
+        }
+
+        @Override
+        public Adapter caseBusinessRuleTask(BusinessRuleTask object) {
+            return createBusinessRuleTaskAdapter();
+        }
+
+        @Override
+        public Adapter caseCallableElement(CallableElement object) {
+            return createCallableElementAdapter();
+        }
+
+        @Override
+        public Adapter caseCallActivity(CallActivity object) {
+            return createCallActivityAdapter();
+        }
+
+        @Override
+        public Adapter caseCallChoreographyActivity(
+                CallChoreographyActivity object) {
+            return createCallChoreographyActivityAdapter();
+        }
+
+        @Override
+        public Adapter caseCallConversation(CallConversation object) {
+            return createCallConversationAdapter();
+        }
+
+        @Override
+        public Adapter caseCancelEventDefinition(CancelEventDefinition object) {
+            return createCancelEventDefinitionAdapter();
+        }
+
+        @Override
+        public Adapter caseCatchEvent(CatchEvent object) {
+            return createCatchEventAdapter();
+        }
+
+        @Override
+        public Adapter caseCategory(Category object) {
+            return createCategoryAdapter();
+        }
+
+        @Override
+        public Adapter caseCategoryValue(CategoryValue object) {
+            return createCategoryValueAdapter();
+        }
+
+        @Override
+        public Adapter caseChoreography(Choreography object) {
+            return createChoreographyAdapter();
+        }
+
+        @Override
+        public Adapter caseChoreographyActivity(ChoreographyActivity object) {
+            return createChoreographyActivityAdapter();
+        }
+
+        @Override
+        public Adapter caseChoreographySubProcess(ChoreographySubProcess object) {
+            return createChoreographySubProcessAdapter();
+        }
+
+        @Override
+        public Adapter caseChoreographyTask(ChoreographyTask object) {
+            return createChoreographyTaskAdapter();
+        }
+
+        @Override
+        public Adapter caseCollaboration(Collaboration object) {
+            return createCollaborationAdapter();
+        }
+
+        @Override
+        public Adapter caseCommunication(Communication object) {
+            return createCommunicationAdapter();
+        }
+
+        @Override
+        public Adapter caseCompensateEventDefinition(
+                CompensateEventDefinition object) {
+            return createCompensateEventDefinitionAdapter();
+        }
+
+        @Override
+        public Adapter caseComplexBehaviorDefinition(
+                ComplexBehaviorDefinition object) {
+            return createComplexBehaviorDefinitionAdapter();
+        }
+
+        @Override
+        public Adapter caseComplexGateway(ComplexGateway object) {
+            return createComplexGatewayAdapter();
+        }
+
+        @Override
+        public Adapter caseConditionalEventDefinition(
+                ConditionalEventDefinition object) {
+            return createConditionalEventDefinitionAdapter();
+        }
+
+        @Override
+        public Adapter caseConversation(Conversation object) {
+            return createConversationAdapter();
+        }
+
+        @Override
+        public Adapter caseConversationAssociation(
+                ConversationAssociation object) {
+            return createConversationAssociationAdapter();
+        }
+
+        @Override
+        public Adapter caseConversationNode(ConversationNode object) {
+            return createConversationNodeAdapter();
+        }
+
+        @Override
+        public Adapter caseCorrelationKey(CorrelationKey object) {
+            return createCorrelationKeyAdapter();
+        }
+
+        @Override
+        public Adapter caseCorrelationProperty(CorrelationProperty object) {
+            return createCorrelationPropertyAdapter();
+        }
+
+        @Override
+        public Adapter caseCorrelationPropertyBinding(
+                CorrelationPropertyBinding object) {
+            return createCorrelationPropertyBindingAdapter();
+        }
+
+        @Override
+        public Adapter caseCorrelationPropertyRetrievalExpression(
+                CorrelationPropertyRetrievalExpression object) {
+            return createCorrelationPropertyRetrievalExpressionAdapter();
+        }
+
+        @Override
+        public Adapter caseCorrelationSubscription(
+                CorrelationSubscription object) {
+            return createCorrelationSubscriptionAdapter();
+        }
+
+        @Override
+        public Adapter caseDataAssociation(DataAssociation object) {
+            return createDataAssociationAdapter();
+        }
+
+        @Override
+        public Adapter caseDataInput(DataInput object) {
+            return createDataInputAdapter();
+        }
+
+        @Override
+        public Adapter caseDataInputAssociation(DataInputAssociation object) {
+            return createDataInputAssociationAdapter();
+        }
+
+        @Override
+        public Adapter caseDataObject(DataObject object) {
+            return createDataObjectAdapter();
+        }
+
+        @Override
+        public Adapter caseDataOutput(DataOutput object) {
+            return createDataOutputAdapter();
+        }
+
+        @Override
+        public Adapter caseDataOutputAssociation(DataOutputAssociation object) {
+            return createDataOutputAssociationAdapter();
+        }
+
+        @Override
+        public Adapter caseDataState(DataState object) {
+            return createDataStateAdapter();
+        }
+
+        @Override
+        public Adapter caseDataStore(DataStore object) {
+            return createDataStoreAdapter();
+        }
+
+        @Override
+        public Adapter caseDataStoreReference(DataStoreReference object) {
+            return createDataStoreReferenceAdapter();
+        }
+
+        @Override
+        public Adapter caseDefinitions(Definitions object) {
+            return createDefinitionsAdapter();
+        }
+
+        @Override
+        public Adapter caseDocumentation(Documentation object) {
+            return createDocumentationAdapter();
+        }
+
+        @Override
+        public Adapter caseEndEvent(EndEvent object) {
+            return createEndEventAdapter();
+        }
+
+        @Override
+        public Adapter caseEndPoint(EndPoint object) {
+            return createEndPointAdapter();
+        }
+
+        @Override
+        public Adapter caseError(org.eclipse.mdt.bpmn.Error object) {
+            return createErrorAdapter();
+        }
+
+        @Override
+        public Adapter caseErrorEventDefinition(ErrorEventDefinition object) {
+            return createErrorEventDefinitionAdapter();
+        }
+
+        @Override
+        public Adapter caseEscalation(Escalation object) {
+            return createEscalationAdapter();
+        }
+
+        @Override
+        public Adapter caseEscalationEventDefinition(
+                EscalationEventDefinition object) {
+            return createEscalationEventDefinitionAdapter();
+        }
+
+        @Override
+        public Adapter caseEvent(Event object) {
+            return createEventAdapter();
+        }
+
+        @Override
+        public Adapter caseEventBasedGateway(EventBasedGateway object) {
+            return createEventBasedGatewayAdapter();
+        }
+
+        @Override
+        public Adapter caseEventDefinition(EventDefinition object) {
+            return createEventDefinitionAdapter();
+        }
+
+        @Override
+        public Adapter caseExclusiveGateway(ExclusiveGateway object) {
+            return createExclusiveGatewayAdapter();
+        }
+
+        @Override
+        public Adapter caseExpression(Expression object) {
+            return createExpressionAdapter();
+        }
+
+        @Override
+        public Adapter caseExtension(Extension object) {
+            return createExtensionAdapter();
+        }
+
+        @Override
+        public Adapter caseFlowElement(FlowElement object) {
+            return createFlowElementAdapter();
+        }
+
+        @Override
+        public Adapter caseFlowNode(FlowNode object) {
+            return createFlowNodeAdapter();
+        }
+
+        @Override
+        public Adapter caseFormalExpression(FormalExpression object) {
+            return createFormalExpressionAdapter();
+        }
+
+        @Override
+        public Adapter caseGateway(Gateway object) {
+            return createGatewayAdapter();
+        }
+
+        @Override
+        public Adapter caseGlobalBusinessRuleTask(GlobalBusinessRuleTask object) {
+            return createGlobalBusinessRuleTaskAdapter();
+        }
+
+        @Override
+        public Adapter caseGlobalChoreographyTask(GlobalChoreographyTask object) {
+            return createGlobalChoreographyTaskAdapter();
+        }
+
+        @Override
+        public Adapter caseGlobalCommunication(GlobalCommunication object) {
+            return createGlobalCommunicationAdapter();
+        }
+
+        @Override
+        public Adapter caseGlobalManualTask(GlobalManualTask object) {
+            return createGlobalManualTaskAdapter();
+        }
+
+        @Override
+        public Adapter caseGlobalScriptTask(GlobalScriptTask object) {
+            return createGlobalScriptTaskAdapter();
+        }
+
+        @Override
+        public Adapter caseGlobalTask(GlobalTask object) {
+            return createGlobalTaskAdapter();
+        }
+
+        @Override
+        public Adapter caseGlobalUserTask(GlobalUserTask object) {
+            return createGlobalUserTaskAdapter();
+        }
+
+        @Override
+        public Adapter caseGroup(Group object) {
+            return createGroupAdapter();
+        }
+
+        @Override
+        public Adapter caseHumanPerformer(HumanPerformer object) {
+            return createHumanPerformerAdapter();
+        }
+
+        @Override
+        public Adapter caseImplicitThrowEvent(ImplicitThrowEvent object) {
+            return createImplicitThrowEventAdapter();
+        }
+
+        @Override
+        public Adapter caseImport(Import object) {
+            return createImportAdapter();
+        }
+
+        @Override
+        public Adapter caseInclusiveGateway(InclusiveGateway object) {
+            return createInclusiveGatewayAdapter();
+        }
+
+        @Override
+        public Adapter caseInputOutputBinding(InputOutputBinding object) {
+            return createInputOutputBindingAdapter();
+        }
+
+        @Override
+        public Adapter caseInputOutputSpecification(
+                InputOutputSpecification object) {
+            return createInputOutputSpecificationAdapter();
+        }
+
+        @Override
+        public Adapter caseInputSet(InputSet object) {
+            return createInputSetAdapter();
+        }
+
+        @Override
+        public Adapter caseInterface(Interface object) {
+            return createInterfaceAdapter();
+        }
+
+        @Override
+        public Adapter caseIntermediateCatchEvent(IntermediateCatchEvent object) {
+            return createIntermediateCatchEventAdapter();
+        }
+
+        @Override
+        public Adapter caseIntermediateThrowEvent(IntermediateThrowEvent object) {
+            return createIntermediateThrowEventAdapter();
+        }
+
+        @Override
+        public Adapter caseItemDefinition(ItemDefinition object) {
+            return createItemDefinitionAdapter();
+        }
+
+        @Override
+        public Adapter caseLane(Lane object) {
+            return createLaneAdapter();
+        }
+
+        @Override
+        public Adapter caseLaneSet(LaneSet object) {
+            return createLaneSetAdapter();
+        }
+
+        @Override
+        public Adapter caseLinkEventDefinition(LinkEventDefinition object) {
+            return createLinkEventDefinitionAdapter();
+        }
+
+        @Override
+        public Adapter caseLoopCharacteristics(LoopCharacteristics object) {
+            return createLoopCharacteristicsAdapter();
+        }
+
+        @Override
+        public Adapter caseManualTask(ManualTask object) {
+            return createManualTaskAdapter();
+        }
+
+        @Override
+        public Adapter caseMessage(Message object) {
+            return createMessageAdapter();
+        }
+
+        @Override
+        public Adapter caseMessageEventDefinition(MessageEventDefinition object) {
+            return createMessageEventDefinitionAdapter();
+        }
+
+        @Override
+        public Adapter caseMessageFlow(MessageFlow object) {
+            return createMessageFlowAdapter();
+        }
+
+        @Override
+        public Adapter caseMessageFlowAssociation(MessageFlowAssociation object) {
+            return createMessageFlowAssociationAdapter();
+        }
+
+        @Override
+        public Adapter caseMonitoring(Monitoring object) {
+            return createMonitoringAdapter();
+        }
+
+        @Override
+        public Adapter caseMultiInstanceLoopCharacteristics(
+                MultiInstanceLoopCharacteristics object) {
+            return createMultiInstanceLoopCharacteristicsAdapter();
+        }
+
+        @Override
+        public Adapter caseOperation(Operation object) {
+            return createOperationAdapter();
+        }
+
+        @Override
+        public Adapter caseOutputSet(OutputSet object) {
+            return createOutputSetAdapter();
+        }
+
+        @Override
+        public Adapter caseParallelGateway(ParallelGateway object) {
+            return createParallelGatewayAdapter();
+        }
+
+        @Override
+        public Adapter caseParticipant(Participant object) {
+            return createParticipantAdapter();
+        }
+
+        @Override
+        public Adapter caseParticipantAssociation(ParticipantAssociation object) {
+            return createParticipantAssociationAdapter();
+        }
+
+        @Override
+        public Adapter caseParticipantMultiplicity(
+                ParticipantMultiplicity object) {
+            return createParticipantMultiplicityAdapter();
+        }
+
+        @Override
+        public Adapter casePartnerEntity(PartnerEntity object) {
+            return createPartnerEntityAdapter();
+        }
+
+        @Override
+        public Adapter casePartnerRole(PartnerRole object) {
+            return createPartnerRoleAdapter();
+        }
+
+        @Override
+        public Adapter casePerformer(Performer object) {
+            return createPerformerAdapter();
+        }
+
+        @Override
+        public Adapter casePotentialOwner(PotentialOwner object) {
+            return createPotentialOwnerAdapter();
+        }
+
+        @Override
+        public Adapter caseProcess(org.eclipse.mdt.bpmn.Process object) {
+            return createProcessAdapter();
+        }
+
+        @Override
+        public Adapter caseProperty(Property object) {
+            return createPropertyAdapter();
+        }
+
+        @Override
+        public Adapter caseReceiveTask(ReceiveTask object) {
+            return createReceiveTaskAdapter();
+        }
+
+        @Override
+        public Adapter caseRelationship(Relationship object) {
+            return createRelationshipAdapter();
+        }
+
+        @Override
+        public Adapter caseRendering(Rendering object) {
+            return createRenderingAdapter();
+        }
+
+        @Override
+        public Adapter caseResource(Resource object) {
+            return createResourceAdapter();
+        }
+
+        @Override
+        public Adapter caseResourceAssignmentExpression(
+                ResourceAssignmentExpression object) {
+            return createResourceAssignmentExpressionAdapter();
+        }
+
+        @Override
+        public Adapter caseResourceParameter(ResourceParameter object) {
+            return createResourceParameterAdapter();
+        }
+
+        @Override
+        public Adapter caseResourceParameterBinding(
+                ResourceParameterBinding object) {
+            return createResourceParameterBindingAdapter();
+        }
+
+        @Override
+        public Adapter caseRootElement(RootElement object) {
+            return createRootElementAdapter();
+        }
+
+        @Override
+        public Adapter caseScript(Script object) {
+            return createScriptAdapter();
+        }
+
+        @Override
+        public Adapter caseScriptTask(ScriptTask object) {
+            return createScriptTaskAdapter();
+        }
+
+        @Override
+        public Adapter caseSendTask(SendTask object) {
+            return createSendTaskAdapter();
+        }
+
+        @Override
+        public Adapter caseSequenceFlow(SequenceFlow object) {
+            return createSequenceFlowAdapter();
+        }
+
+        @Override
+        public Adapter caseServiceTask(ServiceTask object) {
+            return createServiceTaskAdapter();
+        }
+
+        @Override
+        public Adapter caseSignal(Signal object) {
+            return createSignalAdapter();
+        }
+
+        @Override
+        public Adapter caseSignalEventDefinition(SignalEventDefinition object) {
+            return createSignalEventDefinitionAdapter();
+        }
+
+        @Override
+        public Adapter caseStandardLoopCharacteristics(
+                StandardLoopCharacteristics object) {
+            return createStandardLoopCharacteristicsAdapter();
+        }
+
+        @Override
+        public Adapter caseStartEvent(StartEvent object) {
+            return createStartEventAdapter();
+        }
+
+        @Override
+        public Adapter caseSubConversation(SubConversation object) {
+            return createSubConversationAdapter();
+        }
+
+        @Override
+        public Adapter caseSubProcess(SubProcess object) {
+            return createSubProcessAdapter();
+        }
+
+        @Override
+        public Adapter caseTask(Task object) {
+            return createTaskAdapter();
+        }
+
+        @Override
+        public Adapter caseTerminateEventDefinition(
+                TerminateEventDefinition object) {
+            return createTerminateEventDefinitionAdapter();
+        }
+
+        @Override
+        public Adapter caseText(Text object) {
+            return createTextAdapter();
+        }
+
+        @Override
+        public Adapter caseTextAnnotation(TextAnnotation object) {
+            return createTextAnnotationAdapter();
+        }
+
+        @Override
+        public Adapter caseThrowEvent(ThrowEvent object) {
+            return createThrowEventAdapter();
+        }
+
+        @Override
+        public Adapter caseTimerEventDefinition(TimerEventDefinition object) {
+            return createTimerEventDefinitionAdapter();
+        }
+
+        @Override
+        public Adapter caseTransaction(Transaction object) {
+            return createTransactionAdapter();
+        }
+
+        @Override
+        public Adapter caseUserTask(UserTask object) {
+            return createUserTaskAdapter();
+        }
+
+        @Override
+        public Adapter defaultCase(EObject object) {
+            return createEObjectAdapter();
+        }
+    };
 
     /**
      * Creates an adapter for the <code>target</code>.
@@ -761,9 +910,8 @@ public class bpmnAdapterFactory extends AdapterFactoryImpl {
      */
     @Override
     public Adapter createAdapter(Notifier target) {
-        return modelSwitch.doSwitch((EObject)target);
+        return modelSwitch.doSwitch((EObject) target);
     }
-
 
     /**
      * Creates a new adapter for an object of class '{@link org.eclipse.mdt.bpmn.DocumentRoot <em>Document Root</em>}'.
@@ -2653,4 +2801,4 @@ public class bpmnAdapterFactory extends AdapterFactoryImpl {
         return null;
     }
 
-} //bpmnAdapterFactory
+} //BpmnAdapterFactory

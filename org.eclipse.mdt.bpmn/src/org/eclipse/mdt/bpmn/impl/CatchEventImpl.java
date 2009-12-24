@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -32,12 +31,12 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.CatchEvent;
 import org.eclipse.mdt.bpmn.DataOutput;
 import org.eclipse.mdt.bpmn.DataOutputAssociation;
 import org.eclipse.mdt.bpmn.EventDefinition;
 import org.eclipse.mdt.bpmn.OutputSet;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -154,7 +153,7 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getCatchEvent();
+        return BpmnPackage.eINSTANCE.getCatchEvent();
     }
 
     /**
@@ -164,7 +163,9 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
      */
     public EList<DataOutput> getDataOutput() {
         if (dataOutput == null) {
-            dataOutput = new EObjectContainmentEList<DataOutput>(DataOutput.class, this, bpmnPackage.CATCH_EVENT__DATA_OUTPUT);
+            dataOutput = new EObjectContainmentEList<DataOutput>(
+                    DataOutput.class, this,
+                    BpmnPackage.CATCH_EVENT__DATA_OUTPUT);
         }
         return dataOutput;
     }
@@ -176,7 +177,9 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
      */
     public EList<DataOutputAssociation> getDataOutputAssociation() {
         if (dataOutputAssociation == null) {
-            dataOutputAssociation = new EObjectContainmentEList<DataOutputAssociation>(DataOutputAssociation.class, this, bpmnPackage.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION);
+            dataOutputAssociation = new EObjectContainmentEList<DataOutputAssociation>(
+                    DataOutputAssociation.class, this,
+                    BpmnPackage.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION);
         }
         return dataOutputAssociation;
     }
@@ -195,12 +198,18 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetOutputSet(OutputSet newOutputSet, NotificationChain msgs) {
+    public NotificationChain basicSetOutputSet(OutputSet newOutputSet,
+            NotificationChain msgs) {
         OutputSet oldOutputSet = outputSet;
         outputSet = newOutputSet;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, bpmnPackage.CATCH_EVENT__OUTPUT_SET, oldOutputSet, newOutputSet);
-            if (msgs == null) msgs = notification; else msgs.add(notification);
+            ENotificationImpl notification = new ENotificationImpl(this,
+                    Notification.SET, BpmnPackage.CATCH_EVENT__OUTPUT_SET,
+                    oldOutputSet, newOutputSet);
+            if (msgs == null)
+                msgs = notification;
+            else
+                msgs.add(notification);
         }
         return msgs;
     }
@@ -214,14 +223,22 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
         if (newOutputSet != outputSet) {
             NotificationChain msgs = null;
             if (outputSet != null)
-                msgs = ((InternalEObject)outputSet).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - bpmnPackage.CATCH_EVENT__OUTPUT_SET, null, msgs);
+                msgs = ((InternalEObject) outputSet).eInverseRemove(this,
+                        EOPPOSITE_FEATURE_BASE
+                                - BpmnPackage.CATCH_EVENT__OUTPUT_SET, null,
+                        msgs);
             if (newOutputSet != null)
-                msgs = ((InternalEObject)newOutputSet).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - bpmnPackage.CATCH_EVENT__OUTPUT_SET, null, msgs);
+                msgs = ((InternalEObject) newOutputSet).eInverseAdd(this,
+                        EOPPOSITE_FEATURE_BASE
+                                - BpmnPackage.CATCH_EVENT__OUTPUT_SET, null,
+                        msgs);
             msgs = basicSetOutputSet(newOutputSet, msgs);
-            if (msgs != null) msgs.dispatch();
-        }
-        else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.CATCH_EVENT__OUTPUT_SET, newOutputSet, newOutputSet));
+            if (msgs != null)
+                msgs.dispatch();
+        } else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.CATCH_EVENT__OUTPUT_SET, newOutputSet,
+                    newOutputSet));
     }
 
     /**
@@ -231,7 +248,8 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
      */
     public FeatureMap getEventDefinitionGroup() {
         if (eventDefinitionGroup == null) {
-            eventDefinitionGroup = new BasicFeatureMap(this, bpmnPackage.CATCH_EVENT__EVENT_DEFINITION_GROUP);
+            eventDefinitionGroup = new BasicFeatureMap(this,
+                    BpmnPackage.CATCH_EVENT__EVENT_DEFINITION_GROUP);
         }
         return eventDefinitionGroup;
     }
@@ -242,7 +260,8 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
      * @generated
      */
     public EList<EventDefinition> getEventDefinition() {
-        return getEventDefinitionGroup().list(bpmnPackage.eINSTANCE.getCatchEvent_EventDefinition());
+        return getEventDefinitionGroup().list(
+                BpmnPackage.eINSTANCE.getCatchEvent_EventDefinition());
     }
 
     /**
@@ -252,7 +271,8 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
      */
     public EList<QName> getEventDefinitionRef() {
         if (eventDefinitionRef == null) {
-            eventDefinitionRef = new EDataTypeEList<QName>(QName.class, this, bpmnPackage.CATCH_EVENT__EVENT_DEFINITION_REF);
+            eventDefinitionRef = new EDataTypeEList<QName>(QName.class, this,
+                    BpmnPackage.CATCH_EVENT__EVENT_DEFINITION_REF);
         }
         return eventDefinitionRef;
     }
@@ -277,7 +297,10 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
         boolean oldParallelMultipleESet = parallelMultipleESet;
         parallelMultipleESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.CATCH_EVENT__PARALLEL_MULTIPLE, oldParallelMultiple, parallelMultiple, !oldParallelMultipleESet));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.CATCH_EVENT__PARALLEL_MULTIPLE,
+                    oldParallelMultiple, parallelMultiple,
+                    !oldParallelMultipleESet));
     }
 
     /**
@@ -291,7 +314,10 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
         parallelMultiple = PARALLEL_MULTIPLE_EDEFAULT;
         parallelMultipleESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, bpmnPackage.CATCH_EVENT__PARALLEL_MULTIPLE, oldParallelMultiple, PARALLEL_MULTIPLE_EDEFAULT, oldParallelMultipleESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET,
+                    BpmnPackage.CATCH_EVENT__PARALLEL_MULTIPLE,
+                    oldParallelMultiple, PARALLEL_MULTIPLE_EDEFAULT,
+                    oldParallelMultipleESet));
     }
 
     /**
@@ -309,18 +335,23 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.CATCH_EVENT__DATA_OUTPUT:
-                return ((InternalEList<?>)getDataOutput()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION:
-                return ((InternalEList<?>)getDataOutputAssociation()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.CATCH_EVENT__OUTPUT_SET:
-                return basicSetOutputSet(null, msgs);
-            case bpmnPackage.CATCH_EVENT__EVENT_DEFINITION_GROUP:
-                return ((InternalEList<?>)getEventDefinitionGroup()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.CATCH_EVENT__EVENT_DEFINITION:
-                return ((InternalEList<?>)getEventDefinition()).basicRemove(otherEnd, msgs);
+        case BpmnPackage.CATCH_EVENT__DATA_OUTPUT:
+            return ((InternalEList<?>) getDataOutput()).basicRemove(otherEnd,
+                    msgs);
+        case BpmnPackage.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION:
+            return ((InternalEList<?>) getDataOutputAssociation()).basicRemove(
+                    otherEnd, msgs);
+        case BpmnPackage.CATCH_EVENT__OUTPUT_SET:
+            return basicSetOutputSet(null, msgs);
+        case BpmnPackage.CATCH_EVENT__EVENT_DEFINITION_GROUP:
+            return ((InternalEList<?>) getEventDefinitionGroup()).basicRemove(
+                    otherEnd, msgs);
+        case BpmnPackage.CATCH_EVENT__EVENT_DEFINITION:
+            return ((InternalEList<?>) getEventDefinition()).basicRemove(
+                    otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -333,21 +364,23 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.CATCH_EVENT__DATA_OUTPUT:
-                return getDataOutput();
-            case bpmnPackage.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION:
-                return getDataOutputAssociation();
-            case bpmnPackage.CATCH_EVENT__OUTPUT_SET:
-                return getOutputSet();
-            case bpmnPackage.CATCH_EVENT__EVENT_DEFINITION_GROUP:
-                if (coreType) return getEventDefinitionGroup();
-                return ((FeatureMap.Internal)getEventDefinitionGroup()).getWrapper();
-            case bpmnPackage.CATCH_EVENT__EVENT_DEFINITION:
-                return getEventDefinition();
-            case bpmnPackage.CATCH_EVENT__EVENT_DEFINITION_REF:
-                return getEventDefinitionRef();
-            case bpmnPackage.CATCH_EVENT__PARALLEL_MULTIPLE:
-                return isParallelMultiple();
+        case BpmnPackage.CATCH_EVENT__DATA_OUTPUT:
+            return getDataOutput();
+        case BpmnPackage.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION:
+            return getDataOutputAssociation();
+        case BpmnPackage.CATCH_EVENT__OUTPUT_SET:
+            return getOutputSet();
+        case BpmnPackage.CATCH_EVENT__EVENT_DEFINITION_GROUP:
+            if (coreType)
+                return getEventDefinitionGroup();
+            return ((FeatureMap.Internal) getEventDefinitionGroup())
+                    .getWrapper();
+        case BpmnPackage.CATCH_EVENT__EVENT_DEFINITION:
+            return getEventDefinition();
+        case BpmnPackage.CATCH_EVENT__EVENT_DEFINITION_REF:
+            return getEventDefinitionRef();
+        case BpmnPackage.CATCH_EVENT__PARALLEL_MULTIPLE:
+            return isParallelMultiple();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -361,31 +394,34 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.CATCH_EVENT__DATA_OUTPUT:
-                getDataOutput().clear();
-                getDataOutput().addAll((Collection<? extends DataOutput>)newValue);
-                return;
-            case bpmnPackage.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION:
-                getDataOutputAssociation().clear();
-                getDataOutputAssociation().addAll((Collection<? extends DataOutputAssociation>)newValue);
-                return;
-            case bpmnPackage.CATCH_EVENT__OUTPUT_SET:
-                setOutputSet((OutputSet)newValue);
-                return;
-            case bpmnPackage.CATCH_EVENT__EVENT_DEFINITION_GROUP:
-                ((FeatureMap.Internal)getEventDefinitionGroup()).set(newValue);
-                return;
-            case bpmnPackage.CATCH_EVENT__EVENT_DEFINITION:
-                getEventDefinition().clear();
-                getEventDefinition().addAll((Collection<? extends EventDefinition>)newValue);
-                return;
-            case bpmnPackage.CATCH_EVENT__EVENT_DEFINITION_REF:
-                getEventDefinitionRef().clear();
-                getEventDefinitionRef().addAll((Collection<? extends QName>)newValue);
-                return;
-            case bpmnPackage.CATCH_EVENT__PARALLEL_MULTIPLE:
-                setParallelMultiple((Boolean)newValue);
-                return;
+        case BpmnPackage.CATCH_EVENT__DATA_OUTPUT:
+            getDataOutput().clear();
+            getDataOutput().addAll((Collection<? extends DataOutput>) newValue);
+            return;
+        case BpmnPackage.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION:
+            getDataOutputAssociation().clear();
+            getDataOutputAssociation().addAll(
+                    (Collection<? extends DataOutputAssociation>) newValue);
+            return;
+        case BpmnPackage.CATCH_EVENT__OUTPUT_SET:
+            setOutputSet((OutputSet) newValue);
+            return;
+        case BpmnPackage.CATCH_EVENT__EVENT_DEFINITION_GROUP:
+            ((FeatureMap.Internal) getEventDefinitionGroup()).set(newValue);
+            return;
+        case BpmnPackage.CATCH_EVENT__EVENT_DEFINITION:
+            getEventDefinition().clear();
+            getEventDefinition().addAll(
+                    (Collection<? extends EventDefinition>) newValue);
+            return;
+        case BpmnPackage.CATCH_EVENT__EVENT_DEFINITION_REF:
+            getEventDefinitionRef().clear();
+            getEventDefinitionRef().addAll(
+                    (Collection<? extends QName>) newValue);
+            return;
+        case BpmnPackage.CATCH_EVENT__PARALLEL_MULTIPLE:
+            setParallelMultiple((Boolean) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -398,27 +434,27 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CATCH_EVENT__DATA_OUTPUT:
-                getDataOutput().clear();
-                return;
-            case bpmnPackage.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION:
-                getDataOutputAssociation().clear();
-                return;
-            case bpmnPackage.CATCH_EVENT__OUTPUT_SET:
-                setOutputSet((OutputSet)null);
-                return;
-            case bpmnPackage.CATCH_EVENT__EVENT_DEFINITION_GROUP:
-                getEventDefinitionGroup().clear();
-                return;
-            case bpmnPackage.CATCH_EVENT__EVENT_DEFINITION:
-                getEventDefinition().clear();
-                return;
-            case bpmnPackage.CATCH_EVENT__EVENT_DEFINITION_REF:
-                getEventDefinitionRef().clear();
-                return;
-            case bpmnPackage.CATCH_EVENT__PARALLEL_MULTIPLE:
-                unsetParallelMultiple();
-                return;
+        case BpmnPackage.CATCH_EVENT__DATA_OUTPUT:
+            getDataOutput().clear();
+            return;
+        case BpmnPackage.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION:
+            getDataOutputAssociation().clear();
+            return;
+        case BpmnPackage.CATCH_EVENT__OUTPUT_SET:
+            setOutputSet((OutputSet) null);
+            return;
+        case BpmnPackage.CATCH_EVENT__EVENT_DEFINITION_GROUP:
+            getEventDefinitionGroup().clear();
+            return;
+        case BpmnPackage.CATCH_EVENT__EVENT_DEFINITION:
+            getEventDefinition().clear();
+            return;
+        case BpmnPackage.CATCH_EVENT__EVENT_DEFINITION_REF:
+            getEventDefinitionRef().clear();
+            return;
+        case BpmnPackage.CATCH_EVENT__PARALLEL_MULTIPLE:
+            unsetParallelMultiple();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -431,20 +467,22 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CATCH_EVENT__DATA_OUTPUT:
-                return dataOutput != null && !dataOutput.isEmpty();
-            case bpmnPackage.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION:
-                return dataOutputAssociation != null && !dataOutputAssociation.isEmpty();
-            case bpmnPackage.CATCH_EVENT__OUTPUT_SET:
-                return outputSet != null;
-            case bpmnPackage.CATCH_EVENT__EVENT_DEFINITION_GROUP:
-                return eventDefinitionGroup != null && !eventDefinitionGroup.isEmpty();
-            case bpmnPackage.CATCH_EVENT__EVENT_DEFINITION:
-                return !getEventDefinition().isEmpty();
-            case bpmnPackage.CATCH_EVENT__EVENT_DEFINITION_REF:
-                return eventDefinitionRef != null && !eventDefinitionRef.isEmpty();
-            case bpmnPackage.CATCH_EVENT__PARALLEL_MULTIPLE:
-                return isSetParallelMultiple();
+        case BpmnPackage.CATCH_EVENT__DATA_OUTPUT:
+            return dataOutput != null && !dataOutput.isEmpty();
+        case BpmnPackage.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION:
+            return dataOutputAssociation != null
+                    && !dataOutputAssociation.isEmpty();
+        case BpmnPackage.CATCH_EVENT__OUTPUT_SET:
+            return outputSet != null;
+        case BpmnPackage.CATCH_EVENT__EVENT_DEFINITION_GROUP:
+            return eventDefinitionGroup != null
+                    && !eventDefinitionGroup.isEmpty();
+        case BpmnPackage.CATCH_EVENT__EVENT_DEFINITION:
+            return !getEventDefinition().isEmpty();
+        case BpmnPackage.CATCH_EVENT__EVENT_DEFINITION_REF:
+            return eventDefinitionRef != null && !eventDefinitionRef.isEmpty();
+        case BpmnPackage.CATCH_EVENT__PARALLEL_MULTIPLE:
+            return isSetParallelMultiple();
         }
         return super.eIsSet(featureID);
     }
@@ -456,7 +494,8 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (eventDefinitionGroup: "); //$NON-NLS-1$
@@ -464,7 +503,10 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
         result.append(", eventDefinitionRef: "); //$NON-NLS-1$
         result.append(eventDefinitionRef);
         result.append(", parallelMultiple: "); //$NON-NLS-1$
-        if (parallelMultipleESet) result.append(parallelMultiple); else result.append("<unset>"); //$NON-NLS-1$
+        if (parallelMultipleESet)
+            result.append(parallelMultiple);
+        else
+            result.append("<unset>"); //$NON-NLS-1$
         result.append(')');
         return result.toString();
     }

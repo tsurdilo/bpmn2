@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di.impl;
 
@@ -29,7 +28,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.mdt.bpmn.di.Bendpoint;
 import org.eclipse.mdt.bpmn.di.Connector;
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -113,7 +112,7 @@ public class ConnectorImpl extends ViewImpl implements Connector {
      */
     @Override
     protected EClass eStaticClass() {
-        return diPackage.Literals.CONNECTOR;
+        return DIPackage.Literals.CONNECTOR;
     }
 
     /**
@@ -123,7 +122,8 @@ public class ConnectorImpl extends ViewImpl implements Connector {
      */
     public EList<Bendpoint> getBendpoint() {
         if (bendpoint == null) {
-            bendpoint = new EObjectContainmentEList<Bendpoint>(Bendpoint.class, this, diPackage.CONNECTOR__BENDPOINT);
+            bendpoint = new EObjectContainmentEList<Bendpoint>(Bendpoint.class,
+                    this, DIPackage.CONNECTOR__BENDPOINT);
         }
         return bendpoint;
     }
@@ -146,7 +146,8 @@ public class ConnectorImpl extends ViewImpl implements Connector {
         String oldSource = source;
         source = newSource;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, diPackage.CONNECTOR__SOURCE, oldSource, source));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    DIPackage.CONNECTOR__SOURCE, oldSource, source));
     }
 
     /**
@@ -167,7 +168,8 @@ public class ConnectorImpl extends ViewImpl implements Connector {
         String oldTarget = target;
         target = newTarget;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, diPackage.CONNECTOR__TARGET, oldTarget, target));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    DIPackage.CONNECTOR__TARGET, oldTarget, target));
     }
 
     /**
@@ -176,10 +178,12 @@ public class ConnectorImpl extends ViewImpl implements Connector {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case diPackage.CONNECTOR__BENDPOINT:
-                return ((InternalEList<?>)getBendpoint()).basicRemove(otherEnd, msgs);
+        case DIPackage.CONNECTOR__BENDPOINT:
+            return ((InternalEList<?>) getBendpoint()).basicRemove(otherEnd,
+                    msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -192,12 +196,12 @@ public class ConnectorImpl extends ViewImpl implements Connector {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case diPackage.CONNECTOR__BENDPOINT:
-                return getBendpoint();
-            case diPackage.CONNECTOR__SOURCE:
-                return getSource();
-            case diPackage.CONNECTOR__TARGET:
-                return getTarget();
+        case DIPackage.CONNECTOR__BENDPOINT:
+            return getBendpoint();
+        case DIPackage.CONNECTOR__SOURCE:
+            return getSource();
+        case DIPackage.CONNECTOR__TARGET:
+            return getTarget();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -211,16 +215,16 @@ public class ConnectorImpl extends ViewImpl implements Connector {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case diPackage.CONNECTOR__BENDPOINT:
-                getBendpoint().clear();
-                getBendpoint().addAll((Collection<? extends Bendpoint>)newValue);
-                return;
-            case diPackage.CONNECTOR__SOURCE:
-                setSource((String)newValue);
-                return;
-            case diPackage.CONNECTOR__TARGET:
-                setTarget((String)newValue);
-                return;
+        case DIPackage.CONNECTOR__BENDPOINT:
+            getBendpoint().clear();
+            getBendpoint().addAll((Collection<? extends Bendpoint>) newValue);
+            return;
+        case DIPackage.CONNECTOR__SOURCE:
+            setSource((String) newValue);
+            return;
+        case DIPackage.CONNECTOR__TARGET:
+            setTarget((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -233,15 +237,15 @@ public class ConnectorImpl extends ViewImpl implements Connector {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case diPackage.CONNECTOR__BENDPOINT:
-                getBendpoint().clear();
-                return;
-            case diPackage.CONNECTOR__SOURCE:
-                setSource(SOURCE_EDEFAULT);
-                return;
-            case diPackage.CONNECTOR__TARGET:
-                setTarget(TARGET_EDEFAULT);
-                return;
+        case DIPackage.CONNECTOR__BENDPOINT:
+            getBendpoint().clear();
+            return;
+        case DIPackage.CONNECTOR__SOURCE:
+            setSource(SOURCE_EDEFAULT);
+            return;
+        case DIPackage.CONNECTOR__TARGET:
+            setTarget(TARGET_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -254,12 +258,14 @@ public class ConnectorImpl extends ViewImpl implements Connector {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case diPackage.CONNECTOR__BENDPOINT:
-                return bendpoint != null && !bendpoint.isEmpty();
-            case diPackage.CONNECTOR__SOURCE:
-                return SOURCE_EDEFAULT == null ? source != null : !SOURCE_EDEFAULT.equals(source);
-            case diPackage.CONNECTOR__TARGET:
-                return TARGET_EDEFAULT == null ? target != null : !TARGET_EDEFAULT.equals(target);
+        case DIPackage.CONNECTOR__BENDPOINT:
+            return bendpoint != null && !bendpoint.isEmpty();
+        case DIPackage.CONNECTOR__SOURCE:
+            return SOURCE_EDEFAULT == null ? source != null : !SOURCE_EDEFAULT
+                    .equals(source);
+        case DIPackage.CONNECTOR__TARGET:
+            return TARGET_EDEFAULT == null ? target != null : !TARGET_EDEFAULT
+                    .equals(target);
         }
         return super.eIsSet(featureID);
     }
@@ -271,7 +277,8 @@ public class ConnectorImpl extends ViewImpl implements Connector {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (source: "); //$NON-NLS-1$

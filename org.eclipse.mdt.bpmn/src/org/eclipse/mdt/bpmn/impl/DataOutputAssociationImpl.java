@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -26,8 +25,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.DataOutputAssociation;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,7 +42,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class DataOutputAssociationImpl extends DataAssociationImpl implements DataOutputAssociation {
+public class DataOutputAssociationImpl extends DataAssociationImpl implements
+        DataOutputAssociation {
     /**
      * The cached value of the '{@link #getSourceRef() <em>Source Ref</em>}' attribute list.
      * <!-- begin-user-doc -->
@@ -90,7 +90,7 @@ public class DataOutputAssociationImpl extends DataAssociationImpl implements Da
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getDataOutputAssociation();
+        return BpmnPackage.eINSTANCE.getDataOutputAssociation();
     }
 
     /**
@@ -100,7 +100,8 @@ public class DataOutputAssociationImpl extends DataAssociationImpl implements Da
      */
     public EList<QName> getSourceRef() {
         if (sourceRef == null) {
-            sourceRef = new EDataTypeEList<QName>(QName.class, this, bpmnPackage.DATA_OUTPUT_ASSOCIATION__SOURCE_REF);
+            sourceRef = new EDataTypeEList<QName>(QName.class, this,
+                    BpmnPackage.DATA_OUTPUT_ASSOCIATION__SOURCE_REF);
         }
         return sourceRef;
     }
@@ -123,7 +124,9 @@ public class DataOutputAssociationImpl extends DataAssociationImpl implements Da
         QName oldTargetRef = targetRef;
         targetRef = newTargetRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.DATA_OUTPUT_ASSOCIATION__TARGET_REF, oldTargetRef, targetRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.DATA_OUTPUT_ASSOCIATION__TARGET_REF,
+                    oldTargetRef, targetRef));
     }
 
     /**
@@ -134,10 +137,10 @@ public class DataOutputAssociationImpl extends DataAssociationImpl implements Da
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.DATA_OUTPUT_ASSOCIATION__SOURCE_REF:
-                return getSourceRef();
-            case bpmnPackage.DATA_OUTPUT_ASSOCIATION__TARGET_REF:
-                return getTargetRef();
+        case BpmnPackage.DATA_OUTPUT_ASSOCIATION__SOURCE_REF:
+            return getSourceRef();
+        case BpmnPackage.DATA_OUTPUT_ASSOCIATION__TARGET_REF:
+            return getTargetRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -151,13 +154,13 @@ public class DataOutputAssociationImpl extends DataAssociationImpl implements Da
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.DATA_OUTPUT_ASSOCIATION__SOURCE_REF:
-                getSourceRef().clear();
-                getSourceRef().addAll((Collection<? extends QName>)newValue);
-                return;
-            case bpmnPackage.DATA_OUTPUT_ASSOCIATION__TARGET_REF:
-                setTargetRef((QName)newValue);
-                return;
+        case BpmnPackage.DATA_OUTPUT_ASSOCIATION__SOURCE_REF:
+            getSourceRef().clear();
+            getSourceRef().addAll((Collection<? extends QName>) newValue);
+            return;
+        case BpmnPackage.DATA_OUTPUT_ASSOCIATION__TARGET_REF:
+            setTargetRef((QName) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -170,12 +173,12 @@ public class DataOutputAssociationImpl extends DataAssociationImpl implements Da
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.DATA_OUTPUT_ASSOCIATION__SOURCE_REF:
-                getSourceRef().clear();
-                return;
-            case bpmnPackage.DATA_OUTPUT_ASSOCIATION__TARGET_REF:
-                setTargetRef(TARGET_REF_EDEFAULT);
-                return;
+        case BpmnPackage.DATA_OUTPUT_ASSOCIATION__SOURCE_REF:
+            getSourceRef().clear();
+            return;
+        case BpmnPackage.DATA_OUTPUT_ASSOCIATION__TARGET_REF:
+            setTargetRef(TARGET_REF_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -188,10 +191,11 @@ public class DataOutputAssociationImpl extends DataAssociationImpl implements Da
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.DATA_OUTPUT_ASSOCIATION__SOURCE_REF:
-                return sourceRef != null && !sourceRef.isEmpty();
-            case bpmnPackage.DATA_OUTPUT_ASSOCIATION__TARGET_REF:
-                return TARGET_REF_EDEFAULT == null ? targetRef != null : !TARGET_REF_EDEFAULT.equals(targetRef);
+        case BpmnPackage.DATA_OUTPUT_ASSOCIATION__SOURCE_REF:
+            return sourceRef != null && !sourceRef.isEmpty();
+        case BpmnPackage.DATA_OUTPUT_ASSOCIATION__TARGET_REF:
+            return TARGET_REF_EDEFAULT == null ? targetRef != null
+                    : !TARGET_REF_EDEFAULT.equals(targetRef);
         }
         return super.eIsSet(featureID);
     }
@@ -203,7 +207,8 @@ public class DataOutputAssociationImpl extends DataAssociationImpl implements Da
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (sourceRef: "); //$NON-NLS-1$

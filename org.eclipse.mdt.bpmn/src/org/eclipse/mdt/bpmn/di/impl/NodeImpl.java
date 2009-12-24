@@ -8,14 +8,13 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.mdt.bpmn.di.DIPackage;
 import org.eclipse.mdt.bpmn.di.Node;
-import org.eclipse.mdt.bpmn.di.diPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,7 +42,7 @@ public class NodeImpl extends ViewImpl implements Node {
      */
     @Override
     protected EClass eStaticClass() {
-        return diPackage.Literals.NODE;
+        return DIPackage.Literals.NODE;
     }
 
 } //NodeImpl

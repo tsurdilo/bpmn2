@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -20,9 +19,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Text;
 import org.eclipse.mdt.bpmn.TextAnnotation;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -64,7 +63,7 @@ public class TextAnnotationImpl extends ArtifactImpl implements TextAnnotation {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getTextAnnotation();
+        return BpmnPackage.eINSTANCE.getTextAnnotation();
     }
 
     /**
@@ -85,8 +84,13 @@ public class TextAnnotationImpl extends ArtifactImpl implements TextAnnotation {
         Text oldText = text;
         text = newText;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, bpmnPackage.TEXT_ANNOTATION__TEXT, oldText, newText);
-            if (msgs == null) msgs = notification; else msgs.add(notification);
+            ENotificationImpl notification = new ENotificationImpl(this,
+                    Notification.SET, BpmnPackage.TEXT_ANNOTATION__TEXT,
+                    oldText, newText);
+            if (msgs == null)
+                msgs = notification;
+            else
+                msgs.add(notification);
         }
         return msgs;
     }
@@ -100,14 +104,19 @@ public class TextAnnotationImpl extends ArtifactImpl implements TextAnnotation {
         if (newText != text) {
             NotificationChain msgs = null;
             if (text != null)
-                msgs = ((InternalEObject)text).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - bpmnPackage.TEXT_ANNOTATION__TEXT, null, msgs);
+                msgs = ((InternalEObject) text)
+                        .eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                                - BpmnPackage.TEXT_ANNOTATION__TEXT, null, msgs);
             if (newText != null)
-                msgs = ((InternalEObject)newText).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - bpmnPackage.TEXT_ANNOTATION__TEXT, null, msgs);
+                msgs = ((InternalEObject) newText)
+                        .eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                                - BpmnPackage.TEXT_ANNOTATION__TEXT, null, msgs);
             msgs = basicSetText(newText, msgs);
-            if (msgs != null) msgs.dispatch();
-        }
-        else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.TEXT_ANNOTATION__TEXT, newText, newText));
+            if (msgs != null)
+                msgs.dispatch();
+        } else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.TEXT_ANNOTATION__TEXT, newText, newText));
     }
 
     /**
@@ -116,10 +125,11 @@ public class TextAnnotationImpl extends ArtifactImpl implements TextAnnotation {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.TEXT_ANNOTATION__TEXT:
-                return basicSetText(null, msgs);
+        case BpmnPackage.TEXT_ANNOTATION__TEXT:
+            return basicSetText(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -132,8 +142,8 @@ public class TextAnnotationImpl extends ArtifactImpl implements TextAnnotation {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.TEXT_ANNOTATION__TEXT:
-                return getText();
+        case BpmnPackage.TEXT_ANNOTATION__TEXT:
+            return getText();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -146,9 +156,9 @@ public class TextAnnotationImpl extends ArtifactImpl implements TextAnnotation {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.TEXT_ANNOTATION__TEXT:
-                setText((Text)newValue);
-                return;
+        case BpmnPackage.TEXT_ANNOTATION__TEXT:
+            setText((Text) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -161,9 +171,9 @@ public class TextAnnotationImpl extends ArtifactImpl implements TextAnnotation {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.TEXT_ANNOTATION__TEXT:
-                setText((Text)null);
-                return;
+        case BpmnPackage.TEXT_ANNOTATION__TEXT:
+            setText((Text) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -176,8 +186,8 @@ public class TextAnnotationImpl extends ArtifactImpl implements TextAnnotation {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.TEXT_ANNOTATION__TEXT:
-                return text != null;
+        case BpmnPackage.TEXT_ANNOTATION__TEXT:
+            return text != null;
         }
         return super.eIsSet(featureID);
     }

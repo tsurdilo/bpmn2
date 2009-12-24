@@ -8,14 +8,13 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.LoopCharacteristics;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +25,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public abstract class LoopCharacteristicsImpl extends BaseElementImpl implements LoopCharacteristics {
+public abstract class LoopCharacteristicsImpl extends BaseElementImpl implements
+        LoopCharacteristics {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -43,7 +43,7 @@ public abstract class LoopCharacteristicsImpl extends BaseElementImpl implements
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getLoopCharacteristics();
+        return BpmnPackage.eINSTANCE.getLoopCharacteristics();
     }
 
 } //LoopCharacteristicsImpl

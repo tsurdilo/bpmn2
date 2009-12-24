@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -30,6 +29,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.mdt.bpmn.Artifact;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Choreography;
 import org.eclipse.mdt.bpmn.Conversation;
 import org.eclipse.mdt.bpmn.ConversationAssociation;
@@ -38,7 +38,6 @@ import org.eclipse.mdt.bpmn.MessageFlow;
 import org.eclipse.mdt.bpmn.MessageFlowAssociation;
 import org.eclipse.mdt.bpmn.Participant;
 import org.eclipse.mdt.bpmn.ParticipantAssociation;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -63,7 +62,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class ChoreographyImpl extends CallableElementImpl implements Choreography {
+public class ChoreographyImpl extends CallableElementImpl implements
+        Choreography {
     /**
      * The cached value of the '{@link #getFlowElementGroup() <em>Flow Element Group</em>}' attribute list.
      * <!-- begin-user-doc -->
@@ -189,7 +189,7 @@ public class ChoreographyImpl extends CallableElementImpl implements Choreograph
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getChoreography();
+        return BpmnPackage.eINSTANCE.getChoreography();
     }
 
     /**
@@ -199,7 +199,8 @@ public class ChoreographyImpl extends CallableElementImpl implements Choreograph
      */
     public FeatureMap getFlowElementGroup() {
         if (flowElementGroup == null) {
-            flowElementGroup = new BasicFeatureMap(this, bpmnPackage.CHOREOGRAPHY__FLOW_ELEMENT_GROUP);
+            flowElementGroup = new BasicFeatureMap(this,
+                    BpmnPackage.CHOREOGRAPHY__FLOW_ELEMENT_GROUP);
         }
         return flowElementGroup;
     }
@@ -210,7 +211,8 @@ public class ChoreographyImpl extends CallableElementImpl implements Choreograph
      * @generated
      */
     public EList<FlowElement> getFlowElement() {
-        return getFlowElementGroup().list(bpmnPackage.eINSTANCE.getChoreography_FlowElement());
+        return getFlowElementGroup().list(
+                BpmnPackage.eINSTANCE.getChoreography_FlowElement());
     }
 
     /**
@@ -220,7 +222,8 @@ public class ChoreographyImpl extends CallableElementImpl implements Choreograph
      */
     public FeatureMap getArtifactGroup() {
         if (artifactGroup == null) {
-            artifactGroup = new BasicFeatureMap(this, bpmnPackage.CHOREOGRAPHY__ARTIFACT_GROUP);
+            artifactGroup = new BasicFeatureMap(this,
+                    BpmnPackage.CHOREOGRAPHY__ARTIFACT_GROUP);
         }
         return artifactGroup;
     }
@@ -231,7 +234,8 @@ public class ChoreographyImpl extends CallableElementImpl implements Choreograph
      * @generated
      */
     public EList<Artifact> getArtifact() {
-        return getArtifactGroup().list(bpmnPackage.eINSTANCE.getChoreography_Artifact());
+        return getArtifactGroup().list(
+                BpmnPackage.eINSTANCE.getChoreography_Artifact());
     }
 
     /**
@@ -241,7 +245,9 @@ public class ChoreographyImpl extends CallableElementImpl implements Choreograph
      */
     public EList<MessageFlow> getMessageFlow() {
         if (messageFlow == null) {
-            messageFlow = new EObjectContainmentEList<MessageFlow>(MessageFlow.class, this, bpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW);
+            messageFlow = new EObjectContainmentEList<MessageFlow>(
+                    MessageFlow.class, this,
+                    BpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW);
         }
         return messageFlow;
     }
@@ -253,7 +259,9 @@ public class ChoreographyImpl extends CallableElementImpl implements Choreograph
      */
     public EList<Participant> getParticipant() {
         if (participant == null) {
-            participant = new EObjectContainmentEList<Participant>(Participant.class, this, bpmnPackage.CHOREOGRAPHY__PARTICIPANT);
+            participant = new EObjectContainmentEList<Participant>(
+                    Participant.class, this,
+                    BpmnPackage.CHOREOGRAPHY__PARTICIPANT);
         }
         return participant;
     }
@@ -265,7 +273,9 @@ public class ChoreographyImpl extends CallableElementImpl implements Choreograph
      */
     public EList<Conversation> getConversation() {
         if (conversation == null) {
-            conversation = new EObjectContainmentEList<Conversation>(Conversation.class, this, bpmnPackage.CHOREOGRAPHY__CONVERSATION);
+            conversation = new EObjectContainmentEList<Conversation>(
+                    Conversation.class, this,
+                    BpmnPackage.CHOREOGRAPHY__CONVERSATION);
         }
         return conversation;
     }
@@ -277,7 +287,9 @@ public class ChoreographyImpl extends CallableElementImpl implements Choreograph
      */
     public EList<ConversationAssociation> getConversationAssociation() {
         if (conversationAssociation == null) {
-            conversationAssociation = new EObjectContainmentEList<ConversationAssociation>(ConversationAssociation.class, this, bpmnPackage.CHOREOGRAPHY__CONVERSATION_ASSOCIATION);
+            conversationAssociation = new EObjectContainmentEList<ConversationAssociation>(
+                    ConversationAssociation.class, this,
+                    BpmnPackage.CHOREOGRAPHY__CONVERSATION_ASSOCIATION);
         }
         return conversationAssociation;
     }
@@ -289,7 +301,9 @@ public class ChoreographyImpl extends CallableElementImpl implements Choreograph
      */
     public EList<MessageFlowAssociation> getMessageFlowAssociation() {
         if (messageFlowAssociation == null) {
-            messageFlowAssociation = new EObjectContainmentEList<MessageFlowAssociation>(MessageFlowAssociation.class, this, bpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW_ASSOCIATION);
+            messageFlowAssociation = new EObjectContainmentEList<MessageFlowAssociation>(
+                    MessageFlowAssociation.class, this,
+                    BpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW_ASSOCIATION);
         }
         return messageFlowAssociation;
     }
@@ -301,7 +315,9 @@ public class ChoreographyImpl extends CallableElementImpl implements Choreograph
      */
     public EList<ParticipantAssociation> getParticipantAssociation() {
         if (participantAssociation == null) {
-            participantAssociation = new EObjectContainmentEList<ParticipantAssociation>(ParticipantAssociation.class, this, bpmnPackage.CHOREOGRAPHY__PARTICIPANT_ASSOCIATION);
+            participantAssociation = new EObjectContainmentEList<ParticipantAssociation>(
+                    ParticipantAssociation.class, this,
+                    BpmnPackage.CHOREOGRAPHY__PARTICIPANT_ASSOCIATION);
         }
         return participantAssociation;
     }
@@ -326,7 +342,9 @@ public class ChoreographyImpl extends CallableElementImpl implements Choreograph
         boolean oldIsClosedESet = isClosedESet;
         isClosedESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.CHOREOGRAPHY__IS_CLOSED, oldIsClosed, isClosed, !oldIsClosedESet));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.CHOREOGRAPHY__IS_CLOSED, oldIsClosed, isClosed,
+                    !oldIsClosedESet));
     }
 
     /**
@@ -340,7 +358,9 @@ public class ChoreographyImpl extends CallableElementImpl implements Choreograph
         isClosed = IS_CLOSED_EDEFAULT;
         isClosedESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, bpmnPackage.CHOREOGRAPHY__IS_CLOSED, oldIsClosed, IS_CLOSED_EDEFAULT, oldIsClosedESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET,
+                    BpmnPackage.CHOREOGRAPHY__IS_CLOSED, oldIsClosed,
+                    IS_CLOSED_EDEFAULT, oldIsClosedESet));
     }
 
     /**
@@ -358,28 +378,39 @@ public class ChoreographyImpl extends CallableElementImpl implements Choreograph
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.CHOREOGRAPHY__FLOW_ELEMENT_GROUP:
-                return ((InternalEList<?>)getFlowElementGroup()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.CHOREOGRAPHY__FLOW_ELEMENT:
-                return ((InternalEList<?>)getFlowElement()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.CHOREOGRAPHY__ARTIFACT_GROUP:
-                return ((InternalEList<?>)getArtifactGroup()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.CHOREOGRAPHY__ARTIFACT:
-                return ((InternalEList<?>)getArtifact()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW:
-                return ((InternalEList<?>)getMessageFlow()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.CHOREOGRAPHY__PARTICIPANT:
-                return ((InternalEList<?>)getParticipant()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.CHOREOGRAPHY__CONVERSATION:
-                return ((InternalEList<?>)getConversation()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.CHOREOGRAPHY__CONVERSATION_ASSOCIATION:
-                return ((InternalEList<?>)getConversationAssociation()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW_ASSOCIATION:
-                return ((InternalEList<?>)getMessageFlowAssociation()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.CHOREOGRAPHY__PARTICIPANT_ASSOCIATION:
-                return ((InternalEList<?>)getParticipantAssociation()).basicRemove(otherEnd, msgs);
+        case BpmnPackage.CHOREOGRAPHY__FLOW_ELEMENT_GROUP:
+            return ((InternalEList<?>) getFlowElementGroup()).basicRemove(
+                    otherEnd, msgs);
+        case BpmnPackage.CHOREOGRAPHY__FLOW_ELEMENT:
+            return ((InternalEList<?>) getFlowElement()).basicRemove(otherEnd,
+                    msgs);
+        case BpmnPackage.CHOREOGRAPHY__ARTIFACT_GROUP:
+            return ((InternalEList<?>) getArtifactGroup()).basicRemove(
+                    otherEnd, msgs);
+        case BpmnPackage.CHOREOGRAPHY__ARTIFACT:
+            return ((InternalEList<?>) getArtifact()).basicRemove(otherEnd,
+                    msgs);
+        case BpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW:
+            return ((InternalEList<?>) getMessageFlow()).basicRemove(otherEnd,
+                    msgs);
+        case BpmnPackage.CHOREOGRAPHY__PARTICIPANT:
+            return ((InternalEList<?>) getParticipant()).basicRemove(otherEnd,
+                    msgs);
+        case BpmnPackage.CHOREOGRAPHY__CONVERSATION:
+            return ((InternalEList<?>) getConversation()).basicRemove(otherEnd,
+                    msgs);
+        case BpmnPackage.CHOREOGRAPHY__CONVERSATION_ASSOCIATION:
+            return ((InternalEList<?>) getConversationAssociation())
+                    .basicRemove(otherEnd, msgs);
+        case BpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW_ASSOCIATION:
+            return ((InternalEList<?>) getMessageFlowAssociation())
+                    .basicRemove(otherEnd, msgs);
+        case BpmnPackage.CHOREOGRAPHY__PARTICIPANT_ASSOCIATION:
+            return ((InternalEList<?>) getParticipantAssociation())
+                    .basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -392,30 +423,32 @@ public class ChoreographyImpl extends CallableElementImpl implements Choreograph
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.CHOREOGRAPHY__FLOW_ELEMENT_GROUP:
-                if (coreType) return getFlowElementGroup();
-                return ((FeatureMap.Internal)getFlowElementGroup()).getWrapper();
-            case bpmnPackage.CHOREOGRAPHY__FLOW_ELEMENT:
-                return getFlowElement();
-            case bpmnPackage.CHOREOGRAPHY__ARTIFACT_GROUP:
-                if (coreType) return getArtifactGroup();
-                return ((FeatureMap.Internal)getArtifactGroup()).getWrapper();
-            case bpmnPackage.CHOREOGRAPHY__ARTIFACT:
-                return getArtifact();
-            case bpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW:
-                return getMessageFlow();
-            case bpmnPackage.CHOREOGRAPHY__PARTICIPANT:
-                return getParticipant();
-            case bpmnPackage.CHOREOGRAPHY__CONVERSATION:
-                return getConversation();
-            case bpmnPackage.CHOREOGRAPHY__CONVERSATION_ASSOCIATION:
-                return getConversationAssociation();
-            case bpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW_ASSOCIATION:
-                return getMessageFlowAssociation();
-            case bpmnPackage.CHOREOGRAPHY__PARTICIPANT_ASSOCIATION:
-                return getParticipantAssociation();
-            case bpmnPackage.CHOREOGRAPHY__IS_CLOSED:
-                return isIsClosed();
+        case BpmnPackage.CHOREOGRAPHY__FLOW_ELEMENT_GROUP:
+            if (coreType)
+                return getFlowElementGroup();
+            return ((FeatureMap.Internal) getFlowElementGroup()).getWrapper();
+        case BpmnPackage.CHOREOGRAPHY__FLOW_ELEMENT:
+            return getFlowElement();
+        case BpmnPackage.CHOREOGRAPHY__ARTIFACT_GROUP:
+            if (coreType)
+                return getArtifactGroup();
+            return ((FeatureMap.Internal) getArtifactGroup()).getWrapper();
+        case BpmnPackage.CHOREOGRAPHY__ARTIFACT:
+            return getArtifact();
+        case BpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW:
+            return getMessageFlow();
+        case BpmnPackage.CHOREOGRAPHY__PARTICIPANT:
+            return getParticipant();
+        case BpmnPackage.CHOREOGRAPHY__CONVERSATION:
+            return getConversation();
+        case BpmnPackage.CHOREOGRAPHY__CONVERSATION_ASSOCIATION:
+            return getConversationAssociation();
+        case BpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW_ASSOCIATION:
+            return getMessageFlowAssociation();
+        case BpmnPackage.CHOREOGRAPHY__PARTICIPANT_ASSOCIATION:
+            return getParticipantAssociation();
+        case BpmnPackage.CHOREOGRAPHY__IS_CLOSED:
+            return isIsClosed();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -429,47 +462,54 @@ public class ChoreographyImpl extends CallableElementImpl implements Choreograph
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.CHOREOGRAPHY__FLOW_ELEMENT_GROUP:
-                ((FeatureMap.Internal)getFlowElementGroup()).set(newValue);
-                return;
-            case bpmnPackage.CHOREOGRAPHY__FLOW_ELEMENT:
-                getFlowElement().clear();
-                getFlowElement().addAll((Collection<? extends FlowElement>)newValue);
-                return;
-            case bpmnPackage.CHOREOGRAPHY__ARTIFACT_GROUP:
-                ((FeatureMap.Internal)getArtifactGroup()).set(newValue);
-                return;
-            case bpmnPackage.CHOREOGRAPHY__ARTIFACT:
-                getArtifact().clear();
-                getArtifact().addAll((Collection<? extends Artifact>)newValue);
-                return;
-            case bpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW:
-                getMessageFlow().clear();
-                getMessageFlow().addAll((Collection<? extends MessageFlow>)newValue);
-                return;
-            case bpmnPackage.CHOREOGRAPHY__PARTICIPANT:
-                getParticipant().clear();
-                getParticipant().addAll((Collection<? extends Participant>)newValue);
-                return;
-            case bpmnPackage.CHOREOGRAPHY__CONVERSATION:
-                getConversation().clear();
-                getConversation().addAll((Collection<? extends Conversation>)newValue);
-                return;
-            case bpmnPackage.CHOREOGRAPHY__CONVERSATION_ASSOCIATION:
-                getConversationAssociation().clear();
-                getConversationAssociation().addAll((Collection<? extends ConversationAssociation>)newValue);
-                return;
-            case bpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW_ASSOCIATION:
-                getMessageFlowAssociation().clear();
-                getMessageFlowAssociation().addAll((Collection<? extends MessageFlowAssociation>)newValue);
-                return;
-            case bpmnPackage.CHOREOGRAPHY__PARTICIPANT_ASSOCIATION:
-                getParticipantAssociation().clear();
-                getParticipantAssociation().addAll((Collection<? extends ParticipantAssociation>)newValue);
-                return;
-            case bpmnPackage.CHOREOGRAPHY__IS_CLOSED:
-                setIsClosed((Boolean)newValue);
-                return;
+        case BpmnPackage.CHOREOGRAPHY__FLOW_ELEMENT_GROUP:
+            ((FeatureMap.Internal) getFlowElementGroup()).set(newValue);
+            return;
+        case BpmnPackage.CHOREOGRAPHY__FLOW_ELEMENT:
+            getFlowElement().clear();
+            getFlowElement().addAll(
+                    (Collection<? extends FlowElement>) newValue);
+            return;
+        case BpmnPackage.CHOREOGRAPHY__ARTIFACT_GROUP:
+            ((FeatureMap.Internal) getArtifactGroup()).set(newValue);
+            return;
+        case BpmnPackage.CHOREOGRAPHY__ARTIFACT:
+            getArtifact().clear();
+            getArtifact().addAll((Collection<? extends Artifact>) newValue);
+            return;
+        case BpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW:
+            getMessageFlow().clear();
+            getMessageFlow().addAll(
+                    (Collection<? extends MessageFlow>) newValue);
+            return;
+        case BpmnPackage.CHOREOGRAPHY__PARTICIPANT:
+            getParticipant().clear();
+            getParticipant().addAll(
+                    (Collection<? extends Participant>) newValue);
+            return;
+        case BpmnPackage.CHOREOGRAPHY__CONVERSATION:
+            getConversation().clear();
+            getConversation().addAll(
+                    (Collection<? extends Conversation>) newValue);
+            return;
+        case BpmnPackage.CHOREOGRAPHY__CONVERSATION_ASSOCIATION:
+            getConversationAssociation().clear();
+            getConversationAssociation().addAll(
+                    (Collection<? extends ConversationAssociation>) newValue);
+            return;
+        case BpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW_ASSOCIATION:
+            getMessageFlowAssociation().clear();
+            getMessageFlowAssociation().addAll(
+                    (Collection<? extends MessageFlowAssociation>) newValue);
+            return;
+        case BpmnPackage.CHOREOGRAPHY__PARTICIPANT_ASSOCIATION:
+            getParticipantAssociation().clear();
+            getParticipantAssociation().addAll(
+                    (Collection<? extends ParticipantAssociation>) newValue);
+            return;
+        case BpmnPackage.CHOREOGRAPHY__IS_CLOSED:
+            setIsClosed((Boolean) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -482,39 +522,39 @@ public class ChoreographyImpl extends CallableElementImpl implements Choreograph
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CHOREOGRAPHY__FLOW_ELEMENT_GROUP:
-                getFlowElementGroup().clear();
-                return;
-            case bpmnPackage.CHOREOGRAPHY__FLOW_ELEMENT:
-                getFlowElement().clear();
-                return;
-            case bpmnPackage.CHOREOGRAPHY__ARTIFACT_GROUP:
-                getArtifactGroup().clear();
-                return;
-            case bpmnPackage.CHOREOGRAPHY__ARTIFACT:
-                getArtifact().clear();
-                return;
-            case bpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW:
-                getMessageFlow().clear();
-                return;
-            case bpmnPackage.CHOREOGRAPHY__PARTICIPANT:
-                getParticipant().clear();
-                return;
-            case bpmnPackage.CHOREOGRAPHY__CONVERSATION:
-                getConversation().clear();
-                return;
-            case bpmnPackage.CHOREOGRAPHY__CONVERSATION_ASSOCIATION:
-                getConversationAssociation().clear();
-                return;
-            case bpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW_ASSOCIATION:
-                getMessageFlowAssociation().clear();
-                return;
-            case bpmnPackage.CHOREOGRAPHY__PARTICIPANT_ASSOCIATION:
-                getParticipantAssociation().clear();
-                return;
-            case bpmnPackage.CHOREOGRAPHY__IS_CLOSED:
-                unsetIsClosed();
-                return;
+        case BpmnPackage.CHOREOGRAPHY__FLOW_ELEMENT_GROUP:
+            getFlowElementGroup().clear();
+            return;
+        case BpmnPackage.CHOREOGRAPHY__FLOW_ELEMENT:
+            getFlowElement().clear();
+            return;
+        case BpmnPackage.CHOREOGRAPHY__ARTIFACT_GROUP:
+            getArtifactGroup().clear();
+            return;
+        case BpmnPackage.CHOREOGRAPHY__ARTIFACT:
+            getArtifact().clear();
+            return;
+        case BpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW:
+            getMessageFlow().clear();
+            return;
+        case BpmnPackage.CHOREOGRAPHY__PARTICIPANT:
+            getParticipant().clear();
+            return;
+        case BpmnPackage.CHOREOGRAPHY__CONVERSATION:
+            getConversation().clear();
+            return;
+        case BpmnPackage.CHOREOGRAPHY__CONVERSATION_ASSOCIATION:
+            getConversationAssociation().clear();
+            return;
+        case BpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW_ASSOCIATION:
+            getMessageFlowAssociation().clear();
+            return;
+        case BpmnPackage.CHOREOGRAPHY__PARTICIPANT_ASSOCIATION:
+            getParticipantAssociation().clear();
+            return;
+        case BpmnPackage.CHOREOGRAPHY__IS_CLOSED:
+            unsetIsClosed();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -527,28 +567,31 @@ public class ChoreographyImpl extends CallableElementImpl implements Choreograph
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CHOREOGRAPHY__FLOW_ELEMENT_GROUP:
-                return flowElementGroup != null && !flowElementGroup.isEmpty();
-            case bpmnPackage.CHOREOGRAPHY__FLOW_ELEMENT:
-                return !getFlowElement().isEmpty();
-            case bpmnPackage.CHOREOGRAPHY__ARTIFACT_GROUP:
-                return artifactGroup != null && !artifactGroup.isEmpty();
-            case bpmnPackage.CHOREOGRAPHY__ARTIFACT:
-                return !getArtifact().isEmpty();
-            case bpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW:
-                return messageFlow != null && !messageFlow.isEmpty();
-            case bpmnPackage.CHOREOGRAPHY__PARTICIPANT:
-                return participant != null && !participant.isEmpty();
-            case bpmnPackage.CHOREOGRAPHY__CONVERSATION:
-                return conversation != null && !conversation.isEmpty();
-            case bpmnPackage.CHOREOGRAPHY__CONVERSATION_ASSOCIATION:
-                return conversationAssociation != null && !conversationAssociation.isEmpty();
-            case bpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW_ASSOCIATION:
-                return messageFlowAssociation != null && !messageFlowAssociation.isEmpty();
-            case bpmnPackage.CHOREOGRAPHY__PARTICIPANT_ASSOCIATION:
-                return participantAssociation != null && !participantAssociation.isEmpty();
-            case bpmnPackage.CHOREOGRAPHY__IS_CLOSED:
-                return isSetIsClosed();
+        case BpmnPackage.CHOREOGRAPHY__FLOW_ELEMENT_GROUP:
+            return flowElementGroup != null && !flowElementGroup.isEmpty();
+        case BpmnPackage.CHOREOGRAPHY__FLOW_ELEMENT:
+            return !getFlowElement().isEmpty();
+        case BpmnPackage.CHOREOGRAPHY__ARTIFACT_GROUP:
+            return artifactGroup != null && !artifactGroup.isEmpty();
+        case BpmnPackage.CHOREOGRAPHY__ARTIFACT:
+            return !getArtifact().isEmpty();
+        case BpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW:
+            return messageFlow != null && !messageFlow.isEmpty();
+        case BpmnPackage.CHOREOGRAPHY__PARTICIPANT:
+            return participant != null && !participant.isEmpty();
+        case BpmnPackage.CHOREOGRAPHY__CONVERSATION:
+            return conversation != null && !conversation.isEmpty();
+        case BpmnPackage.CHOREOGRAPHY__CONVERSATION_ASSOCIATION:
+            return conversationAssociation != null
+                    && !conversationAssociation.isEmpty();
+        case BpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW_ASSOCIATION:
+            return messageFlowAssociation != null
+                    && !messageFlowAssociation.isEmpty();
+        case BpmnPackage.CHOREOGRAPHY__PARTICIPANT_ASSOCIATION:
+            return participantAssociation != null
+                    && !participantAssociation.isEmpty();
+        case BpmnPackage.CHOREOGRAPHY__IS_CLOSED:
+            return isSetIsClosed();
         }
         return super.eIsSet(featureID);
     }
@@ -560,7 +603,8 @@ public class ChoreographyImpl extends CallableElementImpl implements Choreograph
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (flowElementGroup: "); //$NON-NLS-1$
@@ -568,7 +612,10 @@ public class ChoreographyImpl extends CallableElementImpl implements Choreograph
         result.append(", artifactGroup: "); //$NON-NLS-1$
         result.append(artifactGroup);
         result.append(", isClosed: "); //$NON-NLS-1$
-        if (isClosedESet) result.append(isClosed); else result.append("<unset>"); //$NON-NLS-1$
+        if (isClosedESet)
+            result.append(isClosed);
+        else
+            result.append("<unset>"); //$NON-NLS-1$
         result.append(')');
         return result.toString();
     }

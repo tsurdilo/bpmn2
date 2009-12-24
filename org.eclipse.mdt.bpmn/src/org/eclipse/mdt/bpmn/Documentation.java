@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -30,7 +29,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentation()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentation()
  * @model extendedMetaData="name='tDocumentation' kind='mixed'"
  * @generated
  */
@@ -45,7 +44,7 @@ public interface Documentation extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Mixed</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentation_Mixed()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentation_Mixed()
      * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
      *        extendedMetaData="kind='elementWildcard' name=':mixed'"
      * @generated
@@ -62,7 +61,7 @@ public interface Documentation extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Any</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentation_Any()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentation_Any()
      * @model dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="false" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='elementWildcard' wildcards='##any' name=':1' processing='lax'"
      * @generated
@@ -79,7 +78,7 @@ public interface Documentation extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Id</em>' attribute.
      * @see #setId(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentation_Id()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentation_Id()
      * @model id="true" dataType="org.eclipse.emf.ecore.xml.type.ID"
      *        extendedMetaData="kind='attribute' name='id'"
      * @generated

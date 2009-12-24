@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -26,9 +25,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Relationship;
 import org.eclipse.mdt.bpmn.RelationshipDirection;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -132,7 +131,7 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getRelationship();
+        return BpmnPackage.eINSTANCE.getRelationship();
     }
 
     /**
@@ -142,7 +141,8 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
      */
     public EList<QName> getSource() {
         if (source == null) {
-            source = new EDataTypeEList<QName>(QName.class, this, bpmnPackage.RELATIONSHIP__SOURCE);
+            source = new EDataTypeEList<QName>(QName.class, this,
+                    BpmnPackage.RELATIONSHIP__SOURCE);
         }
         return source;
     }
@@ -154,7 +154,8 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
      */
     public EList<QName> getTarget() {
         if (target == null) {
-            target = new EDataTypeEList<QName>(QName.class, this, bpmnPackage.RELATIONSHIP__TARGET);
+            target = new EDataTypeEList<QName>(QName.class, this,
+                    BpmnPackage.RELATIONSHIP__TARGET);
         }
         return target;
     }
@@ -179,7 +180,9 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
         boolean oldDirectionESet = directionESet;
         directionESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.RELATIONSHIP__DIRECTION, oldDirection, direction, !oldDirectionESet));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.RELATIONSHIP__DIRECTION, oldDirection,
+                    direction, !oldDirectionESet));
     }
 
     /**
@@ -193,7 +196,9 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
         direction = DIRECTION_EDEFAULT;
         directionESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, bpmnPackage.RELATIONSHIP__DIRECTION, oldDirection, DIRECTION_EDEFAULT, oldDirectionESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET,
+                    BpmnPackage.RELATIONSHIP__DIRECTION, oldDirection,
+                    DIRECTION_EDEFAULT, oldDirectionESet));
     }
 
     /**
@@ -223,7 +228,8 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
         String oldType = type;
         type = newType;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.RELATIONSHIP__TYPE, oldType, type));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.RELATIONSHIP__TYPE, oldType, type));
     }
 
     /**
@@ -234,14 +240,14 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.RELATIONSHIP__SOURCE:
-                return getSource();
-            case bpmnPackage.RELATIONSHIP__TARGET:
-                return getTarget();
-            case bpmnPackage.RELATIONSHIP__DIRECTION:
-                return getDirection();
-            case bpmnPackage.RELATIONSHIP__TYPE:
-                return getType();
+        case BpmnPackage.RELATIONSHIP__SOURCE:
+            return getSource();
+        case BpmnPackage.RELATIONSHIP__TARGET:
+            return getTarget();
+        case BpmnPackage.RELATIONSHIP__DIRECTION:
+            return getDirection();
+        case BpmnPackage.RELATIONSHIP__TYPE:
+            return getType();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -255,20 +261,20 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.RELATIONSHIP__SOURCE:
-                getSource().clear();
-                getSource().addAll((Collection<? extends QName>)newValue);
-                return;
-            case bpmnPackage.RELATIONSHIP__TARGET:
-                getTarget().clear();
-                getTarget().addAll((Collection<? extends QName>)newValue);
-                return;
-            case bpmnPackage.RELATIONSHIP__DIRECTION:
-                setDirection((RelationshipDirection)newValue);
-                return;
-            case bpmnPackage.RELATIONSHIP__TYPE:
-                setType((String)newValue);
-                return;
+        case BpmnPackage.RELATIONSHIP__SOURCE:
+            getSource().clear();
+            getSource().addAll((Collection<? extends QName>) newValue);
+            return;
+        case BpmnPackage.RELATIONSHIP__TARGET:
+            getTarget().clear();
+            getTarget().addAll((Collection<? extends QName>) newValue);
+            return;
+        case BpmnPackage.RELATIONSHIP__DIRECTION:
+            setDirection((RelationshipDirection) newValue);
+            return;
+        case BpmnPackage.RELATIONSHIP__TYPE:
+            setType((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -281,18 +287,18 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.RELATIONSHIP__SOURCE:
-                getSource().clear();
-                return;
-            case bpmnPackage.RELATIONSHIP__TARGET:
-                getTarget().clear();
-                return;
-            case bpmnPackage.RELATIONSHIP__DIRECTION:
-                unsetDirection();
-                return;
-            case bpmnPackage.RELATIONSHIP__TYPE:
-                setType(TYPE_EDEFAULT);
-                return;
+        case BpmnPackage.RELATIONSHIP__SOURCE:
+            getSource().clear();
+            return;
+        case BpmnPackage.RELATIONSHIP__TARGET:
+            getTarget().clear();
+            return;
+        case BpmnPackage.RELATIONSHIP__DIRECTION:
+            unsetDirection();
+            return;
+        case BpmnPackage.RELATIONSHIP__TYPE:
+            setType(TYPE_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -305,14 +311,15 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.RELATIONSHIP__SOURCE:
-                return source != null && !source.isEmpty();
-            case bpmnPackage.RELATIONSHIP__TARGET:
-                return target != null && !target.isEmpty();
-            case bpmnPackage.RELATIONSHIP__DIRECTION:
-                return isSetDirection();
-            case bpmnPackage.RELATIONSHIP__TYPE:
-                return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+        case BpmnPackage.RELATIONSHIP__SOURCE:
+            return source != null && !source.isEmpty();
+        case BpmnPackage.RELATIONSHIP__TARGET:
+            return target != null && !target.isEmpty();
+        case BpmnPackage.RELATIONSHIP__DIRECTION:
+            return isSetDirection();
+        case BpmnPackage.RELATIONSHIP__TYPE:
+            return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT
+                    .equals(type);
         }
         return super.eIsSet(featureID);
     }
@@ -324,7 +331,8 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (source: "); //$NON-NLS-1$
@@ -332,7 +340,10 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
         result.append(", target: "); //$NON-NLS-1$
         result.append(target);
         result.append(", direction: "); //$NON-NLS-1$
-        if (directionESet) result.append(direction); else result.append("<unset>"); //$NON-NLS-1$
+        if (directionESet)
+            result.append(direction);
+        else
+            result.append("<unset>"); //$NON-NLS-1$
         result.append(", type: "); //$NON-NLS-1$
         result.append(type);
         result.append(')');

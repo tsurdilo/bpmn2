@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -33,7 +32,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getBaseElement()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getBaseElement()
  * @model abstract="true"
  *        extendedMetaData="name='tBaseElement' kind='elementOnly'"
  * @generated
@@ -49,7 +48,7 @@ public interface BaseElement extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Documentation</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getBaseElement_Documentation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getBaseElement_Documentation()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='documentation' namespace='##targetNamespace'"
      * @generated
@@ -66,7 +65,7 @@ public interface BaseElement extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Any</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getBaseElement_Any()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getBaseElement_Any()
      * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
      *        extendedMetaData="kind='elementWildcard' wildcards='##other' name=':1' processing='lax'"
      * @generated
@@ -83,7 +82,7 @@ public interface BaseElement extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Id</em>' attribute.
      * @see #setId(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getBaseElement_Id()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getBaseElement_Id()
      * @model id="true" dataType="org.eclipse.emf.ecore.xml.type.ID"
      *        extendedMetaData="kind='attribute' name='id'"
      * @generated
@@ -110,7 +109,7 @@ public interface BaseElement extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Any Attribute</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getBaseElement_AnyAttribute()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getBaseElement_AnyAttribute()
      * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
      *        extendedMetaData="kind='attributeWildcard' wildcards='##other' name=':3' processing='lax'"
      * @generated

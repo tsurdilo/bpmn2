@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -33,10 +32,10 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.InputSet;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.InputSet} object.
@@ -92,7 +91,7 @@ public class InputSetItemProvider extends BaseElementItemProvider implements
                         getString("_UI_InputSet_dataInputRefs_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_InputSet_dataInputRefs_feature", "_UI_InputSet_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getInputSet_DataInputRefs(),
+                        BpmnPackage.eINSTANCE.getInputSet_DataInputRefs(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -112,7 +111,7 @@ public class InputSetItemProvider extends BaseElementItemProvider implements
                         getString("_UI_InputSet_optionalInputRefs_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_InputSet_optionalInputRefs_feature", "_UI_InputSet_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getInputSet_OptionalInputRefs(),
+                        BpmnPackage.eINSTANCE.getInputSet_OptionalInputRefs(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -132,7 +131,7 @@ public class InputSetItemProvider extends BaseElementItemProvider implements
                         getString("_UI_InputSet_whileExecutingInputRefs_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_InputSet_whileExecutingInputRefs_feature", "_UI_InputSet_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE
+                        BpmnPackage.eINSTANCE
                                 .getInputSet_WhileExecutingInputRefs(), true,
                         false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
@@ -153,7 +152,7 @@ public class InputSetItemProvider extends BaseElementItemProvider implements
                         getString("_UI_InputSet_outputSetRefs_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_InputSet_outputSetRefs_feature", "_UI_InputSet_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getInputSet_OutputSetRefs(),
+                        BpmnPackage.eINSTANCE.getInputSet_OutputSetRefs(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -173,7 +172,7 @@ public class InputSetItemProvider extends BaseElementItemProvider implements
                         getString("_UI_InputSet_name_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_InputSet_name_feature", "_UI_InputSet_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getInputSet_Name(), true, false,
+                        BpmnPackage.eINSTANCE.getInputSet_Name(), true, false,
                         false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                         null, null));
     }
@@ -215,11 +214,11 @@ public class InputSetItemProvider extends BaseElementItemProvider implements
         updateChildren(notification);
 
         switch (notification.getFeatureID(InputSet.class)) {
-        case bpmnPackage.INPUT_SET__DATA_INPUT_REFS:
-        case bpmnPackage.INPUT_SET__OPTIONAL_INPUT_REFS:
-        case bpmnPackage.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
-        case bpmnPackage.INPUT_SET__OUTPUT_SET_REFS:
-        case bpmnPackage.INPUT_SET__NAME:
+        case BpmnPackage.INPUT_SET__DATA_INPUT_REFS:
+        case BpmnPackage.INPUT_SET__OPTIONAL_INPUT_REFS:
+        case BpmnPackage.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
+        case BpmnPackage.INPUT_SET__OUTPUT_SET_REFS:
+        case BpmnPackage.INPUT_SET__NAME:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
@@ -260,10 +259,10 @@ public class InputSetItemProvider extends BaseElementItemProvider implements
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE;
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE;
 
         if (qualify) {
             return getString("_UI_CreateChild_text2", //$NON-NLS-1$

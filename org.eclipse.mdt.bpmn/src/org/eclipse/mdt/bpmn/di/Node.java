@@ -8,10 +8,8 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -19,7 +17,7 @@ package org.eclipse.mdt.bpmn.di;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.mdt.bpmn.di.diPackage#getNode()
+ * @see org.eclipse.mdt.bpmn.di.DIPackage#getNode()
  * @model extendedMetaData="name='Node' kind='elementOnly'"
  * @generated
  */

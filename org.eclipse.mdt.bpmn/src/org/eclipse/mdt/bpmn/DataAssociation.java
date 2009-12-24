@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -27,7 +26,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getDataAssociation()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getDataAssociation()
  * @model abstract="true"
  *        extendedMetaData="name='tDataAssociation' kind='elementOnly'"
  * @generated
@@ -43,7 +42,7 @@ public interface DataAssociation extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Transformation</em>' containment reference.
      * @see #setTransformation(FormalExpression)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDataAssociation_Transformation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDataAssociation_Transformation()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='transformation' namespace='##targetNamespace'"
      * @generated
@@ -70,7 +69,7 @@ public interface DataAssociation extends BaseElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Assignment</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDataAssociation_Assignment()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDataAssociation_Assignment()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='assignment' namespace='##targetNamespace'"
      * @generated

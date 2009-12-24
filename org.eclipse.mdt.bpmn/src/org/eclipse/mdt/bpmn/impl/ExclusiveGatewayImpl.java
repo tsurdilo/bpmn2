@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -18,8 +17,8 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.ExclusiveGateway;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +33,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class ExclusiveGatewayImpl extends GatewayImpl implements ExclusiveGateway {
+public class ExclusiveGatewayImpl extends GatewayImpl implements
+        ExclusiveGateway {
     /**
      * The default value of the '{@link #getDefault() <em>Default</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -71,7 +71,7 @@ public class ExclusiveGatewayImpl extends GatewayImpl implements ExclusiveGatewa
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getExclusiveGateway();
+        return BpmnPackage.eINSTANCE.getExclusiveGateway();
     }
 
     /**
@@ -92,7 +92,9 @@ public class ExclusiveGatewayImpl extends GatewayImpl implements ExclusiveGatewa
         String oldDefault = default_;
         default_ = newDefault;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.EXCLUSIVE_GATEWAY__DEFAULT, oldDefault, default_));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.EXCLUSIVE_GATEWAY__DEFAULT, oldDefault,
+                    default_));
     }
 
     /**
@@ -103,8 +105,8 @@ public class ExclusiveGatewayImpl extends GatewayImpl implements ExclusiveGatewa
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.EXCLUSIVE_GATEWAY__DEFAULT:
-                return getDefault();
+        case BpmnPackage.EXCLUSIVE_GATEWAY__DEFAULT:
+            return getDefault();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -117,9 +119,9 @@ public class ExclusiveGatewayImpl extends GatewayImpl implements ExclusiveGatewa
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.EXCLUSIVE_GATEWAY__DEFAULT:
-                setDefault((String)newValue);
-                return;
+        case BpmnPackage.EXCLUSIVE_GATEWAY__DEFAULT:
+            setDefault((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -132,9 +134,9 @@ public class ExclusiveGatewayImpl extends GatewayImpl implements ExclusiveGatewa
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.EXCLUSIVE_GATEWAY__DEFAULT:
-                setDefault(DEFAULT_EDEFAULT);
-                return;
+        case BpmnPackage.EXCLUSIVE_GATEWAY__DEFAULT:
+            setDefault(DEFAULT_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -147,8 +149,9 @@ public class ExclusiveGatewayImpl extends GatewayImpl implements ExclusiveGatewa
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.EXCLUSIVE_GATEWAY__DEFAULT:
-                return DEFAULT_EDEFAULT == null ? default_ != null : !DEFAULT_EDEFAULT.equals(default_);
+        case BpmnPackage.EXCLUSIVE_GATEWAY__DEFAULT:
+            return DEFAULT_EDEFAULT == null ? default_ != null
+                    : !DEFAULT_EDEFAULT.equals(default_);
         }
         return super.eIsSet(featureID);
     }
@@ -160,7 +163,8 @@ public class ExclusiveGatewayImpl extends GatewayImpl implements ExclusiveGatewa
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (default: "); //$NON-NLS-1$

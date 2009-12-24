@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -23,7 +22,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Service Implementation</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getServiceImplementation()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getServiceImplementation()
  * @model extendedMetaData="name='tServiceImplementation'"
  * @generated
  */
@@ -109,12 +108,8 @@ public enum ServiceImplementation implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    private static final ServiceImplementation[] VALUES_ARRAY =
-        new ServiceImplementation[] {
-            WEB_SERVICE,
-            OTHER,
-            UNSPECIFIED,
-        };
+    private static final ServiceImplementation[] VALUES_ARRAY = new ServiceImplementation[] {
+            WEB_SERVICE, OTHER, UNSPECIFIED, };
 
     /**
      * A public read-only list of all the '<em><b>Service Implementation</b></em>' enumerators.
@@ -122,7 +117,8 @@ public enum ServiceImplementation implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final List<ServiceImplementation> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+    public static final List<ServiceImplementation> VALUES = Collections
+            .unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
     /**
      * Returns the '<em><b>Service Implementation</b></em>' literal with the specified literal value.
@@ -164,9 +160,12 @@ public enum ServiceImplementation implements Enumerator {
      */
     public static ServiceImplementation get(int value) {
         switch (value) {
-            case WEB_SERVICE_VALUE: return WEB_SERVICE;
-            case OTHER_VALUE: return OTHER;
-            case UNSPECIFIED_VALUE: return UNSPECIFIED;
+        case WEB_SERVICE_VALUE:
+            return WEB_SERVICE;
+        case OTHER_VALUE:
+            return OTHER;
+        case UNSPECIFIED_VALUE:
+            return UNSPECIFIED;
         }
         return null;
     }
@@ -210,7 +209,7 @@ public enum ServiceImplementation implements Enumerator {
      * @generated
      */
     public int getValue() {
-      return value;
+        return value;
     }
 
     /**
@@ -219,7 +218,7 @@ public enum ServiceImplementation implements Enumerator {
      * @generated
      */
     public String getName() {
-      return name;
+        return name;
     }
 
     /**
@@ -228,7 +227,7 @@ public enum ServiceImplementation implements Enumerator {
      * @generated
      */
     public String getLiteral() {
-      return literal;
+        return literal;
     }
 
     /**
@@ -241,5 +240,5 @@ public enum ServiceImplementation implements Enumerator {
     public String toString() {
         return literal;
     }
-    
+
 } //ServiceImplementation

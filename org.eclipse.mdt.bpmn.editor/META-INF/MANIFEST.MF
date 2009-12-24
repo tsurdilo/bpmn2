@@ -4,10 +4,12 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.mdt.bpmn.editor;singleton:=true
 Bundle-Version: 1.0.0
 Bundle-ClassPath: .
-Bundle-Activator: org.eclipse.mdt.bpmn2.presentation.BPMN20EditorPlugin$Implementation
+Bundle-Activator: org.eclipse.mdt.bpmn.presentation.BpmnEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: org.eclipse.mdt.bpmn.di.presentation,
+ org.eclipse.mdt.bpmn.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  org.eclipse.mdt.bpmn.edit;visibility:=reexport,

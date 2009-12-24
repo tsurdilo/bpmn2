@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -20,9 +19,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.GlobalScriptTask;
 import org.eclipse.mdt.bpmn.Script;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,7 +37,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class GlobalScriptTaskImpl extends GlobalTaskImpl implements GlobalScriptTask {
+public class GlobalScriptTaskImpl extends GlobalTaskImpl implements
+        GlobalScriptTask {
     /**
      * The cached value of the '{@link #getScript() <em>Script</em>}' containment reference.
      * <!-- begin-user-doc -->
@@ -85,7 +85,7 @@ public class GlobalScriptTaskImpl extends GlobalTaskImpl implements GlobalScript
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getGlobalScriptTask();
+        return BpmnPackage.eINSTANCE.getGlobalScriptTask();
     }
 
     /**
@@ -102,12 +102,18 @@ public class GlobalScriptTaskImpl extends GlobalTaskImpl implements GlobalScript
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetScript(Script newScript, NotificationChain msgs) {
+    public NotificationChain basicSetScript(Script newScript,
+            NotificationChain msgs) {
         Script oldScript = script;
         script = newScript;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, bpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT, oldScript, newScript);
-            if (msgs == null) msgs = notification; else msgs.add(notification);
+            ENotificationImpl notification = new ENotificationImpl(this,
+                    Notification.SET, BpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT,
+                    oldScript, newScript);
+            if (msgs == null)
+                msgs = notification;
+            else
+                msgs.add(notification);
         }
         return msgs;
     }
@@ -121,14 +127,22 @@ public class GlobalScriptTaskImpl extends GlobalTaskImpl implements GlobalScript
         if (newScript != script) {
             NotificationChain msgs = null;
             if (script != null)
-                msgs = ((InternalEObject)script).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - bpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT, null, msgs);
+                msgs = ((InternalEObject) script).eInverseRemove(this,
+                        EOPPOSITE_FEATURE_BASE
+                                - BpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT, null,
+                        msgs);
             if (newScript != null)
-                msgs = ((InternalEObject)newScript).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - bpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT, null, msgs);
+                msgs = ((InternalEObject) newScript).eInverseAdd(this,
+                        EOPPOSITE_FEATURE_BASE
+                                - BpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT, null,
+                        msgs);
             msgs = basicSetScript(newScript, msgs);
-            if (msgs != null) msgs.dispatch();
-        }
-        else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT, newScript, newScript));
+            if (msgs != null)
+                msgs.dispatch();
+        } else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT, newScript,
+                    newScript));
     }
 
     /**
@@ -149,7 +163,9 @@ public class GlobalScriptTaskImpl extends GlobalTaskImpl implements GlobalScript
         String oldScriptLanguage = scriptLanguage;
         scriptLanguage = newScriptLanguage;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE, oldScriptLanguage, scriptLanguage));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE,
+                    oldScriptLanguage, scriptLanguage));
     }
 
     /**
@@ -158,10 +174,11 @@ public class GlobalScriptTaskImpl extends GlobalTaskImpl implements GlobalScript
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT:
-                return basicSetScript(null, msgs);
+        case BpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT:
+            return basicSetScript(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -174,10 +191,10 @@ public class GlobalScriptTaskImpl extends GlobalTaskImpl implements GlobalScript
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT:
-                return getScript();
-            case bpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE:
-                return getScriptLanguage();
+        case BpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT:
+            return getScript();
+        case BpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE:
+            return getScriptLanguage();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -190,12 +207,12 @@ public class GlobalScriptTaskImpl extends GlobalTaskImpl implements GlobalScript
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT:
-                setScript((Script)newValue);
-                return;
-            case bpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE:
-                setScriptLanguage((String)newValue);
-                return;
+        case BpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT:
+            setScript((Script) newValue);
+            return;
+        case BpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE:
+            setScriptLanguage((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -208,12 +225,12 @@ public class GlobalScriptTaskImpl extends GlobalTaskImpl implements GlobalScript
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT:
-                setScript((Script)null);
-                return;
-            case bpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE:
-                setScriptLanguage(SCRIPT_LANGUAGE_EDEFAULT);
-                return;
+        case BpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT:
+            setScript((Script) null);
+            return;
+        case BpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE:
+            setScriptLanguage(SCRIPT_LANGUAGE_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -226,10 +243,11 @@ public class GlobalScriptTaskImpl extends GlobalTaskImpl implements GlobalScript
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT:
-                return script != null;
-            case bpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE:
-                return SCRIPT_LANGUAGE_EDEFAULT == null ? scriptLanguage != null : !SCRIPT_LANGUAGE_EDEFAULT.equals(scriptLanguage);
+        case BpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT:
+            return script != null;
+        case BpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE:
+            return SCRIPT_LANGUAGE_EDEFAULT == null ? scriptLanguage != null
+                    : !SCRIPT_LANGUAGE_EDEFAULT.equals(scriptLanguage);
         }
         return super.eIsSet(featureID);
     }
@@ -241,7 +259,8 @@ public class GlobalScriptTaskImpl extends GlobalTaskImpl implements GlobalScript
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (scriptLanguage: "); //$NON-NLS-1$

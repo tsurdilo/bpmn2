@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -34,9 +33,9 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.mdt.bpmn.Association;
-import org.eclipse.mdt.bpmn.bpmnPackage;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.Association} object.
@@ -90,7 +89,7 @@ public class AssociationItemProvider extends ArtifactItemProvider implements
                         getString("_UI_Association_associationDirection_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Association_associationDirection_feature", "_UI_Association_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE
+                        BpmnPackage.eINSTANCE
                                 .getAssociation_AssociationDirection(), true,
                         false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
@@ -111,7 +110,7 @@ public class AssociationItemProvider extends ArtifactItemProvider implements
                         getString("_UI_Association_sourceRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Association_sourceRef_feature", "_UI_Association_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getAssociation_SourceRef(), true,
+                        BpmnPackage.eINSTANCE.getAssociation_SourceRef(), true,
                         false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -131,7 +130,7 @@ public class AssociationItemProvider extends ArtifactItemProvider implements
                         getString("_UI_Association_targetRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Association_targetRef_feature", "_UI_Association_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getAssociation_TargetRef(), true,
+                        BpmnPackage.eINSTANCE.getAssociation_TargetRef(), true,
                         false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -173,9 +172,9 @@ public class AssociationItemProvider extends ArtifactItemProvider implements
         updateChildren(notification);
 
         switch (notification.getFeatureID(Association.class)) {
-        case bpmnPackage.ASSOCIATION__ASSOCIATION_DIRECTION:
-        case bpmnPackage.ASSOCIATION__SOURCE_REF:
-        case bpmnPackage.ASSOCIATION__TARGET_REF:
+        case BpmnPackage.ASSOCIATION__ASSOCIATION_DIRECTION:
+        case BpmnPackage.ASSOCIATION__SOURCE_REF:
+        case BpmnPackage.ASSOCIATION__TARGET_REF:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
@@ -216,10 +215,10 @@ public class AssociationItemProvider extends ArtifactItemProvider implements
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE;
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE;
 
         if (qualify) {
             return getString("_UI_CreateChild_text2", //$NON-NLS-1$

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -31,8 +30,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Import;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.Import} object.
@@ -86,7 +85,7 @@ public class ImportItemProvider extends ItemProviderAdapter implements
                         getString("_UI_Import_importType_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Import_importType_feature", "_UI_Import_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getImport_ImportType(), true,
+                        BpmnPackage.eINSTANCE.getImport_ImportType(), true,
                         false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -106,7 +105,7 @@ public class ImportItemProvider extends ItemProviderAdapter implements
                         getString("_UI_Import_location_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Import_location_feature", "_UI_Import_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getImport_Location(), true,
+                        BpmnPackage.eINSTANCE.getImport_Location(), true,
                         false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -126,7 +125,7 @@ public class ImportItemProvider extends ItemProviderAdapter implements
                         getString("_UI_Import_namespace_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Import_namespace_feature", "_UI_Import_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getImport_Namespace(), true,
+                        BpmnPackage.eINSTANCE.getImport_Namespace(), true,
                         false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -168,9 +167,9 @@ public class ImportItemProvider extends ItemProviderAdapter implements
         updateChildren(notification);
 
         switch (notification.getFeatureID(Import.class)) {
-        case bpmnPackage.IMPORT__IMPORT_TYPE:
-        case bpmnPackage.IMPORT__LOCATION:
-        case bpmnPackage.IMPORT__NAMESPACE:
+        case BpmnPackage.IMPORT__IMPORT_TYPE:
+        case BpmnPackage.IMPORT__LOCATION:
+        case BpmnPackage.IMPORT__NAMESPACE:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;

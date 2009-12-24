@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -27,9 +26,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Resource;
 import org.eclipse.mdt.bpmn.ResourceParameter;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -92,7 +91,7 @@ public class ResourceImpl extends RootElementImpl implements Resource {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getResource();
+        return BpmnPackage.eINSTANCE.getResource();
     }
 
     /**
@@ -102,7 +101,9 @@ public class ResourceImpl extends RootElementImpl implements Resource {
      */
     public EList<ResourceParameter> getResourceParameter() {
         if (resourceParameter == null) {
-            resourceParameter = new EObjectContainmentEList<ResourceParameter>(ResourceParameter.class, this, bpmnPackage.RESOURCE__RESOURCE_PARAMETER);
+            resourceParameter = new EObjectContainmentEList<ResourceParameter>(
+                    ResourceParameter.class, this,
+                    BpmnPackage.RESOURCE__RESOURCE_PARAMETER);
         }
         return resourceParameter;
     }
@@ -125,7 +126,8 @@ public class ResourceImpl extends RootElementImpl implements Resource {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.RESOURCE__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.RESOURCE__NAME, oldName, name));
     }
 
     /**
@@ -134,10 +136,12 @@ public class ResourceImpl extends RootElementImpl implements Resource {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.RESOURCE__RESOURCE_PARAMETER:
-                return ((InternalEList<?>)getResourceParameter()).basicRemove(otherEnd, msgs);
+        case BpmnPackage.RESOURCE__RESOURCE_PARAMETER:
+            return ((InternalEList<?>) getResourceParameter()).basicRemove(
+                    otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -150,10 +154,10 @@ public class ResourceImpl extends RootElementImpl implements Resource {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.RESOURCE__RESOURCE_PARAMETER:
-                return getResourceParameter();
-            case bpmnPackage.RESOURCE__NAME:
-                return getName();
+        case BpmnPackage.RESOURCE__RESOURCE_PARAMETER:
+            return getResourceParameter();
+        case BpmnPackage.RESOURCE__NAME:
+            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -167,13 +171,14 @@ public class ResourceImpl extends RootElementImpl implements Resource {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.RESOURCE__RESOURCE_PARAMETER:
-                getResourceParameter().clear();
-                getResourceParameter().addAll((Collection<? extends ResourceParameter>)newValue);
-                return;
-            case bpmnPackage.RESOURCE__NAME:
-                setName((String)newValue);
-                return;
+        case BpmnPackage.RESOURCE__RESOURCE_PARAMETER:
+            getResourceParameter().clear();
+            getResourceParameter().addAll(
+                    (Collection<? extends ResourceParameter>) newValue);
+            return;
+        case BpmnPackage.RESOURCE__NAME:
+            setName((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -186,12 +191,12 @@ public class ResourceImpl extends RootElementImpl implements Resource {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.RESOURCE__RESOURCE_PARAMETER:
-                getResourceParameter().clear();
-                return;
-            case bpmnPackage.RESOURCE__NAME:
-                setName(NAME_EDEFAULT);
-                return;
+        case BpmnPackage.RESOURCE__RESOURCE_PARAMETER:
+            getResourceParameter().clear();
+            return;
+        case BpmnPackage.RESOURCE__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -204,10 +209,11 @@ public class ResourceImpl extends RootElementImpl implements Resource {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.RESOURCE__RESOURCE_PARAMETER:
-                return resourceParameter != null && !resourceParameter.isEmpty();
-            case bpmnPackage.RESOURCE__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case BpmnPackage.RESOURCE__RESOURCE_PARAMETER:
+            return resourceParameter != null && !resourceParameter.isEmpty();
+        case BpmnPackage.RESOURCE__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
+                    .equals(name);
         }
         return super.eIsSet(featureID);
     }
@@ -219,7 +225,8 @@ public class ResourceImpl extends RootElementImpl implements Resource {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (name: "); //$NON-NLS-1$

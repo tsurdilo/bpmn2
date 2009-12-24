@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -30,7 +29,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getResourceParameterBinding()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getResourceParameterBinding()
  * @model extendedMetaData="name='tResourceParameterBinding' kind='elementOnly'"
  * @generated
  */
@@ -45,7 +44,7 @@ public interface ResourceParameterBinding extends BaseElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Expression Group</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getResourceParameterBinding_ExpressionGroup()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getResourceParameterBinding_ExpressionGroup()
      * @model dataType="org.eclipse.emf.ecore.EFeatureMapEntry" required="true" many="false"
      *        extendedMetaData="kind='group' name='expression:group' namespace='##targetNamespace'"
      * @generated
@@ -62,7 +61,7 @@ public interface ResourceParameterBinding extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Expression</em>' containment reference.
      * @see #setExpression(Expression)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getResourceParameterBinding_Expression()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getResourceParameterBinding_Expression()
      * @model containment="true" required="true" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='expression' namespace='##targetNamespace' group='expression:group'"
      * @generated
@@ -89,7 +88,7 @@ public interface ResourceParameterBinding extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Parameter Ref</em>' attribute.
      * @see #setParameterRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getResourceParameterBinding_ParameterRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getResourceParameterBinding_ParameterRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName" required="true"
      *        extendedMetaData="kind='attribute' name='parameterRef'"
      * @generated

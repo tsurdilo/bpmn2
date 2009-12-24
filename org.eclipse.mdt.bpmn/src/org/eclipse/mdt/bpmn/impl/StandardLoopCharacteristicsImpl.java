@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -22,9 +21,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Expression;
 import org.eclipse.mdt.bpmn.StandardLoopCharacteristics;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,7 +40,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl implements StandardLoopCharacteristics {
+public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl
+        implements StandardLoopCharacteristics {
     /**
      * The cached value of the '{@link #getLoopCondition() <em>Loop Condition</em>}' containment reference.
      * <!-- begin-user-doc -->
@@ -117,7 +117,7 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl imp
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getStandardLoopCharacteristics();
+        return BpmnPackage.eINSTANCE.getStandardLoopCharacteristics();
     }
 
     /**
@@ -134,12 +134,19 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl imp
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetLoopCondition(Expression newLoopCondition, NotificationChain msgs) {
+    public NotificationChain basicSetLoopCondition(Expression newLoopCondition,
+            NotificationChain msgs) {
         Expression oldLoopCondition = loopCondition;
         loopCondition = newLoopCondition;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, bpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION, oldLoopCondition, newLoopCondition);
-            if (msgs == null) msgs = notification; else msgs.add(notification);
+            ENotificationImpl notification = new ENotificationImpl(this,
+                    Notification.SET,
+                    BpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION,
+                    oldLoopCondition, newLoopCondition);
+            if (msgs == null)
+                msgs = notification;
+            else
+                msgs.add(notification);
         }
         return msgs;
     }
@@ -153,14 +160,26 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl imp
         if (newLoopCondition != loopCondition) {
             NotificationChain msgs = null;
             if (loopCondition != null)
-                msgs = ((InternalEObject)loopCondition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - bpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION, null, msgs);
+                msgs = ((InternalEObject) loopCondition)
+                        .eInverseRemove(
+                                this,
+                                EOPPOSITE_FEATURE_BASE
+                                        - BpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION,
+                                null, msgs);
             if (newLoopCondition != null)
-                msgs = ((InternalEObject)newLoopCondition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - bpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION, null, msgs);
+                msgs = ((InternalEObject) newLoopCondition)
+                        .eInverseAdd(
+                                this,
+                                EOPPOSITE_FEATURE_BASE
+                                        - BpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION,
+                                null, msgs);
             msgs = basicSetLoopCondition(newLoopCondition, msgs);
-            if (msgs != null) msgs.dispatch();
-        }
-        else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION, newLoopCondition, newLoopCondition));
+            if (msgs != null)
+                msgs.dispatch();
+        } else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION,
+                    newLoopCondition, newLoopCondition));
     }
 
     /**
@@ -181,7 +200,9 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl imp
         BigInteger oldLoopMaximum = loopMaximum;
         loopMaximum = newLoopMaximum;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM, oldLoopMaximum, loopMaximum));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM,
+                    oldLoopMaximum, loopMaximum));
     }
 
     /**
@@ -204,7 +225,9 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl imp
         boolean oldTestBeforeESet = testBeforeESet;
         testBeforeESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE, oldTestBefore, testBefore, !oldTestBeforeESet));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE,
+                    oldTestBefore, testBefore, !oldTestBeforeESet));
     }
 
     /**
@@ -218,7 +241,9 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl imp
         testBefore = TEST_BEFORE_EDEFAULT;
         testBeforeESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, bpmnPackage.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE, oldTestBefore, TEST_BEFORE_EDEFAULT, oldTestBeforeESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET,
+                    BpmnPackage.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE,
+                    oldTestBefore, TEST_BEFORE_EDEFAULT, oldTestBeforeESet));
     }
 
     /**
@@ -236,10 +261,11 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl imp
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION:
-                return basicSetLoopCondition(null, msgs);
+        case BpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION:
+            return basicSetLoopCondition(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -252,12 +278,12 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl imp
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION:
-                return getLoopCondition();
-            case bpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM:
-                return getLoopMaximum();
-            case bpmnPackage.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE:
-                return isTestBefore();
+        case BpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION:
+            return getLoopCondition();
+        case BpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM:
+            return getLoopMaximum();
+        case BpmnPackage.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE:
+            return isTestBefore();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -270,15 +296,15 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl imp
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION:
-                setLoopCondition((Expression)newValue);
-                return;
-            case bpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM:
-                setLoopMaximum((BigInteger)newValue);
-                return;
-            case bpmnPackage.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE:
-                setTestBefore((Boolean)newValue);
-                return;
+        case BpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION:
+            setLoopCondition((Expression) newValue);
+            return;
+        case BpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM:
+            setLoopMaximum((BigInteger) newValue);
+            return;
+        case BpmnPackage.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE:
+            setTestBefore((Boolean) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -291,15 +317,15 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl imp
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION:
-                setLoopCondition((Expression)null);
-                return;
-            case bpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM:
-                setLoopMaximum(LOOP_MAXIMUM_EDEFAULT);
-                return;
-            case bpmnPackage.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE:
-                unsetTestBefore();
-                return;
+        case BpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION:
+            setLoopCondition((Expression) null);
+            return;
+        case BpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM:
+            setLoopMaximum(LOOP_MAXIMUM_EDEFAULT);
+            return;
+        case BpmnPackage.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE:
+            unsetTestBefore();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -312,12 +338,13 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl imp
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION:
-                return loopCondition != null;
-            case bpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM:
-                return LOOP_MAXIMUM_EDEFAULT == null ? loopMaximum != null : !LOOP_MAXIMUM_EDEFAULT.equals(loopMaximum);
-            case bpmnPackage.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE:
-                return isSetTestBefore();
+        case BpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION:
+            return loopCondition != null;
+        case BpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM:
+            return LOOP_MAXIMUM_EDEFAULT == null ? loopMaximum != null
+                    : !LOOP_MAXIMUM_EDEFAULT.equals(loopMaximum);
+        case BpmnPackage.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE:
+            return isSetTestBefore();
         }
         return super.eIsSet(featureID);
     }
@@ -329,13 +356,17 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl imp
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (loopMaximum: "); //$NON-NLS-1$
         result.append(loopMaximum);
         result.append(", testBefore: "); //$NON-NLS-1$
-        if (testBeforeESet) result.append(testBefore); else result.append("<unset>"); //$NON-NLS-1$
+        if (testBeforeESet)
+            result.append(testBefore);
+        else
+            result.append("<unset>"); //$NON-NLS-1$
         result.append(')');
         return result.toString();
     }

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -31,11 +30,11 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnFactory;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.GlobalCommunication;
-import org.eclipse.mdt.bpmn.bpmnFactory;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.GlobalCommunication} object.
@@ -85,11 +84,11 @@ public class GlobalCommunicationItemProvider extends
             Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getGlobalCommunication_Participant());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getGlobalCommunication_MessageFlow());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getGlobalCommunication_CorrelationKey());
         }
         return childrenFeatures;
@@ -145,9 +144,9 @@ public class GlobalCommunicationItemProvider extends
         updateChildren(notification);
 
         switch (notification.getFeatureID(GlobalCommunication.class)) {
-        case bpmnPackage.GLOBAL_COMMUNICATION__PARTICIPANT:
-        case bpmnPackage.GLOBAL_COMMUNICATION__MESSAGE_FLOW:
-        case bpmnPackage.GLOBAL_COMMUNICATION__CORRELATION_KEY:
+        case BpmnPackage.GLOBAL_COMMUNICATION__PARTICIPANT:
+        case BpmnPackage.GLOBAL_COMMUNICATION__MESSAGE_FLOW:
+        case BpmnPackage.GLOBAL_COMMUNICATION__CORRELATION_KEY:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -167,16 +166,16 @@ public class GlobalCommunicationItemProvider extends
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getGlobalCommunication_Participant(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getGlobalCommunication_Participant(), BpmnFactory.eINSTANCE
                 .createParticipant()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getGlobalCommunication_MessageFlow(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getGlobalCommunication_MessageFlow(), BpmnFactory.eINSTANCE
                 .createMessageFlow()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getGlobalCommunication_CorrelationKey(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getGlobalCommunication_CorrelationKey(), BpmnFactory.eINSTANCE
                 .createCorrelationKey()));
     }
 
@@ -200,10 +199,10 @@ public class GlobalCommunicationItemProvider extends
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE;
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE;
 
         if (qualify) {
             return getString("_UI_CreateChild_text2", //$NON-NLS-1$

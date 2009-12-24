@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -23,7 +22,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Item Kind</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getItemKind()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getItemKind()
  * @model extendedMetaData="name='tItemKind'"
  * @generated
  */
@@ -84,11 +83,8 @@ public enum ItemKind implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    private static final ItemKind[] VALUES_ARRAY =
-        new ItemKind[] {
-            INFORMATION,
-            PHYSICAL,
-        };
+    private static final ItemKind[] VALUES_ARRAY = new ItemKind[] {
+            INFORMATION, PHYSICAL, };
 
     /**
      * A public read-only list of all the '<em><b>Item Kind</b></em>' enumerators.
@@ -96,7 +92,8 @@ public enum ItemKind implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final List<ItemKind> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+    public static final List<ItemKind> VALUES = Collections
+            .unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
     /**
      * Returns the '<em><b>Item Kind</b></em>' literal with the specified literal value.
@@ -138,8 +135,10 @@ public enum ItemKind implements Enumerator {
      */
     public static ItemKind get(int value) {
         switch (value) {
-            case INFORMATION_VALUE: return INFORMATION;
-            case PHYSICAL_VALUE: return PHYSICAL;
+        case INFORMATION_VALUE:
+            return INFORMATION;
+        case PHYSICAL_VALUE:
+            return PHYSICAL;
         }
         return null;
     }
@@ -183,7 +182,7 @@ public enum ItemKind implements Enumerator {
      * @generated
      */
     public int getValue() {
-      return value;
+        return value;
     }
 
     /**
@@ -192,7 +191,7 @@ public enum ItemKind implements Enumerator {
      * @generated
      */
     public String getName() {
-      return name;
+        return name;
     }
 
     /**
@@ -201,7 +200,7 @@ public enum ItemKind implements Enumerator {
      * @generated
      */
     public String getLiteral() {
-      return literal;
+        return literal;
     }
 
     /**
@@ -214,5 +213,5 @@ public enum ItemKind implements Enumerator {
     public String toString() {
         return literal;
     }
-    
+
 } //ItemKind

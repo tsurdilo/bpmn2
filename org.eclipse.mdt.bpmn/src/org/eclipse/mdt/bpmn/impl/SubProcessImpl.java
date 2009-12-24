@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -29,9 +28,9 @@ import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.mdt.bpmn.Artifact;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.FlowElement;
 import org.eclipse.mdt.bpmn.SubProcess;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,9 +40,9 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.eclipse.mdt.bpmn.impl.SubProcessImpl#getFlowElementGroup <em>Flow Element Group</em>}</li>
- *   <li>{@link org.eclipse.mdt.bpmn.impl.SubProcessImpl#getFlowElement <em>Flow Element</em>}</li>
+ *   <li>{@link org.eclipse.mdt.bpmn.impl.SubProcessImpl#getFlowElements <em>Flow Elements</em>}</li>
  *   <li>{@link org.eclipse.mdt.bpmn.impl.SubProcessImpl#getArtifactGroup <em>Artifact Group</em>}</li>
- *   <li>{@link org.eclipse.mdt.bpmn.impl.SubProcessImpl#getArtifact <em>Artifact</em>}</li>
+ *   <li>{@link org.eclipse.mdt.bpmn.impl.SubProcessImpl#getArtifacts <em>Artifacts</em>}</li>
  *   <li>{@link org.eclipse.mdt.bpmn.impl.SubProcessImpl#isTriggeredByEvent <em>Triggered By Event</em>}</li>
  * </ul>
  * </p>
@@ -116,7 +115,7 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getSubProcess();
+        return BpmnPackage.eINSTANCE.getSubProcess();
     }
 
     /**
@@ -126,7 +125,8 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
      */
     public FeatureMap getFlowElementGroup() {
         if (flowElementGroup == null) {
-            flowElementGroup = new BasicFeatureMap(this, bpmnPackage.SUB_PROCESS__FLOW_ELEMENT_GROUP);
+            flowElementGroup = new BasicFeatureMap(this,
+                    BpmnPackage.SUB_PROCESS__FLOW_ELEMENT_GROUP);
         }
         return flowElementGroup;
     }
@@ -136,8 +136,9 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<FlowElement> getFlowElement() {
-        return getFlowElementGroup().list(bpmnPackage.eINSTANCE.getSubProcess_FlowElement());
+    public EList<FlowElement> getFlowElements() {
+        return getFlowElementGroup().list(
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements());
     }
 
     /**
@@ -147,7 +148,8 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
      */
     public FeatureMap getArtifactGroup() {
         if (artifactGroup == null) {
-            artifactGroup = new BasicFeatureMap(this, bpmnPackage.SUB_PROCESS__ARTIFACT_GROUP);
+            artifactGroup = new BasicFeatureMap(this,
+                    BpmnPackage.SUB_PROCESS__ARTIFACT_GROUP);
         }
         return artifactGroup;
     }
@@ -157,8 +159,9 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Artifact> getArtifact() {
-        return getArtifactGroup().list(bpmnPackage.eINSTANCE.getSubProcess_Artifact());
+    public EList<Artifact> getArtifacts() {
+        return getArtifactGroup().list(
+                BpmnPackage.eINSTANCE.getSubProcess_Artifacts());
     }
 
     /**
@@ -181,7 +184,10 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
         boolean oldTriggeredByEventESet = triggeredByEventESet;
         triggeredByEventESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.SUB_PROCESS__TRIGGERED_BY_EVENT, oldTriggeredByEvent, triggeredByEvent, !oldTriggeredByEventESet));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.SUB_PROCESS__TRIGGERED_BY_EVENT,
+                    oldTriggeredByEvent, triggeredByEvent,
+                    !oldTriggeredByEventESet));
     }
 
     /**
@@ -195,7 +201,10 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
         triggeredByEvent = TRIGGERED_BY_EVENT_EDEFAULT;
         triggeredByEventESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, bpmnPackage.SUB_PROCESS__TRIGGERED_BY_EVENT, oldTriggeredByEvent, TRIGGERED_BY_EVENT_EDEFAULT, oldTriggeredByEventESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET,
+                    BpmnPackage.SUB_PROCESS__TRIGGERED_BY_EVENT,
+                    oldTriggeredByEvent, TRIGGERED_BY_EVENT_EDEFAULT,
+                    oldTriggeredByEventESet));
     }
 
     /**
@@ -213,16 +222,21 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.SUB_PROCESS__FLOW_ELEMENT_GROUP:
-                return ((InternalEList<?>)getFlowElementGroup()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.SUB_PROCESS__FLOW_ELEMENT:
-                return ((InternalEList<?>)getFlowElement()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.SUB_PROCESS__ARTIFACT_GROUP:
-                return ((InternalEList<?>)getArtifactGroup()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.SUB_PROCESS__ARTIFACT:
-                return ((InternalEList<?>)getArtifact()).basicRemove(otherEnd, msgs);
+        case BpmnPackage.SUB_PROCESS__FLOW_ELEMENT_GROUP:
+            return ((InternalEList<?>) getFlowElementGroup()).basicRemove(
+                    otherEnd, msgs);
+        case BpmnPackage.SUB_PROCESS__FLOW_ELEMENTS:
+            return ((InternalEList<?>) getFlowElements()).basicRemove(otherEnd,
+                    msgs);
+        case BpmnPackage.SUB_PROCESS__ARTIFACT_GROUP:
+            return ((InternalEList<?>) getArtifactGroup()).basicRemove(
+                    otherEnd, msgs);
+        case BpmnPackage.SUB_PROCESS__ARTIFACTS:
+            return ((InternalEList<?>) getArtifacts()).basicRemove(otherEnd,
+                    msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -235,18 +249,20 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.SUB_PROCESS__FLOW_ELEMENT_GROUP:
-                if (coreType) return getFlowElementGroup();
-                return ((FeatureMap.Internal)getFlowElementGroup()).getWrapper();
-            case bpmnPackage.SUB_PROCESS__FLOW_ELEMENT:
-                return getFlowElement();
-            case bpmnPackage.SUB_PROCESS__ARTIFACT_GROUP:
-                if (coreType) return getArtifactGroup();
-                return ((FeatureMap.Internal)getArtifactGroup()).getWrapper();
-            case bpmnPackage.SUB_PROCESS__ARTIFACT:
-                return getArtifact();
-            case bpmnPackage.SUB_PROCESS__TRIGGERED_BY_EVENT:
-                return isTriggeredByEvent();
+        case BpmnPackage.SUB_PROCESS__FLOW_ELEMENT_GROUP:
+            if (coreType)
+                return getFlowElementGroup();
+            return ((FeatureMap.Internal) getFlowElementGroup()).getWrapper();
+        case BpmnPackage.SUB_PROCESS__FLOW_ELEMENTS:
+            return getFlowElements();
+        case BpmnPackage.SUB_PROCESS__ARTIFACT_GROUP:
+            if (coreType)
+                return getArtifactGroup();
+            return ((FeatureMap.Internal) getArtifactGroup()).getWrapper();
+        case BpmnPackage.SUB_PROCESS__ARTIFACTS:
+            return getArtifacts();
+        case BpmnPackage.SUB_PROCESS__TRIGGERED_BY_EVENT:
+            return isTriggeredByEvent();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -260,23 +276,24 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.SUB_PROCESS__FLOW_ELEMENT_GROUP:
-                ((FeatureMap.Internal)getFlowElementGroup()).set(newValue);
-                return;
-            case bpmnPackage.SUB_PROCESS__FLOW_ELEMENT:
-                getFlowElement().clear();
-                getFlowElement().addAll((Collection<? extends FlowElement>)newValue);
-                return;
-            case bpmnPackage.SUB_PROCESS__ARTIFACT_GROUP:
-                ((FeatureMap.Internal)getArtifactGroup()).set(newValue);
-                return;
-            case bpmnPackage.SUB_PROCESS__ARTIFACT:
-                getArtifact().clear();
-                getArtifact().addAll((Collection<? extends Artifact>)newValue);
-                return;
-            case bpmnPackage.SUB_PROCESS__TRIGGERED_BY_EVENT:
-                setTriggeredByEvent((Boolean)newValue);
-                return;
+        case BpmnPackage.SUB_PROCESS__FLOW_ELEMENT_GROUP:
+            ((FeatureMap.Internal) getFlowElementGroup()).set(newValue);
+            return;
+        case BpmnPackage.SUB_PROCESS__FLOW_ELEMENTS:
+            getFlowElements().clear();
+            getFlowElements().addAll(
+                    (Collection<? extends FlowElement>) newValue);
+            return;
+        case BpmnPackage.SUB_PROCESS__ARTIFACT_GROUP:
+            ((FeatureMap.Internal) getArtifactGroup()).set(newValue);
+            return;
+        case BpmnPackage.SUB_PROCESS__ARTIFACTS:
+            getArtifacts().clear();
+            getArtifacts().addAll((Collection<? extends Artifact>) newValue);
+            return;
+        case BpmnPackage.SUB_PROCESS__TRIGGERED_BY_EVENT:
+            setTriggeredByEvent((Boolean) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -289,21 +306,21 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.SUB_PROCESS__FLOW_ELEMENT_GROUP:
-                getFlowElementGroup().clear();
-                return;
-            case bpmnPackage.SUB_PROCESS__FLOW_ELEMENT:
-                getFlowElement().clear();
-                return;
-            case bpmnPackage.SUB_PROCESS__ARTIFACT_GROUP:
-                getArtifactGroup().clear();
-                return;
-            case bpmnPackage.SUB_PROCESS__ARTIFACT:
-                getArtifact().clear();
-                return;
-            case bpmnPackage.SUB_PROCESS__TRIGGERED_BY_EVENT:
-                unsetTriggeredByEvent();
-                return;
+        case BpmnPackage.SUB_PROCESS__FLOW_ELEMENT_GROUP:
+            getFlowElementGroup().clear();
+            return;
+        case BpmnPackage.SUB_PROCESS__FLOW_ELEMENTS:
+            getFlowElements().clear();
+            return;
+        case BpmnPackage.SUB_PROCESS__ARTIFACT_GROUP:
+            getArtifactGroup().clear();
+            return;
+        case BpmnPackage.SUB_PROCESS__ARTIFACTS:
+            getArtifacts().clear();
+            return;
+        case BpmnPackage.SUB_PROCESS__TRIGGERED_BY_EVENT:
+            unsetTriggeredByEvent();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -316,16 +333,16 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.SUB_PROCESS__FLOW_ELEMENT_GROUP:
-                return flowElementGroup != null && !flowElementGroup.isEmpty();
-            case bpmnPackage.SUB_PROCESS__FLOW_ELEMENT:
-                return !getFlowElement().isEmpty();
-            case bpmnPackage.SUB_PROCESS__ARTIFACT_GROUP:
-                return artifactGroup != null && !artifactGroup.isEmpty();
-            case bpmnPackage.SUB_PROCESS__ARTIFACT:
-                return !getArtifact().isEmpty();
-            case bpmnPackage.SUB_PROCESS__TRIGGERED_BY_EVENT:
-                return isSetTriggeredByEvent();
+        case BpmnPackage.SUB_PROCESS__FLOW_ELEMENT_GROUP:
+            return flowElementGroup != null && !flowElementGroup.isEmpty();
+        case BpmnPackage.SUB_PROCESS__FLOW_ELEMENTS:
+            return !getFlowElements().isEmpty();
+        case BpmnPackage.SUB_PROCESS__ARTIFACT_GROUP:
+            return artifactGroup != null && !artifactGroup.isEmpty();
+        case BpmnPackage.SUB_PROCESS__ARTIFACTS:
+            return !getArtifacts().isEmpty();
+        case BpmnPackage.SUB_PROCESS__TRIGGERED_BY_EVENT:
+            return isSetTriggeredByEvent();
         }
         return super.eIsSet(featureID);
     }
@@ -337,7 +354,8 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (flowElementGroup: "); //$NON-NLS-1$
@@ -345,7 +363,10 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
         result.append(", artifactGroup: "); //$NON-NLS-1$
         result.append(artifactGroup);
         result.append(", triggeredByEvent: "); //$NON-NLS-1$
-        if (triggeredByEventESet) result.append(triggeredByEvent); else result.append("<unset>"); //$NON-NLS-1$
+        if (triggeredByEventESet)
+            result.append(triggeredByEvent);
+        else
+            result.append("<unset>"); //$NON-NLS-1$
         result.append(')');
         return result.toString();
     }

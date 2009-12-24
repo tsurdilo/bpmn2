@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di;
 
@@ -29,7 +28,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.di.diPackage#getBendpoint()
+ * @see org.eclipse.mdt.bpmn.di.DIPackage#getBendpoint()
  * @model extendedMetaData="name='Bendpoint' kind='empty'"
  * @generated
  */
@@ -46,7 +45,7 @@ public interface Bendpoint extends EObject {
      * @see #isSetSourceX()
      * @see #unsetSourceX()
      * @see #setSourceX(int)
-     * @see org.eclipse.mdt.bpmn.di.diPackage#getBendpoint_SourceX()
+     * @see org.eclipse.mdt.bpmn.di.DIPackage#getBendpoint_SourceX()
      * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Int" required="true"
      *        extendedMetaData="kind='attribute' name='sourceX'"
      * @generated
@@ -100,7 +99,7 @@ public interface Bendpoint extends EObject {
      * @see #isSetSourceY()
      * @see #unsetSourceY()
      * @see #setSourceY(int)
-     * @see org.eclipse.mdt.bpmn.di.diPackage#getBendpoint_SourceY()
+     * @see org.eclipse.mdt.bpmn.di.DIPackage#getBendpoint_SourceY()
      * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Int" required="true"
      *        extendedMetaData="kind='attribute' name='sourceY'"
      * @generated
@@ -154,7 +153,7 @@ public interface Bendpoint extends EObject {
      * @see #isSetTargetX()
      * @see #unsetTargetX()
      * @see #setTargetX(int)
-     * @see org.eclipse.mdt.bpmn.di.diPackage#getBendpoint_TargetX()
+     * @see org.eclipse.mdt.bpmn.di.DIPackage#getBendpoint_TargetX()
      * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Int" required="true"
      *        extendedMetaData="kind='attribute' name='targetX'"
      * @generated
@@ -208,7 +207,7 @@ public interface Bendpoint extends EObject {
      * @see #isSetTargetY()
      * @see #unsetTargetY()
      * @see #setTargetY(int)
-     * @see org.eclipse.mdt.bpmn.di.diPackage#getBendpoint_TargetY()
+     * @see org.eclipse.mdt.bpmn.di.DIPackage#getBendpoint_TargetY()
      * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Int" required="true"
      *        extendedMetaData="kind='attribute' name='targetY'"
      * @generated

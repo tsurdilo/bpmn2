@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -20,8 +19,8 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.MessageEventDefinition;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,7 +36,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class MessageEventDefinitionImpl extends EventDefinitionImpl implements MessageEventDefinition {
+public class MessageEventDefinitionImpl extends EventDefinitionImpl implements
+        MessageEventDefinition {
     /**
      * The default value of the '{@link #getOperationRef() <em>Operation Ref</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -94,7 +94,7 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements M
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getMessageEventDefinition();
+        return BpmnPackage.eINSTANCE.getMessageEventDefinition();
     }
 
     /**
@@ -115,7 +115,9 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements M
         QName oldOperationRef = operationRef;
         operationRef = newOperationRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.MESSAGE_EVENT_DEFINITION__OPERATION_REF, oldOperationRef, operationRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.MESSAGE_EVENT_DEFINITION__OPERATION_REF,
+                    oldOperationRef, operationRef));
     }
 
     /**
@@ -136,7 +138,9 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements M
         QName oldMessageRef = messageRef;
         messageRef = newMessageRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.MESSAGE_EVENT_DEFINITION__MESSAGE_REF, oldMessageRef, messageRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.MESSAGE_EVENT_DEFINITION__MESSAGE_REF,
+                    oldMessageRef, messageRef));
     }
 
     /**
@@ -147,10 +151,10 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements M
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.MESSAGE_EVENT_DEFINITION__OPERATION_REF:
-                return getOperationRef();
-            case bpmnPackage.MESSAGE_EVENT_DEFINITION__MESSAGE_REF:
-                return getMessageRef();
+        case BpmnPackage.MESSAGE_EVENT_DEFINITION__OPERATION_REF:
+            return getOperationRef();
+        case BpmnPackage.MESSAGE_EVENT_DEFINITION__MESSAGE_REF:
+            return getMessageRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -163,12 +167,12 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements M
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.MESSAGE_EVENT_DEFINITION__OPERATION_REF:
-                setOperationRef((QName)newValue);
-                return;
-            case bpmnPackage.MESSAGE_EVENT_DEFINITION__MESSAGE_REF:
-                setMessageRef((QName)newValue);
-                return;
+        case BpmnPackage.MESSAGE_EVENT_DEFINITION__OPERATION_REF:
+            setOperationRef((QName) newValue);
+            return;
+        case BpmnPackage.MESSAGE_EVENT_DEFINITION__MESSAGE_REF:
+            setMessageRef((QName) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -181,12 +185,12 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements M
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.MESSAGE_EVENT_DEFINITION__OPERATION_REF:
-                setOperationRef(OPERATION_REF_EDEFAULT);
-                return;
-            case bpmnPackage.MESSAGE_EVENT_DEFINITION__MESSAGE_REF:
-                setMessageRef(MESSAGE_REF_EDEFAULT);
-                return;
+        case BpmnPackage.MESSAGE_EVENT_DEFINITION__OPERATION_REF:
+            setOperationRef(OPERATION_REF_EDEFAULT);
+            return;
+        case BpmnPackage.MESSAGE_EVENT_DEFINITION__MESSAGE_REF:
+            setMessageRef(MESSAGE_REF_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -199,10 +203,12 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements M
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.MESSAGE_EVENT_DEFINITION__OPERATION_REF:
-                return OPERATION_REF_EDEFAULT == null ? operationRef != null : !OPERATION_REF_EDEFAULT.equals(operationRef);
-            case bpmnPackage.MESSAGE_EVENT_DEFINITION__MESSAGE_REF:
-                return MESSAGE_REF_EDEFAULT == null ? messageRef != null : !MESSAGE_REF_EDEFAULT.equals(messageRef);
+        case BpmnPackage.MESSAGE_EVENT_DEFINITION__OPERATION_REF:
+            return OPERATION_REF_EDEFAULT == null ? operationRef != null
+                    : !OPERATION_REF_EDEFAULT.equals(operationRef);
+        case BpmnPackage.MESSAGE_EVENT_DEFINITION__MESSAGE_REF:
+            return MESSAGE_REF_EDEFAULT == null ? messageRef != null
+                    : !MESSAGE_REF_EDEFAULT.equals(messageRef);
         }
         return super.eIsSet(featureID);
     }
@@ -214,7 +220,8 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements M
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (operationRef: "); //$NON-NLS-1$

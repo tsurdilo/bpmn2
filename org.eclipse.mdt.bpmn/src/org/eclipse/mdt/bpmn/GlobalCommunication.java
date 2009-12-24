@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -28,7 +27,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getGlobalCommunication()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getGlobalCommunication()
  * @model extendedMetaData="name='tGlobalCommunication' kind='elementOnly'"
  * @generated
  */
@@ -43,7 +42,7 @@ public interface GlobalCommunication extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Participant</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getGlobalCommunication_Participant()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getGlobalCommunication_Participant()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='participant' namespace='##targetNamespace'"
      * @generated
@@ -60,7 +59,7 @@ public interface GlobalCommunication extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Message Flow</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getGlobalCommunication_MessageFlow()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getGlobalCommunication_MessageFlow()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='messageFlow' namespace='##targetNamespace'"
      * @generated
@@ -77,7 +76,7 @@ public interface GlobalCommunication extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Correlation Key</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getGlobalCommunication_CorrelationKey()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getGlobalCommunication_CorrelationKey()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='correlationKey' namespace='##targetNamespace'"
      * @generated

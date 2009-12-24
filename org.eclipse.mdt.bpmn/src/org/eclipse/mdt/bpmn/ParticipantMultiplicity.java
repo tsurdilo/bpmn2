@@ -8,10 +8,8 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +24,7 @@ package org.eclipse.mdt.bpmn;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getParticipantMultiplicity()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getParticipantMultiplicity()
  * @model extendedMetaData="name='tParticipantMultiplicity' kind='elementOnly'"
  * @generated
  */
@@ -43,7 +41,7 @@ public interface ParticipantMultiplicity extends BaseElement {
      * @see #isSetMaximum()
      * @see #unsetMaximum()
      * @see #setMaximum(int)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getParticipantMultiplicity_Maximum()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getParticipantMultiplicity_Maximum()
      * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Int"
      *        extendedMetaData="kind='attribute' name='maximum'"
      * @generated
@@ -97,7 +95,7 @@ public interface ParticipantMultiplicity extends BaseElement {
      * @see #isSetMinimum()
      * @see #unsetMinimum()
      * @see #setMinimum(int)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getParticipantMultiplicity_Minimum()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getParticipantMultiplicity_Minimum()
      * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Int"
      *        extendedMetaData="kind='attribute' name='minimum'"
      * @generated

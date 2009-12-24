@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -29,7 +28,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getScript()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getScript()
  * @model extendedMetaData="name='tScript' kind='mixed'"
  * @generated
  */
@@ -44,7 +43,7 @@ public interface Script extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Mixed</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getScript_Mixed()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getScript_Mixed()
      * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
      *        extendedMetaData="kind='elementWildcard' name=':mixed'"
      * @generated
@@ -61,7 +60,7 @@ public interface Script extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Any</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getScript_Any()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getScript_Any()
      * @model dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="false" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='elementWildcard' wildcards='##any' name=':1' processing='lax'"
      * @generated

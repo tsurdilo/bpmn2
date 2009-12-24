@@ -8,10 +8,8 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +23,7 @@ package org.eclipse.mdt.bpmn;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getConditionalEventDefinition()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getConditionalEventDefinition()
  * @model extendedMetaData="name='tConditionalEventDefinition' kind='elementOnly'"
  * @generated
  */
@@ -40,7 +38,7 @@ public interface ConditionalEventDefinition extends EventDefinition {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Condition</em>' containment reference.
      * @see #setCondition(Expression)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getConditionalEventDefinition_Condition()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getConditionalEventDefinition_Condition()
      * @model containment="true" required="true"
      *        extendedMetaData="kind='element' name='condition' namespace='##targetNamespace'"
      * @generated

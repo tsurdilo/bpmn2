@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.util;
 
@@ -20,10 +19,10 @@ import org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl;
  * <!-- begin-user-doc -->
  * The <b>Resource </b> associated with the package.
  * <!-- end-user-doc -->
- * @see org.eclipse.mdt.bpmn.util.bpmnResourceFactoryImpl
+ * @see org.eclipse.mdt.bpmn.util.BpmnResourceFactoryImpl
  * @generated
  */
-public class bpmnResourceImpl extends XMLResourceImpl {
+public class BpmnResourceImpl extends XMLResourceImpl {
     /**
      * Creates an instance of the resource.
      * <!-- begin-user-doc -->
@@ -31,8 +30,8 @@ public class bpmnResourceImpl extends XMLResourceImpl {
      * @param uri the URI of the new resource.
      * @generated
      */
-    public bpmnResourceImpl(URI uri) {
+    public BpmnResourceImpl(URI uri) {
         super(uri);
     }
 
-} //bpmnResourceImpl
+} //BpmnResourceImpl

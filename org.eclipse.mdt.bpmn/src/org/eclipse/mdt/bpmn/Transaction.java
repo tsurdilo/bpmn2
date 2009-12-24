@@ -8,10 +8,8 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +23,7 @@ package org.eclipse.mdt.bpmn;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getTransaction()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getTransaction()
  * @model extendedMetaData="name='tTransaction' kind='elementOnly'"
  * @generated
  */
@@ -45,7 +43,7 @@ public interface Transaction extends Activity {
      * @see #isSetMethod()
      * @see #unsetMethod()
      * @see #setMethod(TransactionMethod)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getTransaction_Method()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getTransaction_Method()
      * @model default="compensate" unsettable="true"
      *        extendedMetaData="kind='attribute' name='method'"
      * @generated

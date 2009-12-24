@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -20,9 +19,9 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.SendTask;
 import org.eclipse.mdt.bpmn.ServiceImplementation;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -125,7 +124,7 @@ public class SendTaskImpl extends TaskImpl implements SendTask {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getSendTask();
+        return BpmnPackage.eINSTANCE.getSendTask();
     }
 
     /**
@@ -144,11 +143,14 @@ public class SendTaskImpl extends TaskImpl implements SendTask {
      */
     public void setImplementation(ServiceImplementation newImplementation) {
         ServiceImplementation oldImplementation = implementation;
-        implementation = newImplementation == null ? IMPLEMENTATION_EDEFAULT : newImplementation;
+        implementation = newImplementation == null ? IMPLEMENTATION_EDEFAULT
+                : newImplementation;
         boolean oldImplementationESet = implementationESet;
         implementationESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.SEND_TASK__IMPLEMENTATION, oldImplementation, implementation, !oldImplementationESet));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.SEND_TASK__IMPLEMENTATION, oldImplementation,
+                    implementation, !oldImplementationESet));
     }
 
     /**
@@ -162,7 +164,9 @@ public class SendTaskImpl extends TaskImpl implements SendTask {
         implementation = IMPLEMENTATION_EDEFAULT;
         implementationESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, bpmnPackage.SEND_TASK__IMPLEMENTATION, oldImplementation, IMPLEMENTATION_EDEFAULT, oldImplementationESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET,
+                    BpmnPackage.SEND_TASK__IMPLEMENTATION, oldImplementation,
+                    IMPLEMENTATION_EDEFAULT, oldImplementationESet));
     }
 
     /**
@@ -192,7 +196,9 @@ public class SendTaskImpl extends TaskImpl implements SendTask {
         QName oldMessageRef = messageRef;
         messageRef = newMessageRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.SEND_TASK__MESSAGE_REF, oldMessageRef, messageRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.SEND_TASK__MESSAGE_REF, oldMessageRef,
+                    messageRef));
     }
 
     /**
@@ -213,7 +219,9 @@ public class SendTaskImpl extends TaskImpl implements SendTask {
         QName oldOperationRef = operationRef;
         operationRef = newOperationRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.SEND_TASK__OPERATION_REF, oldOperationRef, operationRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.SEND_TASK__OPERATION_REF, oldOperationRef,
+                    operationRef));
     }
 
     /**
@@ -224,12 +232,12 @@ public class SendTaskImpl extends TaskImpl implements SendTask {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.SEND_TASK__IMPLEMENTATION:
-                return getImplementation();
-            case bpmnPackage.SEND_TASK__MESSAGE_REF:
-                return getMessageRef();
-            case bpmnPackage.SEND_TASK__OPERATION_REF:
-                return getOperationRef();
+        case BpmnPackage.SEND_TASK__IMPLEMENTATION:
+            return getImplementation();
+        case BpmnPackage.SEND_TASK__MESSAGE_REF:
+            return getMessageRef();
+        case BpmnPackage.SEND_TASK__OPERATION_REF:
+            return getOperationRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -242,15 +250,15 @@ public class SendTaskImpl extends TaskImpl implements SendTask {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.SEND_TASK__IMPLEMENTATION:
-                setImplementation((ServiceImplementation)newValue);
-                return;
-            case bpmnPackage.SEND_TASK__MESSAGE_REF:
-                setMessageRef((QName)newValue);
-                return;
-            case bpmnPackage.SEND_TASK__OPERATION_REF:
-                setOperationRef((QName)newValue);
-                return;
+        case BpmnPackage.SEND_TASK__IMPLEMENTATION:
+            setImplementation((ServiceImplementation) newValue);
+            return;
+        case BpmnPackage.SEND_TASK__MESSAGE_REF:
+            setMessageRef((QName) newValue);
+            return;
+        case BpmnPackage.SEND_TASK__OPERATION_REF:
+            setOperationRef((QName) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -263,15 +271,15 @@ public class SendTaskImpl extends TaskImpl implements SendTask {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.SEND_TASK__IMPLEMENTATION:
-                unsetImplementation();
-                return;
-            case bpmnPackage.SEND_TASK__MESSAGE_REF:
-                setMessageRef(MESSAGE_REF_EDEFAULT);
-                return;
-            case bpmnPackage.SEND_TASK__OPERATION_REF:
-                setOperationRef(OPERATION_REF_EDEFAULT);
-                return;
+        case BpmnPackage.SEND_TASK__IMPLEMENTATION:
+            unsetImplementation();
+            return;
+        case BpmnPackage.SEND_TASK__MESSAGE_REF:
+            setMessageRef(MESSAGE_REF_EDEFAULT);
+            return;
+        case BpmnPackage.SEND_TASK__OPERATION_REF:
+            setOperationRef(OPERATION_REF_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -284,12 +292,14 @@ public class SendTaskImpl extends TaskImpl implements SendTask {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.SEND_TASK__IMPLEMENTATION:
-                return isSetImplementation();
-            case bpmnPackage.SEND_TASK__MESSAGE_REF:
-                return MESSAGE_REF_EDEFAULT == null ? messageRef != null : !MESSAGE_REF_EDEFAULT.equals(messageRef);
-            case bpmnPackage.SEND_TASK__OPERATION_REF:
-                return OPERATION_REF_EDEFAULT == null ? operationRef != null : !OPERATION_REF_EDEFAULT.equals(operationRef);
+        case BpmnPackage.SEND_TASK__IMPLEMENTATION:
+            return isSetImplementation();
+        case BpmnPackage.SEND_TASK__MESSAGE_REF:
+            return MESSAGE_REF_EDEFAULT == null ? messageRef != null
+                    : !MESSAGE_REF_EDEFAULT.equals(messageRef);
+        case BpmnPackage.SEND_TASK__OPERATION_REF:
+            return OPERATION_REF_EDEFAULT == null ? operationRef != null
+                    : !OPERATION_REF_EDEFAULT.equals(operationRef);
         }
         return super.eIsSet(featureID);
     }
@@ -301,11 +311,15 @@ public class SendTaskImpl extends TaskImpl implements SendTask {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (implementation: "); //$NON-NLS-1$
-        if (implementationESet) result.append(implementation); else result.append("<unset>"); //$NON-NLS-1$
+        if (implementationESet)
+            result.append(implementation);
+        else
+            result.append("<unset>"); //$NON-NLS-1$
         result.append(", messageRef: "); //$NON-NLS-1$
         result.append(messageRef);
         result.append(", operationRef: "); //$NON-NLS-1$

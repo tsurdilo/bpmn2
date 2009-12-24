@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -33,11 +32,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnFactory;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.GlobalUserTask;
-import org.eclipse.mdt.bpmn.bpmnFactory;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.GlobalUserTask} object.
@@ -89,7 +88,7 @@ public class GlobalUserTaskItemProvider extends GlobalTaskItemProvider
                         getString("_UI_GlobalUserTask_implementation_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_GlobalUserTask_implementation_feature", "_UI_GlobalUserTask_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE
+                        BpmnPackage.eINSTANCE
                                 .getGlobalUserTask_Implementation(), true,
                         false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
@@ -108,7 +107,7 @@ public class GlobalUserTaskItemProvider extends GlobalTaskItemProvider
             Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getGlobalUserTask_Rendering());
         }
         return childrenFeatures;
@@ -164,11 +163,11 @@ public class GlobalUserTaskItemProvider extends GlobalTaskItemProvider
         updateChildren(notification);
 
         switch (notification.getFeatureID(GlobalUserTask.class)) {
-        case bpmnPackage.GLOBAL_USER_TASK__IMPLEMENTATION:
+        case BpmnPackage.GLOBAL_USER_TASK__IMPLEMENTATION:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
-        case bpmnPackage.GLOBAL_USER_TASK__RENDERING:
+        case BpmnPackage.GLOBAL_USER_TASK__RENDERING:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -188,8 +187,8 @@ public class GlobalUserTaskItemProvider extends GlobalTaskItemProvider
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getGlobalUserTask_Rendering(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getGlobalUserTask_Rendering(), BpmnFactory.eINSTANCE
                 .createRendering()));
     }
 
@@ -213,15 +212,15 @@ public class GlobalUserTaskItemProvider extends GlobalTaskItemProvider
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE
-                || childFeature == bpmnPackage.eINSTANCE
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getGlobalTask_Performer()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_HumanPerformer()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_PotentialOwner();
 
         if (qualify) {

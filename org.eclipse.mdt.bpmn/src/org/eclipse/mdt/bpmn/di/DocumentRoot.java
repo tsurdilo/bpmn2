@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di;
 
@@ -38,7 +37,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.di.diPackage#getDocumentRoot()
+ * @see org.eclipse.mdt.bpmn.di.DIPackage#getDocumentRoot()
  * @model extendedMetaData="name='' kind='mixed'"
  * @generated
  */
@@ -53,7 +52,7 @@ public interface DocumentRoot extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Mixed</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.di.diPackage#getDocumentRoot_Mixed()
+     * @see org.eclipse.mdt.bpmn.di.DIPackage#getDocumentRoot_Mixed()
      * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
      *        extendedMetaData="kind='elementWildcard' name=':mixed'"
      * @generated
@@ -71,7 +70,7 @@ public interface DocumentRoot extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>XMLNS Prefix Map</em>' map.
-     * @see org.eclipse.mdt.bpmn.di.diPackage#getDocumentRoot_XMLNSPrefixMap()
+     * @see org.eclipse.mdt.bpmn.di.DIPackage#getDocumentRoot_XMLNSPrefixMap()
      * @model mapType="org.eclipse.emf.ecore.EStringToStringMapEntry<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString>" transient="true"
      *        extendedMetaData="kind='attribute' name='xmlns:prefix'"
      * @generated
@@ -89,7 +88,7 @@ public interface DocumentRoot extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>XSI Schema Location</em>' map.
-     * @see org.eclipse.mdt.bpmn.di.diPackage#getDocumentRoot_XSISchemaLocation()
+     * @see org.eclipse.mdt.bpmn.di.DIPackage#getDocumentRoot_XSISchemaLocation()
      * @model mapType="org.eclipse.emf.ecore.EStringToStringMapEntry<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString>" transient="true"
      *        extendedMetaData="kind='attribute' name='xsi:schemaLocation'"
      * @generated
@@ -106,7 +105,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Bendpoint</em>' containment reference.
      * @see #setBendpoint(Bendpoint)
-     * @see org.eclipse.mdt.bpmn.di.diPackage#getDocumentRoot_Bendpoint()
+     * @see org.eclipse.mdt.bpmn.di.DIPackage#getDocumentRoot_Bendpoint()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='bendpoint' namespace='##targetNamespace'"
      * @generated
@@ -133,7 +132,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Connector</em>' containment reference.
      * @see #setConnector(Connector)
-     * @see org.eclipse.mdt.bpmn.di.diPackage#getDocumentRoot_Connector()
+     * @see org.eclipse.mdt.bpmn.di.DIPackage#getDocumentRoot_Connector()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='connector' namespace='##targetNamespace' affiliation='view'"
      * @generated
@@ -160,7 +159,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>View</em>' containment reference.
      * @see #setView(View)
-     * @see org.eclipse.mdt.bpmn.di.diPackage#getDocumentRoot_View()
+     * @see org.eclipse.mdt.bpmn.di.DIPackage#getDocumentRoot_View()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='view' namespace='##targetNamespace'"
      * @generated
@@ -187,7 +186,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Diagram</em>' containment reference.
      * @see #setDiagram(Diagram)
-     * @see org.eclipse.mdt.bpmn.di.diPackage#getDocumentRoot_Diagram()
+     * @see org.eclipse.mdt.bpmn.di.DIPackage#getDocumentRoot_Diagram()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='diagram' namespace='##targetNamespace' affiliation='view'"
      * @generated
@@ -214,7 +213,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Node</em>' containment reference.
      * @see #setNode(Node)
-     * @see org.eclipse.mdt.bpmn.di.diPackage#getDocumentRoot_Node()
+     * @see org.eclipse.mdt.bpmn.di.DIPackage#getDocumentRoot_Node()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='node' namespace='##targetNamespace' affiliation='view'"
      * @generated
@@ -241,7 +240,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Style</em>' containment reference.
      * @see #setStyle(Style)
-     * @see org.eclipse.mdt.bpmn.di.diPackage#getDocumentRoot_Style()
+     * @see org.eclipse.mdt.bpmn.di.DIPackage#getDocumentRoot_Style()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='style' namespace='##targetNamespace'"
      * @generated

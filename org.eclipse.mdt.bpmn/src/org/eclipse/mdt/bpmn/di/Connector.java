@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di;
 
@@ -28,7 +27,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.di.diPackage#getConnector()
+ * @see org.eclipse.mdt.bpmn.di.DIPackage#getConnector()
  * @model extendedMetaData="name='Connector' kind='elementOnly'"
  * @generated
  */
@@ -43,7 +42,7 @@ public interface Connector extends View {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Bendpoint</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.di.diPackage#getConnector_Bendpoint()
+     * @see org.eclipse.mdt.bpmn.di.DIPackage#getConnector_Bendpoint()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='bendpoint' namespace='##targetNamespace'"
      * @generated
@@ -60,7 +59,7 @@ public interface Connector extends View {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Source</em>' attribute.
      * @see #setSource(String)
-     * @see org.eclipse.mdt.bpmn.di.diPackage#getConnector_Source()
+     * @see org.eclipse.mdt.bpmn.di.DIPackage#getConnector_Source()
      * @model dataType="org.eclipse.emf.ecore.xml.type.AnyURI" required="true"
      *        extendedMetaData="kind='attribute' name='source'"
      * @generated
@@ -87,7 +86,7 @@ public interface Connector extends View {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Target</em>' attribute.
      * @see #setTarget(String)
-     * @see org.eclipse.mdt.bpmn.di.diPackage#getConnector_Target()
+     * @see org.eclipse.mdt.bpmn.di.DIPackage#getConnector_Target()
      * @model dataType="org.eclipse.emf.ecore.xml.type.AnyURI" required="true"
      *        extendedMetaData="kind='attribute' name='target'"
      * @generated

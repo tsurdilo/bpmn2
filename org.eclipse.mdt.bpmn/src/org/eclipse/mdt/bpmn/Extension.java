@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -32,7 +31,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getExtension()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getExtension()
  * @model extendedMetaData="name='tExtension' kind='elementOnly'"
  * @generated
  */
@@ -47,7 +46,7 @@ public interface Extension extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Documentation</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getExtension_Documentation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getExtension_Documentation()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='documentation' namespace='##targetNamespace'"
      * @generated
@@ -64,7 +63,7 @@ public interface Extension extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Definition</em>' attribute.
      * @see #setDefinition(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getExtension_Definition()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getExtension_Definition()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='definition'"
      * @generated
@@ -94,7 +93,7 @@ public interface Extension extends EObject {
      * @see #isSetMustUnderstand()
      * @see #unsetMustUnderstand()
      * @see #setMustUnderstand(boolean)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getExtension_MustUnderstand()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getExtension_MustUnderstand()
      * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
      *        extendedMetaData="kind='attribute' name='mustUnderstand'"
      * @generated

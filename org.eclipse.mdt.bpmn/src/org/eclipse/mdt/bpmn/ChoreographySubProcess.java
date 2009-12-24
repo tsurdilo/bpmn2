@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -31,7 +30,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getChoreographySubProcess()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getChoreographySubProcess()
  * @model extendedMetaData="name='tChoreographySubProcess' kind='elementOnly'"
  * @generated
  */
@@ -46,7 +45,7 @@ public interface ChoreographySubProcess extends ChoreographyActivity {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Flow Element Group</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getChoreographySubProcess_FlowElementGroup()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getChoreographySubProcess_FlowElementGroup()
      * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
      *        extendedMetaData="kind='group' name='flowElement:group' namespace='##targetNamespace'"
      * @generated
@@ -63,7 +62,7 @@ public interface ChoreographySubProcess extends ChoreographyActivity {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Flow Element</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getChoreographySubProcess_FlowElement()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getChoreographySubProcess_FlowElement()
      * @model containment="true" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='flowElement' namespace='##targetNamespace' group='flowElement:group'"
      * @generated
@@ -80,7 +79,7 @@ public interface ChoreographySubProcess extends ChoreographyActivity {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Artifact Group</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getChoreographySubProcess_ArtifactGroup()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getChoreographySubProcess_ArtifactGroup()
      * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
      *        extendedMetaData="kind='group' name='artifact:group' namespace='##targetNamespace'"
      * @generated
@@ -97,7 +96,7 @@ public interface ChoreographySubProcess extends ChoreographyActivity {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Artifact</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getChoreographySubProcess_Artifact()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getChoreographySubProcess_Artifact()
      * @model containment="true" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='artifact' namespace='##targetNamespace' group='artifact:group'"
      * @generated

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -37,11 +36,11 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.mdt.bpmn.BaseElement;
-import org.eclipse.mdt.bpmn.bpmnFactory;
-import org.eclipse.mdt.bpmn.bpmnPackage;
+import org.eclipse.mdt.bpmn.BpmnFactory;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diFactory;
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIFactory;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.BaseElement} object.
@@ -93,7 +92,7 @@ public class BaseElementItemProvider extends ItemProviderAdapter implements
                         getString("_UI_BaseElement_id_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_BaseElement_id_feature", "_UI_BaseElement_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getBaseElement_Id(), true, false,
+                        BpmnPackage.eINSTANCE.getBaseElement_Id(), true, false,
                         false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                         null, null));
     }
@@ -111,10 +110,10 @@ public class BaseElementItemProvider extends ItemProviderAdapter implements
             Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getBaseElement_Documentation());
-            childrenFeatures.add(bpmnPackage.eINSTANCE.getBaseElement_Any());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE.getBaseElement_Any());
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getBaseElement_AnyAttribute());
         }
         return childrenFeatures;
@@ -158,13 +157,13 @@ public class BaseElementItemProvider extends ItemProviderAdapter implements
         updateChildren(notification);
 
         switch (notification.getFeatureID(BaseElement.class)) {
-        case bpmnPackage.BASE_ELEMENT__ID:
+        case BpmnPackage.BASE_ELEMENT__ID:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
-        case bpmnPackage.BASE_ELEMENT__DOCUMENTATION:
-        case bpmnPackage.BASE_ELEMENT__ANY:
-        case bpmnPackage.BASE_ELEMENT__ANY_ATTRIBUTE:
+        case BpmnPackage.BASE_ELEMENT__DOCUMENTATION:
+        case BpmnPackage.BASE_ELEMENT__ANY:
+        case BpmnPackage.BASE_ELEMENT__ANY_ATTRIBUTE:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -184,48 +183,48 @@ public class BaseElementItemProvider extends ItemProviderAdapter implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getBaseElement_Documentation(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getBaseElement_Documentation(), BpmnFactory.eINSTANCE
                 .createDocumentation()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getBaseElement_Any(), FeatureMapUtil.createEntry(
-                diPackage.Literals.DOCUMENT_ROOT__BENDPOINT,
-                diFactory.eINSTANCE.createBendpoint())));
+                DIPackage.Literals.DOCUMENT_ROOT__BENDPOINT,
+                DIFactory.eINSTANCE.createBendpoint())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getBaseElement_Any(), FeatureMapUtil.createEntry(
-                diPackage.Literals.DOCUMENT_ROOT__CONNECTOR,
-                diFactory.eINSTANCE.createConnector())));
+                DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR,
+                DIFactory.eINSTANCE.createConnector())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getBaseElement_Any(), FeatureMapUtil.createEntry(
-                diPackage.Literals.DOCUMENT_ROOT__VIEW, diFactory.eINSTANCE
+                DIPackage.Literals.DOCUMENT_ROOT__VIEW, DIFactory.eINSTANCE
                         .createConnector())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getBaseElement_Any(), FeatureMapUtil.createEntry(
-                diPackage.Literals.DOCUMENT_ROOT__VIEW, diFactory.eINSTANCE
+                DIPackage.Literals.DOCUMENT_ROOT__VIEW, DIFactory.eINSTANCE
                         .createDiagram())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getBaseElement_Any(), FeatureMapUtil.createEntry(
-                diPackage.Literals.DOCUMENT_ROOT__VIEW, diFactory.eINSTANCE
+                DIPackage.Literals.DOCUMENT_ROOT__VIEW, DIFactory.eINSTANCE
                         .createNode())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getBaseElement_Any(), FeatureMapUtil.createEntry(
-                diPackage.Literals.DOCUMENT_ROOT__DIAGRAM, diFactory.eINSTANCE
+                DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM, DIFactory.eINSTANCE
                         .createDiagram())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getBaseElement_Any(), FeatureMapUtil.createEntry(
-                diPackage.Literals.DOCUMENT_ROOT__NODE, diFactory.eINSTANCE
+                DIPackage.Literals.DOCUMENT_ROOT__NODE, DIFactory.eINSTANCE
                         .createNode())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getBaseElement_Any(), FeatureMapUtil.createEntry(
-                diPackage.Literals.DOCUMENT_ROOT__STYLE, diFactory.eINSTANCE
+                DIPackage.Literals.DOCUMENT_ROOT__STYLE, DIFactory.eINSTANCE
                         .createStyle())));
     }
 
@@ -249,10 +248,10 @@ public class BaseElementItemProvider extends ItemProviderAdapter implements
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE;
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE;
 
         if (qualify) {
             return getString("_UI_CreateChild_text2", //$NON-NLS-1$

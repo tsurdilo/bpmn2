@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -29,7 +28,7 @@ import javax.xml.namespace.QName;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getReceiveTask()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getReceiveTask()
  * @model extendedMetaData="name='tReceiveTask' kind='elementOnly'"
  * @generated
  */
@@ -49,7 +48,7 @@ public interface ReceiveTask extends Task {
      * @see #isSetImplementation()
      * @see #unsetImplementation()
      * @see #setImplementation(ServiceImplementation)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getReceiveTask_Implementation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getReceiveTask_Implementation()
      * @model default="WebService" unsettable="true"
      *        extendedMetaData="kind='attribute' name='implementation'"
      * @generated
@@ -105,7 +104,7 @@ public interface ReceiveTask extends Task {
      * @see #isSetInstantiate()
      * @see #unsetInstantiate()
      * @see #setInstantiate(boolean)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getReceiveTask_Instantiate()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getReceiveTask_Instantiate()
      * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
      *        extendedMetaData="kind='attribute' name='instantiate'"
      * @generated
@@ -157,7 +156,7 @@ public interface ReceiveTask extends Task {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Message Ref</em>' attribute.
      * @see #setMessageRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getReceiveTask_MessageRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getReceiveTask_MessageRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='messageRef'"
      * @generated
@@ -184,7 +183,7 @@ public interface ReceiveTask extends Task {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Operation Ref</em>' attribute.
      * @see #setOperationRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getReceiveTask_OperationRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getReceiveTask_OperationRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='operationRef'"
      * @generated

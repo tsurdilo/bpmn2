@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -31,11 +30,11 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnFactory;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.TimerEventDefinition;
-import org.eclipse.mdt.bpmn.bpmnFactory;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.TimerEventDefinition} object.
@@ -85,9 +84,9 @@ public class TimerEventDefinitionItemProvider extends
             Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getTimerEventDefinition_TimeDate());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getTimerEventDefinition_TimeCycle());
         }
         return childrenFeatures;
@@ -143,8 +142,8 @@ public class TimerEventDefinitionItemProvider extends
         updateChildren(notification);
 
         switch (notification.getFeatureID(TimerEventDefinition.class)) {
-        case bpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE:
-        case bpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE:
+        case BpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE:
+        case BpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -164,20 +163,20 @@ public class TimerEventDefinitionItemProvider extends
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getTimerEventDefinition_TimeDate(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getTimerEventDefinition_TimeDate(), BpmnFactory.eINSTANCE
                 .createExpression()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getTimerEventDefinition_TimeDate(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getTimerEventDefinition_TimeDate(), BpmnFactory.eINSTANCE
                 .createFormalExpression()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getTimerEventDefinition_TimeCycle(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getTimerEventDefinition_TimeCycle(), BpmnFactory.eINSTANCE
                 .createExpression()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getTimerEventDefinition_TimeCycle(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getTimerEventDefinition_TimeCycle(), BpmnFactory.eINSTANCE
                 .createFormalExpression()));
     }
 
@@ -201,13 +200,13 @@ public class TimerEventDefinitionItemProvider extends
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE
-                || childFeature == bpmnPackage.eINSTANCE
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getTimerEventDefinition_TimeDate()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getTimerEventDefinition_TimeCycle();
 
         if (qualify) {

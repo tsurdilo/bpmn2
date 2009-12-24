@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di;
 
@@ -19,17 +18,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.mdt.bpmn.di.diPackage
+ * @see org.eclipse.mdt.bpmn.di.DIPackage
  * @generated
  */
-public interface diFactory extends EFactory {
+public interface DIFactory extends EFactory {
     /**
      * The singleton instance of the factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    diFactory eINSTANCE = org.eclipse.mdt.bpmn.di.impl.diFactoryImpl.init();
+    DIFactory eINSTANCE = org.eclipse.mdt.bpmn.di.impl.DIFactoryImpl.init();
 
     /**
      * Returns a new object of class '<em>Bendpoint</em>'.
@@ -92,6 +91,6 @@ public interface diFactory extends EFactory {
      * @return the package supported by this factory.
      * @generated
      */
-    diPackage getdiPackage();
+    DIPackage getDIPackage();
 
-} //diFactory
+} //DIFactory

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -37,7 +36,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getConversation()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getConversation()
  * @model extendedMetaData="name='tConversation' kind='elementOnly'"
  * @generated
  */
@@ -52,7 +51,7 @@ public interface Conversation extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Conversation Node Group</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getConversation_ConversationNodeGroup()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getConversation_ConversationNodeGroup()
      * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
      *        extendedMetaData="kind='group' name='conversationNode:group' namespace='##targetNamespace'"
      * @generated
@@ -69,7 +68,7 @@ public interface Conversation extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Conversation Node</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getConversation_ConversationNode()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getConversation_ConversationNode()
      * @model containment="true" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='conversationNode' namespace='##targetNamespace' group='conversationNode:group'"
      * @generated
@@ -86,7 +85,7 @@ public interface Conversation extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Participant</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getConversation_Participant()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getConversation_Participant()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='participant' namespace='##targetNamespace'"
      * @generated
@@ -103,7 +102,7 @@ public interface Conversation extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Artifact Group</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getConversation_ArtifactGroup()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getConversation_ArtifactGroup()
      * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
      *        extendedMetaData="kind='group' name='artifact:group' namespace='##targetNamespace'"
      * @generated
@@ -120,7 +119,7 @@ public interface Conversation extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Artifact</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getConversation_Artifact()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getConversation_Artifact()
      * @model containment="true" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='artifact' namespace='##targetNamespace' group='artifact:group'"
      * @generated
@@ -137,7 +136,7 @@ public interface Conversation extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Message Flow</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getConversation_MessageFlow()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getConversation_MessageFlow()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='messageFlow' namespace='##targetNamespace'"
      * @generated
@@ -154,7 +153,7 @@ public interface Conversation extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Message Flow Ref</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getConversation_MessageFlowRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getConversation_MessageFlowRef()
      * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='element' name='messageFlowRef' namespace='##targetNamespace'"
      * @generated
@@ -171,7 +170,7 @@ public interface Conversation extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Correlation Key</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getConversation_CorrelationKey()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getConversation_CorrelationKey()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='correlationKey' namespace='##targetNamespace'"
      * @generated

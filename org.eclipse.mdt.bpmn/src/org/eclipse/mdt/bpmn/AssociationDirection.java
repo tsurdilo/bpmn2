@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -23,7 +22,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Association Direction</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getAssociationDirection()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getAssociationDirection()
  * @model extendedMetaData="name='tAssociationDirection'"
  * @generated
  */
@@ -109,12 +108,8 @@ public enum AssociationDirection implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    private static final AssociationDirection[] VALUES_ARRAY =
-        new AssociationDirection[] {
-            NONE,
-            ONE,
-            BOTH,
-        };
+    private static final AssociationDirection[] VALUES_ARRAY = new AssociationDirection[] {
+            NONE, ONE, BOTH, };
 
     /**
      * A public read-only list of all the '<em><b>Association Direction</b></em>' enumerators.
@@ -122,7 +117,8 @@ public enum AssociationDirection implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final List<AssociationDirection> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+    public static final List<AssociationDirection> VALUES = Collections
+            .unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
     /**
      * Returns the '<em><b>Association Direction</b></em>' literal with the specified literal value.
@@ -164,9 +160,12 @@ public enum AssociationDirection implements Enumerator {
      */
     public static AssociationDirection get(int value) {
         switch (value) {
-            case NONE_VALUE: return NONE;
-            case ONE_VALUE: return ONE;
-            case BOTH_VALUE: return BOTH;
+        case NONE_VALUE:
+            return NONE;
+        case ONE_VALUE:
+            return ONE;
+        case BOTH_VALUE:
+            return BOTH;
         }
         return null;
     }
@@ -210,7 +209,7 @@ public enum AssociationDirection implements Enumerator {
      * @generated
      */
     public int getValue() {
-      return value;
+        return value;
     }
 
     /**
@@ -219,7 +218,7 @@ public enum AssociationDirection implements Enumerator {
      * @generated
      */
     public String getName() {
-      return name;
+        return name;
     }
 
     /**
@@ -228,7 +227,7 @@ public enum AssociationDirection implements Enumerator {
      * @generated
      */
     public String getLiteral() {
-      return literal;
+        return literal;
     }
 
     /**
@@ -241,5 +240,5 @@ public enum AssociationDirection implements Enumerator {
     public String toString() {
         return literal;
     }
-    
+
 } //AssociationDirection

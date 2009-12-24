@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -20,8 +19,8 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.ResourceParameter;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,7 +37,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class ResourceParameterImpl extends BaseElementImpl implements ResourceParameter {
+public class ResourceParameterImpl extends BaseElementImpl implements
+        ResourceParameter {
     /**
      * The default value of the '{@link #isIsRequired() <em>Is Required</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -124,7 +124,7 @@ public class ResourceParameterImpl extends BaseElementImpl implements ResourcePa
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getResourceParameter();
+        return BpmnPackage.eINSTANCE.getResourceParameter();
     }
 
     /**
@@ -147,7 +147,9 @@ public class ResourceParameterImpl extends BaseElementImpl implements ResourcePa
         boolean oldIsRequiredESet = isRequiredESet;
         isRequiredESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.RESOURCE_PARAMETER__IS_REQUIRED, oldIsRequired, isRequired, !oldIsRequiredESet));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.RESOURCE_PARAMETER__IS_REQUIRED, oldIsRequired,
+                    isRequired, !oldIsRequiredESet));
     }
 
     /**
@@ -161,7 +163,9 @@ public class ResourceParameterImpl extends BaseElementImpl implements ResourcePa
         isRequired = IS_REQUIRED_EDEFAULT;
         isRequiredESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, bpmnPackage.RESOURCE_PARAMETER__IS_REQUIRED, oldIsRequired, IS_REQUIRED_EDEFAULT, oldIsRequiredESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET,
+                    BpmnPackage.RESOURCE_PARAMETER__IS_REQUIRED, oldIsRequired,
+                    IS_REQUIRED_EDEFAULT, oldIsRequiredESet));
     }
 
     /**
@@ -191,7 +195,8 @@ public class ResourceParameterImpl extends BaseElementImpl implements ResourcePa
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.RESOURCE_PARAMETER__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.RESOURCE_PARAMETER__NAME, oldName, name));
     }
 
     /**
@@ -212,7 +217,8 @@ public class ResourceParameterImpl extends BaseElementImpl implements ResourcePa
         QName oldType = type;
         type = newType;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.RESOURCE_PARAMETER__TYPE, oldType, type));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.RESOURCE_PARAMETER__TYPE, oldType, type));
     }
 
     /**
@@ -223,12 +229,12 @@ public class ResourceParameterImpl extends BaseElementImpl implements ResourcePa
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.RESOURCE_PARAMETER__IS_REQUIRED:
-                return isIsRequired();
-            case bpmnPackage.RESOURCE_PARAMETER__NAME:
-                return getName();
-            case bpmnPackage.RESOURCE_PARAMETER__TYPE:
-                return getType();
+        case BpmnPackage.RESOURCE_PARAMETER__IS_REQUIRED:
+            return isIsRequired();
+        case BpmnPackage.RESOURCE_PARAMETER__NAME:
+            return getName();
+        case BpmnPackage.RESOURCE_PARAMETER__TYPE:
+            return getType();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -241,15 +247,15 @@ public class ResourceParameterImpl extends BaseElementImpl implements ResourcePa
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.RESOURCE_PARAMETER__IS_REQUIRED:
-                setIsRequired((Boolean)newValue);
-                return;
-            case bpmnPackage.RESOURCE_PARAMETER__NAME:
-                setName((String)newValue);
-                return;
-            case bpmnPackage.RESOURCE_PARAMETER__TYPE:
-                setType((QName)newValue);
-                return;
+        case BpmnPackage.RESOURCE_PARAMETER__IS_REQUIRED:
+            setIsRequired((Boolean) newValue);
+            return;
+        case BpmnPackage.RESOURCE_PARAMETER__NAME:
+            setName((String) newValue);
+            return;
+        case BpmnPackage.RESOURCE_PARAMETER__TYPE:
+            setType((QName) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -262,15 +268,15 @@ public class ResourceParameterImpl extends BaseElementImpl implements ResourcePa
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.RESOURCE_PARAMETER__IS_REQUIRED:
-                unsetIsRequired();
-                return;
-            case bpmnPackage.RESOURCE_PARAMETER__NAME:
-                setName(NAME_EDEFAULT);
-                return;
-            case bpmnPackage.RESOURCE_PARAMETER__TYPE:
-                setType(TYPE_EDEFAULT);
-                return;
+        case BpmnPackage.RESOURCE_PARAMETER__IS_REQUIRED:
+            unsetIsRequired();
+            return;
+        case BpmnPackage.RESOURCE_PARAMETER__NAME:
+            setName(NAME_EDEFAULT);
+            return;
+        case BpmnPackage.RESOURCE_PARAMETER__TYPE:
+            setType(TYPE_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -283,12 +289,14 @@ public class ResourceParameterImpl extends BaseElementImpl implements ResourcePa
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.RESOURCE_PARAMETER__IS_REQUIRED:
-                return isSetIsRequired();
-            case bpmnPackage.RESOURCE_PARAMETER__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-            case bpmnPackage.RESOURCE_PARAMETER__TYPE:
-                return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+        case BpmnPackage.RESOURCE_PARAMETER__IS_REQUIRED:
+            return isSetIsRequired();
+        case BpmnPackage.RESOURCE_PARAMETER__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
+                    .equals(name);
+        case BpmnPackage.RESOURCE_PARAMETER__TYPE:
+            return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT
+                    .equals(type);
         }
         return super.eIsSet(featureID);
     }
@@ -300,11 +308,15 @@ public class ResourceParameterImpl extends BaseElementImpl implements ResourcePa
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (isRequired: "); //$NON-NLS-1$
-        if (isRequiredESet) result.append(isRequired); else result.append("<unset>"); //$NON-NLS-1$
+        if (isRequiredESet)
+            result.append(isRequired);
+        else
+            result.append("<unset>"); //$NON-NLS-1$
         result.append(", name: "); //$NON-NLS-1$
         result.append(name);
         result.append(", type: "); //$NON-NLS-1$

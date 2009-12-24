@@ -8,14 +8,13 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.GlobalBusinessRuleTask;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +25,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class GlobalBusinessRuleTaskImpl extends GlobalTaskImpl implements GlobalBusinessRuleTask {
+public class GlobalBusinessRuleTaskImpl extends GlobalTaskImpl implements
+        GlobalBusinessRuleTask {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -43,7 +43,7 @@ public class GlobalBusinessRuleTaskImpl extends GlobalTaskImpl implements Global
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getGlobalBusinessRuleTask();
+        return BpmnPackage.eINSTANCE.getGlobalBusinessRuleTask();
     }
 
 } //GlobalBusinessRuleTaskImpl

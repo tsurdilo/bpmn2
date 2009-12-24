@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -34,9 +33,9 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.mdt.bpmn.BoundaryEvent;
-import org.eclipse.mdt.bpmn.bpmnPackage;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.BoundaryEvent} object.
@@ -89,7 +88,7 @@ public class BoundaryEventItemProvider extends CatchEventItemProvider implements
                         getString("_UI_BoundaryEvent_attachedToRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_BoundaryEvent_attachedToRef_feature", "_UI_BoundaryEvent_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getBoundaryEvent_AttachedToRef(),
+                        BpmnPackage.eINSTANCE.getBoundaryEvent_AttachedToRef(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -109,7 +108,7 @@ public class BoundaryEventItemProvider extends CatchEventItemProvider implements
                         getString("_UI_BoundaryEvent_cancelActivity_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_BoundaryEvent_cancelActivity_feature", "_UI_BoundaryEvent_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getBoundaryEvent_CancelActivity(),
+                        BpmnPackage.eINSTANCE.getBoundaryEvent_CancelActivity(),
                         true, false, false,
                         ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
@@ -151,8 +150,8 @@ public class BoundaryEventItemProvider extends CatchEventItemProvider implements
         updateChildren(notification);
 
         switch (notification.getFeatureID(BoundaryEvent.class)) {
-        case bpmnPackage.BOUNDARY_EVENT__ATTACHED_TO_REF:
-        case bpmnPackage.BOUNDARY_EVENT__CANCEL_ACTIVITY:
+        case BpmnPackage.BOUNDARY_EVENT__ATTACHED_TO_REF:
+        case BpmnPackage.BOUNDARY_EVENT__CANCEL_ACTIVITY:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
@@ -193,31 +192,31 @@ public class BoundaryEventItemProvider extends CatchEventItemProvider implements
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE
-                || childFeature == bpmnPackage.eINSTANCE
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getCatchEvent_EventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_CancelEventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_CompensateEventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_ConditionalEventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_ErrorEventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_EscalationEventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_LinkEventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_MessageEventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_SignalEventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_TerminateEventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_TimerEventDefinition();
 
         if (qualify) {

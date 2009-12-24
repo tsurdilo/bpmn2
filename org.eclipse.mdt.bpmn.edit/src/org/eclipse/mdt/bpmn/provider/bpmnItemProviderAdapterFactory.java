@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -31,7 +30,7 @@ import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
-import org.eclipse.mdt.bpmn.util.bpmnAdapterFactory;
+import org.eclipse.mdt.bpmn.util.BpmnAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -42,7 +41,7 @@ import org.eclipse.mdt.bpmn.util.bpmnAdapterFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class bpmnItemProviderAdapterFactory extends bpmnAdapterFactory
+public class BpmnItemProviderAdapterFactory extends BpmnAdapterFactory
         implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
     /**
      * This keeps track of the root adapter factory that delegates to this adapter factory.
@@ -74,7 +73,7 @@ public class bpmnItemProviderAdapterFactory extends bpmnAdapterFactory
      * <!-- end-user-doc -->
      * @generated
      */
-    public bpmnItemProviderAdapterFactory() {
+    public BpmnItemProviderAdapterFactory() {
         supportedTypes.add(IEditingDomainItemProvider.class);
         supportedTypes.add(IStructuredItemContentProvider.class);
         supportedTypes.add(ITreeItemContentProvider.class);

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -30,9 +29,9 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.mdt.bpmn.ActivityResource;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.ResourceAssignmentExpression;
 import org.eclipse.mdt.bpmn.ResourceParameterBinding;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -49,7 +48,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class ActivityResourceImpl extends BaseElementImpl implements ActivityResource {
+public class ActivityResourceImpl extends BaseElementImpl implements
+        ActivityResource {
     /**
      * The cached value of the '{@link #getResourceAssignmentExpression() <em>Resource Assignment Expression</em>}' containment reference.
      * <!-- begin-user-doc -->
@@ -106,7 +106,7 @@ public class ActivityResourceImpl extends BaseElementImpl implements ActivityRes
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getActivityResource();
+        return BpmnPackage.eINSTANCE.getActivityResource();
     }
 
     /**
@@ -123,12 +123,22 @@ public class ActivityResourceImpl extends BaseElementImpl implements ActivityRes
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetResourceAssignmentExpression(ResourceAssignmentExpression newResourceAssignmentExpression, NotificationChain msgs) {
+    public NotificationChain basicSetResourceAssignmentExpression(
+            ResourceAssignmentExpression newResourceAssignmentExpression,
+            NotificationChain msgs) {
         ResourceAssignmentExpression oldResourceAssignmentExpression = resourceAssignmentExpression;
         resourceAssignmentExpression = newResourceAssignmentExpression;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, bpmnPackage.ACTIVITY_RESOURCE__RESOURCE_ASSIGNMENT_EXPRESSION, oldResourceAssignmentExpression, newResourceAssignmentExpression);
-            if (msgs == null) msgs = notification; else msgs.add(notification);
+            ENotificationImpl notification = new ENotificationImpl(
+                    this,
+                    Notification.SET,
+                    BpmnPackage.ACTIVITY_RESOURCE__RESOURCE_ASSIGNMENT_EXPRESSION,
+                    oldResourceAssignmentExpression,
+                    newResourceAssignmentExpression);
+            if (msgs == null)
+                msgs = notification;
+            else
+                msgs.add(notification);
         }
         return msgs;
     }
@@ -138,18 +148,35 @@ public class ActivityResourceImpl extends BaseElementImpl implements ActivityRes
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setResourceAssignmentExpression(ResourceAssignmentExpression newResourceAssignmentExpression) {
+    public void setResourceAssignmentExpression(
+            ResourceAssignmentExpression newResourceAssignmentExpression) {
         if (newResourceAssignmentExpression != resourceAssignmentExpression) {
             NotificationChain msgs = null;
             if (resourceAssignmentExpression != null)
-                msgs = ((InternalEObject)resourceAssignmentExpression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - bpmnPackage.ACTIVITY_RESOURCE__RESOURCE_ASSIGNMENT_EXPRESSION, null, msgs);
+                msgs = ((InternalEObject) resourceAssignmentExpression)
+                        .eInverseRemove(
+                                this,
+                                EOPPOSITE_FEATURE_BASE
+                                        - BpmnPackage.ACTIVITY_RESOURCE__RESOURCE_ASSIGNMENT_EXPRESSION,
+                                null, msgs);
             if (newResourceAssignmentExpression != null)
-                msgs = ((InternalEObject)newResourceAssignmentExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - bpmnPackage.ACTIVITY_RESOURCE__RESOURCE_ASSIGNMENT_EXPRESSION, null, msgs);
-            msgs = basicSetResourceAssignmentExpression(newResourceAssignmentExpression, msgs);
-            if (msgs != null) msgs.dispatch();
-        }
-        else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.ACTIVITY_RESOURCE__RESOURCE_ASSIGNMENT_EXPRESSION, newResourceAssignmentExpression, newResourceAssignmentExpression));
+                msgs = ((InternalEObject) newResourceAssignmentExpression)
+                        .eInverseAdd(
+                                this,
+                                EOPPOSITE_FEATURE_BASE
+                                        - BpmnPackage.ACTIVITY_RESOURCE__RESOURCE_ASSIGNMENT_EXPRESSION,
+                                null, msgs);
+            msgs = basicSetResourceAssignmentExpression(
+                    newResourceAssignmentExpression, msgs);
+            if (msgs != null)
+                msgs.dispatch();
+        } else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(
+                    this,
+                    Notification.SET,
+                    BpmnPackage.ACTIVITY_RESOURCE__RESOURCE_ASSIGNMENT_EXPRESSION,
+                    newResourceAssignmentExpression,
+                    newResourceAssignmentExpression));
     }
 
     /**
@@ -159,7 +186,9 @@ public class ActivityResourceImpl extends BaseElementImpl implements ActivityRes
      */
     public EList<ResourceParameterBinding> getResourceParameterBinding() {
         if (resourceParameterBinding == null) {
-            resourceParameterBinding = new EObjectContainmentEList<ResourceParameterBinding>(ResourceParameterBinding.class, this, bpmnPackage.ACTIVITY_RESOURCE__RESOURCE_PARAMETER_BINDING);
+            resourceParameterBinding = new EObjectContainmentEList<ResourceParameterBinding>(
+                    ResourceParameterBinding.class, this,
+                    BpmnPackage.ACTIVITY_RESOURCE__RESOURCE_PARAMETER_BINDING);
         }
         return resourceParameterBinding;
     }
@@ -182,7 +211,9 @@ public class ActivityResourceImpl extends BaseElementImpl implements ActivityRes
         QName oldResourceRef = resourceRef;
         resourceRef = newResourceRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.ACTIVITY_RESOURCE__RESOURCE_REF, oldResourceRef, resourceRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.ACTIVITY_RESOURCE__RESOURCE_REF,
+                    oldResourceRef, resourceRef));
     }
 
     /**
@@ -191,12 +222,14 @@ public class ActivityResourceImpl extends BaseElementImpl implements ActivityRes
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.ACTIVITY_RESOURCE__RESOURCE_ASSIGNMENT_EXPRESSION:
-                return basicSetResourceAssignmentExpression(null, msgs);
-            case bpmnPackage.ACTIVITY_RESOURCE__RESOURCE_PARAMETER_BINDING:
-                return ((InternalEList<?>)getResourceParameterBinding()).basicRemove(otherEnd, msgs);
+        case BpmnPackage.ACTIVITY_RESOURCE__RESOURCE_ASSIGNMENT_EXPRESSION:
+            return basicSetResourceAssignmentExpression(null, msgs);
+        case BpmnPackage.ACTIVITY_RESOURCE__RESOURCE_PARAMETER_BINDING:
+            return ((InternalEList<?>) getResourceParameterBinding())
+                    .basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -209,12 +242,12 @@ public class ActivityResourceImpl extends BaseElementImpl implements ActivityRes
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.ACTIVITY_RESOURCE__RESOURCE_ASSIGNMENT_EXPRESSION:
-                return getResourceAssignmentExpression();
-            case bpmnPackage.ACTIVITY_RESOURCE__RESOURCE_PARAMETER_BINDING:
-                return getResourceParameterBinding();
-            case bpmnPackage.ACTIVITY_RESOURCE__RESOURCE_REF:
-                return getResourceRef();
+        case BpmnPackage.ACTIVITY_RESOURCE__RESOURCE_ASSIGNMENT_EXPRESSION:
+            return getResourceAssignmentExpression();
+        case BpmnPackage.ACTIVITY_RESOURCE__RESOURCE_PARAMETER_BINDING:
+            return getResourceParameterBinding();
+        case BpmnPackage.ACTIVITY_RESOURCE__RESOURCE_REF:
+            return getResourceRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -228,16 +261,17 @@ public class ActivityResourceImpl extends BaseElementImpl implements ActivityRes
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.ACTIVITY_RESOURCE__RESOURCE_ASSIGNMENT_EXPRESSION:
-                setResourceAssignmentExpression((ResourceAssignmentExpression)newValue);
-                return;
-            case bpmnPackage.ACTIVITY_RESOURCE__RESOURCE_PARAMETER_BINDING:
-                getResourceParameterBinding().clear();
-                getResourceParameterBinding().addAll((Collection<? extends ResourceParameterBinding>)newValue);
-                return;
-            case bpmnPackage.ACTIVITY_RESOURCE__RESOURCE_REF:
-                setResourceRef((QName)newValue);
-                return;
+        case BpmnPackage.ACTIVITY_RESOURCE__RESOURCE_ASSIGNMENT_EXPRESSION:
+            setResourceAssignmentExpression((ResourceAssignmentExpression) newValue);
+            return;
+        case BpmnPackage.ACTIVITY_RESOURCE__RESOURCE_PARAMETER_BINDING:
+            getResourceParameterBinding().clear();
+            getResourceParameterBinding().addAll(
+                    (Collection<? extends ResourceParameterBinding>) newValue);
+            return;
+        case BpmnPackage.ACTIVITY_RESOURCE__RESOURCE_REF:
+            setResourceRef((QName) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -250,15 +284,15 @@ public class ActivityResourceImpl extends BaseElementImpl implements ActivityRes
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.ACTIVITY_RESOURCE__RESOURCE_ASSIGNMENT_EXPRESSION:
-                setResourceAssignmentExpression((ResourceAssignmentExpression)null);
-                return;
-            case bpmnPackage.ACTIVITY_RESOURCE__RESOURCE_PARAMETER_BINDING:
-                getResourceParameterBinding().clear();
-                return;
-            case bpmnPackage.ACTIVITY_RESOURCE__RESOURCE_REF:
-                setResourceRef(RESOURCE_REF_EDEFAULT);
-                return;
+        case BpmnPackage.ACTIVITY_RESOURCE__RESOURCE_ASSIGNMENT_EXPRESSION:
+            setResourceAssignmentExpression((ResourceAssignmentExpression) null);
+            return;
+        case BpmnPackage.ACTIVITY_RESOURCE__RESOURCE_PARAMETER_BINDING:
+            getResourceParameterBinding().clear();
+            return;
+        case BpmnPackage.ACTIVITY_RESOURCE__RESOURCE_REF:
+            setResourceRef(RESOURCE_REF_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -271,12 +305,14 @@ public class ActivityResourceImpl extends BaseElementImpl implements ActivityRes
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.ACTIVITY_RESOURCE__RESOURCE_ASSIGNMENT_EXPRESSION:
-                return resourceAssignmentExpression != null;
-            case bpmnPackage.ACTIVITY_RESOURCE__RESOURCE_PARAMETER_BINDING:
-                return resourceParameterBinding != null && !resourceParameterBinding.isEmpty();
-            case bpmnPackage.ACTIVITY_RESOURCE__RESOURCE_REF:
-                return RESOURCE_REF_EDEFAULT == null ? resourceRef != null : !RESOURCE_REF_EDEFAULT.equals(resourceRef);
+        case BpmnPackage.ACTIVITY_RESOURCE__RESOURCE_ASSIGNMENT_EXPRESSION:
+            return resourceAssignmentExpression != null;
+        case BpmnPackage.ACTIVITY_RESOURCE__RESOURCE_PARAMETER_BINDING:
+            return resourceParameterBinding != null
+                    && !resourceParameterBinding.isEmpty();
+        case BpmnPackage.ACTIVITY_RESOURCE__RESOURCE_REF:
+            return RESOURCE_REF_EDEFAULT == null ? resourceRef != null
+                    : !RESOURCE_REF_EDEFAULT.equals(resourceRef);
         }
         return super.eIsSet(featureID);
     }
@@ -288,7 +324,8 @@ public class ActivityResourceImpl extends BaseElementImpl implements ActivityRes
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (resourceRef: "); //$NON-NLS-1$

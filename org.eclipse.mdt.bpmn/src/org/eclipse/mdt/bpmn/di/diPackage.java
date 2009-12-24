@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di;
 
@@ -29,11 +28,11 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.mdt.bpmn.di.diFactory
+ * @see org.eclipse.mdt.bpmn.di.DIFactory
  * @model kind="package"
  * @generated
  */
-public interface diPackage extends EPackage {
+public interface DIPackage extends EPackage {
     /**
      * The package name.
      * <!-- begin-user-doc -->
@@ -64,14 +63,14 @@ public interface diPackage extends EPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    diPackage eINSTANCE = org.eclipse.mdt.bpmn.di.impl.diPackageImpl.init();
+    DIPackage eINSTANCE = org.eclipse.mdt.bpmn.di.impl.DIPackageImpl.init();
 
     /**
      * The meta object id for the '{@link org.eclipse.mdt.bpmn.di.impl.BendpointImpl <em>Bendpoint</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.di.impl.BendpointImpl
-     * @see org.eclipse.mdt.bpmn.di.impl.diPackageImpl#getBendpoint()
+     * @see org.eclipse.mdt.bpmn.di.impl.DIPackageImpl#getBendpoint()
      * @generated
      */
     int BENDPOINT = 0;
@@ -126,7 +125,7 @@ public interface diPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.di.impl.ViewImpl
-     * @see org.eclipse.mdt.bpmn.di.impl.diPackageImpl#getView()
+     * @see org.eclipse.mdt.bpmn.di.impl.DIPackageImpl#getView()
      * @generated
      */
     int VIEW = 6;
@@ -208,7 +207,7 @@ public interface diPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.di.impl.ConnectorImpl
-     * @see org.eclipse.mdt.bpmn.di.impl.diPackageImpl#getConnector()
+     * @see org.eclipse.mdt.bpmn.di.impl.DIPackageImpl#getConnector()
      * @generated
      */
     int CONNECTOR = 1;
@@ -317,7 +316,7 @@ public interface diPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.di.impl.DiagramImpl
-     * @see org.eclipse.mdt.bpmn.di.impl.diPackageImpl#getDiagram()
+     * @see org.eclipse.mdt.bpmn.di.impl.DIPackageImpl#getDiagram()
      * @generated
      */
     int DIAGRAM = 2;
@@ -408,7 +407,7 @@ public interface diPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.di.impl.DocumentRootImpl
-     * @see org.eclipse.mdt.bpmn.di.impl.diPackageImpl#getDocumentRoot()
+     * @see org.eclipse.mdt.bpmn.di.impl.DIPackageImpl#getDocumentRoot()
      * @generated
      */
     int DOCUMENT_ROOT = 3;
@@ -508,7 +507,7 @@ public interface diPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.di.impl.NodeImpl
-     * @see org.eclipse.mdt.bpmn.di.impl.diPackageImpl#getNode()
+     * @see org.eclipse.mdt.bpmn.di.impl.DIPackageImpl#getNode()
      * @generated
      */
     int NODE = 4;
@@ -590,7 +589,7 @@ public interface diPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.di.impl.StyleImpl
-     * @see org.eclipse.mdt.bpmn.di.impl.diPackageImpl#getStyle()
+     * @see org.eclipse.mdt.bpmn.di.impl.DIPackageImpl#getStyle()
      * @generated
      */
     int STYLE = 5;
@@ -627,7 +626,7 @@ public interface diPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see java.util.List
-     * @see org.eclipse.mdt.bpmn.di.impl.diPackageImpl#getDefinitionType()
+     * @see org.eclipse.mdt.bpmn.di.impl.DIPackageImpl#getDefinitionType()
      * @generated
      */
     int DEFINITION_TYPE = 7;
@@ -637,7 +636,7 @@ public interface diPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see java.util.List
-     * @see org.eclipse.mdt.bpmn.di.impl.diPackageImpl#getSourceConnectorType()
+     * @see org.eclipse.mdt.bpmn.di.impl.DIPackageImpl#getSourceConnectorType()
      * @generated
      */
     int SOURCE_CONNECTOR_TYPE = 8;
@@ -647,11 +646,10 @@ public interface diPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see java.util.List
-     * @see org.eclipse.mdt.bpmn.di.impl.diPackageImpl#getTargetConnectorType()
+     * @see org.eclipse.mdt.bpmn.di.impl.DIPackageImpl#getTargetConnectorType()
      * @generated
      */
     int TARGET_CONNECTOR_TYPE = 9;
-
 
     /**
      * Returns the meta object for class '{@link org.eclipse.mdt.bpmn.di.Bendpoint <em>Bendpoint</em>}'.
@@ -1052,7 +1050,7 @@ public interface diPackage extends EPackage {
      * @return the factory that creates the instances of the model.
      * @generated
      */
-    diFactory getdiFactory();
+    DIFactory getDIFactory();
 
     /**
      * <!-- begin-user-doc -->
@@ -1072,7 +1070,7 @@ public interface diPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.eclipse.mdt.bpmn.di.impl.BendpointImpl
-         * @see org.eclipse.mdt.bpmn.di.impl.diPackageImpl#getBendpoint()
+         * @see org.eclipse.mdt.bpmn.di.impl.DIPackageImpl#getBendpoint()
          * @generated
          */
         EClass BENDPOINT = eINSTANCE.getBendpoint();
@@ -1114,7 +1112,7 @@ public interface diPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.eclipse.mdt.bpmn.di.impl.ConnectorImpl
-         * @see org.eclipse.mdt.bpmn.di.impl.diPackageImpl#getConnector()
+         * @see org.eclipse.mdt.bpmn.di.impl.DIPackageImpl#getConnector()
          * @generated
          */
         EClass CONNECTOR = eINSTANCE.getConnector();
@@ -1148,7 +1146,7 @@ public interface diPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.eclipse.mdt.bpmn.di.impl.DiagramImpl
-         * @see org.eclipse.mdt.bpmn.di.impl.diPackageImpl#getDiagram()
+         * @see org.eclipse.mdt.bpmn.di.impl.DIPackageImpl#getDiagram()
          * @generated
          */
         EClass DIAGRAM = eINSTANCE.getDiagram();
@@ -1166,7 +1164,7 @@ public interface diPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.eclipse.mdt.bpmn.di.impl.DocumentRootImpl
-         * @see org.eclipse.mdt.bpmn.di.impl.diPackageImpl#getDocumentRoot()
+         * @see org.eclipse.mdt.bpmn.di.impl.DIPackageImpl#getDocumentRoot()
          * @generated
          */
         EClass DOCUMENT_ROOT = eINSTANCE.getDocumentRoot();
@@ -1185,7 +1183,8 @@ public interface diPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__XMLNS_PREFIX_MAP = eINSTANCE.getDocumentRoot_XMLNSPrefixMap();
+        EReference DOCUMENT_ROOT__XMLNS_PREFIX_MAP = eINSTANCE
+                .getDocumentRoot_XMLNSPrefixMap();
 
         /**
          * The meta object literal for the '<em><b>XSI Schema Location</b></em>' map feature.
@@ -1193,7 +1192,8 @@ public interface diPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__XSI_SCHEMA_LOCATION = eINSTANCE.getDocumentRoot_XSISchemaLocation();
+        EReference DOCUMENT_ROOT__XSI_SCHEMA_LOCATION = eINSTANCE
+                .getDocumentRoot_XSISchemaLocation();
 
         /**
          * The meta object literal for the '<em><b>Bendpoint</b></em>' containment reference feature.
@@ -1201,7 +1201,8 @@ public interface diPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__BENDPOINT = eINSTANCE.getDocumentRoot_Bendpoint();
+        EReference DOCUMENT_ROOT__BENDPOINT = eINSTANCE
+                .getDocumentRoot_Bendpoint();
 
         /**
          * The meta object literal for the '<em><b>Connector</b></em>' containment reference feature.
@@ -1209,7 +1210,8 @@ public interface diPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__CONNECTOR = eINSTANCE.getDocumentRoot_Connector();
+        EReference DOCUMENT_ROOT__CONNECTOR = eINSTANCE
+                .getDocumentRoot_Connector();
 
         /**
          * The meta object literal for the '<em><b>View</b></em>' containment reference feature.
@@ -1248,7 +1250,7 @@ public interface diPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.eclipse.mdt.bpmn.di.impl.NodeImpl
-         * @see org.eclipse.mdt.bpmn.di.impl.diPackageImpl#getNode()
+         * @see org.eclipse.mdt.bpmn.di.impl.DIPackageImpl#getNode()
          * @generated
          */
         EClass NODE = eINSTANCE.getNode();
@@ -1258,7 +1260,7 @@ public interface diPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.eclipse.mdt.bpmn.di.impl.StyleImpl
-         * @see org.eclipse.mdt.bpmn.di.impl.diPackageImpl#getStyle()
+         * @see org.eclipse.mdt.bpmn.di.impl.DIPackageImpl#getStyle()
          * @generated
          */
         EClass STYLE = eINSTANCE.getStyle();
@@ -1284,7 +1286,7 @@ public interface diPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.eclipse.mdt.bpmn.di.impl.ViewImpl
-         * @see org.eclipse.mdt.bpmn.di.impl.diPackageImpl#getView()
+         * @see org.eclipse.mdt.bpmn.di.impl.DIPackageImpl#getView()
          * @generated
          */
         EClass VIEW = eINSTANCE.getView();
@@ -1350,7 +1352,7 @@ public interface diPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see java.util.List
-         * @see org.eclipse.mdt.bpmn.di.impl.diPackageImpl#getDefinitionType()
+         * @see org.eclipse.mdt.bpmn.di.impl.DIPackageImpl#getDefinitionType()
          * @generated
          */
         EDataType DEFINITION_TYPE = eINSTANCE.getDefinitionType();
@@ -1360,7 +1362,7 @@ public interface diPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see java.util.List
-         * @see org.eclipse.mdt.bpmn.di.impl.diPackageImpl#getSourceConnectorType()
+         * @see org.eclipse.mdt.bpmn.di.impl.DIPackageImpl#getSourceConnectorType()
          * @generated
          */
         EDataType SOURCE_CONNECTOR_TYPE = eINSTANCE.getSourceConnectorType();
@@ -1370,11 +1372,11 @@ public interface diPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see java.util.List
-         * @see org.eclipse.mdt.bpmn.di.impl.diPackageImpl#getTargetConnectorType()
+         * @see org.eclipse.mdt.bpmn.di.impl.DIPackageImpl#getTargetConnectorType()
          * @generated
          */
         EDataType TARGET_CONNECTOR_TYPE = eINSTANCE.getTargetConnectorType();
 
     }
 
-} //diPackage
+} //DIPackage

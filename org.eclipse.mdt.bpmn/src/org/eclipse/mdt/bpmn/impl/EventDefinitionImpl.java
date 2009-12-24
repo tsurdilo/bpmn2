@@ -8,14 +8,13 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.EventDefinition;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +25,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public abstract class EventDefinitionImpl extends RootElementImpl implements EventDefinition {
+public abstract class EventDefinitionImpl extends RootElementImpl implements
+        EventDefinition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -43,7 +43,7 @@ public abstract class EventDefinitionImpl extends RootElementImpl implements Eve
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getEventDefinition();
+        return BpmnPackage.eINSTANCE.getEventDefinition();
     }
 
 } //EventDefinitionImpl

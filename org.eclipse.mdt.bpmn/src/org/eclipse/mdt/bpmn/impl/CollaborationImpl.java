@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -32,6 +31,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.mdt.bpmn.Artifact;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Collaboration;
 import org.eclipse.mdt.bpmn.Conversation;
 import org.eclipse.mdt.bpmn.ConversationAssociation;
@@ -39,7 +39,6 @@ import org.eclipse.mdt.bpmn.MessageFlow;
 import org.eclipse.mdt.bpmn.MessageFlowAssociation;
 import org.eclipse.mdt.bpmn.Participant;
 import org.eclipse.mdt.bpmn.ParticipantAssociation;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -220,7 +219,7 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getCollaboration();
+        return BpmnPackage.eINSTANCE.getCollaboration();
     }
 
     /**
@@ -230,7 +229,9 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      */
     public EList<Participant> getParticipant() {
         if (participant == null) {
-            participant = new EObjectContainmentEList<Participant>(Participant.class, this, bpmnPackage.COLLABORATION__PARTICIPANT);
+            participant = new EObjectContainmentEList<Participant>(
+                    Participant.class, this,
+                    BpmnPackage.COLLABORATION__PARTICIPANT);
         }
         return participant;
     }
@@ -242,7 +243,9 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      */
     public EList<MessageFlow> getMessageFlow() {
         if (messageFlow == null) {
-            messageFlow = new EObjectContainmentEList<MessageFlow>(MessageFlow.class, this, bpmnPackage.COLLABORATION__MESSAGE_FLOW);
+            messageFlow = new EObjectContainmentEList<MessageFlow>(
+                    MessageFlow.class, this,
+                    BpmnPackage.COLLABORATION__MESSAGE_FLOW);
         }
         return messageFlow;
     }
@@ -254,7 +257,8 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      */
     public FeatureMap getArtifactGroup() {
         if (artifactGroup == null) {
-            artifactGroup = new BasicFeatureMap(this, bpmnPackage.COLLABORATION__ARTIFACT_GROUP);
+            artifactGroup = new BasicFeatureMap(this,
+                    BpmnPackage.COLLABORATION__ARTIFACT_GROUP);
         }
         return artifactGroup;
     }
@@ -265,7 +269,8 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      * @generated
      */
     public EList<Artifact> getArtifact() {
-        return getArtifactGroup().list(bpmnPackage.eINSTANCE.getCollaboration_Artifact());
+        return getArtifactGroup().list(
+                BpmnPackage.eINSTANCE.getCollaboration_Artifact());
     }
 
     /**
@@ -275,7 +280,9 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      */
     public EList<Conversation> getConversation() {
         if (conversation == null) {
-            conversation = new EObjectContainmentEList<Conversation>(Conversation.class, this, bpmnPackage.COLLABORATION__CONVERSATION);
+            conversation = new EObjectContainmentEList<Conversation>(
+                    Conversation.class, this,
+                    BpmnPackage.COLLABORATION__CONVERSATION);
         }
         return conversation;
     }
@@ -287,7 +294,9 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      */
     public EList<ConversationAssociation> getConversationAssociation() {
         if (conversationAssociation == null) {
-            conversationAssociation = new EObjectContainmentEList<ConversationAssociation>(ConversationAssociation.class, this, bpmnPackage.COLLABORATION__CONVERSATION_ASSOCIATION);
+            conversationAssociation = new EObjectContainmentEList<ConversationAssociation>(
+                    ConversationAssociation.class, this,
+                    BpmnPackage.COLLABORATION__CONVERSATION_ASSOCIATION);
         }
         return conversationAssociation;
     }
@@ -299,7 +308,9 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      */
     public EList<ParticipantAssociation> getParticipantAssociation() {
         if (participantAssociation == null) {
-            participantAssociation = new EObjectContainmentEList<ParticipantAssociation>(ParticipantAssociation.class, this, bpmnPackage.COLLABORATION__PARTICIPANT_ASSOCIATION);
+            participantAssociation = new EObjectContainmentEList<ParticipantAssociation>(
+                    ParticipantAssociation.class, this,
+                    BpmnPackage.COLLABORATION__PARTICIPANT_ASSOCIATION);
         }
         return participantAssociation;
     }
@@ -311,7 +322,9 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      */
     public EList<MessageFlowAssociation> getMessageFlowAssociation() {
         if (messageFlowAssociation == null) {
-            messageFlowAssociation = new EObjectContainmentEList<MessageFlowAssociation>(MessageFlowAssociation.class, this, bpmnPackage.COLLABORATION__MESSAGE_FLOW_ASSOCIATION);
+            messageFlowAssociation = new EObjectContainmentEList<MessageFlowAssociation>(
+                    MessageFlowAssociation.class, this,
+                    BpmnPackage.COLLABORATION__MESSAGE_FLOW_ASSOCIATION);
         }
         return messageFlowAssociation;
     }
@@ -334,7 +347,9 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
         QName oldChoreographyRef = choreographyRef;
         choreographyRef = newChoreographyRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.COLLABORATION__CHOREOGRAPHY_REF, oldChoreographyRef, choreographyRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.COLLABORATION__CHOREOGRAPHY_REF,
+                    oldChoreographyRef, choreographyRef));
     }
 
     /**
@@ -357,7 +372,9 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
         boolean oldIsClosedESet = isClosedESet;
         isClosedESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.COLLABORATION__IS_CLOSED, oldIsClosed, isClosed, !oldIsClosedESet));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.COLLABORATION__IS_CLOSED, oldIsClosed,
+                    isClosed, !oldIsClosedESet));
     }
 
     /**
@@ -371,7 +388,9 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
         isClosed = IS_CLOSED_EDEFAULT;
         isClosedESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, bpmnPackage.COLLABORATION__IS_CLOSED, oldIsClosed, IS_CLOSED_EDEFAULT, oldIsClosedESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET,
+                    BpmnPackage.COLLABORATION__IS_CLOSED, oldIsClosed,
+                    IS_CLOSED_EDEFAULT, oldIsClosedESet));
     }
 
     /**
@@ -401,7 +420,8 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.COLLABORATION__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.COLLABORATION__NAME, oldName, name));
     }
 
     /**
@@ -410,24 +430,33 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.COLLABORATION__PARTICIPANT:
-                return ((InternalEList<?>)getParticipant()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.COLLABORATION__MESSAGE_FLOW:
-                return ((InternalEList<?>)getMessageFlow()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.COLLABORATION__ARTIFACT_GROUP:
-                return ((InternalEList<?>)getArtifactGroup()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.COLLABORATION__ARTIFACT:
-                return ((InternalEList<?>)getArtifact()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.COLLABORATION__CONVERSATION:
-                return ((InternalEList<?>)getConversation()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.COLLABORATION__CONVERSATION_ASSOCIATION:
-                return ((InternalEList<?>)getConversationAssociation()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.COLLABORATION__PARTICIPANT_ASSOCIATION:
-                return ((InternalEList<?>)getParticipantAssociation()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.COLLABORATION__MESSAGE_FLOW_ASSOCIATION:
-                return ((InternalEList<?>)getMessageFlowAssociation()).basicRemove(otherEnd, msgs);
+        case BpmnPackage.COLLABORATION__PARTICIPANT:
+            return ((InternalEList<?>) getParticipant()).basicRemove(otherEnd,
+                    msgs);
+        case BpmnPackage.COLLABORATION__MESSAGE_FLOW:
+            return ((InternalEList<?>) getMessageFlow()).basicRemove(otherEnd,
+                    msgs);
+        case BpmnPackage.COLLABORATION__ARTIFACT_GROUP:
+            return ((InternalEList<?>) getArtifactGroup()).basicRemove(
+                    otherEnd, msgs);
+        case BpmnPackage.COLLABORATION__ARTIFACT:
+            return ((InternalEList<?>) getArtifact()).basicRemove(otherEnd,
+                    msgs);
+        case BpmnPackage.COLLABORATION__CONVERSATION:
+            return ((InternalEList<?>) getConversation()).basicRemove(otherEnd,
+                    msgs);
+        case BpmnPackage.COLLABORATION__CONVERSATION_ASSOCIATION:
+            return ((InternalEList<?>) getConversationAssociation())
+                    .basicRemove(otherEnd, msgs);
+        case BpmnPackage.COLLABORATION__PARTICIPANT_ASSOCIATION:
+            return ((InternalEList<?>) getParticipantAssociation())
+                    .basicRemove(otherEnd, msgs);
+        case BpmnPackage.COLLABORATION__MESSAGE_FLOW_ASSOCIATION:
+            return ((InternalEList<?>) getMessageFlowAssociation())
+                    .basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -440,29 +469,30 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.COLLABORATION__PARTICIPANT:
-                return getParticipant();
-            case bpmnPackage.COLLABORATION__MESSAGE_FLOW:
-                return getMessageFlow();
-            case bpmnPackage.COLLABORATION__ARTIFACT_GROUP:
-                if (coreType) return getArtifactGroup();
-                return ((FeatureMap.Internal)getArtifactGroup()).getWrapper();
-            case bpmnPackage.COLLABORATION__ARTIFACT:
-                return getArtifact();
-            case bpmnPackage.COLLABORATION__CONVERSATION:
-                return getConversation();
-            case bpmnPackage.COLLABORATION__CONVERSATION_ASSOCIATION:
-                return getConversationAssociation();
-            case bpmnPackage.COLLABORATION__PARTICIPANT_ASSOCIATION:
-                return getParticipantAssociation();
-            case bpmnPackage.COLLABORATION__MESSAGE_FLOW_ASSOCIATION:
-                return getMessageFlowAssociation();
-            case bpmnPackage.COLLABORATION__CHOREOGRAPHY_REF:
-                return getChoreographyRef();
-            case bpmnPackage.COLLABORATION__IS_CLOSED:
-                return isIsClosed();
-            case bpmnPackage.COLLABORATION__NAME:
-                return getName();
+        case BpmnPackage.COLLABORATION__PARTICIPANT:
+            return getParticipant();
+        case BpmnPackage.COLLABORATION__MESSAGE_FLOW:
+            return getMessageFlow();
+        case BpmnPackage.COLLABORATION__ARTIFACT_GROUP:
+            if (coreType)
+                return getArtifactGroup();
+            return ((FeatureMap.Internal) getArtifactGroup()).getWrapper();
+        case BpmnPackage.COLLABORATION__ARTIFACT:
+            return getArtifact();
+        case BpmnPackage.COLLABORATION__CONVERSATION:
+            return getConversation();
+        case BpmnPackage.COLLABORATION__CONVERSATION_ASSOCIATION:
+            return getConversationAssociation();
+        case BpmnPackage.COLLABORATION__PARTICIPANT_ASSOCIATION:
+            return getParticipantAssociation();
+        case BpmnPackage.COLLABORATION__MESSAGE_FLOW_ASSOCIATION:
+            return getMessageFlowAssociation();
+        case BpmnPackage.COLLABORATION__CHOREOGRAPHY_REF:
+            return getChoreographyRef();
+        case BpmnPackage.COLLABORATION__IS_CLOSED:
+            return isIsClosed();
+        case BpmnPackage.COLLABORATION__NAME:
+            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -476,46 +506,52 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.COLLABORATION__PARTICIPANT:
-                getParticipant().clear();
-                getParticipant().addAll((Collection<? extends Participant>)newValue);
-                return;
-            case bpmnPackage.COLLABORATION__MESSAGE_FLOW:
-                getMessageFlow().clear();
-                getMessageFlow().addAll((Collection<? extends MessageFlow>)newValue);
-                return;
-            case bpmnPackage.COLLABORATION__ARTIFACT_GROUP:
-                ((FeatureMap.Internal)getArtifactGroup()).set(newValue);
-                return;
-            case bpmnPackage.COLLABORATION__ARTIFACT:
-                getArtifact().clear();
-                getArtifact().addAll((Collection<? extends Artifact>)newValue);
-                return;
-            case bpmnPackage.COLLABORATION__CONVERSATION:
-                getConversation().clear();
-                getConversation().addAll((Collection<? extends Conversation>)newValue);
-                return;
-            case bpmnPackage.COLLABORATION__CONVERSATION_ASSOCIATION:
-                getConversationAssociation().clear();
-                getConversationAssociation().addAll((Collection<? extends ConversationAssociation>)newValue);
-                return;
-            case bpmnPackage.COLLABORATION__PARTICIPANT_ASSOCIATION:
-                getParticipantAssociation().clear();
-                getParticipantAssociation().addAll((Collection<? extends ParticipantAssociation>)newValue);
-                return;
-            case bpmnPackage.COLLABORATION__MESSAGE_FLOW_ASSOCIATION:
-                getMessageFlowAssociation().clear();
-                getMessageFlowAssociation().addAll((Collection<? extends MessageFlowAssociation>)newValue);
-                return;
-            case bpmnPackage.COLLABORATION__CHOREOGRAPHY_REF:
-                setChoreographyRef((QName)newValue);
-                return;
-            case bpmnPackage.COLLABORATION__IS_CLOSED:
-                setIsClosed((Boolean)newValue);
-                return;
-            case bpmnPackage.COLLABORATION__NAME:
-                setName((String)newValue);
-                return;
+        case BpmnPackage.COLLABORATION__PARTICIPANT:
+            getParticipant().clear();
+            getParticipant().addAll(
+                    (Collection<? extends Participant>) newValue);
+            return;
+        case BpmnPackage.COLLABORATION__MESSAGE_FLOW:
+            getMessageFlow().clear();
+            getMessageFlow().addAll(
+                    (Collection<? extends MessageFlow>) newValue);
+            return;
+        case BpmnPackage.COLLABORATION__ARTIFACT_GROUP:
+            ((FeatureMap.Internal) getArtifactGroup()).set(newValue);
+            return;
+        case BpmnPackage.COLLABORATION__ARTIFACT:
+            getArtifact().clear();
+            getArtifact().addAll((Collection<? extends Artifact>) newValue);
+            return;
+        case BpmnPackage.COLLABORATION__CONVERSATION:
+            getConversation().clear();
+            getConversation().addAll(
+                    (Collection<? extends Conversation>) newValue);
+            return;
+        case BpmnPackage.COLLABORATION__CONVERSATION_ASSOCIATION:
+            getConversationAssociation().clear();
+            getConversationAssociation().addAll(
+                    (Collection<? extends ConversationAssociation>) newValue);
+            return;
+        case BpmnPackage.COLLABORATION__PARTICIPANT_ASSOCIATION:
+            getParticipantAssociation().clear();
+            getParticipantAssociation().addAll(
+                    (Collection<? extends ParticipantAssociation>) newValue);
+            return;
+        case BpmnPackage.COLLABORATION__MESSAGE_FLOW_ASSOCIATION:
+            getMessageFlowAssociation().clear();
+            getMessageFlowAssociation().addAll(
+                    (Collection<? extends MessageFlowAssociation>) newValue);
+            return;
+        case BpmnPackage.COLLABORATION__CHOREOGRAPHY_REF:
+            setChoreographyRef((QName) newValue);
+            return;
+        case BpmnPackage.COLLABORATION__IS_CLOSED:
+            setIsClosed((Boolean) newValue);
+            return;
+        case BpmnPackage.COLLABORATION__NAME:
+            setName((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -528,39 +564,39 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.COLLABORATION__PARTICIPANT:
-                getParticipant().clear();
-                return;
-            case bpmnPackage.COLLABORATION__MESSAGE_FLOW:
-                getMessageFlow().clear();
-                return;
-            case bpmnPackage.COLLABORATION__ARTIFACT_GROUP:
-                getArtifactGroup().clear();
-                return;
-            case bpmnPackage.COLLABORATION__ARTIFACT:
-                getArtifact().clear();
-                return;
-            case bpmnPackage.COLLABORATION__CONVERSATION:
-                getConversation().clear();
-                return;
-            case bpmnPackage.COLLABORATION__CONVERSATION_ASSOCIATION:
-                getConversationAssociation().clear();
-                return;
-            case bpmnPackage.COLLABORATION__PARTICIPANT_ASSOCIATION:
-                getParticipantAssociation().clear();
-                return;
-            case bpmnPackage.COLLABORATION__MESSAGE_FLOW_ASSOCIATION:
-                getMessageFlowAssociation().clear();
-                return;
-            case bpmnPackage.COLLABORATION__CHOREOGRAPHY_REF:
-                setChoreographyRef(CHOREOGRAPHY_REF_EDEFAULT);
-                return;
-            case bpmnPackage.COLLABORATION__IS_CLOSED:
-                unsetIsClosed();
-                return;
-            case bpmnPackage.COLLABORATION__NAME:
-                setName(NAME_EDEFAULT);
-                return;
+        case BpmnPackage.COLLABORATION__PARTICIPANT:
+            getParticipant().clear();
+            return;
+        case BpmnPackage.COLLABORATION__MESSAGE_FLOW:
+            getMessageFlow().clear();
+            return;
+        case BpmnPackage.COLLABORATION__ARTIFACT_GROUP:
+            getArtifactGroup().clear();
+            return;
+        case BpmnPackage.COLLABORATION__ARTIFACT:
+            getArtifact().clear();
+            return;
+        case BpmnPackage.COLLABORATION__CONVERSATION:
+            getConversation().clear();
+            return;
+        case BpmnPackage.COLLABORATION__CONVERSATION_ASSOCIATION:
+            getConversationAssociation().clear();
+            return;
+        case BpmnPackage.COLLABORATION__PARTICIPANT_ASSOCIATION:
+            getParticipantAssociation().clear();
+            return;
+        case BpmnPackage.COLLABORATION__MESSAGE_FLOW_ASSOCIATION:
+            getMessageFlowAssociation().clear();
+            return;
+        case BpmnPackage.COLLABORATION__CHOREOGRAPHY_REF:
+            setChoreographyRef(CHOREOGRAPHY_REF_EDEFAULT);
+            return;
+        case BpmnPackage.COLLABORATION__IS_CLOSED:
+            unsetIsClosed();
+            return;
+        case BpmnPackage.COLLABORATION__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -573,28 +609,33 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.COLLABORATION__PARTICIPANT:
-                return participant != null && !participant.isEmpty();
-            case bpmnPackage.COLLABORATION__MESSAGE_FLOW:
-                return messageFlow != null && !messageFlow.isEmpty();
-            case bpmnPackage.COLLABORATION__ARTIFACT_GROUP:
-                return artifactGroup != null && !artifactGroup.isEmpty();
-            case bpmnPackage.COLLABORATION__ARTIFACT:
-                return !getArtifact().isEmpty();
-            case bpmnPackage.COLLABORATION__CONVERSATION:
-                return conversation != null && !conversation.isEmpty();
-            case bpmnPackage.COLLABORATION__CONVERSATION_ASSOCIATION:
-                return conversationAssociation != null && !conversationAssociation.isEmpty();
-            case bpmnPackage.COLLABORATION__PARTICIPANT_ASSOCIATION:
-                return participantAssociation != null && !participantAssociation.isEmpty();
-            case bpmnPackage.COLLABORATION__MESSAGE_FLOW_ASSOCIATION:
-                return messageFlowAssociation != null && !messageFlowAssociation.isEmpty();
-            case bpmnPackage.COLLABORATION__CHOREOGRAPHY_REF:
-                return CHOREOGRAPHY_REF_EDEFAULT == null ? choreographyRef != null : !CHOREOGRAPHY_REF_EDEFAULT.equals(choreographyRef);
-            case bpmnPackage.COLLABORATION__IS_CLOSED:
-                return isSetIsClosed();
-            case bpmnPackage.COLLABORATION__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case BpmnPackage.COLLABORATION__PARTICIPANT:
+            return participant != null && !participant.isEmpty();
+        case BpmnPackage.COLLABORATION__MESSAGE_FLOW:
+            return messageFlow != null && !messageFlow.isEmpty();
+        case BpmnPackage.COLLABORATION__ARTIFACT_GROUP:
+            return artifactGroup != null && !artifactGroup.isEmpty();
+        case BpmnPackage.COLLABORATION__ARTIFACT:
+            return !getArtifact().isEmpty();
+        case BpmnPackage.COLLABORATION__CONVERSATION:
+            return conversation != null && !conversation.isEmpty();
+        case BpmnPackage.COLLABORATION__CONVERSATION_ASSOCIATION:
+            return conversationAssociation != null
+                    && !conversationAssociation.isEmpty();
+        case BpmnPackage.COLLABORATION__PARTICIPANT_ASSOCIATION:
+            return participantAssociation != null
+                    && !participantAssociation.isEmpty();
+        case BpmnPackage.COLLABORATION__MESSAGE_FLOW_ASSOCIATION:
+            return messageFlowAssociation != null
+                    && !messageFlowAssociation.isEmpty();
+        case BpmnPackage.COLLABORATION__CHOREOGRAPHY_REF:
+            return CHOREOGRAPHY_REF_EDEFAULT == null ? choreographyRef != null
+                    : !CHOREOGRAPHY_REF_EDEFAULT.equals(choreographyRef);
+        case BpmnPackage.COLLABORATION__IS_CLOSED:
+            return isSetIsClosed();
+        case BpmnPackage.COLLABORATION__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
+                    .equals(name);
         }
         return super.eIsSet(featureID);
     }
@@ -606,7 +647,8 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (artifactGroup: "); //$NON-NLS-1$
@@ -614,7 +656,10 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
         result.append(", choreographyRef: "); //$NON-NLS-1$
         result.append(choreographyRef);
         result.append(", isClosed: "); //$NON-NLS-1$
-        if (isClosedESet) result.append(isClosed); else result.append("<unset>"); //$NON-NLS-1$
+        if (isClosedESet)
+            result.append(isClosed);
+        else
+            result.append("<unset>"); //$NON-NLS-1$
         result.append(", name: "); //$NON-NLS-1$
         result.append(name);
         result.append(')');

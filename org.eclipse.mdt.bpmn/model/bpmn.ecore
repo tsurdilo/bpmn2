@@ -1316,7 +1316,7 @@
         <details key="namespace" value="##targetNamespace"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="property" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
         eType="#//Property" containment="true" resolveProxies="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
@@ -1324,15 +1324,15 @@
         <details key="namespace" value="##targetNamespace"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dataInputAssociation" upperBound="-1"
-        eType="#//DataInputAssociation" containment="true" resolveProxies="false">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataInputAssociations"
+        upperBound="-1" eType="#//DataInputAssociation" containment="true" resolveProxies="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
         <details key="name" value="dataInputAssociation"/>
         <details key="namespace" value="##targetNamespace"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dataOutputAssociation"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataOutputAssociations"
         upperBound="-1" eType="#//DataOutputAssociation" containment="true" resolveProxies="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
@@ -1340,7 +1340,7 @@
         <details key="namespace" value="##targetNamespace"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="activityResourceGroup"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="activityResourceGroups"
         unique="false" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFeatureMapEntry">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="group"/>
@@ -1348,7 +1348,7 @@
         <details key="namespace" value="##targetNamespace"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="activityResource" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activityResources" upperBound="-1"
         eType="#//ActivityResource" volatile="true" transient="true" derived="true"
         containment="true" resolveProxies="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
@@ -1416,7 +1416,7 @@
         <details key="namespace" value="##targetNamespace"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceParameterBinding"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceParameterBindings"
         upperBound="-1" eType="#//ResourceParameterBinding" containment="true" resolveProxies="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
@@ -1560,7 +1560,7 @@
       <details key="name" value="tBaseElement"/>
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="documentation" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="documentations" upperBound="-1"
         eType="#//Documentation" containment="true" resolveProxies="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
@@ -1682,7 +1682,7 @@
       <details key="name" value="tCallableElement"/>
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="supportedInterfaceRef"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="supportedInterfaceRefs"
         unique="false" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//QName">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
@@ -1698,7 +1698,7 @@
         <details key="namespace" value="##targetNamespace"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ioBinding" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ioBindings" upperBound="-1"
         eType="#//InputOutputBinding" containment="true" resolveProxies="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
@@ -1730,7 +1730,7 @@
       <details key="name" value="tCallChoreographyActivity"/>
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="participantAssociation"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="participantAssociations"
         upperBound="-1" eType="#//ParticipantAssociation" containment="true" resolveProxies="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
@@ -1776,7 +1776,7 @@
       <details key="name" value="tCatchEvent"/>
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dataOutput" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataOutputs" upperBound="-1"
         eType="#//DataOutput" containment="true" resolveProxies="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
@@ -1784,7 +1784,7 @@
         <details key="namespace" value="##targetNamespace"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dataOutputAssociation"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataOutputAssociations"
         upperBound="-1" eType="#//DataOutputAssociation" containment="true" resolveProxies="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
@@ -1800,15 +1800,15 @@
         <details key="namespace" value="##targetNamespace"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventDefinitionGroup" unique="false"
-        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFeatureMapEntry">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventDefinitionGroups"
+        unique="false" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFeatureMapEntry">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="group"/>
         <details key="name" value="eventDefinition:group"/>
         <details key="namespace" value="##targetNamespace"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="eventDefinition" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eventDefinitions" upperBound="-1"
         eType="#//EventDefinition" volatile="true" transient="true" derived="true"
         containment="true" resolveProxies="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
@@ -1818,7 +1818,7 @@
         <details key="group" value="eventDefinition:group"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventDefinitionRef" unique="false"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventDefinitionRefs" unique="false"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//QName">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
@@ -1865,7 +1865,7 @@
       <details key="name" value="tChoreography"/>
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="flowElementGroup" unique="false"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="flowElementGroups" unique="false"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFeatureMapEntry">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="group"/>
@@ -1873,7 +1873,7 @@
         <details key="namespace" value="##targetNamespace"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="flowElement" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="flowElements" upperBound="-1"
         eType="#//FlowElement" volatile="true" transient="true" derived="true" containment="true"
         resolveProxies="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
@@ -1883,7 +1883,7 @@
         <details key="group" value="flowElement:group"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="artifactGroup" unique="false"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="artifactGroups" unique="false"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFeatureMapEntry">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="group"/>
@@ -1891,7 +1891,7 @@
         <details key="namespace" value="##targetNamespace"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="artifact" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="artifacts" upperBound="-1"
         eType="#//Artifact" volatile="true" transient="true" derived="true" containment="true"
         resolveProxies="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
@@ -1901,7 +1901,7 @@
         <details key="group" value="artifact:group"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="messageFlow" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="messageFlows" upperBound="-1"
         eType="#//MessageFlow" containment="true" resolveProxies="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
@@ -1909,7 +1909,7 @@
         <details key="namespace" value="##targetNamespace"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="participant" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="participants" upperBound="-1"
         eType="#//Participant" containment="true" resolveProxies="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
@@ -1917,7 +1917,7 @@
         <details key="namespace" value="##targetNamespace"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="conversation" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conversations" upperBound="-1"
         eType="#//Conversation" containment="true" resolveProxies="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
@@ -1925,7 +1925,7 @@
         <details key="namespace" value="##targetNamespace"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="conversationAssociation"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conversationAssociations"
         upperBound="-1" eType="#//ConversationAssociation" containment="true" resolveProxies="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
@@ -1933,7 +1933,7 @@
         <details key="namespace" value="##targetNamespace"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="messageFlowAssociation"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="messageFlowAssociations"
         upperBound="-1" eType="#//MessageFlowAssociation" containment="true" resolveProxies="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
@@ -1941,7 +1941,7 @@
         <details key="namespace" value="##targetNamespace"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="participantAssociation"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="participantAssociations"
         upperBound="-1" eType="#//ParticipantAssociation" containment="true" resolveProxies="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
@@ -3737,7 +3737,7 @@
         <details key="namespace" value="##targetNamespace"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="outMessageRef" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//QName">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="outgoingMessage" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//QName">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
         <details key="name" value="outMessageRef"/>
@@ -4407,7 +4407,7 @@
         <details key="name" value="implementation"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operationRef" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//QName">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//QName">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="attribute"/>
         <details key="name" value="operationRef"/>
@@ -4425,7 +4425,7 @@
         <details key="name" value="name"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="structureRef" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//QName">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="structure" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//QName">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="attribute"/>
         <details key="name" value="structureRef"/>
@@ -4437,7 +4437,7 @@
       <details key="name" value="tSignalEventDefinition"/>
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="signalRef" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//QName">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="signal" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//QName">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="attribute"/>
         <details key="name" value="signalRef"/>
@@ -4537,7 +4537,7 @@
       <details key="name" value="tSubProcess"/>
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="flowElementGroup" unique="false"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="flowElementGroups" unique="false"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFeatureMapEntry">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="group"/>
@@ -4545,7 +4545,7 @@
         <details key="namespace" value="##targetNamespace"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="flowElement" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="flowElements" upperBound="-1"
         eType="#//FlowElement" volatile="true" transient="true" derived="true" containment="true"
         resolveProxies="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
@@ -4555,7 +4555,7 @@
         <details key="group" value="flowElement:group"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="artifactGroup" unique="false"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="artifactGroups" unique="false"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFeatureMapEntry">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="group"/>
@@ -4563,7 +4563,7 @@
         <details key="namespace" value="##targetNamespace"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="artifact" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="artifacts" upperBound="-1"
         eType="#//Artifact" volatile="true" transient="true" derived="true" containment="true"
         resolveProxies="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">

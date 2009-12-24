@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -20,7 +19,7 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.mdt.bpmn.bpmnPackage;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +34,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class ErrorImpl extends RootElementImpl implements org.eclipse.mdt.bpmn.Error {
+public class ErrorImpl extends RootElementImpl implements
+        org.eclipse.mdt.bpmn.Error {
     /**
      * The default value of the '{@link #getStructureRef() <em>Structure Ref</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -72,7 +72,7 @@ public class ErrorImpl extends RootElementImpl implements org.eclipse.mdt.bpmn.E
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getError();
+        return BpmnPackage.eINSTANCE.getError();
     }
 
     /**
@@ -93,7 +93,9 @@ public class ErrorImpl extends RootElementImpl implements org.eclipse.mdt.bpmn.E
         QName oldStructureRef = structureRef;
         structureRef = newStructureRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.ERROR__STRUCTURE_REF, oldStructureRef, structureRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.ERROR__STRUCTURE_REF, oldStructureRef,
+                    structureRef));
     }
 
     /**
@@ -104,8 +106,8 @@ public class ErrorImpl extends RootElementImpl implements org.eclipse.mdt.bpmn.E
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.ERROR__STRUCTURE_REF:
-                return getStructureRef();
+        case BpmnPackage.ERROR__STRUCTURE_REF:
+            return getStructureRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -118,9 +120,9 @@ public class ErrorImpl extends RootElementImpl implements org.eclipse.mdt.bpmn.E
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.ERROR__STRUCTURE_REF:
-                setStructureRef((QName)newValue);
-                return;
+        case BpmnPackage.ERROR__STRUCTURE_REF:
+            setStructureRef((QName) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -133,9 +135,9 @@ public class ErrorImpl extends RootElementImpl implements org.eclipse.mdt.bpmn.E
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.ERROR__STRUCTURE_REF:
-                setStructureRef(STRUCTURE_REF_EDEFAULT);
-                return;
+        case BpmnPackage.ERROR__STRUCTURE_REF:
+            setStructureRef(STRUCTURE_REF_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -148,8 +150,9 @@ public class ErrorImpl extends RootElementImpl implements org.eclipse.mdt.bpmn.E
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.ERROR__STRUCTURE_REF:
-                return STRUCTURE_REF_EDEFAULT == null ? structureRef != null : !STRUCTURE_REF_EDEFAULT.equals(structureRef);
+        case BpmnPackage.ERROR__STRUCTURE_REF:
+            return STRUCTURE_REF_EDEFAULT == null ? structureRef != null
+                    : !STRUCTURE_REF_EDEFAULT.equals(structureRef);
         }
         return super.eIsSet(featureID);
     }
@@ -161,7 +164,8 @@ public class ErrorImpl extends RootElementImpl implements org.eclipse.mdt.bpmn.E
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (structureRef: "); //$NON-NLS-1$

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -28,7 +27,7 @@ import javax.xml.namespace.QName;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getItemDefinition()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getItemDefinition()
  * @model extendedMetaData="name='tItemDefinition' kind='elementOnly'"
  * @generated
  */
@@ -46,7 +45,7 @@ public interface ItemDefinition extends RootElement {
      * @see #isSetIsCollection()
      * @see #unsetIsCollection()
      * @see #setIsCollection(boolean)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getItemDefinition_IsCollection()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getItemDefinition_IsCollection()
      * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
      *        extendedMetaData="kind='attribute' name='isCollection'"
      * @generated
@@ -103,7 +102,7 @@ public interface ItemDefinition extends RootElement {
      * @see #isSetItemKind()
      * @see #unsetItemKind()
      * @see #setItemKind(ItemKind)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getItemDefinition_ItemKind()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getItemDefinition_ItemKind()
      * @model default="Information" unsettable="true"
      *        extendedMetaData="kind='attribute' name='itemKind'"
      * @generated
@@ -156,7 +155,7 @@ public interface ItemDefinition extends RootElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Structure Ref</em>' attribute.
      * @see #setStructureRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getItemDefinition_StructureRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getItemDefinition_StructureRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='structureRef'"
      * @generated

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di.provider;
 
@@ -33,9 +32,9 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.di.DIFactory;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 import org.eclipse.mdt.bpmn.di.View;
-import org.eclipse.mdt.bpmn.di.diFactory;
-import org.eclipse.mdt.bpmn.di.diPackage;
 
 import org.eclipse.mdt.bpmn.provider.bpmnEditPlugin;
 
@@ -93,7 +92,7 @@ public class ViewItemProvider extends ItemProviderAdapter implements
                         getString("_UI_View_context_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_View_context_feature", "_UI_View_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        diPackage.Literals.VIEW__CONTEXT, true, false, false,
+                        DIPackage.Literals.VIEW__CONTEXT, true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
@@ -112,7 +111,7 @@ public class ViewItemProvider extends ItemProviderAdapter implements
                         getString("_UI_View_definition_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_View_definition_feature", "_UI_View_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        diPackage.Literals.VIEW__DEFINITION, true, false,
+                        DIPackage.Literals.VIEW__DEFINITION, true, false,
                         false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                         null, null));
     }
@@ -132,7 +131,7 @@ public class ViewItemProvider extends ItemProviderAdapter implements
                         getString("_UI_View_id_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_View_id_feature", "_UI_View_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        diPackage.Literals.VIEW__ID, true, false, false,
+                        DIPackage.Literals.VIEW__ID, true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
@@ -151,7 +150,7 @@ public class ViewItemProvider extends ItemProviderAdapter implements
                         getString("_UI_View_sourceConnector_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_View_sourceConnector_feature", "_UI_View_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        diPackage.Literals.VIEW__SOURCE_CONNECTOR, true, false,
+                        DIPackage.Literals.VIEW__SOURCE_CONNECTOR, true, false,
                         false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                         null, null));
     }
@@ -171,7 +170,7 @@ public class ViewItemProvider extends ItemProviderAdapter implements
                         getString("_UI_View_targetConnector_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_View_targetConnector_feature", "_UI_View_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        diPackage.Literals.VIEW__TARGET_CONNECTOR, true, false,
+                        DIPackage.Literals.VIEW__TARGET_CONNECTOR, true, false,
                         false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                         null, null));
     }
@@ -189,8 +188,8 @@ public class ViewItemProvider extends ItemProviderAdapter implements
             Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(diPackage.Literals.VIEW__STYLE);
-            childrenFeatures.add(diPackage.Literals.VIEW__CHILD);
+            childrenFeatures.add(DIPackage.Literals.VIEW__STYLE);
+            childrenFeatures.add(DIPackage.Literals.VIEW__CHILD);
         }
         return childrenFeatures;
     }
@@ -233,16 +232,16 @@ public class ViewItemProvider extends ItemProviderAdapter implements
         updateChildren(notification);
 
         switch (notification.getFeatureID(View.class)) {
-        case diPackage.VIEW__CONTEXT:
-        case diPackage.VIEW__DEFINITION:
-        case diPackage.VIEW__ID:
-        case diPackage.VIEW__SOURCE_CONNECTOR:
-        case diPackage.VIEW__TARGET_CONNECTOR:
+        case DIPackage.VIEW__CONTEXT:
+        case DIPackage.VIEW__DEFINITION:
+        case DIPackage.VIEW__ID:
+        case DIPackage.VIEW__SOURCE_CONNECTOR:
+        case DIPackage.VIEW__TARGET_CONNECTOR:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
-        case diPackage.VIEW__STYLE:
-        case diPackage.VIEW__CHILD:
+        case DIPackage.VIEW__STYLE:
+        case DIPackage.VIEW__CHILD:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -263,11 +262,11 @@ public class ViewItemProvider extends ItemProviderAdapter implements
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
         newChildDescriptors.add(createChildParameter(
-                diPackage.Literals.VIEW__STYLE, diFactory.eINSTANCE
+                DIPackage.Literals.VIEW__STYLE, DIFactory.eINSTANCE
                         .createStyle()));
 
         newChildDescriptors.add(createChildParameter(
-                diPackage.Literals.VIEW__CHILD, diFactory.eINSTANCE
+                DIPackage.Literals.VIEW__CHILD, DIFactory.eINSTANCE
                         .createNode()));
     }
 

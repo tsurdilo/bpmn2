@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -22,8 +21,8 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.ChoreographyTask;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,7 +37,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class ChoreographyTaskImpl extends ChoreographyActivityImpl implements ChoreographyTask {
+public class ChoreographyTaskImpl extends ChoreographyActivityImpl implements
+        ChoreographyTask {
     /**
      * The cached value of the '{@link #getMessageFlowRef() <em>Message Flow Ref</em>}' attribute list.
      * <!-- begin-user-doc -->
@@ -65,7 +65,7 @@ public class ChoreographyTaskImpl extends ChoreographyActivityImpl implements Ch
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getChoreographyTask();
+        return BpmnPackage.eINSTANCE.getChoreographyTask();
     }
 
     /**
@@ -75,7 +75,8 @@ public class ChoreographyTaskImpl extends ChoreographyActivityImpl implements Ch
      */
     public EList<QName> getMessageFlowRef() {
         if (messageFlowRef == null) {
-            messageFlowRef = new EDataTypeEList<QName>(QName.class, this, bpmnPackage.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF);
+            messageFlowRef = new EDataTypeEList<QName>(QName.class, this,
+                    BpmnPackage.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF);
         }
         return messageFlowRef;
     }
@@ -88,8 +89,8 @@ public class ChoreographyTaskImpl extends ChoreographyActivityImpl implements Ch
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF:
-                return getMessageFlowRef();
+        case BpmnPackage.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF:
+            return getMessageFlowRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -103,10 +104,10 @@ public class ChoreographyTaskImpl extends ChoreographyActivityImpl implements Ch
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF:
-                getMessageFlowRef().clear();
-                getMessageFlowRef().addAll((Collection<? extends QName>)newValue);
-                return;
+        case BpmnPackage.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF:
+            getMessageFlowRef().clear();
+            getMessageFlowRef().addAll((Collection<? extends QName>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -119,9 +120,9 @@ public class ChoreographyTaskImpl extends ChoreographyActivityImpl implements Ch
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF:
-                getMessageFlowRef().clear();
-                return;
+        case BpmnPackage.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF:
+            getMessageFlowRef().clear();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -134,8 +135,8 @@ public class ChoreographyTaskImpl extends ChoreographyActivityImpl implements Ch
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF:
-                return messageFlowRef != null && !messageFlowRef.isEmpty();
+        case BpmnPackage.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF:
+            return messageFlowRef != null && !messageFlowRef.isEmpty();
         }
         return super.eIsSet(featureID);
     }
@@ -147,7 +148,8 @@ public class ChoreographyTaskImpl extends ChoreographyActivityImpl implements Ch
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (messageFlowRef: "); //$NON-NLS-1$

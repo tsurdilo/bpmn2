@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -33,10 +32,10 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Communication;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.Communication} object.
@@ -89,7 +88,7 @@ public class CommunicationItemProvider extends ConversationNodeItemProvider
                         getString("_UI_Communication_messageFlowRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Communication_messageFlowRef_feature", "_UI_Communication_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getCommunication_MessageFlowRef(),
+                        BpmnPackage.eINSTANCE.getCommunication_MessageFlowRef(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -109,7 +108,7 @@ public class CommunicationItemProvider extends ConversationNodeItemProvider
                         getString("_UI_Communication_correlationKeyRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Communication_correlationKeyRef_feature", "_UI_Communication_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE
+                        BpmnPackage.eINSTANCE
                                 .getCommunication_CorrelationKeyRef(), true,
                         false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
@@ -152,8 +151,8 @@ public class CommunicationItemProvider extends ConversationNodeItemProvider
         updateChildren(notification);
 
         switch (notification.getFeatureID(Communication.class)) {
-        case bpmnPackage.COMMUNICATION__MESSAGE_FLOW_REF:
-        case bpmnPackage.COMMUNICATION__CORRELATION_KEY_REF:
+        case BpmnPackage.COMMUNICATION__MESSAGE_FLOW_REF:
+        case BpmnPackage.COMMUNICATION__CORRELATION_KEY_REF:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
@@ -194,10 +193,10 @@ public class CommunicationItemProvider extends ConversationNodeItemProvider
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE;
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE;
 
         if (qualify) {
             return getString("_UI_CreateChild_text2", //$NON-NLS-1$

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di;
 
@@ -27,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.di.diPackage#getStyle()
+ * @see org.eclipse.mdt.bpmn.di.DIPackage#getStyle()
  * @model extendedMetaData="name='Style' kind='empty'"
  * @generated
  */
@@ -42,7 +41,7 @@ public interface Style extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
-     * @see org.eclipse.mdt.bpmn.di.diPackage#getStyle_Name()
+     * @see org.eclipse.mdt.bpmn.di.DIPackage#getStyle_Name()
      * @model dataType="org.eclipse.emf.ecore.xml.type.NCName" required="true"
      *        extendedMetaData="kind='attribute' name='name'"
      * @generated
@@ -69,7 +68,7 @@ public interface Style extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Value</em>' attribute.
      * @see #setValue(String)
-     * @see org.eclipse.mdt.bpmn.di.diPackage#getStyle_Value()
+     * @see org.eclipse.mdt.bpmn.di.DIPackage#getStyle_Value()
      * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
      *        extendedMetaData="kind='attribute' name='value'"
      * @generated

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -19,17 +18,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.mdt.bpmn.bpmnPackage
+ * @see org.eclipse.mdt.bpmn.BpmnPackage
  * @generated
  */
-public interface bpmnFactory extends EFactory {
+public interface BpmnFactory extends EFactory {
     /**
      * The singleton instance of the factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    bpmnFactory eINSTANCE = org.eclipse.mdt.bpmn.impl.bpmnFactoryImpl.init();
+    BpmnFactory eINSTANCE = org.eclipse.mdt.bpmn.impl.BpmnFactoryImpl.init();
 
     /**
      * Returns a new object of class '<em>Document Root</em>'.
@@ -1109,6 +1108,6 @@ public interface bpmnFactory extends EFactory {
      * @return the package supported by this factory.
      * @generated
      */
-    bpmnPackage getbpmnPackage();
+    BpmnPackage getBpmnPackage();
 
-} //bpmnFactory
+} //BpmnFactory

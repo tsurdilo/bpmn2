@@ -8,14 +8,13 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.RootElement;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +25,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public abstract class RootElementImpl extends BaseElementImpl implements RootElement {
+public abstract class RootElementImpl extends BaseElementImpl implements
+        RootElement {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -43,7 +43,7 @@ public abstract class RootElementImpl extends BaseElementImpl implements RootEle
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getRootElement();
+        return BpmnPackage.eINSTANCE.getRootElement();
     }
 
 } //RootElementImpl

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -35,9 +34,9 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnFactory;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Extension;
-import org.eclipse.mdt.bpmn.bpmnFactory;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.Extension} object.
@@ -90,7 +89,7 @@ public class ExtensionItemProvider extends ItemProviderAdapter implements
                         getString("_UI_Extension_definition_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Extension_definition_feature", "_UI_Extension_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getExtension_Definition(), true,
+                        BpmnPackage.eINSTANCE.getExtension_Definition(), true,
                         false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -110,7 +109,7 @@ public class ExtensionItemProvider extends ItemProviderAdapter implements
                         getString("_UI_Extension_mustUnderstand_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Extension_mustUnderstand_feature", "_UI_Extension_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getExtension_MustUnderstand(),
+                        BpmnPackage.eINSTANCE.getExtension_MustUnderstand(),
                         true, false, false,
                         ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
@@ -128,7 +127,7 @@ public class ExtensionItemProvider extends ItemProviderAdapter implements
             Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getExtension_Documentation());
         }
         return childrenFeatures;
@@ -185,12 +184,12 @@ public class ExtensionItemProvider extends ItemProviderAdapter implements
         updateChildren(notification);
 
         switch (notification.getFeatureID(Extension.class)) {
-        case bpmnPackage.EXTENSION__DEFINITION:
-        case bpmnPackage.EXTENSION__MUST_UNDERSTAND:
+        case BpmnPackage.EXTENSION__DEFINITION:
+        case BpmnPackage.EXTENSION__MUST_UNDERSTAND:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
-        case bpmnPackage.EXTENSION__DOCUMENTATION:
+        case BpmnPackage.EXTENSION__DOCUMENTATION:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -210,8 +209,8 @@ public class ExtensionItemProvider extends ItemProviderAdapter implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getExtension_Documentation(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getExtension_Documentation(), BpmnFactory.eINSTANCE
                 .createDocumentation()));
     }
 

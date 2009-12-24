@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -26,8 +25,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.ConversationNode;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,7 +42,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public abstract class ConversationNodeImpl extends BaseElementImpl implements ConversationNode {
+public abstract class ConversationNodeImpl extends BaseElementImpl implements
+        ConversationNode {
     /**
      * The cached value of the '{@link #getParticipantRef() <em>Participant Ref</em>}' attribute list.
      * <!-- begin-user-doc -->
@@ -90,7 +90,7 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements Co
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getConversationNode();
+        return BpmnPackage.eINSTANCE.getConversationNode();
     }
 
     /**
@@ -100,7 +100,8 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements Co
      */
     public EList<QName> getParticipantRef() {
         if (participantRef == null) {
-            participantRef = new EDataTypeEList<QName>(QName.class, this, bpmnPackage.CONVERSATION_NODE__PARTICIPANT_REF);
+            participantRef = new EDataTypeEList<QName>(QName.class, this,
+                    BpmnPackage.CONVERSATION_NODE__PARTICIPANT_REF);
         }
         return participantRef;
     }
@@ -123,7 +124,8 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements Co
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.CONVERSATION_NODE__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.CONVERSATION_NODE__NAME, oldName, name));
     }
 
     /**
@@ -134,10 +136,10 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements Co
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.CONVERSATION_NODE__PARTICIPANT_REF:
-                return getParticipantRef();
-            case bpmnPackage.CONVERSATION_NODE__NAME:
-                return getName();
+        case BpmnPackage.CONVERSATION_NODE__PARTICIPANT_REF:
+            return getParticipantRef();
+        case BpmnPackage.CONVERSATION_NODE__NAME:
+            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -151,13 +153,13 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements Co
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.CONVERSATION_NODE__PARTICIPANT_REF:
-                getParticipantRef().clear();
-                getParticipantRef().addAll((Collection<? extends QName>)newValue);
-                return;
-            case bpmnPackage.CONVERSATION_NODE__NAME:
-                setName((String)newValue);
-                return;
+        case BpmnPackage.CONVERSATION_NODE__PARTICIPANT_REF:
+            getParticipantRef().clear();
+            getParticipantRef().addAll((Collection<? extends QName>) newValue);
+            return;
+        case BpmnPackage.CONVERSATION_NODE__NAME:
+            setName((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -170,12 +172,12 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements Co
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CONVERSATION_NODE__PARTICIPANT_REF:
-                getParticipantRef().clear();
-                return;
-            case bpmnPackage.CONVERSATION_NODE__NAME:
-                setName(NAME_EDEFAULT);
-                return;
+        case BpmnPackage.CONVERSATION_NODE__PARTICIPANT_REF:
+            getParticipantRef().clear();
+            return;
+        case BpmnPackage.CONVERSATION_NODE__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -188,10 +190,11 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements Co
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CONVERSATION_NODE__PARTICIPANT_REF:
-                return participantRef != null && !participantRef.isEmpty();
-            case bpmnPackage.CONVERSATION_NODE__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case BpmnPackage.CONVERSATION_NODE__PARTICIPANT_REF:
+            return participantRef != null && !participantRef.isEmpty();
+        case BpmnPackage.CONVERSATION_NODE__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
+                    .equals(name);
         }
         return super.eIsSet(featureID);
     }
@@ -203,7 +206,8 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements Co
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (participantRef: "); //$NON-NLS-1$

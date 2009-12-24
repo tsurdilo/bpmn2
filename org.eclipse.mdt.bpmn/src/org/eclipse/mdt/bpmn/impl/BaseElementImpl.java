@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -31,8 +30,8 @@ import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.mdt.bpmn.BaseElement;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Documentation;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -50,7 +49,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public abstract class BaseElementImpl extends EObjectImpl implements BaseElement {
+public abstract class BaseElementImpl extends EObjectImpl implements
+        BaseElement {
     /**
      * The cached value of the '{@link #getDocumentation() <em>Documentation</em>}' containment reference list.
      * <!-- begin-user-doc -->
@@ -117,7 +117,7 @@ public abstract class BaseElementImpl extends EObjectImpl implements BaseElement
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getBaseElement();
+        return BpmnPackage.eINSTANCE.getBaseElement();
     }
 
     /**
@@ -127,7 +127,9 @@ public abstract class BaseElementImpl extends EObjectImpl implements BaseElement
      */
     public EList<Documentation> getDocumentation() {
         if (documentation == null) {
-            documentation = new EObjectContainmentEList<Documentation>(Documentation.class, this, bpmnPackage.BASE_ELEMENT__DOCUMENTATION);
+            documentation = new EObjectContainmentEList<Documentation>(
+                    Documentation.class, this,
+                    BpmnPackage.BASE_ELEMENT__DOCUMENTATION);
         }
         return documentation;
     }
@@ -139,7 +141,7 @@ public abstract class BaseElementImpl extends EObjectImpl implements BaseElement
      */
     public FeatureMap getAny() {
         if (any == null) {
-            any = new BasicFeatureMap(this, bpmnPackage.BASE_ELEMENT__ANY);
+            any = new BasicFeatureMap(this, BpmnPackage.BASE_ELEMENT__ANY);
         }
         return any;
     }
@@ -162,7 +164,8 @@ public abstract class BaseElementImpl extends EObjectImpl implements BaseElement
         String oldId = id;
         id = newId;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.BASE_ELEMENT__ID, oldId, id));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.BASE_ELEMENT__ID, oldId, id));
     }
 
     /**
@@ -172,7 +175,8 @@ public abstract class BaseElementImpl extends EObjectImpl implements BaseElement
      */
     public FeatureMap getAnyAttribute() {
         if (anyAttribute == null) {
-            anyAttribute = new BasicFeatureMap(this, bpmnPackage.BASE_ELEMENT__ANY_ATTRIBUTE);
+            anyAttribute = new BasicFeatureMap(this,
+                    BpmnPackage.BASE_ELEMENT__ANY_ATTRIBUTE);
         }
         return anyAttribute;
     }
@@ -183,14 +187,17 @@ public abstract class BaseElementImpl extends EObjectImpl implements BaseElement
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.BASE_ELEMENT__DOCUMENTATION:
-                return ((InternalEList<?>)getDocumentation()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.BASE_ELEMENT__ANY:
-                return ((InternalEList<?>)getAny()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.BASE_ELEMENT__ANY_ATTRIBUTE:
-                return ((InternalEList<?>)getAnyAttribute()).basicRemove(otherEnd, msgs);
+        case BpmnPackage.BASE_ELEMENT__DOCUMENTATION:
+            return ((InternalEList<?>) getDocumentation()).basicRemove(
+                    otherEnd, msgs);
+        case BpmnPackage.BASE_ELEMENT__ANY:
+            return ((InternalEList<?>) getAny()).basicRemove(otherEnd, msgs);
+        case BpmnPackage.BASE_ELEMENT__ANY_ATTRIBUTE:
+            return ((InternalEList<?>) getAnyAttribute()).basicRemove(otherEnd,
+                    msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -203,16 +210,18 @@ public abstract class BaseElementImpl extends EObjectImpl implements BaseElement
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.BASE_ELEMENT__DOCUMENTATION:
-                return getDocumentation();
-            case bpmnPackage.BASE_ELEMENT__ANY:
-                if (coreType) return getAny();
-                return ((FeatureMap.Internal)getAny()).getWrapper();
-            case bpmnPackage.BASE_ELEMENT__ID:
-                return getId();
-            case bpmnPackage.BASE_ELEMENT__ANY_ATTRIBUTE:
-                if (coreType) return getAnyAttribute();
-                return ((FeatureMap.Internal)getAnyAttribute()).getWrapper();
+        case BpmnPackage.BASE_ELEMENT__DOCUMENTATION:
+            return getDocumentation();
+        case BpmnPackage.BASE_ELEMENT__ANY:
+            if (coreType)
+                return getAny();
+            return ((FeatureMap.Internal) getAny()).getWrapper();
+        case BpmnPackage.BASE_ELEMENT__ID:
+            return getId();
+        case BpmnPackage.BASE_ELEMENT__ANY_ATTRIBUTE:
+            if (coreType)
+                return getAnyAttribute();
+            return ((FeatureMap.Internal) getAnyAttribute()).getWrapper();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -226,19 +235,20 @@ public abstract class BaseElementImpl extends EObjectImpl implements BaseElement
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.BASE_ELEMENT__DOCUMENTATION:
-                getDocumentation().clear();
-                getDocumentation().addAll((Collection<? extends Documentation>)newValue);
-                return;
-            case bpmnPackage.BASE_ELEMENT__ANY:
-                ((FeatureMap.Internal)getAny()).set(newValue);
-                return;
-            case bpmnPackage.BASE_ELEMENT__ID:
-                setId((String)newValue);
-                return;
-            case bpmnPackage.BASE_ELEMENT__ANY_ATTRIBUTE:
-                ((FeatureMap.Internal)getAnyAttribute()).set(newValue);
-                return;
+        case BpmnPackage.BASE_ELEMENT__DOCUMENTATION:
+            getDocumentation().clear();
+            getDocumentation().addAll(
+                    (Collection<? extends Documentation>) newValue);
+            return;
+        case BpmnPackage.BASE_ELEMENT__ANY:
+            ((FeatureMap.Internal) getAny()).set(newValue);
+            return;
+        case BpmnPackage.BASE_ELEMENT__ID:
+            setId((String) newValue);
+            return;
+        case BpmnPackage.BASE_ELEMENT__ANY_ATTRIBUTE:
+            ((FeatureMap.Internal) getAnyAttribute()).set(newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -251,18 +261,18 @@ public abstract class BaseElementImpl extends EObjectImpl implements BaseElement
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.BASE_ELEMENT__DOCUMENTATION:
-                getDocumentation().clear();
-                return;
-            case bpmnPackage.BASE_ELEMENT__ANY:
-                getAny().clear();
-                return;
-            case bpmnPackage.BASE_ELEMENT__ID:
-                setId(ID_EDEFAULT);
-                return;
-            case bpmnPackage.BASE_ELEMENT__ANY_ATTRIBUTE:
-                getAnyAttribute().clear();
-                return;
+        case BpmnPackage.BASE_ELEMENT__DOCUMENTATION:
+            getDocumentation().clear();
+            return;
+        case BpmnPackage.BASE_ELEMENT__ANY:
+            getAny().clear();
+            return;
+        case BpmnPackage.BASE_ELEMENT__ID:
+            setId(ID_EDEFAULT);
+            return;
+        case BpmnPackage.BASE_ELEMENT__ANY_ATTRIBUTE:
+            getAnyAttribute().clear();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -275,14 +285,14 @@ public abstract class BaseElementImpl extends EObjectImpl implements BaseElement
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.BASE_ELEMENT__DOCUMENTATION:
-                return documentation != null && !documentation.isEmpty();
-            case bpmnPackage.BASE_ELEMENT__ANY:
-                return any != null && !any.isEmpty();
-            case bpmnPackage.BASE_ELEMENT__ID:
-                return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-            case bpmnPackage.BASE_ELEMENT__ANY_ATTRIBUTE:
-                return anyAttribute != null && !anyAttribute.isEmpty();
+        case BpmnPackage.BASE_ELEMENT__DOCUMENTATION:
+            return documentation != null && !documentation.isEmpty();
+        case BpmnPackage.BASE_ELEMENT__ANY:
+            return any != null && !any.isEmpty();
+        case BpmnPackage.BASE_ELEMENT__ID:
+            return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+        case BpmnPackage.BASE_ELEMENT__ANY_ATTRIBUTE:
+            return anyAttribute != null && !anyAttribute.isEmpty();
         }
         return super.eIsSet(featureID);
     }
@@ -294,7 +304,8 @@ public abstract class BaseElementImpl extends EObjectImpl implements BaseElement
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (any: "); //$NON-NLS-1$

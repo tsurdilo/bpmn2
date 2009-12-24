@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -28,7 +27,7 @@ import javax.xml.namespace.QName;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getDataStoreReference()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getDataStoreReference()
  * @model extendedMetaData="name='tDataStoreReference' kind='elementOnly'"
  * @generated
  */
@@ -43,7 +42,7 @@ public interface DataStoreReference extends FlowElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data State</em>' containment reference.
      * @see #setDataState(DataState)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDataStoreReference_DataState()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDataStoreReference_DataState()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='dataState' namespace='##targetNamespace'"
      * @generated
@@ -70,7 +69,7 @@ public interface DataStoreReference extends FlowElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data Store Ref</em>' attribute.
      * @see #setDataStoreRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDataStoreReference_DataStoreRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDataStoreReference_DataStoreRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='dataStoreRef'"
      * @generated
@@ -97,7 +96,7 @@ public interface DataStoreReference extends FlowElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Item Subject Ref</em>' attribute.
      * @see #setItemSubjectRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDataStoreReference_ItemSubjectRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDataStoreReference_ItemSubjectRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='itemSubjectRef'"
      * @generated

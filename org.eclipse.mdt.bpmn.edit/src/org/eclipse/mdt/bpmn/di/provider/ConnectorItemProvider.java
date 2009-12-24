@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di.provider;
 
@@ -31,8 +30,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.mdt.bpmn.di.Connector;
-import org.eclipse.mdt.bpmn.di.diFactory;
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIFactory;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.di.Connector} object.
@@ -85,7 +84,7 @@ public class ConnectorItemProvider extends ViewItemProvider implements
                         getString("_UI_Connector_source_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Connector_source_feature", "_UI_Connector_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        diPackage.Literals.CONNECTOR__SOURCE, true, false,
+                        DIPackage.Literals.CONNECTOR__SOURCE, true, false,
                         false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                         null, null));
     }
@@ -105,7 +104,7 @@ public class ConnectorItemProvider extends ViewItemProvider implements
                         getString("_UI_Connector_target_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Connector_target_feature", "_UI_Connector_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        diPackage.Literals.CONNECTOR__TARGET, true, false,
+                        DIPackage.Literals.CONNECTOR__TARGET, true, false,
                         false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                         null, null));
     }
@@ -123,7 +122,7 @@ public class ConnectorItemProvider extends ViewItemProvider implements
             Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(diPackage.Literals.CONNECTOR__BENDPOINT);
+            childrenFeatures.add(DIPackage.Literals.CONNECTOR__BENDPOINT);
         }
         return childrenFeatures;
     }
@@ -178,12 +177,12 @@ public class ConnectorItemProvider extends ViewItemProvider implements
         updateChildren(notification);
 
         switch (notification.getFeatureID(Connector.class)) {
-        case diPackage.CONNECTOR__SOURCE:
-        case diPackage.CONNECTOR__TARGET:
+        case DIPackage.CONNECTOR__SOURCE:
+        case DIPackage.CONNECTOR__TARGET:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
-        case diPackage.CONNECTOR__BENDPOINT:
+        case DIPackage.CONNECTOR__BENDPOINT:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -204,7 +203,7 @@ public class ConnectorItemProvider extends ViewItemProvider implements
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
         newChildDescriptors.add(createChildParameter(
-                diPackage.Literals.CONNECTOR__BENDPOINT, diFactory.eINSTANCE
+                DIPackage.Literals.CONNECTOR__BENDPOINT, DIFactory.eINSTANCE
                         .createBendpoint()));
     }
 

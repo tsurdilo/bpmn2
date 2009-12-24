@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -28,9 +27,9 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.mdt.bpmn.Assignment;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.DataAssociation;
 import org.eclipse.mdt.bpmn.FormalExpression;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -46,7 +45,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public abstract class DataAssociationImpl extends BaseElementImpl implements DataAssociation {
+public abstract class DataAssociationImpl extends BaseElementImpl implements
+        DataAssociation {
     /**
      * The cached value of the '{@link #getTransformation() <em>Transformation</em>}' containment reference.
      * <!-- begin-user-doc -->
@@ -83,7 +83,7 @@ public abstract class DataAssociationImpl extends BaseElementImpl implements Dat
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getDataAssociation();
+        return BpmnPackage.eINSTANCE.getDataAssociation();
     }
 
     /**
@@ -100,12 +100,19 @@ public abstract class DataAssociationImpl extends BaseElementImpl implements Dat
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetTransformation(FormalExpression newTransformation, NotificationChain msgs) {
+    public NotificationChain basicSetTransformation(
+            FormalExpression newTransformation, NotificationChain msgs) {
         FormalExpression oldTransformation = transformation;
         transformation = newTransformation;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, bpmnPackage.DATA_ASSOCIATION__TRANSFORMATION, oldTransformation, newTransformation);
-            if (msgs == null) msgs = notification; else msgs.add(notification);
+            ENotificationImpl notification = new ENotificationImpl(this,
+                    Notification.SET,
+                    BpmnPackage.DATA_ASSOCIATION__TRANSFORMATION,
+                    oldTransformation, newTransformation);
+            if (msgs == null)
+                msgs = notification;
+            else
+                msgs.add(notification);
         }
         return msgs;
     }
@@ -119,14 +126,22 @@ public abstract class DataAssociationImpl extends BaseElementImpl implements Dat
         if (newTransformation != transformation) {
             NotificationChain msgs = null;
             if (transformation != null)
-                msgs = ((InternalEObject)transformation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - bpmnPackage.DATA_ASSOCIATION__TRANSFORMATION, null, msgs);
+                msgs = ((InternalEObject) transformation).eInverseRemove(this,
+                        EOPPOSITE_FEATURE_BASE
+                                - BpmnPackage.DATA_ASSOCIATION__TRANSFORMATION,
+                        null, msgs);
             if (newTransformation != null)
-                msgs = ((InternalEObject)newTransformation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - bpmnPackage.DATA_ASSOCIATION__TRANSFORMATION, null, msgs);
+                msgs = ((InternalEObject) newTransformation).eInverseAdd(this,
+                        EOPPOSITE_FEATURE_BASE
+                                - BpmnPackage.DATA_ASSOCIATION__TRANSFORMATION,
+                        null, msgs);
             msgs = basicSetTransformation(newTransformation, msgs);
-            if (msgs != null) msgs.dispatch();
-        }
-        else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.DATA_ASSOCIATION__TRANSFORMATION, newTransformation, newTransformation));
+            if (msgs != null)
+                msgs.dispatch();
+        } else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.DATA_ASSOCIATION__TRANSFORMATION,
+                    newTransformation, newTransformation));
     }
 
     /**
@@ -136,7 +151,9 @@ public abstract class DataAssociationImpl extends BaseElementImpl implements Dat
      */
     public EList<Assignment> getAssignment() {
         if (assignment == null) {
-            assignment = new EObjectContainmentEList<Assignment>(Assignment.class, this, bpmnPackage.DATA_ASSOCIATION__ASSIGNMENT);
+            assignment = new EObjectContainmentEList<Assignment>(
+                    Assignment.class, this,
+                    BpmnPackage.DATA_ASSOCIATION__ASSIGNMENT);
         }
         return assignment;
     }
@@ -147,12 +164,14 @@ public abstract class DataAssociationImpl extends BaseElementImpl implements Dat
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.DATA_ASSOCIATION__TRANSFORMATION:
-                return basicSetTransformation(null, msgs);
-            case bpmnPackage.DATA_ASSOCIATION__ASSIGNMENT:
-                return ((InternalEList<?>)getAssignment()).basicRemove(otherEnd, msgs);
+        case BpmnPackage.DATA_ASSOCIATION__TRANSFORMATION:
+            return basicSetTransformation(null, msgs);
+        case BpmnPackage.DATA_ASSOCIATION__ASSIGNMENT:
+            return ((InternalEList<?>) getAssignment()).basicRemove(otherEnd,
+                    msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -165,10 +184,10 @@ public abstract class DataAssociationImpl extends BaseElementImpl implements Dat
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.DATA_ASSOCIATION__TRANSFORMATION:
-                return getTransformation();
-            case bpmnPackage.DATA_ASSOCIATION__ASSIGNMENT:
-                return getAssignment();
+        case BpmnPackage.DATA_ASSOCIATION__TRANSFORMATION:
+            return getTransformation();
+        case BpmnPackage.DATA_ASSOCIATION__ASSIGNMENT:
+            return getAssignment();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -182,13 +201,13 @@ public abstract class DataAssociationImpl extends BaseElementImpl implements Dat
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.DATA_ASSOCIATION__TRANSFORMATION:
-                setTransformation((FormalExpression)newValue);
-                return;
-            case bpmnPackage.DATA_ASSOCIATION__ASSIGNMENT:
-                getAssignment().clear();
-                getAssignment().addAll((Collection<? extends Assignment>)newValue);
-                return;
+        case BpmnPackage.DATA_ASSOCIATION__TRANSFORMATION:
+            setTransformation((FormalExpression) newValue);
+            return;
+        case BpmnPackage.DATA_ASSOCIATION__ASSIGNMENT:
+            getAssignment().clear();
+            getAssignment().addAll((Collection<? extends Assignment>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -201,12 +220,12 @@ public abstract class DataAssociationImpl extends BaseElementImpl implements Dat
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.DATA_ASSOCIATION__TRANSFORMATION:
-                setTransformation((FormalExpression)null);
-                return;
-            case bpmnPackage.DATA_ASSOCIATION__ASSIGNMENT:
-                getAssignment().clear();
-                return;
+        case BpmnPackage.DATA_ASSOCIATION__TRANSFORMATION:
+            setTransformation((FormalExpression) null);
+            return;
+        case BpmnPackage.DATA_ASSOCIATION__ASSIGNMENT:
+            getAssignment().clear();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -219,10 +238,10 @@ public abstract class DataAssociationImpl extends BaseElementImpl implements Dat
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.DATA_ASSOCIATION__TRANSFORMATION:
-                return transformation != null;
-            case bpmnPackage.DATA_ASSOCIATION__ASSIGNMENT:
-                return assignment != null && !assignment.isEmpty();
+        case BpmnPackage.DATA_ASSOCIATION__TRANSFORMATION:
+            return transformation != null;
+        case BpmnPackage.DATA_ASSOCIATION__ASSIGNMENT:
+            return assignment != null && !assignment.isEmpty();
         }
         return super.eIsSet(featureID);
     }

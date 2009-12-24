@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di.impl;
 
@@ -31,10 +30,10 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.mdt.bpmn.di.DIPackage;
 import org.eclipse.mdt.bpmn.di.Node;
 import org.eclipse.mdt.bpmn.di.Style;
 import org.eclipse.mdt.bpmn.di.View;
-import org.eclipse.mdt.bpmn.di.diPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -192,7 +191,7 @@ public abstract class ViewImpl extends EObjectImpl implements View {
      */
     @Override
     protected EClass eStaticClass() {
-        return diPackage.Literals.VIEW;
+        return DIPackage.Literals.VIEW;
     }
 
     /**
@@ -202,7 +201,8 @@ public abstract class ViewImpl extends EObjectImpl implements View {
      */
     public EList<Style> getStyle() {
         if (style == null) {
-            style = new EObjectContainmentEList<Style>(Style.class, this, diPackage.VIEW__STYLE);
+            style = new EObjectContainmentEList<Style>(Style.class, this,
+                    DIPackage.VIEW__STYLE);
         }
         return style;
     }
@@ -214,7 +214,8 @@ public abstract class ViewImpl extends EObjectImpl implements View {
      */
     public EList<Node> getChild() {
         if (child == null) {
-            child = new EObjectContainmentEList<Node>(Node.class, this, diPackage.VIEW__CHILD);
+            child = new EObjectContainmentEList<Node>(Node.class, this,
+                    DIPackage.VIEW__CHILD);
         }
         return child;
     }
@@ -237,7 +238,8 @@ public abstract class ViewImpl extends EObjectImpl implements View {
         String oldContext = context;
         context = newContext;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, diPackage.VIEW__CONTEXT, oldContext, context));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    DIPackage.VIEW__CONTEXT, oldContext, context));
     }
 
     /**
@@ -258,7 +260,8 @@ public abstract class ViewImpl extends EObjectImpl implements View {
         List<QName> oldDefinition = definition;
         definition = newDefinition;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, diPackage.VIEW__DEFINITION, oldDefinition, definition));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    DIPackage.VIEW__DEFINITION, oldDefinition, definition));
     }
 
     /**
@@ -279,7 +282,8 @@ public abstract class ViewImpl extends EObjectImpl implements View {
         String oldId = id;
         id = newId;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, diPackage.VIEW__ID, oldId, id));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    DIPackage.VIEW__ID, oldId, id));
     }
 
     /**
@@ -300,7 +304,9 @@ public abstract class ViewImpl extends EObjectImpl implements View {
         List<String> oldSourceConnector = sourceConnector;
         sourceConnector = newSourceConnector;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, diPackage.VIEW__SOURCE_CONNECTOR, oldSourceConnector, sourceConnector));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    DIPackage.VIEW__SOURCE_CONNECTOR, oldSourceConnector,
+                    sourceConnector));
     }
 
     /**
@@ -321,7 +327,9 @@ public abstract class ViewImpl extends EObjectImpl implements View {
         List<String> oldTargetConnector = targetConnector;
         targetConnector = newTargetConnector;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, diPackage.VIEW__TARGET_CONNECTOR, oldTargetConnector, targetConnector));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    DIPackage.VIEW__TARGET_CONNECTOR, oldTargetConnector,
+                    targetConnector));
     }
 
     /**
@@ -330,12 +338,13 @@ public abstract class ViewImpl extends EObjectImpl implements View {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case diPackage.VIEW__STYLE:
-                return ((InternalEList<?>)getStyle()).basicRemove(otherEnd, msgs);
-            case diPackage.VIEW__CHILD:
-                return ((InternalEList<?>)getChild()).basicRemove(otherEnd, msgs);
+        case DIPackage.VIEW__STYLE:
+            return ((InternalEList<?>) getStyle()).basicRemove(otherEnd, msgs);
+        case DIPackage.VIEW__CHILD:
+            return ((InternalEList<?>) getChild()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -348,20 +357,20 @@ public abstract class ViewImpl extends EObjectImpl implements View {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case diPackage.VIEW__STYLE:
-                return getStyle();
-            case diPackage.VIEW__CHILD:
-                return getChild();
-            case diPackage.VIEW__CONTEXT:
-                return getContext();
-            case diPackage.VIEW__DEFINITION:
-                return getDefinition();
-            case diPackage.VIEW__ID:
-                return getId();
-            case diPackage.VIEW__SOURCE_CONNECTOR:
-                return getSourceConnector();
-            case diPackage.VIEW__TARGET_CONNECTOR:
-                return getTargetConnector();
+        case DIPackage.VIEW__STYLE:
+            return getStyle();
+        case DIPackage.VIEW__CHILD:
+            return getChild();
+        case DIPackage.VIEW__CONTEXT:
+            return getContext();
+        case DIPackage.VIEW__DEFINITION:
+            return getDefinition();
+        case DIPackage.VIEW__ID:
+            return getId();
+        case DIPackage.VIEW__SOURCE_CONNECTOR:
+            return getSourceConnector();
+        case DIPackage.VIEW__TARGET_CONNECTOR:
+            return getTargetConnector();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -375,29 +384,29 @@ public abstract class ViewImpl extends EObjectImpl implements View {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case diPackage.VIEW__STYLE:
-                getStyle().clear();
-                getStyle().addAll((Collection<? extends Style>)newValue);
-                return;
-            case diPackage.VIEW__CHILD:
-                getChild().clear();
-                getChild().addAll((Collection<? extends Node>)newValue);
-                return;
-            case diPackage.VIEW__CONTEXT:
-                setContext((String)newValue);
-                return;
-            case diPackage.VIEW__DEFINITION:
-                setDefinition((List<QName>)newValue);
-                return;
-            case diPackage.VIEW__ID:
-                setId((String)newValue);
-                return;
-            case diPackage.VIEW__SOURCE_CONNECTOR:
-                setSourceConnector((List<String>)newValue);
-                return;
-            case diPackage.VIEW__TARGET_CONNECTOR:
-                setTargetConnector((List<String>)newValue);
-                return;
+        case DIPackage.VIEW__STYLE:
+            getStyle().clear();
+            getStyle().addAll((Collection<? extends Style>) newValue);
+            return;
+        case DIPackage.VIEW__CHILD:
+            getChild().clear();
+            getChild().addAll((Collection<? extends Node>) newValue);
+            return;
+        case DIPackage.VIEW__CONTEXT:
+            setContext((String) newValue);
+            return;
+        case DIPackage.VIEW__DEFINITION:
+            setDefinition((List<QName>) newValue);
+            return;
+        case DIPackage.VIEW__ID:
+            setId((String) newValue);
+            return;
+        case DIPackage.VIEW__SOURCE_CONNECTOR:
+            setSourceConnector((List<String>) newValue);
+            return;
+        case DIPackage.VIEW__TARGET_CONNECTOR:
+            setTargetConnector((List<String>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -410,27 +419,27 @@ public abstract class ViewImpl extends EObjectImpl implements View {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case diPackage.VIEW__STYLE:
-                getStyle().clear();
-                return;
-            case diPackage.VIEW__CHILD:
-                getChild().clear();
-                return;
-            case diPackage.VIEW__CONTEXT:
-                setContext(CONTEXT_EDEFAULT);
-                return;
-            case diPackage.VIEW__DEFINITION:
-                setDefinition(DEFINITION_EDEFAULT);
-                return;
-            case diPackage.VIEW__ID:
-                setId(ID_EDEFAULT);
-                return;
-            case diPackage.VIEW__SOURCE_CONNECTOR:
-                setSourceConnector(SOURCE_CONNECTOR_EDEFAULT);
-                return;
-            case diPackage.VIEW__TARGET_CONNECTOR:
-                setTargetConnector(TARGET_CONNECTOR_EDEFAULT);
-                return;
+        case DIPackage.VIEW__STYLE:
+            getStyle().clear();
+            return;
+        case DIPackage.VIEW__CHILD:
+            getChild().clear();
+            return;
+        case DIPackage.VIEW__CONTEXT:
+            setContext(CONTEXT_EDEFAULT);
+            return;
+        case DIPackage.VIEW__DEFINITION:
+            setDefinition(DEFINITION_EDEFAULT);
+            return;
+        case DIPackage.VIEW__ID:
+            setId(ID_EDEFAULT);
+            return;
+        case DIPackage.VIEW__SOURCE_CONNECTOR:
+            setSourceConnector(SOURCE_CONNECTOR_EDEFAULT);
+            return;
+        case DIPackage.VIEW__TARGET_CONNECTOR:
+            setTargetConnector(TARGET_CONNECTOR_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -443,20 +452,24 @@ public abstract class ViewImpl extends EObjectImpl implements View {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case diPackage.VIEW__STYLE:
-                return style != null && !style.isEmpty();
-            case diPackage.VIEW__CHILD:
-                return child != null && !child.isEmpty();
-            case diPackage.VIEW__CONTEXT:
-                return CONTEXT_EDEFAULT == null ? context != null : !CONTEXT_EDEFAULT.equals(context);
-            case diPackage.VIEW__DEFINITION:
-                return DEFINITION_EDEFAULT == null ? definition != null : !DEFINITION_EDEFAULT.equals(definition);
-            case diPackage.VIEW__ID:
-                return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-            case diPackage.VIEW__SOURCE_CONNECTOR:
-                return SOURCE_CONNECTOR_EDEFAULT == null ? sourceConnector != null : !SOURCE_CONNECTOR_EDEFAULT.equals(sourceConnector);
-            case diPackage.VIEW__TARGET_CONNECTOR:
-                return TARGET_CONNECTOR_EDEFAULT == null ? targetConnector != null : !TARGET_CONNECTOR_EDEFAULT.equals(targetConnector);
+        case DIPackage.VIEW__STYLE:
+            return style != null && !style.isEmpty();
+        case DIPackage.VIEW__CHILD:
+            return child != null && !child.isEmpty();
+        case DIPackage.VIEW__CONTEXT:
+            return CONTEXT_EDEFAULT == null ? context != null
+                    : !CONTEXT_EDEFAULT.equals(context);
+        case DIPackage.VIEW__DEFINITION:
+            return DEFINITION_EDEFAULT == null ? definition != null
+                    : !DEFINITION_EDEFAULT.equals(definition);
+        case DIPackage.VIEW__ID:
+            return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+        case DIPackage.VIEW__SOURCE_CONNECTOR:
+            return SOURCE_CONNECTOR_EDEFAULT == null ? sourceConnector != null
+                    : !SOURCE_CONNECTOR_EDEFAULT.equals(sourceConnector);
+        case DIPackage.VIEW__TARGET_CONNECTOR:
+            return TARGET_CONNECTOR_EDEFAULT == null ? targetConnector != null
+                    : !TARGET_CONNECTOR_EDEFAULT.equals(targetConnector);
         }
         return super.eIsSet(featureID);
     }
@@ -468,7 +481,8 @@ public abstract class ViewImpl extends EObjectImpl implements View {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (context: "); //$NON-NLS-1$

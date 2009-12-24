@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -165,7 +164,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot()
  * @model extendedMetaData="name='' kind='mixed'"
  * @generated
  */
@@ -180,7 +179,7 @@ public interface DocumentRoot extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Mixed</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Mixed()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Mixed()
      * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
      *        extendedMetaData="kind='elementWildcard' name=':mixed'"
      * @generated
@@ -198,7 +197,7 @@ public interface DocumentRoot extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>XMLNS Prefix Map</em>' map.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_XMLNSPrefixMap()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_XMLNSPrefixMap()
      * @model mapType="org.eclipse.emf.ecore.EStringToStringMapEntry<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString>" transient="true"
      *        extendedMetaData="kind='attribute' name='xmlns:prefix'"
      * @generated
@@ -216,7 +215,7 @@ public interface DocumentRoot extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>XSI Schema Location</em>' map.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_XSISchemaLocation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_XSISchemaLocation()
      * @model mapType="org.eclipse.emf.ecore.EStringToStringMapEntry<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString>" transient="true"
      *        extendedMetaData="kind='attribute' name='xsi:schemaLocation'"
      * @generated
@@ -233,7 +232,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Activity</em>' containment reference.
      * @see #setActivity(Activity)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Activity()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Activity()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='activity' namespace='##targetNamespace'"
      * @generated
@@ -260,7 +259,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Activity Resource</em>' containment reference.
      * @see #setActivityResource(ActivityResource)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_ActivityResource()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_ActivityResource()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='activityResource' namespace='##targetNamespace'"
      * @generated
@@ -287,7 +286,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Ad Hoc Sub Process</em>' containment reference.
      * @see #setAdHocSubProcess(AdHocSubProcess)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_AdHocSubProcess()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_AdHocSubProcess()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='adHocSubProcess' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -314,7 +313,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Flow Element</em>' containment reference.
      * @see #setFlowElement(FlowElement)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_FlowElement()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_FlowElement()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='flowElement' namespace='##targetNamespace'"
      * @generated
@@ -341,7 +340,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Artifact</em>' containment reference.
      * @see #setArtifact(Artifact)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Artifact()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Artifact()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='artifact' namespace='##targetNamespace'"
      * @generated
@@ -368,7 +367,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Assignment</em>' containment reference.
      * @see #setAssignment(Assignment)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Assignment()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Assignment()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='assignment' namespace='##targetNamespace'"
      * @generated
@@ -395,7 +394,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Association</em>' containment reference.
      * @see #setAssociation(Association)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Association()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Association()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='association' namespace='##targetNamespace' affiliation='artifact'"
      * @generated
@@ -422,7 +421,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Auditing</em>' containment reference.
      * @see #setAuditing(Auditing)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Auditing()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Auditing()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='auditing' namespace='##targetNamespace'"
      * @generated
@@ -449,7 +448,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Base Element</em>' containment reference.
      * @see #setBaseElement(BaseElement)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_BaseElement()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_BaseElement()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='baseElement' namespace='##targetNamespace'"
      * @generated
@@ -476,7 +475,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Base Element With Mixed Content</em>' containment reference.
      * @see #setBaseElementWithMixedContent(BaseElementWithMixedContent)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_BaseElementWithMixedContent()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_BaseElementWithMixedContent()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='baseElementWithMixedContent' namespace='##targetNamespace'"
      * @generated
@@ -503,7 +502,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Boundary Event</em>' containment reference.
      * @see #setBoundaryEvent(BoundaryEvent)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_BoundaryEvent()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_BoundaryEvent()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='boundaryEvent' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -530,7 +529,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Business Rule Task</em>' containment reference.
      * @see #setBusinessRuleTask(BusinessRuleTask)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_BusinessRuleTask()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_BusinessRuleTask()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='businessRuleTask' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -557,7 +556,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Callable Element</em>' containment reference.
      * @see #setCallableElement(CallableElement)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_CallableElement()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_CallableElement()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='callableElement' namespace='##targetNamespace'"
      * @generated
@@ -584,7 +583,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Call Activity</em>' containment reference.
      * @see #setCallActivity(CallActivity)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_CallActivity()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_CallActivity()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='callActivity' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -611,7 +610,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Call Choreography Activity</em>' containment reference.
      * @see #setCallChoreographyActivity(CallChoreographyActivity)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_CallChoreographyActivity()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_CallChoreographyActivity()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='callChoreographyActivity' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -638,7 +637,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Call Conversation</em>' containment reference.
      * @see #setCallConversation(CallConversation)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_CallConversation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_CallConversation()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='callConversation' namespace='##targetNamespace' affiliation='conversationNode'"
      * @generated
@@ -665,7 +664,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Conversation Node</em>' containment reference.
      * @see #setConversationNode(ConversationNode)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_ConversationNode()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_ConversationNode()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='conversationNode' namespace='##targetNamespace'"
      * @generated
@@ -692,7 +691,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Cancel Event Definition</em>' containment reference.
      * @see #setCancelEventDefinition(CancelEventDefinition)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_CancelEventDefinition()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_CancelEventDefinition()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='cancelEventDefinition' namespace='##targetNamespace' affiliation='eventDefinition'"
      * @generated
@@ -719,7 +718,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Event Definition</em>' containment reference.
      * @see #setEventDefinition(EventDefinition)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_EventDefinition()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_EventDefinition()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='eventDefinition' namespace='##targetNamespace' affiliation='rootElement'"
      * @generated
@@ -746,7 +745,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Root Element</em>' containment reference.
      * @see #setRootElement(RootElement)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_RootElement()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_RootElement()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='rootElement' namespace='##targetNamespace'"
      * @generated
@@ -773,7 +772,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Catch Event</em>' containment reference.
      * @see #setCatchEvent(CatchEvent)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_CatchEvent()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_CatchEvent()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='catchEvent' namespace='##targetNamespace'"
      * @generated
@@ -800,7 +799,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Category</em>' containment reference.
      * @see #setCategory(Category)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Category()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Category()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='category' namespace='##targetNamespace' affiliation='rootElement'"
      * @generated
@@ -827,7 +826,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Category Value</em>' containment reference.
      * @see #setCategoryValue(CategoryValue)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_CategoryValue()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_CategoryValue()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='categoryValue' namespace='##targetNamespace'"
      * @generated
@@ -854,7 +853,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Choreography</em>' containment reference.
      * @see #setChoreography(Choreography)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Choreography()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Choreography()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='choreography' namespace='##targetNamespace' affiliation='rootElement'"
      * @generated
@@ -881,7 +880,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Choreography Activity</em>' containment reference.
      * @see #setChoreographyActivity(ChoreographyActivity)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_ChoreographyActivity()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_ChoreographyActivity()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='choreographyActivity' namespace='##targetNamespace'"
      * @generated
@@ -908,7 +907,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Choreography Sub Process</em>' containment reference.
      * @see #setChoreographySubProcess(ChoreographySubProcess)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_ChoreographySubProcess()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_ChoreographySubProcess()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='choreographySubProcess' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -935,7 +934,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Choreography Task</em>' containment reference.
      * @see #setChoreographyTask(ChoreographyTask)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_ChoreographyTask()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_ChoreographyTask()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='choreographyTask' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -962,7 +961,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Collaboration</em>' containment reference.
      * @see #setCollaboration(Collaboration)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Collaboration()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Collaboration()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='collaboration' namespace='##targetNamespace' affiliation='rootElement'"
      * @generated
@@ -989,7 +988,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Communication</em>' containment reference.
      * @see #setCommunication(Communication)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Communication()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Communication()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='communication' namespace='##targetNamespace' affiliation='conversationNode'"
      * @generated
@@ -1016,7 +1015,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Compensate Event Definition</em>' containment reference.
      * @see #setCompensateEventDefinition(CompensateEventDefinition)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_CompensateEventDefinition()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_CompensateEventDefinition()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='compensateEventDefinition' namespace='##targetNamespace' affiliation='eventDefinition'"
      * @generated
@@ -1043,7 +1042,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Complex Behavior Definition</em>' containment reference.
      * @see #setComplexBehaviorDefinition(ComplexBehaviorDefinition)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_ComplexBehaviorDefinition()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_ComplexBehaviorDefinition()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='complexBehaviorDefinition' namespace='##targetNamespace'"
      * @generated
@@ -1070,7 +1069,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Complex Gateway</em>' containment reference.
      * @see #setComplexGateway(ComplexGateway)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_ComplexGateway()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_ComplexGateway()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='complexGateway' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -1097,7 +1096,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Conditional Event Definition</em>' containment reference.
      * @see #setConditionalEventDefinition(ConditionalEventDefinition)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_ConditionalEventDefinition()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_ConditionalEventDefinition()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='conditionalEventDefinition' namespace='##targetNamespace' affiliation='eventDefinition'"
      * @generated
@@ -1124,7 +1123,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Conversation</em>' containment reference.
      * @see #setConversation(Conversation)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Conversation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Conversation()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='conversation' namespace='##targetNamespace' affiliation='rootElement'"
      * @generated
@@ -1151,7 +1150,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Conversation Association</em>' containment reference.
      * @see #setConversationAssociation(ConversationAssociation)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_ConversationAssociation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_ConversationAssociation()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='conversationAssociation' namespace='##targetNamespace'"
      * @generated
@@ -1178,7 +1177,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Correlation Key</em>' containment reference.
      * @see #setCorrelationKey(CorrelationKey)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_CorrelationKey()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_CorrelationKey()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='correlationKey' namespace='##targetNamespace'"
      * @generated
@@ -1205,7 +1204,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Correlation Property</em>' containment reference.
      * @see #setCorrelationProperty(CorrelationProperty)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_CorrelationProperty()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_CorrelationProperty()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='correlationProperty' namespace='##targetNamespace' affiliation='rootElement'"
      * @generated
@@ -1232,7 +1231,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Correlation Property Binding</em>' containment reference.
      * @see #setCorrelationPropertyBinding(CorrelationPropertyBinding)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_CorrelationPropertyBinding()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_CorrelationPropertyBinding()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='correlationPropertyBinding' namespace='##targetNamespace'"
      * @generated
@@ -1259,7 +1258,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Correlation Property Retrieval Expression</em>' containment reference.
      * @see #setCorrelationPropertyRetrievalExpression(CorrelationPropertyRetrievalExpression)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_CorrelationPropertyRetrievalExpression()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_CorrelationPropertyRetrievalExpression()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='correlationPropertyRetrievalExpression' namespace='##targetNamespace'"
      * @generated
@@ -1274,7 +1273,8 @@ public interface DocumentRoot extends EObject {
      * @see #getCorrelationPropertyRetrievalExpression()
      * @generated
      */
-    void setCorrelationPropertyRetrievalExpression(CorrelationPropertyRetrievalExpression value);
+    void setCorrelationPropertyRetrievalExpression(
+            CorrelationPropertyRetrievalExpression value);
 
     /**
      * Returns the value of the '<em><b>Correlation Subscription</b></em>' containment reference.
@@ -1286,7 +1286,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Correlation Subscription</em>' containment reference.
      * @see #setCorrelationSubscription(CorrelationSubscription)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_CorrelationSubscription()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_CorrelationSubscription()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='correlationSubscription' namespace='##targetNamespace'"
      * @generated
@@ -1313,7 +1313,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data Association</em>' containment reference.
      * @see #setDataAssociation(DataAssociation)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_DataAssociation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_DataAssociation()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='dataAssociation' namespace='##targetNamespace'"
      * @generated
@@ -1340,7 +1340,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data Input</em>' containment reference.
      * @see #setDataInput(DataInput)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_DataInput()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_DataInput()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='dataInput' namespace='##targetNamespace'"
      * @generated
@@ -1367,7 +1367,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data Input Association</em>' containment reference.
      * @see #setDataInputAssociation(DataInputAssociation)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_DataInputAssociation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_DataInputAssociation()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='dataInputAssociation' namespace='##targetNamespace'"
      * @generated
@@ -1394,7 +1394,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data Object</em>' containment reference.
      * @see #setDataObject(DataObject)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_DataObject()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_DataObject()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='dataObject' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -1421,7 +1421,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data Output</em>' containment reference.
      * @see #setDataOutput(DataOutput)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_DataOutput()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_DataOutput()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='dataOutput' namespace='##targetNamespace'"
      * @generated
@@ -1448,7 +1448,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data Output Association</em>' containment reference.
      * @see #setDataOutputAssociation(DataOutputAssociation)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_DataOutputAssociation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_DataOutputAssociation()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='dataOutputAssociation' namespace='##targetNamespace'"
      * @generated
@@ -1475,7 +1475,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data State</em>' containment reference.
      * @see #setDataState(DataState)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_DataState()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_DataState()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='dataState' namespace='##targetNamespace'"
      * @generated
@@ -1502,7 +1502,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data Store</em>' containment reference.
      * @see #setDataStore(DataStore)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_DataStore()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_DataStore()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='dataStore' namespace='##targetNamespace' affiliation='rootElement'"
      * @generated
@@ -1529,7 +1529,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data Store Reference</em>' containment reference.
      * @see #setDataStoreReference(DataStoreReference)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_DataStoreReference()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_DataStoreReference()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='dataStoreReference' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -1556,7 +1556,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Definitions</em>' containment reference.
      * @see #setDefinitions(Definitions)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Definitions()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Definitions()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='definitions' namespace='##targetNamespace'"
      * @generated
@@ -1583,7 +1583,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Documentation</em>' containment reference.
      * @see #setDocumentation(Documentation)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Documentation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Documentation()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='documentation' namespace='##targetNamespace'"
      * @generated
@@ -1610,7 +1610,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>End Event</em>' containment reference.
      * @see #setEndEvent(EndEvent)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_EndEvent()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_EndEvent()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='endEvent' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -1637,7 +1637,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>End Point</em>' containment reference.
      * @see #setEndPoint(EndPoint)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_EndPoint()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_EndPoint()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='endPoint' namespace='##targetNamespace' affiliation='rootElement'"
      * @generated
@@ -1664,7 +1664,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Error</em>' containment reference.
      * @see #setError(org.eclipse.mdt.bpmn.Error)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Error()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Error()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='error' namespace='##targetNamespace' affiliation='rootElement'"
      * @generated
@@ -1691,7 +1691,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Error Event Definition</em>' containment reference.
      * @see #setErrorEventDefinition(ErrorEventDefinition)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_ErrorEventDefinition()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_ErrorEventDefinition()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='errorEventDefinition' namespace='##targetNamespace' affiliation='eventDefinition'"
      * @generated
@@ -1718,7 +1718,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Escalation</em>' containment reference.
      * @see #setEscalation(Escalation)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Escalation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Escalation()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='escalation' namespace='##targetNamespace' affiliation='rootElement'"
      * @generated
@@ -1745,7 +1745,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Escalation Event Definition</em>' containment reference.
      * @see #setEscalationEventDefinition(EscalationEventDefinition)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_EscalationEventDefinition()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_EscalationEventDefinition()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='escalationEventDefinition' namespace='##targetNamespace' affiliation='eventDefinition'"
      * @generated
@@ -1772,7 +1772,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Event</em>' containment reference.
      * @see #setEvent(Event)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Event()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Event()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='event' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -1799,7 +1799,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Event Based Gateway</em>' containment reference.
      * @see #setEventBasedGateway(EventBasedGateway)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_EventBasedGateway()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_EventBasedGateway()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='eventBasedGateway' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -1826,7 +1826,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Exclusive Gateway</em>' containment reference.
      * @see #setExclusiveGateway(ExclusiveGateway)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_ExclusiveGateway()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_ExclusiveGateway()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='exclusiveGateway' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -1853,7 +1853,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Expression</em>' containment reference.
      * @see #setExpression(Expression)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Expression()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Expression()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='expression' namespace='##targetNamespace'"
      * @generated
@@ -1880,7 +1880,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Extension</em>' containment reference.
      * @see #setExtension(Extension)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Extension()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Extension()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='extension' namespace='##targetNamespace'"
      * @generated
@@ -1907,7 +1907,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Flow Node</em>' containment reference.
      * @see #setFlowNode(FlowNode)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_FlowNode()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_FlowNode()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='flowNode' namespace='##targetNamespace'"
      * @generated
@@ -1934,7 +1934,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Formal Expression</em>' containment reference.
      * @see #setFormalExpression(FormalExpression)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_FormalExpression()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_FormalExpression()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='formalExpression' namespace='##targetNamespace' affiliation='expression'"
      * @generated
@@ -1960,7 +1960,7 @@ public interface DocumentRoot extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Gateway</em>' containment reference.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Gateway()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Gateway()
      * @model containment="true" upper="-2" transient="true" changeable="false" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='gateway' namespace='##targetNamespace'"
      * @generated
@@ -1977,7 +1977,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Global Business Rule Task</em>' containment reference.
      * @see #setGlobalBusinessRuleTask(GlobalBusinessRuleTask)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_GlobalBusinessRuleTask()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_GlobalBusinessRuleTask()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='globalBusinessRuleTask' namespace='##targetNamespace' affiliation='rootElement'"
      * @generated
@@ -2004,7 +2004,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Global Choreography Task</em>' containment reference.
      * @see #setGlobalChoreographyTask(GlobalChoreographyTask)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_GlobalChoreographyTask()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_GlobalChoreographyTask()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='globalChoreographyTask' namespace='##targetNamespace' affiliation='rootElement'"
      * @generated
@@ -2031,7 +2031,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Global Communication</em>' containment reference.
      * @see #setGlobalCommunication(GlobalCommunication)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_GlobalCommunication()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_GlobalCommunication()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='globalCommunication' namespace='##targetNamespace' affiliation='rootElement'"
      * @generated
@@ -2058,7 +2058,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Global Manual Task</em>' containment reference.
      * @see #setGlobalManualTask(GlobalManualTask)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_GlobalManualTask()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_GlobalManualTask()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='globalManualTask' namespace='##targetNamespace' affiliation='rootElement'"
      * @generated
@@ -2085,7 +2085,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Global Script Task</em>' containment reference.
      * @see #setGlobalScriptTask(GlobalScriptTask)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_GlobalScriptTask()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_GlobalScriptTask()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='globalScriptTask' namespace='##targetNamespace' affiliation='rootElement'"
      * @generated
@@ -2112,7 +2112,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Global Task</em>' containment reference.
      * @see #setGlobalTask(GlobalTask)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_GlobalTask()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_GlobalTask()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='globalTask' namespace='##targetNamespace' affiliation='rootElement'"
      * @generated
@@ -2139,7 +2139,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Global User Task</em>' containment reference.
      * @see #setGlobalUserTask(GlobalUserTask)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_GlobalUserTask()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_GlobalUserTask()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='globalUserTask' namespace='##targetNamespace' affiliation='rootElement'"
      * @generated
@@ -2166,7 +2166,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Group</em>' containment reference.
      * @see #setGroup(Group)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Group()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Group()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='group' namespace='##targetNamespace' affiliation='artifact'"
      * @generated
@@ -2193,7 +2193,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Human Performer</em>' containment reference.
      * @see #setHumanPerformer(HumanPerformer)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_HumanPerformer()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_HumanPerformer()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='humanPerformer' namespace='##targetNamespace' affiliation='performer'"
      * @generated
@@ -2220,7 +2220,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Performer</em>' containment reference.
      * @see #setPerformer(Performer)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Performer()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Performer()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='performer' namespace='##targetNamespace' affiliation='activityResource'"
      * @generated
@@ -2247,7 +2247,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Implicit Throw Event</em>' containment reference.
      * @see #setImplicitThrowEvent(ImplicitThrowEvent)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_ImplicitThrowEvent()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_ImplicitThrowEvent()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='implicitThrowEvent' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -2274,7 +2274,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Import</em>' containment reference.
      * @see #setImport(Import)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Import()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Import()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='import' namespace='##targetNamespace'"
      * @generated
@@ -2301,7 +2301,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Inclusive Gateway</em>' containment reference.
      * @see #setInclusiveGateway(InclusiveGateway)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_InclusiveGateway()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_InclusiveGateway()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='inclusiveGateway' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -2328,7 +2328,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Input Set</em>' containment reference.
      * @see #setInputSet(InputSet)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_InputSet()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_InputSet()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='inputSet' namespace='##targetNamespace'"
      * @generated
@@ -2355,7 +2355,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Interface</em>' containment reference.
      * @see #setInterface(Interface)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Interface()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Interface()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='interface' namespace='##targetNamespace' affiliation='rootElement'"
      * @generated
@@ -2382,7 +2382,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Intermediate Catch Event</em>' containment reference.
      * @see #setIntermediateCatchEvent(IntermediateCatchEvent)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_IntermediateCatchEvent()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_IntermediateCatchEvent()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='intermediateCatchEvent' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -2409,7 +2409,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Intermediate Throw Event</em>' containment reference.
      * @see #setIntermediateThrowEvent(IntermediateThrowEvent)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_IntermediateThrowEvent()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_IntermediateThrowEvent()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='intermediateThrowEvent' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -2436,7 +2436,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Io Binding</em>' containment reference.
      * @see #setIoBinding(InputOutputBinding)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_IoBinding()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_IoBinding()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='ioBinding' namespace='##targetNamespace'"
      * @generated
@@ -2463,7 +2463,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Io Specification</em>' containment reference.
      * @see #setIoSpecification(InputOutputSpecification)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_IoSpecification()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_IoSpecification()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='ioSpecification' namespace='##targetNamespace'"
      * @generated
@@ -2490,7 +2490,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Item Definition</em>' containment reference.
      * @see #setItemDefinition(ItemDefinition)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_ItemDefinition()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_ItemDefinition()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='itemDefinition' namespace='##targetNamespace' affiliation='rootElement'"
      * @generated
@@ -2517,7 +2517,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Lane</em>' containment reference.
      * @see #setLane(Lane)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Lane()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Lane()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='lane' namespace='##targetNamespace'"
      * @generated
@@ -2544,7 +2544,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Lane Set</em>' containment reference.
      * @see #setLaneSet(LaneSet)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_LaneSet()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_LaneSet()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='laneSet' namespace='##targetNamespace'"
      * @generated
@@ -2571,7 +2571,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Link Event Definition</em>' containment reference.
      * @see #setLinkEventDefinition(LinkEventDefinition)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_LinkEventDefinition()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_LinkEventDefinition()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='linkEventDefinition' namespace='##targetNamespace' affiliation='eventDefinition'"
      * @generated
@@ -2598,7 +2598,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Loop Characteristics</em>' containment reference.
      * @see #setLoopCharacteristics(LoopCharacteristics)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_LoopCharacteristics()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_LoopCharacteristics()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='loopCharacteristics' namespace='##targetNamespace'"
      * @generated
@@ -2625,7 +2625,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Manual Task</em>' containment reference.
      * @see #setManualTask(ManualTask)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_ManualTask()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_ManualTask()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='manualTask' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -2652,7 +2652,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Message</em>' containment reference.
      * @see #setMessage(Message)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Message()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Message()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='message' namespace='##targetNamespace' affiliation='rootElement'"
      * @generated
@@ -2679,7 +2679,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Message Event Definition</em>' containment reference.
      * @see #setMessageEventDefinition(MessageEventDefinition)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_MessageEventDefinition()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_MessageEventDefinition()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='messageEventDefinition' namespace='##targetNamespace' affiliation='eventDefinition'"
      * @generated
@@ -2706,7 +2706,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Message Flow</em>' containment reference.
      * @see #setMessageFlow(MessageFlow)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_MessageFlow()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_MessageFlow()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='messageFlow' namespace='##targetNamespace'"
      * @generated
@@ -2733,7 +2733,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Message Flow Association</em>' containment reference.
      * @see #setMessageFlowAssociation(MessageFlowAssociation)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_MessageFlowAssociation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_MessageFlowAssociation()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='messageFlowAssociation' namespace='##targetNamespace'"
      * @generated
@@ -2760,7 +2760,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Monitoring</em>' containment reference.
      * @see #setMonitoring(Monitoring)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Monitoring()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Monitoring()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='monitoring' namespace='##targetNamespace'"
      * @generated
@@ -2787,7 +2787,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Multi Instance Loop Characteristics</em>' containment reference.
      * @see #setMultiInstanceLoopCharacteristics(MultiInstanceLoopCharacteristics)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_MultiInstanceLoopCharacteristics()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_MultiInstanceLoopCharacteristics()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='multiInstanceLoopCharacteristics' namespace='##targetNamespace' affiliation='loopCharacteristics'"
      * @generated
@@ -2802,7 +2802,8 @@ public interface DocumentRoot extends EObject {
      * @see #getMultiInstanceLoopCharacteristics()
      * @generated
      */
-    void setMultiInstanceLoopCharacteristics(MultiInstanceLoopCharacteristics value);
+    void setMultiInstanceLoopCharacteristics(
+            MultiInstanceLoopCharacteristics value);
 
     /**
      * Returns the value of the '<em><b>Operation</b></em>' containment reference.
@@ -2814,7 +2815,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Operation</em>' containment reference.
      * @see #setOperation(Operation)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Operation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Operation()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='operation' namespace='##targetNamespace'"
      * @generated
@@ -2841,7 +2842,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Output Set</em>' containment reference.
      * @see #setOutputSet(OutputSet)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_OutputSet()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_OutputSet()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='outputSet' namespace='##targetNamespace'"
      * @generated
@@ -2868,7 +2869,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Parallel Gateway</em>' containment reference.
      * @see #setParallelGateway(ParallelGateway)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_ParallelGateway()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_ParallelGateway()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='parallelGateway' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -2895,7 +2896,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Participant</em>' containment reference.
      * @see #setParticipant(Participant)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Participant()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Participant()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='participant' namespace='##targetNamespace'"
      * @generated
@@ -2922,7 +2923,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Participant Association</em>' containment reference.
      * @see #setParticipantAssociation(ParticipantAssociation)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_ParticipantAssociation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_ParticipantAssociation()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='participantAssociation' namespace='##targetNamespace'"
      * @generated
@@ -2949,7 +2950,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Participant Multiplicity</em>' containment reference.
      * @see #setParticipantMultiplicity(ParticipantMultiplicity)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_ParticipantMultiplicity()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_ParticipantMultiplicity()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='participantMultiplicity' namespace='##targetNamespace'"
      * @generated
@@ -2976,7 +2977,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Partner Entity</em>' containment reference.
      * @see #setPartnerEntity(PartnerEntity)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_PartnerEntity()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_PartnerEntity()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='partnerEntity' namespace='##targetNamespace' affiliation='rootElement'"
      * @generated
@@ -3003,7 +3004,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Partner Role</em>' containment reference.
      * @see #setPartnerRole(PartnerRole)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_PartnerRole()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_PartnerRole()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='partnerRole' namespace='##targetNamespace' affiliation='rootElement'"
      * @generated
@@ -3030,7 +3031,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Potential Owner</em>' containment reference.
      * @see #setPotentialOwner(PotentialOwner)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_PotentialOwner()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_PotentialOwner()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='potentialOwner' namespace='##targetNamespace' affiliation='performer'"
      * @generated
@@ -3057,7 +3058,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Process</em>' containment reference.
      * @see #setProcess(org.eclipse.mdt.bpmn.Process)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Process()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Process()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='process' namespace='##targetNamespace' affiliation='rootElement'"
      * @generated
@@ -3084,7 +3085,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Property</em>' containment reference.
      * @see #setProperty(Property)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Property()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Property()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='property' namespace='##targetNamespace'"
      * @generated
@@ -3111,7 +3112,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Receive Task</em>' containment reference.
      * @see #setReceiveTask(ReceiveTask)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_ReceiveTask()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_ReceiveTask()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='receiveTask' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -3138,7 +3139,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Relationship</em>' containment reference.
      * @see #setRelationship(Relationship)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Relationship()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Relationship()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='relationship' namespace='##targetNamespace'"
      * @generated
@@ -3165,7 +3166,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Rendering</em>' containment reference.
      * @see #setRendering(Rendering)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Rendering()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Rendering()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='rendering' namespace='##targetNamespace'"
      * @generated
@@ -3192,7 +3193,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Resource</em>' containment reference.
      * @see #setResource(Resource)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Resource()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Resource()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='resource' namespace='##targetNamespace' affiliation='rootElement'"
      * @generated
@@ -3219,7 +3220,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Resource Assignment Expression</em>' containment reference.
      * @see #setResourceAssignmentExpression(ResourceAssignmentExpression)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_ResourceAssignmentExpression()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_ResourceAssignmentExpression()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='resourceAssignmentExpression' namespace='##targetNamespace'"
      * @generated
@@ -3246,7 +3247,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Resource Parameter</em>' containment reference.
      * @see #setResourceParameter(ResourceParameter)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_ResourceParameter()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_ResourceParameter()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='resourceParameter' namespace='##targetNamespace'"
      * @generated
@@ -3273,7 +3274,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Resource Parameter Binding</em>' containment reference.
      * @see #setResourceParameterBinding(ResourceParameterBinding)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_ResourceParameterBinding()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_ResourceParameterBinding()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='resourceParameterBinding' namespace='##targetNamespace'"
      * @generated
@@ -3300,7 +3301,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Script</em>' containment reference.
      * @see #setScript(Script)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Script()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Script()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='script' namespace='##targetNamespace'"
      * @generated
@@ -3327,7 +3328,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Script Task</em>' containment reference.
      * @see #setScriptTask(ScriptTask)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_ScriptTask()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_ScriptTask()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='scriptTask' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -3354,7 +3355,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Send Task</em>' containment reference.
      * @see #setSendTask(SendTask)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_SendTask()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_SendTask()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='sendTask' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -3381,7 +3382,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Sequence Flow</em>' containment reference.
      * @see #setSequenceFlow(SequenceFlow)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_SequenceFlow()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_SequenceFlow()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='sequenceFlow' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -3408,7 +3409,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Service Task</em>' containment reference.
      * @see #setServiceTask(ServiceTask)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_ServiceTask()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_ServiceTask()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='serviceTask' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -3435,7 +3436,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Signal</em>' containment reference.
      * @see #setSignal(Signal)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Signal()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Signal()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='signal' namespace='##targetNamespace' affiliation='rootElement'"
      * @generated
@@ -3462,7 +3463,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Signal Event Definition</em>' containment reference.
      * @see #setSignalEventDefinition(SignalEventDefinition)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_SignalEventDefinition()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_SignalEventDefinition()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='signalEventDefinition' namespace='##targetNamespace' affiliation='eventDefinition'"
      * @generated
@@ -3489,7 +3490,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Standard Loop Characteristics</em>' containment reference.
      * @see #setStandardLoopCharacteristics(StandardLoopCharacteristics)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_StandardLoopCharacteristics()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_StandardLoopCharacteristics()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='standardLoopCharacteristics' namespace='##targetNamespace' affiliation='loopCharacteristics'"
      * @generated
@@ -3516,7 +3517,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Start Event</em>' containment reference.
      * @see #setStartEvent(StartEvent)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_StartEvent()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_StartEvent()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='startEvent' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -3543,7 +3544,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Sub Conversation</em>' containment reference.
      * @see #setSubConversation(SubConversation)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_SubConversation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_SubConversation()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='subConversation' namespace='##targetNamespace' affiliation='conversationNode'"
      * @generated
@@ -3570,7 +3571,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Sub Process</em>' containment reference.
      * @see #setSubProcess(SubProcess)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_SubProcess()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_SubProcess()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='subProcess' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -3597,7 +3598,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Task</em>' containment reference.
      * @see #setTask(Task)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Task()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Task()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='task' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -3624,7 +3625,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Terminate Event Definition</em>' containment reference.
      * @see #setTerminateEventDefinition(TerminateEventDefinition)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_TerminateEventDefinition()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_TerminateEventDefinition()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='terminateEventDefinition' namespace='##targetNamespace' affiliation='eventDefinition'"
      * @generated
@@ -3651,7 +3652,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Text</em>' containment reference.
      * @see #setText(Text)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Text()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Text()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='text' namespace='##targetNamespace'"
      * @generated
@@ -3678,7 +3679,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Text Annotation</em>' containment reference.
      * @see #setTextAnnotation(TextAnnotation)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_TextAnnotation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_TextAnnotation()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='textAnnotation' namespace='##targetNamespace' affiliation='artifact'"
      * @generated
@@ -3705,7 +3706,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Throw Event</em>' containment reference.
      * @see #setThrowEvent(ThrowEvent)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_ThrowEvent()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_ThrowEvent()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='throwEvent' namespace='##targetNamespace'"
      * @generated
@@ -3732,7 +3733,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Timer Event Definition</em>' containment reference.
      * @see #setTimerEventDefinition(TimerEventDefinition)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_TimerEventDefinition()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_TimerEventDefinition()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='timerEventDefinition' namespace='##targetNamespace' affiliation='eventDefinition'"
      * @generated
@@ -3759,7 +3760,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Transaction</em>' containment reference.
      * @see #setTransaction(Transaction)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_Transaction()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_Transaction()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='transaction' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated
@@ -3786,7 +3787,7 @@ public interface DocumentRoot extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>User Task</em>' containment reference.
      * @see #setUserTask(UserTask)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDocumentRoot_UserTask()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDocumentRoot_UserTask()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='userTask' namespace='##targetNamespace' affiliation='flowElement'"
      * @generated

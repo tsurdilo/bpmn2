@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -33,11 +32,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnFactory;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.DataInput;
-import org.eclipse.mdt.bpmn.bpmnFactory;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.DataInput} object.
@@ -91,7 +90,7 @@ public class DataInputItemProvider extends BaseElementItemProvider implements
                         getString("_UI_DataInput_isCollection_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_DataInput_isCollection_feature", "_UI_DataInput_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getDataInput_IsCollection(),
+                        BpmnPackage.eINSTANCE.getDataInput_IsCollection(),
                         true, false, false,
                         ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
@@ -111,7 +110,7 @@ public class DataInputItemProvider extends BaseElementItemProvider implements
                         getString("_UI_DataInput_itemSubjectRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_DataInput_itemSubjectRef_feature", "_UI_DataInput_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getDataInput_ItemSubjectRef(),
+                        BpmnPackage.eINSTANCE.getDataInput_ItemSubjectRef(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -131,7 +130,7 @@ public class DataInputItemProvider extends BaseElementItemProvider implements
                         getString("_UI_DataInput_name_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_DataInput_name_feature", "_UI_DataInput_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getDataInput_Name(), true, false,
+                        BpmnPackage.eINSTANCE.getDataInput_Name(), true, false,
                         false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                         null, null));
     }
@@ -150,7 +149,7 @@ public class DataInputItemProvider extends BaseElementItemProvider implements
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
             childrenFeatures
-                    .add(bpmnPackage.eINSTANCE.getDataInput_DataState());
+                    .add(BpmnPackage.eINSTANCE.getDataInput_DataState());
         }
         return childrenFeatures;
     }
@@ -205,13 +204,13 @@ public class DataInputItemProvider extends BaseElementItemProvider implements
         updateChildren(notification);
 
         switch (notification.getFeatureID(DataInput.class)) {
-        case bpmnPackage.DATA_INPUT__IS_COLLECTION:
-        case bpmnPackage.DATA_INPUT__ITEM_SUBJECT_REF:
-        case bpmnPackage.DATA_INPUT__NAME:
+        case BpmnPackage.DATA_INPUT__IS_COLLECTION:
+        case BpmnPackage.DATA_INPUT__ITEM_SUBJECT_REF:
+        case BpmnPackage.DATA_INPUT__NAME:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
-        case bpmnPackage.DATA_INPUT__DATA_STATE:
+        case BpmnPackage.DATA_INPUT__DATA_STATE:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -231,8 +230,8 @@ public class DataInputItemProvider extends BaseElementItemProvider implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getDataInput_DataState(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getDataInput_DataState(), BpmnFactory.eINSTANCE
                 .createDataState()));
     }
 
@@ -256,10 +255,10 @@ public class DataInputItemProvider extends BaseElementItemProvider implements
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE;
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE;
 
         if (qualify) {
             return getString("_UI_CreateChild_text2", //$NON-NLS-1$

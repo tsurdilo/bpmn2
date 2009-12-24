@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -33,11 +32,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnFactory;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Choreography;
-import org.eclipse.mdt.bpmn.bpmnFactory;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.Choreography} object.
@@ -89,7 +88,7 @@ public class ChoreographyItemProvider extends CallableElementItemProvider
                         getString("_UI_Choreography_isClosed_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Choreography_isClosed_feature", "_UI_Choreography_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getChoreography_IsClosed(), true,
+                        BpmnPackage.eINSTANCE.getChoreography_IsClosed(), true,
                         false, false,
                         ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
@@ -107,21 +106,21 @@ public class ChoreographyItemProvider extends CallableElementItemProvider
             Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getChoreography_FlowElementGroup());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getChoreography_ArtifactGroup());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getChoreography_MessageFlow());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getChoreography_Participant());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getChoreography_Conversation());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getChoreography_ConversationAssociation());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getChoreography_MessageFlowAssociation());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getChoreography_ParticipantAssociation());
         }
         return childrenFeatures;
@@ -177,18 +176,18 @@ public class ChoreographyItemProvider extends CallableElementItemProvider
         updateChildren(notification);
 
         switch (notification.getFeatureID(Choreography.class)) {
-        case bpmnPackage.CHOREOGRAPHY__IS_CLOSED:
+        case BpmnPackage.CHOREOGRAPHY__IS_CLOSED:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
-        case bpmnPackage.CHOREOGRAPHY__FLOW_ELEMENT_GROUP:
-        case bpmnPackage.CHOREOGRAPHY__ARTIFACT_GROUP:
-        case bpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW:
-        case bpmnPackage.CHOREOGRAPHY__PARTICIPANT:
-        case bpmnPackage.CHOREOGRAPHY__CONVERSATION:
-        case bpmnPackage.CHOREOGRAPHY__CONVERSATION_ASSOCIATION:
-        case bpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW_ASSOCIATION:
-        case bpmnPackage.CHOREOGRAPHY__PARTICIPANT_ASSOCIATION:
+        case BpmnPackage.CHOREOGRAPHY__FLOW_ELEMENT_GROUP:
+        case BpmnPackage.CHOREOGRAPHY__ARTIFACT_GROUP:
+        case BpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW:
+        case BpmnPackage.CHOREOGRAPHY__PARTICIPANT:
+        case BpmnPackage.CHOREOGRAPHY__CONVERSATION:
+        case BpmnPackage.CHOREOGRAPHY__CONVERSATION_ASSOCIATION:
+        case BpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW_ASSOCIATION:
+        case BpmnPackage.CHOREOGRAPHY__PARTICIPANT_ASSOCIATION:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -208,482 +207,482 @@ public class ChoreographyItemProvider extends CallableElementItemProvider
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createSubProcess())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createAdHocSubProcess())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createBoundaryEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createBusinessRuleTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createCallActivity())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createCallChoreographyActivity())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createChoreographySubProcess())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createChoreographyTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createGateway())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createComplexGateway())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createDataObject())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createDataStoreReference())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createEndEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createEventBasedGateway())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createExclusiveGateway())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createImplicitThrowEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createInclusiveGateway())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createIntermediateCatchEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createIntermediateThrowEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createManualTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createParallelGateway())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createReceiveTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createScriptTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createSendTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createSequenceFlow())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createServiceTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createStartEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createTransaction())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getChoreography_FlowElement(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getChoreography_FlowElement(), BpmnFactory.eINSTANCE
                         .createUserTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
                         .getDocumentRoot_AdHocSubProcess(),
-                        bpmnFactory.eINSTANCE.createAdHocSubProcess())));
+                        BpmnFactory.eINSTANCE.createAdHocSubProcess())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getDocumentRoot_BoundaryEvent(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getDocumentRoot_BoundaryEvent(), BpmnFactory.eINSTANCE
                         .createBoundaryEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
                         .getDocumentRoot_BusinessRuleTask(),
-                        bpmnFactory.eINSTANCE.createBusinessRuleTask())));
+                        BpmnFactory.eINSTANCE.createBusinessRuleTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getDocumentRoot_CallActivity(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getDocumentRoot_CallActivity(), BpmnFactory.eINSTANCE
                         .createCallActivity())));
 
         newChildDescriptors
-                .add(createChildParameter(bpmnPackage.eINSTANCE
+                .add(createChildParameter(BpmnPackage.eINSTANCE
                         .getChoreography_FlowElementGroup(), FeatureMapUtil
-                        .createEntry(bpmnPackage.eINSTANCE
+                        .createEntry(BpmnPackage.eINSTANCE
                                 .getDocumentRoot_CallChoreographyActivity(),
-                                bpmnFactory.eINSTANCE
+                                BpmnFactory.eINSTANCE
                                         .createCallChoreographyActivity())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
                         .getDocumentRoot_ChoreographySubProcess(),
-                        bpmnFactory.eINSTANCE.createChoreographySubProcess())));
+                        BpmnFactory.eINSTANCE.createChoreographySubProcess())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
                         .getDocumentRoot_ChoreographyTask(),
-                        bpmnFactory.eINSTANCE.createChoreographyTask())));
+                        BpmnFactory.eINSTANCE.createChoreographyTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
                         .getDocumentRoot_ComplexGateway(),
-                        bpmnFactory.eINSTANCE.createComplexGateway())));
+                        BpmnFactory.eINSTANCE.createComplexGateway())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
                 .createEntry(
-                        bpmnPackage.eINSTANCE.getDocumentRoot_DataObject(),
-                        bpmnFactory.eINSTANCE.createDataObject())));
+                        BpmnPackage.eINSTANCE.getDocumentRoot_DataObject(),
+                        BpmnFactory.eINSTANCE.createDataObject())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
                         .getDocumentRoot_DataStoreReference(),
-                        bpmnFactory.eINSTANCE.createDataStoreReference())));
+                        BpmnFactory.eINSTANCE.createDataStoreReference())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE.getDocumentRoot_EndEvent(),
-                        bpmnFactory.eINSTANCE.createEndEvent())));
+                .createEntry(BpmnPackage.eINSTANCE.getDocumentRoot_EndEvent(),
+                        BpmnFactory.eINSTANCE.createEndEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE.getDocumentRoot_Event(),
-                        bpmnFactory.eINSTANCE.createBoundaryEvent())));
+                .createEntry(BpmnPackage.eINSTANCE.getDocumentRoot_Event(),
+                        BpmnFactory.eINSTANCE.createBoundaryEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE.getDocumentRoot_Event(),
-                        bpmnFactory.eINSTANCE.createEndEvent())));
+                .createEntry(BpmnPackage.eINSTANCE.getDocumentRoot_Event(),
+                        BpmnFactory.eINSTANCE.createEndEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE.getDocumentRoot_Event(),
-                        bpmnFactory.eINSTANCE.createImplicitThrowEvent())));
+                .createEntry(BpmnPackage.eINSTANCE.getDocumentRoot_Event(),
+                        BpmnFactory.eINSTANCE.createImplicitThrowEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE.getDocumentRoot_Event(),
-                        bpmnFactory.eINSTANCE.createIntermediateCatchEvent())));
+                .createEntry(BpmnPackage.eINSTANCE.getDocumentRoot_Event(),
+                        BpmnFactory.eINSTANCE.createIntermediateCatchEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE.getDocumentRoot_Event(),
-                        bpmnFactory.eINSTANCE.createIntermediateThrowEvent())));
+                .createEntry(BpmnPackage.eINSTANCE.getDocumentRoot_Event(),
+                        BpmnFactory.eINSTANCE.createIntermediateThrowEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE.getDocumentRoot_Event(),
-                        bpmnFactory.eINSTANCE.createStartEvent())));
+                .createEntry(BpmnPackage.eINSTANCE.getDocumentRoot_Event(),
+                        BpmnFactory.eINSTANCE.createStartEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
                         .getDocumentRoot_EventBasedGateway(),
-                        bpmnFactory.eINSTANCE.createEventBasedGateway())));
+                        BpmnFactory.eINSTANCE.createEventBasedGateway())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
                         .getDocumentRoot_ExclusiveGateway(),
-                        bpmnFactory.eINSTANCE.createExclusiveGateway())));
+                        BpmnFactory.eINSTANCE.createExclusiveGateway())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
                         .getDocumentRoot_ImplicitThrowEvent(),
-                        bpmnFactory.eINSTANCE.createImplicitThrowEvent())));
+                        BpmnFactory.eINSTANCE.createImplicitThrowEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
                         .getDocumentRoot_InclusiveGateway(),
-                        bpmnFactory.eINSTANCE.createInclusiveGateway())));
+                        BpmnFactory.eINSTANCE.createInclusiveGateway())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
                         .getDocumentRoot_IntermediateCatchEvent(),
-                        bpmnFactory.eINSTANCE.createIntermediateCatchEvent())));
+                        BpmnFactory.eINSTANCE.createIntermediateCatchEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
                         .getDocumentRoot_IntermediateThrowEvent(),
-                        bpmnFactory.eINSTANCE.createIntermediateThrowEvent())));
+                        BpmnFactory.eINSTANCE.createIntermediateThrowEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
                 .createEntry(
-                        bpmnPackage.eINSTANCE.getDocumentRoot_ManualTask(),
-                        bpmnFactory.eINSTANCE.createManualTask())));
+                        BpmnPackage.eINSTANCE.getDocumentRoot_ManualTask(),
+                        BpmnFactory.eINSTANCE.createManualTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
                         .getDocumentRoot_ParallelGateway(),
-                        bpmnFactory.eINSTANCE.createParallelGateway())));
+                        BpmnFactory.eINSTANCE.createParallelGateway())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getDocumentRoot_ReceiveTask(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getDocumentRoot_ReceiveTask(), BpmnFactory.eINSTANCE
                         .createReceiveTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
                 .createEntry(
-                        bpmnPackage.eINSTANCE.getDocumentRoot_ScriptTask(),
-                        bpmnFactory.eINSTANCE.createScriptTask())));
+                        BpmnPackage.eINSTANCE.getDocumentRoot_ScriptTask(),
+                        BpmnFactory.eINSTANCE.createScriptTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE.getDocumentRoot_SendTask(),
-                        bpmnFactory.eINSTANCE.createSendTask())));
+                .createEntry(BpmnPackage.eINSTANCE.getDocumentRoot_SendTask(),
+                        BpmnFactory.eINSTANCE.createSendTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getDocumentRoot_SequenceFlow(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getDocumentRoot_SequenceFlow(), BpmnFactory.eINSTANCE
                         .createSequenceFlow())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getDocumentRoot_ServiceTask(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getDocumentRoot_ServiceTask(), BpmnFactory.eINSTANCE
                         .createServiceTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
                 .createEntry(
-                        bpmnPackage.eINSTANCE.getDocumentRoot_StartEvent(),
-                        bpmnFactory.eINSTANCE.createStartEvent())));
+                        BpmnPackage.eINSTANCE.getDocumentRoot_StartEvent(),
+                        BpmnFactory.eINSTANCE.createStartEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
                 .createEntry(
-                        bpmnPackage.eINSTANCE.getDocumentRoot_SubProcess(),
-                        bpmnFactory.eINSTANCE.createSubProcess())));
+                        BpmnPackage.eINSTANCE.getDocumentRoot_SubProcess(),
+                        BpmnFactory.eINSTANCE.createSubProcess())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
                 .createEntry(
-                        bpmnPackage.eINSTANCE.getDocumentRoot_SubProcess(),
-                        bpmnFactory.eINSTANCE.createAdHocSubProcess())));
+                        BpmnPackage.eINSTANCE.getDocumentRoot_SubProcess(),
+                        BpmnFactory.eINSTANCE.createAdHocSubProcess())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE.getDocumentRoot_Task(),
-                        bpmnFactory.eINSTANCE.createTask())));
+                .createEntry(BpmnPackage.eINSTANCE.getDocumentRoot_Task(),
+                        BpmnFactory.eINSTANCE.createTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE.getDocumentRoot_Task(),
-                        bpmnFactory.eINSTANCE.createBusinessRuleTask())));
+                .createEntry(BpmnPackage.eINSTANCE.getDocumentRoot_Task(),
+                        BpmnFactory.eINSTANCE.createBusinessRuleTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE.getDocumentRoot_Task(),
-                        bpmnFactory.eINSTANCE.createManualTask())));
+                .createEntry(BpmnPackage.eINSTANCE.getDocumentRoot_Task(),
+                        BpmnFactory.eINSTANCE.createManualTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE.getDocumentRoot_Task(),
-                        bpmnFactory.eINSTANCE.createReceiveTask())));
+                .createEntry(BpmnPackage.eINSTANCE.getDocumentRoot_Task(),
+                        BpmnFactory.eINSTANCE.createReceiveTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE.getDocumentRoot_Task(),
-                        bpmnFactory.eINSTANCE.createScriptTask())));
+                .createEntry(BpmnPackage.eINSTANCE.getDocumentRoot_Task(),
+                        BpmnFactory.eINSTANCE.createScriptTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE.getDocumentRoot_Task(),
-                        bpmnFactory.eINSTANCE.createSendTask())));
+                .createEntry(BpmnPackage.eINSTANCE.getDocumentRoot_Task(),
+                        BpmnFactory.eINSTANCE.createSendTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE.getDocumentRoot_Task(),
-                        bpmnFactory.eINSTANCE.createServiceTask())));
+                .createEntry(BpmnPackage.eINSTANCE.getDocumentRoot_Task(),
+                        BpmnFactory.eINSTANCE.createServiceTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE.getDocumentRoot_Task(),
-                        bpmnFactory.eINSTANCE.createUserTask())));
+                .createEntry(BpmnPackage.eINSTANCE.getDocumentRoot_Task(),
+                        BpmnFactory.eINSTANCE.createUserTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getDocumentRoot_Transaction(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getDocumentRoot_Transaction(), BpmnFactory.eINSTANCE
                         .createTransaction())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_FlowElementGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE.getDocumentRoot_UserTask(),
-                        bpmnFactory.eINSTANCE.createUserTask())));
+                .createEntry(BpmnPackage.eINSTANCE.getDocumentRoot_UserTask(),
+                        BpmnFactory.eINSTANCE.createUserTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_ArtifactGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getChoreography_Artifact(),
-                bpmnFactory.eINSTANCE.createAssociation())));
+                BpmnPackage.eINSTANCE.getChoreography_Artifact(),
+                BpmnFactory.eINSTANCE.createAssociation())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_ArtifactGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getChoreography_Artifact(),
-                bpmnFactory.eINSTANCE.createGroup())));
+                BpmnPackage.eINSTANCE.getChoreography_Artifact(),
+                BpmnFactory.eINSTANCE.createGroup())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_ArtifactGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getChoreography_Artifact(),
-                bpmnFactory.eINSTANCE.createTextAnnotation())));
+                BpmnPackage.eINSTANCE.getChoreography_Artifact(),
+                BpmnFactory.eINSTANCE.createTextAnnotation())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_ArtifactGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Association(),
-                bpmnFactory.eINSTANCE.createAssociation())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Association(),
+                BpmnFactory.eINSTANCE.createAssociation())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_ArtifactGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Group(),
-                bpmnFactory.eINSTANCE.createGroup())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Group(),
+                BpmnFactory.eINSTANCE.createGroup())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_ArtifactGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_TextAnnotation(),
-                bpmnFactory.eINSTANCE.createTextAnnotation())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_TextAnnotation(),
+                BpmnFactory.eINSTANCE.createTextAnnotation())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getChoreography_MessageFlow(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getChoreography_MessageFlow(), BpmnFactory.eINSTANCE
                 .createMessageFlow()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getChoreography_Participant(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getChoreography_Participant(), BpmnFactory.eINSTANCE
                 .createParticipant()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getChoreography_Conversation(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getChoreography_Conversation(), BpmnFactory.eINSTANCE
                 .createConversation()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_ConversationAssociation(),
-                bpmnFactory.eINSTANCE.createConversationAssociation()));
+                BpmnFactory.eINSTANCE.createConversationAssociation()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_MessageFlowAssociation(),
-                bpmnFactory.eINSTANCE.createMessageFlowAssociation()));
+                BpmnFactory.eINSTANCE.createMessageFlowAssociation()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getChoreography_ParticipantAssociation(),
-                bpmnFactory.eINSTANCE.createParticipantAssociation()));
+                BpmnFactory.eINSTANCE.createParticipantAssociation()));
     }
 
     /**
@@ -706,78 +705,78 @@ public class ChoreographyItemProvider extends CallableElementItemProvider
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE
-                || childFeature == bpmnPackage.eINSTANCE
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getChoreography_FlowElement()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_SubProcess()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_AdHocSubProcess()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_BoundaryEvent()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_Event()
-                || childFeature == bpmnPackage.eINSTANCE.getDocumentRoot_Task()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE.getDocumentRoot_Task()
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_BusinessRuleTask()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_CallActivity()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_CallChoreographyActivity()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_ChoreographySubProcess()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_ChoreographyTask()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_ComplexGateway()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_DataObject()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_DataStoreReference()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_EndEvent()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_EventBasedGateway()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_ExclusiveGateway()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_ImplicitThrowEvent()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_InclusiveGateway()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_IntermediateCatchEvent()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_IntermediateThrowEvent()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_ManualTask()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_ParallelGateway()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_ReceiveTask()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_ScriptTask()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_SendTask()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_SequenceFlow()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_ServiceTask()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_StartEvent()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_Transaction()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_UserTask()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getChoreography_Artifact()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_Association()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_Group()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_TextAnnotation();
 
         if (qualify) {

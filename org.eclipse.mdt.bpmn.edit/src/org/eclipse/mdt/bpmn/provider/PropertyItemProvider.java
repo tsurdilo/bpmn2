@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -33,11 +32,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnFactory;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Property;
-import org.eclipse.mdt.bpmn.bpmnFactory;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.Property} object.
@@ -90,7 +89,7 @@ public class PropertyItemProvider extends BaseElementItemProvider implements
                         getString("_UI_Property_itemSubjectRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Property_itemSubjectRef_feature", "_UI_Property_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getProperty_ItemSubjectRef(),
+                        BpmnPackage.eINSTANCE.getProperty_ItemSubjectRef(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -110,7 +109,7 @@ public class PropertyItemProvider extends BaseElementItemProvider implements
                         getString("_UI_Property_name_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Property_name_feature", "_UI_Property_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getProperty_Name(), true, false,
+                        BpmnPackage.eINSTANCE.getProperty_Name(), true, false,
                         false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                         null, null));
     }
@@ -128,7 +127,7 @@ public class PropertyItemProvider extends BaseElementItemProvider implements
             Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(bpmnPackage.eINSTANCE.getProperty_DataState());
+            childrenFeatures.add(BpmnPackage.eINSTANCE.getProperty_DataState());
         }
         return childrenFeatures;
     }
@@ -183,12 +182,12 @@ public class PropertyItemProvider extends BaseElementItemProvider implements
         updateChildren(notification);
 
         switch (notification.getFeatureID(Property.class)) {
-        case bpmnPackage.PROPERTY__ITEM_SUBJECT_REF:
-        case bpmnPackage.PROPERTY__NAME:
+        case BpmnPackage.PROPERTY__ITEM_SUBJECT_REF:
+        case BpmnPackage.PROPERTY__NAME:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
-        case bpmnPackage.PROPERTY__DATA_STATE:
+        case BpmnPackage.PROPERTY__DATA_STATE:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -208,8 +207,8 @@ public class PropertyItemProvider extends BaseElementItemProvider implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getProperty_DataState(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getProperty_DataState(), BpmnFactory.eINSTANCE
                 .createDataState()));
     }
 
@@ -233,10 +232,10 @@ public class PropertyItemProvider extends BaseElementItemProvider implements
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE;
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE;
 
         if (qualify) {
             return getString("_UI_CreateChild_text2", //$NON-NLS-1$

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -23,7 +22,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Ad Hoc Ordering</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getAdHocOrdering()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getAdHocOrdering()
  * @model extendedMetaData="name='tAdHocOrdering'"
  * @generated
  */
@@ -84,11 +83,8 @@ public enum AdHocOrdering implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    private static final AdHocOrdering[] VALUES_ARRAY =
-        new AdHocOrdering[] {
-            PARALLEL,
-            SEQUENTIAL,
-        };
+    private static final AdHocOrdering[] VALUES_ARRAY = new AdHocOrdering[] {
+            PARALLEL, SEQUENTIAL, };
 
     /**
      * A public read-only list of all the '<em><b>Ad Hoc Ordering</b></em>' enumerators.
@@ -96,7 +92,8 @@ public enum AdHocOrdering implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final List<AdHocOrdering> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+    public static final List<AdHocOrdering> VALUES = Collections
+            .unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
     /**
      * Returns the '<em><b>Ad Hoc Ordering</b></em>' literal with the specified literal value.
@@ -138,8 +135,10 @@ public enum AdHocOrdering implements Enumerator {
      */
     public static AdHocOrdering get(int value) {
         switch (value) {
-            case PARALLEL_VALUE: return PARALLEL;
-            case SEQUENTIAL_VALUE: return SEQUENTIAL;
+        case PARALLEL_VALUE:
+            return PARALLEL;
+        case SEQUENTIAL_VALUE:
+            return SEQUENTIAL;
         }
         return null;
     }
@@ -183,7 +182,7 @@ public enum AdHocOrdering implements Enumerator {
      * @generated
      */
     public int getValue() {
-      return value;
+        return value;
     }
 
     /**
@@ -192,7 +191,7 @@ public enum AdHocOrdering implements Enumerator {
      * @generated
      */
     public String getName() {
-      return name;
+        return name;
     }
 
     /**
@@ -201,7 +200,7 @@ public enum AdHocOrdering implements Enumerator {
      * @generated
      */
     public String getLiteral() {
-      return literal;
+        return literal;
     }
 
     /**
@@ -214,5 +213,5 @@ public enum AdHocOrdering implements Enumerator {
     public String toString() {
         return literal;
     }
-    
+
 } //AdHocOrdering

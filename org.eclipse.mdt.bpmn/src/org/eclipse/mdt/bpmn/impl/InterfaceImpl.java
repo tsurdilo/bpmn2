@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -27,9 +26,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Interface;
 import org.eclipse.mdt.bpmn.Operation;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -92,7 +91,7 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getInterface();
+        return BpmnPackage.eINSTANCE.getInterface();
     }
 
     /**
@@ -102,7 +101,8 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
      */
     public EList<Operation> getOperation() {
         if (operation == null) {
-            operation = new EObjectContainmentEList<Operation>(Operation.class, this, bpmnPackage.INTERFACE__OPERATION);
+            operation = new EObjectContainmentEList<Operation>(Operation.class,
+                    this, BpmnPackage.INTERFACE__OPERATION);
         }
         return operation;
     }
@@ -125,7 +125,8 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.INTERFACE__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.INTERFACE__NAME, oldName, name));
     }
 
     /**
@@ -134,10 +135,12 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.INTERFACE__OPERATION:
-                return ((InternalEList<?>)getOperation()).basicRemove(otherEnd, msgs);
+        case BpmnPackage.INTERFACE__OPERATION:
+            return ((InternalEList<?>) getOperation()).basicRemove(otherEnd,
+                    msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -150,10 +153,10 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.INTERFACE__OPERATION:
-                return getOperation();
-            case bpmnPackage.INTERFACE__NAME:
-                return getName();
+        case BpmnPackage.INTERFACE__OPERATION:
+            return getOperation();
+        case BpmnPackage.INTERFACE__NAME:
+            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -167,13 +170,13 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.INTERFACE__OPERATION:
-                getOperation().clear();
-                getOperation().addAll((Collection<? extends Operation>)newValue);
-                return;
-            case bpmnPackage.INTERFACE__NAME:
-                setName((String)newValue);
-                return;
+        case BpmnPackage.INTERFACE__OPERATION:
+            getOperation().clear();
+            getOperation().addAll((Collection<? extends Operation>) newValue);
+            return;
+        case BpmnPackage.INTERFACE__NAME:
+            setName((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -186,12 +189,12 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.INTERFACE__OPERATION:
-                getOperation().clear();
-                return;
-            case bpmnPackage.INTERFACE__NAME:
-                setName(NAME_EDEFAULT);
-                return;
+        case BpmnPackage.INTERFACE__OPERATION:
+            getOperation().clear();
+            return;
+        case BpmnPackage.INTERFACE__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -204,10 +207,11 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.INTERFACE__OPERATION:
-                return operation != null && !operation.isEmpty();
-            case bpmnPackage.INTERFACE__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case BpmnPackage.INTERFACE__OPERATION:
+            return operation != null && !operation.isEmpty();
+        case BpmnPackage.INTERFACE__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
+                    .equals(name);
         }
         return super.eIsSet(featureID);
     }
@@ -219,7 +223,8 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (name: "); //$NON-NLS-1$

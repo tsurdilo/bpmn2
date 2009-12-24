@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -20,8 +19,8 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.ParticipantAssociation;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,7 +36,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class ParticipantAssociationImpl extends BaseElementImpl implements ParticipantAssociation {
+public class ParticipantAssociationImpl extends BaseElementImpl implements
+        ParticipantAssociation {
     /**
      * The default value of the '{@link #getInnerParticipantRef() <em>Inner Participant Ref</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -94,7 +94,7 @@ public class ParticipantAssociationImpl extends BaseElementImpl implements Parti
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getParticipantAssociation();
+        return BpmnPackage.eINSTANCE.getParticipantAssociation();
     }
 
     /**
@@ -115,7 +115,9 @@ public class ParticipantAssociationImpl extends BaseElementImpl implements Parti
         QName oldInnerParticipantRef = innerParticipantRef;
         innerParticipantRef = newInnerParticipantRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF, oldInnerParticipantRef, innerParticipantRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF,
+                    oldInnerParticipantRef, innerParticipantRef));
     }
 
     /**
@@ -136,7 +138,9 @@ public class ParticipantAssociationImpl extends BaseElementImpl implements Parti
         QName oldOuterParticipantRef = outerParticipantRef;
         outerParticipantRef = newOuterParticipantRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF, oldOuterParticipantRef, outerParticipantRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF,
+                    oldOuterParticipantRef, outerParticipantRef));
     }
 
     /**
@@ -147,10 +151,10 @@ public class ParticipantAssociationImpl extends BaseElementImpl implements Parti
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF:
-                return getInnerParticipantRef();
-            case bpmnPackage.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF:
-                return getOuterParticipantRef();
+        case BpmnPackage.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF:
+            return getInnerParticipantRef();
+        case BpmnPackage.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF:
+            return getOuterParticipantRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -163,12 +167,12 @@ public class ParticipantAssociationImpl extends BaseElementImpl implements Parti
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF:
-                setInnerParticipantRef((QName)newValue);
-                return;
-            case bpmnPackage.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF:
-                setOuterParticipantRef((QName)newValue);
-                return;
+        case BpmnPackage.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF:
+            setInnerParticipantRef((QName) newValue);
+            return;
+        case BpmnPackage.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF:
+            setOuterParticipantRef((QName) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -181,12 +185,12 @@ public class ParticipantAssociationImpl extends BaseElementImpl implements Parti
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF:
-                setInnerParticipantRef(INNER_PARTICIPANT_REF_EDEFAULT);
-                return;
-            case bpmnPackage.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF:
-                setOuterParticipantRef(OUTER_PARTICIPANT_REF_EDEFAULT);
-                return;
+        case BpmnPackage.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF:
+            setInnerParticipantRef(INNER_PARTICIPANT_REF_EDEFAULT);
+            return;
+        case BpmnPackage.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF:
+            setOuterParticipantRef(OUTER_PARTICIPANT_REF_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -199,10 +203,14 @@ public class ParticipantAssociationImpl extends BaseElementImpl implements Parti
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF:
-                return INNER_PARTICIPANT_REF_EDEFAULT == null ? innerParticipantRef != null : !INNER_PARTICIPANT_REF_EDEFAULT.equals(innerParticipantRef);
-            case bpmnPackage.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF:
-                return OUTER_PARTICIPANT_REF_EDEFAULT == null ? outerParticipantRef != null : !OUTER_PARTICIPANT_REF_EDEFAULT.equals(outerParticipantRef);
+        case BpmnPackage.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF:
+            return INNER_PARTICIPANT_REF_EDEFAULT == null ? innerParticipantRef != null
+                    : !INNER_PARTICIPANT_REF_EDEFAULT
+                            .equals(innerParticipantRef);
+        case BpmnPackage.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF:
+            return OUTER_PARTICIPANT_REF_EDEFAULT == null ? outerParticipantRef != null
+                    : !OUTER_PARTICIPANT_REF_EDEFAULT
+                            .equals(outerParticipantRef);
         }
         return super.eIsSet(featureID);
     }
@@ -214,7 +222,8 @@ public class ParticipantAssociationImpl extends BaseElementImpl implements Parti
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (innerParticipantRef: "); //$NON-NLS-1$

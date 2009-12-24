@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -26,9 +25,9 @@ import org.eclipse.emf.ecore.util.BasicFeatureMap;
 import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Expression;
 import org.eclipse.mdt.bpmn.ResourceParameterBinding;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -45,7 +44,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class ResourceParameterBindingImpl extends BaseElementImpl implements ResourceParameterBinding {
+public class ResourceParameterBindingImpl extends BaseElementImpl implements
+        ResourceParameterBinding {
     /**
      * The cached value of the '{@link #getExpressionGroup() <em>Expression Group</em>}' attribute list.
      * <!-- begin-user-doc -->
@@ -92,7 +92,7 @@ public class ResourceParameterBindingImpl extends BaseElementImpl implements Res
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getResourceParameterBinding();
+        return BpmnPackage.eINSTANCE.getResourceParameterBinding();
     }
 
     /**
@@ -102,7 +102,8 @@ public class ResourceParameterBindingImpl extends BaseElementImpl implements Res
      */
     public FeatureMap getExpressionGroup() {
         if (expressionGroup == null) {
-            expressionGroup = new BasicFeatureMap(this, bpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION_GROUP);
+            expressionGroup = new BasicFeatureMap(this,
+                    BpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION_GROUP);
         }
         return expressionGroup;
     }
@@ -113,7 +114,9 @@ public class ResourceParameterBindingImpl extends BaseElementImpl implements Res
      * @generated
      */
     public Expression getExpression() {
-        return (Expression)getExpressionGroup().get(bpmnPackage.eINSTANCE.getResourceParameterBinding_Expression(), true);
+        return (Expression) getExpressionGroup().get(
+                BpmnPackage.eINSTANCE.getResourceParameterBinding_Expression(),
+                true);
     }
 
     /**
@@ -121,8 +124,11 @@ public class ResourceParameterBindingImpl extends BaseElementImpl implements Res
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetExpression(Expression newExpression, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getExpressionGroup()).basicAdd(bpmnPackage.eINSTANCE.getResourceParameterBinding_Expression(), newExpression, msgs);
+    public NotificationChain basicSetExpression(Expression newExpression,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getExpressionGroup()).basicAdd(
+                BpmnPackage.eINSTANCE.getResourceParameterBinding_Expression(),
+                newExpression, msgs);
     }
 
     /**
@@ -131,7 +137,8 @@ public class ResourceParameterBindingImpl extends BaseElementImpl implements Res
      * @generated
      */
     public void setExpression(Expression newExpression) {
-        ((FeatureMap.Internal)getExpressionGroup()).set(bpmnPackage.eINSTANCE.getResourceParameterBinding_Expression(), newExpression);
+        ((FeatureMap.Internal) getExpressionGroup()).set(BpmnPackage.eINSTANCE
+                .getResourceParameterBinding_Expression(), newExpression);
     }
 
     /**
@@ -152,7 +159,9 @@ public class ResourceParameterBindingImpl extends BaseElementImpl implements Res
         QName oldParameterRef = parameterRef;
         parameterRef = newParameterRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.RESOURCE_PARAMETER_BINDING__PARAMETER_REF, oldParameterRef, parameterRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.RESOURCE_PARAMETER_BINDING__PARAMETER_REF,
+                    oldParameterRef, parameterRef));
     }
 
     /**
@@ -161,12 +170,14 @@ public class ResourceParameterBindingImpl extends BaseElementImpl implements Res
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION_GROUP:
-                return ((InternalEList<?>)getExpressionGroup()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION:
-                return basicSetExpression(null, msgs);
+        case BpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION_GROUP:
+            return ((InternalEList<?>) getExpressionGroup()).basicRemove(
+                    otherEnd, msgs);
+        case BpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION:
+            return basicSetExpression(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -179,13 +190,14 @@ public class ResourceParameterBindingImpl extends BaseElementImpl implements Res
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION_GROUP:
-                if (coreType) return getExpressionGroup();
-                return ((FeatureMap.Internal)getExpressionGroup()).getWrapper();
-            case bpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION:
-                return getExpression();
-            case bpmnPackage.RESOURCE_PARAMETER_BINDING__PARAMETER_REF:
-                return getParameterRef();
+        case BpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION_GROUP:
+            if (coreType)
+                return getExpressionGroup();
+            return ((FeatureMap.Internal) getExpressionGroup()).getWrapper();
+        case BpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION:
+            return getExpression();
+        case BpmnPackage.RESOURCE_PARAMETER_BINDING__PARAMETER_REF:
+            return getParameterRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -198,15 +210,15 @@ public class ResourceParameterBindingImpl extends BaseElementImpl implements Res
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION_GROUP:
-                ((FeatureMap.Internal)getExpressionGroup()).set(newValue);
-                return;
-            case bpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION:
-                setExpression((Expression)newValue);
-                return;
-            case bpmnPackage.RESOURCE_PARAMETER_BINDING__PARAMETER_REF:
-                setParameterRef((QName)newValue);
-                return;
+        case BpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION_GROUP:
+            ((FeatureMap.Internal) getExpressionGroup()).set(newValue);
+            return;
+        case BpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION:
+            setExpression((Expression) newValue);
+            return;
+        case BpmnPackage.RESOURCE_PARAMETER_BINDING__PARAMETER_REF:
+            setParameterRef((QName) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -219,15 +231,15 @@ public class ResourceParameterBindingImpl extends BaseElementImpl implements Res
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION_GROUP:
-                getExpressionGroup().clear();
-                return;
-            case bpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION:
-                setExpression((Expression)null);
-                return;
-            case bpmnPackage.RESOURCE_PARAMETER_BINDING__PARAMETER_REF:
-                setParameterRef(PARAMETER_REF_EDEFAULT);
-                return;
+        case BpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION_GROUP:
+            getExpressionGroup().clear();
+            return;
+        case BpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION:
+            setExpression((Expression) null);
+            return;
+        case BpmnPackage.RESOURCE_PARAMETER_BINDING__PARAMETER_REF:
+            setParameterRef(PARAMETER_REF_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -240,12 +252,13 @@ public class ResourceParameterBindingImpl extends BaseElementImpl implements Res
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION_GROUP:
-                return expressionGroup != null && !expressionGroup.isEmpty();
-            case bpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION:
-                return getExpression() != null;
-            case bpmnPackage.RESOURCE_PARAMETER_BINDING__PARAMETER_REF:
-                return PARAMETER_REF_EDEFAULT == null ? parameterRef != null : !PARAMETER_REF_EDEFAULT.equals(parameterRef);
+        case BpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION_GROUP:
+            return expressionGroup != null && !expressionGroup.isEmpty();
+        case BpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION:
+            return getExpression() != null;
+        case BpmnPackage.RESOURCE_PARAMETER_BINDING__PARAMETER_REF:
+            return PARAMETER_REF_EDEFAULT == null ? parameterRef != null
+                    : !PARAMETER_REF_EDEFAULT.equals(parameterRef);
         }
         return super.eIsSet(featureID);
     }
@@ -257,7 +270,8 @@ public class ResourceParameterBindingImpl extends BaseElementImpl implements Res
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (expressionGroup: "); //$NON-NLS-1$

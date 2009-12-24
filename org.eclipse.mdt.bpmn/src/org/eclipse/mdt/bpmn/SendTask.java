@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -28,7 +27,7 @@ import javax.xml.namespace.QName;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getSendTask()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getSendTask()
  * @model extendedMetaData="name='tSendTask' kind='elementOnly'"
  * @generated
  */
@@ -48,7 +47,7 @@ public interface SendTask extends Task {
      * @see #isSetImplementation()
      * @see #unsetImplementation()
      * @see #setImplementation(ServiceImplementation)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getSendTask_Implementation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getSendTask_Implementation()
      * @model default="WebService" unsettable="true"
      *        extendedMetaData="kind='attribute' name='implementation'"
      * @generated
@@ -101,7 +100,7 @@ public interface SendTask extends Task {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Message Ref</em>' attribute.
      * @see #setMessageRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getSendTask_MessageRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getSendTask_MessageRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='messageRef'"
      * @generated
@@ -128,7 +127,7 @@ public interface SendTask extends Task {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Operation Ref</em>' attribute.
      * @see #setOperationRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getSendTask_OperationRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getSendTask_OperationRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='operationRef'"
      * @generated

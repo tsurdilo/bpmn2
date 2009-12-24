@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -31,7 +30,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getCallableElement()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getCallableElement()
  * @model extendedMetaData="name='tCallableElement' kind='elementOnly'"
  * @generated
  */
@@ -46,7 +45,7 @@ public interface CallableElement extends RootElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Supported Interface Ref</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCallableElement_SupportedInterfaceRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCallableElement_SupportedInterfaceRef()
      * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='element' name='supportedInterfaceRef' namespace='##targetNamespace'"
      * @generated
@@ -63,7 +62,7 @@ public interface CallableElement extends RootElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Io Specification</em>' containment reference.
      * @see #setIoSpecification(InputOutputSpecification)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCallableElement_IoSpecification()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCallableElement_IoSpecification()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='ioSpecification' namespace='##targetNamespace'"
      * @generated
@@ -90,7 +89,7 @@ public interface CallableElement extends RootElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Io Binding</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCallableElement_IoBinding()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCallableElement_IoBinding()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='ioBinding' namespace='##targetNamespace'"
      * @generated
@@ -107,7 +106,7 @@ public interface CallableElement extends RootElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCallableElement_Name()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCallableElement_Name()
      * @model dataType="org.eclipse.emf.ecore.xml.type.String"
      *        extendedMetaData="kind='attribute' name='name'"
      * @generated

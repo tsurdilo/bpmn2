@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -29,7 +28,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getChoreographyActivity()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getChoreographyActivity()
  * @model abstract="true"
  *        extendedMetaData="name='tChoreographyActivity' kind='elementOnly'"
  * @generated
@@ -45,7 +44,7 @@ public interface ChoreographyActivity extends FlowNode {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Participant Ref</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getChoreographyActivity_ParticipantRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getChoreographyActivity_ParticipantRef()
      * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.QName" lower="2"
      *        extendedMetaData="kind='element' name='participantRef' namespace='##targetNamespace'"
      * @generated
@@ -62,7 +61,7 @@ public interface ChoreographyActivity extends FlowNode {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Initiating Participant Ref</em>' attribute.
      * @see #setInitiatingParticipantRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getChoreographyActivity_InitiatingParticipantRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getChoreographyActivity_InitiatingParticipantRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName" required="true"
      *        extendedMetaData="kind='attribute' name='initiatingParticipantRef'"
      * @generated

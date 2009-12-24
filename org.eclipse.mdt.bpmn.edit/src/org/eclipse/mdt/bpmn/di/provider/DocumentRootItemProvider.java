@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di.provider;
 
@@ -31,9 +30,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.di.DIFactory;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 import org.eclipse.mdt.bpmn.di.DocumentRoot;
-import org.eclipse.mdt.bpmn.di.diFactory;
-import org.eclipse.mdt.bpmn.di.diPackage;
 
 import org.eclipse.mdt.bpmn.provider.bpmnEditPlugin;
 
@@ -84,12 +83,12 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements
             Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(diPackage.Literals.DOCUMENT_ROOT__BENDPOINT);
-            childrenFeatures.add(diPackage.Literals.DOCUMENT_ROOT__CONNECTOR);
-            childrenFeatures.add(diPackage.Literals.DOCUMENT_ROOT__VIEW);
-            childrenFeatures.add(diPackage.Literals.DOCUMENT_ROOT__DIAGRAM);
-            childrenFeatures.add(diPackage.Literals.DOCUMENT_ROOT__NODE);
-            childrenFeatures.add(diPackage.Literals.DOCUMENT_ROOT__STYLE);
+            childrenFeatures.add(DIPackage.Literals.DOCUMENT_ROOT__BENDPOINT);
+            childrenFeatures.add(DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR);
+            childrenFeatures.add(DIPackage.Literals.DOCUMENT_ROOT__VIEW);
+            childrenFeatures.add(DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM);
+            childrenFeatures.add(DIPackage.Literals.DOCUMENT_ROOT__NODE);
+            childrenFeatures.add(DIPackage.Literals.DOCUMENT_ROOT__STYLE);
         }
         return childrenFeatures;
     }
@@ -142,12 +141,12 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements
         updateChildren(notification);
 
         switch (notification.getFeatureID(DocumentRoot.class)) {
-        case diPackage.DOCUMENT_ROOT__BENDPOINT:
-        case diPackage.DOCUMENT_ROOT__CONNECTOR:
-        case diPackage.DOCUMENT_ROOT__VIEW:
-        case diPackage.DOCUMENT_ROOT__DIAGRAM:
-        case diPackage.DOCUMENT_ROOT__NODE:
-        case diPackage.DOCUMENT_ROOT__STYLE:
+        case DIPackage.DOCUMENT_ROOT__BENDPOINT:
+        case DIPackage.DOCUMENT_ROOT__CONNECTOR:
+        case DIPackage.DOCUMENT_ROOT__VIEW:
+        case DIPackage.DOCUMENT_ROOT__DIAGRAM:
+        case DIPackage.DOCUMENT_ROOT__NODE:
+        case DIPackage.DOCUMENT_ROOT__STYLE:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -168,35 +167,35 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
         newChildDescriptors.add(createChildParameter(
-                diPackage.Literals.DOCUMENT_ROOT__BENDPOINT,
-                diFactory.eINSTANCE.createBendpoint()));
+                DIPackage.Literals.DOCUMENT_ROOT__BENDPOINT,
+                DIFactory.eINSTANCE.createBendpoint()));
 
         newChildDescriptors.add(createChildParameter(
-                diPackage.Literals.DOCUMENT_ROOT__CONNECTOR,
-                diFactory.eINSTANCE.createConnector()));
+                DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR,
+                DIFactory.eINSTANCE.createConnector()));
 
         newChildDescriptors.add(createChildParameter(
-                diPackage.Literals.DOCUMENT_ROOT__VIEW, diFactory.eINSTANCE
+                DIPackage.Literals.DOCUMENT_ROOT__VIEW, DIFactory.eINSTANCE
                         .createConnector()));
 
         newChildDescriptors.add(createChildParameter(
-                diPackage.Literals.DOCUMENT_ROOT__VIEW, diFactory.eINSTANCE
+                DIPackage.Literals.DOCUMENT_ROOT__VIEW, DIFactory.eINSTANCE
                         .createDiagram()));
 
         newChildDescriptors.add(createChildParameter(
-                diPackage.Literals.DOCUMENT_ROOT__VIEW, diFactory.eINSTANCE
+                DIPackage.Literals.DOCUMENT_ROOT__VIEW, DIFactory.eINSTANCE
                         .createNode()));
 
         newChildDescriptors.add(createChildParameter(
-                diPackage.Literals.DOCUMENT_ROOT__DIAGRAM, diFactory.eINSTANCE
+                DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM, DIFactory.eINSTANCE
                         .createDiagram()));
 
         newChildDescriptors.add(createChildParameter(
-                diPackage.Literals.DOCUMENT_ROOT__NODE, diFactory.eINSTANCE
+                DIPackage.Literals.DOCUMENT_ROOT__NODE, DIFactory.eINSTANCE
                         .createNode()));
 
         newChildDescriptors.add(createChildParameter(
-                diPackage.Literals.DOCUMENT_ROOT__STYLE, diFactory.eINSTANCE
+                DIPackage.Literals.DOCUMENT_ROOT__STYLE, DIFactory.eINSTANCE
                         .createStyle()));
     }
 
@@ -212,10 +211,10 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements
         Object childFeature = feature;
         Object childObject = child;
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE;
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE;
 
         if (qualify) {
             return getString("_UI_CreateChild_text2", //$NON-NLS-1$

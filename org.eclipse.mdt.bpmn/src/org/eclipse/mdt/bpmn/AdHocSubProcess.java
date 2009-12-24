@@ -8,10 +8,8 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +25,7 @@ package org.eclipse.mdt.bpmn;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getAdHocSubProcess()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getAdHocSubProcess()
  * @model extendedMetaData="name='tAdHocSubProcess' kind='elementOnly'"
  * @generated
  */
@@ -42,7 +40,7 @@ public interface AdHocSubProcess extends SubProcess {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Completion Condition</em>' containment reference.
      * @see #setCompletionCondition(Expression)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getAdHocSubProcess_CompletionCondition()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getAdHocSubProcess_CompletionCondition()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='completionCondition' namespace='##targetNamespace'"
      * @generated
@@ -72,7 +70,7 @@ public interface AdHocSubProcess extends SubProcess {
      * @see #isSetCancelRemainingInstances()
      * @see #unsetCancelRemainingInstances()
      * @see #setCancelRemainingInstances(boolean)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getAdHocSubProcess_CancelRemainingInstances()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getAdHocSubProcess_CancelRemainingInstances()
      * @model default="true" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
      *        extendedMetaData="kind='attribute' name='cancelRemainingInstances'"
      * @generated
@@ -128,7 +126,7 @@ public interface AdHocSubProcess extends SubProcess {
      * @see #isSetOrdering()
      * @see #unsetOrdering()
      * @see #setOrdering(AdHocOrdering)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getAdHocSubProcess_Ordering()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getAdHocSubProcess_Ordering()
      * @model unsettable="true"
      *        extendedMetaData="kind='attribute' name='ordering'"
      * @generated

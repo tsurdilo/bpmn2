@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -31,7 +30,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getOperation()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getOperation()
  * @model extendedMetaData="name='tOperation' kind='elementOnly'"
  * @generated
  */
@@ -46,7 +45,7 @@ public interface Operation extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>In Message Ref</em>' attribute.
      * @see #setInMessageRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getOperation_InMessageRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getOperation_InMessageRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName" required="true"
      *        extendedMetaData="kind='element' name='inMessageRef' namespace='##targetNamespace'"
      * @generated
@@ -73,7 +72,7 @@ public interface Operation extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Out Message Ref</em>' attribute.
      * @see #setOutMessageRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getOperation_OutMessageRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getOperation_OutMessageRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='element' name='outMessageRef' namespace='##targetNamespace'"
      * @generated
@@ -100,7 +99,7 @@ public interface Operation extends BaseElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Error Ref</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getOperation_ErrorRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getOperation_ErrorRef()
      * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='element' name='errorRef' namespace='##targetNamespace'"
      * @generated
@@ -117,7 +116,7 @@ public interface Operation extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getOperation_Name()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getOperation_Name()
      * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
      *        extendedMetaData="kind='attribute' name='name'"
      * @generated

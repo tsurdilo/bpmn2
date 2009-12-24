@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -18,9 +17,9 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Gateway;
 import org.eclipse.mdt.bpmn.GatewayDirection;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -81,7 +80,7 @@ public class GatewayImpl extends FlowNodeImpl implements Gateway {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getGateway();
+        return BpmnPackage.eINSTANCE.getGateway();
     }
 
     /**
@@ -100,11 +99,15 @@ public class GatewayImpl extends FlowNodeImpl implements Gateway {
      */
     public void setGatewayDirection(GatewayDirection newGatewayDirection) {
         GatewayDirection oldGatewayDirection = gatewayDirection;
-        gatewayDirection = newGatewayDirection == null ? GATEWAY_DIRECTION_EDEFAULT : newGatewayDirection;
+        gatewayDirection = newGatewayDirection == null ? GATEWAY_DIRECTION_EDEFAULT
+                : newGatewayDirection;
         boolean oldGatewayDirectionESet = gatewayDirectionESet;
         gatewayDirectionESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.GATEWAY__GATEWAY_DIRECTION, oldGatewayDirection, gatewayDirection, !oldGatewayDirectionESet));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.GATEWAY__GATEWAY_DIRECTION,
+                    oldGatewayDirection, gatewayDirection,
+                    !oldGatewayDirectionESet));
     }
 
     /**
@@ -118,7 +121,10 @@ public class GatewayImpl extends FlowNodeImpl implements Gateway {
         gatewayDirection = GATEWAY_DIRECTION_EDEFAULT;
         gatewayDirectionESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, bpmnPackage.GATEWAY__GATEWAY_DIRECTION, oldGatewayDirection, GATEWAY_DIRECTION_EDEFAULT, oldGatewayDirectionESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET,
+                    BpmnPackage.GATEWAY__GATEWAY_DIRECTION,
+                    oldGatewayDirection, GATEWAY_DIRECTION_EDEFAULT,
+                    oldGatewayDirectionESet));
     }
 
     /**
@@ -138,8 +144,8 @@ public class GatewayImpl extends FlowNodeImpl implements Gateway {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.GATEWAY__GATEWAY_DIRECTION:
-                return getGatewayDirection();
+        case BpmnPackage.GATEWAY__GATEWAY_DIRECTION:
+            return getGatewayDirection();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -152,9 +158,9 @@ public class GatewayImpl extends FlowNodeImpl implements Gateway {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.GATEWAY__GATEWAY_DIRECTION:
-                setGatewayDirection((GatewayDirection)newValue);
-                return;
+        case BpmnPackage.GATEWAY__GATEWAY_DIRECTION:
+            setGatewayDirection((GatewayDirection) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -167,9 +173,9 @@ public class GatewayImpl extends FlowNodeImpl implements Gateway {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.GATEWAY__GATEWAY_DIRECTION:
-                unsetGatewayDirection();
-                return;
+        case BpmnPackage.GATEWAY__GATEWAY_DIRECTION:
+            unsetGatewayDirection();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -182,8 +188,8 @@ public class GatewayImpl extends FlowNodeImpl implements Gateway {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.GATEWAY__GATEWAY_DIRECTION:
-                return isSetGatewayDirection();
+        case BpmnPackage.GATEWAY__GATEWAY_DIRECTION:
+            return isSetGatewayDirection();
         }
         return super.eIsSet(featureID);
     }
@@ -195,11 +201,15 @@ public class GatewayImpl extends FlowNodeImpl implements Gateway {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (gatewayDirection: "); //$NON-NLS-1$
-        if (gatewayDirectionESet) result.append(gatewayDirection); else result.append("<unset>"); //$NON-NLS-1$
+        if (gatewayDirectionESet)
+            result.append(gatewayDirection);
+        else
+            result.append("<unset>"); //$NON-NLS-1$
         result.append(')');
         return result.toString();
     }

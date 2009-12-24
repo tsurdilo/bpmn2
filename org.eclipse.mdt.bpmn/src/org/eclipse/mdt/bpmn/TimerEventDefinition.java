@@ -8,10 +8,8 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +24,7 @@ package org.eclipse.mdt.bpmn;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getTimerEventDefinition()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getTimerEventDefinition()
  * @model extendedMetaData="name='tTimerEventDefinition' kind='elementOnly'"
  * @generated
  */
@@ -41,7 +39,7 @@ public interface TimerEventDefinition extends EventDefinition {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Time Date</em>' containment reference.
      * @see #setTimeDate(Expression)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getTimerEventDefinition_TimeDate()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getTimerEventDefinition_TimeDate()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='timeDate' namespace='##targetNamespace'"
      * @generated
@@ -68,7 +66,7 @@ public interface TimerEventDefinition extends EventDefinition {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Time Cycle</em>' containment reference.
      * @see #setTimeCycle(Expression)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getTimerEventDefinition_TimeCycle()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getTimerEventDefinition_TimeCycle()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='timeCycle' namespace='##targetNamespace'"
      * @generated

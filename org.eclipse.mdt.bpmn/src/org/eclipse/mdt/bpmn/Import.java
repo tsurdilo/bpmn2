@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -28,7 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getImport()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getImport()
  * @model extendedMetaData="name='tImport' kind='empty'"
  * @generated
  */
@@ -43,7 +42,7 @@ public interface Import extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Import Type</em>' attribute.
      * @see #setImportType(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getImport_ImportType()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getImport_ImportType()
      * @model dataType="org.eclipse.emf.ecore.xml.type.AnyURI" required="true"
      *        extendedMetaData="kind='attribute' name='importType'"
      * @generated
@@ -70,7 +69,7 @@ public interface Import extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Location</em>' attribute.
      * @see #setLocation(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getImport_Location()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getImport_Location()
      * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
      *        extendedMetaData="kind='attribute' name='location'"
      * @generated
@@ -97,7 +96,7 @@ public interface Import extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Namespace</em>' attribute.
      * @see #setNamespace(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getImport_Namespace()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getImport_Namespace()
      * @model dataType="org.eclipse.emf.ecore.xml.type.AnyURI" required="true"
      *        extendedMetaData="kind='attribute' name='namespace'"
      * @generated

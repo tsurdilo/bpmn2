@@ -8,10 +8,8 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +26,7 @@ package org.eclipse.mdt.bpmn;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getSequenceFlow()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getSequenceFlow()
  * @model extendedMetaData="name='tSequenceFlow' kind='elementOnly'"
  * @generated
  */
@@ -43,7 +41,7 @@ public interface SequenceFlow extends FlowElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Condition Expression</em>' containment reference.
      * @see #setConditionExpression(Expression)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getSequenceFlow_ConditionExpression()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getSequenceFlow_ConditionExpression()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='conditionExpression' namespace='##targetNamespace'"
      * @generated
@@ -73,7 +71,7 @@ public interface SequenceFlow extends FlowElement {
      * @see #isSetIsImmediate()
      * @see #unsetIsImmediate()
      * @see #setIsImmediate(boolean)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getSequenceFlow_IsImmediate()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getSequenceFlow_IsImmediate()
      * @model default="true" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
      *        extendedMetaData="kind='attribute' name='isImmediate'"
      * @generated
@@ -125,7 +123,7 @@ public interface SequenceFlow extends FlowElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Source Ref</em>' attribute.
      * @see #setSourceRef(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getSequenceFlow_SourceRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getSequenceFlow_SourceRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.IDREF" required="true"
      *        extendedMetaData="kind='attribute' name='sourceRef'"
      * @generated
@@ -152,7 +150,7 @@ public interface SequenceFlow extends FlowElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Target Ref</em>' attribute.
      * @see #setTargetRef(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getSequenceFlow_TargetRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getSequenceFlow_TargetRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.IDREF" required="true"
      *        extendedMetaData="kind='attribute' name='targetRef'"
      * @generated

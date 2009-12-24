@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di.impl;
 
@@ -38,24 +37,24 @@ import org.eclipse.mdt.bpmn.di.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class diFactoryImpl extends EFactoryImpl implements diFactory {
+public class DIFactoryImpl extends EFactoryImpl implements DIFactory {
     /**
      * Creates the default factory implementation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    public static diFactory init() {
+    public static DIFactory init() {
         try {
-            diFactory thediFactory = (diFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.omg.com/di/1.0.0"); //$NON-NLS-1$ 
-            if (thediFactory != null) {
-                return thediFactory;
+            DIFactory theDIFactory = (DIFactory) EPackage.Registry.INSTANCE
+                    .getEFactory("http://www.omg.com/di/1.0.0"); //$NON-NLS-1$ 
+            if (theDIFactory != null) {
+                return theDIFactory;
             }
-        }
-        catch (Exception exception) {
+        } catch (Exception exception) {
             EcorePlugin.INSTANCE.log(exception);
         }
-        return new diFactoryImpl();
+        return new DIFactoryImpl();
     }
 
     /**
@@ -64,7 +63,7 @@ public class diFactoryImpl extends EFactoryImpl implements diFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public diFactoryImpl() {
+    public DIFactoryImpl() {
         super();
     }
 
@@ -76,14 +75,21 @@ public class diFactoryImpl extends EFactoryImpl implements diFactory {
     @Override
     public EObject create(EClass eClass) {
         switch (eClass.getClassifierID()) {
-            case diPackage.BENDPOINT: return createBendpoint();
-            case diPackage.CONNECTOR: return createConnector();
-            case diPackage.DIAGRAM: return createDiagram();
-            case diPackage.DOCUMENT_ROOT: return createDocumentRoot();
-            case diPackage.NODE: return createNode();
-            case diPackage.STYLE: return createStyle();
-            default:
-                throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
+        case DIPackage.BENDPOINT:
+            return createBendpoint();
+        case DIPackage.CONNECTOR:
+            return createConnector();
+        case DIPackage.DIAGRAM:
+            return createDiagram();
+        case DIPackage.DOCUMENT_ROOT:
+            return createDocumentRoot();
+        case DIPackage.NODE:
+            return createNode();
+        case DIPackage.STYLE:
+            return createStyle();
+        default:
+            throw new IllegalArgumentException(
+                    "The class '" + eClass.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
         }
     }
 
@@ -95,14 +101,15 @@ public class diFactoryImpl extends EFactoryImpl implements diFactory {
     @Override
     public Object createFromString(EDataType eDataType, String initialValue) {
         switch (eDataType.getClassifierID()) {
-            case diPackage.DEFINITION_TYPE:
-                return createDefinitionTypeFromString(eDataType, initialValue);
-            case diPackage.SOURCE_CONNECTOR_TYPE:
-                return createSourceConnectorTypeFromString(eDataType, initialValue);
-            case diPackage.TARGET_CONNECTOR_TYPE:
-                return createTargetConnectorTypeFromString(eDataType, initialValue);
-            default:
-                throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
+        case DIPackage.DEFINITION_TYPE:
+            return createDefinitionTypeFromString(eDataType, initialValue);
+        case DIPackage.SOURCE_CONNECTOR_TYPE:
+            return createSourceConnectorTypeFromString(eDataType, initialValue);
+        case DIPackage.TARGET_CONNECTOR_TYPE:
+            return createTargetConnectorTypeFromString(eDataType, initialValue);
+        default:
+            throw new IllegalArgumentException(
+                    "The datatype '" + eDataType.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
         }
     }
 
@@ -114,14 +121,15 @@ public class diFactoryImpl extends EFactoryImpl implements diFactory {
     @Override
     public String convertToString(EDataType eDataType, Object instanceValue) {
         switch (eDataType.getClassifierID()) {
-            case diPackage.DEFINITION_TYPE:
-                return convertDefinitionTypeToString(eDataType, instanceValue);
-            case diPackage.SOURCE_CONNECTOR_TYPE:
-                return convertSourceConnectorTypeToString(eDataType, instanceValue);
-            case diPackage.TARGET_CONNECTOR_TYPE:
-                return convertTargetConnectorTypeToString(eDataType, instanceValue);
-            default:
-                throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
+        case DIPackage.DEFINITION_TYPE:
+            return convertDefinitionTypeToString(eDataType, instanceValue);
+        case DIPackage.SOURCE_CONNECTOR_TYPE:
+            return convertSourceConnectorTypeToString(eDataType, instanceValue);
+        case DIPackage.TARGET_CONNECTOR_TYPE:
+            return convertTargetConnectorTypeToString(eDataType, instanceValue);
+        default:
+            throw new IllegalArgumentException(
+                    "The datatype '" + eDataType.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
         }
     }
 
@@ -190,12 +198,16 @@ public class diFactoryImpl extends EFactoryImpl implements diFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public List<QName> createDefinitionTypeFromString(EDataType eDataType, String initialValue) {
-        if (initialValue == null) return null;
+    public List<QName> createDefinitionTypeFromString(EDataType eDataType,
+            String initialValue) {
+        if (initialValue == null)
+            return null;
         List<QName> result = new ArrayList<QName>();
-        for (StringTokenizer stringTokenizer = new StringTokenizer(initialValue); stringTokenizer.hasMoreTokens(); ) {
+        for (StringTokenizer stringTokenizer = new StringTokenizer(initialValue); stringTokenizer
+                .hasMoreTokens();) {
             String item = stringTokenizer.nextToken();
-            result.add((QName)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.QNAME, item));
+            result.add((QName) XMLTypeFactory.eINSTANCE.createFromString(
+                    XMLTypePackage.Literals.QNAME, item));
         }
         return result;
     }
@@ -205,13 +217,17 @@ public class diFactoryImpl extends EFactoryImpl implements diFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String convertDefinitionTypeToString(EDataType eDataType, Object instanceValue) {
-        if (instanceValue == null) return null;
-        List<?> list = (List<?>)instanceValue;
-        if (list.isEmpty()) return "";
+    public String convertDefinitionTypeToString(EDataType eDataType,
+            Object instanceValue) {
+        if (instanceValue == null)
+            return null;
+        List<?> list = (List<?>) instanceValue;
+        if (list.isEmpty())
+            return "";
         StringBuffer result = new StringBuffer();
         for (Object item : list) {
-            result.append(XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.QNAME, item));
+            result.append(XMLTypeFactory.eINSTANCE.convertToString(
+                    XMLTypePackage.Literals.QNAME, item));
             result.append(' ');
         }
         return result.substring(0, result.length() - 1);
@@ -222,12 +238,16 @@ public class diFactoryImpl extends EFactoryImpl implements diFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public List<String> createSourceConnectorTypeFromString(EDataType eDataType, String initialValue) {
-        if (initialValue == null) return null;
+    public List<String> createSourceConnectorTypeFromString(
+            EDataType eDataType, String initialValue) {
+        if (initialValue == null)
+            return null;
         List<String> result = new ArrayList<String>();
-        for (StringTokenizer stringTokenizer = new StringTokenizer(initialValue); stringTokenizer.hasMoreTokens(); ) {
+        for (StringTokenizer stringTokenizer = new StringTokenizer(initialValue); stringTokenizer
+                .hasMoreTokens();) {
             String item = stringTokenizer.nextToken();
-            result.add((String)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.ANY_URI, item));
+            result.add((String) XMLTypeFactory.eINSTANCE.createFromString(
+                    XMLTypePackage.Literals.ANY_URI, item));
         }
         return result;
     }
@@ -237,13 +257,17 @@ public class diFactoryImpl extends EFactoryImpl implements diFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String convertSourceConnectorTypeToString(EDataType eDataType, Object instanceValue) {
-        if (instanceValue == null) return null;
-        List<?> list = (List<?>)instanceValue;
-        if (list.isEmpty()) return "";
+    public String convertSourceConnectorTypeToString(EDataType eDataType,
+            Object instanceValue) {
+        if (instanceValue == null)
+            return null;
+        List<?> list = (List<?>) instanceValue;
+        if (list.isEmpty())
+            return "";
         StringBuffer result = new StringBuffer();
         for (Object item : list) {
-            result.append(XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.ANY_URI, item));
+            result.append(XMLTypeFactory.eINSTANCE.convertToString(
+                    XMLTypePackage.Literals.ANY_URI, item));
             result.append(' ');
         }
         return result.substring(0, result.length() - 1);
@@ -254,12 +278,16 @@ public class diFactoryImpl extends EFactoryImpl implements diFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public List<String> createTargetConnectorTypeFromString(EDataType eDataType, String initialValue) {
-        if (initialValue == null) return null;
+    public List<String> createTargetConnectorTypeFromString(
+            EDataType eDataType, String initialValue) {
+        if (initialValue == null)
+            return null;
         List<String> result = new ArrayList<String>();
-        for (StringTokenizer stringTokenizer = new StringTokenizer(initialValue); stringTokenizer.hasMoreTokens(); ) {
+        for (StringTokenizer stringTokenizer = new StringTokenizer(initialValue); stringTokenizer
+                .hasMoreTokens();) {
             String item = stringTokenizer.nextToken();
-            result.add((String)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.ANY_URI, item));
+            result.add((String) XMLTypeFactory.eINSTANCE.createFromString(
+                    XMLTypePackage.Literals.ANY_URI, item));
         }
         return result;
     }
@@ -269,13 +297,17 @@ public class diFactoryImpl extends EFactoryImpl implements diFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String convertTargetConnectorTypeToString(EDataType eDataType, Object instanceValue) {
-        if (instanceValue == null) return null;
-        List<?> list = (List<?>)instanceValue;
-        if (list.isEmpty()) return "";
+    public String convertTargetConnectorTypeToString(EDataType eDataType,
+            Object instanceValue) {
+        if (instanceValue == null)
+            return null;
+        List<?> list = (List<?>) instanceValue;
+        if (list.isEmpty())
+            return "";
         StringBuffer result = new StringBuffer();
         for (Object item : list) {
-            result.append(XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.ANY_URI, item));
+            result.append(XMLTypeFactory.eINSTANCE.convertToString(
+                    XMLTypePackage.Literals.ANY_URI, item));
             result.append(' ');
         }
         return result.substring(0, result.length() - 1);
@@ -286,8 +318,8 @@ public class diFactoryImpl extends EFactoryImpl implements diFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public diPackage getdiPackage() {
-        return (diPackage)getEPackage();
+    public DIPackage getDIPackage() {
+        return (DIPackage) getEPackage();
     }
 
     /**
@@ -297,8 +329,8 @@ public class diFactoryImpl extends EFactoryImpl implements diFactory {
      * @generated
      */
     @Deprecated
-    public static diPackage getPackage() {
-        return diPackage.eINSTANCE;
+    public static DIPackage getPackage() {
+        return DIPackage.eINSTANCE;
     }
 
-} //diFactoryImpl
+} //DIFactoryImpl

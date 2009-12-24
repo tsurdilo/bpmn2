@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -30,7 +29,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getOutputSet()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getOutputSet()
  * @model extendedMetaData="name='tOutputSet' kind='elementOnly'"
  * @generated
  */
@@ -45,7 +44,7 @@ public interface OutputSet extends BaseElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data Output Refs</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getOutputSet_DataOutputRefs()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getOutputSet_DataOutputRefs()
      * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.IDREF"
      *        extendedMetaData="kind='element' name='dataOutputRefs' namespace='##targetNamespace'"
      * @generated
@@ -62,7 +61,7 @@ public interface OutputSet extends BaseElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Optional Output Refs</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getOutputSet_OptionalOutputRefs()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getOutputSet_OptionalOutputRefs()
      * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.IDREF"
      *        extendedMetaData="kind='element' name='optionalOutputRefs' namespace='##targetNamespace'"
      * @generated
@@ -79,7 +78,7 @@ public interface OutputSet extends BaseElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>While Executing Output Refs</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getOutputSet_WhileExecutingOutputRefs()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getOutputSet_WhileExecutingOutputRefs()
      * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.IDREF"
      *        extendedMetaData="kind='element' name='whileExecutingOutputRefs' namespace='##targetNamespace'"
      * @generated
@@ -96,7 +95,7 @@ public interface OutputSet extends BaseElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Input Set Refs</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getOutputSet_InputSetRefs()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getOutputSet_InputSetRefs()
      * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.IDREF"
      *        extendedMetaData="kind='element' name='inputSetRefs' namespace='##targetNamespace'"
      * @generated
@@ -113,7 +112,7 @@ public interface OutputSet extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getOutputSet_Name()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getOutputSet_Name()
      * @model dataType="org.eclipse.emf.ecore.xml.type.String"
      *        extendedMetaData="kind='attribute' name='name'"
      * @generated

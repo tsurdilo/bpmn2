@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -20,8 +19,8 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.ErrorEventDefinition;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,7 +36,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements ErrorEventDefinition {
+public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements
+        ErrorEventDefinition {
     /**
      * The default value of the '{@link #getErrorCode() <em>Error Code</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -94,7 +94,7 @@ public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements Err
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getErrorEventDefinition();
+        return BpmnPackage.eINSTANCE.getErrorEventDefinition();
     }
 
     /**
@@ -115,7 +115,9 @@ public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements Err
         String oldErrorCode = errorCode;
         errorCode = newErrorCode;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.ERROR_EVENT_DEFINITION__ERROR_CODE, oldErrorCode, errorCode));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.ERROR_EVENT_DEFINITION__ERROR_CODE,
+                    oldErrorCode, errorCode));
     }
 
     /**
@@ -136,7 +138,9 @@ public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements Err
         QName oldErrorRef = errorRef;
         errorRef = newErrorRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.ERROR_EVENT_DEFINITION__ERROR_REF, oldErrorRef, errorRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.ERROR_EVENT_DEFINITION__ERROR_REF, oldErrorRef,
+                    errorRef));
     }
 
     /**
@@ -147,10 +151,10 @@ public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements Err
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.ERROR_EVENT_DEFINITION__ERROR_CODE:
-                return getErrorCode();
-            case bpmnPackage.ERROR_EVENT_DEFINITION__ERROR_REF:
-                return getErrorRef();
+        case BpmnPackage.ERROR_EVENT_DEFINITION__ERROR_CODE:
+            return getErrorCode();
+        case BpmnPackage.ERROR_EVENT_DEFINITION__ERROR_REF:
+            return getErrorRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -163,12 +167,12 @@ public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements Err
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.ERROR_EVENT_DEFINITION__ERROR_CODE:
-                setErrorCode((String)newValue);
-                return;
-            case bpmnPackage.ERROR_EVENT_DEFINITION__ERROR_REF:
-                setErrorRef((QName)newValue);
-                return;
+        case BpmnPackage.ERROR_EVENT_DEFINITION__ERROR_CODE:
+            setErrorCode((String) newValue);
+            return;
+        case BpmnPackage.ERROR_EVENT_DEFINITION__ERROR_REF:
+            setErrorRef((QName) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -181,12 +185,12 @@ public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements Err
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.ERROR_EVENT_DEFINITION__ERROR_CODE:
-                setErrorCode(ERROR_CODE_EDEFAULT);
-                return;
-            case bpmnPackage.ERROR_EVENT_DEFINITION__ERROR_REF:
-                setErrorRef(ERROR_REF_EDEFAULT);
-                return;
+        case BpmnPackage.ERROR_EVENT_DEFINITION__ERROR_CODE:
+            setErrorCode(ERROR_CODE_EDEFAULT);
+            return;
+        case BpmnPackage.ERROR_EVENT_DEFINITION__ERROR_REF:
+            setErrorRef(ERROR_REF_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -199,10 +203,12 @@ public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements Err
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.ERROR_EVENT_DEFINITION__ERROR_CODE:
-                return ERROR_CODE_EDEFAULT == null ? errorCode != null : !ERROR_CODE_EDEFAULT.equals(errorCode);
-            case bpmnPackage.ERROR_EVENT_DEFINITION__ERROR_REF:
-                return ERROR_REF_EDEFAULT == null ? errorRef != null : !ERROR_REF_EDEFAULT.equals(errorRef);
+        case BpmnPackage.ERROR_EVENT_DEFINITION__ERROR_CODE:
+            return ERROR_CODE_EDEFAULT == null ? errorCode != null
+                    : !ERROR_CODE_EDEFAULT.equals(errorCode);
+        case BpmnPackage.ERROR_EVENT_DEFINITION__ERROR_REF:
+            return ERROR_REF_EDEFAULT == null ? errorRef != null
+                    : !ERROR_REF_EDEFAULT.equals(errorRef);
         }
         return super.eIsSet(featureID);
     }
@@ -214,7 +220,8 @@ public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements Err
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (errorCode: "); //$NON-NLS-1$

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -27,7 +26,7 @@ import javax.xml.namespace.QName;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getErrorEventDefinition()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getErrorEventDefinition()
  * @model extendedMetaData="name='tErrorEventDefinition' kind='elementOnly'"
  * @generated
  */
@@ -42,7 +41,7 @@ public interface ErrorEventDefinition extends EventDefinition {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Error Code</em>' attribute.
      * @see #setErrorCode(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getErrorEventDefinition_ErrorCode()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getErrorEventDefinition_ErrorCode()
      * @model dataType="org.eclipse.emf.ecore.xml.type.String"
      *        extendedMetaData="kind='attribute' name='errorCode'"
      * @generated
@@ -69,7 +68,7 @@ public interface ErrorEventDefinition extends EventDefinition {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Error Ref</em>' attribute.
      * @see #setErrorRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getErrorEventDefinition_ErrorRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getErrorEventDefinition_ErrorRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='errorRef'"
      * @generated

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -28,7 +27,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getChoreographyTask()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getChoreographyTask()
  * @model extendedMetaData="name='tChoreographyTask' kind='elementOnly'"
  * @generated
  */
@@ -43,7 +42,7 @@ public interface ChoreographyTask extends ChoreographyActivity {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Message Flow Ref</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getChoreographyTask_MessageFlowRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getChoreographyTask_MessageFlowRef()
      * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.QName" required="true"
      *        extendedMetaData="kind='element' name='messageFlowRef' namespace='##targetNamespace'"
      * @generated

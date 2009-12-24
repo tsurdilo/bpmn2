@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di.provider;
 
@@ -32,7 +31,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.mdt.bpmn.di.Bendpoint;
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 import org.eclipse.mdt.bpmn.provider.bpmnEditPlugin;
 
@@ -89,7 +88,7 @@ public class BendpointItemProvider extends ItemProviderAdapter implements
                         getString("_UI_Bendpoint_sourceX_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Bendpoint_sourceX_feature", "_UI_Bendpoint_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        diPackage.Literals.BENDPOINT__SOURCE_X, true, false,
+                        DIPackage.Literals.BENDPOINT__SOURCE_X, true, false,
                         false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
                         null, null));
     }
@@ -109,7 +108,7 @@ public class BendpointItemProvider extends ItemProviderAdapter implements
                         getString("_UI_Bendpoint_sourceY_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Bendpoint_sourceY_feature", "_UI_Bendpoint_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        diPackage.Literals.BENDPOINT__SOURCE_Y, true, false,
+                        DIPackage.Literals.BENDPOINT__SOURCE_Y, true, false,
                         false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
                         null, null));
     }
@@ -129,7 +128,7 @@ public class BendpointItemProvider extends ItemProviderAdapter implements
                         getString("_UI_Bendpoint_targetX_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Bendpoint_targetX_feature", "_UI_Bendpoint_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        diPackage.Literals.BENDPOINT__TARGET_X, true, false,
+                        DIPackage.Literals.BENDPOINT__TARGET_X, true, false,
                         false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
                         null, null));
     }
@@ -149,7 +148,7 @@ public class BendpointItemProvider extends ItemProviderAdapter implements
                         getString("_UI_Bendpoint_targetY_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Bendpoint_targetY_feature", "_UI_Bendpoint_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        diPackage.Literals.BENDPOINT__TARGET_Y, true, false,
+                        DIPackage.Literals.BENDPOINT__TARGET_Y, true, false,
                         false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
                         null, null));
     }
@@ -190,10 +189,10 @@ public class BendpointItemProvider extends ItemProviderAdapter implements
         updateChildren(notification);
 
         switch (notification.getFeatureID(Bendpoint.class)) {
-        case diPackage.BENDPOINT__SOURCE_X:
-        case diPackage.BENDPOINT__SOURCE_Y:
-        case diPackage.BENDPOINT__TARGET_X:
-        case diPackage.BENDPOINT__TARGET_Y:
+        case DIPackage.BENDPOINT__SOURCE_X:
+        case DIPackage.BENDPOINT__SOURCE_Y:
+        case DIPackage.BENDPOINT__TARGET_X:
+        case DIPackage.BENDPOINT__TARGET_Y:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;

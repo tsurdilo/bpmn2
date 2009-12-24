@@ -5,12 +5,13 @@
     modelDirectory="/org.eclipse.mdt.bpmn/src" modelPluginID="org.eclipse.mdt.bpmn"
     templateDirectory="org.eclipse.mdt.bpmn/templates" dynamicTemplates="true" redirection=""
     forceOverwrite="true" modelName="bpmn" editPluginClass="org.eclipse.mdt.bpmn.provider.bpmnEditPlugin"
-    editorPluginClass="org.eclipse.mdt.bpmn.presentation.bpmnEditorPlugin" nonNLSMarkers="true"
+    editorPluginClass="org.eclipse.mdt.bpmn.presentation.BpmnEditorPlugin" nonNLSMarkers="true"
     codeFormatting="true" testSuiteClass="org.eclipse.mdt.bpmn.tests.bpmnAllTests"
     importerID="org.eclipse.xsd.ecore.importer" complianceLevel="5.0" copyrightFields="false">
   <foreignModel>BPMN20.xsd</foreignModel>
-  <genPackages prefix="bpmn" basePackage="org.eclipse.mdt" resource="XML" disposableProviderFactory="true"
-      loadInitialization="true" literalsInterface="false" ecorePackage="bpmn.ecore#/">
+  <genPackages prefix="Bpmn" basePackage="org.eclipse.mdt" resource="XML" disposableProviderFactory="true"
+      loadInitialization="true" literalsInterface="false" contentTypeIdentifier="org.eclipse.mdt.bpmn.content-type"
+      ecorePackage="bpmn.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="bpmn.ecore#//AdHocOrdering">
       <genEnumLiterals ecoreEnumLiteral="bpmn.ecore#//AdHocOrdering/parallel"/>
       <genEnumLiterals ecoreEnumLiteral="bpmn.ecore#//AdHocOrdering/sequential"/>
@@ -795,7 +796,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bpmn.ecore#//UserTask/implementation"/>
     </genClasses>
   </genPackages>
-  <genPackages prefix="di" basePackage="org.eclipse.mdt.bpmn" resource="XML" disposableProviderFactory="true"
+  <genPackages prefix="DI" basePackage="org.eclipse.mdt.bpmn" resource="XML" disposableProviderFactory="true"
       ecorePackage="di.ecore#/">
     <genDataTypes ecoreDataType="di.ecore#//DefinitionType"/>
     <genDataTypes ecoreDataType="di.ecore#//SourceConnectorType"/>

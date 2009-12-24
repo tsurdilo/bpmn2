@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -30,7 +29,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getLane()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getLane()
  * @model extendedMetaData="name='tLane' kind='elementOnly'"
  * @generated
  */
@@ -45,7 +44,7 @@ public interface Lane extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Partition Element</em>' containment reference.
      * @see #setPartitionElement(BaseElement)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getLane_PartitionElement()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getLane_PartitionElement()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='partitionElement' namespace='##targetNamespace'"
      * @generated
@@ -72,7 +71,7 @@ public interface Lane extends BaseElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Flow Element Ref</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getLane_FlowElementRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getLane_FlowElementRef()
      * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.IDREF"
      *        extendedMetaData="kind='element' name='flowElementRef' namespace='##targetNamespace'"
      * @generated
@@ -89,7 +88,7 @@ public interface Lane extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Child Lane Set</em>' containment reference.
      * @see #setChildLaneSet(LaneSet)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getLane_ChildLaneSet()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getLane_ChildLaneSet()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='childLaneSet' namespace='##targetNamespace'"
      * @generated
@@ -116,7 +115,7 @@ public interface Lane extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getLane_Name()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getLane_Name()
      * @model dataType="org.eclipse.emf.ecore.xml.type.String"
      *        extendedMetaData="kind='attribute' name='name'"
      * @generated
@@ -143,7 +142,7 @@ public interface Lane extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Partition Element Ref</em>' attribute.
      * @see #setPartitionElementRef(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getLane_PartitionElementRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getLane_PartitionElementRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.IDREF"
      *        extendedMetaData="kind='attribute' name='partitionElementRef'"
      * @generated

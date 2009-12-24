@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -27,7 +26,7 @@ import javax.xml.namespace.QName;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getCorrelationPropertyBinding()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getCorrelationPropertyBinding()
  * @model extendedMetaData="name='tCorrelationPropertyBinding' kind='elementOnly'"
  * @generated
  */
@@ -42,7 +41,7 @@ public interface CorrelationPropertyBinding extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data Path</em>' containment reference.
      * @see #setDataPath(FormalExpression)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCorrelationPropertyBinding_DataPath()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCorrelationPropertyBinding_DataPath()
      * @model containment="true" required="true"
      *        extendedMetaData="kind='element' name='dataPath' namespace='##targetNamespace'"
      * @generated
@@ -69,7 +68,7 @@ public interface CorrelationPropertyBinding extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Correlation Property Ref</em>' attribute.
      * @see #setCorrelationPropertyRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCorrelationPropertyBinding_CorrelationPropertyRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCorrelationPropertyBinding_CorrelationPropertyRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName" required="true"
      *        extendedMetaData="kind='attribute' name='correlationPropertyRef'"
      * @generated

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -31,7 +30,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getRelationship()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getRelationship()
  * @model extendedMetaData="name='tRelationship' kind='elementOnly'"
  * @generated
  */
@@ -46,7 +45,7 @@ public interface Relationship extends BaseElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Source</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getRelationship_Source()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getRelationship_Source()
      * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.QName" required="true"
      *        extendedMetaData="kind='element' name='source' namespace='##targetNamespace'"
      * @generated
@@ -63,7 +62,7 @@ public interface Relationship extends BaseElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Target</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getRelationship_Target()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getRelationship_Target()
      * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.QName" required="true"
      *        extendedMetaData="kind='element' name='target' namespace='##targetNamespace'"
      * @generated
@@ -84,7 +83,7 @@ public interface Relationship extends BaseElement {
      * @see #isSetDirection()
      * @see #unsetDirection()
      * @see #setDirection(RelationshipDirection)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getRelationship_Direction()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getRelationship_Direction()
      * @model unsettable="true"
      *        extendedMetaData="kind='attribute' name='direction'"
      * @generated
@@ -137,7 +136,7 @@ public interface Relationship extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Type</em>' attribute.
      * @see #setType(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getRelationship_Type()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getRelationship_Type()
      * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
      *        extendedMetaData="kind='attribute' name='type'"
      * @generated

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -33,10 +32,10 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Operation;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.Operation} object.
@@ -91,7 +90,7 @@ public class OperationItemProvider extends BaseElementItemProvider implements
                         getString("_UI_Operation_inMessageRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Operation_inMessageRef_feature", "_UI_Operation_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getOperation_InMessageRef(),
+                        BpmnPackage.eINSTANCE.getOperation_InMessageRef(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -111,7 +110,7 @@ public class OperationItemProvider extends BaseElementItemProvider implements
                         getString("_UI_Operation_outMessageRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Operation_outMessageRef_feature", "_UI_Operation_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getOperation_OutMessageRef(),
+                        BpmnPackage.eINSTANCE.getOperation_OutMessageRef(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -131,7 +130,7 @@ public class OperationItemProvider extends BaseElementItemProvider implements
                         getString("_UI_Operation_errorRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Operation_errorRef_feature", "_UI_Operation_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getOperation_ErrorRef(), true,
+                        BpmnPackage.eINSTANCE.getOperation_ErrorRef(), true,
                         false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -151,7 +150,7 @@ public class OperationItemProvider extends BaseElementItemProvider implements
                         getString("_UI_Operation_name_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Operation_name_feature", "_UI_Operation_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getOperation_Name(), true, false,
+                        BpmnPackage.eINSTANCE.getOperation_Name(), true, false,
                         false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                         null, null));
     }
@@ -193,10 +192,10 @@ public class OperationItemProvider extends BaseElementItemProvider implements
         updateChildren(notification);
 
         switch (notification.getFeatureID(Operation.class)) {
-        case bpmnPackage.OPERATION__IN_MESSAGE_REF:
-        case bpmnPackage.OPERATION__OUT_MESSAGE_REF:
-        case bpmnPackage.OPERATION__ERROR_REF:
-        case bpmnPackage.OPERATION__NAME:
+        case BpmnPackage.OPERATION__IN_MESSAGE_REF:
+        case BpmnPackage.OPERATION__OUT_MESSAGE_REF:
+        case BpmnPackage.OPERATION__ERROR_REF:
+        case BpmnPackage.OPERATION__NAME:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
@@ -237,10 +236,10 @@ public class OperationItemProvider extends BaseElementItemProvider implements
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE;
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE;
 
         if (qualify) {
             return getString("_UI_CreateChild_text2", //$NON-NLS-1$

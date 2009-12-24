@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -34,10 +33,10 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.mdt.bpmn.ActivityResource;
-import org.eclipse.mdt.bpmn.bpmnFactory;
-import org.eclipse.mdt.bpmn.bpmnPackage;
+import org.eclipse.mdt.bpmn.BpmnFactory;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.ActivityResource} object.
@@ -89,7 +88,7 @@ public class ActivityResourceItemProvider extends BaseElementItemProvider
                         getString("_UI_ActivityResource_resourceRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_ActivityResource_resourceRef_feature", "_UI_ActivityResource_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getActivityResource_ResourceRef(),
+                        BpmnPackage.eINSTANCE.getActivityResource_ResourceRef(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -107,9 +106,9 @@ public class ActivityResourceItemProvider extends BaseElementItemProvider
             Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getActivityResource_ResourceAssignmentExpression());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getActivityResource_ResourceParameterBinding());
         }
         return childrenFeatures;
@@ -165,12 +164,12 @@ public class ActivityResourceItemProvider extends BaseElementItemProvider
         updateChildren(notification);
 
         switch (notification.getFeatureID(ActivityResource.class)) {
-        case bpmnPackage.ACTIVITY_RESOURCE__RESOURCE_REF:
+        case BpmnPackage.ACTIVITY_RESOURCE__RESOURCE_REF:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
-        case bpmnPackage.ACTIVITY_RESOURCE__RESOURCE_ASSIGNMENT_EXPRESSION:
-        case bpmnPackage.ACTIVITY_RESOURCE__RESOURCE_PARAMETER_BINDING:
+        case BpmnPackage.ACTIVITY_RESOURCE__RESOURCE_ASSIGNMENT_EXPRESSION:
+        case BpmnPackage.ACTIVITY_RESOURCE__RESOURCE_PARAMETER_BINDING:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -190,13 +189,13 @@ public class ActivityResourceItemProvider extends BaseElementItemProvider
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getActivityResource_ResourceAssignmentExpression(),
-                bpmnFactory.eINSTANCE.createResourceAssignmentExpression()));
+                BpmnFactory.eINSTANCE.createResourceAssignmentExpression()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getActivityResource_ResourceParameterBinding(),
-                bpmnFactory.eINSTANCE.createResourceParameterBinding()));
+                BpmnFactory.eINSTANCE.createResourceParameterBinding()));
     }
 
     /**
@@ -219,10 +218,10 @@ public class ActivityResourceItemProvider extends BaseElementItemProvider
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE;
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE;
 
         if (qualify) {
             return getString("_UI_CreateChild_text2", //$NON-NLS-1$

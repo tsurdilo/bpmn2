@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -26,8 +25,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.ChoreographyActivity;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,7 +42,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements ChoreographyActivity {
+public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements
+        ChoreographyActivity {
     /**
      * The cached value of the '{@link #getParticipantRef() <em>Participant Ref</em>}' attribute list.
      * <!-- begin-user-doc -->
@@ -90,7 +90,7 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements C
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getChoreographyActivity();
+        return BpmnPackage.eINSTANCE.getChoreographyActivity();
     }
 
     /**
@@ -100,7 +100,8 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements C
      */
     public EList<QName> getParticipantRef() {
         if (participantRef == null) {
-            participantRef = new EDataTypeEList<QName>(QName.class, this, bpmnPackage.CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REF);
+            participantRef = new EDataTypeEList<QName>(QName.class, this,
+                    BpmnPackage.CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REF);
         }
         return participantRef;
     }
@@ -123,7 +124,11 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements C
         QName oldInitiatingParticipantRef = initiatingParticipantRef;
         initiatingParticipantRef = newInitiatingParticipantRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF, oldInitiatingParticipantRef, initiatingParticipantRef));
+            eNotify(new ENotificationImpl(
+                    this,
+                    Notification.SET,
+                    BpmnPackage.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF,
+                    oldInitiatingParticipantRef, initiatingParticipantRef));
     }
 
     /**
@@ -134,10 +139,10 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements C
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REF:
-                return getParticipantRef();
-            case bpmnPackage.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF:
-                return getInitiatingParticipantRef();
+        case BpmnPackage.CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REF:
+            return getParticipantRef();
+        case BpmnPackage.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF:
+            return getInitiatingParticipantRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -151,13 +156,13 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements C
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REF:
-                getParticipantRef().clear();
-                getParticipantRef().addAll((Collection<? extends QName>)newValue);
-                return;
-            case bpmnPackage.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF:
-                setInitiatingParticipantRef((QName)newValue);
-                return;
+        case BpmnPackage.CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REF:
+            getParticipantRef().clear();
+            getParticipantRef().addAll((Collection<? extends QName>) newValue);
+            return;
+        case BpmnPackage.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF:
+            setInitiatingParticipantRef((QName) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -170,12 +175,12 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements C
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REF:
-                getParticipantRef().clear();
-                return;
-            case bpmnPackage.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF:
-                setInitiatingParticipantRef(INITIATING_PARTICIPANT_REF_EDEFAULT);
-                return;
+        case BpmnPackage.CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REF:
+            getParticipantRef().clear();
+            return;
+        case BpmnPackage.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF:
+            setInitiatingParticipantRef(INITIATING_PARTICIPANT_REF_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -188,10 +193,12 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements C
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REF:
-                return participantRef != null && !participantRef.isEmpty();
-            case bpmnPackage.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF:
-                return INITIATING_PARTICIPANT_REF_EDEFAULT == null ? initiatingParticipantRef != null : !INITIATING_PARTICIPANT_REF_EDEFAULT.equals(initiatingParticipantRef);
+        case BpmnPackage.CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REF:
+            return participantRef != null && !participantRef.isEmpty();
+        case BpmnPackage.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF:
+            return INITIATING_PARTICIPANT_REF_EDEFAULT == null ? initiatingParticipantRef != null
+                    : !INITIATING_PARTICIPANT_REF_EDEFAULT
+                            .equals(initiatingParticipantRef);
         }
         return super.eIsSet(featureID);
     }
@@ -203,7 +210,8 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements C
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (participantRef: "); //$NON-NLS-1$

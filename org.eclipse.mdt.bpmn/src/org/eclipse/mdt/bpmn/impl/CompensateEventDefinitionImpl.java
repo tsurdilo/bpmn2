@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -20,8 +19,8 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.CompensateEventDefinition;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,7 +36,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class CompensateEventDefinitionImpl extends EventDefinitionImpl implements CompensateEventDefinition {
+public class CompensateEventDefinitionImpl extends EventDefinitionImpl
+        implements CompensateEventDefinition {
     /**
      * The default value of the '{@link #getActivityRef() <em>Activity Ref</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -103,7 +103,7 @@ public class CompensateEventDefinitionImpl extends EventDefinitionImpl implement
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getCompensateEventDefinition();
+        return BpmnPackage.eINSTANCE.getCompensateEventDefinition();
     }
 
     /**
@@ -124,7 +124,9 @@ public class CompensateEventDefinitionImpl extends EventDefinitionImpl implement
         QName oldActivityRef = activityRef;
         activityRef = newActivityRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF, oldActivityRef, activityRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF,
+                    oldActivityRef, activityRef));
     }
 
     /**
@@ -147,7 +149,12 @@ public class CompensateEventDefinitionImpl extends EventDefinitionImpl implement
         boolean oldWaitForCompletionESet = waitForCompletionESet;
         waitForCompletionESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION, oldWaitForCompletion, waitForCompletion, !oldWaitForCompletionESet));
+            eNotify(new ENotificationImpl(
+                    this,
+                    Notification.SET,
+                    BpmnPackage.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION,
+                    oldWaitForCompletion, waitForCompletion,
+                    !oldWaitForCompletionESet));
     }
 
     /**
@@ -161,7 +168,12 @@ public class CompensateEventDefinitionImpl extends EventDefinitionImpl implement
         waitForCompletion = WAIT_FOR_COMPLETION_EDEFAULT;
         waitForCompletionESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, bpmnPackage.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION, oldWaitForCompletion, WAIT_FOR_COMPLETION_EDEFAULT, oldWaitForCompletionESet));
+            eNotify(new ENotificationImpl(
+                    this,
+                    Notification.UNSET,
+                    BpmnPackage.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION,
+                    oldWaitForCompletion, WAIT_FOR_COMPLETION_EDEFAULT,
+                    oldWaitForCompletionESet));
     }
 
     /**
@@ -181,10 +193,10 @@ public class CompensateEventDefinitionImpl extends EventDefinitionImpl implement
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
-                return getActivityRef();
-            case bpmnPackage.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
-                return isWaitForCompletion();
+        case BpmnPackage.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
+            return getActivityRef();
+        case BpmnPackage.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
+            return isWaitForCompletion();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -197,12 +209,12 @@ public class CompensateEventDefinitionImpl extends EventDefinitionImpl implement
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
-                setActivityRef((QName)newValue);
-                return;
-            case bpmnPackage.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
-                setWaitForCompletion((Boolean)newValue);
-                return;
+        case BpmnPackage.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
+            setActivityRef((QName) newValue);
+            return;
+        case BpmnPackage.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
+            setWaitForCompletion((Boolean) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -215,12 +227,12 @@ public class CompensateEventDefinitionImpl extends EventDefinitionImpl implement
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
-                setActivityRef(ACTIVITY_REF_EDEFAULT);
-                return;
-            case bpmnPackage.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
-                unsetWaitForCompletion();
-                return;
+        case BpmnPackage.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
+            setActivityRef(ACTIVITY_REF_EDEFAULT);
+            return;
+        case BpmnPackage.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
+            unsetWaitForCompletion();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -233,10 +245,11 @@ public class CompensateEventDefinitionImpl extends EventDefinitionImpl implement
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
-                return ACTIVITY_REF_EDEFAULT == null ? activityRef != null : !ACTIVITY_REF_EDEFAULT.equals(activityRef);
-            case bpmnPackage.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
-                return isSetWaitForCompletion();
+        case BpmnPackage.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
+            return ACTIVITY_REF_EDEFAULT == null ? activityRef != null
+                    : !ACTIVITY_REF_EDEFAULT.equals(activityRef);
+        case BpmnPackage.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
+            return isSetWaitForCompletion();
         }
         return super.eIsSet(featureID);
     }
@@ -248,13 +261,17 @@ public class CompensateEventDefinitionImpl extends EventDefinitionImpl implement
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (activityRef: "); //$NON-NLS-1$
         result.append(activityRef);
         result.append(", waitForCompletion: "); //$NON-NLS-1$
-        if (waitForCompletionESet) result.append(waitForCompletion); else result.append("<unset>"); //$NON-NLS-1$
+        if (waitForCompletionESet)
+            result.append(waitForCompletion);
+        else
+            result.append("<unset>"); //$NON-NLS-1$
         result.append(')');
         return result.toString();
     }

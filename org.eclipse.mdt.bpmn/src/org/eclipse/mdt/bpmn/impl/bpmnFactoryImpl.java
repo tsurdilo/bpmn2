@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -29,6 +28,8 @@ import org.eclipse.mdt.bpmn.Association;
 import org.eclipse.mdt.bpmn.AssociationDirection;
 import org.eclipse.mdt.bpmn.Auditing;
 import org.eclipse.mdt.bpmn.BoundaryEvent;
+import org.eclipse.mdt.bpmn.BpmnFactory;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.BusinessRuleTask;
 import org.eclipse.mdt.bpmn.CallActivity;
 import org.eclipse.mdt.bpmn.CallChoreographyActivity;
@@ -149,8 +150,6 @@ import org.eclipse.mdt.bpmn.Transaction;
 import org.eclipse.mdt.bpmn.TransactionMethod;
 import org.eclipse.mdt.bpmn.UserTask;
 import org.eclipse.mdt.bpmn.UserTaskImplementation;
-import org.eclipse.mdt.bpmn.bpmnFactory;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -158,24 +157,24 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
+public class BpmnFactoryImpl extends EFactoryImpl implements BpmnFactory {
     /**
      * Creates the default factory implementation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    public static bpmnFactory init() {
+    public static BpmnFactory init() {
         try {
-            bpmnFactory thebpmnFactory = (bpmnFactory)EPackage.Registry.INSTANCE.getEFactory("http://schema.omg.org/spec/BPMN/2.0"); //$NON-NLS-1$ 
-            if (thebpmnFactory != null) {
-                return thebpmnFactory;
+            BpmnFactory theBpmnFactory = (BpmnFactory) EPackage.Registry.INSTANCE
+                    .getEFactory("http://schema.omg.org/spec/BPMN/2.0"); //$NON-NLS-1$ 
+            if (theBpmnFactory != null) {
+                return theBpmnFactory;
             }
-        }
-        catch (Exception exception) {
+        } catch (Exception exception) {
             EcorePlugin.INSTANCE.log(exception);
         }
-        return new bpmnFactoryImpl();
+        return new BpmnFactoryImpl();
     }
 
     /**
@@ -184,7 +183,7 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public bpmnFactoryImpl() {
+    public BpmnFactoryImpl() {
         super();
     }
 
@@ -196,127 +195,247 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
     @Override
     public EObject create(EClass eClass) {
         switch (eClass.getClassifierID()) {
-            case bpmnPackage.DOCUMENT_ROOT: return createDocumentRoot();
-            case bpmnPackage.ACTIVITY_RESOURCE: return createActivityResource();
-            case bpmnPackage.AD_HOC_SUB_PROCESS: return createAdHocSubProcess();
-            case bpmnPackage.ASSIGNMENT: return createAssignment();
-            case bpmnPackage.ASSOCIATION: return createAssociation();
-            case bpmnPackage.AUDITING: return createAuditing();
-            case bpmnPackage.BOUNDARY_EVENT: return createBoundaryEvent();
-            case bpmnPackage.BUSINESS_RULE_TASK: return createBusinessRuleTask();
-            case bpmnPackage.CALLABLE_ELEMENT: return createCallableElement();
-            case bpmnPackage.CALL_ACTIVITY: return createCallActivity();
-            case bpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY: return createCallChoreographyActivity();
-            case bpmnPackage.CALL_CONVERSATION: return createCallConversation();
-            case bpmnPackage.CANCEL_EVENT_DEFINITION: return createCancelEventDefinition();
-            case bpmnPackage.CATEGORY: return createCategory();
-            case bpmnPackage.CATEGORY_VALUE: return createCategoryValue();
-            case bpmnPackage.CHOREOGRAPHY: return createChoreography();
-            case bpmnPackage.CHOREOGRAPHY_SUB_PROCESS: return createChoreographySubProcess();
-            case bpmnPackage.CHOREOGRAPHY_TASK: return createChoreographyTask();
-            case bpmnPackage.COLLABORATION: return createCollaboration();
-            case bpmnPackage.COMMUNICATION: return createCommunication();
-            case bpmnPackage.COMPENSATE_EVENT_DEFINITION: return createCompensateEventDefinition();
-            case bpmnPackage.COMPLEX_BEHAVIOR_DEFINITION: return createComplexBehaviorDefinition();
-            case bpmnPackage.COMPLEX_GATEWAY: return createComplexGateway();
-            case bpmnPackage.CONDITIONAL_EVENT_DEFINITION: return createConditionalEventDefinition();
-            case bpmnPackage.CONVERSATION: return createConversation();
-            case bpmnPackage.CONVERSATION_ASSOCIATION: return createConversationAssociation();
-            case bpmnPackage.CORRELATION_KEY: return createCorrelationKey();
-            case bpmnPackage.CORRELATION_PROPERTY: return createCorrelationProperty();
-            case bpmnPackage.CORRELATION_PROPERTY_BINDING: return createCorrelationPropertyBinding();
-            case bpmnPackage.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION: return createCorrelationPropertyRetrievalExpression();
-            case bpmnPackage.CORRELATION_SUBSCRIPTION: return createCorrelationSubscription();
-            case bpmnPackage.DATA_INPUT: return createDataInput();
-            case bpmnPackage.DATA_INPUT_ASSOCIATION: return createDataInputAssociation();
-            case bpmnPackage.DATA_OBJECT: return createDataObject();
-            case bpmnPackage.DATA_OUTPUT: return createDataOutput();
-            case bpmnPackage.DATA_OUTPUT_ASSOCIATION: return createDataOutputAssociation();
-            case bpmnPackage.DATA_STATE: return createDataState();
-            case bpmnPackage.DATA_STORE: return createDataStore();
-            case bpmnPackage.DATA_STORE_REFERENCE: return createDataStoreReference();
-            case bpmnPackage.DEFINITIONS: return createDefinitions();
-            case bpmnPackage.DOCUMENTATION: return createDocumentation();
-            case bpmnPackage.END_EVENT: return createEndEvent();
-            case bpmnPackage.END_POINT: return createEndPoint();
-            case bpmnPackage.ERROR: return createError();
-            case bpmnPackage.ERROR_EVENT_DEFINITION: return createErrorEventDefinition();
-            case bpmnPackage.ESCALATION: return createEscalation();
-            case bpmnPackage.ESCALATION_EVENT_DEFINITION: return createEscalationEventDefinition();
-            case bpmnPackage.EVENT_BASED_GATEWAY: return createEventBasedGateway();
-            case bpmnPackage.EXCLUSIVE_GATEWAY: return createExclusiveGateway();
-            case bpmnPackage.EXPRESSION: return createExpression();
-            case bpmnPackage.EXTENSION: return createExtension();
-            case bpmnPackage.FORMAL_EXPRESSION: return createFormalExpression();
-            case bpmnPackage.GATEWAY: return createGateway();
-            case bpmnPackage.GLOBAL_BUSINESS_RULE_TASK: return createGlobalBusinessRuleTask();
-            case bpmnPackage.GLOBAL_CHOREOGRAPHY_TASK: return createGlobalChoreographyTask();
-            case bpmnPackage.GLOBAL_COMMUNICATION: return createGlobalCommunication();
-            case bpmnPackage.GLOBAL_MANUAL_TASK: return createGlobalManualTask();
-            case bpmnPackage.GLOBAL_SCRIPT_TASK: return createGlobalScriptTask();
-            case bpmnPackage.GLOBAL_TASK: return createGlobalTask();
-            case bpmnPackage.GLOBAL_USER_TASK: return createGlobalUserTask();
-            case bpmnPackage.GROUP: return createGroup();
-            case bpmnPackage.HUMAN_PERFORMER: return createHumanPerformer();
-            case bpmnPackage.IMPLICIT_THROW_EVENT: return createImplicitThrowEvent();
-            case bpmnPackage.IMPORT: return createImport();
-            case bpmnPackage.INCLUSIVE_GATEWAY: return createInclusiveGateway();
-            case bpmnPackage.INPUT_OUTPUT_BINDING: return createInputOutputBinding();
-            case bpmnPackage.INPUT_OUTPUT_SPECIFICATION: return createInputOutputSpecification();
-            case bpmnPackage.INPUT_SET: return createInputSet();
-            case bpmnPackage.INTERFACE: return createInterface();
-            case bpmnPackage.INTERMEDIATE_CATCH_EVENT: return createIntermediateCatchEvent();
-            case bpmnPackage.INTERMEDIATE_THROW_EVENT: return createIntermediateThrowEvent();
-            case bpmnPackage.ITEM_DEFINITION: return createItemDefinition();
-            case bpmnPackage.LANE: return createLane();
-            case bpmnPackage.LANE_SET: return createLaneSet();
-            case bpmnPackage.LINK_EVENT_DEFINITION: return createLinkEventDefinition();
-            case bpmnPackage.MANUAL_TASK: return createManualTask();
-            case bpmnPackage.MESSAGE: return createMessage();
-            case bpmnPackage.MESSAGE_EVENT_DEFINITION: return createMessageEventDefinition();
-            case bpmnPackage.MESSAGE_FLOW: return createMessageFlow();
-            case bpmnPackage.MESSAGE_FLOW_ASSOCIATION: return createMessageFlowAssociation();
-            case bpmnPackage.MONITORING: return createMonitoring();
-            case bpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS: return createMultiInstanceLoopCharacteristics();
-            case bpmnPackage.OPERATION: return createOperation();
-            case bpmnPackage.OUTPUT_SET: return createOutputSet();
-            case bpmnPackage.PARALLEL_GATEWAY: return createParallelGateway();
-            case bpmnPackage.PARTICIPANT: return createParticipant();
-            case bpmnPackage.PARTICIPANT_ASSOCIATION: return createParticipantAssociation();
-            case bpmnPackage.PARTICIPANT_MULTIPLICITY: return createParticipantMultiplicity();
-            case bpmnPackage.PARTNER_ENTITY: return createPartnerEntity();
-            case bpmnPackage.PARTNER_ROLE: return createPartnerRole();
-            case bpmnPackage.PERFORMER: return createPerformer();
-            case bpmnPackage.POTENTIAL_OWNER: return createPotentialOwner();
-            case bpmnPackage.PROCESS: return createProcess();
-            case bpmnPackage.PROPERTY: return createProperty();
-            case bpmnPackage.RECEIVE_TASK: return createReceiveTask();
-            case bpmnPackage.RELATIONSHIP: return createRelationship();
-            case bpmnPackage.RENDERING: return createRendering();
-            case bpmnPackage.RESOURCE: return createResource();
-            case bpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION: return createResourceAssignmentExpression();
-            case bpmnPackage.RESOURCE_PARAMETER: return createResourceParameter();
-            case bpmnPackage.RESOURCE_PARAMETER_BINDING: return createResourceParameterBinding();
-            case bpmnPackage.SCRIPT: return createScript();
-            case bpmnPackage.SCRIPT_TASK: return createScriptTask();
-            case bpmnPackage.SEND_TASK: return createSendTask();
-            case bpmnPackage.SEQUENCE_FLOW: return createSequenceFlow();
-            case bpmnPackage.SERVICE_TASK: return createServiceTask();
-            case bpmnPackage.SIGNAL: return createSignal();
-            case bpmnPackage.SIGNAL_EVENT_DEFINITION: return createSignalEventDefinition();
-            case bpmnPackage.STANDARD_LOOP_CHARACTERISTICS: return createStandardLoopCharacteristics();
-            case bpmnPackage.START_EVENT: return createStartEvent();
-            case bpmnPackage.SUB_CONVERSATION: return createSubConversation();
-            case bpmnPackage.SUB_PROCESS: return createSubProcess();
-            case bpmnPackage.TASK: return createTask();
-            case bpmnPackage.TERMINATE_EVENT_DEFINITION: return createTerminateEventDefinition();
-            case bpmnPackage.TEXT: return createText();
-            case bpmnPackage.TEXT_ANNOTATION: return createTextAnnotation();
-            case bpmnPackage.TIMER_EVENT_DEFINITION: return createTimerEventDefinition();
-            case bpmnPackage.TRANSACTION: return createTransaction();
-            case bpmnPackage.USER_TASK: return createUserTask();
-            default:
-                throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
+        case BpmnPackage.DOCUMENT_ROOT:
+            return createDocumentRoot();
+        case BpmnPackage.ACTIVITY_RESOURCE:
+            return createActivityResource();
+        case BpmnPackage.AD_HOC_SUB_PROCESS:
+            return createAdHocSubProcess();
+        case BpmnPackage.ASSIGNMENT:
+            return createAssignment();
+        case BpmnPackage.ASSOCIATION:
+            return createAssociation();
+        case BpmnPackage.AUDITING:
+            return createAuditing();
+        case BpmnPackage.BOUNDARY_EVENT:
+            return createBoundaryEvent();
+        case BpmnPackage.BUSINESS_RULE_TASK:
+            return createBusinessRuleTask();
+        case BpmnPackage.CALLABLE_ELEMENT:
+            return createCallableElement();
+        case BpmnPackage.CALL_ACTIVITY:
+            return createCallActivity();
+        case BpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY:
+            return createCallChoreographyActivity();
+        case BpmnPackage.CALL_CONVERSATION:
+            return createCallConversation();
+        case BpmnPackage.CANCEL_EVENT_DEFINITION:
+            return createCancelEventDefinition();
+        case BpmnPackage.CATEGORY:
+            return createCategory();
+        case BpmnPackage.CATEGORY_VALUE:
+            return createCategoryValue();
+        case BpmnPackage.CHOREOGRAPHY:
+            return createChoreography();
+        case BpmnPackage.CHOREOGRAPHY_SUB_PROCESS:
+            return createChoreographySubProcess();
+        case BpmnPackage.CHOREOGRAPHY_TASK:
+            return createChoreographyTask();
+        case BpmnPackage.COLLABORATION:
+            return createCollaboration();
+        case BpmnPackage.COMMUNICATION:
+            return createCommunication();
+        case BpmnPackage.COMPENSATE_EVENT_DEFINITION:
+            return createCompensateEventDefinition();
+        case BpmnPackage.COMPLEX_BEHAVIOR_DEFINITION:
+            return createComplexBehaviorDefinition();
+        case BpmnPackage.COMPLEX_GATEWAY:
+            return createComplexGateway();
+        case BpmnPackage.CONDITIONAL_EVENT_DEFINITION:
+            return createConditionalEventDefinition();
+        case BpmnPackage.CONVERSATION:
+            return createConversation();
+        case BpmnPackage.CONVERSATION_ASSOCIATION:
+            return createConversationAssociation();
+        case BpmnPackage.CORRELATION_KEY:
+            return createCorrelationKey();
+        case BpmnPackage.CORRELATION_PROPERTY:
+            return createCorrelationProperty();
+        case BpmnPackage.CORRELATION_PROPERTY_BINDING:
+            return createCorrelationPropertyBinding();
+        case BpmnPackage.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
+            return createCorrelationPropertyRetrievalExpression();
+        case BpmnPackage.CORRELATION_SUBSCRIPTION:
+            return createCorrelationSubscription();
+        case BpmnPackage.DATA_INPUT:
+            return createDataInput();
+        case BpmnPackage.DATA_INPUT_ASSOCIATION:
+            return createDataInputAssociation();
+        case BpmnPackage.DATA_OBJECT:
+            return createDataObject();
+        case BpmnPackage.DATA_OUTPUT:
+            return createDataOutput();
+        case BpmnPackage.DATA_OUTPUT_ASSOCIATION:
+            return createDataOutputAssociation();
+        case BpmnPackage.DATA_STATE:
+            return createDataState();
+        case BpmnPackage.DATA_STORE:
+            return createDataStore();
+        case BpmnPackage.DATA_STORE_REFERENCE:
+            return createDataStoreReference();
+        case BpmnPackage.DEFINITIONS:
+            return createDefinitions();
+        case BpmnPackage.DOCUMENTATION:
+            return createDocumentation();
+        case BpmnPackage.END_EVENT:
+            return createEndEvent();
+        case BpmnPackage.END_POINT:
+            return createEndPoint();
+        case BpmnPackage.ERROR:
+            return createError();
+        case BpmnPackage.ERROR_EVENT_DEFINITION:
+            return createErrorEventDefinition();
+        case BpmnPackage.ESCALATION:
+            return createEscalation();
+        case BpmnPackage.ESCALATION_EVENT_DEFINITION:
+            return createEscalationEventDefinition();
+        case BpmnPackage.EVENT_BASED_GATEWAY:
+            return createEventBasedGateway();
+        case BpmnPackage.EXCLUSIVE_GATEWAY:
+            return createExclusiveGateway();
+        case BpmnPackage.EXPRESSION:
+            return createExpression();
+        case BpmnPackage.EXTENSION:
+            return createExtension();
+        case BpmnPackage.FORMAL_EXPRESSION:
+            return createFormalExpression();
+        case BpmnPackage.GATEWAY:
+            return createGateway();
+        case BpmnPackage.GLOBAL_BUSINESS_RULE_TASK:
+            return createGlobalBusinessRuleTask();
+        case BpmnPackage.GLOBAL_CHOREOGRAPHY_TASK:
+            return createGlobalChoreographyTask();
+        case BpmnPackage.GLOBAL_COMMUNICATION:
+            return createGlobalCommunication();
+        case BpmnPackage.GLOBAL_MANUAL_TASK:
+            return createGlobalManualTask();
+        case BpmnPackage.GLOBAL_SCRIPT_TASK:
+            return createGlobalScriptTask();
+        case BpmnPackage.GLOBAL_TASK:
+            return createGlobalTask();
+        case BpmnPackage.GLOBAL_USER_TASK:
+            return createGlobalUserTask();
+        case BpmnPackage.GROUP:
+            return createGroup();
+        case BpmnPackage.HUMAN_PERFORMER:
+            return createHumanPerformer();
+        case BpmnPackage.IMPLICIT_THROW_EVENT:
+            return createImplicitThrowEvent();
+        case BpmnPackage.IMPORT:
+            return createImport();
+        case BpmnPackage.INCLUSIVE_GATEWAY:
+            return createInclusiveGateway();
+        case BpmnPackage.INPUT_OUTPUT_BINDING:
+            return createInputOutputBinding();
+        case BpmnPackage.INPUT_OUTPUT_SPECIFICATION:
+            return createInputOutputSpecification();
+        case BpmnPackage.INPUT_SET:
+            return createInputSet();
+        case BpmnPackage.INTERFACE:
+            return createInterface();
+        case BpmnPackage.INTERMEDIATE_CATCH_EVENT:
+            return createIntermediateCatchEvent();
+        case BpmnPackage.INTERMEDIATE_THROW_EVENT:
+            return createIntermediateThrowEvent();
+        case BpmnPackage.ITEM_DEFINITION:
+            return createItemDefinition();
+        case BpmnPackage.LANE:
+            return createLane();
+        case BpmnPackage.LANE_SET:
+            return createLaneSet();
+        case BpmnPackage.LINK_EVENT_DEFINITION:
+            return createLinkEventDefinition();
+        case BpmnPackage.MANUAL_TASK:
+            return createManualTask();
+        case BpmnPackage.MESSAGE:
+            return createMessage();
+        case BpmnPackage.MESSAGE_EVENT_DEFINITION:
+            return createMessageEventDefinition();
+        case BpmnPackage.MESSAGE_FLOW:
+            return createMessageFlow();
+        case BpmnPackage.MESSAGE_FLOW_ASSOCIATION:
+            return createMessageFlowAssociation();
+        case BpmnPackage.MONITORING:
+            return createMonitoring();
+        case BpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS:
+            return createMultiInstanceLoopCharacteristics();
+        case BpmnPackage.OPERATION:
+            return createOperation();
+        case BpmnPackage.OUTPUT_SET:
+            return createOutputSet();
+        case BpmnPackage.PARALLEL_GATEWAY:
+            return createParallelGateway();
+        case BpmnPackage.PARTICIPANT:
+            return createParticipant();
+        case BpmnPackage.PARTICIPANT_ASSOCIATION:
+            return createParticipantAssociation();
+        case BpmnPackage.PARTICIPANT_MULTIPLICITY:
+            return createParticipantMultiplicity();
+        case BpmnPackage.PARTNER_ENTITY:
+            return createPartnerEntity();
+        case BpmnPackage.PARTNER_ROLE:
+            return createPartnerRole();
+        case BpmnPackage.PERFORMER:
+            return createPerformer();
+        case BpmnPackage.POTENTIAL_OWNER:
+            return createPotentialOwner();
+        case BpmnPackage.PROCESS:
+            return createProcess();
+        case BpmnPackage.PROPERTY:
+            return createProperty();
+        case BpmnPackage.RECEIVE_TASK:
+            return createReceiveTask();
+        case BpmnPackage.RELATIONSHIP:
+            return createRelationship();
+        case BpmnPackage.RENDERING:
+            return createRendering();
+        case BpmnPackage.RESOURCE:
+            return createResource();
+        case BpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION:
+            return createResourceAssignmentExpression();
+        case BpmnPackage.RESOURCE_PARAMETER:
+            return createResourceParameter();
+        case BpmnPackage.RESOURCE_PARAMETER_BINDING:
+            return createResourceParameterBinding();
+        case BpmnPackage.SCRIPT:
+            return createScript();
+        case BpmnPackage.SCRIPT_TASK:
+            return createScriptTask();
+        case BpmnPackage.SEND_TASK:
+            return createSendTask();
+        case BpmnPackage.SEQUENCE_FLOW:
+            return createSequenceFlow();
+        case BpmnPackage.SERVICE_TASK:
+            return createServiceTask();
+        case BpmnPackage.SIGNAL:
+            return createSignal();
+        case BpmnPackage.SIGNAL_EVENT_DEFINITION:
+            return createSignalEventDefinition();
+        case BpmnPackage.STANDARD_LOOP_CHARACTERISTICS:
+            return createStandardLoopCharacteristics();
+        case BpmnPackage.START_EVENT:
+            return createStartEvent();
+        case BpmnPackage.SUB_CONVERSATION:
+            return createSubConversation();
+        case BpmnPackage.SUB_PROCESS:
+            return createSubProcess();
+        case BpmnPackage.TASK:
+            return createTask();
+        case BpmnPackage.TERMINATE_EVENT_DEFINITION:
+            return createTerminateEventDefinition();
+        case BpmnPackage.TEXT:
+            return createText();
+        case BpmnPackage.TEXT_ANNOTATION:
+            return createTextAnnotation();
+        case BpmnPackage.TIMER_EVENT_DEFINITION:
+            return createTimerEventDefinition();
+        case BpmnPackage.TRANSACTION:
+            return createTransaction();
+        case BpmnPackage.USER_TASK:
+            return createUserTask();
+        default:
+            throw new IllegalArgumentException(
+                    "The class '" + eClass.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
         }
     }
 
@@ -328,52 +447,66 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
     @Override
     public Object createFromString(EDataType eDataType, String initialValue) {
         switch (eDataType.getClassifierID()) {
-            case bpmnPackage.AD_HOC_ORDERING:
-                return createAdHocOrderingFromString(eDataType, initialValue);
-            case bpmnPackage.ASSOCIATION_DIRECTION:
-                return createAssociationDirectionFromString(eDataType, initialValue);
-            case bpmnPackage.EVENT_BASED_GATEWAY_TYPE:
-                return createEventBasedGatewayTypeFromString(eDataType, initialValue);
-            case bpmnPackage.GATEWAY_DIRECTION:
-                return createGatewayDirectionFromString(eDataType, initialValue);
-            case bpmnPackage.ITEM_KIND:
-                return createItemKindFromString(eDataType, initialValue);
-            case bpmnPackage.MULTI_INSTANCE_FLOW_CONDITION:
-                return createMultiInstanceFlowConditionFromString(eDataType, initialValue);
-            case bpmnPackage.PROCESS_TYPE:
-                return createProcessTypeFromString(eDataType, initialValue);
-            case bpmnPackage.RELATIONSHIP_DIRECTION:
-                return createRelationshipDirectionFromString(eDataType, initialValue);
-            case bpmnPackage.SERVICE_IMPLEMENTATION:
-                return createServiceImplementationFromString(eDataType, initialValue);
-            case bpmnPackage.TRANSACTION_METHOD:
-                return createTransactionMethodFromString(eDataType, initialValue);
-            case bpmnPackage.USER_TASK_IMPLEMENTATION:
-                return createUserTaskImplementationFromString(eDataType, initialValue);
-            case bpmnPackage.AD_HOC_ORDERING_OBJECT:
-                return createAdHocOrderingObjectFromString(eDataType, initialValue);
-            case bpmnPackage.ASSOCIATION_DIRECTION_OBJECT:
-                return createAssociationDirectionObjectFromString(eDataType, initialValue);
-            case bpmnPackage.EVENT_BASED_GATEWAY_TYPE_OBJECT:
-                return createEventBasedGatewayTypeObjectFromString(eDataType, initialValue);
-            case bpmnPackage.GATEWAY_DIRECTION_OBJECT:
-                return createGatewayDirectionObjectFromString(eDataType, initialValue);
-            case bpmnPackage.ITEM_KIND_OBJECT:
-                return createItemKindObjectFromString(eDataType, initialValue);
-            case bpmnPackage.MULTI_INSTANCE_FLOW_CONDITION_OBJECT:
-                return createMultiInstanceFlowConditionObjectFromString(eDataType, initialValue);
-            case bpmnPackage.PROCESS_TYPE_OBJECT:
-                return createProcessTypeObjectFromString(eDataType, initialValue);
-            case bpmnPackage.RELATIONSHIP_DIRECTION_OBJECT:
-                return createRelationshipDirectionObjectFromString(eDataType, initialValue);
-            case bpmnPackage.SERVICE_IMPLEMENTATION_OBJECT:
-                return createServiceImplementationObjectFromString(eDataType, initialValue);
-            case bpmnPackage.TRANSACTION_METHOD_OBJECT:
-                return createTransactionMethodObjectFromString(eDataType, initialValue);
-            case bpmnPackage.USER_TASK_IMPLEMENTATION_OBJECT:
-                return createUserTaskImplementationObjectFromString(eDataType, initialValue);
-            default:
-                throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
+        case BpmnPackage.AD_HOC_ORDERING:
+            return createAdHocOrderingFromString(eDataType, initialValue);
+        case BpmnPackage.ASSOCIATION_DIRECTION:
+            return createAssociationDirectionFromString(eDataType, initialValue);
+        case BpmnPackage.EVENT_BASED_GATEWAY_TYPE:
+            return createEventBasedGatewayTypeFromString(eDataType,
+                    initialValue);
+        case BpmnPackage.GATEWAY_DIRECTION:
+            return createGatewayDirectionFromString(eDataType, initialValue);
+        case BpmnPackage.ITEM_KIND:
+            return createItemKindFromString(eDataType, initialValue);
+        case BpmnPackage.MULTI_INSTANCE_FLOW_CONDITION:
+            return createMultiInstanceFlowConditionFromString(eDataType,
+                    initialValue);
+        case BpmnPackage.PROCESS_TYPE:
+            return createProcessTypeFromString(eDataType, initialValue);
+        case BpmnPackage.RELATIONSHIP_DIRECTION:
+            return createRelationshipDirectionFromString(eDataType,
+                    initialValue);
+        case BpmnPackage.SERVICE_IMPLEMENTATION:
+            return createServiceImplementationFromString(eDataType,
+                    initialValue);
+        case BpmnPackage.TRANSACTION_METHOD:
+            return createTransactionMethodFromString(eDataType, initialValue);
+        case BpmnPackage.USER_TASK_IMPLEMENTATION:
+            return createUserTaskImplementationFromString(eDataType,
+                    initialValue);
+        case BpmnPackage.AD_HOC_ORDERING_OBJECT:
+            return createAdHocOrderingObjectFromString(eDataType, initialValue);
+        case BpmnPackage.ASSOCIATION_DIRECTION_OBJECT:
+            return createAssociationDirectionObjectFromString(eDataType,
+                    initialValue);
+        case BpmnPackage.EVENT_BASED_GATEWAY_TYPE_OBJECT:
+            return createEventBasedGatewayTypeObjectFromString(eDataType,
+                    initialValue);
+        case BpmnPackage.GATEWAY_DIRECTION_OBJECT:
+            return createGatewayDirectionObjectFromString(eDataType,
+                    initialValue);
+        case BpmnPackage.ITEM_KIND_OBJECT:
+            return createItemKindObjectFromString(eDataType, initialValue);
+        case BpmnPackage.MULTI_INSTANCE_FLOW_CONDITION_OBJECT:
+            return createMultiInstanceFlowConditionObjectFromString(eDataType,
+                    initialValue);
+        case BpmnPackage.PROCESS_TYPE_OBJECT:
+            return createProcessTypeObjectFromString(eDataType, initialValue);
+        case BpmnPackage.RELATIONSHIP_DIRECTION_OBJECT:
+            return createRelationshipDirectionObjectFromString(eDataType,
+                    initialValue);
+        case BpmnPackage.SERVICE_IMPLEMENTATION_OBJECT:
+            return createServiceImplementationObjectFromString(eDataType,
+                    initialValue);
+        case BpmnPackage.TRANSACTION_METHOD_OBJECT:
+            return createTransactionMethodObjectFromString(eDataType,
+                    initialValue);
+        case BpmnPackage.USER_TASK_IMPLEMENTATION_OBJECT:
+            return createUserTaskImplementationObjectFromString(eDataType,
+                    initialValue);
+        default:
+            throw new IllegalArgumentException(
+                    "The datatype '" + eDataType.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
         }
     }
 
@@ -385,52 +518,66 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
     @Override
     public String convertToString(EDataType eDataType, Object instanceValue) {
         switch (eDataType.getClassifierID()) {
-            case bpmnPackage.AD_HOC_ORDERING:
-                return convertAdHocOrderingToString(eDataType, instanceValue);
-            case bpmnPackage.ASSOCIATION_DIRECTION:
-                return convertAssociationDirectionToString(eDataType, instanceValue);
-            case bpmnPackage.EVENT_BASED_GATEWAY_TYPE:
-                return convertEventBasedGatewayTypeToString(eDataType, instanceValue);
-            case bpmnPackage.GATEWAY_DIRECTION:
-                return convertGatewayDirectionToString(eDataType, instanceValue);
-            case bpmnPackage.ITEM_KIND:
-                return convertItemKindToString(eDataType, instanceValue);
-            case bpmnPackage.MULTI_INSTANCE_FLOW_CONDITION:
-                return convertMultiInstanceFlowConditionToString(eDataType, instanceValue);
-            case bpmnPackage.PROCESS_TYPE:
-                return convertProcessTypeToString(eDataType, instanceValue);
-            case bpmnPackage.RELATIONSHIP_DIRECTION:
-                return convertRelationshipDirectionToString(eDataType, instanceValue);
-            case bpmnPackage.SERVICE_IMPLEMENTATION:
-                return convertServiceImplementationToString(eDataType, instanceValue);
-            case bpmnPackage.TRANSACTION_METHOD:
-                return convertTransactionMethodToString(eDataType, instanceValue);
-            case bpmnPackage.USER_TASK_IMPLEMENTATION:
-                return convertUserTaskImplementationToString(eDataType, instanceValue);
-            case bpmnPackage.AD_HOC_ORDERING_OBJECT:
-                return convertAdHocOrderingObjectToString(eDataType, instanceValue);
-            case bpmnPackage.ASSOCIATION_DIRECTION_OBJECT:
-                return convertAssociationDirectionObjectToString(eDataType, instanceValue);
-            case bpmnPackage.EVENT_BASED_GATEWAY_TYPE_OBJECT:
-                return convertEventBasedGatewayTypeObjectToString(eDataType, instanceValue);
-            case bpmnPackage.GATEWAY_DIRECTION_OBJECT:
-                return convertGatewayDirectionObjectToString(eDataType, instanceValue);
-            case bpmnPackage.ITEM_KIND_OBJECT:
-                return convertItemKindObjectToString(eDataType, instanceValue);
-            case bpmnPackage.MULTI_INSTANCE_FLOW_CONDITION_OBJECT:
-                return convertMultiInstanceFlowConditionObjectToString(eDataType, instanceValue);
-            case bpmnPackage.PROCESS_TYPE_OBJECT:
-                return convertProcessTypeObjectToString(eDataType, instanceValue);
-            case bpmnPackage.RELATIONSHIP_DIRECTION_OBJECT:
-                return convertRelationshipDirectionObjectToString(eDataType, instanceValue);
-            case bpmnPackage.SERVICE_IMPLEMENTATION_OBJECT:
-                return convertServiceImplementationObjectToString(eDataType, instanceValue);
-            case bpmnPackage.TRANSACTION_METHOD_OBJECT:
-                return convertTransactionMethodObjectToString(eDataType, instanceValue);
-            case bpmnPackage.USER_TASK_IMPLEMENTATION_OBJECT:
-                return convertUserTaskImplementationObjectToString(eDataType, instanceValue);
-            default:
-                throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
+        case BpmnPackage.AD_HOC_ORDERING:
+            return convertAdHocOrderingToString(eDataType, instanceValue);
+        case BpmnPackage.ASSOCIATION_DIRECTION:
+            return convertAssociationDirectionToString(eDataType, instanceValue);
+        case BpmnPackage.EVENT_BASED_GATEWAY_TYPE:
+            return convertEventBasedGatewayTypeToString(eDataType,
+                    instanceValue);
+        case BpmnPackage.GATEWAY_DIRECTION:
+            return convertGatewayDirectionToString(eDataType, instanceValue);
+        case BpmnPackage.ITEM_KIND:
+            return convertItemKindToString(eDataType, instanceValue);
+        case BpmnPackage.MULTI_INSTANCE_FLOW_CONDITION:
+            return convertMultiInstanceFlowConditionToString(eDataType,
+                    instanceValue);
+        case BpmnPackage.PROCESS_TYPE:
+            return convertProcessTypeToString(eDataType, instanceValue);
+        case BpmnPackage.RELATIONSHIP_DIRECTION:
+            return convertRelationshipDirectionToString(eDataType,
+                    instanceValue);
+        case BpmnPackage.SERVICE_IMPLEMENTATION:
+            return convertServiceImplementationToString(eDataType,
+                    instanceValue);
+        case BpmnPackage.TRANSACTION_METHOD:
+            return convertTransactionMethodToString(eDataType, instanceValue);
+        case BpmnPackage.USER_TASK_IMPLEMENTATION:
+            return convertUserTaskImplementationToString(eDataType,
+                    instanceValue);
+        case BpmnPackage.AD_HOC_ORDERING_OBJECT:
+            return convertAdHocOrderingObjectToString(eDataType, instanceValue);
+        case BpmnPackage.ASSOCIATION_DIRECTION_OBJECT:
+            return convertAssociationDirectionObjectToString(eDataType,
+                    instanceValue);
+        case BpmnPackage.EVENT_BASED_GATEWAY_TYPE_OBJECT:
+            return convertEventBasedGatewayTypeObjectToString(eDataType,
+                    instanceValue);
+        case BpmnPackage.GATEWAY_DIRECTION_OBJECT:
+            return convertGatewayDirectionObjectToString(eDataType,
+                    instanceValue);
+        case BpmnPackage.ITEM_KIND_OBJECT:
+            return convertItemKindObjectToString(eDataType, instanceValue);
+        case BpmnPackage.MULTI_INSTANCE_FLOW_CONDITION_OBJECT:
+            return convertMultiInstanceFlowConditionObjectToString(eDataType,
+                    instanceValue);
+        case BpmnPackage.PROCESS_TYPE_OBJECT:
+            return convertProcessTypeObjectToString(eDataType, instanceValue);
+        case BpmnPackage.RELATIONSHIP_DIRECTION_OBJECT:
+            return convertRelationshipDirectionObjectToString(eDataType,
+                    instanceValue);
+        case BpmnPackage.SERVICE_IMPLEMENTATION_OBJECT:
+            return convertServiceImplementationObjectToString(eDataType,
+                    instanceValue);
+        case BpmnPackage.TRANSACTION_METHOD_OBJECT:
+            return convertTransactionMethodObjectToString(eDataType,
+                    instanceValue);
+        case BpmnPackage.USER_TASK_IMPLEMENTATION_OBJECT:
+            return convertUserTaskImplementationObjectToString(eDataType,
+                    instanceValue);
+        default:
+            throw new IllegalArgumentException(
+                    "The datatype '" + eDataType.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
         }
     }
 
@@ -1629,9 +1776,12 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public AdHocOrdering createAdHocOrderingFromString(EDataType eDataType, String initialValue) {
+    public AdHocOrdering createAdHocOrderingFromString(EDataType eDataType,
+            String initialValue) {
         AdHocOrdering result = AdHocOrdering.get(initialValue);
-        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+        if (result == null)
+            throw new IllegalArgumentException(
+                    "The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
         return result;
     }
 
@@ -1640,7 +1790,8 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String convertAdHocOrderingToString(EDataType eDataType, Object instanceValue) {
+    public String convertAdHocOrderingToString(EDataType eDataType,
+            Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 
@@ -1649,9 +1800,12 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public AssociationDirection createAssociationDirectionFromString(EDataType eDataType, String initialValue) {
+    public AssociationDirection createAssociationDirectionFromString(
+            EDataType eDataType, String initialValue) {
         AssociationDirection result = AssociationDirection.get(initialValue);
-        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+        if (result == null)
+            throw new IllegalArgumentException(
+                    "The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
         return result;
     }
 
@@ -1660,7 +1814,8 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String convertAssociationDirectionToString(EDataType eDataType, Object instanceValue) {
+    public String convertAssociationDirectionToString(EDataType eDataType,
+            Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 
@@ -1669,9 +1824,12 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EventBasedGatewayType createEventBasedGatewayTypeFromString(EDataType eDataType, String initialValue) {
+    public EventBasedGatewayType createEventBasedGatewayTypeFromString(
+            EDataType eDataType, String initialValue) {
         EventBasedGatewayType result = EventBasedGatewayType.get(initialValue);
-        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+        if (result == null)
+            throw new IllegalArgumentException(
+                    "The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
         return result;
     }
 
@@ -1680,7 +1838,8 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String convertEventBasedGatewayTypeToString(EDataType eDataType, Object instanceValue) {
+    public String convertEventBasedGatewayTypeToString(EDataType eDataType,
+            Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 
@@ -1689,9 +1848,12 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public GatewayDirection createGatewayDirectionFromString(EDataType eDataType, String initialValue) {
+    public GatewayDirection createGatewayDirectionFromString(
+            EDataType eDataType, String initialValue) {
         GatewayDirection result = GatewayDirection.get(initialValue);
-        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+        if (result == null)
+            throw new IllegalArgumentException(
+                    "The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
         return result;
     }
 
@@ -1700,7 +1862,8 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String convertGatewayDirectionToString(EDataType eDataType, Object instanceValue) {
+    public String convertGatewayDirectionToString(EDataType eDataType,
+            Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 
@@ -1709,9 +1872,12 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public ItemKind createItemKindFromString(EDataType eDataType, String initialValue) {
+    public ItemKind createItemKindFromString(EDataType eDataType,
+            String initialValue) {
         ItemKind result = ItemKind.get(initialValue);
-        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+        if (result == null)
+            throw new IllegalArgumentException(
+                    "The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
         return result;
     }
 
@@ -1720,7 +1886,8 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String convertItemKindToString(EDataType eDataType, Object instanceValue) {
+    public String convertItemKindToString(EDataType eDataType,
+            Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 
@@ -1729,9 +1896,13 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public MultiInstanceFlowCondition createMultiInstanceFlowConditionFromString(EDataType eDataType, String initialValue) {
-        MultiInstanceFlowCondition result = MultiInstanceFlowCondition.get(initialValue);
-        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+    public MultiInstanceFlowCondition createMultiInstanceFlowConditionFromString(
+            EDataType eDataType, String initialValue) {
+        MultiInstanceFlowCondition result = MultiInstanceFlowCondition
+                .get(initialValue);
+        if (result == null)
+            throw new IllegalArgumentException(
+                    "The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
         return result;
     }
 
@@ -1740,7 +1911,8 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String convertMultiInstanceFlowConditionToString(EDataType eDataType, Object instanceValue) {
+    public String convertMultiInstanceFlowConditionToString(
+            EDataType eDataType, Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 
@@ -1749,9 +1921,12 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public ProcessType createProcessTypeFromString(EDataType eDataType, String initialValue) {
+    public ProcessType createProcessTypeFromString(EDataType eDataType,
+            String initialValue) {
         ProcessType result = ProcessType.get(initialValue);
-        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+        if (result == null)
+            throw new IllegalArgumentException(
+                    "The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
         return result;
     }
 
@@ -1760,7 +1935,8 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String convertProcessTypeToString(EDataType eDataType, Object instanceValue) {
+    public String convertProcessTypeToString(EDataType eDataType,
+            Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 
@@ -1769,9 +1945,12 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public RelationshipDirection createRelationshipDirectionFromString(EDataType eDataType, String initialValue) {
+    public RelationshipDirection createRelationshipDirectionFromString(
+            EDataType eDataType, String initialValue) {
         RelationshipDirection result = RelationshipDirection.get(initialValue);
-        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+        if (result == null)
+            throw new IllegalArgumentException(
+                    "The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
         return result;
     }
 
@@ -1780,7 +1959,8 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String convertRelationshipDirectionToString(EDataType eDataType, Object instanceValue) {
+    public String convertRelationshipDirectionToString(EDataType eDataType,
+            Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 
@@ -1789,9 +1969,12 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public ServiceImplementation createServiceImplementationFromString(EDataType eDataType, String initialValue) {
+    public ServiceImplementation createServiceImplementationFromString(
+            EDataType eDataType, String initialValue) {
         ServiceImplementation result = ServiceImplementation.get(initialValue);
-        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+        if (result == null)
+            throw new IllegalArgumentException(
+                    "The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
         return result;
     }
 
@@ -1800,7 +1983,8 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String convertServiceImplementationToString(EDataType eDataType, Object instanceValue) {
+    public String convertServiceImplementationToString(EDataType eDataType,
+            Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 
@@ -1809,9 +1993,12 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public TransactionMethod createTransactionMethodFromString(EDataType eDataType, String initialValue) {
+    public TransactionMethod createTransactionMethodFromString(
+            EDataType eDataType, String initialValue) {
         TransactionMethod result = TransactionMethod.get(initialValue);
-        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+        if (result == null)
+            throw new IllegalArgumentException(
+                    "The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
         return result;
     }
 
@@ -1820,7 +2007,8 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String convertTransactionMethodToString(EDataType eDataType, Object instanceValue) {
+    public String convertTransactionMethodToString(EDataType eDataType,
+            Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 
@@ -1829,9 +2017,13 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public UserTaskImplementation createUserTaskImplementationFromString(EDataType eDataType, String initialValue) {
-        UserTaskImplementation result = UserTaskImplementation.get(initialValue);
-        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+    public UserTaskImplementation createUserTaskImplementationFromString(
+            EDataType eDataType, String initialValue) {
+        UserTaskImplementation result = UserTaskImplementation
+                .get(initialValue);
+        if (result == null)
+            throw new IllegalArgumentException(
+                    "The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
         return result;
     }
 
@@ -1840,7 +2032,8 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String convertUserTaskImplementationToString(EDataType eDataType, Object instanceValue) {
+    public String convertUserTaskImplementationToString(EDataType eDataType,
+            Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 
@@ -1849,8 +2042,10 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public AdHocOrdering createAdHocOrderingObjectFromString(EDataType eDataType, String initialValue) {
-        return createAdHocOrderingFromString(bpmnPackage.eINSTANCE.getAdHocOrdering(), initialValue);
+    public AdHocOrdering createAdHocOrderingObjectFromString(
+            EDataType eDataType, String initialValue) {
+        return createAdHocOrderingFromString(BpmnPackage.eINSTANCE
+                .getAdHocOrdering(), initialValue);
     }
 
     /**
@@ -1858,8 +2053,10 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String convertAdHocOrderingObjectToString(EDataType eDataType, Object instanceValue) {
-        return convertAdHocOrderingToString(bpmnPackage.eINSTANCE.getAdHocOrdering(), instanceValue);
+    public String convertAdHocOrderingObjectToString(EDataType eDataType,
+            Object instanceValue) {
+        return convertAdHocOrderingToString(BpmnPackage.eINSTANCE
+                .getAdHocOrdering(), instanceValue);
     }
 
     /**
@@ -1867,8 +2064,10 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public AssociationDirection createAssociationDirectionObjectFromString(EDataType eDataType, String initialValue) {
-        return createAssociationDirectionFromString(bpmnPackage.eINSTANCE.getAssociationDirection(), initialValue);
+    public AssociationDirection createAssociationDirectionObjectFromString(
+            EDataType eDataType, String initialValue) {
+        return createAssociationDirectionFromString(BpmnPackage.eINSTANCE
+                .getAssociationDirection(), initialValue);
     }
 
     /**
@@ -1876,8 +2075,10 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String convertAssociationDirectionObjectToString(EDataType eDataType, Object instanceValue) {
-        return convertAssociationDirectionToString(bpmnPackage.eINSTANCE.getAssociationDirection(), instanceValue);
+    public String convertAssociationDirectionObjectToString(
+            EDataType eDataType, Object instanceValue) {
+        return convertAssociationDirectionToString(BpmnPackage.eINSTANCE
+                .getAssociationDirection(), instanceValue);
     }
 
     /**
@@ -1885,8 +2086,10 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EventBasedGatewayType createEventBasedGatewayTypeObjectFromString(EDataType eDataType, String initialValue) {
-        return createEventBasedGatewayTypeFromString(bpmnPackage.eINSTANCE.getEventBasedGatewayType(), initialValue);
+    public EventBasedGatewayType createEventBasedGatewayTypeObjectFromString(
+            EDataType eDataType, String initialValue) {
+        return createEventBasedGatewayTypeFromString(BpmnPackage.eINSTANCE
+                .getEventBasedGatewayType(), initialValue);
     }
 
     /**
@@ -1894,8 +2097,10 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String convertEventBasedGatewayTypeObjectToString(EDataType eDataType, Object instanceValue) {
-        return convertEventBasedGatewayTypeToString(bpmnPackage.eINSTANCE.getEventBasedGatewayType(), instanceValue);
+    public String convertEventBasedGatewayTypeObjectToString(
+            EDataType eDataType, Object instanceValue) {
+        return convertEventBasedGatewayTypeToString(BpmnPackage.eINSTANCE
+                .getEventBasedGatewayType(), instanceValue);
     }
 
     /**
@@ -1903,8 +2108,10 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public GatewayDirection createGatewayDirectionObjectFromString(EDataType eDataType, String initialValue) {
-        return createGatewayDirectionFromString(bpmnPackage.eINSTANCE.getGatewayDirection(), initialValue);
+    public GatewayDirection createGatewayDirectionObjectFromString(
+            EDataType eDataType, String initialValue) {
+        return createGatewayDirectionFromString(BpmnPackage.eINSTANCE
+                .getGatewayDirection(), initialValue);
     }
 
     /**
@@ -1912,8 +2119,10 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String convertGatewayDirectionObjectToString(EDataType eDataType, Object instanceValue) {
-        return convertGatewayDirectionToString(bpmnPackage.eINSTANCE.getGatewayDirection(), instanceValue);
+    public String convertGatewayDirectionObjectToString(EDataType eDataType,
+            Object instanceValue) {
+        return convertGatewayDirectionToString(BpmnPackage.eINSTANCE
+                .getGatewayDirection(), instanceValue);
     }
 
     /**
@@ -1921,8 +2130,10 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public ItemKind createItemKindObjectFromString(EDataType eDataType, String initialValue) {
-        return createItemKindFromString(bpmnPackage.eINSTANCE.getItemKind(), initialValue);
+    public ItemKind createItemKindObjectFromString(EDataType eDataType,
+            String initialValue) {
+        return createItemKindFromString(BpmnPackage.eINSTANCE.getItemKind(),
+                initialValue);
     }
 
     /**
@@ -1930,8 +2141,10 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String convertItemKindObjectToString(EDataType eDataType, Object instanceValue) {
-        return convertItemKindToString(bpmnPackage.eINSTANCE.getItemKind(), instanceValue);
+    public String convertItemKindObjectToString(EDataType eDataType,
+            Object instanceValue) {
+        return convertItemKindToString(BpmnPackage.eINSTANCE.getItemKind(),
+                instanceValue);
     }
 
     /**
@@ -1939,8 +2152,10 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public MultiInstanceFlowCondition createMultiInstanceFlowConditionObjectFromString(EDataType eDataType, String initialValue) {
-        return createMultiInstanceFlowConditionFromString(bpmnPackage.eINSTANCE.getMultiInstanceFlowCondition(), initialValue);
+    public MultiInstanceFlowCondition createMultiInstanceFlowConditionObjectFromString(
+            EDataType eDataType, String initialValue) {
+        return createMultiInstanceFlowConditionFromString(BpmnPackage.eINSTANCE
+                .getMultiInstanceFlowCondition(), initialValue);
     }
 
     /**
@@ -1948,8 +2163,10 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String convertMultiInstanceFlowConditionObjectToString(EDataType eDataType, Object instanceValue) {
-        return convertMultiInstanceFlowConditionToString(bpmnPackage.eINSTANCE.getMultiInstanceFlowCondition(), instanceValue);
+    public String convertMultiInstanceFlowConditionObjectToString(
+            EDataType eDataType, Object instanceValue) {
+        return convertMultiInstanceFlowConditionToString(BpmnPackage.eINSTANCE
+                .getMultiInstanceFlowCondition(), instanceValue);
     }
 
     /**
@@ -1957,8 +2174,10 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public ProcessType createProcessTypeObjectFromString(EDataType eDataType, String initialValue) {
-        return createProcessTypeFromString(bpmnPackage.eINSTANCE.getProcessType(), initialValue);
+    public ProcessType createProcessTypeObjectFromString(EDataType eDataType,
+            String initialValue) {
+        return createProcessTypeFromString(BpmnPackage.eINSTANCE
+                .getProcessType(), initialValue);
     }
 
     /**
@@ -1966,8 +2185,10 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String convertProcessTypeObjectToString(EDataType eDataType, Object instanceValue) {
-        return convertProcessTypeToString(bpmnPackage.eINSTANCE.getProcessType(), instanceValue);
+    public String convertProcessTypeObjectToString(EDataType eDataType,
+            Object instanceValue) {
+        return convertProcessTypeToString(BpmnPackage.eINSTANCE
+                .getProcessType(), instanceValue);
     }
 
     /**
@@ -1975,8 +2196,10 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public RelationshipDirection createRelationshipDirectionObjectFromString(EDataType eDataType, String initialValue) {
-        return createRelationshipDirectionFromString(bpmnPackage.eINSTANCE.getRelationshipDirection(), initialValue);
+    public RelationshipDirection createRelationshipDirectionObjectFromString(
+            EDataType eDataType, String initialValue) {
+        return createRelationshipDirectionFromString(BpmnPackage.eINSTANCE
+                .getRelationshipDirection(), initialValue);
     }
 
     /**
@@ -1984,8 +2207,10 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String convertRelationshipDirectionObjectToString(EDataType eDataType, Object instanceValue) {
-        return convertRelationshipDirectionToString(bpmnPackage.eINSTANCE.getRelationshipDirection(), instanceValue);
+    public String convertRelationshipDirectionObjectToString(
+            EDataType eDataType, Object instanceValue) {
+        return convertRelationshipDirectionToString(BpmnPackage.eINSTANCE
+                .getRelationshipDirection(), instanceValue);
     }
 
     /**
@@ -1993,8 +2218,10 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public ServiceImplementation createServiceImplementationObjectFromString(EDataType eDataType, String initialValue) {
-        return createServiceImplementationFromString(bpmnPackage.eINSTANCE.getServiceImplementation(), initialValue);
+    public ServiceImplementation createServiceImplementationObjectFromString(
+            EDataType eDataType, String initialValue) {
+        return createServiceImplementationFromString(BpmnPackage.eINSTANCE
+                .getServiceImplementation(), initialValue);
     }
 
     /**
@@ -2002,8 +2229,10 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String convertServiceImplementationObjectToString(EDataType eDataType, Object instanceValue) {
-        return convertServiceImplementationToString(bpmnPackage.eINSTANCE.getServiceImplementation(), instanceValue);
+    public String convertServiceImplementationObjectToString(
+            EDataType eDataType, Object instanceValue) {
+        return convertServiceImplementationToString(BpmnPackage.eINSTANCE
+                .getServiceImplementation(), instanceValue);
     }
 
     /**
@@ -2011,8 +2240,10 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public TransactionMethod createTransactionMethodObjectFromString(EDataType eDataType, String initialValue) {
-        return createTransactionMethodFromString(bpmnPackage.eINSTANCE.getTransactionMethod(), initialValue);
+    public TransactionMethod createTransactionMethodObjectFromString(
+            EDataType eDataType, String initialValue) {
+        return createTransactionMethodFromString(BpmnPackage.eINSTANCE
+                .getTransactionMethod(), initialValue);
     }
 
     /**
@@ -2020,8 +2251,10 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String convertTransactionMethodObjectToString(EDataType eDataType, Object instanceValue) {
-        return convertTransactionMethodToString(bpmnPackage.eINSTANCE.getTransactionMethod(), instanceValue);
+    public String convertTransactionMethodObjectToString(EDataType eDataType,
+            Object instanceValue) {
+        return convertTransactionMethodToString(BpmnPackage.eINSTANCE
+                .getTransactionMethod(), instanceValue);
     }
 
     /**
@@ -2029,8 +2262,10 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public UserTaskImplementation createUserTaskImplementationObjectFromString(EDataType eDataType, String initialValue) {
-        return createUserTaskImplementationFromString(bpmnPackage.eINSTANCE.getUserTaskImplementation(), initialValue);
+    public UserTaskImplementation createUserTaskImplementationObjectFromString(
+            EDataType eDataType, String initialValue) {
+        return createUserTaskImplementationFromString(BpmnPackage.eINSTANCE
+                .getUserTaskImplementation(), initialValue);
     }
 
     /**
@@ -2038,8 +2273,10 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String convertUserTaskImplementationObjectToString(EDataType eDataType, Object instanceValue) {
-        return convertUserTaskImplementationToString(bpmnPackage.eINSTANCE.getUserTaskImplementation(), instanceValue);
+    public String convertUserTaskImplementationObjectToString(
+            EDataType eDataType, Object instanceValue) {
+        return convertUserTaskImplementationToString(BpmnPackage.eINSTANCE
+                .getUserTaskImplementation(), instanceValue);
     }
 
     /**
@@ -2047,8 +2284,8 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public bpmnPackage getbpmnPackage() {
-        return (bpmnPackage)getEPackage();
+    public BpmnPackage getBpmnPackage() {
+        return (BpmnPackage) getEPackage();
     }
 
     /**
@@ -2058,8 +2295,8 @@ public class bpmnFactoryImpl extends EFactoryImpl implements bpmnFactory {
      * @generated
      */
     @Deprecated
-    public static bpmnPackage getPackage() {
-        return bpmnPackage.eINSTANCE;
+    public static BpmnPackage getPackage() {
+        return BpmnPackage.eINSTANCE;
     }
 
-} //bpmnFactoryImpl
+} //BpmnFactoryImpl

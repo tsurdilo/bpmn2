@@ -8,14 +8,13 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.ImplicitThrowEvent;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +25,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class ImplicitThrowEventImpl extends ThrowEventImpl implements ImplicitThrowEvent {
+public class ImplicitThrowEventImpl extends ThrowEventImpl implements
+        ImplicitThrowEvent {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -43,7 +43,7 @@ public class ImplicitThrowEventImpl extends ThrowEventImpl implements ImplicitTh
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getImplicitThrowEvent();
+        return BpmnPackage.eINSTANCE.getImplicitThrowEvent();
     }
 
 } //ImplicitThrowEventImpl

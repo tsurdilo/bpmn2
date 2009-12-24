@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -41,7 +40,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getProcess()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getProcess()
  * @model extendedMetaData="name='tProcess' kind='elementOnly'"
  * @generated
  */
@@ -56,7 +55,7 @@ public interface Process extends CallableElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Auditing</em>' containment reference.
      * @see #setAuditing(Auditing)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getProcess_Auditing()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getProcess_Auditing()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='auditing' namespace='##targetNamespace'"
      * @generated
@@ -83,7 +82,7 @@ public interface Process extends CallableElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Monitoring</em>' containment reference.
      * @see #setMonitoring(Monitoring)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getProcess_Monitoring()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getProcess_Monitoring()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='monitoring' namespace='##targetNamespace'"
      * @generated
@@ -110,7 +109,7 @@ public interface Process extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Property</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getProcess_Property()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getProcess_Property()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='property' namespace='##targetNamespace'"
      * @generated
@@ -127,7 +126,7 @@ public interface Process extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Lane Set</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getProcess_LaneSet()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getProcess_LaneSet()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='laneSet' namespace='##targetNamespace'"
      * @generated
@@ -144,7 +143,7 @@ public interface Process extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Flow Element Group</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getProcess_FlowElementGroup()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getProcess_FlowElementGroup()
      * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
      *        extendedMetaData="kind='group' name='flowElement:group' namespace='##targetNamespace'"
      * @generated
@@ -161,7 +160,7 @@ public interface Process extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Flow Element</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getProcess_FlowElement()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getProcess_FlowElement()
      * @model containment="true" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='flowElement' namespace='##targetNamespace' group='flowElement:group'"
      * @generated
@@ -178,7 +177,7 @@ public interface Process extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Artifact Group</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getProcess_ArtifactGroup()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getProcess_ArtifactGroup()
      * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
      *        extendedMetaData="kind='group' name='artifact:group' namespace='##targetNamespace'"
      * @generated
@@ -195,7 +194,7 @@ public interface Process extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Artifact</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getProcess_Artifact()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getProcess_Artifact()
      * @model containment="true" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='artifact' namespace='##targetNamespace' group='artifact:group'"
      * @generated
@@ -212,7 +211,7 @@ public interface Process extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Supports</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getProcess_Supports()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getProcess_Supports()
      * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='element' name='supports' namespace='##targetNamespace'"
      * @generated
@@ -229,7 +228,7 @@ public interface Process extends CallableElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Definitional Collaboration Ref</em>' attribute.
      * @see #setDefinitionalCollaborationRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getProcess_DefinitionalCollaborationRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getProcess_DefinitionalCollaborationRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='definitionalCollaborationRef'"
      * @generated
@@ -259,7 +258,7 @@ public interface Process extends CallableElement {
      * @see #isSetIsClosed()
      * @see #unsetIsClosed()
      * @see #setIsClosed(boolean)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getProcess_IsClosed()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getProcess_IsClosed()
      * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
      *        extendedMetaData="kind='attribute' name='isClosed'"
      * @generated
@@ -316,7 +315,7 @@ public interface Process extends CallableElement {
      * @see #isSetProcessType()
      * @see #unsetProcessType()
      * @see #setProcessType(ProcessType)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getProcess_ProcessType()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getProcess_ProcessType()
      * @model default="none" unsettable="true"
      *        extendedMetaData="kind='attribute' name='processType'"
      * @generated

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -27,10 +26,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.GlobalUserTask;
 import org.eclipse.mdt.bpmn.Rendering;
 import org.eclipse.mdt.bpmn.UserTaskImplementation;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -46,7 +45,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class GlobalUserTaskImpl extends GlobalTaskImpl implements GlobalUserTask {
+public class GlobalUserTaskImpl extends GlobalTaskImpl implements
+        GlobalUserTask {
     /**
      * The cached value of the '{@link #getRendering() <em>Rendering</em>}' containment reference list.
      * <!-- begin-user-doc -->
@@ -102,7 +102,7 @@ public class GlobalUserTaskImpl extends GlobalTaskImpl implements GlobalUserTask
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getGlobalUserTask();
+        return BpmnPackage.eINSTANCE.getGlobalUserTask();
     }
 
     /**
@@ -112,7 +112,8 @@ public class GlobalUserTaskImpl extends GlobalTaskImpl implements GlobalUserTask
      */
     public EList<Rendering> getRendering() {
         if (rendering == null) {
-            rendering = new EObjectContainmentEList<Rendering>(Rendering.class, this, bpmnPackage.GLOBAL_USER_TASK__RENDERING);
+            rendering = new EObjectContainmentEList<Rendering>(Rendering.class,
+                    this, BpmnPackage.GLOBAL_USER_TASK__RENDERING);
         }
         return rendering;
     }
@@ -133,11 +134,14 @@ public class GlobalUserTaskImpl extends GlobalTaskImpl implements GlobalUserTask
      */
     public void setImplementation(UserTaskImplementation newImplementation) {
         UserTaskImplementation oldImplementation = implementation;
-        implementation = newImplementation == null ? IMPLEMENTATION_EDEFAULT : newImplementation;
+        implementation = newImplementation == null ? IMPLEMENTATION_EDEFAULT
+                : newImplementation;
         boolean oldImplementationESet = implementationESet;
         implementationESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.GLOBAL_USER_TASK__IMPLEMENTATION, oldImplementation, implementation, !oldImplementationESet));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.GLOBAL_USER_TASK__IMPLEMENTATION,
+                    oldImplementation, implementation, !oldImplementationESet));
     }
 
     /**
@@ -151,7 +155,10 @@ public class GlobalUserTaskImpl extends GlobalTaskImpl implements GlobalUserTask
         implementation = IMPLEMENTATION_EDEFAULT;
         implementationESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, bpmnPackage.GLOBAL_USER_TASK__IMPLEMENTATION, oldImplementation, IMPLEMENTATION_EDEFAULT, oldImplementationESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET,
+                    BpmnPackage.GLOBAL_USER_TASK__IMPLEMENTATION,
+                    oldImplementation, IMPLEMENTATION_EDEFAULT,
+                    oldImplementationESet));
     }
 
     /**
@@ -169,10 +176,12 @@ public class GlobalUserTaskImpl extends GlobalTaskImpl implements GlobalUserTask
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.GLOBAL_USER_TASK__RENDERING:
-                return ((InternalEList<?>)getRendering()).basicRemove(otherEnd, msgs);
+        case BpmnPackage.GLOBAL_USER_TASK__RENDERING:
+            return ((InternalEList<?>) getRendering()).basicRemove(otherEnd,
+                    msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -185,10 +194,10 @@ public class GlobalUserTaskImpl extends GlobalTaskImpl implements GlobalUserTask
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.GLOBAL_USER_TASK__RENDERING:
-                return getRendering();
-            case bpmnPackage.GLOBAL_USER_TASK__IMPLEMENTATION:
-                return getImplementation();
+        case BpmnPackage.GLOBAL_USER_TASK__RENDERING:
+            return getRendering();
+        case BpmnPackage.GLOBAL_USER_TASK__IMPLEMENTATION:
+            return getImplementation();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -202,13 +211,13 @@ public class GlobalUserTaskImpl extends GlobalTaskImpl implements GlobalUserTask
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.GLOBAL_USER_TASK__RENDERING:
-                getRendering().clear();
-                getRendering().addAll((Collection<? extends Rendering>)newValue);
-                return;
-            case bpmnPackage.GLOBAL_USER_TASK__IMPLEMENTATION:
-                setImplementation((UserTaskImplementation)newValue);
-                return;
+        case BpmnPackage.GLOBAL_USER_TASK__RENDERING:
+            getRendering().clear();
+            getRendering().addAll((Collection<? extends Rendering>) newValue);
+            return;
+        case BpmnPackage.GLOBAL_USER_TASK__IMPLEMENTATION:
+            setImplementation((UserTaskImplementation) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -221,12 +230,12 @@ public class GlobalUserTaskImpl extends GlobalTaskImpl implements GlobalUserTask
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.GLOBAL_USER_TASK__RENDERING:
-                getRendering().clear();
-                return;
-            case bpmnPackage.GLOBAL_USER_TASK__IMPLEMENTATION:
-                unsetImplementation();
-                return;
+        case BpmnPackage.GLOBAL_USER_TASK__RENDERING:
+            getRendering().clear();
+            return;
+        case BpmnPackage.GLOBAL_USER_TASK__IMPLEMENTATION:
+            unsetImplementation();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -239,10 +248,10 @@ public class GlobalUserTaskImpl extends GlobalTaskImpl implements GlobalUserTask
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.GLOBAL_USER_TASK__RENDERING:
-                return rendering != null && !rendering.isEmpty();
-            case bpmnPackage.GLOBAL_USER_TASK__IMPLEMENTATION:
-                return isSetImplementation();
+        case BpmnPackage.GLOBAL_USER_TASK__RENDERING:
+            return rendering != null && !rendering.isEmpty();
+        case BpmnPackage.GLOBAL_USER_TASK__IMPLEMENTATION:
+            return isSetImplementation();
         }
         return super.eIsSet(featureID);
     }
@@ -254,11 +263,15 @@ public class GlobalUserTaskImpl extends GlobalTaskImpl implements GlobalUserTask
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (implementation: "); //$NON-NLS-1$
-        if (implementationESet) result.append(implementation); else result.append("<unset>"); //$NON-NLS-1$
+        if (implementationESet)
+            result.append(implementation);
+        else
+            result.append("<unset>"); //$NON-NLS-1$
         result.append(')');
         return result.toString();
     }

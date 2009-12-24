@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -31,9 +30,9 @@ import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.mdt.bpmn.Artifact;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.ConversationNode;
 import org.eclipse.mdt.bpmn.SubConversation;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -52,7 +51,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class SubConversationImpl extends ConversationNodeImpl implements SubConversation {
+public class SubConversationImpl extends ConversationNodeImpl implements
+        SubConversation {
     /**
      * The cached value of the '{@link #getConversationNodeGroup() <em>Conversation Node Group</em>}' attribute list.
      * <!-- begin-user-doc -->
@@ -109,7 +109,7 @@ public class SubConversationImpl extends ConversationNodeImpl implements SubConv
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getSubConversation();
+        return BpmnPackage.eINSTANCE.getSubConversation();
     }
 
     /**
@@ -119,7 +119,8 @@ public class SubConversationImpl extends ConversationNodeImpl implements SubConv
      */
     public FeatureMap getConversationNodeGroup() {
         if (conversationNodeGroup == null) {
-            conversationNodeGroup = new BasicFeatureMap(this, bpmnPackage.SUB_CONVERSATION__CONVERSATION_NODE_GROUP);
+            conversationNodeGroup = new BasicFeatureMap(this,
+                    BpmnPackage.SUB_CONVERSATION__CONVERSATION_NODE_GROUP);
         }
         return conversationNodeGroup;
     }
@@ -130,7 +131,8 @@ public class SubConversationImpl extends ConversationNodeImpl implements SubConv
      * @generated
      */
     public EList<ConversationNode> getConversationNode() {
-        return getConversationNodeGroup().list(bpmnPackage.eINSTANCE.getSubConversation_ConversationNode());
+        return getConversationNodeGroup().list(
+                BpmnPackage.eINSTANCE.getSubConversation_ConversationNode());
     }
 
     /**
@@ -140,7 +142,8 @@ public class SubConversationImpl extends ConversationNodeImpl implements SubConv
      */
     public FeatureMap getArtifactGroup() {
         if (artifactGroup == null) {
-            artifactGroup = new BasicFeatureMap(this, bpmnPackage.SUB_CONVERSATION__ARTIFACT_GROUP);
+            artifactGroup = new BasicFeatureMap(this,
+                    BpmnPackage.SUB_CONVERSATION__ARTIFACT_GROUP);
         }
         return artifactGroup;
     }
@@ -151,7 +154,8 @@ public class SubConversationImpl extends ConversationNodeImpl implements SubConv
      * @generated
      */
     public EList<Artifact> getArtifact() {
-        return getArtifactGroup().list(bpmnPackage.eINSTANCE.getSubConversation_Artifact());
+        return getArtifactGroup().list(
+                BpmnPackage.eINSTANCE.getSubConversation_Artifact());
     }
 
     /**
@@ -172,7 +176,9 @@ public class SubConversationImpl extends ConversationNodeImpl implements SubConv
         QName oldCorrelationKeyRef = correlationKeyRef;
         correlationKeyRef = newCorrelationKeyRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.SUB_CONVERSATION__CORRELATION_KEY_REF, oldCorrelationKeyRef, correlationKeyRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.SUB_CONVERSATION__CORRELATION_KEY_REF,
+                    oldCorrelationKeyRef, correlationKeyRef));
     }
 
     /**
@@ -181,16 +187,21 @@ public class SubConversationImpl extends ConversationNodeImpl implements SubConv
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.SUB_CONVERSATION__CONVERSATION_NODE_GROUP:
-                return ((InternalEList<?>)getConversationNodeGroup()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.SUB_CONVERSATION__CONVERSATION_NODE:
-                return ((InternalEList<?>)getConversationNode()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.SUB_CONVERSATION__ARTIFACT_GROUP:
-                return ((InternalEList<?>)getArtifactGroup()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.SUB_CONVERSATION__ARTIFACT:
-                return ((InternalEList<?>)getArtifact()).basicRemove(otherEnd, msgs);
+        case BpmnPackage.SUB_CONVERSATION__CONVERSATION_NODE_GROUP:
+            return ((InternalEList<?>) getConversationNodeGroup()).basicRemove(
+                    otherEnd, msgs);
+        case BpmnPackage.SUB_CONVERSATION__CONVERSATION_NODE:
+            return ((InternalEList<?>) getConversationNode()).basicRemove(
+                    otherEnd, msgs);
+        case BpmnPackage.SUB_CONVERSATION__ARTIFACT_GROUP:
+            return ((InternalEList<?>) getArtifactGroup()).basicRemove(
+                    otherEnd, msgs);
+        case BpmnPackage.SUB_CONVERSATION__ARTIFACT:
+            return ((InternalEList<?>) getArtifact()).basicRemove(otherEnd,
+                    msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -203,18 +214,21 @@ public class SubConversationImpl extends ConversationNodeImpl implements SubConv
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.SUB_CONVERSATION__CONVERSATION_NODE_GROUP:
-                if (coreType) return getConversationNodeGroup();
-                return ((FeatureMap.Internal)getConversationNodeGroup()).getWrapper();
-            case bpmnPackage.SUB_CONVERSATION__CONVERSATION_NODE:
-                return getConversationNode();
-            case bpmnPackage.SUB_CONVERSATION__ARTIFACT_GROUP:
-                if (coreType) return getArtifactGroup();
-                return ((FeatureMap.Internal)getArtifactGroup()).getWrapper();
-            case bpmnPackage.SUB_CONVERSATION__ARTIFACT:
-                return getArtifact();
-            case bpmnPackage.SUB_CONVERSATION__CORRELATION_KEY_REF:
-                return getCorrelationKeyRef();
+        case BpmnPackage.SUB_CONVERSATION__CONVERSATION_NODE_GROUP:
+            if (coreType)
+                return getConversationNodeGroup();
+            return ((FeatureMap.Internal) getConversationNodeGroup())
+                    .getWrapper();
+        case BpmnPackage.SUB_CONVERSATION__CONVERSATION_NODE:
+            return getConversationNode();
+        case BpmnPackage.SUB_CONVERSATION__ARTIFACT_GROUP:
+            if (coreType)
+                return getArtifactGroup();
+            return ((FeatureMap.Internal) getArtifactGroup()).getWrapper();
+        case BpmnPackage.SUB_CONVERSATION__ARTIFACT:
+            return getArtifact();
+        case BpmnPackage.SUB_CONVERSATION__CORRELATION_KEY_REF:
+            return getCorrelationKeyRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -228,23 +242,24 @@ public class SubConversationImpl extends ConversationNodeImpl implements SubConv
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.SUB_CONVERSATION__CONVERSATION_NODE_GROUP:
-                ((FeatureMap.Internal)getConversationNodeGroup()).set(newValue);
-                return;
-            case bpmnPackage.SUB_CONVERSATION__CONVERSATION_NODE:
-                getConversationNode().clear();
-                getConversationNode().addAll((Collection<? extends ConversationNode>)newValue);
-                return;
-            case bpmnPackage.SUB_CONVERSATION__ARTIFACT_GROUP:
-                ((FeatureMap.Internal)getArtifactGroup()).set(newValue);
-                return;
-            case bpmnPackage.SUB_CONVERSATION__ARTIFACT:
-                getArtifact().clear();
-                getArtifact().addAll((Collection<? extends Artifact>)newValue);
-                return;
-            case bpmnPackage.SUB_CONVERSATION__CORRELATION_KEY_REF:
-                setCorrelationKeyRef((QName)newValue);
-                return;
+        case BpmnPackage.SUB_CONVERSATION__CONVERSATION_NODE_GROUP:
+            ((FeatureMap.Internal) getConversationNodeGroup()).set(newValue);
+            return;
+        case BpmnPackage.SUB_CONVERSATION__CONVERSATION_NODE:
+            getConversationNode().clear();
+            getConversationNode().addAll(
+                    (Collection<? extends ConversationNode>) newValue);
+            return;
+        case BpmnPackage.SUB_CONVERSATION__ARTIFACT_GROUP:
+            ((FeatureMap.Internal) getArtifactGroup()).set(newValue);
+            return;
+        case BpmnPackage.SUB_CONVERSATION__ARTIFACT:
+            getArtifact().clear();
+            getArtifact().addAll((Collection<? extends Artifact>) newValue);
+            return;
+        case BpmnPackage.SUB_CONVERSATION__CORRELATION_KEY_REF:
+            setCorrelationKeyRef((QName) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -257,21 +272,21 @@ public class SubConversationImpl extends ConversationNodeImpl implements SubConv
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.SUB_CONVERSATION__CONVERSATION_NODE_GROUP:
-                getConversationNodeGroup().clear();
-                return;
-            case bpmnPackage.SUB_CONVERSATION__CONVERSATION_NODE:
-                getConversationNode().clear();
-                return;
-            case bpmnPackage.SUB_CONVERSATION__ARTIFACT_GROUP:
-                getArtifactGroup().clear();
-                return;
-            case bpmnPackage.SUB_CONVERSATION__ARTIFACT:
-                getArtifact().clear();
-                return;
-            case bpmnPackage.SUB_CONVERSATION__CORRELATION_KEY_REF:
-                setCorrelationKeyRef(CORRELATION_KEY_REF_EDEFAULT);
-                return;
+        case BpmnPackage.SUB_CONVERSATION__CONVERSATION_NODE_GROUP:
+            getConversationNodeGroup().clear();
+            return;
+        case BpmnPackage.SUB_CONVERSATION__CONVERSATION_NODE:
+            getConversationNode().clear();
+            return;
+        case BpmnPackage.SUB_CONVERSATION__ARTIFACT_GROUP:
+            getArtifactGroup().clear();
+            return;
+        case BpmnPackage.SUB_CONVERSATION__ARTIFACT:
+            getArtifact().clear();
+            return;
+        case BpmnPackage.SUB_CONVERSATION__CORRELATION_KEY_REF:
+            setCorrelationKeyRef(CORRELATION_KEY_REF_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -284,16 +299,18 @@ public class SubConversationImpl extends ConversationNodeImpl implements SubConv
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.SUB_CONVERSATION__CONVERSATION_NODE_GROUP:
-                return conversationNodeGroup != null && !conversationNodeGroup.isEmpty();
-            case bpmnPackage.SUB_CONVERSATION__CONVERSATION_NODE:
-                return !getConversationNode().isEmpty();
-            case bpmnPackage.SUB_CONVERSATION__ARTIFACT_GROUP:
-                return artifactGroup != null && !artifactGroup.isEmpty();
-            case bpmnPackage.SUB_CONVERSATION__ARTIFACT:
-                return !getArtifact().isEmpty();
-            case bpmnPackage.SUB_CONVERSATION__CORRELATION_KEY_REF:
-                return CORRELATION_KEY_REF_EDEFAULT == null ? correlationKeyRef != null : !CORRELATION_KEY_REF_EDEFAULT.equals(correlationKeyRef);
+        case BpmnPackage.SUB_CONVERSATION__CONVERSATION_NODE_GROUP:
+            return conversationNodeGroup != null
+                    && !conversationNodeGroup.isEmpty();
+        case BpmnPackage.SUB_CONVERSATION__CONVERSATION_NODE:
+            return !getConversationNode().isEmpty();
+        case BpmnPackage.SUB_CONVERSATION__ARTIFACT_GROUP:
+            return artifactGroup != null && !artifactGroup.isEmpty();
+        case BpmnPackage.SUB_CONVERSATION__ARTIFACT:
+            return !getArtifact().isEmpty();
+        case BpmnPackage.SUB_CONVERSATION__CORRELATION_KEY_REF:
+            return CORRELATION_KEY_REF_EDEFAULT == null ? correlationKeyRef != null
+                    : !CORRELATION_KEY_REF_EDEFAULT.equals(correlationKeyRef);
         }
         return super.eIsSet(featureID);
     }
@@ -305,7 +322,8 @@ public class SubConversationImpl extends ConversationNodeImpl implements SubConv
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (conversationNodeGroup: "); //$NON-NLS-1$

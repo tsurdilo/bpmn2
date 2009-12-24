@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -27,7 +26,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getResource()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getResource()
  * @model extendedMetaData="name='tResource' kind='elementOnly'"
  * @generated
  */
@@ -42,7 +41,7 @@ public interface Resource extends RootElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Resource Parameter</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getResource_ResourceParameter()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getResource_ResourceParameter()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='resourceParameter' namespace='##targetNamespace'"
      * @generated
@@ -59,7 +58,7 @@ public interface Resource extends RootElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getResource_Name()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getResource_Name()
      * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
      *        extendedMetaData="kind='attribute' name='name'"
      * @generated

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -29,7 +28,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getFlowNode()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getFlowNode()
  * @model abstract="true"
  *        extendedMetaData="name='tFlowNode' kind='elementOnly'"
  * @generated
@@ -45,7 +44,7 @@ public interface FlowNode extends FlowElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Incoming</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getFlowNode_Incoming()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getFlowNode_Incoming()
      * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='element' name='incoming' namespace='##targetNamespace'"
      * @generated
@@ -62,7 +61,7 @@ public interface FlowNode extends FlowElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Outgoing</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getFlowNode_Outgoing()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getFlowNode_Outgoing()
      * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='element' name='outgoing' namespace='##targetNamespace'"
      * @generated

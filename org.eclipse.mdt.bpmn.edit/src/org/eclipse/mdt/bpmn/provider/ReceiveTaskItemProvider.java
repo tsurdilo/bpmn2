@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -33,10 +32,10 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.ReceiveTask;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.ReceiveTask} object.
@@ -91,7 +90,7 @@ public class ReceiveTaskItemProvider extends TaskItemProvider implements
                         getString("_UI_ReceiveTask_implementation_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_ReceiveTask_implementation_feature", "_UI_ReceiveTask_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getReceiveTask_Implementation(),
+                        BpmnPackage.eINSTANCE.getReceiveTask_Implementation(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -111,7 +110,7 @@ public class ReceiveTaskItemProvider extends TaskItemProvider implements
                         getString("_UI_ReceiveTask_instantiate_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_ReceiveTask_instantiate_feature", "_UI_ReceiveTask_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getReceiveTask_Instantiate(),
+                        BpmnPackage.eINSTANCE.getReceiveTask_Instantiate(),
                         true, false, false,
                         ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
@@ -131,7 +130,7 @@ public class ReceiveTaskItemProvider extends TaskItemProvider implements
                         getString("_UI_ReceiveTask_messageRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_ReceiveTask_messageRef_feature", "_UI_ReceiveTask_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getReceiveTask_MessageRef(),
+                        BpmnPackage.eINSTANCE.getReceiveTask_MessageRef(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -151,7 +150,7 @@ public class ReceiveTaskItemProvider extends TaskItemProvider implements
                         getString("_UI_ReceiveTask_operationRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_ReceiveTask_operationRef_feature", "_UI_ReceiveTask_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getReceiveTask_OperationRef(),
+                        BpmnPackage.eINSTANCE.getReceiveTask_OperationRef(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -193,10 +192,10 @@ public class ReceiveTaskItemProvider extends TaskItemProvider implements
         updateChildren(notification);
 
         switch (notification.getFeatureID(ReceiveTask.class)) {
-        case bpmnPackage.RECEIVE_TASK__IMPLEMENTATION:
-        case bpmnPackage.RECEIVE_TASK__INSTANTIATE:
-        case bpmnPackage.RECEIVE_TASK__MESSAGE_REF:
-        case bpmnPackage.RECEIVE_TASK__OPERATION_REF:
+        case BpmnPackage.RECEIVE_TASK__IMPLEMENTATION:
+        case BpmnPackage.RECEIVE_TASK__INSTANTIATE:
+        case BpmnPackage.RECEIVE_TASK__MESSAGE_REF:
+        case BpmnPackage.RECEIVE_TASK__OPERATION_REF:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
@@ -237,23 +236,23 @@ public class ReceiveTaskItemProvider extends TaskItemProvider implements
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE
-                || childFeature == bpmnPackage.eINSTANCE
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getActivity_ActivityResource()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_Performer()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_HumanPerformer()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_PotentialOwner()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getActivity_LoopCharacteristics()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_MultiInstanceLoopCharacteristics()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_StandardLoopCharacteristics();
 
         if (qualify) {

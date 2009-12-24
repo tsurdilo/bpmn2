@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -28,7 +27,7 @@ import javax.xml.namespace.QName;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getResourceParameter()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getResourceParameter()
  * @model extendedMetaData="name='tResourceParameter' kind='elementOnly'"
  * @generated
  */
@@ -45,7 +44,7 @@ public interface ResourceParameter extends BaseElement {
      * @see #isSetIsRequired()
      * @see #unsetIsRequired()
      * @see #setIsRequired(boolean)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getResourceParameter_IsRequired()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getResourceParameter_IsRequired()
      * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
      *        extendedMetaData="kind='attribute' name='isRequired'"
      * @generated
@@ -97,7 +96,7 @@ public interface ResourceParameter extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getResourceParameter_Name()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getResourceParameter_Name()
      * @model dataType="org.eclipse.emf.ecore.xml.type.String"
      *        extendedMetaData="kind='attribute' name='name'"
      * @generated
@@ -124,7 +123,7 @@ public interface ResourceParameter extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Type</em>' attribute.
      * @see #setType(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getResourceParameter_Type()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getResourceParameter_Type()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='type'"
      * @generated

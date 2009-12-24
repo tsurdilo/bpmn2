@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -20,8 +19,8 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.CallActivity;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -73,7 +72,7 @@ public class CallActivityImpl extends ActivityImpl implements CallActivity {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getCallActivity();
+        return BpmnPackage.eINSTANCE.getCallActivity();
     }
 
     /**
@@ -94,7 +93,9 @@ public class CallActivityImpl extends ActivityImpl implements CallActivity {
         QName oldCalledElement = calledElement;
         calledElement = newCalledElement;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.CALL_ACTIVITY__CALLED_ELEMENT, oldCalledElement, calledElement));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.CALL_ACTIVITY__CALLED_ELEMENT,
+                    oldCalledElement, calledElement));
     }
 
     /**
@@ -105,8 +106,8 @@ public class CallActivityImpl extends ActivityImpl implements CallActivity {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.CALL_ACTIVITY__CALLED_ELEMENT:
-                return getCalledElement();
+        case BpmnPackage.CALL_ACTIVITY__CALLED_ELEMENT:
+            return getCalledElement();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -119,9 +120,9 @@ public class CallActivityImpl extends ActivityImpl implements CallActivity {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.CALL_ACTIVITY__CALLED_ELEMENT:
-                setCalledElement((QName)newValue);
-                return;
+        case BpmnPackage.CALL_ACTIVITY__CALLED_ELEMENT:
+            setCalledElement((QName) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -134,9 +135,9 @@ public class CallActivityImpl extends ActivityImpl implements CallActivity {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CALL_ACTIVITY__CALLED_ELEMENT:
-                setCalledElement(CALLED_ELEMENT_EDEFAULT);
-                return;
+        case BpmnPackage.CALL_ACTIVITY__CALLED_ELEMENT:
+            setCalledElement(CALLED_ELEMENT_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -149,8 +150,9 @@ public class CallActivityImpl extends ActivityImpl implements CallActivity {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CALL_ACTIVITY__CALLED_ELEMENT:
-                return CALLED_ELEMENT_EDEFAULT == null ? calledElement != null : !CALLED_ELEMENT_EDEFAULT.equals(calledElement);
+        case BpmnPackage.CALL_ACTIVITY__CALLED_ELEMENT:
+            return CALLED_ELEMENT_EDEFAULT == null ? calledElement != null
+                    : !CALLED_ELEMENT_EDEFAULT.equals(calledElement);
         }
         return super.eIsSet(featureID);
     }
@@ -162,7 +164,8 @@ public class CallActivityImpl extends ActivityImpl implements CallActivity {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (calledElement: "); //$NON-NLS-1$

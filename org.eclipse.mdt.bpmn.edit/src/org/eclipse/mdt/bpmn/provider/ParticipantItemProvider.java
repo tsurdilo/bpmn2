@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -33,11 +32,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnFactory;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Participant;
-import org.eclipse.mdt.bpmn.bpmnFactory;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.Participant} object.
@@ -94,7 +93,7 @@ public class ParticipantItemProvider extends BaseElementItemProvider implements
                         getString("_UI_Participant_interfaceRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Participant_interfaceRef_feature", "_UI_Participant_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getParticipant_InterfaceRef(),
+                        BpmnPackage.eINSTANCE.getParticipant_InterfaceRef(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -114,7 +113,7 @@ public class ParticipantItemProvider extends BaseElementItemProvider implements
                         getString("_UI_Participant_endPointRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Participant_endPointRef_feature", "_UI_Participant_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getParticipant_EndPointRef(),
+                        BpmnPackage.eINSTANCE.getParticipant_EndPointRef(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -134,7 +133,7 @@ public class ParticipantItemProvider extends BaseElementItemProvider implements
                         getString("_UI_Participant_name_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Participant_name_feature", "_UI_Participant_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getParticipant_Name(), true,
+                        BpmnPackage.eINSTANCE.getParticipant_Name(), true,
                         false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -154,7 +153,7 @@ public class ParticipantItemProvider extends BaseElementItemProvider implements
                         getString("_UI_Participant_partnerEntityRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Participant_partnerEntityRef_feature", "_UI_Participant_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getParticipant_PartnerEntityRef(),
+                        BpmnPackage.eINSTANCE.getParticipant_PartnerEntityRef(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -174,7 +173,7 @@ public class ParticipantItemProvider extends BaseElementItemProvider implements
                         getString("_UI_Participant_partnerRoleRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Participant_partnerRoleRef_feature", "_UI_Participant_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getParticipant_PartnerRoleRef(),
+                        BpmnPackage.eINSTANCE.getParticipant_PartnerRoleRef(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -194,7 +193,7 @@ public class ParticipantItemProvider extends BaseElementItemProvider implements
                         getString("_UI_Participant_processRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Participant_processRef_feature", "_UI_Participant_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getParticipant_ProcessRef(),
+                        BpmnPackage.eINSTANCE.getParticipant_ProcessRef(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -212,7 +211,7 @@ public class ParticipantItemProvider extends BaseElementItemProvider implements
             Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getParticipant_ParticipantMultiplicity());
         }
         return childrenFeatures;
@@ -268,16 +267,16 @@ public class ParticipantItemProvider extends BaseElementItemProvider implements
         updateChildren(notification);
 
         switch (notification.getFeatureID(Participant.class)) {
-        case bpmnPackage.PARTICIPANT__INTERFACE_REF:
-        case bpmnPackage.PARTICIPANT__END_POINT_REF:
-        case bpmnPackage.PARTICIPANT__NAME:
-        case bpmnPackage.PARTICIPANT__PARTNER_ENTITY_REF:
-        case bpmnPackage.PARTICIPANT__PARTNER_ROLE_REF:
-        case bpmnPackage.PARTICIPANT__PROCESS_REF:
+        case BpmnPackage.PARTICIPANT__INTERFACE_REF:
+        case BpmnPackage.PARTICIPANT__END_POINT_REF:
+        case BpmnPackage.PARTICIPANT__NAME:
+        case BpmnPackage.PARTICIPANT__PARTNER_ENTITY_REF:
+        case BpmnPackage.PARTICIPANT__PARTNER_ROLE_REF:
+        case BpmnPackage.PARTICIPANT__PROCESS_REF:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
-        case bpmnPackage.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
+        case BpmnPackage.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -297,9 +296,9 @@ public class ParticipantItemProvider extends BaseElementItemProvider implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getParticipant_ParticipantMultiplicity(),
-                bpmnFactory.eINSTANCE.createParticipantMultiplicity()));
+                BpmnFactory.eINSTANCE.createParticipantMultiplicity()));
     }
 
     /**
@@ -322,10 +321,10 @@ public class ParticipantItemProvider extends BaseElementItemProvider implements
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE;
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE;
 
         if (qualify) {
             return getString("_UI_CreateChild_text2", //$NON-NLS-1$

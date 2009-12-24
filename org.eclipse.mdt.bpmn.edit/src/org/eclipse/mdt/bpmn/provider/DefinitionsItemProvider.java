@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -36,11 +35,11 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnFactory;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Definitions;
-import org.eclipse.mdt.bpmn.bpmnFactory;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diFactory;
+import org.eclipse.mdt.bpmn.di.DIFactory;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.Definitions} object.
@@ -95,7 +94,7 @@ public class DefinitionsItemProvider extends ItemProviderAdapter implements
                         getString("_UI_Definitions_expressionLanguage_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Definitions_expressionLanguage_feature", "_UI_Definitions_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE
+                        BpmnPackage.eINSTANCE
                                 .getDefinitions_ExpressionLanguage(), true,
                         false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
@@ -116,7 +115,7 @@ public class DefinitionsItemProvider extends ItemProviderAdapter implements
                         getString("_UI_Definitions_id_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Definitions_id_feature", "_UI_Definitions_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getDefinitions_Id(), true, false,
+                        BpmnPackage.eINSTANCE.getDefinitions_Id(), true, false,
                         false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                         null, null));
     }
@@ -136,7 +135,7 @@ public class DefinitionsItemProvider extends ItemProviderAdapter implements
                         getString("_UI_Definitions_targetNamespace_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Definitions_targetNamespace_feature", "_UI_Definitions_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getDefinitions_TargetNamespace(),
+                        BpmnPackage.eINSTANCE.getDefinitions_TargetNamespace(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -156,7 +155,7 @@ public class DefinitionsItemProvider extends ItemProviderAdapter implements
                         getString("_UI_Definitions_typeLanguage_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Definitions_typeLanguage_feature", "_UI_Definitions_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getDefinitions_TypeLanguage(),
+                        BpmnPackage.eINSTANCE.getDefinitions_TypeLanguage(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -174,16 +173,16 @@ public class DefinitionsItemProvider extends ItemProviderAdapter implements
             Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(bpmnPackage.eINSTANCE.getDefinitions_Import());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE.getDefinitions_Import());
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getDefinitions_Extension());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getDefinitions_RootElementGroup());
             childrenFeatures
-                    .add(bpmnPackage.eINSTANCE.getDefinitions_Diagram());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+                    .add(BpmnPackage.eINSTANCE.getDefinitions_Diagram());
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getDefinitions_Relationship());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getDefinitions_AnyAttribute());
         }
         return childrenFeatures;
@@ -239,19 +238,19 @@ public class DefinitionsItemProvider extends ItemProviderAdapter implements
         updateChildren(notification);
 
         switch (notification.getFeatureID(Definitions.class)) {
-        case bpmnPackage.DEFINITIONS__EXPRESSION_LANGUAGE:
-        case bpmnPackage.DEFINITIONS__ID:
-        case bpmnPackage.DEFINITIONS__TARGET_NAMESPACE:
-        case bpmnPackage.DEFINITIONS__TYPE_LANGUAGE:
+        case BpmnPackage.DEFINITIONS__EXPRESSION_LANGUAGE:
+        case BpmnPackage.DEFINITIONS__ID:
+        case BpmnPackage.DEFINITIONS__TARGET_NAMESPACE:
+        case BpmnPackage.DEFINITIONS__TYPE_LANGUAGE:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
-        case bpmnPackage.DEFINITIONS__IMPORT:
-        case bpmnPackage.DEFINITIONS__EXTENSION:
-        case bpmnPackage.DEFINITIONS__ROOT_ELEMENT_GROUP:
-        case bpmnPackage.DEFINITIONS__DIAGRAM:
-        case bpmnPackage.DEFINITIONS__RELATIONSHIP:
-        case bpmnPackage.DEFINITIONS__ANY_ATTRIBUTE:
+        case BpmnPackage.DEFINITIONS__IMPORT:
+        case BpmnPackage.DEFINITIONS__EXTENSION:
+        case BpmnPackage.DEFINITIONS__ROOT_ELEMENT_GROUP:
+        case BpmnPackage.DEFINITIONS__DIAGRAM:
+        case BpmnPackage.DEFINITIONS__RELATIONSHIP:
+        case BpmnPackage.DEFINITIONS__ANY_ATTRIBUTE:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -272,440 +271,440 @@ public class DefinitionsItemProvider extends ItemProviderAdapter implements
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
         newChildDescriptors
-                .add(createChildParameter(bpmnPackage.eINSTANCE
-                        .getDefinitions_Import(), bpmnFactory.eINSTANCE
+                .add(createChildParameter(BpmnPackage.eINSTANCE
+                        .getDefinitions_Import(), BpmnFactory.eINSTANCE
                         .createImport()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getDefinitions_Extension(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getDefinitions_Extension(), BpmnFactory.eINSTANCE
                 .createExtension()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createCallableElement())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createCallableElement())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createCancelEventDefinition())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createCancelEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createCategory())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createCategory())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createChoreography())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createChoreography())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createCollaboration())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createCollaboration())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createCompensateEventDefinition())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createCompensateEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createConditionalEventDefinition())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createConditionalEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createConversation())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createConversation())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createCorrelationProperty())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createCorrelationProperty())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createDataStore())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createDataStore())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createEndPoint())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createEndPoint())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createError())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createError())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createErrorEventDefinition())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createErrorEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createEscalation())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createEscalation())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createEscalationEventDefinition())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createEscalationEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createGlobalTask())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createGlobalTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createGlobalBusinessRuleTask())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createGlobalBusinessRuleTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createGlobalChoreographyTask())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createGlobalChoreographyTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createGlobalCommunication())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createGlobalCommunication())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createGlobalManualTask())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createGlobalManualTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createGlobalScriptTask())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createGlobalScriptTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createGlobalUserTask())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createGlobalUserTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createInterface())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createInterface())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createItemDefinition())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createItemDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createLinkEventDefinition())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createLinkEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createMessage())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createMessage())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createMessageEventDefinition())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createMessageEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createPartnerEntity())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createPartnerEntity())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createPartnerRole())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createPartnerRole())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createProcess())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createProcess())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createResource())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createResource())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createSignal())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createSignal())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createSignalEventDefinition())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createSignalEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createTerminateEventDefinition())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createTerminateEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDefinitions_RootElement(),
-                bpmnFactory.eINSTANCE.createTimerEventDefinition())));
+                BpmnPackage.eINSTANCE.getDefinitions_RootElement(),
+                BpmnFactory.eINSTANCE.createTimerEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_CancelEventDefinition(),
-                bpmnFactory.eINSTANCE.createCancelEventDefinition())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_CancelEventDefinition(),
+                BpmnFactory.eINSTANCE.createCancelEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_EventDefinition(),
-                bpmnFactory.eINSTANCE.createCancelEventDefinition())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_EventDefinition(),
+                BpmnFactory.eINSTANCE.createCancelEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_EventDefinition(),
-                bpmnFactory.eINSTANCE.createCompensateEventDefinition())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_EventDefinition(),
+                BpmnFactory.eINSTANCE.createCompensateEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_EventDefinition(),
-                bpmnFactory.eINSTANCE.createConditionalEventDefinition())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_EventDefinition(),
+                BpmnFactory.eINSTANCE.createConditionalEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_EventDefinition(),
-                bpmnFactory.eINSTANCE.createErrorEventDefinition())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_EventDefinition(),
+                BpmnFactory.eINSTANCE.createErrorEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_EventDefinition(),
-                bpmnFactory.eINSTANCE.createEscalationEventDefinition())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_EventDefinition(),
+                BpmnFactory.eINSTANCE.createEscalationEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_EventDefinition(),
-                bpmnFactory.eINSTANCE.createLinkEventDefinition())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_EventDefinition(),
+                BpmnFactory.eINSTANCE.createLinkEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_EventDefinition(),
-                bpmnFactory.eINSTANCE.createMessageEventDefinition())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_EventDefinition(),
+                BpmnFactory.eINSTANCE.createMessageEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_EventDefinition(),
-                bpmnFactory.eINSTANCE.createSignalEventDefinition())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_EventDefinition(),
+                BpmnFactory.eINSTANCE.createSignalEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_EventDefinition(),
-                bpmnFactory.eINSTANCE.createTerminateEventDefinition())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_EventDefinition(),
+                BpmnFactory.eINSTANCE.createTerminateEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_EventDefinition(),
-                bpmnFactory.eINSTANCE.createTimerEventDefinition())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_EventDefinition(),
+                BpmnFactory.eINSTANCE.createTimerEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Category(),
-                bpmnFactory.eINSTANCE.createCategory())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Category(),
+                BpmnFactory.eINSTANCE.createCategory())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Choreography(),
-                bpmnFactory.eINSTANCE.createChoreography())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Choreography(),
+                BpmnFactory.eINSTANCE.createChoreography())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Collaboration(),
-                bpmnFactory.eINSTANCE.createCollaboration())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Collaboration(),
+                BpmnFactory.eINSTANCE.createCollaboration())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE
+                BpmnPackage.eINSTANCE
                         .getDocumentRoot_CompensateEventDefinition(),
-                bpmnFactory.eINSTANCE.createCompensateEventDefinition())));
+                BpmnFactory.eINSTANCE.createCompensateEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE
+                BpmnPackage.eINSTANCE
                         .getDocumentRoot_ConditionalEventDefinition(),
-                bpmnFactory.eINSTANCE.createConditionalEventDefinition())));
+                BpmnFactory.eINSTANCE.createConditionalEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Conversation(),
-                bpmnFactory.eINSTANCE.createConversation())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Conversation(),
+                BpmnFactory.eINSTANCE.createConversation())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_CorrelationProperty(),
-                bpmnFactory.eINSTANCE.createCorrelationProperty())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_CorrelationProperty(),
+                BpmnFactory.eINSTANCE.createCorrelationProperty())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_DataStore(),
-                bpmnFactory.eINSTANCE.createDataStore())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_DataStore(),
+                BpmnFactory.eINSTANCE.createDataStore())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_EndPoint(),
-                bpmnFactory.eINSTANCE.createEndPoint())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_EndPoint(),
+                BpmnFactory.eINSTANCE.createEndPoint())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Error(),
-                bpmnFactory.eINSTANCE.createError())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Error(),
+                BpmnFactory.eINSTANCE.createError())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_ErrorEventDefinition(),
-                bpmnFactory.eINSTANCE.createErrorEventDefinition())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_ErrorEventDefinition(),
+                BpmnFactory.eINSTANCE.createErrorEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Escalation(),
-                bpmnFactory.eINSTANCE.createEscalation())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Escalation(),
+                BpmnFactory.eINSTANCE.createEscalation())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE
+                BpmnPackage.eINSTANCE
                         .getDocumentRoot_EscalationEventDefinition(),
-                bpmnFactory.eINSTANCE.createEscalationEventDefinition())));
+                BpmnFactory.eINSTANCE.createEscalationEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_GlobalBusinessRuleTask(),
-                bpmnFactory.eINSTANCE.createGlobalBusinessRuleTask())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_GlobalBusinessRuleTask(),
+                BpmnFactory.eINSTANCE.createGlobalBusinessRuleTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_GlobalChoreographyTask(),
-                bpmnFactory.eINSTANCE.createGlobalChoreographyTask())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_GlobalChoreographyTask(),
+                BpmnFactory.eINSTANCE.createGlobalChoreographyTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_GlobalCommunication(),
-                bpmnFactory.eINSTANCE.createGlobalCommunication())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_GlobalCommunication(),
+                BpmnFactory.eINSTANCE.createGlobalCommunication())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_GlobalManualTask(),
-                bpmnFactory.eINSTANCE.createGlobalManualTask())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_GlobalManualTask(),
+                BpmnFactory.eINSTANCE.createGlobalManualTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_GlobalScriptTask(),
-                bpmnFactory.eINSTANCE.createGlobalScriptTask())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_GlobalScriptTask(),
+                BpmnFactory.eINSTANCE.createGlobalScriptTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_GlobalTask(),
-                bpmnFactory.eINSTANCE.createGlobalTask())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_GlobalTask(),
+                BpmnFactory.eINSTANCE.createGlobalTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_GlobalTask(),
-                bpmnFactory.eINSTANCE.createGlobalBusinessRuleTask())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_GlobalTask(),
+                BpmnFactory.eINSTANCE.createGlobalBusinessRuleTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_GlobalTask(),
-                bpmnFactory.eINSTANCE.createGlobalManualTask())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_GlobalTask(),
+                BpmnFactory.eINSTANCE.createGlobalManualTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_GlobalTask(),
-                bpmnFactory.eINSTANCE.createGlobalScriptTask())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_GlobalTask(),
+                BpmnFactory.eINSTANCE.createGlobalScriptTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_GlobalTask(),
-                bpmnFactory.eINSTANCE.createGlobalUserTask())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_GlobalTask(),
+                BpmnFactory.eINSTANCE.createGlobalUserTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_GlobalUserTask(),
-                bpmnFactory.eINSTANCE.createGlobalUserTask())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_GlobalUserTask(),
+                BpmnFactory.eINSTANCE.createGlobalUserTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Interface(),
-                bpmnFactory.eINSTANCE.createInterface())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Interface(),
+                BpmnFactory.eINSTANCE.createInterface())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_ItemDefinition(),
-                bpmnFactory.eINSTANCE.createItemDefinition())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_ItemDefinition(),
+                BpmnFactory.eINSTANCE.createItemDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_LinkEventDefinition(),
-                bpmnFactory.eINSTANCE.createLinkEventDefinition())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_LinkEventDefinition(),
+                BpmnFactory.eINSTANCE.createLinkEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Message(),
-                bpmnFactory.eINSTANCE.createMessage())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Message(),
+                BpmnFactory.eINSTANCE.createMessage())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_MessageEventDefinition(),
-                bpmnFactory.eINSTANCE.createMessageEventDefinition())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_MessageEventDefinition(),
+                BpmnFactory.eINSTANCE.createMessageEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_PartnerEntity(),
-                bpmnFactory.eINSTANCE.createPartnerEntity())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_PartnerEntity(),
+                BpmnFactory.eINSTANCE.createPartnerEntity())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_PartnerRole(),
-                bpmnFactory.eINSTANCE.createPartnerRole())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_PartnerRole(),
+                BpmnFactory.eINSTANCE.createPartnerRole())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Process(),
-                bpmnFactory.eINSTANCE.createProcess())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Process(),
+                BpmnFactory.eINSTANCE.createProcess())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Resource(),
-                bpmnFactory.eINSTANCE.createResource())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Resource(),
+                BpmnFactory.eINSTANCE.createResource())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Signal(),
-                bpmnFactory.eINSTANCE.createSignal())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Signal(),
+                BpmnFactory.eINSTANCE.createSignal())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_SignalEventDefinition(),
-                bpmnFactory.eINSTANCE.createSignalEventDefinition())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_SignalEventDefinition(),
+                BpmnFactory.eINSTANCE.createSignalEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE
+                BpmnPackage.eINSTANCE
                         .getDocumentRoot_TerminateEventDefinition(),
-                bpmnFactory.eINSTANCE.createTerminateEventDefinition())));
+                BpmnFactory.eINSTANCE.createTerminateEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_TimerEventDefinition(),
-                bpmnFactory.eINSTANCE.createTimerEventDefinition())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_TimerEventDefinition(),
+                BpmnFactory.eINSTANCE.createTimerEventDefinition())));
 
         newChildDescriptors
-                .add(createChildParameter(bpmnPackage.eINSTANCE
-                        .getDefinitions_Diagram(), diFactory.eINSTANCE
+                .add(createChildParameter(BpmnPackage.eINSTANCE
+                        .getDefinitions_Diagram(), DIFactory.eINSTANCE
                         .createDiagram()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getDefinitions_Relationship(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getDefinitions_Relationship(), BpmnFactory.eINSTANCE
                 .createRelationship()));
     }
 
@@ -729,77 +728,77 @@ public class DefinitionsItemProvider extends ItemProviderAdapter implements
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == bpmnPackage.eINSTANCE
+        boolean qualify = childFeature == BpmnPackage.eINSTANCE
                 .getDefinitions_RootElement()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_CancelEventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_EventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_Category()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_Choreography()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_Collaboration()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_CompensateEventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_ConditionalEventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_Conversation()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_CorrelationProperty()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_DataStore()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_EndPoint()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_Error()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_ErrorEventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_Escalation()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_EscalationEventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_GlobalTask()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_GlobalBusinessRuleTask()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_GlobalChoreographyTask()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_GlobalCommunication()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_GlobalManualTask()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_GlobalScriptTask()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_GlobalUserTask()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_Interface()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_ItemDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_LinkEventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_Message()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_MessageEventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_PartnerEntity()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_PartnerRole()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_Process()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_Resource()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_Signal()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_SignalEventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_TerminateEventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_TimerEventDefinition();
 
         if (qualify) {

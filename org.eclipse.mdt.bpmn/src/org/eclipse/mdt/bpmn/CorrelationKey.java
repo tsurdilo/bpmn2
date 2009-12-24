@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -28,7 +27,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getCorrelationKey()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getCorrelationKey()
  * @model extendedMetaData="name='tCorrelationKey' kind='elementOnly'"
  * @generated
  */
@@ -43,7 +42,7 @@ public interface CorrelationKey extends BaseElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Correlation Property Ref</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCorrelationKey_CorrelationPropertyRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCorrelationKey_CorrelationPropertyRef()
      * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='element' name='correlationPropertyRef' namespace='##targetNamespace'"
      * @generated

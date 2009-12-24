@@ -8,10 +8,8 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -19,7 +17,7 @@ package org.eclipse.mdt.bpmn;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getPerformer()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getPerformer()
  * @model extendedMetaData="name='tPerformer' kind='elementOnly'"
  * @generated
  */

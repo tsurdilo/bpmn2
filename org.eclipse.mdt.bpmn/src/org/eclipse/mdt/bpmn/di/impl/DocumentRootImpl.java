@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di.impl;
 
@@ -31,12 +30,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.mdt.bpmn.di.Bendpoint;
 import org.eclipse.mdt.bpmn.di.Connector;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 import org.eclipse.mdt.bpmn.di.Diagram;
 import org.eclipse.mdt.bpmn.di.DocumentRoot;
 import org.eclipse.mdt.bpmn.di.Node;
 import org.eclipse.mdt.bpmn.di.Style;
 import org.eclipse.mdt.bpmn.di.View;
-import org.eclipse.mdt.bpmn.di.diPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -106,7 +105,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      */
     @Override
     protected EClass eStaticClass() {
-        return diPackage.Literals.DOCUMENT_ROOT;
+        return DIPackage.Literals.DOCUMENT_ROOT;
     }
 
     /**
@@ -116,7 +115,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      */
     public FeatureMap getMixed() {
         if (mixed == null) {
-            mixed = new BasicFeatureMap(this, diPackage.DOCUMENT_ROOT__MIXED);
+            mixed = new BasicFeatureMap(this, DIPackage.DOCUMENT_ROOT__MIXED);
         }
         return mixed;
     }
@@ -128,7 +127,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      */
     public EMap<String, String> getXMLNSPrefixMap() {
         if (xMLNSPrefixMap == null) {
-            xMLNSPrefixMap = new EcoreEMap<String,String>(EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY, EStringToStringMapEntryImpl.class, this, diPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP);
+            xMLNSPrefixMap = new EcoreEMap<String, String>(
+                    EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY,
+                    EStringToStringMapEntryImpl.class, this,
+                    DIPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP);
         }
         return xMLNSPrefixMap;
     }
@@ -140,7 +142,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      */
     public EMap<String, String> getXSISchemaLocation() {
         if (xSISchemaLocation == null) {
-            xSISchemaLocation = new EcoreEMap<String,String>(EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY, EStringToStringMapEntryImpl.class, this, diPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION);
+            xSISchemaLocation = new EcoreEMap<String, String>(
+                    EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY,
+                    EStringToStringMapEntryImpl.class, this,
+                    DIPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION);
         }
         return xSISchemaLocation;
     }
@@ -151,7 +156,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Bendpoint getBendpoint() {
-        return (Bendpoint)getMixed().get(diPackage.Literals.DOCUMENT_ROOT__BENDPOINT, true);
+        return (Bendpoint) getMixed().get(
+                DIPackage.Literals.DOCUMENT_ROOT__BENDPOINT, true);
     }
 
     /**
@@ -159,8 +165,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetBendpoint(Bendpoint newBendpoint, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(diPackage.Literals.DOCUMENT_ROOT__BENDPOINT, newBendpoint, msgs);
+    public NotificationChain basicSetBendpoint(Bendpoint newBendpoint,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed())
+                .basicAdd(DIPackage.Literals.DOCUMENT_ROOT__BENDPOINT,
+                        newBendpoint, msgs);
     }
 
     /**
@@ -169,7 +178,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setBendpoint(Bendpoint newBendpoint) {
-        ((FeatureMap.Internal)getMixed()).set(diPackage.Literals.DOCUMENT_ROOT__BENDPOINT, newBendpoint);
+        ((FeatureMap.Internal) getMixed()).set(
+                DIPackage.Literals.DOCUMENT_ROOT__BENDPOINT, newBendpoint);
     }
 
     /**
@@ -178,7 +188,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Connector getConnector() {
-        return (Connector)getMixed().get(diPackage.Literals.DOCUMENT_ROOT__CONNECTOR, true);
+        return (Connector) getMixed().get(
+                DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR, true);
     }
 
     /**
@@ -186,8 +197,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetConnector(Connector newConnector, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(diPackage.Literals.DOCUMENT_ROOT__CONNECTOR, newConnector, msgs);
+    public NotificationChain basicSetConnector(Connector newConnector,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed())
+                .basicAdd(DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR,
+                        newConnector, msgs);
     }
 
     /**
@@ -196,7 +210,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setConnector(Connector newConnector) {
-        ((FeatureMap.Internal)getMixed()).set(diPackage.Literals.DOCUMENT_ROOT__CONNECTOR, newConnector);
+        ((FeatureMap.Internal) getMixed()).set(
+                DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR, newConnector);
     }
 
     /**
@@ -205,7 +220,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public View getView() {
-        return (View)getMixed().get(diPackage.Literals.DOCUMENT_ROOT__VIEW, true);
+        return (View) getMixed().get(DIPackage.Literals.DOCUMENT_ROOT__VIEW,
+                true);
     }
 
     /**
@@ -214,7 +230,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetView(View newView, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(diPackage.Literals.DOCUMENT_ROOT__VIEW, newView, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                DIPackage.Literals.DOCUMENT_ROOT__VIEW, newView, msgs);
     }
 
     /**
@@ -223,7 +240,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setView(View newView) {
-        ((FeatureMap.Internal)getMixed()).set(diPackage.Literals.DOCUMENT_ROOT__VIEW, newView);
+        ((FeatureMap.Internal) getMixed()).set(
+                DIPackage.Literals.DOCUMENT_ROOT__VIEW, newView);
     }
 
     /**
@@ -232,7 +250,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Diagram getDiagram() {
-        return (Diagram)getMixed().get(diPackage.Literals.DOCUMENT_ROOT__DIAGRAM, true);
+        return (Diagram) getMixed().get(
+                DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM, true);
     }
 
     /**
@@ -240,8 +259,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetDiagram(Diagram newDiagram, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(diPackage.Literals.DOCUMENT_ROOT__DIAGRAM, newDiagram, msgs);
+    public NotificationChain basicSetDiagram(Diagram newDiagram,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM, newDiagram, msgs);
     }
 
     /**
@@ -250,7 +271,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setDiagram(Diagram newDiagram) {
-        ((FeatureMap.Internal)getMixed()).set(diPackage.Literals.DOCUMENT_ROOT__DIAGRAM, newDiagram);
+        ((FeatureMap.Internal) getMixed()).set(
+                DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM, newDiagram);
     }
 
     /**
@@ -259,7 +281,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Node getNode() {
-        return (Node)getMixed().get(diPackage.Literals.DOCUMENT_ROOT__NODE, true);
+        return (Node) getMixed().get(DIPackage.Literals.DOCUMENT_ROOT__NODE,
+                true);
     }
 
     /**
@@ -268,7 +291,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetNode(Node newNode, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(diPackage.Literals.DOCUMENT_ROOT__NODE, newNode, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                DIPackage.Literals.DOCUMENT_ROOT__NODE, newNode, msgs);
     }
 
     /**
@@ -277,7 +301,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setNode(Node newNode) {
-        ((FeatureMap.Internal)getMixed()).set(diPackage.Literals.DOCUMENT_ROOT__NODE, newNode);
+        ((FeatureMap.Internal) getMixed()).set(
+                DIPackage.Literals.DOCUMENT_ROOT__NODE, newNode);
     }
 
     /**
@@ -286,7 +311,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Style getStyle() {
-        return (Style)getMixed().get(diPackage.Literals.DOCUMENT_ROOT__STYLE, true);
+        return (Style) getMixed().get(DIPackage.Literals.DOCUMENT_ROOT__STYLE,
+                true);
     }
 
     /**
@@ -294,8 +320,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetStyle(Style newStyle, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(diPackage.Literals.DOCUMENT_ROOT__STYLE, newStyle, msgs);
+    public NotificationChain basicSetStyle(Style newStyle,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                DIPackage.Literals.DOCUMENT_ROOT__STYLE, newStyle, msgs);
     }
 
     /**
@@ -304,7 +332,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setStyle(Style newStyle) {
-        ((FeatureMap.Internal)getMixed()).set(diPackage.Literals.DOCUMENT_ROOT__STYLE, newStyle);
+        ((FeatureMap.Internal) getMixed()).set(
+                DIPackage.Literals.DOCUMENT_ROOT__STYLE, newStyle);
     }
 
     /**
@@ -313,26 +342,29 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case diPackage.DOCUMENT_ROOT__MIXED:
-                return ((InternalEList<?>)getMixed()).basicRemove(otherEnd, msgs);
-            case diPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
-                return ((InternalEList<?>)getXMLNSPrefixMap()).basicRemove(otherEnd, msgs);
-            case diPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
-                return ((InternalEList<?>)getXSISchemaLocation()).basicRemove(otherEnd, msgs);
-            case diPackage.DOCUMENT_ROOT__BENDPOINT:
-                return basicSetBendpoint(null, msgs);
-            case diPackage.DOCUMENT_ROOT__CONNECTOR:
-                return basicSetConnector(null, msgs);
-            case diPackage.DOCUMENT_ROOT__VIEW:
-                return basicSetView(null, msgs);
-            case diPackage.DOCUMENT_ROOT__DIAGRAM:
-                return basicSetDiagram(null, msgs);
-            case diPackage.DOCUMENT_ROOT__NODE:
-                return basicSetNode(null, msgs);
-            case diPackage.DOCUMENT_ROOT__STYLE:
-                return basicSetStyle(null, msgs);
+        case DIPackage.DOCUMENT_ROOT__MIXED:
+            return ((InternalEList<?>) getMixed()).basicRemove(otherEnd, msgs);
+        case DIPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
+            return ((InternalEList<?>) getXMLNSPrefixMap()).basicRemove(
+                    otherEnd, msgs);
+        case DIPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
+            return ((InternalEList<?>) getXSISchemaLocation()).basicRemove(
+                    otherEnd, msgs);
+        case DIPackage.DOCUMENT_ROOT__BENDPOINT:
+            return basicSetBendpoint(null, msgs);
+        case DIPackage.DOCUMENT_ROOT__CONNECTOR:
+            return basicSetConnector(null, msgs);
+        case DIPackage.DOCUMENT_ROOT__VIEW:
+            return basicSetView(null, msgs);
+        case DIPackage.DOCUMENT_ROOT__DIAGRAM:
+            return basicSetDiagram(null, msgs);
+        case DIPackage.DOCUMENT_ROOT__NODE:
+            return basicSetNode(null, msgs);
+        case DIPackage.DOCUMENT_ROOT__STYLE:
+            return basicSetStyle(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -345,27 +377,32 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case diPackage.DOCUMENT_ROOT__MIXED:
-                if (coreType) return getMixed();
-                return ((FeatureMap.Internal)getMixed()).getWrapper();
-            case diPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
-                if (coreType) return getXMLNSPrefixMap();
-                else return getXMLNSPrefixMap().map();
-            case diPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
-                if (coreType) return getXSISchemaLocation();
-                else return getXSISchemaLocation().map();
-            case diPackage.DOCUMENT_ROOT__BENDPOINT:
-                return getBendpoint();
-            case diPackage.DOCUMENT_ROOT__CONNECTOR:
-                return getConnector();
-            case diPackage.DOCUMENT_ROOT__VIEW:
-                return getView();
-            case diPackage.DOCUMENT_ROOT__DIAGRAM:
-                return getDiagram();
-            case diPackage.DOCUMENT_ROOT__NODE:
-                return getNode();
-            case diPackage.DOCUMENT_ROOT__STYLE:
-                return getStyle();
+        case DIPackage.DOCUMENT_ROOT__MIXED:
+            if (coreType)
+                return getMixed();
+            return ((FeatureMap.Internal) getMixed()).getWrapper();
+        case DIPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
+            if (coreType)
+                return getXMLNSPrefixMap();
+            else
+                return getXMLNSPrefixMap().map();
+        case DIPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
+            if (coreType)
+                return getXSISchemaLocation();
+            else
+                return getXSISchemaLocation().map();
+        case DIPackage.DOCUMENT_ROOT__BENDPOINT:
+            return getBendpoint();
+        case DIPackage.DOCUMENT_ROOT__CONNECTOR:
+            return getConnector();
+        case DIPackage.DOCUMENT_ROOT__VIEW:
+            return getView();
+        case DIPackage.DOCUMENT_ROOT__DIAGRAM:
+            return getDiagram();
+        case DIPackage.DOCUMENT_ROOT__NODE:
+            return getNode();
+        case DIPackage.DOCUMENT_ROOT__STYLE:
+            return getStyle();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -378,33 +415,33 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case diPackage.DOCUMENT_ROOT__MIXED:
-                ((FeatureMap.Internal)getMixed()).set(newValue);
-                return;
-            case diPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
-                ((EStructuralFeature.Setting)getXMLNSPrefixMap()).set(newValue);
-                return;
-            case diPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
-                ((EStructuralFeature.Setting)getXSISchemaLocation()).set(newValue);
-                return;
-            case diPackage.DOCUMENT_ROOT__BENDPOINT:
-                setBendpoint((Bendpoint)newValue);
-                return;
-            case diPackage.DOCUMENT_ROOT__CONNECTOR:
-                setConnector((Connector)newValue);
-                return;
-            case diPackage.DOCUMENT_ROOT__VIEW:
-                setView((View)newValue);
-                return;
-            case diPackage.DOCUMENT_ROOT__DIAGRAM:
-                setDiagram((Diagram)newValue);
-                return;
-            case diPackage.DOCUMENT_ROOT__NODE:
-                setNode((Node)newValue);
-                return;
-            case diPackage.DOCUMENT_ROOT__STYLE:
-                setStyle((Style)newValue);
-                return;
+        case DIPackage.DOCUMENT_ROOT__MIXED:
+            ((FeatureMap.Internal) getMixed()).set(newValue);
+            return;
+        case DIPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
+            ((EStructuralFeature.Setting) getXMLNSPrefixMap()).set(newValue);
+            return;
+        case DIPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
+            ((EStructuralFeature.Setting) getXSISchemaLocation()).set(newValue);
+            return;
+        case DIPackage.DOCUMENT_ROOT__BENDPOINT:
+            setBendpoint((Bendpoint) newValue);
+            return;
+        case DIPackage.DOCUMENT_ROOT__CONNECTOR:
+            setConnector((Connector) newValue);
+            return;
+        case DIPackage.DOCUMENT_ROOT__VIEW:
+            setView((View) newValue);
+            return;
+        case DIPackage.DOCUMENT_ROOT__DIAGRAM:
+            setDiagram((Diagram) newValue);
+            return;
+        case DIPackage.DOCUMENT_ROOT__NODE:
+            setNode((Node) newValue);
+            return;
+        case DIPackage.DOCUMENT_ROOT__STYLE:
+            setStyle((Style) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -417,33 +454,33 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case diPackage.DOCUMENT_ROOT__MIXED:
-                getMixed().clear();
-                return;
-            case diPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
-                getXMLNSPrefixMap().clear();
-                return;
-            case diPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
-                getXSISchemaLocation().clear();
-                return;
-            case diPackage.DOCUMENT_ROOT__BENDPOINT:
-                setBendpoint((Bendpoint)null);
-                return;
-            case diPackage.DOCUMENT_ROOT__CONNECTOR:
-                setConnector((Connector)null);
-                return;
-            case diPackage.DOCUMENT_ROOT__VIEW:
-                setView((View)null);
-                return;
-            case diPackage.DOCUMENT_ROOT__DIAGRAM:
-                setDiagram((Diagram)null);
-                return;
-            case diPackage.DOCUMENT_ROOT__NODE:
-                setNode((Node)null);
-                return;
-            case diPackage.DOCUMENT_ROOT__STYLE:
-                setStyle((Style)null);
-                return;
+        case DIPackage.DOCUMENT_ROOT__MIXED:
+            getMixed().clear();
+            return;
+        case DIPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
+            getXMLNSPrefixMap().clear();
+            return;
+        case DIPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
+            getXSISchemaLocation().clear();
+            return;
+        case DIPackage.DOCUMENT_ROOT__BENDPOINT:
+            setBendpoint((Bendpoint) null);
+            return;
+        case DIPackage.DOCUMENT_ROOT__CONNECTOR:
+            setConnector((Connector) null);
+            return;
+        case DIPackage.DOCUMENT_ROOT__VIEW:
+            setView((View) null);
+            return;
+        case DIPackage.DOCUMENT_ROOT__DIAGRAM:
+            setDiagram((Diagram) null);
+            return;
+        case DIPackage.DOCUMENT_ROOT__NODE:
+            setNode((Node) null);
+            return;
+        case DIPackage.DOCUMENT_ROOT__STYLE:
+            setStyle((Style) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -456,24 +493,24 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case diPackage.DOCUMENT_ROOT__MIXED:
-                return mixed != null && !mixed.isEmpty();
-            case diPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
-                return xMLNSPrefixMap != null && !xMLNSPrefixMap.isEmpty();
-            case diPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
-                return xSISchemaLocation != null && !xSISchemaLocation.isEmpty();
-            case diPackage.DOCUMENT_ROOT__BENDPOINT:
-                return getBendpoint() != null;
-            case diPackage.DOCUMENT_ROOT__CONNECTOR:
-                return getConnector() != null;
-            case diPackage.DOCUMENT_ROOT__VIEW:
-                return getView() != null;
-            case diPackage.DOCUMENT_ROOT__DIAGRAM:
-                return getDiagram() != null;
-            case diPackage.DOCUMENT_ROOT__NODE:
-                return getNode() != null;
-            case diPackage.DOCUMENT_ROOT__STYLE:
-                return getStyle() != null;
+        case DIPackage.DOCUMENT_ROOT__MIXED:
+            return mixed != null && !mixed.isEmpty();
+        case DIPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
+            return xMLNSPrefixMap != null && !xMLNSPrefixMap.isEmpty();
+        case DIPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
+            return xSISchemaLocation != null && !xSISchemaLocation.isEmpty();
+        case DIPackage.DOCUMENT_ROOT__BENDPOINT:
+            return getBendpoint() != null;
+        case DIPackage.DOCUMENT_ROOT__CONNECTOR:
+            return getConnector() != null;
+        case DIPackage.DOCUMENT_ROOT__VIEW:
+            return getView() != null;
+        case DIPackage.DOCUMENT_ROOT__DIAGRAM:
+            return getDiagram() != null;
+        case DIPackage.DOCUMENT_ROOT__NODE:
+            return getNode() != null;
+        case DIPackage.DOCUMENT_ROOT__STYLE:
+            return getStyle() != null;
         }
         return super.eIsSet(featureID);
     }
@@ -485,7 +522,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (mixed: "); //$NON-NLS-1$

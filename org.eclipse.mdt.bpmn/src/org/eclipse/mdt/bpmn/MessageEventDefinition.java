@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -27,7 +26,7 @@ import javax.xml.namespace.QName;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getMessageEventDefinition()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getMessageEventDefinition()
  * @model extendedMetaData="name='tMessageEventDefinition' kind='elementOnly'"
  * @generated
  */
@@ -42,7 +41,7 @@ public interface MessageEventDefinition extends EventDefinition {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Operation Ref</em>' attribute.
      * @see #setOperationRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getMessageEventDefinition_OperationRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getMessageEventDefinition_OperationRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='element' name='operationRef' namespace='##targetNamespace'"
      * @generated
@@ -69,7 +68,7 @@ public interface MessageEventDefinition extends EventDefinition {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Message Ref</em>' attribute.
      * @see #setMessageRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getMessageEventDefinition_MessageRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getMessageEventDefinition_MessageRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='messageRef'"
      * @generated

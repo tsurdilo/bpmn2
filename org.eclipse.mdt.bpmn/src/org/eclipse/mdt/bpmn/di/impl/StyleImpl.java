@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di.impl;
 
@@ -19,8 +18,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
+import org.eclipse.mdt.bpmn.di.DIPackage;
 import org.eclipse.mdt.bpmn.di.Style;
-import org.eclipse.mdt.bpmn.di.diPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -93,7 +92,7 @@ public class StyleImpl extends EObjectImpl implements Style {
      */
     @Override
     protected EClass eStaticClass() {
-        return diPackage.Literals.STYLE;
+        return DIPackage.Literals.STYLE;
     }
 
     /**
@@ -114,7 +113,8 @@ public class StyleImpl extends EObjectImpl implements Style {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, diPackage.STYLE__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    DIPackage.STYLE__NAME, oldName, name));
     }
 
     /**
@@ -135,7 +135,8 @@ public class StyleImpl extends EObjectImpl implements Style {
         String oldValue = value;
         value = newValue;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, diPackage.STYLE__VALUE, oldValue, value));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    DIPackage.STYLE__VALUE, oldValue, value));
     }
 
     /**
@@ -146,10 +147,10 @@ public class StyleImpl extends EObjectImpl implements Style {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case diPackage.STYLE__NAME:
-                return getName();
-            case diPackage.STYLE__VALUE:
-                return getValue();
+        case DIPackage.STYLE__NAME:
+            return getName();
+        case DIPackage.STYLE__VALUE:
+            return getValue();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -162,12 +163,12 @@ public class StyleImpl extends EObjectImpl implements Style {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case diPackage.STYLE__NAME:
-                setName((String)newValue);
-                return;
-            case diPackage.STYLE__VALUE:
-                setValue((String)newValue);
-                return;
+        case DIPackage.STYLE__NAME:
+            setName((String) newValue);
+            return;
+        case DIPackage.STYLE__VALUE:
+            setValue((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -180,12 +181,12 @@ public class StyleImpl extends EObjectImpl implements Style {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case diPackage.STYLE__NAME:
-                setName(NAME_EDEFAULT);
-                return;
-            case diPackage.STYLE__VALUE:
-                setValue(VALUE_EDEFAULT);
-                return;
+        case DIPackage.STYLE__NAME:
+            setName(NAME_EDEFAULT);
+            return;
+        case DIPackage.STYLE__VALUE:
+            setValue(VALUE_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -198,10 +199,12 @@ public class StyleImpl extends EObjectImpl implements Style {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case diPackage.STYLE__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-            case diPackage.STYLE__VALUE:
-                return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+        case DIPackage.STYLE__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
+                    .equals(name);
+        case DIPackage.STYLE__VALUE:
+            return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT
+                    .equals(value);
         }
         return super.eIsSet(featureID);
     }
@@ -213,7 +216,8 @@ public class StyleImpl extends EObjectImpl implements Style {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (name: "); //$NON-NLS-1$

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -27,7 +26,7 @@ import javax.xml.namespace.QName;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getCompensateEventDefinition()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getCompensateEventDefinition()
  * @model extendedMetaData="name='tCompensateEventDefinition' kind='elementOnly'"
  * @generated
  */
@@ -42,7 +41,7 @@ public interface CompensateEventDefinition extends EventDefinition {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Activity Ref</em>' attribute.
      * @see #setActivityRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCompensateEventDefinition_ActivityRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCompensateEventDefinition_ActivityRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='activityRef'"
      * @generated
@@ -71,7 +70,7 @@ public interface CompensateEventDefinition extends EventDefinition {
      * @see #isSetWaitForCompletion()
      * @see #unsetWaitForCompletion()
      * @see #setWaitForCompletion(boolean)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCompensateEventDefinition_WaitForCompletion()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCompensateEventDefinition_WaitForCompletion()
      * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
      *        extendedMetaData="kind='attribute' name='waitForCompletion'"
      * @generated

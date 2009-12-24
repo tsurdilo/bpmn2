@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -33,11 +32,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnFactory;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Collaboration;
-import org.eclipse.mdt.bpmn.bpmnFactory;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.Collaboration} object.
@@ -91,7 +90,7 @@ public class CollaborationItemProvider extends RootElementItemProvider
                         getString("_UI_Collaboration_choreographyRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Collaboration_choreographyRef_feature", "_UI_Collaboration_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE
+                        BpmnPackage.eINSTANCE
                                 .getCollaboration_ChoreographyRef(), true,
                         false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
@@ -112,7 +111,7 @@ public class CollaborationItemProvider extends RootElementItemProvider
                         getString("_UI_Collaboration_isClosed_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Collaboration_isClosed_feature", "_UI_Collaboration_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getCollaboration_IsClosed(),
+                        BpmnPackage.eINSTANCE.getCollaboration_IsClosed(),
                         true, false, false,
                         ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
@@ -132,7 +131,7 @@ public class CollaborationItemProvider extends RootElementItemProvider
                         getString("_UI_Collaboration_name_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Collaboration_name_feature", "_UI_Collaboration_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getCollaboration_Name(), true,
+                        BpmnPackage.eINSTANCE.getCollaboration_Name(), true,
                         false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -150,19 +149,19 @@ public class CollaborationItemProvider extends RootElementItemProvider
             Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getCollaboration_Participant());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getCollaboration_MessageFlow());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getCollaboration_ArtifactGroup());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getCollaboration_Conversation());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getCollaboration_ConversationAssociation());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getCollaboration_ParticipantAssociation());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getCollaboration_MessageFlowAssociation());
         }
         return childrenFeatures;
@@ -218,19 +217,19 @@ public class CollaborationItemProvider extends RootElementItemProvider
         updateChildren(notification);
 
         switch (notification.getFeatureID(Collaboration.class)) {
-        case bpmnPackage.COLLABORATION__CHOREOGRAPHY_REF:
-        case bpmnPackage.COLLABORATION__IS_CLOSED:
-        case bpmnPackage.COLLABORATION__NAME:
+        case BpmnPackage.COLLABORATION__CHOREOGRAPHY_REF:
+        case BpmnPackage.COLLABORATION__IS_CLOSED:
+        case BpmnPackage.COLLABORATION__NAME:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
-        case bpmnPackage.COLLABORATION__PARTICIPANT:
-        case bpmnPackage.COLLABORATION__MESSAGE_FLOW:
-        case bpmnPackage.COLLABORATION__ARTIFACT_GROUP:
-        case bpmnPackage.COLLABORATION__CONVERSATION:
-        case bpmnPackage.COLLABORATION__CONVERSATION_ASSOCIATION:
-        case bpmnPackage.COLLABORATION__PARTICIPANT_ASSOCIATION:
-        case bpmnPackage.COLLABORATION__MESSAGE_FLOW_ASSOCIATION:
+        case BpmnPackage.COLLABORATION__PARTICIPANT:
+        case BpmnPackage.COLLABORATION__MESSAGE_FLOW:
+        case BpmnPackage.COLLABORATION__ARTIFACT_GROUP:
+        case BpmnPackage.COLLABORATION__CONVERSATION:
+        case BpmnPackage.COLLABORATION__CONVERSATION_ASSOCIATION:
+        case BpmnPackage.COLLABORATION__PARTICIPANT_ASSOCIATION:
+        case BpmnPackage.COLLABORATION__MESSAGE_FLOW_ASSOCIATION:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -250,59 +249,59 @@ public class CollaborationItemProvider extends RootElementItemProvider
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getCollaboration_Participant(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getCollaboration_Participant(), BpmnFactory.eINSTANCE
                 .createParticipant()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getCollaboration_MessageFlow(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getCollaboration_MessageFlow(), BpmnFactory.eINSTANCE
                 .createMessageFlow()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getCollaboration_ArtifactGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getCollaboration_Artifact(),
-                bpmnFactory.eINSTANCE.createAssociation())));
+                BpmnPackage.eINSTANCE.getCollaboration_Artifact(),
+                BpmnFactory.eINSTANCE.createAssociation())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getCollaboration_ArtifactGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getCollaboration_Artifact(),
-                bpmnFactory.eINSTANCE.createGroup())));
+                BpmnPackage.eINSTANCE.getCollaboration_Artifact(),
+                BpmnFactory.eINSTANCE.createGroup())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getCollaboration_ArtifactGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getCollaboration_Artifact(),
-                bpmnFactory.eINSTANCE.createTextAnnotation())));
+                BpmnPackage.eINSTANCE.getCollaboration_Artifact(),
+                BpmnFactory.eINSTANCE.createTextAnnotation())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getCollaboration_ArtifactGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Association(),
-                bpmnFactory.eINSTANCE.createAssociation())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Association(),
+                BpmnFactory.eINSTANCE.createAssociation())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getCollaboration_ArtifactGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Group(),
-                bpmnFactory.eINSTANCE.createGroup())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Group(),
+                BpmnFactory.eINSTANCE.createGroup())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getCollaboration_ArtifactGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_TextAnnotation(),
-                bpmnFactory.eINSTANCE.createTextAnnotation())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_TextAnnotation(),
+                BpmnFactory.eINSTANCE.createTextAnnotation())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getCollaboration_Conversation(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getCollaboration_Conversation(), BpmnFactory.eINSTANCE
                 .createConversation()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getCollaboration_ConversationAssociation(),
-                bpmnFactory.eINSTANCE.createConversationAssociation()));
+                BpmnFactory.eINSTANCE.createConversationAssociation()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getCollaboration_ParticipantAssociation(),
-                bpmnFactory.eINSTANCE.createParticipantAssociation()));
+                BpmnFactory.eINSTANCE.createParticipantAssociation()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getCollaboration_MessageFlowAssociation(),
-                bpmnFactory.eINSTANCE.createMessageFlowAssociation()));
+                BpmnFactory.eINSTANCE.createMessageFlowAssociation()));
     }
 
     /**
@@ -325,17 +324,17 @@ public class CollaborationItemProvider extends RootElementItemProvider
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE
-                || childFeature == bpmnPackage.eINSTANCE
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getCollaboration_Artifact()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_Association()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_Group()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_TextAnnotation();
 
         if (qualify) {

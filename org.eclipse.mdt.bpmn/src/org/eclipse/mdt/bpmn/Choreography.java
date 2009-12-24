@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -38,7 +37,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getChoreography()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getChoreography()
  * @model extendedMetaData="name='tChoreography' kind='elementOnly'"
  * @generated
  */
@@ -53,7 +52,7 @@ public interface Choreography extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Flow Element Group</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getChoreography_FlowElementGroup()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getChoreography_FlowElementGroup()
      * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
      *        extendedMetaData="kind='group' name='flowElement:group' namespace='##targetNamespace'"
      * @generated
@@ -70,7 +69,7 @@ public interface Choreography extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Flow Element</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getChoreography_FlowElement()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getChoreography_FlowElement()
      * @model containment="true" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='flowElement' namespace='##targetNamespace' group='flowElement:group'"
      * @generated
@@ -87,7 +86,7 @@ public interface Choreography extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Artifact Group</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getChoreography_ArtifactGroup()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getChoreography_ArtifactGroup()
      * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
      *        extendedMetaData="kind='group' name='artifact:group' namespace='##targetNamespace'"
      * @generated
@@ -104,7 +103,7 @@ public interface Choreography extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Artifact</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getChoreography_Artifact()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getChoreography_Artifact()
      * @model containment="true" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='artifact' namespace='##targetNamespace' group='artifact:group'"
      * @generated
@@ -121,7 +120,7 @@ public interface Choreography extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Message Flow</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getChoreography_MessageFlow()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getChoreography_MessageFlow()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='messageFlow' namespace='##targetNamespace'"
      * @generated
@@ -138,7 +137,7 @@ public interface Choreography extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Participant</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getChoreography_Participant()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getChoreography_Participant()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='participant' namespace='##targetNamespace'"
      * @generated
@@ -155,7 +154,7 @@ public interface Choreography extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Conversation</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getChoreography_Conversation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getChoreography_Conversation()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='conversation' namespace='##targetNamespace'"
      * @generated
@@ -172,7 +171,7 @@ public interface Choreography extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Conversation Association</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getChoreography_ConversationAssociation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getChoreography_ConversationAssociation()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='conversationAssociation' namespace='##targetNamespace'"
      * @generated
@@ -189,7 +188,7 @@ public interface Choreography extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Message Flow Association</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getChoreography_MessageFlowAssociation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getChoreography_MessageFlowAssociation()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='messageFlowAssociation' namespace='##targetNamespace'"
      * @generated
@@ -206,7 +205,7 @@ public interface Choreography extends CallableElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Participant Association</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getChoreography_ParticipantAssociation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getChoreography_ParticipantAssociation()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='participantAssociation' namespace='##targetNamespace'"
      * @generated
@@ -226,7 +225,7 @@ public interface Choreography extends CallableElement {
      * @see #isSetIsClosed()
      * @see #unsetIsClosed()
      * @see #setIsClosed(boolean)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getChoreography_IsClosed()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getChoreography_IsClosed()
      * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
      *        extendedMetaData="kind='attribute' name='isClosed'"
      * @generated

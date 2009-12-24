@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -29,9 +28,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.CallConversation;
 import org.eclipse.mdt.bpmn.ParticipantAssociation;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -47,7 +46,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class CallConversationImpl extends ConversationNodeImpl implements CallConversation {
+public class CallConversationImpl extends ConversationNodeImpl implements
+        CallConversation {
     /**
      * The cached value of the '{@link #getParticipantAssociation() <em>Participant Association</em>}' containment reference list.
      * <!-- begin-user-doc -->
@@ -94,7 +94,7 @@ public class CallConversationImpl extends ConversationNodeImpl implements CallCo
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getCallConversation();
+        return BpmnPackage.eINSTANCE.getCallConversation();
     }
 
     /**
@@ -104,7 +104,9 @@ public class CallConversationImpl extends ConversationNodeImpl implements CallCo
      */
     public EList<ParticipantAssociation> getParticipantAssociation() {
         if (participantAssociation == null) {
-            participantAssociation = new EObjectContainmentEList<ParticipantAssociation>(ParticipantAssociation.class, this, bpmnPackage.CALL_CONVERSATION__PARTICIPANT_ASSOCIATION);
+            participantAssociation = new EObjectContainmentEList<ParticipantAssociation>(
+                    ParticipantAssociation.class, this,
+                    BpmnPackage.CALL_CONVERSATION__PARTICIPANT_ASSOCIATION);
         }
         return participantAssociation;
     }
@@ -127,7 +129,9 @@ public class CallConversationImpl extends ConversationNodeImpl implements CallCo
         QName oldCalledElementRef = calledElementRef;
         calledElementRef = newCalledElementRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.CALL_CONVERSATION__CALLED_ELEMENT_REF, oldCalledElementRef, calledElementRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.CALL_CONVERSATION__CALLED_ELEMENT_REF,
+                    oldCalledElementRef, calledElementRef));
     }
 
     /**
@@ -136,10 +140,12 @@ public class CallConversationImpl extends ConversationNodeImpl implements CallCo
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.CALL_CONVERSATION__PARTICIPANT_ASSOCIATION:
-                return ((InternalEList<?>)getParticipantAssociation()).basicRemove(otherEnd, msgs);
+        case BpmnPackage.CALL_CONVERSATION__PARTICIPANT_ASSOCIATION:
+            return ((InternalEList<?>) getParticipantAssociation())
+                    .basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -152,10 +158,10 @@ public class CallConversationImpl extends ConversationNodeImpl implements CallCo
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.CALL_CONVERSATION__PARTICIPANT_ASSOCIATION:
-                return getParticipantAssociation();
-            case bpmnPackage.CALL_CONVERSATION__CALLED_ELEMENT_REF:
-                return getCalledElementRef();
+        case BpmnPackage.CALL_CONVERSATION__PARTICIPANT_ASSOCIATION:
+            return getParticipantAssociation();
+        case BpmnPackage.CALL_CONVERSATION__CALLED_ELEMENT_REF:
+            return getCalledElementRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -169,13 +175,14 @@ public class CallConversationImpl extends ConversationNodeImpl implements CallCo
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.CALL_CONVERSATION__PARTICIPANT_ASSOCIATION:
-                getParticipantAssociation().clear();
-                getParticipantAssociation().addAll((Collection<? extends ParticipantAssociation>)newValue);
-                return;
-            case bpmnPackage.CALL_CONVERSATION__CALLED_ELEMENT_REF:
-                setCalledElementRef((QName)newValue);
-                return;
+        case BpmnPackage.CALL_CONVERSATION__PARTICIPANT_ASSOCIATION:
+            getParticipantAssociation().clear();
+            getParticipantAssociation().addAll(
+                    (Collection<? extends ParticipantAssociation>) newValue);
+            return;
+        case BpmnPackage.CALL_CONVERSATION__CALLED_ELEMENT_REF:
+            setCalledElementRef((QName) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -188,12 +195,12 @@ public class CallConversationImpl extends ConversationNodeImpl implements CallCo
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CALL_CONVERSATION__PARTICIPANT_ASSOCIATION:
-                getParticipantAssociation().clear();
-                return;
-            case bpmnPackage.CALL_CONVERSATION__CALLED_ELEMENT_REF:
-                setCalledElementRef(CALLED_ELEMENT_REF_EDEFAULT);
-                return;
+        case BpmnPackage.CALL_CONVERSATION__PARTICIPANT_ASSOCIATION:
+            getParticipantAssociation().clear();
+            return;
+        case BpmnPackage.CALL_CONVERSATION__CALLED_ELEMENT_REF:
+            setCalledElementRef(CALLED_ELEMENT_REF_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -206,10 +213,12 @@ public class CallConversationImpl extends ConversationNodeImpl implements CallCo
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CALL_CONVERSATION__PARTICIPANT_ASSOCIATION:
-                return participantAssociation != null && !participantAssociation.isEmpty();
-            case bpmnPackage.CALL_CONVERSATION__CALLED_ELEMENT_REF:
-                return CALLED_ELEMENT_REF_EDEFAULT == null ? calledElementRef != null : !CALLED_ELEMENT_REF_EDEFAULT.equals(calledElementRef);
+        case BpmnPackage.CALL_CONVERSATION__PARTICIPANT_ASSOCIATION:
+            return participantAssociation != null
+                    && !participantAssociation.isEmpty();
+        case BpmnPackage.CALL_CONVERSATION__CALLED_ELEMENT_REF:
+            return CALLED_ELEMENT_REF_EDEFAULT == null ? calledElementRef != null
+                    : !CALLED_ELEMENT_REF_EDEFAULT.equals(calledElementRef);
         }
         return super.eIsSet(featureID);
     }
@@ -221,7 +230,8 @@ public class CallConversationImpl extends ConversationNodeImpl implements CallCo
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (calledElementRef: "); //$NON-NLS-1$

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -26,8 +25,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Communication;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,7 +42,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class CommunicationImpl extends ConversationNodeImpl implements Communication {
+public class CommunicationImpl extends ConversationNodeImpl implements
+        Communication {
     /**
      * The cached value of the '{@link #getMessageFlowRef() <em>Message Flow Ref</em>}' attribute list.
      * <!-- begin-user-doc -->
@@ -90,7 +90,7 @@ public class CommunicationImpl extends ConversationNodeImpl implements Communica
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getCommunication();
+        return BpmnPackage.eINSTANCE.getCommunication();
     }
 
     /**
@@ -100,7 +100,8 @@ public class CommunicationImpl extends ConversationNodeImpl implements Communica
      */
     public EList<QName> getMessageFlowRef() {
         if (messageFlowRef == null) {
-            messageFlowRef = new EDataTypeEList<QName>(QName.class, this, bpmnPackage.COMMUNICATION__MESSAGE_FLOW_REF);
+            messageFlowRef = new EDataTypeEList<QName>(QName.class, this,
+                    BpmnPackage.COMMUNICATION__MESSAGE_FLOW_REF);
         }
         return messageFlowRef;
     }
@@ -123,7 +124,9 @@ public class CommunicationImpl extends ConversationNodeImpl implements Communica
         QName oldCorrelationKeyRef = correlationKeyRef;
         correlationKeyRef = newCorrelationKeyRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.COMMUNICATION__CORRELATION_KEY_REF, oldCorrelationKeyRef, correlationKeyRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.COMMUNICATION__CORRELATION_KEY_REF,
+                    oldCorrelationKeyRef, correlationKeyRef));
     }
 
     /**
@@ -134,10 +137,10 @@ public class CommunicationImpl extends ConversationNodeImpl implements Communica
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.COMMUNICATION__MESSAGE_FLOW_REF:
-                return getMessageFlowRef();
-            case bpmnPackage.COMMUNICATION__CORRELATION_KEY_REF:
-                return getCorrelationKeyRef();
+        case BpmnPackage.COMMUNICATION__MESSAGE_FLOW_REF:
+            return getMessageFlowRef();
+        case BpmnPackage.COMMUNICATION__CORRELATION_KEY_REF:
+            return getCorrelationKeyRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -151,13 +154,13 @@ public class CommunicationImpl extends ConversationNodeImpl implements Communica
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.COMMUNICATION__MESSAGE_FLOW_REF:
-                getMessageFlowRef().clear();
-                getMessageFlowRef().addAll((Collection<? extends QName>)newValue);
-                return;
-            case bpmnPackage.COMMUNICATION__CORRELATION_KEY_REF:
-                setCorrelationKeyRef((QName)newValue);
-                return;
+        case BpmnPackage.COMMUNICATION__MESSAGE_FLOW_REF:
+            getMessageFlowRef().clear();
+            getMessageFlowRef().addAll((Collection<? extends QName>) newValue);
+            return;
+        case BpmnPackage.COMMUNICATION__CORRELATION_KEY_REF:
+            setCorrelationKeyRef((QName) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -170,12 +173,12 @@ public class CommunicationImpl extends ConversationNodeImpl implements Communica
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.COMMUNICATION__MESSAGE_FLOW_REF:
-                getMessageFlowRef().clear();
-                return;
-            case bpmnPackage.COMMUNICATION__CORRELATION_KEY_REF:
-                setCorrelationKeyRef(CORRELATION_KEY_REF_EDEFAULT);
-                return;
+        case BpmnPackage.COMMUNICATION__MESSAGE_FLOW_REF:
+            getMessageFlowRef().clear();
+            return;
+        case BpmnPackage.COMMUNICATION__CORRELATION_KEY_REF:
+            setCorrelationKeyRef(CORRELATION_KEY_REF_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -188,10 +191,11 @@ public class CommunicationImpl extends ConversationNodeImpl implements Communica
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.COMMUNICATION__MESSAGE_FLOW_REF:
-                return messageFlowRef != null && !messageFlowRef.isEmpty();
-            case bpmnPackage.COMMUNICATION__CORRELATION_KEY_REF:
-                return CORRELATION_KEY_REF_EDEFAULT == null ? correlationKeyRef != null : !CORRELATION_KEY_REF_EDEFAULT.equals(correlationKeyRef);
+        case BpmnPackage.COMMUNICATION__MESSAGE_FLOW_REF:
+            return messageFlowRef != null && !messageFlowRef.isEmpty();
+        case BpmnPackage.COMMUNICATION__CORRELATION_KEY_REF:
+            return CORRELATION_KEY_REF_EDEFAULT == null ? correlationKeyRef != null
+                    : !CORRELATION_KEY_REF_EDEFAULT.equals(correlationKeyRef);
         }
         return super.eIsSet(featureID);
     }
@@ -203,7 +207,8 @@ public class CommunicationImpl extends ConversationNodeImpl implements Communica
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (messageFlowRef: "); //$NON-NLS-1$

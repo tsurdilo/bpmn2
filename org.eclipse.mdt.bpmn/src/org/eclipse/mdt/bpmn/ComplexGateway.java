@@ -8,10 +8,8 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +24,7 @@ package org.eclipse.mdt.bpmn;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getComplexGateway()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getComplexGateway()
  * @model extendedMetaData="name='tComplexGateway' kind='elementOnly'"
  * @generated
  */
@@ -41,7 +39,7 @@ public interface ComplexGateway extends Gateway {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Activation Condition</em>' containment reference.
      * @see #setActivationCondition(Expression)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getComplexGateway_ActivationCondition()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getComplexGateway_ActivationCondition()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='activationCondition' namespace='##targetNamespace'"
      * @generated
@@ -68,7 +66,7 @@ public interface ComplexGateway extends Gateway {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Default</em>' attribute.
      * @see #setDefault(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getComplexGateway_Default()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getComplexGateway_Default()
      * @model dataType="org.eclipse.emf.ecore.xml.type.IDREF"
      *        extendedMetaData="kind='attribute' name='default'"
      * @generated

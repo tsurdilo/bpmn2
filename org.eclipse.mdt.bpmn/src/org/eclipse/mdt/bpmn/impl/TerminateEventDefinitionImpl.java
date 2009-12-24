@@ -8,14 +8,13 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.TerminateEventDefinition;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +25,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class TerminateEventDefinitionImpl extends EventDefinitionImpl implements TerminateEventDefinition {
+public class TerminateEventDefinitionImpl extends EventDefinitionImpl implements
+        TerminateEventDefinition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -43,7 +43,7 @@ public class TerminateEventDefinitionImpl extends EventDefinitionImpl implements
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getTerminateEventDefinition();
+        return BpmnPackage.eINSTANCE.getTerminateEventDefinition();
     }
 
 } //TerminateEventDefinitionImpl

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -38,7 +37,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getMultiInstanceLoopCharacteristics()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getMultiInstanceLoopCharacteristics()
  * @model extendedMetaData="name='tMultiInstanceLoopCharacteristics' kind='elementOnly'"
  * @generated
  */
@@ -53,7 +52,7 @@ public interface MultiInstanceLoopCharacteristics extends LoopCharacteristics {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Loop Cardinality</em>' containment reference.
      * @see #setLoopCardinality(Expression)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getMultiInstanceLoopCharacteristics_LoopCardinality()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getMultiInstanceLoopCharacteristics_LoopCardinality()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='loopCardinality' namespace='##targetNamespace'"
      * @generated
@@ -80,7 +79,7 @@ public interface MultiInstanceLoopCharacteristics extends LoopCharacteristics {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Loop Data Input</em>' containment reference.
      * @see #setLoopDataInput(DataInput)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getMultiInstanceLoopCharacteristics_LoopDataInput()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getMultiInstanceLoopCharacteristics_LoopDataInput()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='loopDataInput' namespace='##targetNamespace'"
      * @generated
@@ -107,7 +106,7 @@ public interface MultiInstanceLoopCharacteristics extends LoopCharacteristics {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Loop Data Output</em>' containment reference.
      * @see #setLoopDataOutput(DataOutput)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getMultiInstanceLoopCharacteristics_LoopDataOutput()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getMultiInstanceLoopCharacteristics_LoopDataOutput()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='loopDataOutput' namespace='##targetNamespace'"
      * @generated
@@ -134,7 +133,7 @@ public interface MultiInstanceLoopCharacteristics extends LoopCharacteristics {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Input Data Item</em>' containment reference.
      * @see #setInputDataItem(Property)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getMultiInstanceLoopCharacteristics_InputDataItem()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getMultiInstanceLoopCharacteristics_InputDataItem()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='inputDataItem' namespace='##targetNamespace'"
      * @generated
@@ -161,7 +160,7 @@ public interface MultiInstanceLoopCharacteristics extends LoopCharacteristics {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Output Data Item</em>' containment reference.
      * @see #setOutputDataItem(Property)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getMultiInstanceLoopCharacteristics_OutputDataItem()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getMultiInstanceLoopCharacteristics_OutputDataItem()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='outputDataItem' namespace='##targetNamespace'"
      * @generated
@@ -188,7 +187,7 @@ public interface MultiInstanceLoopCharacteristics extends LoopCharacteristics {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Complex Behavior Definition</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getMultiInstanceLoopCharacteristics_ComplexBehaviorDefinition()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getMultiInstanceLoopCharacteristics_ComplexBehaviorDefinition()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='complexBehaviorDefinition' namespace='##targetNamespace'"
      * @generated
@@ -205,7 +204,7 @@ public interface MultiInstanceLoopCharacteristics extends LoopCharacteristics {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Completion Condition</em>' containment reference.
      * @see #setCompletionCondition(Expression)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getMultiInstanceLoopCharacteristics_CompletionCondition()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getMultiInstanceLoopCharacteristics_CompletionCondition()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='completionCondition' namespace='##targetNamespace'"
      * @generated
@@ -237,7 +236,7 @@ public interface MultiInstanceLoopCharacteristics extends LoopCharacteristics {
      * @see #isSetBehavior()
      * @see #unsetBehavior()
      * @see #setBehavior(MultiInstanceFlowCondition)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getMultiInstanceLoopCharacteristics_Behavior()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getMultiInstanceLoopCharacteristics_Behavior()
      * @model default="all" unsettable="true"
      *        extendedMetaData="kind='attribute' name='behavior'"
      * @generated
@@ -293,7 +292,7 @@ public interface MultiInstanceLoopCharacteristics extends LoopCharacteristics {
      * @see #isSetIsSequential()
      * @see #unsetIsSequential()
      * @see #setIsSequential(boolean)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getMultiInstanceLoopCharacteristics_IsSequential()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getMultiInstanceLoopCharacteristics_IsSequential()
      * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
      *        extendedMetaData="kind='attribute' name='isSequential'"
      * @generated
@@ -345,7 +344,7 @@ public interface MultiInstanceLoopCharacteristics extends LoopCharacteristics {
      * <!-- end-user-doc -->
      * @return the value of the '<em>None Behavior Event Ref</em>' attribute.
      * @see #setNoneBehaviorEventRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getMultiInstanceLoopCharacteristics_NoneBehaviorEventRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getMultiInstanceLoopCharacteristics_NoneBehaviorEventRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='noneBehaviorEventRef'"
      * @generated
@@ -372,7 +371,7 @@ public interface MultiInstanceLoopCharacteristics extends LoopCharacteristics {
      * <!-- end-user-doc -->
      * @return the value of the '<em>One Behavior Event Ref</em>' attribute.
      * @see #setOneBehaviorEventRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getMultiInstanceLoopCharacteristics_OneBehaviorEventRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getMultiInstanceLoopCharacteristics_OneBehaviorEventRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='oneBehaviorEventRef'"
      * @generated

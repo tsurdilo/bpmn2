@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -23,7 +22,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Process Type</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getProcessType()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getProcessType()
  * @model extendedMetaData="name='tProcessType'"
  * @generated
  */
@@ -134,13 +133,8 @@ public enum ProcessType implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    private static final ProcessType[] VALUES_ARRAY =
-        new ProcessType[] {
-            NONE,
-            EXECUTABLE,
-            NON_EXECUTABLE,
-            PUBLIC,
-        };
+    private static final ProcessType[] VALUES_ARRAY = new ProcessType[] { NONE,
+            EXECUTABLE, NON_EXECUTABLE, PUBLIC, };
 
     /**
      * A public read-only list of all the '<em><b>Process Type</b></em>' enumerators.
@@ -148,7 +142,8 @@ public enum ProcessType implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final List<ProcessType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+    public static final List<ProcessType> VALUES = Collections
+            .unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
     /**
      * Returns the '<em><b>Process Type</b></em>' literal with the specified literal value.
@@ -190,10 +185,14 @@ public enum ProcessType implements Enumerator {
      */
     public static ProcessType get(int value) {
         switch (value) {
-            case NONE_VALUE: return NONE;
-            case EXECUTABLE_VALUE: return EXECUTABLE;
-            case NON_EXECUTABLE_VALUE: return NON_EXECUTABLE;
-            case PUBLIC_VALUE: return PUBLIC;
+        case NONE_VALUE:
+            return NONE;
+        case EXECUTABLE_VALUE:
+            return EXECUTABLE;
+        case NON_EXECUTABLE_VALUE:
+            return NON_EXECUTABLE;
+        case PUBLIC_VALUE:
+            return PUBLIC;
         }
         return null;
     }
@@ -237,7 +236,7 @@ public enum ProcessType implements Enumerator {
      * @generated
      */
     public int getValue() {
-      return value;
+        return value;
     }
 
     /**
@@ -246,7 +245,7 @@ public enum ProcessType implements Enumerator {
      * @generated
      */
     public String getName() {
-      return name;
+        return name;
     }
 
     /**
@@ -255,7 +254,7 @@ public enum ProcessType implements Enumerator {
      * @generated
      */
     public String getLiteral() {
-      return literal;
+        return literal;
     }
 
     /**
@@ -268,5 +267,5 @@ public enum ProcessType implements Enumerator {
     public String toString() {
         return literal;
     }
-    
+
 } //ProcessType

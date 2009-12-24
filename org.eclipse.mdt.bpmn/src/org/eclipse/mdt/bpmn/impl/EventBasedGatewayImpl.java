@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -18,9 +17,9 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.EventBasedGateway;
 import org.eclipse.mdt.bpmn.EventBasedGatewayType;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,7 +35,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class EventBasedGatewayImpl extends GatewayImpl implements EventBasedGateway {
+public class EventBasedGatewayImpl extends GatewayImpl implements
+        EventBasedGateway {
     /**
      * The default value of the '{@link #getEventGatewayType() <em>Event Gateway Type</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -111,7 +111,7 @@ public class EventBasedGatewayImpl extends GatewayImpl implements EventBasedGate
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getEventBasedGateway();
+        return BpmnPackage.eINSTANCE.getEventBasedGateway();
     }
 
     /**
@@ -130,11 +130,15 @@ public class EventBasedGatewayImpl extends GatewayImpl implements EventBasedGate
      */
     public void setEventGatewayType(EventBasedGatewayType newEventGatewayType) {
         EventBasedGatewayType oldEventGatewayType = eventGatewayType;
-        eventGatewayType = newEventGatewayType == null ? EVENT_GATEWAY_TYPE_EDEFAULT : newEventGatewayType;
+        eventGatewayType = newEventGatewayType == null ? EVENT_GATEWAY_TYPE_EDEFAULT
+                : newEventGatewayType;
         boolean oldEventGatewayTypeESet = eventGatewayTypeESet;
         eventGatewayTypeESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE, oldEventGatewayType, eventGatewayType, !oldEventGatewayTypeESet));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE,
+                    oldEventGatewayType, eventGatewayType,
+                    !oldEventGatewayTypeESet));
     }
 
     /**
@@ -148,7 +152,10 @@ public class EventBasedGatewayImpl extends GatewayImpl implements EventBasedGate
         eventGatewayType = EVENT_GATEWAY_TYPE_EDEFAULT;
         eventGatewayTypeESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, bpmnPackage.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE, oldEventGatewayType, EVENT_GATEWAY_TYPE_EDEFAULT, oldEventGatewayTypeESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET,
+                    BpmnPackage.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE,
+                    oldEventGatewayType, EVENT_GATEWAY_TYPE_EDEFAULT,
+                    oldEventGatewayTypeESet));
     }
 
     /**
@@ -180,7 +187,9 @@ public class EventBasedGatewayImpl extends GatewayImpl implements EventBasedGate
         boolean oldInstantiateESet = instantiateESet;
         instantiateESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.EVENT_BASED_GATEWAY__INSTANTIATE, oldInstantiate, instantiate, !oldInstantiateESet));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.EVENT_BASED_GATEWAY__INSTANTIATE,
+                    oldInstantiate, instantiate, !oldInstantiateESet));
     }
 
     /**
@@ -194,7 +203,9 @@ public class EventBasedGatewayImpl extends GatewayImpl implements EventBasedGate
         instantiate = INSTANTIATE_EDEFAULT;
         instantiateESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, bpmnPackage.EVENT_BASED_GATEWAY__INSTANTIATE, oldInstantiate, INSTANTIATE_EDEFAULT, oldInstantiateESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET,
+                    BpmnPackage.EVENT_BASED_GATEWAY__INSTANTIATE,
+                    oldInstantiate, INSTANTIATE_EDEFAULT, oldInstantiateESet));
     }
 
     /**
@@ -214,10 +225,10 @@ public class EventBasedGatewayImpl extends GatewayImpl implements EventBasedGate
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE:
-                return getEventGatewayType();
-            case bpmnPackage.EVENT_BASED_GATEWAY__INSTANTIATE:
-                return isInstantiate();
+        case BpmnPackage.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE:
+            return getEventGatewayType();
+        case BpmnPackage.EVENT_BASED_GATEWAY__INSTANTIATE:
+            return isInstantiate();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -230,12 +241,12 @@ public class EventBasedGatewayImpl extends GatewayImpl implements EventBasedGate
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE:
-                setEventGatewayType((EventBasedGatewayType)newValue);
-                return;
-            case bpmnPackage.EVENT_BASED_GATEWAY__INSTANTIATE:
-                setInstantiate((Boolean)newValue);
-                return;
+        case BpmnPackage.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE:
+            setEventGatewayType((EventBasedGatewayType) newValue);
+            return;
+        case BpmnPackage.EVENT_BASED_GATEWAY__INSTANTIATE:
+            setInstantiate((Boolean) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -248,12 +259,12 @@ public class EventBasedGatewayImpl extends GatewayImpl implements EventBasedGate
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE:
-                unsetEventGatewayType();
-                return;
-            case bpmnPackage.EVENT_BASED_GATEWAY__INSTANTIATE:
-                unsetInstantiate();
-                return;
+        case BpmnPackage.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE:
+            unsetEventGatewayType();
+            return;
+        case BpmnPackage.EVENT_BASED_GATEWAY__INSTANTIATE:
+            unsetInstantiate();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -266,10 +277,10 @@ public class EventBasedGatewayImpl extends GatewayImpl implements EventBasedGate
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE:
-                return isSetEventGatewayType();
-            case bpmnPackage.EVENT_BASED_GATEWAY__INSTANTIATE:
-                return isSetInstantiate();
+        case BpmnPackage.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE:
+            return isSetEventGatewayType();
+        case BpmnPackage.EVENT_BASED_GATEWAY__INSTANTIATE:
+            return isSetInstantiate();
         }
         return super.eIsSet(featureID);
     }
@@ -281,13 +292,20 @@ public class EventBasedGatewayImpl extends GatewayImpl implements EventBasedGate
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (eventGatewayType: "); //$NON-NLS-1$
-        if (eventGatewayTypeESet) result.append(eventGatewayType); else result.append("<unset>"); //$NON-NLS-1$
+        if (eventGatewayTypeESet)
+            result.append(eventGatewayType);
+        else
+            result.append("<unset>"); //$NON-NLS-1$
         result.append(", instantiate: "); //$NON-NLS-1$
-        if (instantiateESet) result.append(instantiate); else result.append("<unset>"); //$NON-NLS-1$
+        if (instantiateESet)
+            result.append(instantiate);
+        else
+            result.append("<unset>"); //$NON-NLS-1$
         result.append(')');
         return result.toString();
     }

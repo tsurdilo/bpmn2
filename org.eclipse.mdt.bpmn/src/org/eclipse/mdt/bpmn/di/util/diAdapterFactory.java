@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di.util;
 
@@ -26,17 +25,17 @@ import org.eclipse.mdt.bpmn.di.*;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.mdt.bpmn.di.diPackage
+ * @see org.eclipse.mdt.bpmn.di.DIPackage
  * @generated
  */
-public class diAdapterFactory extends AdapterFactoryImpl {
+public class DIAdapterFactory extends AdapterFactoryImpl {
     /**
      * The cached model package.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected static diPackage modelPackage;
+    protected static DIPackage modelPackage;
 
     /**
      * Creates an instance of the adapter factory.
@@ -44,9 +43,9 @@ public class diAdapterFactory extends AdapterFactoryImpl {
      * <!-- end-user-doc -->
      * @generated
      */
-    public diAdapterFactory() {
+    public DIAdapterFactory() {
         if (modelPackage == null) {
-            modelPackage = diPackage.eINSTANCE;
+            modelPackage = DIPackage.eINSTANCE;
         }
     }
 
@@ -64,7 +63,7 @@ public class diAdapterFactory extends AdapterFactoryImpl {
             return true;
         }
         if (object instanceof EObject) {
-            return ((EObject)object).eClass().getEPackage() == modelPackage;
+            return ((EObject) object).eClass().getEPackage() == modelPackage;
         }
         return false;
     }
@@ -75,41 +74,47 @@ public class diAdapterFactory extends AdapterFactoryImpl {
      * <!-- end-user-doc -->
      * @generated
      */
-    protected diSwitch<Adapter> modelSwitch =
-        new diSwitch<Adapter>() {
-            @Override
-            public Adapter caseBendpoint(Bendpoint object) {
-                return createBendpointAdapter();
-            }
-            @Override
-            public Adapter caseConnector(Connector object) {
-                return createConnectorAdapter();
-            }
-            @Override
-            public Adapter caseDiagram(Diagram object) {
-                return createDiagramAdapter();
-            }
-            @Override
-            public Adapter caseDocumentRoot(DocumentRoot object) {
-                return createDocumentRootAdapter();
-            }
-            @Override
-            public Adapter caseNode(Node object) {
-                return createNodeAdapter();
-            }
-            @Override
-            public Adapter caseStyle(Style object) {
-                return createStyleAdapter();
-            }
-            @Override
-            public Adapter caseView(View object) {
-                return createViewAdapter();
-            }
-            @Override
-            public Adapter defaultCase(EObject object) {
-                return createEObjectAdapter();
-            }
-        };
+    protected DISwitch<Adapter> modelSwitch = new DISwitch<Adapter>() {
+        @Override
+        public Adapter caseBendpoint(Bendpoint object) {
+            return createBendpointAdapter();
+        }
+
+        @Override
+        public Adapter caseConnector(Connector object) {
+            return createConnectorAdapter();
+        }
+
+        @Override
+        public Adapter caseDiagram(Diagram object) {
+            return createDiagramAdapter();
+        }
+
+        @Override
+        public Adapter caseDocumentRoot(DocumentRoot object) {
+            return createDocumentRootAdapter();
+        }
+
+        @Override
+        public Adapter caseNode(Node object) {
+            return createNodeAdapter();
+        }
+
+        @Override
+        public Adapter caseStyle(Style object) {
+            return createStyleAdapter();
+        }
+
+        @Override
+        public Adapter caseView(View object) {
+            return createViewAdapter();
+        }
+
+        @Override
+        public Adapter defaultCase(EObject object) {
+            return createEObjectAdapter();
+        }
+    };
 
     /**
      * Creates an adapter for the <code>target</code>.
@@ -121,9 +126,8 @@ public class diAdapterFactory extends AdapterFactoryImpl {
      */
     @Override
     public Adapter createAdapter(Notifier target) {
-        return modelSwitch.doSwitch((EObject)target);
+        return modelSwitch.doSwitch((EObject) target);
     }
-
 
     /**
      * Creates a new adapter for an object of class '{@link org.eclipse.mdt.bpmn.di.Bendpoint <em>Bendpoint</em>}'.
@@ -235,4 +239,4 @@ public class diAdapterFactory extends AdapterFactoryImpl {
         return null;
     }
 
-} //diAdapterFactory
+} //DIAdapterFactory

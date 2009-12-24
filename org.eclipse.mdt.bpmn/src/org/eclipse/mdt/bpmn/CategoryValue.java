@@ -8,10 +8,8 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +23,7 @@ package org.eclipse.mdt.bpmn;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getCategoryValue()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getCategoryValue()
  * @model extendedMetaData="name='tCategoryValue' kind='elementOnly'"
  * @generated
  */
@@ -40,7 +38,7 @@ public interface CategoryValue extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Value</em>' attribute.
      * @see #setValue(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCategoryValue_Value()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCategoryValue_Value()
      * @model dataType="org.eclipse.emf.ecore.xml.type.String"
      *        extendedMetaData="kind='attribute' name='value'"
      * @generated

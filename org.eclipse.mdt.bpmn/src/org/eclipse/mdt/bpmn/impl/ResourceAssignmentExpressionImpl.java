@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -21,9 +20,9 @@ import org.eclipse.emf.ecore.util.BasicFeatureMap;
 import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Expression;
 import org.eclipse.mdt.bpmn.ResourceAssignmentExpression;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,7 +38,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class ResourceAssignmentExpressionImpl extends BaseElementImpl implements ResourceAssignmentExpression {
+public class ResourceAssignmentExpressionImpl extends BaseElementImpl implements
+        ResourceAssignmentExpression {
     /**
      * The cached value of the '{@link #getExpressionGroup() <em>Expression Group</em>}' attribute list.
      * <!-- begin-user-doc -->
@@ -66,7 +66,7 @@ public class ResourceAssignmentExpressionImpl extends BaseElementImpl implements
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getResourceAssignmentExpression();
+        return BpmnPackage.eINSTANCE.getResourceAssignmentExpression();
     }
 
     /**
@@ -76,7 +76,9 @@ public class ResourceAssignmentExpressionImpl extends BaseElementImpl implements
      */
     public FeatureMap getExpressionGroup() {
         if (expressionGroup == null) {
-            expressionGroup = new BasicFeatureMap(this, bpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION_GROUP);
+            expressionGroup = new BasicFeatureMap(
+                    this,
+                    BpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION_GROUP);
         }
         return expressionGroup;
     }
@@ -87,7 +89,9 @@ public class ResourceAssignmentExpressionImpl extends BaseElementImpl implements
      * @generated
      */
     public Expression getExpression() {
-        return (Expression)getExpressionGroup().get(bpmnPackage.eINSTANCE.getResourceAssignmentExpression_Expression(), true);
+        return (Expression) getExpressionGroup().get(
+                BpmnPackage.eINSTANCE
+                        .getResourceAssignmentExpression_Expression(), true);
     }
 
     /**
@@ -95,8 +99,12 @@ public class ResourceAssignmentExpressionImpl extends BaseElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetExpression(Expression newExpression, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getExpressionGroup()).basicAdd(bpmnPackage.eINSTANCE.getResourceAssignmentExpression_Expression(), newExpression, msgs);
+    public NotificationChain basicSetExpression(Expression newExpression,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getExpressionGroup()).basicAdd(
+                BpmnPackage.eINSTANCE
+                        .getResourceAssignmentExpression_Expression(),
+                newExpression, msgs);
     }
 
     /**
@@ -105,7 +113,8 @@ public class ResourceAssignmentExpressionImpl extends BaseElementImpl implements
      * @generated
      */
     public void setExpression(Expression newExpression) {
-        ((FeatureMap.Internal)getExpressionGroup()).set(bpmnPackage.eINSTANCE.getResourceAssignmentExpression_Expression(), newExpression);
+        ((FeatureMap.Internal) getExpressionGroup()).set(BpmnPackage.eINSTANCE
+                .getResourceAssignmentExpression_Expression(), newExpression);
     }
 
     /**
@@ -114,12 +123,14 @@ public class ResourceAssignmentExpressionImpl extends BaseElementImpl implements
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION_GROUP:
-                return ((InternalEList<?>)getExpressionGroup()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION:
-                return basicSetExpression(null, msgs);
+        case BpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION_GROUP:
+            return ((InternalEList<?>) getExpressionGroup()).basicRemove(
+                    otherEnd, msgs);
+        case BpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION:
+            return basicSetExpression(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -132,11 +143,12 @@ public class ResourceAssignmentExpressionImpl extends BaseElementImpl implements
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION_GROUP:
-                if (coreType) return getExpressionGroup();
-                return ((FeatureMap.Internal)getExpressionGroup()).getWrapper();
-            case bpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION:
-                return getExpression();
+        case BpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION_GROUP:
+            if (coreType)
+                return getExpressionGroup();
+            return ((FeatureMap.Internal) getExpressionGroup()).getWrapper();
+        case BpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION:
+            return getExpression();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -149,12 +161,12 @@ public class ResourceAssignmentExpressionImpl extends BaseElementImpl implements
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION_GROUP:
-                ((FeatureMap.Internal)getExpressionGroup()).set(newValue);
-                return;
-            case bpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION:
-                setExpression((Expression)newValue);
-                return;
+        case BpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION_GROUP:
+            ((FeatureMap.Internal) getExpressionGroup()).set(newValue);
+            return;
+        case BpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION:
+            setExpression((Expression) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -167,12 +179,12 @@ public class ResourceAssignmentExpressionImpl extends BaseElementImpl implements
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION_GROUP:
-                getExpressionGroup().clear();
-                return;
-            case bpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION:
-                setExpression((Expression)null);
-                return;
+        case BpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION_GROUP:
+            getExpressionGroup().clear();
+            return;
+        case BpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION:
+            setExpression((Expression) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -185,10 +197,10 @@ public class ResourceAssignmentExpressionImpl extends BaseElementImpl implements
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION_GROUP:
-                return expressionGroup != null && !expressionGroup.isEmpty();
-            case bpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION:
-                return getExpression() != null;
+        case BpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION_GROUP:
+            return expressionGroup != null && !expressionGroup.isEmpty();
+        case BpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION:
+            return getExpression() != null;
         }
         return super.eIsSet(featureID);
     }
@@ -200,7 +212,8 @@ public class ResourceAssignmentExpressionImpl extends BaseElementImpl implements
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (expressionGroup: "); //$NON-NLS-1$

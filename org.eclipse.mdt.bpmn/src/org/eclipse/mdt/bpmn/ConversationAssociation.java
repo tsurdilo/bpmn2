@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -30,7 +29,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getConversationAssociation()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getConversationAssociation()
  * @model extendedMetaData="name='tConversationAssociation' kind='elementOnly'"
  * @generated
  */
@@ -45,7 +44,7 @@ public interface ConversationAssociation extends BaseElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Message Flow Ref</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getConversationAssociation_MessageFlowRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getConversationAssociation_MessageFlowRef()
      * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='element' name='messageFlowRef' namespace='##targetNamespace'"
      * @generated
@@ -62,7 +61,7 @@ public interface ConversationAssociation extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Conversation Ref</em>' attribute.
      * @see #setConversationRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getConversationAssociation_ConversationRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getConversationAssociation_ConversationRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='conversationRef'"
      * @generated
@@ -89,7 +88,7 @@ public interface ConversationAssociation extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Correlation Key Ref</em>' attribute.
      * @see #setCorrelationKeyRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getConversationAssociation_CorrelationKeyRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getConversationAssociation_CorrelationKeyRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='correlationKeyRef'"
      * @generated

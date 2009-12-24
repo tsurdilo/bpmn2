@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di.util;
 
@@ -24,17 +23,17 @@ import org.eclipse.emf.ecore.xmi.XMLResource;
  * <!-- begin-user-doc -->
  * The <b>Resource Factory</b> associated with the package.
  * <!-- end-user-doc -->
- * @see org.eclipse.mdt.bpmn.di.util.diResourceImpl
+ * @see org.eclipse.mdt.bpmn.di.util.DIResourceImpl
  * @generated
  */
-public class diResourceFactoryImpl extends ResourceFactoryImpl {
+public class DIResourceFactoryImpl extends ResourceFactoryImpl {
     /**
      * Creates an instance of the resource factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    public diResourceFactoryImpl() {
+    public DIResourceFactoryImpl() {
         super();
     }
 
@@ -46,17 +45,23 @@ public class diResourceFactoryImpl extends ResourceFactoryImpl {
      */
     @Override
     public Resource createResource(URI uri) {
-        XMLResource result = new diResourceImpl(uri);
-        result.getDefaultSaveOptions().put(XMLResource.OPTION_EXTENDED_META_DATA, Boolean.TRUE);
-        result.getDefaultLoadOptions().put(XMLResource.OPTION_EXTENDED_META_DATA, Boolean.TRUE);
+        XMLResource result = new DIResourceImpl(uri);
+        result.getDefaultSaveOptions().put(
+                XMLResource.OPTION_EXTENDED_META_DATA, Boolean.TRUE);
+        result.getDefaultLoadOptions().put(
+                XMLResource.OPTION_EXTENDED_META_DATA, Boolean.TRUE);
 
-        result.getDefaultSaveOptions().put(XMLResource.OPTION_SCHEMA_LOCATION, Boolean.TRUE);
+        result.getDefaultSaveOptions().put(XMLResource.OPTION_SCHEMA_LOCATION,
+                Boolean.TRUE);
 
-        result.getDefaultLoadOptions().put(XMLResource.OPTION_USE_ENCODED_ATTRIBUTE_STYLE, Boolean.TRUE);
-        result.getDefaultSaveOptions().put(XMLResource.OPTION_USE_ENCODED_ATTRIBUTE_STYLE, Boolean.TRUE);
+        result.getDefaultLoadOptions().put(
+                XMLResource.OPTION_USE_ENCODED_ATTRIBUTE_STYLE, Boolean.TRUE);
+        result.getDefaultSaveOptions().put(
+                XMLResource.OPTION_USE_ENCODED_ATTRIBUTE_STYLE, Boolean.TRUE);
 
-        result.getDefaultLoadOptions().put(XMLResource.OPTION_USE_LEXICAL_HANDLER, Boolean.TRUE);
+        result.getDefaultLoadOptions().put(
+                XMLResource.OPTION_USE_LEXICAL_HANDLER, Boolean.TRUE);
         return result;
     }
 
-} //diResourceFactoryImpl
+} //DIResourceFactoryImpl

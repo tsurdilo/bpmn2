@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -23,7 +22,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Transaction Method</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getTransactionMethod()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getTransactionMethod()
  * @model extendedMetaData="name='tTransactionMethod'"
  * @generated
  */
@@ -109,12 +108,8 @@ public enum TransactionMethod implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    private static final TransactionMethod[] VALUES_ARRAY =
-        new TransactionMethod[] {
-            COMPENSATE,
-            IMAGE,
-            STORE,
-        };
+    private static final TransactionMethod[] VALUES_ARRAY = new TransactionMethod[] {
+            COMPENSATE, IMAGE, STORE, };
 
     /**
      * A public read-only list of all the '<em><b>Transaction Method</b></em>' enumerators.
@@ -122,7 +117,8 @@ public enum TransactionMethod implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final List<TransactionMethod> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+    public static final List<TransactionMethod> VALUES = Collections
+            .unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
     /**
      * Returns the '<em><b>Transaction Method</b></em>' literal with the specified literal value.
@@ -164,9 +160,12 @@ public enum TransactionMethod implements Enumerator {
      */
     public static TransactionMethod get(int value) {
         switch (value) {
-            case COMPENSATE_VALUE: return COMPENSATE;
-            case IMAGE_VALUE: return IMAGE;
-            case STORE_VALUE: return STORE;
+        case COMPENSATE_VALUE:
+            return COMPENSATE;
+        case IMAGE_VALUE:
+            return IMAGE;
+        case STORE_VALUE:
+            return STORE;
         }
         return null;
     }
@@ -210,7 +209,7 @@ public enum TransactionMethod implements Enumerator {
      * @generated
      */
     public int getValue() {
-      return value;
+        return value;
     }
 
     /**
@@ -219,7 +218,7 @@ public enum TransactionMethod implements Enumerator {
      * @generated
      */
     public String getName() {
-      return name;
+        return name;
     }
 
     /**
@@ -228,7 +227,7 @@ public enum TransactionMethod implements Enumerator {
      * @generated
      */
     public String getLiteral() {
-      return literal;
+        return literal;
     }
 
     /**
@@ -241,5 +240,5 @@ public enum TransactionMethod implements Enumerator {
     public String toString() {
         return literal;
     }
-    
+
 } //TransactionMethod

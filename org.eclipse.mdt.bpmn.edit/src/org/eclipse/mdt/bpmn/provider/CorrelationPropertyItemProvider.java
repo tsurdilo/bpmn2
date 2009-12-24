@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -31,11 +30,11 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnFactory;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.CorrelationProperty;
-import org.eclipse.mdt.bpmn.bpmnFactory;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.CorrelationProperty} object.
@@ -85,7 +84,7 @@ public class CorrelationPropertyItemProvider extends RootElementItemProvider
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
             childrenFeatures
-                    .add(bpmnPackage.eINSTANCE
+                    .add(BpmnPackage.eINSTANCE
                             .getCorrelationProperty_CorrelationPropertyRetrievalExpression());
         }
         return childrenFeatures;
@@ -141,7 +140,7 @@ public class CorrelationPropertyItemProvider extends RootElementItemProvider
         updateChildren(notification);
 
         switch (notification.getFeatureID(CorrelationProperty.class)) {
-        case bpmnPackage.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
+        case BpmnPackage.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -163,9 +162,9 @@ public class CorrelationPropertyItemProvider extends RootElementItemProvider
 
         newChildDescriptors
                 .add(createChildParameter(
-                        bpmnPackage.eINSTANCE
+                        BpmnPackage.eINSTANCE
                                 .getCorrelationProperty_CorrelationPropertyRetrievalExpression(),
-                        bpmnFactory.eINSTANCE
+                        BpmnFactory.eINSTANCE
                                 .createCorrelationPropertyRetrievalExpression()));
     }
 
@@ -189,10 +188,10 @@ public class CorrelationPropertyItemProvider extends RootElementItemProvider
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE;
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE;
 
         if (qualify) {
             return getString("_UI_CreateChild_text2", //$NON-NLS-1$

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -26,7 +25,7 @@ import javax.xml.namespace.QName;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getEscalation()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getEscalation()
  * @model extendedMetaData="name='tEscalation' kind='elementOnly'"
  * @generated
  */
@@ -41,7 +40,7 @@ public interface Escalation extends RootElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Structure Ref</em>' attribute.
      * @see #setStructureRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getEscalation_StructureRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getEscalation_StructureRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='structureRef'"
      * @generated

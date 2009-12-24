@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -26,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getCategory()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getCategory()
  * @model extendedMetaData="name='tCategory' kind='elementOnly'"
  * @generated
  */
@@ -41,7 +40,7 @@ public interface Category extends RootElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Category Value</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCategory_CategoryValue()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCategory_CategoryValue()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='categoryValue' namespace='##targetNamespace'"
      * @generated

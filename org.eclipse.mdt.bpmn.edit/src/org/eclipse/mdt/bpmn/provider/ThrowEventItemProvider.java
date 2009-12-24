@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -33,11 +32,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnFactory;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.ThrowEvent;
-import org.eclipse.mdt.bpmn.bpmnFactory;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.ThrowEvent} object.
@@ -89,7 +88,7 @@ public class ThrowEventItemProvider extends EventItemProvider implements
                         getString("_UI_ThrowEvent_eventDefinitionRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_ThrowEvent_eventDefinitionRef_feature", "_UI_ThrowEvent_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE
+                        BpmnPackage.eINSTANCE
                                 .getThrowEvent_EventDefinitionRef(), true,
                         false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
@@ -108,13 +107,13 @@ public class ThrowEventItemProvider extends EventItemProvider implements
             Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getThrowEvent_DataInput());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getThrowEvent_DataInputAssociation());
             childrenFeatures
-                    .add(bpmnPackage.eINSTANCE.getThrowEvent_InputSet());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+                    .add(BpmnPackage.eINSTANCE.getThrowEvent_InputSet());
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getThrowEvent_EventDefinitionGroup());
         }
         return childrenFeatures;
@@ -158,14 +157,14 @@ public class ThrowEventItemProvider extends EventItemProvider implements
         updateChildren(notification);
 
         switch (notification.getFeatureID(ThrowEvent.class)) {
-        case bpmnPackage.THROW_EVENT__EVENT_DEFINITION_REF:
+        case BpmnPackage.THROW_EVENT__EVENT_DEFINITION_REF:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
-        case bpmnPackage.THROW_EVENT__DATA_INPUT:
-        case bpmnPackage.THROW_EVENT__DATA_INPUT_ASSOCIATION:
-        case bpmnPackage.THROW_EVENT__INPUT_SET:
-        case bpmnPackage.THROW_EVENT__EVENT_DEFINITION_GROUP:
+        case BpmnPackage.THROW_EVENT__DATA_INPUT:
+        case BpmnPackage.THROW_EVENT__DATA_INPUT_ASSOCIATION:
+        case BpmnPackage.THROW_EVENT__INPUT_SET:
+        case BpmnPackage.THROW_EVENT__EVENT_DEFINITION_GROUP:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -185,144 +184,144 @@ public class ThrowEventItemProvider extends EventItemProvider implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getThrowEvent_DataInput(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getThrowEvent_DataInput(), BpmnFactory.eINSTANCE
                 .createDataInput()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getThrowEvent_DataInputAssociation(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getThrowEvent_DataInputAssociation(), BpmnFactory.eINSTANCE
                 .createDataInputAssociation()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getThrowEvent_InputSet(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getThrowEvent_InputSet(), BpmnFactory.eINSTANCE
                 .createInputSet()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getThrowEvent_EventDefinitionGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getThrowEvent_EventDefinition(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getThrowEvent_EventDefinition(), BpmnFactory.eINSTANCE
                         .createCancelEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getThrowEvent_EventDefinitionGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getThrowEvent_EventDefinition(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getThrowEvent_EventDefinition(), BpmnFactory.eINSTANCE
                         .createCompensateEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getThrowEvent_EventDefinitionGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getThrowEvent_EventDefinition(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getThrowEvent_EventDefinition(), BpmnFactory.eINSTANCE
                         .createConditionalEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getThrowEvent_EventDefinitionGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getThrowEvent_EventDefinition(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getThrowEvent_EventDefinition(), BpmnFactory.eINSTANCE
                         .createErrorEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getThrowEvent_EventDefinitionGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getThrowEvent_EventDefinition(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getThrowEvent_EventDefinition(), BpmnFactory.eINSTANCE
                         .createEscalationEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getThrowEvent_EventDefinitionGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getThrowEvent_EventDefinition(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getThrowEvent_EventDefinition(), BpmnFactory.eINSTANCE
                         .createLinkEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getThrowEvent_EventDefinitionGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getThrowEvent_EventDefinition(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getThrowEvent_EventDefinition(), BpmnFactory.eINSTANCE
                         .createMessageEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getThrowEvent_EventDefinitionGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getThrowEvent_EventDefinition(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getThrowEvent_EventDefinition(), BpmnFactory.eINSTANCE
                         .createSignalEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getThrowEvent_EventDefinitionGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getThrowEvent_EventDefinition(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getThrowEvent_EventDefinition(), BpmnFactory.eINSTANCE
                         .createTerminateEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getThrowEvent_EventDefinitionGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
-                        .getThrowEvent_EventDefinition(), bpmnFactory.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
+                        .getThrowEvent_EventDefinition(), BpmnFactory.eINSTANCE
                         .createTimerEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getThrowEvent_EventDefinitionGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
                         .getDocumentRoot_CancelEventDefinition(),
-                        bpmnFactory.eINSTANCE.createCancelEventDefinition())));
+                        BpmnFactory.eINSTANCE.createCancelEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getThrowEvent_EventDefinitionGroup(),
                 FeatureMapUtil
-                        .createEntry(bpmnPackage.eINSTANCE
+                        .createEntry(BpmnPackage.eINSTANCE
                                 .getDocumentRoot_CompensateEventDefinition(),
-                                bpmnFactory.eINSTANCE
+                                BpmnFactory.eINSTANCE
                                         .createCompensateEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getThrowEvent_EventDefinitionGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
                         .getDocumentRoot_ConditionalEventDefinition(),
-                        bpmnFactory.eINSTANCE
+                        BpmnFactory.eINSTANCE
                                 .createConditionalEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getThrowEvent_EventDefinitionGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
                         .getDocumentRoot_ErrorEventDefinition(),
-                        bpmnFactory.eINSTANCE.createErrorEventDefinition())));
+                        BpmnFactory.eINSTANCE.createErrorEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getThrowEvent_EventDefinitionGroup(),
                 FeatureMapUtil
-                        .createEntry(bpmnPackage.eINSTANCE
+                        .createEntry(BpmnPackage.eINSTANCE
                                 .getDocumentRoot_EscalationEventDefinition(),
-                                bpmnFactory.eINSTANCE
+                                BpmnFactory.eINSTANCE
                                         .createEscalationEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getThrowEvent_EventDefinitionGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
                         .getDocumentRoot_LinkEventDefinition(),
-                        bpmnFactory.eINSTANCE.createLinkEventDefinition())));
+                        BpmnFactory.eINSTANCE.createLinkEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getThrowEvent_EventDefinitionGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
                         .getDocumentRoot_MessageEventDefinition(),
-                        bpmnFactory.eINSTANCE.createMessageEventDefinition())));
+                        BpmnFactory.eINSTANCE.createMessageEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getThrowEvent_EventDefinitionGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
                         .getDocumentRoot_SignalEventDefinition(),
-                        bpmnFactory.eINSTANCE.createSignalEventDefinition())));
+                        BpmnFactory.eINSTANCE.createSignalEventDefinition())));
 
         newChildDescriptors
-                .add(createChildParameter(bpmnPackage.eINSTANCE
+                .add(createChildParameter(BpmnPackage.eINSTANCE
                         .getThrowEvent_EventDefinitionGroup(), FeatureMapUtil
-                        .createEntry(bpmnPackage.eINSTANCE
+                        .createEntry(BpmnPackage.eINSTANCE
                                 .getDocumentRoot_TerminateEventDefinition(),
-                                bpmnFactory.eINSTANCE
+                                BpmnFactory.eINSTANCE
                                         .createTerminateEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getThrowEvent_EventDefinitionGroup(), FeatureMapUtil
-                .createEntry(bpmnPackage.eINSTANCE
+                .createEntry(BpmnPackage.eINSTANCE
                         .getDocumentRoot_TimerEventDefinition(),
-                        bpmnFactory.eINSTANCE.createTimerEventDefinition())));
+                        BpmnFactory.eINSTANCE.createTimerEventDefinition())));
     }
 
     /**
@@ -345,31 +344,31 @@ public class ThrowEventItemProvider extends EventItemProvider implements
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE
-                || childFeature == bpmnPackage.eINSTANCE
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getThrowEvent_EventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_CancelEventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_CompensateEventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_ConditionalEventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_ErrorEventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_EscalationEventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_LinkEventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_MessageEventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_SignalEventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_TerminateEventDefinition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_TimerEventDefinition();
 
         if (qualify) {

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -27,10 +26,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Rendering;
 import org.eclipse.mdt.bpmn.UserTask;
 import org.eclipse.mdt.bpmn.UserTaskImplementation;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -102,7 +101,7 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getUserTask();
+        return BpmnPackage.eINSTANCE.getUserTask();
     }
 
     /**
@@ -112,7 +111,8 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
      */
     public EList<Rendering> getRendering() {
         if (rendering == null) {
-            rendering = new EObjectContainmentEList<Rendering>(Rendering.class, this, bpmnPackage.USER_TASK__RENDERING);
+            rendering = new EObjectContainmentEList<Rendering>(Rendering.class,
+                    this, BpmnPackage.USER_TASK__RENDERING);
         }
         return rendering;
     }
@@ -133,11 +133,14 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
      */
     public void setImplementation(UserTaskImplementation newImplementation) {
         UserTaskImplementation oldImplementation = implementation;
-        implementation = newImplementation == null ? IMPLEMENTATION_EDEFAULT : newImplementation;
+        implementation = newImplementation == null ? IMPLEMENTATION_EDEFAULT
+                : newImplementation;
         boolean oldImplementationESet = implementationESet;
         implementationESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.USER_TASK__IMPLEMENTATION, oldImplementation, implementation, !oldImplementationESet));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.USER_TASK__IMPLEMENTATION, oldImplementation,
+                    implementation, !oldImplementationESet));
     }
 
     /**
@@ -151,7 +154,9 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
         implementation = IMPLEMENTATION_EDEFAULT;
         implementationESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, bpmnPackage.USER_TASK__IMPLEMENTATION, oldImplementation, IMPLEMENTATION_EDEFAULT, oldImplementationESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET,
+                    BpmnPackage.USER_TASK__IMPLEMENTATION, oldImplementation,
+                    IMPLEMENTATION_EDEFAULT, oldImplementationESet));
     }
 
     /**
@@ -169,10 +174,12 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.USER_TASK__RENDERING:
-                return ((InternalEList<?>)getRendering()).basicRemove(otherEnd, msgs);
+        case BpmnPackage.USER_TASK__RENDERING:
+            return ((InternalEList<?>) getRendering()).basicRemove(otherEnd,
+                    msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -185,10 +192,10 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.USER_TASK__RENDERING:
-                return getRendering();
-            case bpmnPackage.USER_TASK__IMPLEMENTATION:
-                return getImplementation();
+        case BpmnPackage.USER_TASK__RENDERING:
+            return getRendering();
+        case BpmnPackage.USER_TASK__IMPLEMENTATION:
+            return getImplementation();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -202,13 +209,13 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.USER_TASK__RENDERING:
-                getRendering().clear();
-                getRendering().addAll((Collection<? extends Rendering>)newValue);
-                return;
-            case bpmnPackage.USER_TASK__IMPLEMENTATION:
-                setImplementation((UserTaskImplementation)newValue);
-                return;
+        case BpmnPackage.USER_TASK__RENDERING:
+            getRendering().clear();
+            getRendering().addAll((Collection<? extends Rendering>) newValue);
+            return;
+        case BpmnPackage.USER_TASK__IMPLEMENTATION:
+            setImplementation((UserTaskImplementation) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -221,12 +228,12 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.USER_TASK__RENDERING:
-                getRendering().clear();
-                return;
-            case bpmnPackage.USER_TASK__IMPLEMENTATION:
-                unsetImplementation();
-                return;
+        case BpmnPackage.USER_TASK__RENDERING:
+            getRendering().clear();
+            return;
+        case BpmnPackage.USER_TASK__IMPLEMENTATION:
+            unsetImplementation();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -239,10 +246,10 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.USER_TASK__RENDERING:
-                return rendering != null && !rendering.isEmpty();
-            case bpmnPackage.USER_TASK__IMPLEMENTATION:
-                return isSetImplementation();
+        case BpmnPackage.USER_TASK__RENDERING:
+            return rendering != null && !rendering.isEmpty();
+        case BpmnPackage.USER_TASK__IMPLEMENTATION:
+            return isSetImplementation();
         }
         return super.eIsSet(featureID);
     }
@@ -254,11 +261,15 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (implementation: "); //$NON-NLS-1$
-        if (implementationESet) result.append(implementation); else result.append("<unset>"); //$NON-NLS-1$
+        if (implementationESet)
+            result.append(implementation);
+        else
+            result.append("<unset>"); //$NON-NLS-1$
         result.append(')');
         return result.toString();
     }

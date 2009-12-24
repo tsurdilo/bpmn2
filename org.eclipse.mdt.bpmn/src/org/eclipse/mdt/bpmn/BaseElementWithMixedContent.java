@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -35,7 +34,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getBaseElementWithMixedContent()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getBaseElementWithMixedContent()
  * @model abstract="true"
  *        extendedMetaData="name='tBaseElementWithMixedContent' kind='mixed'"
  * @generated
@@ -51,7 +50,7 @@ public interface BaseElementWithMixedContent extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Mixed</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getBaseElementWithMixedContent_Mixed()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getBaseElementWithMixedContent_Mixed()
      * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
      *        extendedMetaData="kind='elementWildcard' name=':mixed'"
      * @generated
@@ -68,7 +67,7 @@ public interface BaseElementWithMixedContent extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Documentation</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getBaseElementWithMixedContent_Documentation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getBaseElementWithMixedContent_Documentation()
      * @model containment="true" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='documentation' namespace='##targetNamespace'"
      * @generated
@@ -85,7 +84,7 @@ public interface BaseElementWithMixedContent extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Category</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getBaseElementWithMixedContent_Category()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getBaseElementWithMixedContent_Category()
      * @model containment="true" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='category' namespace='##targetNamespace'"
      * @generated
@@ -102,7 +101,7 @@ public interface BaseElementWithMixedContent extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Any</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getBaseElementWithMixedContent_Any()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getBaseElementWithMixedContent_Any()
      * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='elementWildcard' wildcards='##other' name=':3' processing='lax'"
      * @generated
@@ -119,7 +118,7 @@ public interface BaseElementWithMixedContent extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Id</em>' attribute.
      * @see #setId(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getBaseElementWithMixedContent_Id()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getBaseElementWithMixedContent_Id()
      * @model id="true" dataType="org.eclipse.emf.ecore.xml.type.ID"
      *        extendedMetaData="kind='attribute' name='id'"
      * @generated
@@ -146,7 +145,7 @@ public interface BaseElementWithMixedContent extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Any Attribute</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getBaseElementWithMixedContent_AnyAttribute()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getBaseElementWithMixedContent_AnyAttribute()
      * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
      *        extendedMetaData="kind='attributeWildcard' wildcards='##other' name=':5' processing='lax'"
      * @generated

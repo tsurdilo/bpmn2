@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -30,11 +29,11 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.mdt.bpmn.bpmnFactory
+ * @see org.eclipse.mdt.bpmn.BpmnFactory
  * @model kind="package"
  * @generated
  */
-public interface bpmnPackage extends EPackage {
+public interface BpmnPackage extends EPackage {
     /**
      * The package name.
      * <!-- begin-user-doc -->
@@ -60,19 +59,27 @@ public interface bpmnPackage extends EPackage {
     String eNS_PREFIX = "bpmn"; //$NON-NLS-1$
 
     /**
+     * The package content type ID.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    String eCONTENT_TYPE = "org.eclipse.mdt.bpmn.content-type"; //$NON-NLS-1$
+
+    /**
      * The singleton instance of the package.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    bpmnPackage eINSTANCE = org.eclipse.mdt.bpmn.impl.bpmnPackageImpl.init();
+    BpmnPackage eINSTANCE = org.eclipse.mdt.bpmn.impl.BpmnPackageImpl.init();
 
     /**
      * The meta object id for the '{@link org.eclipse.mdt.bpmn.impl.DocumentRootImpl <em>Document Root</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.DocumentRootImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getDocumentRoot()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getDocumentRoot()
      * @generated
      */
     int DOCUMENT_ROOT = 0;
@@ -1315,7 +1322,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.BaseElementImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getBaseElement()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getBaseElement()
      * @generated
      */
     int BASE_ELEMENT = 8;
@@ -1370,7 +1377,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.FlowElementImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getFlowElement()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getFlowElement()
      * @generated
      */
     int FLOW_ELEMENT = 61;
@@ -1461,7 +1468,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.FlowNodeImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getFlowNode()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getFlowNode()
      * @generated
      */
     int FLOW_NODE = 62;
@@ -1570,7 +1577,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ActivityImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getActivity()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getActivity()
      * @generated
      */
     int ACTIVITY = 1;
@@ -1675,49 +1682,49 @@ public interface bpmnPackage extends EPackage {
     int ACTIVITY__IO_SPECIFICATION = FLOW_NODE_FEATURE_COUNT + 0;
 
     /**
-     * The feature id for the '<em><b>Property</b></em>' containment reference list.
+     * The feature id for the '<em><b>Properties</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int ACTIVITY__PROPERTY = FLOW_NODE_FEATURE_COUNT + 1;
+    int ACTIVITY__PROPERTIES = FLOW_NODE_FEATURE_COUNT + 1;
 
     /**
-     * The feature id for the '<em><b>Data Input Association</b></em>' containment reference list.
+     * The feature id for the '<em><b>Data Input Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int ACTIVITY__DATA_INPUT_ASSOCIATION = FLOW_NODE_FEATURE_COUNT + 2;
+    int ACTIVITY__DATA_INPUT_ASSOCIATIONS = FLOW_NODE_FEATURE_COUNT + 2;
 
     /**
-     * The feature id for the '<em><b>Data Output Association</b></em>' containment reference list.
+     * The feature id for the '<em><b>Data Output Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int ACTIVITY__DATA_OUTPUT_ASSOCIATION = FLOW_NODE_FEATURE_COUNT + 3;
+    int ACTIVITY__DATA_OUTPUT_ASSOCIATIONS = FLOW_NODE_FEATURE_COUNT + 3;
 
     /**
-     * The feature id for the '<em><b>Activity Resource Group</b></em>' attribute list.
+     * The feature id for the '<em><b>Activity Resource Groups</b></em>' attribute list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int ACTIVITY__ACTIVITY_RESOURCE_GROUP = FLOW_NODE_FEATURE_COUNT + 4;
+    int ACTIVITY__ACTIVITY_RESOURCE_GROUPS = FLOW_NODE_FEATURE_COUNT + 4;
 
     /**
-     * The feature id for the '<em><b>Activity Resource</b></em>' containment reference list.
+     * The feature id for the '<em><b>Activity Resources</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int ACTIVITY__ACTIVITY_RESOURCE = FLOW_NODE_FEATURE_COUNT + 5;
+    int ACTIVITY__ACTIVITY_RESOURCES = FLOW_NODE_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>Loop Characteristics Group</b></em>' attribute list.
@@ -1787,7 +1794,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ActivityResourceImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getActivityResource()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getActivityResource()
      * @generated
      */
     int ACTIVITY_RESOURCE = 2;
@@ -1869,7 +1876,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.SubProcessImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getSubProcess()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getSubProcess()
      * @generated
      */
     int SUB_PROCESS = 125;
@@ -1974,49 +1981,49 @@ public interface bpmnPackage extends EPackage {
     int SUB_PROCESS__IO_SPECIFICATION = ACTIVITY__IO_SPECIFICATION;
 
     /**
-     * The feature id for the '<em><b>Property</b></em>' containment reference list.
+     * The feature id for the '<em><b>Properties</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SUB_PROCESS__PROPERTY = ACTIVITY__PROPERTY;
+    int SUB_PROCESS__PROPERTIES = ACTIVITY__PROPERTIES;
 
     /**
-     * The feature id for the '<em><b>Data Input Association</b></em>' containment reference list.
+     * The feature id for the '<em><b>Data Input Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SUB_PROCESS__DATA_INPUT_ASSOCIATION = ACTIVITY__DATA_INPUT_ASSOCIATION;
+    int SUB_PROCESS__DATA_INPUT_ASSOCIATIONS = ACTIVITY__DATA_INPUT_ASSOCIATIONS;
 
     /**
-     * The feature id for the '<em><b>Data Output Association</b></em>' containment reference list.
+     * The feature id for the '<em><b>Data Output Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SUB_PROCESS__DATA_OUTPUT_ASSOCIATION = ACTIVITY__DATA_OUTPUT_ASSOCIATION;
+    int SUB_PROCESS__DATA_OUTPUT_ASSOCIATIONS = ACTIVITY__DATA_OUTPUT_ASSOCIATIONS;
 
     /**
-     * The feature id for the '<em><b>Activity Resource Group</b></em>' attribute list.
+     * The feature id for the '<em><b>Activity Resource Groups</b></em>' attribute list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SUB_PROCESS__ACTIVITY_RESOURCE_GROUP = ACTIVITY__ACTIVITY_RESOURCE_GROUP;
+    int SUB_PROCESS__ACTIVITY_RESOURCE_GROUPS = ACTIVITY__ACTIVITY_RESOURCE_GROUPS;
 
     /**
-     * The feature id for the '<em><b>Activity Resource</b></em>' containment reference list.
+     * The feature id for the '<em><b>Activity Resources</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SUB_PROCESS__ACTIVITY_RESOURCE = ACTIVITY__ACTIVITY_RESOURCE;
+    int SUB_PROCESS__ACTIVITY_RESOURCES = ACTIVITY__ACTIVITY_RESOURCES;
 
     /**
      * The feature id for the '<em><b>Loop Characteristics Group</b></em>' attribute list.
@@ -2082,13 +2089,13 @@ public interface bpmnPackage extends EPackage {
     int SUB_PROCESS__FLOW_ELEMENT_GROUP = ACTIVITY_FEATURE_COUNT + 0;
 
     /**
-     * The feature id for the '<em><b>Flow Element</b></em>' containment reference list.
+     * The feature id for the '<em><b>Flow Elements</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SUB_PROCESS__FLOW_ELEMENT = ACTIVITY_FEATURE_COUNT + 1;
+    int SUB_PROCESS__FLOW_ELEMENTS = ACTIVITY_FEATURE_COUNT + 1;
 
     /**
      * The feature id for the '<em><b>Artifact Group</b></em>' attribute list.
@@ -2100,13 +2107,13 @@ public interface bpmnPackage extends EPackage {
     int SUB_PROCESS__ARTIFACT_GROUP = ACTIVITY_FEATURE_COUNT + 2;
 
     /**
-     * The feature id for the '<em><b>Artifact</b></em>' containment reference list.
+     * The feature id for the '<em><b>Artifacts</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SUB_PROCESS__ARTIFACT = ACTIVITY_FEATURE_COUNT + 3;
+    int SUB_PROCESS__ARTIFACTS = ACTIVITY_FEATURE_COUNT + 3;
 
     /**
      * The feature id for the '<em><b>Triggered By Event</b></em>' attribute.
@@ -2131,7 +2138,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.AdHocSubProcessImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getAdHocSubProcess()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getAdHocSubProcess()
      * @generated
      */
     int AD_HOC_SUB_PROCESS = 3;
@@ -2236,49 +2243,49 @@ public interface bpmnPackage extends EPackage {
     int AD_HOC_SUB_PROCESS__IO_SPECIFICATION = SUB_PROCESS__IO_SPECIFICATION;
 
     /**
-     * The feature id for the '<em><b>Property</b></em>' containment reference list.
+     * The feature id for the '<em><b>Properties</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int AD_HOC_SUB_PROCESS__PROPERTY = SUB_PROCESS__PROPERTY;
+    int AD_HOC_SUB_PROCESS__PROPERTIES = SUB_PROCESS__PROPERTIES;
 
     /**
-     * The feature id for the '<em><b>Data Input Association</b></em>' containment reference list.
+     * The feature id for the '<em><b>Data Input Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int AD_HOC_SUB_PROCESS__DATA_INPUT_ASSOCIATION = SUB_PROCESS__DATA_INPUT_ASSOCIATION;
+    int AD_HOC_SUB_PROCESS__DATA_INPUT_ASSOCIATIONS = SUB_PROCESS__DATA_INPUT_ASSOCIATIONS;
 
     /**
-     * The feature id for the '<em><b>Data Output Association</b></em>' containment reference list.
+     * The feature id for the '<em><b>Data Output Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int AD_HOC_SUB_PROCESS__DATA_OUTPUT_ASSOCIATION = SUB_PROCESS__DATA_OUTPUT_ASSOCIATION;
+    int AD_HOC_SUB_PROCESS__DATA_OUTPUT_ASSOCIATIONS = SUB_PROCESS__DATA_OUTPUT_ASSOCIATIONS;
 
     /**
-     * The feature id for the '<em><b>Activity Resource Group</b></em>' attribute list.
+     * The feature id for the '<em><b>Activity Resource Groups</b></em>' attribute list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int AD_HOC_SUB_PROCESS__ACTIVITY_RESOURCE_GROUP = SUB_PROCESS__ACTIVITY_RESOURCE_GROUP;
+    int AD_HOC_SUB_PROCESS__ACTIVITY_RESOURCE_GROUPS = SUB_PROCESS__ACTIVITY_RESOURCE_GROUPS;
 
     /**
-     * The feature id for the '<em><b>Activity Resource</b></em>' containment reference list.
+     * The feature id for the '<em><b>Activity Resources</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int AD_HOC_SUB_PROCESS__ACTIVITY_RESOURCE = SUB_PROCESS__ACTIVITY_RESOURCE;
+    int AD_HOC_SUB_PROCESS__ACTIVITY_RESOURCES = SUB_PROCESS__ACTIVITY_RESOURCES;
 
     /**
      * The feature id for the '<em><b>Loop Characteristics Group</b></em>' attribute list.
@@ -2344,13 +2351,13 @@ public interface bpmnPackage extends EPackage {
     int AD_HOC_SUB_PROCESS__FLOW_ELEMENT_GROUP = SUB_PROCESS__FLOW_ELEMENT_GROUP;
 
     /**
-     * The feature id for the '<em><b>Flow Element</b></em>' containment reference list.
+     * The feature id for the '<em><b>Flow Elements</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int AD_HOC_SUB_PROCESS__FLOW_ELEMENT = SUB_PROCESS__FLOW_ELEMENT;
+    int AD_HOC_SUB_PROCESS__FLOW_ELEMENTS = SUB_PROCESS__FLOW_ELEMENTS;
 
     /**
      * The feature id for the '<em><b>Artifact Group</b></em>' attribute list.
@@ -2362,13 +2369,13 @@ public interface bpmnPackage extends EPackage {
     int AD_HOC_SUB_PROCESS__ARTIFACT_GROUP = SUB_PROCESS__ARTIFACT_GROUP;
 
     /**
-     * The feature id for the '<em><b>Artifact</b></em>' containment reference list.
+     * The feature id for the '<em><b>Artifacts</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int AD_HOC_SUB_PROCESS__ARTIFACT = SUB_PROCESS__ARTIFACT;
+    int AD_HOC_SUB_PROCESS__ARTIFACTS = SUB_PROCESS__ARTIFACTS;
 
     /**
      * The feature id for the '<em><b>Triggered By Event</b></em>' attribute.
@@ -2420,7 +2427,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ArtifactImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getArtifact()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getArtifact()
      * @generated
      */
     int ARTIFACT = 4;
@@ -2475,7 +2482,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.AssignmentImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getAssignment()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getAssignment()
      * @generated
      */
     int ASSIGNMENT = 5;
@@ -2557,7 +2564,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.AssociationImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getAssociation()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getAssociation()
      * @generated
      */
     int ASSOCIATION = 6;
@@ -2639,7 +2646,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.AuditingImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getAuditing()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getAuditing()
      * @generated
      */
     int AUDITING = 7;
@@ -2694,7 +2701,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.BaseElementWithMixedContentImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getBaseElementWithMixedContent()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getBaseElementWithMixedContent()
      * @generated
      */
     int BASE_ELEMENT_WITH_MIXED_CONTENT = 9;
@@ -2767,7 +2774,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.EventImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getEvent()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getEvent()
      * @generated
      */
     int EVENT = 55;
@@ -2876,7 +2883,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.CatchEventImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getCatchEvent()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getCatchEvent()
      * @generated
      */
     int CATCH_EVENT = 17;
@@ -3048,7 +3055,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.BoundaryEventImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getBoundaryEvent()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getBoundaryEvent()
      * @generated
      */
     int BOUNDARY_EVENT = 10;
@@ -3238,7 +3245,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.TaskImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getTask()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getTask()
      * @generated
      */
     int TASK = 126;
@@ -3343,49 +3350,49 @@ public interface bpmnPackage extends EPackage {
     int TASK__IO_SPECIFICATION = ACTIVITY__IO_SPECIFICATION;
 
     /**
-     * The feature id for the '<em><b>Property</b></em>' containment reference list.
+     * The feature id for the '<em><b>Properties</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int TASK__PROPERTY = ACTIVITY__PROPERTY;
+    int TASK__PROPERTIES = ACTIVITY__PROPERTIES;
 
     /**
-     * The feature id for the '<em><b>Data Input Association</b></em>' containment reference list.
+     * The feature id for the '<em><b>Data Input Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int TASK__DATA_INPUT_ASSOCIATION = ACTIVITY__DATA_INPUT_ASSOCIATION;
+    int TASK__DATA_INPUT_ASSOCIATIONS = ACTIVITY__DATA_INPUT_ASSOCIATIONS;
 
     /**
-     * The feature id for the '<em><b>Data Output Association</b></em>' containment reference list.
+     * The feature id for the '<em><b>Data Output Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int TASK__DATA_OUTPUT_ASSOCIATION = ACTIVITY__DATA_OUTPUT_ASSOCIATION;
+    int TASK__DATA_OUTPUT_ASSOCIATIONS = ACTIVITY__DATA_OUTPUT_ASSOCIATIONS;
 
     /**
-     * The feature id for the '<em><b>Activity Resource Group</b></em>' attribute list.
+     * The feature id for the '<em><b>Activity Resource Groups</b></em>' attribute list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int TASK__ACTIVITY_RESOURCE_GROUP = ACTIVITY__ACTIVITY_RESOURCE_GROUP;
+    int TASK__ACTIVITY_RESOURCE_GROUPS = ACTIVITY__ACTIVITY_RESOURCE_GROUPS;
 
     /**
-     * The feature id for the '<em><b>Activity Resource</b></em>' containment reference list.
+     * The feature id for the '<em><b>Activity Resources</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int TASK__ACTIVITY_RESOURCE = ACTIVITY__ACTIVITY_RESOURCE;
+    int TASK__ACTIVITY_RESOURCES = ACTIVITY__ACTIVITY_RESOURCES;
 
     /**
      * The feature id for the '<em><b>Loop Characteristics Group</b></em>' attribute list.
@@ -3455,7 +3462,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.BusinessRuleTaskImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getBusinessRuleTask()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getBusinessRuleTask()
      * @generated
      */
     int BUSINESS_RULE_TASK = 11;
@@ -3560,49 +3567,49 @@ public interface bpmnPackage extends EPackage {
     int BUSINESS_RULE_TASK__IO_SPECIFICATION = TASK__IO_SPECIFICATION;
 
     /**
-     * The feature id for the '<em><b>Property</b></em>' containment reference list.
+     * The feature id for the '<em><b>Properties</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int BUSINESS_RULE_TASK__PROPERTY = TASK__PROPERTY;
+    int BUSINESS_RULE_TASK__PROPERTIES = TASK__PROPERTIES;
 
     /**
-     * The feature id for the '<em><b>Data Input Association</b></em>' containment reference list.
+     * The feature id for the '<em><b>Data Input Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int BUSINESS_RULE_TASK__DATA_INPUT_ASSOCIATION = TASK__DATA_INPUT_ASSOCIATION;
+    int BUSINESS_RULE_TASK__DATA_INPUT_ASSOCIATIONS = TASK__DATA_INPUT_ASSOCIATIONS;
 
     /**
-     * The feature id for the '<em><b>Data Output Association</b></em>' containment reference list.
+     * The feature id for the '<em><b>Data Output Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int BUSINESS_RULE_TASK__DATA_OUTPUT_ASSOCIATION = TASK__DATA_OUTPUT_ASSOCIATION;
+    int BUSINESS_RULE_TASK__DATA_OUTPUT_ASSOCIATIONS = TASK__DATA_OUTPUT_ASSOCIATIONS;
 
     /**
-     * The feature id for the '<em><b>Activity Resource Group</b></em>' attribute list.
+     * The feature id for the '<em><b>Activity Resource Groups</b></em>' attribute list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int BUSINESS_RULE_TASK__ACTIVITY_RESOURCE_GROUP = TASK__ACTIVITY_RESOURCE_GROUP;
+    int BUSINESS_RULE_TASK__ACTIVITY_RESOURCE_GROUPS = TASK__ACTIVITY_RESOURCE_GROUPS;
 
     /**
-     * The feature id for the '<em><b>Activity Resource</b></em>' containment reference list.
+     * The feature id for the '<em><b>Activity Resources</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int BUSINESS_RULE_TASK__ACTIVITY_RESOURCE = TASK__ACTIVITY_RESOURCE;
+    int BUSINESS_RULE_TASK__ACTIVITY_RESOURCES = TASK__ACTIVITY_RESOURCES;
 
     /**
      * The feature id for the '<em><b>Loop Characteristics Group</b></em>' attribute list.
@@ -3672,7 +3679,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.RootElementImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getRootElement()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getRootElement()
      * @generated
      */
     int ROOT_ELEMENT = 114;
@@ -3727,7 +3734,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.CallableElementImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getCallableElement()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getCallableElement()
      * @generated
      */
     int CALLABLE_ELEMENT = 12;
@@ -3818,7 +3825,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.CallActivityImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getCallActivity()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getCallActivity()
      * @generated
      */
     int CALL_ACTIVITY = 13;
@@ -3923,49 +3930,49 @@ public interface bpmnPackage extends EPackage {
     int CALL_ACTIVITY__IO_SPECIFICATION = ACTIVITY__IO_SPECIFICATION;
 
     /**
-     * The feature id for the '<em><b>Property</b></em>' containment reference list.
+     * The feature id for the '<em><b>Properties</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int CALL_ACTIVITY__PROPERTY = ACTIVITY__PROPERTY;
+    int CALL_ACTIVITY__PROPERTIES = ACTIVITY__PROPERTIES;
 
     /**
-     * The feature id for the '<em><b>Data Input Association</b></em>' containment reference list.
+     * The feature id for the '<em><b>Data Input Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int CALL_ACTIVITY__DATA_INPUT_ASSOCIATION = ACTIVITY__DATA_INPUT_ASSOCIATION;
+    int CALL_ACTIVITY__DATA_INPUT_ASSOCIATIONS = ACTIVITY__DATA_INPUT_ASSOCIATIONS;
 
     /**
-     * The feature id for the '<em><b>Data Output Association</b></em>' containment reference list.
+     * The feature id for the '<em><b>Data Output Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int CALL_ACTIVITY__DATA_OUTPUT_ASSOCIATION = ACTIVITY__DATA_OUTPUT_ASSOCIATION;
+    int CALL_ACTIVITY__DATA_OUTPUT_ASSOCIATIONS = ACTIVITY__DATA_OUTPUT_ASSOCIATIONS;
 
     /**
-     * The feature id for the '<em><b>Activity Resource Group</b></em>' attribute list.
+     * The feature id for the '<em><b>Activity Resource Groups</b></em>' attribute list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int CALL_ACTIVITY__ACTIVITY_RESOURCE_GROUP = ACTIVITY__ACTIVITY_RESOURCE_GROUP;
+    int CALL_ACTIVITY__ACTIVITY_RESOURCE_GROUPS = ACTIVITY__ACTIVITY_RESOURCE_GROUPS;
 
     /**
-     * The feature id for the '<em><b>Activity Resource</b></em>' containment reference list.
+     * The feature id for the '<em><b>Activity Resources</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int CALL_ACTIVITY__ACTIVITY_RESOURCE = ACTIVITY__ACTIVITY_RESOURCE;
+    int CALL_ACTIVITY__ACTIVITY_RESOURCES = ACTIVITY__ACTIVITY_RESOURCES;
 
     /**
      * The feature id for the '<em><b>Loop Characteristics Group</b></em>' attribute list.
@@ -4044,7 +4051,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ChoreographyActivityImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getChoreographyActivity()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getChoreographyActivity()
      * @generated
      */
     int CHOREOGRAPHY_ACTIVITY = 21;
@@ -4171,7 +4178,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.CallChoreographyActivityImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getCallChoreographyActivity()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getCallChoreographyActivity()
      * @generated
      */
     int CALL_CHOREOGRAPHY_ACTIVITY = 14;
@@ -4316,7 +4323,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ConversationNodeImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getConversationNode()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getConversationNode()
      * @generated
      */
     int CONVERSATION_NODE = 32;
@@ -4389,7 +4396,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.CallConversationImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getCallConversation()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getCallConversation()
      * @generated
      */
     int CALL_CONVERSATION = 15;
@@ -4480,7 +4487,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.EventDefinitionImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getEventDefinition()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getEventDefinition()
      * @generated
      */
     int EVENT_DEFINITION = 57;
@@ -4535,7 +4542,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.CancelEventDefinitionImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getCancelEventDefinition()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getCancelEventDefinition()
      * @generated
      */
     int CANCEL_EVENT_DEFINITION = 16;
@@ -4590,7 +4597,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.CategoryImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getCategory()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getCategory()
      * @generated
      */
     int CATEGORY = 18;
@@ -4654,7 +4661,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.CategoryValueImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getCategoryValue()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getCategoryValue()
      * @generated
      */
     int CATEGORY_VALUE = 19;
@@ -4718,7 +4725,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ChoreographyImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getChoreography()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getChoreography()
      * @generated
      */
     int CHOREOGRAPHY = 20;
@@ -4908,7 +4915,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ChoreographySubProcessImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getChoreographySubProcess()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getChoreographySubProcess()
      * @generated
      */
     int CHOREOGRAPHY_SUB_PROCESS = 22;
@@ -5071,7 +5078,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ChoreographyTaskImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getChoreographyTask()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getChoreographyTask()
      * @generated
      */
     int CHOREOGRAPHY_TASK = 23;
@@ -5207,7 +5214,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.CollaborationImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getCollaboration()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getCollaboration()
      * @generated
      */
     int COLLABORATION = 24;
@@ -5361,7 +5368,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.CommunicationImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getCommunication()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getCommunication()
      * @generated
      */
     int COMMUNICATION = 25;
@@ -5452,7 +5459,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.CompensateEventDefinitionImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getCompensateEventDefinition()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getCompensateEventDefinition()
      * @generated
      */
     int COMPENSATE_EVENT_DEFINITION = 26;
@@ -5525,7 +5532,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ComplexBehaviorDefinitionImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getComplexBehaviorDefinition()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getComplexBehaviorDefinition()
      * @generated
      */
     int COMPLEX_BEHAVIOR_DEFINITION = 27;
@@ -5598,7 +5605,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.GatewayImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getGateway()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getGateway()
      * @generated
      */
     int GATEWAY = 64;
@@ -5716,7 +5723,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ComplexGatewayImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getComplexGateway()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getComplexGateway()
      * @generated
      */
     int COMPLEX_GATEWAY = 28;
@@ -5852,7 +5859,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ConditionalEventDefinitionImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getConditionalEventDefinition()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getConditionalEventDefinition()
      * @generated
      */
     int CONDITIONAL_EVENT_DEFINITION = 29;
@@ -5916,7 +5923,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ConversationImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getConversation()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getConversation()
      * @generated
      */
     int CONVERSATION = 30;
@@ -6079,7 +6086,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ConversationAssociationImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getConversationAssociation()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getConversationAssociation()
      * @generated
      */
     int CONVERSATION_ASSOCIATION = 31;
@@ -6161,7 +6168,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.CorrelationKeyImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getCorrelationKey()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getCorrelationKey()
      * @generated
      */
     int CORRELATION_KEY = 33;
@@ -6225,7 +6232,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.CorrelationPropertyImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getCorrelationProperty()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getCorrelationProperty()
      * @generated
      */
     int CORRELATION_PROPERTY = 34;
@@ -6289,7 +6296,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.CorrelationPropertyBindingImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getCorrelationPropertyBinding()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getCorrelationPropertyBinding()
      * @generated
      */
     int CORRELATION_PROPERTY_BINDING = 35;
@@ -6362,7 +6369,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.CorrelationPropertyRetrievalExpressionImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getCorrelationPropertyRetrievalExpression()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getCorrelationPropertyRetrievalExpression()
      * @generated
      */
     int CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION = 36;
@@ -6435,7 +6442,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.CorrelationSubscriptionImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getCorrelationSubscription()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getCorrelationSubscription()
      * @generated
      */
     int CORRELATION_SUBSCRIPTION = 37;
@@ -6517,7 +6524,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.DataAssociationImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getDataAssociation()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getDataAssociation()
      * @generated
      */
     int DATA_ASSOCIATION = 38;
@@ -6590,7 +6597,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.DataInputImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getDataInput()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getDataInput()
      * @generated
      */
     int DATA_INPUT = 39;
@@ -6681,7 +6688,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.DataInputAssociationImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getDataInputAssociation()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getDataInputAssociation()
      * @generated
      */
     int DATA_INPUT_ASSOCIATION = 40;
@@ -6772,7 +6779,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.DataObjectImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getDataObject()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getDataObject()
      * @generated
      */
     int DATA_OBJECT = 41;
@@ -6890,7 +6897,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.DataOutputImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getDataOutput()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getDataOutput()
      * @generated
      */
     int DATA_OUTPUT = 42;
@@ -6981,7 +6988,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.DataOutputAssociationImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getDataOutputAssociation()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getDataOutputAssociation()
      * @generated
      */
     int DATA_OUTPUT_ASSOCIATION = 43;
@@ -7072,7 +7079,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.DataStateImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getDataState()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getDataState()
      * @generated
      */
     int DATA_STATE = 44;
@@ -7136,7 +7143,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.DataStoreImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getDataStore()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getDataStore()
      * @generated
      */
     int DATA_STORE = 45;
@@ -7236,7 +7243,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.DataStoreReferenceImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getDataStoreReference()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getDataStoreReference()
      * @generated
      */
     int DATA_STORE_REFERENCE = 46;
@@ -7354,7 +7361,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.DefinitionsImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getDefinitions()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getDefinitions()
      * @generated
      */
     int DEFINITIONS = 47;
@@ -7472,7 +7479,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.DocumentationImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getDocumentation()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getDocumentation()
      * @generated
      */
     int DOCUMENTATION = 48;
@@ -7518,7 +7525,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ThrowEventImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getThrowEvent()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getThrowEvent()
      * @generated
      */
     int THROW_EVENT = 130;
@@ -7681,7 +7688,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.EndEventImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getEndEvent()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getEndEvent()
      * @generated
      */
     int END_EVENT = 49;
@@ -7844,7 +7851,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.EndPointImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getEndPoint()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getEndPoint()
      * @generated
      */
     int END_POINT = 50;
@@ -7899,7 +7906,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ErrorImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getError()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getError()
      * @generated
      */
     int ERROR = 51;
@@ -7963,7 +7970,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ErrorEventDefinitionImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getErrorEventDefinition()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getErrorEventDefinition()
      * @generated
      */
     int ERROR_EVENT_DEFINITION = 52;
@@ -8036,7 +8043,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.EscalationImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getEscalation()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getEscalation()
      * @generated
      */
     int ESCALATION = 53;
@@ -8100,7 +8107,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.EscalationEventDefinitionImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getEscalationEventDefinition()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getEscalationEventDefinition()
      * @generated
      */
     int ESCALATION_EVENT_DEFINITION = 54;
@@ -8173,7 +8180,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.EventBasedGatewayImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getEventBasedGateway()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getEventBasedGateway()
      * @generated
      */
     int EVENT_BASED_GATEWAY = 56;
@@ -8309,7 +8316,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ExclusiveGatewayImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getExclusiveGateway()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getExclusiveGateway()
      * @generated
      */
     int EXCLUSIVE_GATEWAY = 58;
@@ -8436,7 +8443,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ExpressionImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getExpression()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getExpression()
      * @generated
      */
     int EXPRESSION = 59;
@@ -8509,7 +8516,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ExtensionImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getExtension()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getExtension()
      * @generated
      */
     int EXTENSION = 60;
@@ -8555,7 +8562,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.FormalExpressionImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getFormalExpression()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getFormalExpression()
      * @generated
      */
     int FORMAL_EXPRESSION = 63;
@@ -8646,7 +8653,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.GlobalTaskImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getGlobalTask()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getGlobalTask()
      * @generated
      */
     int GLOBAL_TASK = 70;
@@ -8755,7 +8762,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.GlobalBusinessRuleTaskImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getGlobalBusinessRuleTask()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getGlobalBusinessRuleTask()
      * @generated
      */
     int GLOBAL_BUSINESS_RULE_TASK = 65;
@@ -8864,7 +8871,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.GlobalChoreographyTaskImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getGlobalChoreographyTask()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getGlobalChoreographyTask()
      * @generated
      */
     int GLOBAL_CHOREOGRAPHY_TASK = 66;
@@ -8982,7 +8989,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.GlobalCommunicationImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getGlobalCommunication()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getGlobalCommunication()
      * @generated
      */
     int GLOBAL_COMMUNICATION = 67;
@@ -9100,7 +9107,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.GlobalManualTaskImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getGlobalManualTask()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getGlobalManualTask()
      * @generated
      */
     int GLOBAL_MANUAL_TASK = 68;
@@ -9209,7 +9216,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.GlobalScriptTaskImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getGlobalScriptTask()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getGlobalScriptTask()
      * @generated
      */
     int GLOBAL_SCRIPT_TASK = 69;
@@ -9336,7 +9343,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.GlobalUserTaskImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getGlobalUserTask()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getGlobalUserTask()
      * @generated
      */
     int GLOBAL_USER_TASK = 71;
@@ -9463,7 +9470,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.GroupImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getGroup()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getGroup()
      * @generated
      */
     int GROUP = 72;
@@ -9527,7 +9534,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.PerformerImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getPerformer()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getPerformer()
      * @generated
      */
     int PERFORMER = 103;
@@ -9609,7 +9616,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.HumanPerformerImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getHumanPerformer()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getHumanPerformer()
      * @generated
      */
     int HUMAN_PERFORMER = 73;
@@ -9691,7 +9698,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ImplicitThrowEventImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getImplicitThrowEvent()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getImplicitThrowEvent()
      * @generated
      */
     int IMPLICIT_THROW_EVENT = 74;
@@ -9854,7 +9861,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ImportImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getImport()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getImport()
      * @generated
      */
     int IMPORT = 75;
@@ -9900,7 +9907,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.InclusiveGatewayImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getInclusiveGateway()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getInclusiveGateway()
      * @generated
      */
     int INCLUSIVE_GATEWAY = 76;
@@ -10027,7 +10034,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.InputOutputBindingImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getInputOutputBinding()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getInputOutputBinding()
      * @generated
      */
     int INPUT_OUTPUT_BINDING = 77;
@@ -10109,7 +10116,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.InputOutputSpecificationImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getInputOutputSpecification()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getInputOutputSpecification()
      * @generated
      */
     int INPUT_OUTPUT_SPECIFICATION = 78;
@@ -10200,7 +10207,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.InputSetImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getInputSet()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getInputSet()
      * @generated
      */
     int INPUT_SET = 79;
@@ -10300,7 +10307,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.InterfaceImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getInterface()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getInterface()
      * @generated
      */
     int INTERFACE = 80;
@@ -10373,7 +10380,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.IntermediateCatchEventImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getIntermediateCatchEvent()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getIntermediateCatchEvent()
      * @generated
      */
     int INTERMEDIATE_CATCH_EVENT = 81;
@@ -10545,7 +10552,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.IntermediateThrowEventImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getIntermediateThrowEvent()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getIntermediateThrowEvent()
      * @generated
      */
     int INTERMEDIATE_THROW_EVENT = 82;
@@ -10708,7 +10715,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ItemDefinitionImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getItemDefinition()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getItemDefinition()
      * @generated
      */
     int ITEM_DEFINITION = 83;
@@ -10790,7 +10797,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.LaneImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getLane()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getLane()
      * @generated
      */
     int LANE = 84;
@@ -10890,7 +10897,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.LaneSetImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getLaneSet()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getLaneSet()
      * @generated
      */
     int LANE_SET = 85;
@@ -10954,7 +10961,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.LinkEventDefinitionImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getLinkEventDefinition()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getLinkEventDefinition()
      * @generated
      */
     int LINK_EVENT_DEFINITION = 86;
@@ -11018,7 +11025,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.LoopCharacteristicsImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getLoopCharacteristics()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getLoopCharacteristics()
      * @generated
      */
     int LOOP_CHARACTERISTICS = 87;
@@ -11073,7 +11080,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ManualTaskImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getManualTask()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getManualTask()
      * @generated
      */
     int MANUAL_TASK = 88;
@@ -11178,49 +11185,49 @@ public interface bpmnPackage extends EPackage {
     int MANUAL_TASK__IO_SPECIFICATION = TASK__IO_SPECIFICATION;
 
     /**
-     * The feature id for the '<em><b>Property</b></em>' containment reference list.
+     * The feature id for the '<em><b>Properties</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int MANUAL_TASK__PROPERTY = TASK__PROPERTY;
+    int MANUAL_TASK__PROPERTIES = TASK__PROPERTIES;
 
     /**
-     * The feature id for the '<em><b>Data Input Association</b></em>' containment reference list.
+     * The feature id for the '<em><b>Data Input Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int MANUAL_TASK__DATA_INPUT_ASSOCIATION = TASK__DATA_INPUT_ASSOCIATION;
+    int MANUAL_TASK__DATA_INPUT_ASSOCIATIONS = TASK__DATA_INPUT_ASSOCIATIONS;
 
     /**
-     * The feature id for the '<em><b>Data Output Association</b></em>' containment reference list.
+     * The feature id for the '<em><b>Data Output Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int MANUAL_TASK__DATA_OUTPUT_ASSOCIATION = TASK__DATA_OUTPUT_ASSOCIATION;
+    int MANUAL_TASK__DATA_OUTPUT_ASSOCIATIONS = TASK__DATA_OUTPUT_ASSOCIATIONS;
 
     /**
-     * The feature id for the '<em><b>Activity Resource Group</b></em>' attribute list.
+     * The feature id for the '<em><b>Activity Resource Groups</b></em>' attribute list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int MANUAL_TASK__ACTIVITY_RESOURCE_GROUP = TASK__ACTIVITY_RESOURCE_GROUP;
+    int MANUAL_TASK__ACTIVITY_RESOURCE_GROUPS = TASK__ACTIVITY_RESOURCE_GROUPS;
 
     /**
-     * The feature id for the '<em><b>Activity Resource</b></em>' containment reference list.
+     * The feature id for the '<em><b>Activity Resources</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int MANUAL_TASK__ACTIVITY_RESOURCE = TASK__ACTIVITY_RESOURCE;
+    int MANUAL_TASK__ACTIVITY_RESOURCES = TASK__ACTIVITY_RESOURCES;
 
     /**
      * The feature id for the '<em><b>Loop Characteristics Group</b></em>' attribute list.
@@ -11290,7 +11297,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.MessageImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getMessage()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getMessage()
      * @generated
      */
     int MESSAGE = 89;
@@ -11363,7 +11370,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.MessageEventDefinitionImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getMessageEventDefinition()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getMessageEventDefinition()
      * @generated
      */
     int MESSAGE_EVENT_DEFINITION = 90;
@@ -11436,7 +11443,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.MessageFlowImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getMessageFlow()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getMessageFlow()
      * @generated
      */
     int MESSAGE_FLOW = 91;
@@ -11527,7 +11534,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.MessageFlowAssociationImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getMessageFlowAssociation()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getMessageFlowAssociation()
      * @generated
      */
     int MESSAGE_FLOW_ASSOCIATION = 92;
@@ -11600,7 +11607,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.MonitoringImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getMonitoring()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getMonitoring()
      * @generated
      */
     int MONITORING = 93;
@@ -11655,7 +11662,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.MultiInstanceLoopCharacteristicsImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getMultiInstanceLoopCharacteristics()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getMultiInstanceLoopCharacteristics()
      * @generated
      */
     int MULTI_INSTANCE_LOOP_CHARACTERISTICS = 94;
@@ -11809,7 +11816,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.OperationImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getOperation()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getOperation()
      * @generated
      */
     int OPERATION = 95;
@@ -11900,7 +11907,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.OutputSetImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getOutputSet()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getOutputSet()
      * @generated
      */
     int OUTPUT_SET = 96;
@@ -12000,7 +12007,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ParallelGatewayImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getParallelGateway()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getParallelGateway()
      * @generated
      */
     int PARALLEL_GATEWAY = 97;
@@ -12118,7 +12125,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ParticipantImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getParticipant()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getParticipant()
      * @generated
      */
     int PARTICIPANT = 98;
@@ -12236,7 +12243,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ParticipantAssociationImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getParticipantAssociation()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getParticipantAssociation()
      * @generated
      */
     int PARTICIPANT_ASSOCIATION = 99;
@@ -12309,7 +12316,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ParticipantMultiplicityImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getParticipantMultiplicity()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getParticipantMultiplicity()
      * @generated
      */
     int PARTICIPANT_MULTIPLICITY = 100;
@@ -12382,7 +12389,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.PartnerEntityImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getPartnerEntity()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getPartnerEntity()
      * @generated
      */
     int PARTNER_ENTITY = 101;
@@ -12446,7 +12453,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.PartnerRoleImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getPartnerRole()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getPartnerRole()
      * @generated
      */
     int PARTNER_ROLE = 102;
@@ -12510,7 +12517,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.PotentialOwnerImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getPotentialOwner()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getPotentialOwner()
      * @generated
      */
     int POTENTIAL_OWNER = 104;
@@ -12592,7 +12599,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ProcessImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getProcess()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getProcess()
      * @generated
      */
     int PROCESS = 105;
@@ -12791,7 +12798,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.PropertyImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getProperty()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getProperty()
      * @generated
      */
     int PROPERTY = 106;
@@ -12873,7 +12880,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ReceiveTaskImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getReceiveTask()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getReceiveTask()
      * @generated
      */
     int RECEIVE_TASK = 107;
@@ -12978,49 +12985,49 @@ public interface bpmnPackage extends EPackage {
     int RECEIVE_TASK__IO_SPECIFICATION = TASK__IO_SPECIFICATION;
 
     /**
-     * The feature id for the '<em><b>Property</b></em>' containment reference list.
+     * The feature id for the '<em><b>Properties</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int RECEIVE_TASK__PROPERTY = TASK__PROPERTY;
+    int RECEIVE_TASK__PROPERTIES = TASK__PROPERTIES;
 
     /**
-     * The feature id for the '<em><b>Data Input Association</b></em>' containment reference list.
+     * The feature id for the '<em><b>Data Input Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int RECEIVE_TASK__DATA_INPUT_ASSOCIATION = TASK__DATA_INPUT_ASSOCIATION;
+    int RECEIVE_TASK__DATA_INPUT_ASSOCIATIONS = TASK__DATA_INPUT_ASSOCIATIONS;
 
     /**
-     * The feature id for the '<em><b>Data Output Association</b></em>' containment reference list.
+     * The feature id for the '<em><b>Data Output Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int RECEIVE_TASK__DATA_OUTPUT_ASSOCIATION = TASK__DATA_OUTPUT_ASSOCIATION;
+    int RECEIVE_TASK__DATA_OUTPUT_ASSOCIATIONS = TASK__DATA_OUTPUT_ASSOCIATIONS;
 
     /**
-     * The feature id for the '<em><b>Activity Resource Group</b></em>' attribute list.
+     * The feature id for the '<em><b>Activity Resource Groups</b></em>' attribute list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int RECEIVE_TASK__ACTIVITY_RESOURCE_GROUP = TASK__ACTIVITY_RESOURCE_GROUP;
+    int RECEIVE_TASK__ACTIVITY_RESOURCE_GROUPS = TASK__ACTIVITY_RESOURCE_GROUPS;
 
     /**
-     * The feature id for the '<em><b>Activity Resource</b></em>' containment reference list.
+     * The feature id for the '<em><b>Activity Resources</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int RECEIVE_TASK__ACTIVITY_RESOURCE = TASK__ACTIVITY_RESOURCE;
+    int RECEIVE_TASK__ACTIVITY_RESOURCES = TASK__ACTIVITY_RESOURCES;
 
     /**
      * The feature id for the '<em><b>Loop Characteristics Group</b></em>' attribute list.
@@ -13126,7 +13133,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.RelationshipImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getRelationship()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getRelationship()
      * @generated
      */
     int RELATIONSHIP = 108;
@@ -13217,7 +13224,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.RenderingImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getRendering()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getRendering()
      * @generated
      */
     int RENDERING = 109;
@@ -13272,7 +13279,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ResourceImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getResource()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getResource()
      * @generated
      */
     int RESOURCE = 110;
@@ -13345,7 +13352,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ResourceAssignmentExpressionImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getResourceAssignmentExpression()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getResourceAssignmentExpression()
      * @generated
      */
     int RESOURCE_ASSIGNMENT_EXPRESSION = 111;
@@ -13418,7 +13425,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ResourceParameterImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getResourceParameter()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getResourceParameter()
      * @generated
      */
     int RESOURCE_PARAMETER = 112;
@@ -13500,7 +13507,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ResourceParameterBindingImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getResourceParameterBinding()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getResourceParameterBinding()
      * @generated
      */
     int RESOURCE_PARAMETER_BINDING = 113;
@@ -13582,7 +13589,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ScriptImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getScript()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getScript()
      * @generated
      */
     int SCRIPT = 115;
@@ -13619,7 +13626,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ScriptTaskImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getScriptTask()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getScriptTask()
      * @generated
      */
     int SCRIPT_TASK = 116;
@@ -13724,49 +13731,49 @@ public interface bpmnPackage extends EPackage {
     int SCRIPT_TASK__IO_SPECIFICATION = TASK__IO_SPECIFICATION;
 
     /**
-     * The feature id for the '<em><b>Property</b></em>' containment reference list.
+     * The feature id for the '<em><b>Properties</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SCRIPT_TASK__PROPERTY = TASK__PROPERTY;
+    int SCRIPT_TASK__PROPERTIES = TASK__PROPERTIES;
 
     /**
-     * The feature id for the '<em><b>Data Input Association</b></em>' containment reference list.
+     * The feature id for the '<em><b>Data Input Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SCRIPT_TASK__DATA_INPUT_ASSOCIATION = TASK__DATA_INPUT_ASSOCIATION;
+    int SCRIPT_TASK__DATA_INPUT_ASSOCIATIONS = TASK__DATA_INPUT_ASSOCIATIONS;
 
     /**
-     * The feature id for the '<em><b>Data Output Association</b></em>' containment reference list.
+     * The feature id for the '<em><b>Data Output Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SCRIPT_TASK__DATA_OUTPUT_ASSOCIATION = TASK__DATA_OUTPUT_ASSOCIATION;
+    int SCRIPT_TASK__DATA_OUTPUT_ASSOCIATIONS = TASK__DATA_OUTPUT_ASSOCIATIONS;
 
     /**
-     * The feature id for the '<em><b>Activity Resource Group</b></em>' attribute list.
+     * The feature id for the '<em><b>Activity Resource Groups</b></em>' attribute list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SCRIPT_TASK__ACTIVITY_RESOURCE_GROUP = TASK__ACTIVITY_RESOURCE_GROUP;
+    int SCRIPT_TASK__ACTIVITY_RESOURCE_GROUPS = TASK__ACTIVITY_RESOURCE_GROUPS;
 
     /**
-     * The feature id for the '<em><b>Activity Resource</b></em>' containment reference list.
+     * The feature id for the '<em><b>Activity Resources</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SCRIPT_TASK__ACTIVITY_RESOURCE = TASK__ACTIVITY_RESOURCE;
+    int SCRIPT_TASK__ACTIVITY_RESOURCES = TASK__ACTIVITY_RESOURCES;
 
     /**
      * The feature id for the '<em><b>Loop Characteristics Group</b></em>' attribute list.
@@ -13854,7 +13861,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.SendTaskImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getSendTask()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getSendTask()
      * @generated
      */
     int SEND_TASK = 117;
@@ -13959,49 +13966,49 @@ public interface bpmnPackage extends EPackage {
     int SEND_TASK__IO_SPECIFICATION = TASK__IO_SPECIFICATION;
 
     /**
-     * The feature id for the '<em><b>Property</b></em>' containment reference list.
+     * The feature id for the '<em><b>Properties</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SEND_TASK__PROPERTY = TASK__PROPERTY;
+    int SEND_TASK__PROPERTIES = TASK__PROPERTIES;
 
     /**
-     * The feature id for the '<em><b>Data Input Association</b></em>' containment reference list.
+     * The feature id for the '<em><b>Data Input Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SEND_TASK__DATA_INPUT_ASSOCIATION = TASK__DATA_INPUT_ASSOCIATION;
+    int SEND_TASK__DATA_INPUT_ASSOCIATIONS = TASK__DATA_INPUT_ASSOCIATIONS;
 
     /**
-     * The feature id for the '<em><b>Data Output Association</b></em>' containment reference list.
+     * The feature id for the '<em><b>Data Output Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SEND_TASK__DATA_OUTPUT_ASSOCIATION = TASK__DATA_OUTPUT_ASSOCIATION;
+    int SEND_TASK__DATA_OUTPUT_ASSOCIATIONS = TASK__DATA_OUTPUT_ASSOCIATIONS;
 
     /**
-     * The feature id for the '<em><b>Activity Resource Group</b></em>' attribute list.
+     * The feature id for the '<em><b>Activity Resource Groups</b></em>' attribute list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SEND_TASK__ACTIVITY_RESOURCE_GROUP = TASK__ACTIVITY_RESOURCE_GROUP;
+    int SEND_TASK__ACTIVITY_RESOURCE_GROUPS = TASK__ACTIVITY_RESOURCE_GROUPS;
 
     /**
-     * The feature id for the '<em><b>Activity Resource</b></em>' containment reference list.
+     * The feature id for the '<em><b>Activity Resources</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SEND_TASK__ACTIVITY_RESOURCE = TASK__ACTIVITY_RESOURCE;
+    int SEND_TASK__ACTIVITY_RESOURCES = TASK__ACTIVITY_RESOURCES;
 
     /**
      * The feature id for the '<em><b>Loop Characteristics Group</b></em>' attribute list.
@@ -14098,7 +14105,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.SequenceFlowImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getSequenceFlow()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getSequenceFlow()
      * @generated
      */
     int SEQUENCE_FLOW = 118;
@@ -14225,7 +14232,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.ServiceTaskImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getServiceTask()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getServiceTask()
      * @generated
      */
     int SERVICE_TASK = 119;
@@ -14330,49 +14337,49 @@ public interface bpmnPackage extends EPackage {
     int SERVICE_TASK__IO_SPECIFICATION = TASK__IO_SPECIFICATION;
 
     /**
-     * The feature id for the '<em><b>Property</b></em>' containment reference list.
+     * The feature id for the '<em><b>Properties</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SERVICE_TASK__PROPERTY = TASK__PROPERTY;
+    int SERVICE_TASK__PROPERTIES = TASK__PROPERTIES;
 
     /**
-     * The feature id for the '<em><b>Data Input Association</b></em>' containment reference list.
+     * The feature id for the '<em><b>Data Input Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SERVICE_TASK__DATA_INPUT_ASSOCIATION = TASK__DATA_INPUT_ASSOCIATION;
+    int SERVICE_TASK__DATA_INPUT_ASSOCIATIONS = TASK__DATA_INPUT_ASSOCIATIONS;
 
     /**
-     * The feature id for the '<em><b>Data Output Association</b></em>' containment reference list.
+     * The feature id for the '<em><b>Data Output Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SERVICE_TASK__DATA_OUTPUT_ASSOCIATION = TASK__DATA_OUTPUT_ASSOCIATION;
+    int SERVICE_TASK__DATA_OUTPUT_ASSOCIATIONS = TASK__DATA_OUTPUT_ASSOCIATIONS;
 
     /**
-     * The feature id for the '<em><b>Activity Resource Group</b></em>' attribute list.
+     * The feature id for the '<em><b>Activity Resource Groups</b></em>' attribute list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SERVICE_TASK__ACTIVITY_RESOURCE_GROUP = TASK__ACTIVITY_RESOURCE_GROUP;
+    int SERVICE_TASK__ACTIVITY_RESOURCE_GROUPS = TASK__ACTIVITY_RESOURCE_GROUPS;
 
     /**
-     * The feature id for the '<em><b>Activity Resource</b></em>' containment reference list.
+     * The feature id for the '<em><b>Activity Resources</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SERVICE_TASK__ACTIVITY_RESOURCE = TASK__ACTIVITY_RESOURCE;
+    int SERVICE_TASK__ACTIVITY_RESOURCES = TASK__ACTIVITY_RESOURCES;
 
     /**
      * The feature id for the '<em><b>Loop Characteristics Group</b></em>' attribute list.
@@ -14460,7 +14467,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.SignalImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getSignal()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getSignal()
      * @generated
      */
     int SIGNAL = 120;
@@ -14533,7 +14540,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.SignalEventDefinitionImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getSignalEventDefinition()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getSignalEventDefinition()
      * @generated
      */
     int SIGNAL_EVENT_DEFINITION = 121;
@@ -14597,7 +14604,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.StandardLoopCharacteristicsImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getStandardLoopCharacteristics()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getStandardLoopCharacteristics()
      * @generated
      */
     int STANDARD_LOOP_CHARACTERISTICS = 122;
@@ -14679,7 +14686,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.StartEventImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getStartEvent()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getStartEvent()
      * @generated
      */
     int START_EVENT = 123;
@@ -14860,7 +14867,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.SubConversationImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getSubConversation()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getSubConversation()
      * @generated
      */
     int SUB_CONVERSATION = 124;
@@ -14978,7 +14985,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.TerminateEventDefinitionImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getTerminateEventDefinition()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getTerminateEventDefinition()
      * @generated
      */
     int TERMINATE_EVENT_DEFINITION = 127;
@@ -15033,7 +15040,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.TextImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getText()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getText()
      * @generated
      */
     int TEXT = 128;
@@ -15070,7 +15077,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.TextAnnotationImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getTextAnnotation()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getTextAnnotation()
      * @generated
      */
     int TEXT_ANNOTATION = 129;
@@ -15134,7 +15141,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.TimerEventDefinitionImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getTimerEventDefinition()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getTimerEventDefinition()
      * @generated
      */
     int TIMER_EVENT_DEFINITION = 131;
@@ -15207,7 +15214,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.TransactionImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getTransaction()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getTransaction()
      * @generated
      */
     int TRANSACTION = 132;
@@ -15312,49 +15319,49 @@ public interface bpmnPackage extends EPackage {
     int TRANSACTION__IO_SPECIFICATION = ACTIVITY__IO_SPECIFICATION;
 
     /**
-     * The feature id for the '<em><b>Property</b></em>' containment reference list.
+     * The feature id for the '<em><b>Properties</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int TRANSACTION__PROPERTY = ACTIVITY__PROPERTY;
+    int TRANSACTION__PROPERTIES = ACTIVITY__PROPERTIES;
 
     /**
-     * The feature id for the '<em><b>Data Input Association</b></em>' containment reference list.
+     * The feature id for the '<em><b>Data Input Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int TRANSACTION__DATA_INPUT_ASSOCIATION = ACTIVITY__DATA_INPUT_ASSOCIATION;
+    int TRANSACTION__DATA_INPUT_ASSOCIATIONS = ACTIVITY__DATA_INPUT_ASSOCIATIONS;
 
     /**
-     * The feature id for the '<em><b>Data Output Association</b></em>' containment reference list.
+     * The feature id for the '<em><b>Data Output Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int TRANSACTION__DATA_OUTPUT_ASSOCIATION = ACTIVITY__DATA_OUTPUT_ASSOCIATION;
+    int TRANSACTION__DATA_OUTPUT_ASSOCIATIONS = ACTIVITY__DATA_OUTPUT_ASSOCIATIONS;
 
     /**
-     * The feature id for the '<em><b>Activity Resource Group</b></em>' attribute list.
+     * The feature id for the '<em><b>Activity Resource Groups</b></em>' attribute list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int TRANSACTION__ACTIVITY_RESOURCE_GROUP = ACTIVITY__ACTIVITY_RESOURCE_GROUP;
+    int TRANSACTION__ACTIVITY_RESOURCE_GROUPS = ACTIVITY__ACTIVITY_RESOURCE_GROUPS;
 
     /**
-     * The feature id for the '<em><b>Activity Resource</b></em>' containment reference list.
+     * The feature id for the '<em><b>Activity Resources</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int TRANSACTION__ACTIVITY_RESOURCE = ACTIVITY__ACTIVITY_RESOURCE;
+    int TRANSACTION__ACTIVITY_RESOURCES = ACTIVITY__ACTIVITY_RESOURCES;
 
     /**
      * The feature id for the '<em><b>Loop Characteristics Group</b></em>' attribute list.
@@ -15433,7 +15440,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.impl.UserTaskImpl
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getUserTask()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getUserTask()
      * @generated
      */
     int USER_TASK = 133;
@@ -15538,49 +15545,49 @@ public interface bpmnPackage extends EPackage {
     int USER_TASK__IO_SPECIFICATION = TASK__IO_SPECIFICATION;
 
     /**
-     * The feature id for the '<em><b>Property</b></em>' containment reference list.
+     * The feature id for the '<em><b>Properties</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int USER_TASK__PROPERTY = TASK__PROPERTY;
+    int USER_TASK__PROPERTIES = TASK__PROPERTIES;
 
     /**
-     * The feature id for the '<em><b>Data Input Association</b></em>' containment reference list.
+     * The feature id for the '<em><b>Data Input Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int USER_TASK__DATA_INPUT_ASSOCIATION = TASK__DATA_INPUT_ASSOCIATION;
+    int USER_TASK__DATA_INPUT_ASSOCIATIONS = TASK__DATA_INPUT_ASSOCIATIONS;
 
     /**
-     * The feature id for the '<em><b>Data Output Association</b></em>' containment reference list.
+     * The feature id for the '<em><b>Data Output Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int USER_TASK__DATA_OUTPUT_ASSOCIATION = TASK__DATA_OUTPUT_ASSOCIATION;
+    int USER_TASK__DATA_OUTPUT_ASSOCIATIONS = TASK__DATA_OUTPUT_ASSOCIATIONS;
 
     /**
-     * The feature id for the '<em><b>Activity Resource Group</b></em>' attribute list.
+     * The feature id for the '<em><b>Activity Resource Groups</b></em>' attribute list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int USER_TASK__ACTIVITY_RESOURCE_GROUP = TASK__ACTIVITY_RESOURCE_GROUP;
+    int USER_TASK__ACTIVITY_RESOURCE_GROUPS = TASK__ACTIVITY_RESOURCE_GROUPS;
 
     /**
-     * The feature id for the '<em><b>Activity Resource</b></em>' containment reference list.
+     * The feature id for the '<em><b>Activity Resources</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int USER_TASK__ACTIVITY_RESOURCE = TASK__ACTIVITY_RESOURCE;
+    int USER_TASK__ACTIVITY_RESOURCES = TASK__ACTIVITY_RESOURCES;
 
     /**
      * The feature id for the '<em><b>Loop Characteristics Group</b></em>' attribute list.
@@ -15668,7 +15675,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.AdHocOrdering
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getAdHocOrdering()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getAdHocOrdering()
      * @generated
      */
     int AD_HOC_ORDERING = 134;
@@ -15678,7 +15685,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.AssociationDirection
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getAssociationDirection()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getAssociationDirection()
      * @generated
      */
     int ASSOCIATION_DIRECTION = 135;
@@ -15688,7 +15695,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.EventBasedGatewayType
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getEventBasedGatewayType()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getEventBasedGatewayType()
      * @generated
      */
     int EVENT_BASED_GATEWAY_TYPE = 136;
@@ -15698,7 +15705,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.GatewayDirection
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getGatewayDirection()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getGatewayDirection()
      * @generated
      */
     int GATEWAY_DIRECTION = 137;
@@ -15708,7 +15715,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.ItemKind
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getItemKind()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getItemKind()
      * @generated
      */
     int ITEM_KIND = 138;
@@ -15718,7 +15725,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.MultiInstanceFlowCondition
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getMultiInstanceFlowCondition()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getMultiInstanceFlowCondition()
      * @generated
      */
     int MULTI_INSTANCE_FLOW_CONDITION = 139;
@@ -15728,7 +15735,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.ProcessType
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getProcessType()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getProcessType()
      * @generated
      */
     int PROCESS_TYPE = 140;
@@ -15738,7 +15745,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.RelationshipDirection
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getRelationshipDirection()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getRelationshipDirection()
      * @generated
      */
     int RELATIONSHIP_DIRECTION = 141;
@@ -15748,7 +15755,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.ServiceImplementation
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getServiceImplementation()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getServiceImplementation()
      * @generated
      */
     int SERVICE_IMPLEMENTATION = 142;
@@ -15758,7 +15765,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.TransactionMethod
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getTransactionMethod()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getTransactionMethod()
      * @generated
      */
     int TRANSACTION_METHOD = 143;
@@ -15768,7 +15775,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.UserTaskImplementation
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getUserTaskImplementation()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getUserTaskImplementation()
      * @generated
      */
     int USER_TASK_IMPLEMENTATION = 144;
@@ -15778,7 +15785,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.AdHocOrdering
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getAdHocOrderingObject()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getAdHocOrderingObject()
      * @generated
      */
     int AD_HOC_ORDERING_OBJECT = 145;
@@ -15788,7 +15795,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.AssociationDirection
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getAssociationDirectionObject()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getAssociationDirectionObject()
      * @generated
      */
     int ASSOCIATION_DIRECTION_OBJECT = 146;
@@ -15798,7 +15805,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.EventBasedGatewayType
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getEventBasedGatewayTypeObject()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getEventBasedGatewayTypeObject()
      * @generated
      */
     int EVENT_BASED_GATEWAY_TYPE_OBJECT = 147;
@@ -15808,7 +15815,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.GatewayDirection
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getGatewayDirectionObject()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getGatewayDirectionObject()
      * @generated
      */
     int GATEWAY_DIRECTION_OBJECT = 148;
@@ -15818,7 +15825,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.ItemKind
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getItemKindObject()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getItemKindObject()
      * @generated
      */
     int ITEM_KIND_OBJECT = 149;
@@ -15828,7 +15835,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.MultiInstanceFlowCondition
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getMultiInstanceFlowConditionObject()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getMultiInstanceFlowConditionObject()
      * @generated
      */
     int MULTI_INSTANCE_FLOW_CONDITION_OBJECT = 150;
@@ -15838,7 +15845,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.ProcessType
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getProcessTypeObject()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getProcessTypeObject()
      * @generated
      */
     int PROCESS_TYPE_OBJECT = 151;
@@ -15848,7 +15855,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.RelationshipDirection
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getRelationshipDirectionObject()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getRelationshipDirectionObject()
      * @generated
      */
     int RELATIONSHIP_DIRECTION_OBJECT = 152;
@@ -15858,7 +15865,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.ServiceImplementation
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getServiceImplementationObject()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getServiceImplementationObject()
      * @generated
      */
     int SERVICE_IMPLEMENTATION_OBJECT = 153;
@@ -15868,7 +15875,7 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.TransactionMethod
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getTransactionMethodObject()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getTransactionMethodObject()
      * @generated
      */
     int TRANSACTION_METHOD_OBJECT = 154;
@@ -15878,11 +15885,10 @@ public interface bpmnPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.mdt.bpmn.UserTaskImplementation
-     * @see org.eclipse.mdt.bpmn.impl.bpmnPackageImpl#getUserTaskImplementationObject()
+     * @see org.eclipse.mdt.bpmn.impl.BpmnPackageImpl#getUserTaskImplementationObject()
      * @generated
      */
     int USER_TASK_IMPLEMENTATION_OBJECT = 155;
-
 
     /**
      * Returns the meta object for class '{@link org.eclipse.mdt.bpmn.DocumentRoot <em>Document Root</em>}'.
@@ -17412,59 +17418,59 @@ public interface bpmnPackage extends EPackage {
     EReference getActivity_IoSpecification();
 
     /**
-     * Returns the meta object for the containment reference list '{@link org.eclipse.mdt.bpmn.Activity#getProperty <em>Property</em>}'.
+     * Returns the meta object for the containment reference list '{@link org.eclipse.mdt.bpmn.Activity#getProperties <em>Properties</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the containment reference list '<em>Property</em>'.
-     * @see org.eclipse.mdt.bpmn.Activity#getProperty()
+     * @return the meta object for the containment reference list '<em>Properties</em>'.
+     * @see org.eclipse.mdt.bpmn.Activity#getProperties()
      * @see #getActivity()
      * @generated
      */
-    EReference getActivity_Property();
+    EReference getActivity_Properties();
 
     /**
-     * Returns the meta object for the containment reference list '{@link org.eclipse.mdt.bpmn.Activity#getDataInputAssociation <em>Data Input Association</em>}'.
+     * Returns the meta object for the containment reference list '{@link org.eclipse.mdt.bpmn.Activity#getDataInputAssociations <em>Data Input Associations</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the containment reference list '<em>Data Input Association</em>'.
-     * @see org.eclipse.mdt.bpmn.Activity#getDataInputAssociation()
+     * @return the meta object for the containment reference list '<em>Data Input Associations</em>'.
+     * @see org.eclipse.mdt.bpmn.Activity#getDataInputAssociations()
      * @see #getActivity()
      * @generated
      */
-    EReference getActivity_DataInputAssociation();
+    EReference getActivity_DataInputAssociations();
 
     /**
-     * Returns the meta object for the containment reference list '{@link org.eclipse.mdt.bpmn.Activity#getDataOutputAssociation <em>Data Output Association</em>}'.
+     * Returns the meta object for the containment reference list '{@link org.eclipse.mdt.bpmn.Activity#getDataOutputAssociations <em>Data Output Associations</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the containment reference list '<em>Data Output Association</em>'.
-     * @see org.eclipse.mdt.bpmn.Activity#getDataOutputAssociation()
+     * @return the meta object for the containment reference list '<em>Data Output Associations</em>'.
+     * @see org.eclipse.mdt.bpmn.Activity#getDataOutputAssociations()
      * @see #getActivity()
      * @generated
      */
-    EReference getActivity_DataOutputAssociation();
+    EReference getActivity_DataOutputAssociations();
 
     /**
-     * Returns the meta object for the attribute list '{@link org.eclipse.mdt.bpmn.Activity#getActivityResourceGroup <em>Activity Resource Group</em>}'.
+     * Returns the meta object for the attribute list '{@link org.eclipse.mdt.bpmn.Activity#getActivityResourceGroups <em>Activity Resource Groups</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the attribute list '<em>Activity Resource Group</em>'.
-     * @see org.eclipse.mdt.bpmn.Activity#getActivityResourceGroup()
+     * @return the meta object for the attribute list '<em>Activity Resource Groups</em>'.
+     * @see org.eclipse.mdt.bpmn.Activity#getActivityResourceGroups()
      * @see #getActivity()
      * @generated
      */
-    EAttribute getActivity_ActivityResourceGroup();
+    EAttribute getActivity_ActivityResourceGroups();
 
     /**
-     * Returns the meta object for the containment reference list '{@link org.eclipse.mdt.bpmn.Activity#getActivityResource <em>Activity Resource</em>}'.
+     * Returns the meta object for the containment reference list '{@link org.eclipse.mdt.bpmn.Activity#getActivityResources <em>Activity Resources</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the containment reference list '<em>Activity Resource</em>'.
-     * @see org.eclipse.mdt.bpmn.Activity#getActivityResource()
+     * @return the meta object for the containment reference list '<em>Activity Resources</em>'.
+     * @see org.eclipse.mdt.bpmn.Activity#getActivityResources()
      * @see #getActivity()
      * @generated
      */
-    EReference getActivity_ActivityResource();
+    EReference getActivity_ActivityResources();
 
     /**
      * Returns the meta object for the attribute list '{@link org.eclipse.mdt.bpmn.Activity#getLoopCharacteristicsGroup <em>Loop Characteristics Group</em>}'.
@@ -22139,15 +22145,15 @@ public interface bpmnPackage extends EPackage {
     EAttribute getSubProcess_FlowElementGroup();
 
     /**
-     * Returns the meta object for the containment reference list '{@link org.eclipse.mdt.bpmn.SubProcess#getFlowElement <em>Flow Element</em>}'.
+     * Returns the meta object for the containment reference list '{@link org.eclipse.mdt.bpmn.SubProcess#getFlowElements <em>Flow Elements</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the containment reference list '<em>Flow Element</em>'.
-     * @see org.eclipse.mdt.bpmn.SubProcess#getFlowElement()
+     * @return the meta object for the containment reference list '<em>Flow Elements</em>'.
+     * @see org.eclipse.mdt.bpmn.SubProcess#getFlowElements()
      * @see #getSubProcess()
      * @generated
      */
-    EReference getSubProcess_FlowElement();
+    EReference getSubProcess_FlowElements();
 
     /**
      * Returns the meta object for the attribute list '{@link org.eclipse.mdt.bpmn.SubProcess#getArtifactGroup <em>Artifact Group</em>}'.
@@ -22161,15 +22167,15 @@ public interface bpmnPackage extends EPackage {
     EAttribute getSubProcess_ArtifactGroup();
 
     /**
-     * Returns the meta object for the containment reference list '{@link org.eclipse.mdt.bpmn.SubProcess#getArtifact <em>Artifact</em>}'.
+     * Returns the meta object for the containment reference list '{@link org.eclipse.mdt.bpmn.SubProcess#getArtifacts <em>Artifacts</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the containment reference list '<em>Artifact</em>'.
-     * @see org.eclipse.mdt.bpmn.SubProcess#getArtifact()
+     * @return the meta object for the containment reference list '<em>Artifacts</em>'.
+     * @see org.eclipse.mdt.bpmn.SubProcess#getArtifacts()
      * @see #getSubProcess()
      * @generated
      */
-    EReference getSubProcess_Artifact();
+    EReference getSubProcess_Artifacts();
 
     /**
      * Returns the meta object for the attribute '{@link org.eclipse.mdt.bpmn.SubProcess#isTriggeredByEvent <em>Triggered By Event</em>}'.
@@ -22665,6 +22671,6 @@ public interface bpmnPackage extends EPackage {
      * @return the factory that creates the instances of the model.
      * @generated
      */
-    bpmnFactory getbpmnFactory();
+    BpmnFactory getBpmnFactory();
 
-} //bpmnPackage
+} //BpmnPackage

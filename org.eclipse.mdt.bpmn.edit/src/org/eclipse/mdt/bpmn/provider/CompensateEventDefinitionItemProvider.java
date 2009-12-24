@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -33,10 +32,10 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.CompensateEventDefinition;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.CompensateEventDefinition} object.
@@ -90,7 +89,7 @@ public class CompensateEventDefinitionItemProvider extends
                         getString("_UI_CompensateEventDefinition_activityRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_CompensateEventDefinition_activityRef_feature", "_UI_CompensateEventDefinition_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE
+                        BpmnPackage.eINSTANCE
                                 .getCompensateEventDefinition_ActivityRef(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
@@ -111,7 +110,7 @@ public class CompensateEventDefinitionItemProvider extends
                         getString("_UI_CompensateEventDefinition_waitForCompletion_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_CompensateEventDefinition_waitForCompletion_feature", "_UI_CompensateEventDefinition_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE
+                        BpmnPackage.eINSTANCE
                                 .getCompensateEventDefinition_WaitForCompletion(),
                         true, false, false,
                         ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
@@ -154,8 +153,8 @@ public class CompensateEventDefinitionItemProvider extends
         updateChildren(notification);
 
         switch (notification.getFeatureID(CompensateEventDefinition.class)) {
-        case bpmnPackage.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
-        case bpmnPackage.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
+        case BpmnPackage.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
+        case BpmnPackage.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
@@ -196,10 +195,10 @@ public class CompensateEventDefinitionItemProvider extends
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE;
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE;
 
         if (qualify) {
             return getString("_UI_CreateChild_text2", //$NON-NLS-1$

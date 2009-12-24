@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -33,11 +32,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnFactory;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.DataStoreReference;
-import org.eclipse.mdt.bpmn.bpmnFactory;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.DataStoreReference} object.
@@ -90,7 +89,7 @@ public class DataStoreReferenceItemProvider extends FlowElementItemProvider
                         getString("_UI_DataStoreReference_dataStoreRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_DataStoreReference_dataStoreRef_feature", "_UI_DataStoreReference_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE
+                        BpmnPackage.eINSTANCE
                                 .getDataStoreReference_DataStoreRef(), true,
                         false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
@@ -111,7 +110,7 @@ public class DataStoreReferenceItemProvider extends FlowElementItemProvider
                         getString("_UI_DataStoreReference_itemSubjectRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_DataStoreReference_itemSubjectRef_feature", "_UI_DataStoreReference_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE
+                        BpmnPackage.eINSTANCE
                                 .getDataStoreReference_ItemSubjectRef(), true,
                         false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
@@ -130,7 +129,7 @@ public class DataStoreReferenceItemProvider extends FlowElementItemProvider
             Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getDataStoreReference_DataState());
         }
         return childrenFeatures;
@@ -186,12 +185,12 @@ public class DataStoreReferenceItemProvider extends FlowElementItemProvider
         updateChildren(notification);
 
         switch (notification.getFeatureID(DataStoreReference.class)) {
-        case bpmnPackage.DATA_STORE_REFERENCE__DATA_STORE_REF:
-        case bpmnPackage.DATA_STORE_REFERENCE__ITEM_SUBJECT_REF:
+        case BpmnPackage.DATA_STORE_REFERENCE__DATA_STORE_REF:
+        case BpmnPackage.DATA_STORE_REFERENCE__ITEM_SUBJECT_REF:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
-        case bpmnPackage.DATA_STORE_REFERENCE__DATA_STATE:
+        case BpmnPackage.DATA_STORE_REFERENCE__DATA_STATE:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -211,8 +210,8 @@ public class DataStoreReferenceItemProvider extends FlowElementItemProvider
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getDataStoreReference_DataState(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getDataStoreReference_DataState(), BpmnFactory.eINSTANCE
                 .createDataState()));
     }
 
@@ -236,10 +235,10 @@ public class DataStoreReferenceItemProvider extends FlowElementItemProvider
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE;
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE;
 
         if (qualify) {
             return getString("_UI_CreateChild_text2", //$NON-NLS-1$

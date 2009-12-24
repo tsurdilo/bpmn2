@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -20,8 +19,8 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Group;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -73,7 +72,7 @@ public class GroupImpl extends ArtifactImpl implements Group {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getGroup();
+        return BpmnPackage.eINSTANCE.getGroup();
     }
 
     /**
@@ -94,7 +93,9 @@ public class GroupImpl extends ArtifactImpl implements Group {
         QName oldCategoryRef = categoryRef;
         categoryRef = newCategoryRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.GROUP__CATEGORY_REF, oldCategoryRef, categoryRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.GROUP__CATEGORY_REF, oldCategoryRef,
+                    categoryRef));
     }
 
     /**
@@ -105,8 +106,8 @@ public class GroupImpl extends ArtifactImpl implements Group {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.GROUP__CATEGORY_REF:
-                return getCategoryRef();
+        case BpmnPackage.GROUP__CATEGORY_REF:
+            return getCategoryRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -119,9 +120,9 @@ public class GroupImpl extends ArtifactImpl implements Group {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.GROUP__CATEGORY_REF:
-                setCategoryRef((QName)newValue);
-                return;
+        case BpmnPackage.GROUP__CATEGORY_REF:
+            setCategoryRef((QName) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -134,9 +135,9 @@ public class GroupImpl extends ArtifactImpl implements Group {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.GROUP__CATEGORY_REF:
-                setCategoryRef(CATEGORY_REF_EDEFAULT);
-                return;
+        case BpmnPackage.GROUP__CATEGORY_REF:
+            setCategoryRef(CATEGORY_REF_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -149,8 +150,9 @@ public class GroupImpl extends ArtifactImpl implements Group {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.GROUP__CATEGORY_REF:
-                return CATEGORY_REF_EDEFAULT == null ? categoryRef != null : !CATEGORY_REF_EDEFAULT.equals(categoryRef);
+        case BpmnPackage.GROUP__CATEGORY_REF:
+            return CATEGORY_REF_EDEFAULT == null ? categoryRef != null
+                    : !CATEGORY_REF_EDEFAULT.equals(categoryRef);
         }
         return super.eIsSet(featureID);
     }
@@ -162,7 +164,8 @@ public class GroupImpl extends ArtifactImpl implements Group {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (categoryRef: "); //$NON-NLS-1$

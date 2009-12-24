@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -23,7 +22,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Relationship Direction</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getRelationshipDirection()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getRelationshipDirection()
  * @model extendedMetaData="name='tRelationshipDirection'"
  * @generated
  */
@@ -134,13 +133,8 @@ public enum RelationshipDirection implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    private static final RelationshipDirection[] VALUES_ARRAY =
-        new RelationshipDirection[] {
-            NONE,
-            FORWARD,
-            BACKWARD,
-            BOTH,
-        };
+    private static final RelationshipDirection[] VALUES_ARRAY = new RelationshipDirection[] {
+            NONE, FORWARD, BACKWARD, BOTH, };
 
     /**
      * A public read-only list of all the '<em><b>Relationship Direction</b></em>' enumerators.
@@ -148,7 +142,8 @@ public enum RelationshipDirection implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final List<RelationshipDirection> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+    public static final List<RelationshipDirection> VALUES = Collections
+            .unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
     /**
      * Returns the '<em><b>Relationship Direction</b></em>' literal with the specified literal value.
@@ -190,10 +185,14 @@ public enum RelationshipDirection implements Enumerator {
      */
     public static RelationshipDirection get(int value) {
         switch (value) {
-            case NONE_VALUE: return NONE;
-            case FORWARD_VALUE: return FORWARD;
-            case BACKWARD_VALUE: return BACKWARD;
-            case BOTH_VALUE: return BOTH;
+        case NONE_VALUE:
+            return NONE;
+        case FORWARD_VALUE:
+            return FORWARD;
+        case BACKWARD_VALUE:
+            return BACKWARD;
+        case BOTH_VALUE:
+            return BOTH;
         }
         return null;
     }
@@ -237,7 +236,7 @@ public enum RelationshipDirection implements Enumerator {
      * @generated
      */
     public int getValue() {
-      return value;
+        return value;
     }
 
     /**
@@ -246,7 +245,7 @@ public enum RelationshipDirection implements Enumerator {
      * @generated
      */
     public String getName() {
-      return name;
+        return name;
     }
 
     /**
@@ -255,7 +254,7 @@ public enum RelationshipDirection implements Enumerator {
      * @generated
      */
     public String getLiteral() {
-      return literal;
+        return literal;
     }
 
     /**
@@ -268,5 +267,5 @@ public enum RelationshipDirection implements Enumerator {
     public String toString() {
         return literal;
     }
-    
+
 } //RelationshipDirection

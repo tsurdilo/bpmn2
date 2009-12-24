@@ -8,10 +8,8 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +24,7 @@ package org.eclipse.mdt.bpmn;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getComplexBehaviorDefinition()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getComplexBehaviorDefinition()
  * @model extendedMetaData="name='tComplexBehaviorDefinition' kind='elementOnly'"
  * @generated
  */
@@ -41,7 +39,7 @@ public interface ComplexBehaviorDefinition extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Condition</em>' containment reference.
      * @see #setCondition(FormalExpression)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getComplexBehaviorDefinition_Condition()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getComplexBehaviorDefinition_Condition()
      * @model containment="true" required="true"
      *        extendedMetaData="kind='element' name='condition' namespace='##targetNamespace'"
      * @generated
@@ -68,7 +66,7 @@ public interface ComplexBehaviorDefinition extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Event</em>' containment reference.
      * @see #setEvent(ImplicitThrowEvent)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getComplexBehaviorDefinition_Event()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getComplexBehaviorDefinition_Event()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='event' namespace='##targetNamespace'"
      * @generated

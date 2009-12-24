@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -26,8 +25,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Operation;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -132,7 +131,7 @@ public class OperationImpl extends BaseElementImpl implements Operation {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getOperation();
+        return BpmnPackage.eINSTANCE.getOperation();
     }
 
     /**
@@ -153,7 +152,9 @@ public class OperationImpl extends BaseElementImpl implements Operation {
         QName oldInMessageRef = inMessageRef;
         inMessageRef = newInMessageRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.OPERATION__IN_MESSAGE_REF, oldInMessageRef, inMessageRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.OPERATION__IN_MESSAGE_REF, oldInMessageRef,
+                    inMessageRef));
     }
 
     /**
@@ -174,7 +175,9 @@ public class OperationImpl extends BaseElementImpl implements Operation {
         QName oldOutMessageRef = outMessageRef;
         outMessageRef = newOutMessageRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.OPERATION__OUT_MESSAGE_REF, oldOutMessageRef, outMessageRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.OPERATION__OUT_MESSAGE_REF, oldOutMessageRef,
+                    outMessageRef));
     }
 
     /**
@@ -184,7 +187,8 @@ public class OperationImpl extends BaseElementImpl implements Operation {
      */
     public EList<QName> getErrorRef() {
         if (errorRef == null) {
-            errorRef = new EDataTypeEList<QName>(QName.class, this, bpmnPackage.OPERATION__ERROR_REF);
+            errorRef = new EDataTypeEList<QName>(QName.class, this,
+                    BpmnPackage.OPERATION__ERROR_REF);
         }
         return errorRef;
     }
@@ -207,7 +211,8 @@ public class OperationImpl extends BaseElementImpl implements Operation {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.OPERATION__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.OPERATION__NAME, oldName, name));
     }
 
     /**
@@ -218,14 +223,14 @@ public class OperationImpl extends BaseElementImpl implements Operation {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.OPERATION__IN_MESSAGE_REF:
-                return getInMessageRef();
-            case bpmnPackage.OPERATION__OUT_MESSAGE_REF:
-                return getOutMessageRef();
-            case bpmnPackage.OPERATION__ERROR_REF:
-                return getErrorRef();
-            case bpmnPackage.OPERATION__NAME:
-                return getName();
+        case BpmnPackage.OPERATION__IN_MESSAGE_REF:
+            return getInMessageRef();
+        case BpmnPackage.OPERATION__OUT_MESSAGE_REF:
+            return getOutMessageRef();
+        case BpmnPackage.OPERATION__ERROR_REF:
+            return getErrorRef();
+        case BpmnPackage.OPERATION__NAME:
+            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -239,19 +244,19 @@ public class OperationImpl extends BaseElementImpl implements Operation {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.OPERATION__IN_MESSAGE_REF:
-                setInMessageRef((QName)newValue);
-                return;
-            case bpmnPackage.OPERATION__OUT_MESSAGE_REF:
-                setOutMessageRef((QName)newValue);
-                return;
-            case bpmnPackage.OPERATION__ERROR_REF:
-                getErrorRef().clear();
-                getErrorRef().addAll((Collection<? extends QName>)newValue);
-                return;
-            case bpmnPackage.OPERATION__NAME:
-                setName((String)newValue);
-                return;
+        case BpmnPackage.OPERATION__IN_MESSAGE_REF:
+            setInMessageRef((QName) newValue);
+            return;
+        case BpmnPackage.OPERATION__OUT_MESSAGE_REF:
+            setOutMessageRef((QName) newValue);
+            return;
+        case BpmnPackage.OPERATION__ERROR_REF:
+            getErrorRef().clear();
+            getErrorRef().addAll((Collection<? extends QName>) newValue);
+            return;
+        case BpmnPackage.OPERATION__NAME:
+            setName((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -264,18 +269,18 @@ public class OperationImpl extends BaseElementImpl implements Operation {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.OPERATION__IN_MESSAGE_REF:
-                setInMessageRef(IN_MESSAGE_REF_EDEFAULT);
-                return;
-            case bpmnPackage.OPERATION__OUT_MESSAGE_REF:
-                setOutMessageRef(OUT_MESSAGE_REF_EDEFAULT);
-                return;
-            case bpmnPackage.OPERATION__ERROR_REF:
-                getErrorRef().clear();
-                return;
-            case bpmnPackage.OPERATION__NAME:
-                setName(NAME_EDEFAULT);
-                return;
+        case BpmnPackage.OPERATION__IN_MESSAGE_REF:
+            setInMessageRef(IN_MESSAGE_REF_EDEFAULT);
+            return;
+        case BpmnPackage.OPERATION__OUT_MESSAGE_REF:
+            setOutMessageRef(OUT_MESSAGE_REF_EDEFAULT);
+            return;
+        case BpmnPackage.OPERATION__ERROR_REF:
+            getErrorRef().clear();
+            return;
+        case BpmnPackage.OPERATION__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -288,14 +293,17 @@ public class OperationImpl extends BaseElementImpl implements Operation {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.OPERATION__IN_MESSAGE_REF:
-                return IN_MESSAGE_REF_EDEFAULT == null ? inMessageRef != null : !IN_MESSAGE_REF_EDEFAULT.equals(inMessageRef);
-            case bpmnPackage.OPERATION__OUT_MESSAGE_REF:
-                return OUT_MESSAGE_REF_EDEFAULT == null ? outMessageRef != null : !OUT_MESSAGE_REF_EDEFAULT.equals(outMessageRef);
-            case bpmnPackage.OPERATION__ERROR_REF:
-                return errorRef != null && !errorRef.isEmpty();
-            case bpmnPackage.OPERATION__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case BpmnPackage.OPERATION__IN_MESSAGE_REF:
+            return IN_MESSAGE_REF_EDEFAULT == null ? inMessageRef != null
+                    : !IN_MESSAGE_REF_EDEFAULT.equals(inMessageRef);
+        case BpmnPackage.OPERATION__OUT_MESSAGE_REF:
+            return OUT_MESSAGE_REF_EDEFAULT == null ? outMessageRef != null
+                    : !OUT_MESSAGE_REF_EDEFAULT.equals(outMessageRef);
+        case BpmnPackage.OPERATION__ERROR_REF:
+            return errorRef != null && !errorRef.isEmpty();
+        case BpmnPackage.OPERATION__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
+                    .equals(name);
         }
         return super.eIsSet(featureID);
     }
@@ -307,7 +315,8 @@ public class OperationImpl extends BaseElementImpl implements Operation {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (inMessageRef: "); //$NON-NLS-1$

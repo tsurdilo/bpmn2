@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -27,7 +26,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getInterface()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getInterface()
  * @model extendedMetaData="name='tInterface' kind='elementOnly'"
  * @generated
  */
@@ -42,7 +41,7 @@ public interface Interface extends RootElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Operation</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getInterface_Operation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getInterface_Operation()
      * @model containment="true" required="true"
      *        extendedMetaData="kind='element' name='operation' namespace='##targetNamespace'"
      * @generated
@@ -59,7 +58,7 @@ public interface Interface extends RootElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getInterface_Name()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getInterface_Name()
      * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
      *        extendedMetaData="kind='attribute' name='name'"
      * @generated

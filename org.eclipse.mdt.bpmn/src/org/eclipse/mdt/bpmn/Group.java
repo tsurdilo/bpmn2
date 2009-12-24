@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -26,7 +25,7 @@ import javax.xml.namespace.QName;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getGroup()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getGroup()
  * @model extendedMetaData="name='tGroup' kind='elementOnly'"
  * @generated
  */
@@ -41,7 +40,7 @@ public interface Group extends Artifact {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Category Ref</em>' attribute.
      * @see #setCategoryRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getGroup_CategoryRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getGroup_CategoryRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='categoryRef'"
      * @generated

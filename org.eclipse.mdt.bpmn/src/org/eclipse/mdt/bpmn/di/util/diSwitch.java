@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di.util;
 
@@ -29,17 +28,17 @@ import org.eclipse.mdt.bpmn.di.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.mdt.bpmn.di.diPackage
+ * @see org.eclipse.mdt.bpmn.di.DIPackage
  * @generated
  */
-public class diSwitch<T> {
+public class DISwitch<T> {
     /**
      * The cached model package
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected static diPackage modelPackage;
+    protected static DIPackage modelPackage;
 
     /**
      * Creates an instance of the switch.
@@ -47,9 +46,9 @@ public class diSwitch<T> {
      * <!-- end-user-doc -->
      * @generated
      */
-    public diSwitch() {
+    public DISwitch() {
         if (modelPackage == null) {
-            modelPackage = diPackage.eINSTANCE;
+            modelPackage = DIPackage.eINSTANCE;
         }
     }
 
@@ -74,13 +73,10 @@ public class diSwitch<T> {
     protected T doSwitch(EClass theEClass, EObject theEObject) {
         if (theEClass.eContainer() == modelPackage) {
             return doSwitch(theEClass.getClassifierID(), theEObject);
-        }
-        else {
+        } else {
             List<EClass> eSuperTypes = theEClass.getESuperTypes();
-            return
-                eSuperTypes.isEmpty() ?
-                    defaultCase(theEObject) :
-                    doSwitch(eSuperTypes.get(0), theEObject);
+            return eSuperTypes.isEmpty() ? defaultCase(theEObject) : doSwitch(
+                    eSuperTypes.get(0), theEObject);
         }
     }
 
@@ -93,52 +89,63 @@ public class diSwitch<T> {
      */
     protected T doSwitch(int classifierID, EObject theEObject) {
         switch (classifierID) {
-            case diPackage.BENDPOINT: {
-                Bendpoint bendpoint = (Bendpoint)theEObject;
-                T result = caseBendpoint(bendpoint);
-                if (result == null) result = defaultCase(theEObject);
-                return result;
-            }
-            case diPackage.CONNECTOR: {
-                Connector connector = (Connector)theEObject;
-                T result = caseConnector(connector);
-                if (result == null) result = caseView(connector);
-                if (result == null) result = defaultCase(theEObject);
-                return result;
-            }
-            case diPackage.DIAGRAM: {
-                Diagram diagram = (Diagram)theEObject;
-                T result = caseDiagram(diagram);
-                if (result == null) result = caseView(diagram);
-                if (result == null) result = defaultCase(theEObject);
-                return result;
-            }
-            case diPackage.DOCUMENT_ROOT: {
-                DocumentRoot documentRoot = (DocumentRoot)theEObject;
-                T result = caseDocumentRoot(documentRoot);
-                if (result == null) result = defaultCase(theEObject);
-                return result;
-            }
-            case diPackage.NODE: {
-                Node node = (Node)theEObject;
-                T result = caseNode(node);
-                if (result == null) result = caseView(node);
-                if (result == null) result = defaultCase(theEObject);
-                return result;
-            }
-            case diPackage.STYLE: {
-                Style style = (Style)theEObject;
-                T result = caseStyle(style);
-                if (result == null) result = defaultCase(theEObject);
-                return result;
-            }
-            case diPackage.VIEW: {
-                View view = (View)theEObject;
-                T result = caseView(view);
-                if (result == null) result = defaultCase(theEObject);
-                return result;
-            }
-            default: return defaultCase(theEObject);
+        case DIPackage.BENDPOINT: {
+            Bendpoint bendpoint = (Bendpoint) theEObject;
+            T result = caseBendpoint(bendpoint);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case DIPackage.CONNECTOR: {
+            Connector connector = (Connector) theEObject;
+            T result = caseConnector(connector);
+            if (result == null)
+                result = caseView(connector);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case DIPackage.DIAGRAM: {
+            Diagram diagram = (Diagram) theEObject;
+            T result = caseDiagram(diagram);
+            if (result == null)
+                result = caseView(diagram);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case DIPackage.DOCUMENT_ROOT: {
+            DocumentRoot documentRoot = (DocumentRoot) theEObject;
+            T result = caseDocumentRoot(documentRoot);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case DIPackage.NODE: {
+            Node node = (Node) theEObject;
+            T result = caseNode(node);
+            if (result == null)
+                result = caseView(node);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case DIPackage.STYLE: {
+            Style style = (Style) theEObject;
+            T result = caseStyle(style);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case DIPackage.VIEW: {
+            View view = (View) theEObject;
+            T result = caseView(view);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        default:
+            return defaultCase(theEObject);
         }
     }
 
@@ -262,4 +269,4 @@ public class diSwitch<T> {
         return null;
     }
 
-} //diSwitch
+} //DISwitch

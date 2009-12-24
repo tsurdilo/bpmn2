@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -29,7 +28,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getConversationNode()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getConversationNode()
  * @model abstract="true"
  *        extendedMetaData="name='tConversationNode' kind='elementOnly'"
  * @generated
@@ -45,7 +44,7 @@ public interface ConversationNode extends BaseElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Participant Ref</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getConversationNode_ParticipantRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getConversationNode_ParticipantRef()
      * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='element' name='participantRef' namespace='##targetNamespace'"
      * @generated
@@ -62,7 +61,7 @@ public interface ConversationNode extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getConversationNode_Name()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getConversationNode_Name()
      * @model dataType="org.eclipse.emf.ecore.xml.type.String"
      *        extendedMetaData="kind='attribute' name='name'"
      * @generated

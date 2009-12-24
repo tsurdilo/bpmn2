@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -27,7 +26,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getGlobalUserTask()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getGlobalUserTask()
  * @model extendedMetaData="name='tGlobalUserTask' kind='elementOnly'"
  * @generated
  */
@@ -42,7 +41,7 @@ public interface GlobalUserTask extends GlobalTask {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Rendering</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getGlobalUserTask_Rendering()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getGlobalUserTask_Rendering()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='rendering' namespace='##targetNamespace'"
      * @generated
@@ -64,7 +63,7 @@ public interface GlobalUserTask extends GlobalTask {
      * @see #isSetImplementation()
      * @see #unsetImplementation()
      * @see #setImplementation(UserTaskImplementation)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getGlobalUserTask_Implementation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getGlobalUserTask_Implementation()
      * @model default="unspecified" unsettable="true"
      *        extendedMetaData="kind='attribute' name='implementation'"
      * @generated

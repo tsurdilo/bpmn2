@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -20,8 +19,8 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.MessageFlowAssociation;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,7 +36,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class MessageFlowAssociationImpl extends BaseElementImpl implements MessageFlowAssociation {
+public class MessageFlowAssociationImpl extends BaseElementImpl implements
+        MessageFlowAssociation {
     /**
      * The default value of the '{@link #getInnerMessageFlowRef() <em>Inner Message Flow Ref</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -94,7 +94,7 @@ public class MessageFlowAssociationImpl extends BaseElementImpl implements Messa
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getMessageFlowAssociation();
+        return BpmnPackage.eINSTANCE.getMessageFlowAssociation();
     }
 
     /**
@@ -115,7 +115,11 @@ public class MessageFlowAssociationImpl extends BaseElementImpl implements Messa
         QName oldInnerMessageFlowRef = innerMessageFlowRef;
         innerMessageFlowRef = newInnerMessageFlowRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF, oldInnerMessageFlowRef, innerMessageFlowRef));
+            eNotify(new ENotificationImpl(
+                    this,
+                    Notification.SET,
+                    BpmnPackage.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF,
+                    oldInnerMessageFlowRef, innerMessageFlowRef));
     }
 
     /**
@@ -136,7 +140,11 @@ public class MessageFlowAssociationImpl extends BaseElementImpl implements Messa
         QName oldOuterMessageFlowRef = outerMessageFlowRef;
         outerMessageFlowRef = newOuterMessageFlowRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF, oldOuterMessageFlowRef, outerMessageFlowRef));
+            eNotify(new ENotificationImpl(
+                    this,
+                    Notification.SET,
+                    BpmnPackage.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF,
+                    oldOuterMessageFlowRef, outerMessageFlowRef));
     }
 
     /**
@@ -147,10 +155,10 @@ public class MessageFlowAssociationImpl extends BaseElementImpl implements Messa
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF:
-                return getInnerMessageFlowRef();
-            case bpmnPackage.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF:
-                return getOuterMessageFlowRef();
+        case BpmnPackage.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF:
+            return getInnerMessageFlowRef();
+        case BpmnPackage.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF:
+            return getOuterMessageFlowRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -163,12 +171,12 @@ public class MessageFlowAssociationImpl extends BaseElementImpl implements Messa
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF:
-                setInnerMessageFlowRef((QName)newValue);
-                return;
-            case bpmnPackage.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF:
-                setOuterMessageFlowRef((QName)newValue);
-                return;
+        case BpmnPackage.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF:
+            setInnerMessageFlowRef((QName) newValue);
+            return;
+        case BpmnPackage.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF:
+            setOuterMessageFlowRef((QName) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -181,12 +189,12 @@ public class MessageFlowAssociationImpl extends BaseElementImpl implements Messa
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF:
-                setInnerMessageFlowRef(INNER_MESSAGE_FLOW_REF_EDEFAULT);
-                return;
-            case bpmnPackage.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF:
-                setOuterMessageFlowRef(OUTER_MESSAGE_FLOW_REF_EDEFAULT);
-                return;
+        case BpmnPackage.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF:
+            setInnerMessageFlowRef(INNER_MESSAGE_FLOW_REF_EDEFAULT);
+            return;
+        case BpmnPackage.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF:
+            setOuterMessageFlowRef(OUTER_MESSAGE_FLOW_REF_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -199,10 +207,14 @@ public class MessageFlowAssociationImpl extends BaseElementImpl implements Messa
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF:
-                return INNER_MESSAGE_FLOW_REF_EDEFAULT == null ? innerMessageFlowRef != null : !INNER_MESSAGE_FLOW_REF_EDEFAULT.equals(innerMessageFlowRef);
-            case bpmnPackage.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF:
-                return OUTER_MESSAGE_FLOW_REF_EDEFAULT == null ? outerMessageFlowRef != null : !OUTER_MESSAGE_FLOW_REF_EDEFAULT.equals(outerMessageFlowRef);
+        case BpmnPackage.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF:
+            return INNER_MESSAGE_FLOW_REF_EDEFAULT == null ? innerMessageFlowRef != null
+                    : !INNER_MESSAGE_FLOW_REF_EDEFAULT
+                            .equals(innerMessageFlowRef);
+        case BpmnPackage.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF:
+            return OUTER_MESSAGE_FLOW_REF_EDEFAULT == null ? outerMessageFlowRef != null
+                    : !OUTER_MESSAGE_FLOW_REF_EDEFAULT
+                            .equals(outerMessageFlowRef);
         }
         return super.eIsSet(featureID);
     }
@@ -214,7 +226,8 @@ public class MessageFlowAssociationImpl extends BaseElementImpl implements Messa
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (innerMessageFlowRef: "); //$NON-NLS-1$

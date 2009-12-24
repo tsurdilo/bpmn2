@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -20,8 +19,8 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.SignalEventDefinition;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,7 +35,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class SignalEventDefinitionImpl extends EventDefinitionImpl implements SignalEventDefinition {
+public class SignalEventDefinitionImpl extends EventDefinitionImpl implements
+        SignalEventDefinition {
     /**
      * The default value of the '{@link #getSignalRef() <em>Signal Ref</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -73,7 +73,7 @@ public class SignalEventDefinitionImpl extends EventDefinitionImpl implements Si
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getSignalEventDefinition();
+        return BpmnPackage.eINSTANCE.getSignalEventDefinition();
     }
 
     /**
@@ -94,7 +94,9 @@ public class SignalEventDefinitionImpl extends EventDefinitionImpl implements Si
         QName oldSignalRef = signalRef;
         signalRef = newSignalRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.SIGNAL_EVENT_DEFINITION__SIGNAL_REF, oldSignalRef, signalRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.SIGNAL_EVENT_DEFINITION__SIGNAL_REF,
+                    oldSignalRef, signalRef));
     }
 
     /**
@@ -105,8 +107,8 @@ public class SignalEventDefinitionImpl extends EventDefinitionImpl implements Si
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.SIGNAL_EVENT_DEFINITION__SIGNAL_REF:
-                return getSignalRef();
+        case BpmnPackage.SIGNAL_EVENT_DEFINITION__SIGNAL_REF:
+            return getSignalRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -119,9 +121,9 @@ public class SignalEventDefinitionImpl extends EventDefinitionImpl implements Si
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.SIGNAL_EVENT_DEFINITION__SIGNAL_REF:
-                setSignalRef((QName)newValue);
-                return;
+        case BpmnPackage.SIGNAL_EVENT_DEFINITION__SIGNAL_REF:
+            setSignalRef((QName) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -134,9 +136,9 @@ public class SignalEventDefinitionImpl extends EventDefinitionImpl implements Si
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.SIGNAL_EVENT_DEFINITION__SIGNAL_REF:
-                setSignalRef(SIGNAL_REF_EDEFAULT);
-                return;
+        case BpmnPackage.SIGNAL_EVENT_DEFINITION__SIGNAL_REF:
+            setSignalRef(SIGNAL_REF_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -149,8 +151,9 @@ public class SignalEventDefinitionImpl extends EventDefinitionImpl implements Si
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.SIGNAL_EVENT_DEFINITION__SIGNAL_REF:
-                return SIGNAL_REF_EDEFAULT == null ? signalRef != null : !SIGNAL_REF_EDEFAULT.equals(signalRef);
+        case BpmnPackage.SIGNAL_EVENT_DEFINITION__SIGNAL_REF:
+            return SIGNAL_REF_EDEFAULT == null ? signalRef != null
+                    : !SIGNAL_REF_EDEFAULT.equals(signalRef);
         }
         return super.eIsSet(featureID);
     }
@@ -162,7 +165,8 @@ public class SignalEventDefinitionImpl extends EventDefinitionImpl implements Si
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (signalRef: "); //$NON-NLS-1$

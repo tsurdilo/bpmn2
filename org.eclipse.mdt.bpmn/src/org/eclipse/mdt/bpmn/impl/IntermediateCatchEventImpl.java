@@ -8,14 +8,13 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.IntermediateCatchEvent;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +25,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class IntermediateCatchEventImpl extends CatchEventImpl implements IntermediateCatchEvent {
+public class IntermediateCatchEventImpl extends CatchEventImpl implements
+        IntermediateCatchEvent {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -43,7 +43,7 @@ public class IntermediateCatchEventImpl extends CatchEventImpl implements Interm
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getIntermediateCatchEvent();
+        return BpmnPackage.eINSTANCE.getIntermediateCatchEvent();
     }
 
 } //IntermediateCatchEventImpl

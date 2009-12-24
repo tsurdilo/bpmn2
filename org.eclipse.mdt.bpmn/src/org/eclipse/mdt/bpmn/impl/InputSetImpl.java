@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -24,8 +23,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.InputSet;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -121,7 +120,7 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getInputSet();
+        return BpmnPackage.eINSTANCE.getInputSet();
     }
 
     /**
@@ -131,7 +130,8 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
      */
     public EList<String> getDataInputRefs() {
         if (dataInputRefs == null) {
-            dataInputRefs = new EDataTypeEList<String>(String.class, this, bpmnPackage.INPUT_SET__DATA_INPUT_REFS);
+            dataInputRefs = new EDataTypeEList<String>(String.class, this,
+                    BpmnPackage.INPUT_SET__DATA_INPUT_REFS);
         }
         return dataInputRefs;
     }
@@ -143,7 +143,8 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
      */
     public EList<String> getOptionalInputRefs() {
         if (optionalInputRefs == null) {
-            optionalInputRefs = new EDataTypeEList<String>(String.class, this, bpmnPackage.INPUT_SET__OPTIONAL_INPUT_REFS);
+            optionalInputRefs = new EDataTypeEList<String>(String.class, this,
+                    BpmnPackage.INPUT_SET__OPTIONAL_INPUT_REFS);
         }
         return optionalInputRefs;
     }
@@ -155,7 +156,8 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
      */
     public EList<String> getWhileExecutingInputRefs() {
         if (whileExecutingInputRefs == null) {
-            whileExecutingInputRefs = new EDataTypeEList<String>(String.class, this, bpmnPackage.INPUT_SET__WHILE_EXECUTING_INPUT_REFS);
+            whileExecutingInputRefs = new EDataTypeEList<String>(String.class,
+                    this, BpmnPackage.INPUT_SET__WHILE_EXECUTING_INPUT_REFS);
         }
         return whileExecutingInputRefs;
     }
@@ -167,7 +169,8 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
      */
     public EList<String> getOutputSetRefs() {
         if (outputSetRefs == null) {
-            outputSetRefs = new EDataTypeEList<String>(String.class, this, bpmnPackage.INPUT_SET__OUTPUT_SET_REFS);
+            outputSetRefs = new EDataTypeEList<String>(String.class, this,
+                    BpmnPackage.INPUT_SET__OUTPUT_SET_REFS);
         }
         return outputSetRefs;
     }
@@ -190,7 +193,8 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.INPUT_SET__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.INPUT_SET__NAME, oldName, name));
     }
 
     /**
@@ -201,16 +205,16 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.INPUT_SET__DATA_INPUT_REFS:
-                return getDataInputRefs();
-            case bpmnPackage.INPUT_SET__OPTIONAL_INPUT_REFS:
-                return getOptionalInputRefs();
-            case bpmnPackage.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
-                return getWhileExecutingInputRefs();
-            case bpmnPackage.INPUT_SET__OUTPUT_SET_REFS:
-                return getOutputSetRefs();
-            case bpmnPackage.INPUT_SET__NAME:
-                return getName();
+        case BpmnPackage.INPUT_SET__DATA_INPUT_REFS:
+            return getDataInputRefs();
+        case BpmnPackage.INPUT_SET__OPTIONAL_INPUT_REFS:
+            return getOptionalInputRefs();
+        case BpmnPackage.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
+            return getWhileExecutingInputRefs();
+        case BpmnPackage.INPUT_SET__OUTPUT_SET_REFS:
+            return getOutputSetRefs();
+        case BpmnPackage.INPUT_SET__NAME:
+            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -224,25 +228,27 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.INPUT_SET__DATA_INPUT_REFS:
-                getDataInputRefs().clear();
-                getDataInputRefs().addAll((Collection<? extends String>)newValue);
-                return;
-            case bpmnPackage.INPUT_SET__OPTIONAL_INPUT_REFS:
-                getOptionalInputRefs().clear();
-                getOptionalInputRefs().addAll((Collection<? extends String>)newValue);
-                return;
-            case bpmnPackage.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
-                getWhileExecutingInputRefs().clear();
-                getWhileExecutingInputRefs().addAll((Collection<? extends String>)newValue);
-                return;
-            case bpmnPackage.INPUT_SET__OUTPUT_SET_REFS:
-                getOutputSetRefs().clear();
-                getOutputSetRefs().addAll((Collection<? extends String>)newValue);
-                return;
-            case bpmnPackage.INPUT_SET__NAME:
-                setName((String)newValue);
-                return;
+        case BpmnPackage.INPUT_SET__DATA_INPUT_REFS:
+            getDataInputRefs().clear();
+            getDataInputRefs().addAll((Collection<? extends String>) newValue);
+            return;
+        case BpmnPackage.INPUT_SET__OPTIONAL_INPUT_REFS:
+            getOptionalInputRefs().clear();
+            getOptionalInputRefs().addAll(
+                    (Collection<? extends String>) newValue);
+            return;
+        case BpmnPackage.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
+            getWhileExecutingInputRefs().clear();
+            getWhileExecutingInputRefs().addAll(
+                    (Collection<? extends String>) newValue);
+            return;
+        case BpmnPackage.INPUT_SET__OUTPUT_SET_REFS:
+            getOutputSetRefs().clear();
+            getOutputSetRefs().addAll((Collection<? extends String>) newValue);
+            return;
+        case BpmnPackage.INPUT_SET__NAME:
+            setName((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -255,21 +261,21 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.INPUT_SET__DATA_INPUT_REFS:
-                getDataInputRefs().clear();
-                return;
-            case bpmnPackage.INPUT_SET__OPTIONAL_INPUT_REFS:
-                getOptionalInputRefs().clear();
-                return;
-            case bpmnPackage.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
-                getWhileExecutingInputRefs().clear();
-                return;
-            case bpmnPackage.INPUT_SET__OUTPUT_SET_REFS:
-                getOutputSetRefs().clear();
-                return;
-            case bpmnPackage.INPUT_SET__NAME:
-                setName(NAME_EDEFAULT);
-                return;
+        case BpmnPackage.INPUT_SET__DATA_INPUT_REFS:
+            getDataInputRefs().clear();
+            return;
+        case BpmnPackage.INPUT_SET__OPTIONAL_INPUT_REFS:
+            getOptionalInputRefs().clear();
+            return;
+        case BpmnPackage.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
+            getWhileExecutingInputRefs().clear();
+            return;
+        case BpmnPackage.INPUT_SET__OUTPUT_SET_REFS:
+            getOutputSetRefs().clear();
+            return;
+        case BpmnPackage.INPUT_SET__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -282,16 +288,18 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.INPUT_SET__DATA_INPUT_REFS:
-                return dataInputRefs != null && !dataInputRefs.isEmpty();
-            case bpmnPackage.INPUT_SET__OPTIONAL_INPUT_REFS:
-                return optionalInputRefs != null && !optionalInputRefs.isEmpty();
-            case bpmnPackage.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
-                return whileExecutingInputRefs != null && !whileExecutingInputRefs.isEmpty();
-            case bpmnPackage.INPUT_SET__OUTPUT_SET_REFS:
-                return outputSetRefs != null && !outputSetRefs.isEmpty();
-            case bpmnPackage.INPUT_SET__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case BpmnPackage.INPUT_SET__DATA_INPUT_REFS:
+            return dataInputRefs != null && !dataInputRefs.isEmpty();
+        case BpmnPackage.INPUT_SET__OPTIONAL_INPUT_REFS:
+            return optionalInputRefs != null && !optionalInputRefs.isEmpty();
+        case BpmnPackage.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
+            return whileExecutingInputRefs != null
+                    && !whileExecutingInputRefs.isEmpty();
+        case BpmnPackage.INPUT_SET__OUTPUT_SET_REFS:
+            return outputSetRefs != null && !outputSetRefs.isEmpty();
+        case BpmnPackage.INPUT_SET__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
+                    .equals(name);
         }
         return super.eIsSet(featureID);
     }
@@ -303,7 +311,8 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (dataInputRefs: "); //$NON-NLS-1$

@@ -8,10 +8,8 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +23,7 @@ package org.eclipse.mdt.bpmn;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getStartEvent()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getStartEvent()
  * @model extendedMetaData="name='tStartEvent' kind='elementOnly'"
  * @generated
  */
@@ -43,7 +41,7 @@ public interface StartEvent extends CatchEvent {
      * @see #isSetIsInterrupting()
      * @see #unsetIsInterrupting()
      * @see #setIsInterrupting(boolean)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getStartEvent_IsInterrupting()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getStartEvent_IsInterrupting()
      * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
      *        extendedMetaData="kind='attribute' name='isInterrupting'"
      * @generated

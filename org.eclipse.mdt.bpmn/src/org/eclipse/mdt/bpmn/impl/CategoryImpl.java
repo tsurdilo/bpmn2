@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -24,9 +23,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Category;
 import org.eclipse.mdt.bpmn.CategoryValue;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -68,7 +67,7 @@ public class CategoryImpl extends RootElementImpl implements Category {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getCategory();
+        return BpmnPackage.eINSTANCE.getCategory();
     }
 
     /**
@@ -78,7 +77,9 @@ public class CategoryImpl extends RootElementImpl implements Category {
      */
     public EList<CategoryValue> getCategoryValue() {
         if (categoryValue == null) {
-            categoryValue = new EObjectContainmentEList<CategoryValue>(CategoryValue.class, this, bpmnPackage.CATEGORY__CATEGORY_VALUE);
+            categoryValue = new EObjectContainmentEList<CategoryValue>(
+                    CategoryValue.class, this,
+                    BpmnPackage.CATEGORY__CATEGORY_VALUE);
         }
         return categoryValue;
     }
@@ -89,10 +90,12 @@ public class CategoryImpl extends RootElementImpl implements Category {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.CATEGORY__CATEGORY_VALUE:
-                return ((InternalEList<?>)getCategoryValue()).basicRemove(otherEnd, msgs);
+        case BpmnPackage.CATEGORY__CATEGORY_VALUE:
+            return ((InternalEList<?>) getCategoryValue()).basicRemove(
+                    otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -105,8 +108,8 @@ public class CategoryImpl extends RootElementImpl implements Category {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.CATEGORY__CATEGORY_VALUE:
-                return getCategoryValue();
+        case BpmnPackage.CATEGORY__CATEGORY_VALUE:
+            return getCategoryValue();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -120,10 +123,11 @@ public class CategoryImpl extends RootElementImpl implements Category {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.CATEGORY__CATEGORY_VALUE:
-                getCategoryValue().clear();
-                getCategoryValue().addAll((Collection<? extends CategoryValue>)newValue);
-                return;
+        case BpmnPackage.CATEGORY__CATEGORY_VALUE:
+            getCategoryValue().clear();
+            getCategoryValue().addAll(
+                    (Collection<? extends CategoryValue>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -136,9 +140,9 @@ public class CategoryImpl extends RootElementImpl implements Category {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CATEGORY__CATEGORY_VALUE:
-                getCategoryValue().clear();
-                return;
+        case BpmnPackage.CATEGORY__CATEGORY_VALUE:
+            getCategoryValue().clear();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -151,8 +155,8 @@ public class CategoryImpl extends RootElementImpl implements Category {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CATEGORY__CATEGORY_VALUE:
-                return categoryValue != null && !categoryValue.isEmpty();
+        case BpmnPackage.CATEGORY__CATEGORY_VALUE:
+            return categoryValue != null && !categoryValue.isEmpty();
         }
         return super.eIsSet(featureID);
     }

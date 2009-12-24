@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di;
 
@@ -26,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.di.diPackage#getDiagram()
+ * @see org.eclipse.mdt.bpmn.di.DIPackage#getDiagram()
  * @model extendedMetaData="name='Diagram' kind='elementOnly'"
  * @generated
  */
@@ -41,7 +40,7 @@ public interface Diagram extends View {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Connector</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.di.diPackage#getDiagram_Connector()
+     * @see org.eclipse.mdt.bpmn.di.DIPackage#getDiagram_Connector()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='connector' namespace='##targetNamespace'"
      * @generated

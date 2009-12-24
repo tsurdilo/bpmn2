@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -34,7 +33,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getSubConversation()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getSubConversation()
  * @model extendedMetaData="name='tSubConversation' kind='elementOnly'"
  * @generated
  */
@@ -49,7 +48,7 @@ public interface SubConversation extends ConversationNode {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Conversation Node Group</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getSubConversation_ConversationNodeGroup()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getSubConversation_ConversationNodeGroup()
      * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
      *        extendedMetaData="kind='group' name='conversationNode:group' namespace='##targetNamespace'"
      * @generated
@@ -66,7 +65,7 @@ public interface SubConversation extends ConversationNode {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Conversation Node</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getSubConversation_ConversationNode()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getSubConversation_ConversationNode()
      * @model containment="true" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='conversationNode' namespace='##targetNamespace' group='conversationNode:group'"
      * @generated
@@ -83,7 +82,7 @@ public interface SubConversation extends ConversationNode {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Artifact Group</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getSubConversation_ArtifactGroup()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getSubConversation_ArtifactGroup()
      * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
      *        extendedMetaData="kind='group' name='artifact:group' namespace='##targetNamespace'"
      * @generated
@@ -100,7 +99,7 @@ public interface SubConversation extends ConversationNode {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Artifact</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getSubConversation_Artifact()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getSubConversation_Artifact()
      * @model containment="true" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='artifact' namespace='##targetNamespace' group='artifact:group'"
      * @generated
@@ -117,7 +116,7 @@ public interface SubConversation extends ConversationNode {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Correlation Key Ref</em>' attribute.
      * @see #setCorrelationKeyRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getSubConversation_CorrelationKeyRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getSubConversation_CorrelationKeyRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='correlationKeyRef'"
      * @generated

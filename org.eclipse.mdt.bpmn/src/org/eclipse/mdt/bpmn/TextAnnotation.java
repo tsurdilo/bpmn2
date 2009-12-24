@@ -8,10 +8,8 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +23,7 @@ package org.eclipse.mdt.bpmn;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getTextAnnotation()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getTextAnnotation()
  * @model extendedMetaData="name='tTextAnnotation' kind='elementOnly'"
  * @generated
  */
@@ -40,7 +38,7 @@ public interface TextAnnotation extends Artifact {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Text</em>' containment reference.
      * @see #setText(Text)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getTextAnnotation_Text()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getTextAnnotation_Text()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='text' namespace='##targetNamespace'"
      * @generated

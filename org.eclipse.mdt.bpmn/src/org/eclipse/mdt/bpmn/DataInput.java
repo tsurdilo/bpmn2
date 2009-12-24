@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -29,7 +28,7 @@ import javax.xml.namespace.QName;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getDataInput()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getDataInput()
  * @model extendedMetaData="name='tDataInput' kind='elementOnly'"
  * @generated
  */
@@ -44,7 +43,7 @@ public interface DataInput extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data State</em>' containment reference.
      * @see #setDataState(DataState)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDataInput_DataState()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDataInput_DataState()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='dataState' namespace='##targetNamespace'"
      * @generated
@@ -74,7 +73,7 @@ public interface DataInput extends BaseElement {
      * @see #isSetIsCollection()
      * @see #unsetIsCollection()
      * @see #setIsCollection(boolean)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDataInput_IsCollection()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDataInput_IsCollection()
      * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
      *        extendedMetaData="kind='attribute' name='isCollection'"
      * @generated
@@ -126,7 +125,7 @@ public interface DataInput extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Item Subject Ref</em>' attribute.
      * @see #setItemSubjectRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDataInput_ItemSubjectRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDataInput_ItemSubjectRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='itemSubjectRef'"
      * @generated
@@ -153,7 +152,7 @@ public interface DataInput extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getDataInput_Name()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getDataInput_Name()
      * @model dataType="org.eclipse.emf.ecore.xml.type.String"
      *        extendedMetaData="kind='attribute' name='name'"
      * @generated

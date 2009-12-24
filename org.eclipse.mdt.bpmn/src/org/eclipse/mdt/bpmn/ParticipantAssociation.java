@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -27,7 +26,7 @@ import javax.xml.namespace.QName;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getParticipantAssociation()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getParticipantAssociation()
  * @model extendedMetaData="name='tParticipantAssociation' kind='elementOnly'"
  * @generated
  */
@@ -42,7 +41,7 @@ public interface ParticipantAssociation extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Inner Participant Ref</em>' attribute.
      * @see #setInnerParticipantRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getParticipantAssociation_InnerParticipantRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getParticipantAssociation_InnerParticipantRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName" required="true"
      *        extendedMetaData="kind='element' name='innerParticipantRef' namespace='##targetNamespace'"
      * @generated
@@ -69,7 +68,7 @@ public interface ParticipantAssociation extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Outer Participant Ref</em>' attribute.
      * @see #setOuterParticipantRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getParticipantAssociation_OuterParticipantRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getParticipantAssociation_OuterParticipantRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName" required="true"
      *        extendedMetaData="kind='element' name='outerParticipantRef' namespace='##targetNamespace'"
      * @generated

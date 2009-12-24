@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -36,7 +35,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getCatchEvent()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getCatchEvent()
  * @model abstract="true"
  *        extendedMetaData="name='tCatchEvent' kind='elementOnly'"
  * @generated
@@ -52,7 +51,7 @@ public interface CatchEvent extends Event {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data Output</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCatchEvent_DataOutput()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCatchEvent_DataOutput()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='dataOutput' namespace='##targetNamespace'"
      * @generated
@@ -69,7 +68,7 @@ public interface CatchEvent extends Event {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data Output Association</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCatchEvent_DataOutputAssociation()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCatchEvent_DataOutputAssociation()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='dataOutputAssociation' namespace='##targetNamespace'"
      * @generated
@@ -86,7 +85,7 @@ public interface CatchEvent extends Event {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Output Set</em>' containment reference.
      * @see #setOutputSet(OutputSet)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCatchEvent_OutputSet()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCatchEvent_OutputSet()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='outputSet' namespace='##targetNamespace'"
      * @generated
@@ -113,7 +112,7 @@ public interface CatchEvent extends Event {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Event Definition Group</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCatchEvent_EventDefinitionGroup()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCatchEvent_EventDefinitionGroup()
      * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
      *        extendedMetaData="kind='group' name='eventDefinition:group' namespace='##targetNamespace'"
      * @generated
@@ -130,7 +129,7 @@ public interface CatchEvent extends Event {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Event Definition</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCatchEvent_EventDefinition()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCatchEvent_EventDefinition()
      * @model containment="true" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='eventDefinition' namespace='##targetNamespace' group='eventDefinition:group'"
      * @generated
@@ -147,7 +146,7 @@ public interface CatchEvent extends Event {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Event Definition Ref</em>' attribute list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCatchEvent_EventDefinitionRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCatchEvent_EventDefinitionRef()
      * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='element' name='eventDefinitionRef' namespace='##targetNamespace'"
      * @generated
@@ -167,7 +166,7 @@ public interface CatchEvent extends Event {
      * @see #isSetParallelMultiple()
      * @see #unsetParallelMultiple()
      * @see #setParallelMultiple(boolean)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCatchEvent_ParallelMultiple()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCatchEvent_ParallelMultiple()
      * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
      *        extendedMetaData="kind='attribute' name='parallelMultiple'"
      * @generated

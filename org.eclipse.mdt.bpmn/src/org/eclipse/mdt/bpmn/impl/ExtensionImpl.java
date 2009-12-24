@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -30,9 +29,9 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Documentation;
 import org.eclipse.mdt.bpmn.Extension;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -125,7 +124,7 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getExtension();
+        return BpmnPackage.eINSTANCE.getExtension();
     }
 
     /**
@@ -135,7 +134,9 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
      */
     public EList<Documentation> getDocumentation() {
         if (documentation == null) {
-            documentation = new EObjectContainmentEList<Documentation>(Documentation.class, this, bpmnPackage.EXTENSION__DOCUMENTATION);
+            documentation = new EObjectContainmentEList<Documentation>(
+                    Documentation.class, this,
+                    BpmnPackage.EXTENSION__DOCUMENTATION);
         }
         return documentation;
     }
@@ -158,7 +159,9 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
         QName oldDefinition = definition;
         definition = newDefinition;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.EXTENSION__DEFINITION, oldDefinition, definition));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.EXTENSION__DEFINITION, oldDefinition,
+                    definition));
     }
 
     /**
@@ -181,7 +184,9 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
         boolean oldMustUnderstandESet = mustUnderstandESet;
         mustUnderstandESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.EXTENSION__MUST_UNDERSTAND, oldMustUnderstand, mustUnderstand, !oldMustUnderstandESet));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.EXTENSION__MUST_UNDERSTAND, oldMustUnderstand,
+                    mustUnderstand, !oldMustUnderstandESet));
     }
 
     /**
@@ -195,7 +200,9 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
         mustUnderstand = MUST_UNDERSTAND_EDEFAULT;
         mustUnderstandESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, bpmnPackage.EXTENSION__MUST_UNDERSTAND, oldMustUnderstand, MUST_UNDERSTAND_EDEFAULT, oldMustUnderstandESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET,
+                    BpmnPackage.EXTENSION__MUST_UNDERSTAND, oldMustUnderstand,
+                    MUST_UNDERSTAND_EDEFAULT, oldMustUnderstandESet));
     }
 
     /**
@@ -213,10 +220,12 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.EXTENSION__DOCUMENTATION:
-                return ((InternalEList<?>)getDocumentation()).basicRemove(otherEnd, msgs);
+        case BpmnPackage.EXTENSION__DOCUMENTATION:
+            return ((InternalEList<?>) getDocumentation()).basicRemove(
+                    otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -229,12 +238,12 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.EXTENSION__DOCUMENTATION:
-                return getDocumentation();
-            case bpmnPackage.EXTENSION__DEFINITION:
-                return getDefinition();
-            case bpmnPackage.EXTENSION__MUST_UNDERSTAND:
-                return isMustUnderstand();
+        case BpmnPackage.EXTENSION__DOCUMENTATION:
+            return getDocumentation();
+        case BpmnPackage.EXTENSION__DEFINITION:
+            return getDefinition();
+        case BpmnPackage.EXTENSION__MUST_UNDERSTAND:
+            return isMustUnderstand();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -248,16 +257,17 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.EXTENSION__DOCUMENTATION:
-                getDocumentation().clear();
-                getDocumentation().addAll((Collection<? extends Documentation>)newValue);
-                return;
-            case bpmnPackage.EXTENSION__DEFINITION:
-                setDefinition((QName)newValue);
-                return;
-            case bpmnPackage.EXTENSION__MUST_UNDERSTAND:
-                setMustUnderstand((Boolean)newValue);
-                return;
+        case BpmnPackage.EXTENSION__DOCUMENTATION:
+            getDocumentation().clear();
+            getDocumentation().addAll(
+                    (Collection<? extends Documentation>) newValue);
+            return;
+        case BpmnPackage.EXTENSION__DEFINITION:
+            setDefinition((QName) newValue);
+            return;
+        case BpmnPackage.EXTENSION__MUST_UNDERSTAND:
+            setMustUnderstand((Boolean) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -270,15 +280,15 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.EXTENSION__DOCUMENTATION:
-                getDocumentation().clear();
-                return;
-            case bpmnPackage.EXTENSION__DEFINITION:
-                setDefinition(DEFINITION_EDEFAULT);
-                return;
-            case bpmnPackage.EXTENSION__MUST_UNDERSTAND:
-                unsetMustUnderstand();
-                return;
+        case BpmnPackage.EXTENSION__DOCUMENTATION:
+            getDocumentation().clear();
+            return;
+        case BpmnPackage.EXTENSION__DEFINITION:
+            setDefinition(DEFINITION_EDEFAULT);
+            return;
+        case BpmnPackage.EXTENSION__MUST_UNDERSTAND:
+            unsetMustUnderstand();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -291,12 +301,13 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.EXTENSION__DOCUMENTATION:
-                return documentation != null && !documentation.isEmpty();
-            case bpmnPackage.EXTENSION__DEFINITION:
-                return DEFINITION_EDEFAULT == null ? definition != null : !DEFINITION_EDEFAULT.equals(definition);
-            case bpmnPackage.EXTENSION__MUST_UNDERSTAND:
-                return isSetMustUnderstand();
+        case BpmnPackage.EXTENSION__DOCUMENTATION:
+            return documentation != null && !documentation.isEmpty();
+        case BpmnPackage.EXTENSION__DEFINITION:
+            return DEFINITION_EDEFAULT == null ? definition != null
+                    : !DEFINITION_EDEFAULT.equals(definition);
+        case BpmnPackage.EXTENSION__MUST_UNDERSTAND:
+            return isSetMustUnderstand();
         }
         return super.eIsSet(featureID);
     }
@@ -308,13 +319,17 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (definition: "); //$NON-NLS-1$
         result.append(definition);
         result.append(", mustUnderstand: "); //$NON-NLS-1$
-        if (mustUnderstandESet) result.append(mustUnderstand); else result.append("<unset>"); //$NON-NLS-1$
+        if (mustUnderstandESet)
+            result.append(mustUnderstand);
+        else
+            result.append("<unset>"); //$NON-NLS-1$
         result.append(')');
         return result.toString();
     }

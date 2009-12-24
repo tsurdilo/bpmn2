@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -28,9 +27,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Participant;
 import org.eclipse.mdt.bpmn.ParticipantMultiplicity;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -178,7 +177,7 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getParticipant();
+        return BpmnPackage.eINSTANCE.getParticipant();
     }
 
     /**
@@ -188,7 +187,8 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
      */
     public EList<QName> getInterfaceRef() {
         if (interfaceRef == null) {
-            interfaceRef = new EDataTypeEList<QName>(QName.class, this, bpmnPackage.PARTICIPANT__INTERFACE_REF);
+            interfaceRef = new EDataTypeEList<QName>(QName.class, this,
+                    BpmnPackage.PARTICIPANT__INTERFACE_REF);
         }
         return interfaceRef;
     }
@@ -200,7 +200,8 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
      */
     public EList<QName> getEndPointRef() {
         if (endPointRef == null) {
-            endPointRef = new EDataTypeEList<QName>(QName.class, this, bpmnPackage.PARTICIPANT__END_POINT_REF);
+            endPointRef = new EDataTypeEList<QName>(QName.class, this,
+                    BpmnPackage.PARTICIPANT__END_POINT_REF);
         }
         return endPointRef;
     }
@@ -219,12 +220,20 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetParticipantMultiplicity(ParticipantMultiplicity newParticipantMultiplicity, NotificationChain msgs) {
+    public NotificationChain basicSetParticipantMultiplicity(
+            ParticipantMultiplicity newParticipantMultiplicity,
+            NotificationChain msgs) {
         ParticipantMultiplicity oldParticipantMultiplicity = participantMultiplicity;
         participantMultiplicity = newParticipantMultiplicity;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, bpmnPackage.PARTICIPANT__PARTICIPANT_MULTIPLICITY, oldParticipantMultiplicity, newParticipantMultiplicity);
-            if (msgs == null) msgs = notification; else msgs.add(notification);
+            ENotificationImpl notification = new ENotificationImpl(this,
+                    Notification.SET,
+                    BpmnPackage.PARTICIPANT__PARTICIPANT_MULTIPLICITY,
+                    oldParticipantMultiplicity, newParticipantMultiplicity);
+            if (msgs == null)
+                msgs = notification;
+            else
+                msgs.add(notification);
         }
         return msgs;
     }
@@ -234,18 +243,32 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setParticipantMultiplicity(ParticipantMultiplicity newParticipantMultiplicity) {
+    public void setParticipantMultiplicity(
+            ParticipantMultiplicity newParticipantMultiplicity) {
         if (newParticipantMultiplicity != participantMultiplicity) {
             NotificationChain msgs = null;
             if (participantMultiplicity != null)
-                msgs = ((InternalEObject)participantMultiplicity).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - bpmnPackage.PARTICIPANT__PARTICIPANT_MULTIPLICITY, null, msgs);
+                msgs = ((InternalEObject) participantMultiplicity)
+                        .eInverseRemove(
+                                this,
+                                EOPPOSITE_FEATURE_BASE
+                                        - BpmnPackage.PARTICIPANT__PARTICIPANT_MULTIPLICITY,
+                                null, msgs);
             if (newParticipantMultiplicity != null)
-                msgs = ((InternalEObject)newParticipantMultiplicity).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - bpmnPackage.PARTICIPANT__PARTICIPANT_MULTIPLICITY, null, msgs);
-            msgs = basicSetParticipantMultiplicity(newParticipantMultiplicity, msgs);
-            if (msgs != null) msgs.dispatch();
-        }
-        else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.PARTICIPANT__PARTICIPANT_MULTIPLICITY, newParticipantMultiplicity, newParticipantMultiplicity));
+                msgs = ((InternalEObject) newParticipantMultiplicity)
+                        .eInverseAdd(
+                                this,
+                                EOPPOSITE_FEATURE_BASE
+                                        - BpmnPackage.PARTICIPANT__PARTICIPANT_MULTIPLICITY,
+                                null, msgs);
+            msgs = basicSetParticipantMultiplicity(newParticipantMultiplicity,
+                    msgs);
+            if (msgs != null)
+                msgs.dispatch();
+        } else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.PARTICIPANT__PARTICIPANT_MULTIPLICITY,
+                    newParticipantMultiplicity, newParticipantMultiplicity));
     }
 
     /**
@@ -266,7 +289,8 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.PARTICIPANT__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.PARTICIPANT__NAME, oldName, name));
     }
 
     /**
@@ -287,7 +311,9 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
         QName oldPartnerEntityRef = partnerEntityRef;
         partnerEntityRef = newPartnerEntityRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.PARTICIPANT__PARTNER_ENTITY_REF, oldPartnerEntityRef, partnerEntityRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.PARTICIPANT__PARTNER_ENTITY_REF,
+                    oldPartnerEntityRef, partnerEntityRef));
     }
 
     /**
@@ -308,7 +334,9 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
         QName oldPartnerRoleRef = partnerRoleRef;
         partnerRoleRef = newPartnerRoleRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.PARTICIPANT__PARTNER_ROLE_REF, oldPartnerRoleRef, partnerRoleRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.PARTICIPANT__PARTNER_ROLE_REF,
+                    oldPartnerRoleRef, partnerRoleRef));
     }
 
     /**
@@ -329,7 +357,9 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
         QName oldProcessRef = processRef;
         processRef = newProcessRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.PARTICIPANT__PROCESS_REF, oldProcessRef, processRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.PARTICIPANT__PROCESS_REF, oldProcessRef,
+                    processRef));
     }
 
     /**
@@ -338,10 +368,11 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
-                return basicSetParticipantMultiplicity(null, msgs);
+        case BpmnPackage.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
+            return basicSetParticipantMultiplicity(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -354,20 +385,20 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.PARTICIPANT__INTERFACE_REF:
-                return getInterfaceRef();
-            case bpmnPackage.PARTICIPANT__END_POINT_REF:
-                return getEndPointRef();
-            case bpmnPackage.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
-                return getParticipantMultiplicity();
-            case bpmnPackage.PARTICIPANT__NAME:
-                return getName();
-            case bpmnPackage.PARTICIPANT__PARTNER_ENTITY_REF:
-                return getPartnerEntityRef();
-            case bpmnPackage.PARTICIPANT__PARTNER_ROLE_REF:
-                return getPartnerRoleRef();
-            case bpmnPackage.PARTICIPANT__PROCESS_REF:
-                return getProcessRef();
+        case BpmnPackage.PARTICIPANT__INTERFACE_REF:
+            return getInterfaceRef();
+        case BpmnPackage.PARTICIPANT__END_POINT_REF:
+            return getEndPointRef();
+        case BpmnPackage.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
+            return getParticipantMultiplicity();
+        case BpmnPackage.PARTICIPANT__NAME:
+            return getName();
+        case BpmnPackage.PARTICIPANT__PARTNER_ENTITY_REF:
+            return getPartnerEntityRef();
+        case BpmnPackage.PARTICIPANT__PARTNER_ROLE_REF:
+            return getPartnerRoleRef();
+        case BpmnPackage.PARTICIPANT__PROCESS_REF:
+            return getProcessRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -381,29 +412,29 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.PARTICIPANT__INTERFACE_REF:
-                getInterfaceRef().clear();
-                getInterfaceRef().addAll((Collection<? extends QName>)newValue);
-                return;
-            case bpmnPackage.PARTICIPANT__END_POINT_REF:
-                getEndPointRef().clear();
-                getEndPointRef().addAll((Collection<? extends QName>)newValue);
-                return;
-            case bpmnPackage.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
-                setParticipantMultiplicity((ParticipantMultiplicity)newValue);
-                return;
-            case bpmnPackage.PARTICIPANT__NAME:
-                setName((String)newValue);
-                return;
-            case bpmnPackage.PARTICIPANT__PARTNER_ENTITY_REF:
-                setPartnerEntityRef((QName)newValue);
-                return;
-            case bpmnPackage.PARTICIPANT__PARTNER_ROLE_REF:
-                setPartnerRoleRef((QName)newValue);
-                return;
-            case bpmnPackage.PARTICIPANT__PROCESS_REF:
-                setProcessRef((QName)newValue);
-                return;
+        case BpmnPackage.PARTICIPANT__INTERFACE_REF:
+            getInterfaceRef().clear();
+            getInterfaceRef().addAll((Collection<? extends QName>) newValue);
+            return;
+        case BpmnPackage.PARTICIPANT__END_POINT_REF:
+            getEndPointRef().clear();
+            getEndPointRef().addAll((Collection<? extends QName>) newValue);
+            return;
+        case BpmnPackage.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
+            setParticipantMultiplicity((ParticipantMultiplicity) newValue);
+            return;
+        case BpmnPackage.PARTICIPANT__NAME:
+            setName((String) newValue);
+            return;
+        case BpmnPackage.PARTICIPANT__PARTNER_ENTITY_REF:
+            setPartnerEntityRef((QName) newValue);
+            return;
+        case BpmnPackage.PARTICIPANT__PARTNER_ROLE_REF:
+            setPartnerRoleRef((QName) newValue);
+            return;
+        case BpmnPackage.PARTICIPANT__PROCESS_REF:
+            setProcessRef((QName) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -416,27 +447,27 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.PARTICIPANT__INTERFACE_REF:
-                getInterfaceRef().clear();
-                return;
-            case bpmnPackage.PARTICIPANT__END_POINT_REF:
-                getEndPointRef().clear();
-                return;
-            case bpmnPackage.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
-                setParticipantMultiplicity((ParticipantMultiplicity)null);
-                return;
-            case bpmnPackage.PARTICIPANT__NAME:
-                setName(NAME_EDEFAULT);
-                return;
-            case bpmnPackage.PARTICIPANT__PARTNER_ENTITY_REF:
-                setPartnerEntityRef(PARTNER_ENTITY_REF_EDEFAULT);
-                return;
-            case bpmnPackage.PARTICIPANT__PARTNER_ROLE_REF:
-                setPartnerRoleRef(PARTNER_ROLE_REF_EDEFAULT);
-                return;
-            case bpmnPackage.PARTICIPANT__PROCESS_REF:
-                setProcessRef(PROCESS_REF_EDEFAULT);
-                return;
+        case BpmnPackage.PARTICIPANT__INTERFACE_REF:
+            getInterfaceRef().clear();
+            return;
+        case BpmnPackage.PARTICIPANT__END_POINT_REF:
+            getEndPointRef().clear();
+            return;
+        case BpmnPackage.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
+            setParticipantMultiplicity((ParticipantMultiplicity) null);
+            return;
+        case BpmnPackage.PARTICIPANT__NAME:
+            setName(NAME_EDEFAULT);
+            return;
+        case BpmnPackage.PARTICIPANT__PARTNER_ENTITY_REF:
+            setPartnerEntityRef(PARTNER_ENTITY_REF_EDEFAULT);
+            return;
+        case BpmnPackage.PARTICIPANT__PARTNER_ROLE_REF:
+            setPartnerRoleRef(PARTNER_ROLE_REF_EDEFAULT);
+            return;
+        case BpmnPackage.PARTICIPANT__PROCESS_REF:
+            setProcessRef(PROCESS_REF_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -449,20 +480,24 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.PARTICIPANT__INTERFACE_REF:
-                return interfaceRef != null && !interfaceRef.isEmpty();
-            case bpmnPackage.PARTICIPANT__END_POINT_REF:
-                return endPointRef != null && !endPointRef.isEmpty();
-            case bpmnPackage.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
-                return participantMultiplicity != null;
-            case bpmnPackage.PARTICIPANT__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-            case bpmnPackage.PARTICIPANT__PARTNER_ENTITY_REF:
-                return PARTNER_ENTITY_REF_EDEFAULT == null ? partnerEntityRef != null : !PARTNER_ENTITY_REF_EDEFAULT.equals(partnerEntityRef);
-            case bpmnPackage.PARTICIPANT__PARTNER_ROLE_REF:
-                return PARTNER_ROLE_REF_EDEFAULT == null ? partnerRoleRef != null : !PARTNER_ROLE_REF_EDEFAULT.equals(partnerRoleRef);
-            case bpmnPackage.PARTICIPANT__PROCESS_REF:
-                return PROCESS_REF_EDEFAULT == null ? processRef != null : !PROCESS_REF_EDEFAULT.equals(processRef);
+        case BpmnPackage.PARTICIPANT__INTERFACE_REF:
+            return interfaceRef != null && !interfaceRef.isEmpty();
+        case BpmnPackage.PARTICIPANT__END_POINT_REF:
+            return endPointRef != null && !endPointRef.isEmpty();
+        case BpmnPackage.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
+            return participantMultiplicity != null;
+        case BpmnPackage.PARTICIPANT__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
+                    .equals(name);
+        case BpmnPackage.PARTICIPANT__PARTNER_ENTITY_REF:
+            return PARTNER_ENTITY_REF_EDEFAULT == null ? partnerEntityRef != null
+                    : !PARTNER_ENTITY_REF_EDEFAULT.equals(partnerEntityRef);
+        case BpmnPackage.PARTICIPANT__PARTNER_ROLE_REF:
+            return PARTNER_ROLE_REF_EDEFAULT == null ? partnerRoleRef != null
+                    : !PARTNER_ROLE_REF_EDEFAULT.equals(partnerRoleRef);
+        case BpmnPackage.PARTICIPANT__PROCESS_REF:
+            return PROCESS_REF_EDEFAULT == null ? processRef != null
+                    : !PROCESS_REF_EDEFAULT.equals(processRef);
         }
         return super.eIsSet(featureID);
     }
@@ -474,7 +509,8 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (interfaceRef: "); //$NON-NLS-1$

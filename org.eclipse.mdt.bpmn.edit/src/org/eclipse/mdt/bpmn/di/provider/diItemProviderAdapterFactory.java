@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di.provider;
 
@@ -31,7 +30,7 @@ import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
-import org.eclipse.mdt.bpmn.di.util.diAdapterFactory;
+import org.eclipse.mdt.bpmn.di.util.DIAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -42,7 +41,7 @@ import org.eclipse.mdt.bpmn.di.util.diAdapterFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class diItemProviderAdapterFactory extends diAdapterFactory implements
+public class DIItemProviderAdapterFactory extends DIAdapterFactory implements
         ComposeableAdapterFactory, IChangeNotifier, IDisposable {
     /**
      * This keeps track of the root adapter factory that delegates to this adapter factory.
@@ -74,7 +73,7 @@ public class diItemProviderAdapterFactory extends diAdapterFactory implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public diItemProviderAdapterFactory() {
+    public DIItemProviderAdapterFactory() {
         supportedTypes.add(IEditingDomainItemProvider.class);
         supportedTypes.add(IStructuredItemContentProvider.class);
         supportedTypes.add(ITreeItemContentProvider.class);

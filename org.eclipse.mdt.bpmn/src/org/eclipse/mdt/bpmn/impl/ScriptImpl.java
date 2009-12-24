@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -23,8 +22,8 @@ import org.eclipse.emf.ecore.util.BasicFeatureMap;
 import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Script;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -67,7 +66,7 @@ public class ScriptImpl extends EObjectImpl implements Script {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getScript();
+        return BpmnPackage.eINSTANCE.getScript();
     }
 
     /**
@@ -77,7 +76,7 @@ public class ScriptImpl extends EObjectImpl implements Script {
      */
     public FeatureMap getMixed() {
         if (mixed == null) {
-            mixed = new BasicFeatureMap(this, bpmnPackage.SCRIPT__MIXED);
+            mixed = new BasicFeatureMap(this, BpmnPackage.SCRIPT__MIXED);
         }
         return mixed;
     }
@@ -88,7 +87,8 @@ public class ScriptImpl extends EObjectImpl implements Script {
      * @generated
      */
     public FeatureMap getAny() {
-        return (FeatureMap)getMixed().<FeatureMap.Entry>list(bpmnPackage.eINSTANCE.getScript_Any());
+        return (FeatureMap) getMixed().<FeatureMap.Entry> list(
+                BpmnPackage.eINSTANCE.getScript_Any());
     }
 
     /**
@@ -97,12 +97,13 @@ public class ScriptImpl extends EObjectImpl implements Script {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.SCRIPT__MIXED:
-                return ((InternalEList<?>)getMixed()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.SCRIPT__ANY:
-                return ((InternalEList<?>)getAny()).basicRemove(otherEnd, msgs);
+        case BpmnPackage.SCRIPT__MIXED:
+            return ((InternalEList<?>) getMixed()).basicRemove(otherEnd, msgs);
+        case BpmnPackage.SCRIPT__ANY:
+            return ((InternalEList<?>) getAny()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -115,12 +116,14 @@ public class ScriptImpl extends EObjectImpl implements Script {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.SCRIPT__MIXED:
-                if (coreType) return getMixed();
-                return ((FeatureMap.Internal)getMixed()).getWrapper();
-            case bpmnPackage.SCRIPT__ANY:
-                if (coreType) return getAny();
-                return ((FeatureMap.Internal)getAny()).getWrapper();
+        case BpmnPackage.SCRIPT__MIXED:
+            if (coreType)
+                return getMixed();
+            return ((FeatureMap.Internal) getMixed()).getWrapper();
+        case BpmnPackage.SCRIPT__ANY:
+            if (coreType)
+                return getAny();
+            return ((FeatureMap.Internal) getAny()).getWrapper();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -133,12 +136,12 @@ public class ScriptImpl extends EObjectImpl implements Script {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.SCRIPT__MIXED:
-                ((FeatureMap.Internal)getMixed()).set(newValue);
-                return;
-            case bpmnPackage.SCRIPT__ANY:
-                ((FeatureMap.Internal)getAny()).set(newValue);
-                return;
+        case BpmnPackage.SCRIPT__MIXED:
+            ((FeatureMap.Internal) getMixed()).set(newValue);
+            return;
+        case BpmnPackage.SCRIPT__ANY:
+            ((FeatureMap.Internal) getAny()).set(newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -151,12 +154,12 @@ public class ScriptImpl extends EObjectImpl implements Script {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.SCRIPT__MIXED:
-                getMixed().clear();
-                return;
-            case bpmnPackage.SCRIPT__ANY:
-                getAny().clear();
-                return;
+        case BpmnPackage.SCRIPT__MIXED:
+            getMixed().clear();
+            return;
+        case BpmnPackage.SCRIPT__ANY:
+            getAny().clear();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -169,10 +172,10 @@ public class ScriptImpl extends EObjectImpl implements Script {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.SCRIPT__MIXED:
-                return mixed != null && !mixed.isEmpty();
-            case bpmnPackage.SCRIPT__ANY:
-                return !getAny().isEmpty();
+        case BpmnPackage.SCRIPT__MIXED:
+            return mixed != null && !mixed.isEmpty();
+        case BpmnPackage.SCRIPT__ANY:
+            return !getAny().isEmpty();
         }
         return super.eIsSet(featureID);
     }
@@ -184,7 +187,8 @@ public class ScriptImpl extends EObjectImpl implements Script {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (mixed: "); //$NON-NLS-1$

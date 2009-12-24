@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.di.provider;
 
@@ -31,8 +30,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.di.DIPackage;
 import org.eclipse.mdt.bpmn.di.Style;
-import org.eclipse.mdt.bpmn.di.diPackage;
 
 import org.eclipse.mdt.bpmn.provider.bpmnEditPlugin;
 
@@ -87,7 +86,7 @@ public class StyleItemProvider extends ItemProviderAdapter implements
                         getString("_UI_Style_name_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Style_name_feature", "_UI_Style_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        diPackage.Literals.STYLE__NAME, true, false, false,
+                        DIPackage.Literals.STYLE__NAME, true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
@@ -106,7 +105,7 @@ public class StyleItemProvider extends ItemProviderAdapter implements
                         getString("_UI_Style_value_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_Style_value_feature", "_UI_Style_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        diPackage.Literals.STYLE__VALUE, true, false, false,
+                        DIPackage.Literals.STYLE__VALUE, true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
@@ -147,8 +146,8 @@ public class StyleItemProvider extends ItemProviderAdapter implements
         updateChildren(notification);
 
         switch (notification.getFeatureID(Style.class)) {
-        case diPackage.STYLE__NAME:
-        case diPackage.STYLE__VALUE:
+        case DIPackage.STYLE__NAME:
+        case DIPackage.STYLE__VALUE:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;

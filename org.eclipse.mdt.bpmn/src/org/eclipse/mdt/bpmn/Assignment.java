@@ -8,10 +8,8 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +25,7 @@ package org.eclipse.mdt.bpmn;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getAssignment()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getAssignment()
  * @model extendedMetaData="name='tAssignment' kind='elementOnly'"
  * @generated
  */
@@ -42,7 +40,7 @@ public interface Assignment extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>From</em>' containment reference.
      * @see #setFrom(BaseElementWithMixedContent)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getAssignment_From()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getAssignment_From()
      * @model containment="true" required="true"
      *        extendedMetaData="kind='element' name='from' namespace='##targetNamespace'"
      * @generated
@@ -69,7 +67,7 @@ public interface Assignment extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>To</em>' containment reference.
      * @see #setTo(BaseElementWithMixedContent)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getAssignment_To()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getAssignment_To()
      * @model containment="true" required="true"
      *        extendedMetaData="kind='element' name='to' namespace='##targetNamespace'"
      * @generated
@@ -96,7 +94,7 @@ public interface Assignment extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Language</em>' attribute.
      * @see #setLanguage(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getAssignment_Language()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getAssignment_Language()
      * @model dataType="org.eclipse.emf.ecore.xml.type.AnyURI"
      *        extendedMetaData="kind='attribute' name='language'"
      * @generated

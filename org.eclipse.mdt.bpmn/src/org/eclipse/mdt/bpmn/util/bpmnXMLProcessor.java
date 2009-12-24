@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.util;
 
@@ -20,7 +19,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 
 import org.eclipse.emf.ecore.xmi.util.XMLProcessor;
 
-import org.eclipse.mdt.bpmn.bpmnPackage;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 
 /**
  * This class contains helper methods to serialize and deserialize XML documents
@@ -28,7 +27,7 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class bpmnXMLProcessor extends XMLProcessor {
+public class BpmnXMLProcessor extends XMLProcessor {
 
     /**
      * Public constructor to instantiate the helper.
@@ -36,13 +35,13 @@ public class bpmnXMLProcessor extends XMLProcessor {
      * <!-- end-user-doc -->
      * @generated
      */
-    public bpmnXMLProcessor() {
+    public BpmnXMLProcessor() {
         super((EPackage.Registry.INSTANCE));
-        bpmnPackage.eINSTANCE.eClass();
+        BpmnPackage.eINSTANCE.eClass();
     }
-    
+
     /**
-     * Register for "*" and "xml" file extensions the bpmnResourceFactoryImpl factory.
+     * Register for "*" and "xml" file extensions the BpmnResourceFactoryImpl factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -51,10 +50,10 @@ public class bpmnXMLProcessor extends XMLProcessor {
     protected Map<String, Resource.Factory> getRegistrations() {
         if (registrations == null) {
             super.getRegistrations();
-            registrations.put(XML_EXTENSION, new bpmnResourceFactoryImpl());
-            registrations.put(STAR_EXTENSION, new bpmnResourceFactoryImpl());
+            registrations.put(XML_EXTENSION, new BpmnResourceFactoryImpl());
+            registrations.put(STAR_EXTENSION, new BpmnResourceFactoryImpl());
         }
         return registrations;
     }
 
-} //bpmnXMLProcessor
+} //BpmnXMLProcessor

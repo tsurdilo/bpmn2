@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -33,11 +32,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnFactory;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.DataStore;
-import org.eclipse.mdt.bpmn.bpmnFactory;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.DataStore} object.
@@ -92,7 +91,7 @@ public class DataStoreItemProvider extends RootElementItemProvider implements
                         getString("_UI_DataStore_capacity_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_DataStore_capacity_feature", "_UI_DataStore_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getDataStore_Capacity(), true,
+                        BpmnPackage.eINSTANCE.getDataStore_Capacity(), true,
                         false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -112,7 +111,7 @@ public class DataStoreItemProvider extends RootElementItemProvider implements
                         getString("_UI_DataStore_isUnlimited_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_DataStore_isUnlimited_feature", "_UI_DataStore_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getDataStore_IsUnlimited(), true,
+                        BpmnPackage.eINSTANCE.getDataStore_IsUnlimited(), true,
                         false, false,
                         ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
@@ -132,7 +131,7 @@ public class DataStoreItemProvider extends RootElementItemProvider implements
                         getString("_UI_DataStore_itemSubjectRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_DataStore_itemSubjectRef_feature", "_UI_DataStore_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getDataStore_ItemSubjectRef(),
+                        BpmnPackage.eINSTANCE.getDataStore_ItemSubjectRef(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -152,7 +151,7 @@ public class DataStoreItemProvider extends RootElementItemProvider implements
                         getString("_UI_DataStore_name_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_DataStore_name_feature", "_UI_DataStore_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getDataStore_Name(), true, false,
+                        BpmnPackage.eINSTANCE.getDataStore_Name(), true, false,
                         false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                         null, null));
     }
@@ -171,7 +170,7 @@ public class DataStoreItemProvider extends RootElementItemProvider implements
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
             childrenFeatures
-                    .add(bpmnPackage.eINSTANCE.getDataStore_DataState());
+                    .add(BpmnPackage.eINSTANCE.getDataStore_DataState());
         }
         return childrenFeatures;
     }
@@ -226,14 +225,14 @@ public class DataStoreItemProvider extends RootElementItemProvider implements
         updateChildren(notification);
 
         switch (notification.getFeatureID(DataStore.class)) {
-        case bpmnPackage.DATA_STORE__CAPACITY:
-        case bpmnPackage.DATA_STORE__IS_UNLIMITED:
-        case bpmnPackage.DATA_STORE__ITEM_SUBJECT_REF:
-        case bpmnPackage.DATA_STORE__NAME:
+        case BpmnPackage.DATA_STORE__CAPACITY:
+        case BpmnPackage.DATA_STORE__IS_UNLIMITED:
+        case BpmnPackage.DATA_STORE__ITEM_SUBJECT_REF:
+        case BpmnPackage.DATA_STORE__NAME:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
-        case bpmnPackage.DATA_STORE__DATA_STATE:
+        case BpmnPackage.DATA_STORE__DATA_STATE:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -253,8 +252,8 @@ public class DataStoreItemProvider extends RootElementItemProvider implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getDataStore_DataState(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getDataStore_DataState(), BpmnFactory.eINSTANCE
                 .createDataState()));
     }
 
@@ -278,10 +277,10 @@ public class DataStoreItemProvider extends RootElementItemProvider implements
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE;
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE;
 
         if (qualify) {
             return getString("_UI_CreateChild_text2", //$NON-NLS-1$

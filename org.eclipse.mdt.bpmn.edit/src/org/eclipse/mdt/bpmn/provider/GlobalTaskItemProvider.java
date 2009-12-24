@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -31,11 +30,11 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnFactory;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.GlobalTask;
-import org.eclipse.mdt.bpmn.bpmnFactory;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.GlobalTask} object.
@@ -84,7 +83,7 @@ public class GlobalTaskItemProvider extends CallableElementItemProvider
             Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getGlobalTask_PerformerGroup());
         }
         return childrenFeatures;
@@ -140,7 +139,7 @@ public class GlobalTaskItemProvider extends CallableElementItemProvider
         updateChildren(notification);
 
         switch (notification.getFeatureID(GlobalTask.class)) {
-        case bpmnPackage.GLOBAL_TASK__PERFORMER_GROUP:
+        case BpmnPackage.GLOBAL_TASK__PERFORMER_GROUP:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -160,35 +159,35 @@ public class GlobalTaskItemProvider extends CallableElementItemProvider
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getGlobalTask_PerformerGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getGlobalTask_Performer(),
-                bpmnFactory.eINSTANCE.createPerformer())));
+                BpmnPackage.eINSTANCE.getGlobalTask_Performer(),
+                BpmnFactory.eINSTANCE.createPerformer())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getGlobalTask_PerformerGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getGlobalTask_Performer(),
-                bpmnFactory.eINSTANCE.createHumanPerformer())));
+                BpmnPackage.eINSTANCE.getGlobalTask_Performer(),
+                BpmnFactory.eINSTANCE.createHumanPerformer())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getGlobalTask_PerformerGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getGlobalTask_Performer(),
-                bpmnFactory.eINSTANCE.createPotentialOwner())));
+                BpmnPackage.eINSTANCE.getGlobalTask_Performer(),
+                BpmnFactory.eINSTANCE.createPotentialOwner())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getGlobalTask_PerformerGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_HumanPerformer(),
-                bpmnFactory.eINSTANCE.createHumanPerformer())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_HumanPerformer(),
+                BpmnFactory.eINSTANCE.createHumanPerformer())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getGlobalTask_PerformerGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_HumanPerformer(),
-                bpmnFactory.eINSTANCE.createPotentialOwner())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_HumanPerformer(),
+                BpmnFactory.eINSTANCE.createPotentialOwner())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getGlobalTask_PerformerGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_PotentialOwner(),
-                bpmnFactory.eINSTANCE.createPotentialOwner())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_PotentialOwner(),
+                BpmnFactory.eINSTANCE.createPotentialOwner())));
     }
 
     /**
@@ -211,15 +210,15 @@ public class GlobalTaskItemProvider extends CallableElementItemProvider
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE
-                || childFeature == bpmnPackage.eINSTANCE
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getGlobalTask_Performer()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_HumanPerformer()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_PotentialOwner();
 
         if (qualify) {

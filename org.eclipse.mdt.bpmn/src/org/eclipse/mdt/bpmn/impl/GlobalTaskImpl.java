@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -25,9 +24,9 @@ import org.eclipse.emf.ecore.util.BasicFeatureMap;
 import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.GlobalTask;
 import org.eclipse.mdt.bpmn.Performer;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -70,7 +69,7 @@ public class GlobalTaskImpl extends CallableElementImpl implements GlobalTask {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getGlobalTask();
+        return BpmnPackage.eINSTANCE.getGlobalTask();
     }
 
     /**
@@ -80,7 +79,8 @@ public class GlobalTaskImpl extends CallableElementImpl implements GlobalTask {
      */
     public FeatureMap getPerformerGroup() {
         if (performerGroup == null) {
-            performerGroup = new BasicFeatureMap(this, bpmnPackage.GLOBAL_TASK__PERFORMER_GROUP);
+            performerGroup = new BasicFeatureMap(this,
+                    BpmnPackage.GLOBAL_TASK__PERFORMER_GROUP);
         }
         return performerGroup;
     }
@@ -91,7 +91,8 @@ public class GlobalTaskImpl extends CallableElementImpl implements GlobalTask {
      * @generated
      */
     public EList<Performer> getPerformer() {
-        return getPerformerGroup().list(bpmnPackage.eINSTANCE.getGlobalTask_Performer());
+        return getPerformerGroup().list(
+                BpmnPackage.eINSTANCE.getGlobalTask_Performer());
     }
 
     /**
@@ -100,12 +101,15 @@ public class GlobalTaskImpl extends CallableElementImpl implements GlobalTask {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.GLOBAL_TASK__PERFORMER_GROUP:
-                return ((InternalEList<?>)getPerformerGroup()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.GLOBAL_TASK__PERFORMER:
-                return ((InternalEList<?>)getPerformer()).basicRemove(otherEnd, msgs);
+        case BpmnPackage.GLOBAL_TASK__PERFORMER_GROUP:
+            return ((InternalEList<?>) getPerformerGroup()).basicRemove(
+                    otherEnd, msgs);
+        case BpmnPackage.GLOBAL_TASK__PERFORMER:
+            return ((InternalEList<?>) getPerformer()).basicRemove(otherEnd,
+                    msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -118,11 +122,12 @@ public class GlobalTaskImpl extends CallableElementImpl implements GlobalTask {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.GLOBAL_TASK__PERFORMER_GROUP:
-                if (coreType) return getPerformerGroup();
-                return ((FeatureMap.Internal)getPerformerGroup()).getWrapper();
-            case bpmnPackage.GLOBAL_TASK__PERFORMER:
-                return getPerformer();
+        case BpmnPackage.GLOBAL_TASK__PERFORMER_GROUP:
+            if (coreType)
+                return getPerformerGroup();
+            return ((FeatureMap.Internal) getPerformerGroup()).getWrapper();
+        case BpmnPackage.GLOBAL_TASK__PERFORMER:
+            return getPerformer();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -136,13 +141,13 @@ public class GlobalTaskImpl extends CallableElementImpl implements GlobalTask {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.GLOBAL_TASK__PERFORMER_GROUP:
-                ((FeatureMap.Internal)getPerformerGroup()).set(newValue);
-                return;
-            case bpmnPackage.GLOBAL_TASK__PERFORMER:
-                getPerformer().clear();
-                getPerformer().addAll((Collection<? extends Performer>)newValue);
-                return;
+        case BpmnPackage.GLOBAL_TASK__PERFORMER_GROUP:
+            ((FeatureMap.Internal) getPerformerGroup()).set(newValue);
+            return;
+        case BpmnPackage.GLOBAL_TASK__PERFORMER:
+            getPerformer().clear();
+            getPerformer().addAll((Collection<? extends Performer>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -155,12 +160,12 @@ public class GlobalTaskImpl extends CallableElementImpl implements GlobalTask {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.GLOBAL_TASK__PERFORMER_GROUP:
-                getPerformerGroup().clear();
-                return;
-            case bpmnPackage.GLOBAL_TASK__PERFORMER:
-                getPerformer().clear();
-                return;
+        case BpmnPackage.GLOBAL_TASK__PERFORMER_GROUP:
+            getPerformerGroup().clear();
+            return;
+        case BpmnPackage.GLOBAL_TASK__PERFORMER:
+            getPerformer().clear();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -173,10 +178,10 @@ public class GlobalTaskImpl extends CallableElementImpl implements GlobalTask {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.GLOBAL_TASK__PERFORMER_GROUP:
-                return performerGroup != null && !performerGroup.isEmpty();
-            case bpmnPackage.GLOBAL_TASK__PERFORMER:
-                return !getPerformer().isEmpty();
+        case BpmnPackage.GLOBAL_TASK__PERFORMER_GROUP:
+            return performerGroup != null && !performerGroup.isEmpty();
+        case BpmnPackage.GLOBAL_TASK__PERFORMER:
+            return !getPerformer().isEmpty();
         }
         return super.eIsSet(featureID);
     }
@@ -188,7 +193,8 @@ public class GlobalTaskImpl extends CallableElementImpl implements GlobalTask {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (performerGroup: "); //$NON-NLS-1$

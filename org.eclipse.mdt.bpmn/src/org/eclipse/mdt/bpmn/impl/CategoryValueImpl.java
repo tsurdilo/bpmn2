@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -18,8 +17,8 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.CategoryValue;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -71,7 +70,7 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getCategoryValue();
+        return BpmnPackage.eINSTANCE.getCategoryValue();
     }
 
     /**
@@ -92,7 +91,8 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
         String oldValue = value;
         value = newValue;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.CATEGORY_VALUE__VALUE, oldValue, value));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.CATEGORY_VALUE__VALUE, oldValue, value));
     }
 
     /**
@@ -103,8 +103,8 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.CATEGORY_VALUE__VALUE:
-                return getValue();
+        case BpmnPackage.CATEGORY_VALUE__VALUE:
+            return getValue();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -117,9 +117,9 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.CATEGORY_VALUE__VALUE:
-                setValue((String)newValue);
-                return;
+        case BpmnPackage.CATEGORY_VALUE__VALUE:
+            setValue((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -132,9 +132,9 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CATEGORY_VALUE__VALUE:
-                setValue(VALUE_EDEFAULT);
-                return;
+        case BpmnPackage.CATEGORY_VALUE__VALUE:
+            setValue(VALUE_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -147,8 +147,9 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CATEGORY_VALUE__VALUE:
-                return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+        case BpmnPackage.CATEGORY_VALUE__VALUE:
+            return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT
+                    .equals(value);
         }
         return super.eIsSet(featureID);
     }
@@ -160,7 +161,8 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (value: "); //$NON-NLS-1$

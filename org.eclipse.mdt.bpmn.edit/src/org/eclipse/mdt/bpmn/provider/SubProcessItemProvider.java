@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -33,11 +32,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnFactory;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.SubProcess;
-import org.eclipse.mdt.bpmn.bpmnFactory;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.SubProcess} object.
@@ -89,7 +88,7 @@ public class SubProcessItemProvider extends ActivityItemProvider implements
                         getString("_UI_SubProcess_triggeredByEvent_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_SubProcess_triggeredByEvent_feature", "_UI_SubProcess_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getSubProcess_TriggeredByEvent(),
+                        BpmnPackage.eINSTANCE.getSubProcess_TriggeredByEvent(),
                         true, false, false,
                         ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
@@ -107,9 +106,9 @@ public class SubProcessItemProvider extends ActivityItemProvider implements
             Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getSubProcess_FlowElementGroup());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getSubProcess_ArtifactGroup());
         }
         return childrenFeatures;
@@ -165,12 +164,12 @@ public class SubProcessItemProvider extends ActivityItemProvider implements
         updateChildren(notification);
 
         switch (notification.getFeatureID(SubProcess.class)) {
-        case bpmnPackage.SUB_PROCESS__TRIGGERED_BY_EVENT:
+        case BpmnPackage.SUB_PROCESS__TRIGGERED_BY_EVENT:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
-        case bpmnPackage.SUB_PROCESS__FLOW_ELEMENT_GROUP:
-        case bpmnPackage.SUB_PROCESS__ARTIFACT_GROUP:
+        case BpmnPackage.SUB_PROCESS__FLOW_ELEMENT_GROUP:
+        case BpmnPackage.SUB_PROCESS__ARTIFACT_GROUP:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -190,401 +189,401 @@ public class SubProcessItemProvider extends ActivityItemProvider implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createSubProcess())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createSubProcess())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createAdHocSubProcess())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createAdHocSubProcess())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createBoundaryEvent())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createBoundaryEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createTask())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createBusinessRuleTask())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createBusinessRuleTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createCallActivity())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createCallActivity())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createCallChoreographyActivity())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createCallChoreographyActivity())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createChoreographySubProcess())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createChoreographySubProcess())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createChoreographyTask())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createChoreographyTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createGateway())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createGateway())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createComplexGateway())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createComplexGateway())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createDataObject())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createDataObject())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createDataStoreReference())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createDataStoreReference())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createEndEvent())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createEndEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createEventBasedGateway())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createEventBasedGateway())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createExclusiveGateway())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createExclusiveGateway())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createImplicitThrowEvent())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createImplicitThrowEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createInclusiveGateway())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createInclusiveGateway())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createIntermediateCatchEvent())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createIntermediateCatchEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createIntermediateThrowEvent())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createIntermediateThrowEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createManualTask())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createManualTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createParallelGateway())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createParallelGateway())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createReceiveTask())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createReceiveTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createScriptTask())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createScriptTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createSendTask())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createSendTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createSequenceFlow())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createSequenceFlow())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createServiceTask())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createServiceTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createStartEvent())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createStartEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createTransaction())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createTransaction())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_FlowElement(),
-                bpmnFactory.eINSTANCE.createUserTask())));
+                BpmnPackage.eINSTANCE.getSubProcess_FlowElements(),
+                BpmnFactory.eINSTANCE.createUserTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_AdHocSubProcess(),
-                bpmnFactory.eINSTANCE.createAdHocSubProcess())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_AdHocSubProcess(),
+                BpmnFactory.eINSTANCE.createAdHocSubProcess())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_BoundaryEvent(),
-                bpmnFactory.eINSTANCE.createBoundaryEvent())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_BoundaryEvent(),
+                BpmnFactory.eINSTANCE.createBoundaryEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_BusinessRuleTask(),
-                bpmnFactory.eINSTANCE.createBusinessRuleTask())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_BusinessRuleTask(),
+                BpmnFactory.eINSTANCE.createBusinessRuleTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_CallActivity(),
-                bpmnFactory.eINSTANCE.createCallActivity())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_CallActivity(),
+                BpmnFactory.eINSTANCE.createCallActivity())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE
+                BpmnPackage.eINSTANCE
                         .getDocumentRoot_CallChoreographyActivity(),
-                bpmnFactory.eINSTANCE.createCallChoreographyActivity())));
+                BpmnFactory.eINSTANCE.createCallChoreographyActivity())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_ChoreographySubProcess(),
-                bpmnFactory.eINSTANCE.createChoreographySubProcess())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_ChoreographySubProcess(),
+                BpmnFactory.eINSTANCE.createChoreographySubProcess())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_ChoreographyTask(),
-                bpmnFactory.eINSTANCE.createChoreographyTask())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_ChoreographyTask(),
+                BpmnFactory.eINSTANCE.createChoreographyTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_ComplexGateway(),
-                bpmnFactory.eINSTANCE.createComplexGateway())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_ComplexGateway(),
+                BpmnFactory.eINSTANCE.createComplexGateway())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_DataObject(),
-                bpmnFactory.eINSTANCE.createDataObject())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_DataObject(),
+                BpmnFactory.eINSTANCE.createDataObject())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_DataStoreReference(),
-                bpmnFactory.eINSTANCE.createDataStoreReference())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_DataStoreReference(),
+                BpmnFactory.eINSTANCE.createDataStoreReference())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_EndEvent(),
-                bpmnFactory.eINSTANCE.createEndEvent())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_EndEvent(),
+                BpmnFactory.eINSTANCE.createEndEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Event(),
-                bpmnFactory.eINSTANCE.createBoundaryEvent())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Event(),
+                BpmnFactory.eINSTANCE.createBoundaryEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Event(),
-                bpmnFactory.eINSTANCE.createEndEvent())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Event(),
+                BpmnFactory.eINSTANCE.createEndEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Event(),
-                bpmnFactory.eINSTANCE.createImplicitThrowEvent())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Event(),
+                BpmnFactory.eINSTANCE.createImplicitThrowEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Event(),
-                bpmnFactory.eINSTANCE.createIntermediateCatchEvent())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Event(),
+                BpmnFactory.eINSTANCE.createIntermediateCatchEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Event(),
-                bpmnFactory.eINSTANCE.createIntermediateThrowEvent())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Event(),
+                BpmnFactory.eINSTANCE.createIntermediateThrowEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Event(),
-                bpmnFactory.eINSTANCE.createStartEvent())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Event(),
+                BpmnFactory.eINSTANCE.createStartEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_EventBasedGateway(),
-                bpmnFactory.eINSTANCE.createEventBasedGateway())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_EventBasedGateway(),
+                BpmnFactory.eINSTANCE.createEventBasedGateway())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_ExclusiveGateway(),
-                bpmnFactory.eINSTANCE.createExclusiveGateway())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_ExclusiveGateway(),
+                BpmnFactory.eINSTANCE.createExclusiveGateway())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_ImplicitThrowEvent(),
-                bpmnFactory.eINSTANCE.createImplicitThrowEvent())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_ImplicitThrowEvent(),
+                BpmnFactory.eINSTANCE.createImplicitThrowEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_InclusiveGateway(),
-                bpmnFactory.eINSTANCE.createInclusiveGateway())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_InclusiveGateway(),
+                BpmnFactory.eINSTANCE.createInclusiveGateway())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_IntermediateCatchEvent(),
-                bpmnFactory.eINSTANCE.createIntermediateCatchEvent())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_IntermediateCatchEvent(),
+                BpmnFactory.eINSTANCE.createIntermediateCatchEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_IntermediateThrowEvent(),
-                bpmnFactory.eINSTANCE.createIntermediateThrowEvent())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_IntermediateThrowEvent(),
+                BpmnFactory.eINSTANCE.createIntermediateThrowEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_ManualTask(),
-                bpmnFactory.eINSTANCE.createManualTask())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_ManualTask(),
+                BpmnFactory.eINSTANCE.createManualTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_ParallelGateway(),
-                bpmnFactory.eINSTANCE.createParallelGateway())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_ParallelGateway(),
+                BpmnFactory.eINSTANCE.createParallelGateway())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_ReceiveTask(),
-                bpmnFactory.eINSTANCE.createReceiveTask())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_ReceiveTask(),
+                BpmnFactory.eINSTANCE.createReceiveTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_ScriptTask(),
-                bpmnFactory.eINSTANCE.createScriptTask())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_ScriptTask(),
+                BpmnFactory.eINSTANCE.createScriptTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_SendTask(),
-                bpmnFactory.eINSTANCE.createSendTask())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_SendTask(),
+                BpmnFactory.eINSTANCE.createSendTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_SequenceFlow(),
-                bpmnFactory.eINSTANCE.createSequenceFlow())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_SequenceFlow(),
+                BpmnFactory.eINSTANCE.createSequenceFlow())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_ServiceTask(),
-                bpmnFactory.eINSTANCE.createServiceTask())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_ServiceTask(),
+                BpmnFactory.eINSTANCE.createServiceTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_StartEvent(),
-                bpmnFactory.eINSTANCE.createStartEvent())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_StartEvent(),
+                BpmnFactory.eINSTANCE.createStartEvent())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_SubProcess(),
-                bpmnFactory.eINSTANCE.createSubProcess())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_SubProcess(),
+                BpmnFactory.eINSTANCE.createSubProcess())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_SubProcess(),
-                bpmnFactory.eINSTANCE.createAdHocSubProcess())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_SubProcess(),
+                BpmnFactory.eINSTANCE.createAdHocSubProcess())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Task(),
-                bpmnFactory.eINSTANCE.createTask())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Task(),
+                BpmnFactory.eINSTANCE.createTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Task(),
-                bpmnFactory.eINSTANCE.createBusinessRuleTask())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Task(),
+                BpmnFactory.eINSTANCE.createBusinessRuleTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Task(),
-                bpmnFactory.eINSTANCE.createManualTask())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Task(),
+                BpmnFactory.eINSTANCE.createManualTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Task(),
-                bpmnFactory.eINSTANCE.createReceiveTask())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Task(),
+                BpmnFactory.eINSTANCE.createReceiveTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Task(),
-                bpmnFactory.eINSTANCE.createScriptTask())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Task(),
+                BpmnFactory.eINSTANCE.createScriptTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Task(),
-                bpmnFactory.eINSTANCE.createSendTask())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Task(),
+                BpmnFactory.eINSTANCE.createSendTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Task(),
-                bpmnFactory.eINSTANCE.createServiceTask())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Task(),
+                BpmnFactory.eINSTANCE.createServiceTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Task(),
-                bpmnFactory.eINSTANCE.createUserTask())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Task(),
+                BpmnFactory.eINSTANCE.createUserTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Transaction(),
-                bpmnFactory.eINSTANCE.createTransaction())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Transaction(),
+                BpmnFactory.eINSTANCE.createTransaction())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_FlowElementGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_UserTask(),
-                bpmnFactory.eINSTANCE.createUserTask())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_UserTask(),
+                BpmnFactory.eINSTANCE.createUserTask())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_ArtifactGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_Artifact(),
-                bpmnFactory.eINSTANCE.createAssociation())));
+                BpmnPackage.eINSTANCE.getSubProcess_Artifacts(),
+                BpmnFactory.eINSTANCE.createAssociation())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_ArtifactGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_Artifact(),
-                bpmnFactory.eINSTANCE.createGroup())));
+                BpmnPackage.eINSTANCE.getSubProcess_Artifacts(),
+                BpmnFactory.eINSTANCE.createGroup())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_ArtifactGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getSubProcess_Artifact(),
-                bpmnFactory.eINSTANCE.createTextAnnotation())));
+                BpmnPackage.eINSTANCE.getSubProcess_Artifacts(),
+                BpmnFactory.eINSTANCE.createTextAnnotation())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_ArtifactGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Association(),
-                bpmnFactory.eINSTANCE.createAssociation())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Association(),
+                BpmnFactory.eINSTANCE.createAssociation())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_ArtifactGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_Group(),
-                bpmnFactory.eINSTANCE.createGroup())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_Group(),
+                BpmnFactory.eINSTANCE.createGroup())));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubProcess_ArtifactGroup(), FeatureMapUtil.createEntry(
-                bpmnPackage.eINSTANCE.getDocumentRoot_TextAnnotation(),
-                bpmnFactory.eINSTANCE.createTextAnnotation())));
+                BpmnPackage.eINSTANCE.getDocumentRoot_TextAnnotation(),
+                BpmnFactory.eINSTANCE.createTextAnnotation())));
     }
 
     /**
@@ -607,92 +606,92 @@ public class SubProcessItemProvider extends ActivityItemProvider implements
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE
-                || childFeature == bpmnPackage.eINSTANCE
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getActivity_ActivityResource()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_Performer()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_HumanPerformer()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_PotentialOwner()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getActivity_LoopCharacteristics()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_MultiInstanceLoopCharacteristics()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_StandardLoopCharacteristics()
-                || childFeature == bpmnPackage.eINSTANCE
-                        .getSubProcess_FlowElement()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
+                        .getSubProcess_FlowElements()
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_SubProcess()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_AdHocSubProcess()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_BoundaryEvent()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_Event()
-                || childFeature == bpmnPackage.eINSTANCE.getDocumentRoot_Task()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE.getDocumentRoot_Task()
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_BusinessRuleTask()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_CallActivity()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_CallChoreographyActivity()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_ChoreographySubProcess()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_ChoreographyTask()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_ComplexGateway()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_DataObject()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_DataStoreReference()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_EndEvent()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_EventBasedGateway()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_ExclusiveGateway()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_ImplicitThrowEvent()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_InclusiveGateway()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_IntermediateCatchEvent()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_IntermediateThrowEvent()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_ManualTask()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_ParallelGateway()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_ReceiveTask()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_ScriptTask()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_SendTask()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_SequenceFlow()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_ServiceTask()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_StartEvent()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_Transaction()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_UserTask()
-                || childFeature == bpmnPackage.eINSTANCE
-                        .getSubProcess_Artifact()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
+                        .getSubProcess_Artifacts()
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_Association()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_Group()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getDocumentRoot_TextAnnotation();
 
         if (qualify) {

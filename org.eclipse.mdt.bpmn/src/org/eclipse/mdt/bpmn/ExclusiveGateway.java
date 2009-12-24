@@ -8,10 +8,8 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +23,7 @@ package org.eclipse.mdt.bpmn;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getExclusiveGateway()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getExclusiveGateway()
  * @model extendedMetaData="name='tExclusiveGateway' kind='elementOnly'"
  * @generated
  */
@@ -40,7 +38,7 @@ public interface ExclusiveGateway extends Gateway {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Default</em>' attribute.
      * @see #setDefault(String)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getExclusiveGateway_Default()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getExclusiveGateway_Default()
      * @model dataType="org.eclipse.emf.ecore.xml.type.IDREF"
      *        extendedMetaData="kind='attribute' name='default'"
      * @generated

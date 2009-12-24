@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -33,11 +32,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnFactory;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.CallableElement;
-import org.eclipse.mdt.bpmn.bpmnFactory;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.CallableElement} object.
@@ -90,7 +89,7 @@ public class CallableElementItemProvider extends RootElementItemProvider
                         getString("_UI_CallableElement_supportedInterfaceRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_CallableElement_supportedInterfaceRef_feature", "_UI_CallableElement_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE
+                        BpmnPackage.eINSTANCE
                                 .getCallableElement_SupportedInterfaceRef(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
@@ -111,7 +110,7 @@ public class CallableElementItemProvider extends RootElementItemProvider
                         getString("_UI_CallableElement_name_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_CallableElement_name_feature", "_UI_CallableElement_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE.getCallableElement_Name(), true,
+                        BpmnPackage.eINSTANCE.getCallableElement_Name(), true,
                         false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -129,9 +128,9 @@ public class CallableElementItemProvider extends RootElementItemProvider
             Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getCallableElement_IoSpecification());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getCallableElement_IoBinding());
         }
         return childrenFeatures;
@@ -187,13 +186,13 @@ public class CallableElementItemProvider extends RootElementItemProvider
         updateChildren(notification);
 
         switch (notification.getFeatureID(CallableElement.class)) {
-        case bpmnPackage.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REF:
-        case bpmnPackage.CALLABLE_ELEMENT__NAME:
+        case BpmnPackage.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REF:
+        case BpmnPackage.CALLABLE_ELEMENT__NAME:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
-        case bpmnPackage.CALLABLE_ELEMENT__IO_SPECIFICATION:
-        case bpmnPackage.CALLABLE_ELEMENT__IO_BINDING:
+        case BpmnPackage.CALLABLE_ELEMENT__IO_SPECIFICATION:
+        case BpmnPackage.CALLABLE_ELEMENT__IO_BINDING:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -213,12 +212,12 @@ public class CallableElementItemProvider extends RootElementItemProvider
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getCallableElement_IoSpecification(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getCallableElement_IoSpecification(), BpmnFactory.eINSTANCE
                 .createInputOutputSpecification()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getCallableElement_IoBinding(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getCallableElement_IoBinding(), BpmnFactory.eINSTANCE
                 .createInputOutputBinding()));
     }
 
@@ -242,10 +241,10 @@ public class CallableElementItemProvider extends RootElementItemProvider
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE;
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE;
 
         if (qualify) {
             return getString("_UI_CreateChild_text2", //$NON-NLS-1$

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -19,8 +18,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Import;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -114,7 +113,7 @@ public class ImportImpl extends EObjectImpl implements Import {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getImport();
+        return BpmnPackage.eINSTANCE.getImport();
     }
 
     /**
@@ -135,7 +134,8 @@ public class ImportImpl extends EObjectImpl implements Import {
         String oldImportType = importType;
         importType = newImportType;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.IMPORT__IMPORT_TYPE, oldImportType, importType));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.IMPORT__IMPORT_TYPE, oldImportType, importType));
     }
 
     /**
@@ -156,7 +156,8 @@ public class ImportImpl extends EObjectImpl implements Import {
         String oldLocation = location;
         location = newLocation;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.IMPORT__LOCATION, oldLocation, location));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.IMPORT__LOCATION, oldLocation, location));
     }
 
     /**
@@ -177,7 +178,8 @@ public class ImportImpl extends EObjectImpl implements Import {
         String oldNamespace = namespace;
         namespace = newNamespace;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.IMPORT__NAMESPACE, oldNamespace, namespace));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.IMPORT__NAMESPACE, oldNamespace, namespace));
     }
 
     /**
@@ -188,12 +190,12 @@ public class ImportImpl extends EObjectImpl implements Import {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.IMPORT__IMPORT_TYPE:
-                return getImportType();
-            case bpmnPackage.IMPORT__LOCATION:
-                return getLocation();
-            case bpmnPackage.IMPORT__NAMESPACE:
-                return getNamespace();
+        case BpmnPackage.IMPORT__IMPORT_TYPE:
+            return getImportType();
+        case BpmnPackage.IMPORT__LOCATION:
+            return getLocation();
+        case BpmnPackage.IMPORT__NAMESPACE:
+            return getNamespace();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -206,15 +208,15 @@ public class ImportImpl extends EObjectImpl implements Import {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.IMPORT__IMPORT_TYPE:
-                setImportType((String)newValue);
-                return;
-            case bpmnPackage.IMPORT__LOCATION:
-                setLocation((String)newValue);
-                return;
-            case bpmnPackage.IMPORT__NAMESPACE:
-                setNamespace((String)newValue);
-                return;
+        case BpmnPackage.IMPORT__IMPORT_TYPE:
+            setImportType((String) newValue);
+            return;
+        case BpmnPackage.IMPORT__LOCATION:
+            setLocation((String) newValue);
+            return;
+        case BpmnPackage.IMPORT__NAMESPACE:
+            setNamespace((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -227,15 +229,15 @@ public class ImportImpl extends EObjectImpl implements Import {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.IMPORT__IMPORT_TYPE:
-                setImportType(IMPORT_TYPE_EDEFAULT);
-                return;
-            case bpmnPackage.IMPORT__LOCATION:
-                setLocation(LOCATION_EDEFAULT);
-                return;
-            case bpmnPackage.IMPORT__NAMESPACE:
-                setNamespace(NAMESPACE_EDEFAULT);
-                return;
+        case BpmnPackage.IMPORT__IMPORT_TYPE:
+            setImportType(IMPORT_TYPE_EDEFAULT);
+            return;
+        case BpmnPackage.IMPORT__LOCATION:
+            setLocation(LOCATION_EDEFAULT);
+            return;
+        case BpmnPackage.IMPORT__NAMESPACE:
+            setNamespace(NAMESPACE_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -248,12 +250,15 @@ public class ImportImpl extends EObjectImpl implements Import {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.IMPORT__IMPORT_TYPE:
-                return IMPORT_TYPE_EDEFAULT == null ? importType != null : !IMPORT_TYPE_EDEFAULT.equals(importType);
-            case bpmnPackage.IMPORT__LOCATION:
-                return LOCATION_EDEFAULT == null ? location != null : !LOCATION_EDEFAULT.equals(location);
-            case bpmnPackage.IMPORT__NAMESPACE:
-                return NAMESPACE_EDEFAULT == null ? namespace != null : !NAMESPACE_EDEFAULT.equals(namespace);
+        case BpmnPackage.IMPORT__IMPORT_TYPE:
+            return IMPORT_TYPE_EDEFAULT == null ? importType != null
+                    : !IMPORT_TYPE_EDEFAULT.equals(importType);
+        case BpmnPackage.IMPORT__LOCATION:
+            return LOCATION_EDEFAULT == null ? location != null
+                    : !LOCATION_EDEFAULT.equals(location);
+        case BpmnPackage.IMPORT__NAMESPACE:
+            return NAMESPACE_EDEFAULT == null ? namespace != null
+                    : !NAMESPACE_EDEFAULT.equals(namespace);
         }
         return super.eIsSet(featureID);
     }
@@ -265,7 +270,8 @@ public class ImportImpl extends EObjectImpl implements Import {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (importType: "); //$NON-NLS-1$

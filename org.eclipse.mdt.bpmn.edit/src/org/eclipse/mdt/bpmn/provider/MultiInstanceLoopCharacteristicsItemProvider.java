@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -33,11 +32,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnFactory;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.MultiInstanceLoopCharacteristics;
-import org.eclipse.mdt.bpmn.bpmnFactory;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.MultiInstanceLoopCharacteristics} object.
@@ -94,7 +93,7 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends
                         getString("_UI_MultiInstanceLoopCharacteristics_behavior_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_MultiInstanceLoopCharacteristics_behavior_feature", "_UI_MultiInstanceLoopCharacteristics_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE
+                        BpmnPackage.eINSTANCE
                                 .getMultiInstanceLoopCharacteristics_Behavior(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
@@ -115,7 +114,7 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends
                         getString("_UI_MultiInstanceLoopCharacteristics_isSequential_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_MultiInstanceLoopCharacteristics_isSequential_feature", "_UI_MultiInstanceLoopCharacteristics_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE
+                        BpmnPackage.eINSTANCE
                                 .getMultiInstanceLoopCharacteristics_IsSequential(),
                         true, false, false,
                         ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
@@ -136,7 +135,7 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends
                         getString("_UI_MultiInstanceLoopCharacteristics_noneBehaviorEventRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_MultiInstanceLoopCharacteristics_noneBehaviorEventRef_feature", "_UI_MultiInstanceLoopCharacteristics_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE
+                        BpmnPackage.eINSTANCE
                                 .getMultiInstanceLoopCharacteristics_NoneBehaviorEventRef(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
@@ -157,7 +156,7 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends
                         getString("_UI_MultiInstanceLoopCharacteristics_oneBehaviorEventRef_feature"), //$NON-NLS-1$
                         getString(
                                 "_UI_PropertyDescriptor_description", "_UI_MultiInstanceLoopCharacteristics_oneBehaviorEventRef_feature", "_UI_MultiInstanceLoopCharacteristics_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                        bpmnPackage.eINSTANCE
+                        BpmnPackage.eINSTANCE
                                 .getMultiInstanceLoopCharacteristics_OneBehaviorEventRef(),
                         true, false, false,
                         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
@@ -176,20 +175,20 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends
             Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getMultiInstanceLoopCharacteristics_LoopCardinality());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getMultiInstanceLoopCharacteristics_LoopDataInput());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getMultiInstanceLoopCharacteristics_LoopDataOutput());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getMultiInstanceLoopCharacteristics_InputDataItem());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getMultiInstanceLoopCharacteristics_OutputDataItem());
             childrenFeatures
-                    .add(bpmnPackage.eINSTANCE
+                    .add(BpmnPackage.eINSTANCE
                             .getMultiInstanceLoopCharacteristics_ComplexBehaviorDefinition());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getMultiInstanceLoopCharacteristics_CompletionCondition());
         }
         return childrenFeatures;
@@ -246,20 +245,20 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends
 
         switch (notification
                 .getFeatureID(MultiInstanceLoopCharacteristics.class)) {
-        case bpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__BEHAVIOR:
-        case bpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__IS_SEQUENTIAL:
-        case bpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__NONE_BEHAVIOR_EVENT_REF:
-        case bpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__ONE_BEHAVIOR_EVENT_REF:
+        case BpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__BEHAVIOR:
+        case BpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__IS_SEQUENTIAL:
+        case BpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__NONE_BEHAVIOR_EVENT_REF:
+        case BpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__ONE_BEHAVIOR_EVENT_REF:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), false, true));
             return;
-        case bpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY:
-        case bpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_INPUT:
-        case bpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_OUTPUT:
-        case bpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM:
-        case bpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM:
-        case bpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION:
-        case bpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION:
+        case BpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY:
+        case BpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_INPUT:
+        case BpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_OUTPUT:
+        case BpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM:
+        case BpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM:
+        case BpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION:
+        case BpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -279,43 +278,43 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getMultiInstanceLoopCharacteristics_LoopCardinality(),
-                bpmnFactory.eINSTANCE.createExpression()));
+                BpmnFactory.eINSTANCE.createExpression()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getMultiInstanceLoopCharacteristics_LoopCardinality(),
-                bpmnFactory.eINSTANCE.createFormalExpression()));
+                BpmnFactory.eINSTANCE.createFormalExpression()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getMultiInstanceLoopCharacteristics_LoopDataInput(),
-                bpmnFactory.eINSTANCE.createDataInput()));
+                BpmnFactory.eINSTANCE.createDataInput()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getMultiInstanceLoopCharacteristics_LoopDataOutput(),
-                bpmnFactory.eINSTANCE.createDataOutput()));
+                BpmnFactory.eINSTANCE.createDataOutput()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getMultiInstanceLoopCharacteristics_InputDataItem(),
-                bpmnFactory.eINSTANCE.createProperty()));
+                BpmnFactory.eINSTANCE.createProperty()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getMultiInstanceLoopCharacteristics_OutputDataItem(),
-                bpmnFactory.eINSTANCE.createProperty()));
+                BpmnFactory.eINSTANCE.createProperty()));
 
         newChildDescriptors
                 .add(createChildParameter(
-                        bpmnPackage.eINSTANCE
+                        BpmnPackage.eINSTANCE
                                 .getMultiInstanceLoopCharacteristics_ComplexBehaviorDefinition(),
-                        bpmnFactory.eINSTANCE.createComplexBehaviorDefinition()));
+                        BpmnFactory.eINSTANCE.createComplexBehaviorDefinition()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getMultiInstanceLoopCharacteristics_CompletionCondition(),
-                bpmnFactory.eINSTANCE.createExpression()));
+                BpmnFactory.eINSTANCE.createExpression()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getMultiInstanceLoopCharacteristics_CompletionCondition(),
-                bpmnFactory.eINSTANCE.createFormalExpression()));
+                BpmnFactory.eINSTANCE.createFormalExpression()));
     }
 
     /**
@@ -338,17 +337,17 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE
-                || childFeature == bpmnPackage.eINSTANCE
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getMultiInstanceLoopCharacteristics_LoopCardinality()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getMultiInstanceLoopCharacteristics_CompletionCondition()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getMultiInstanceLoopCharacteristics_InputDataItem()
-                || childFeature == bpmnPackage.eINSTANCE
+                || childFeature == BpmnPackage.eINSTANCE
                         .getMultiInstanceLoopCharacteristics_OutputDataItem();
 
         if (qualify) {

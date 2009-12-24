@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -30,7 +29,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getCorrelationSubscription()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getCorrelationSubscription()
  * @model extendedMetaData="name='tCorrelationSubscription' kind='elementOnly'"
  * @generated
  */
@@ -45,7 +44,7 @@ public interface CorrelationSubscription extends BaseElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Correlation Property Binding</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCorrelationSubscription_CorrelationPropertyBinding()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCorrelationSubscription_CorrelationPropertyBinding()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='correlationPropertyBinding' namespace='##targetNamespace'"
      * @generated
@@ -62,7 +61,7 @@ public interface CorrelationSubscription extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Correlation Key Ref</em>' attribute.
      * @see #setCorrelationKeyRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCorrelationSubscription_CorrelationKeyRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCorrelationSubscription_CorrelationKeyRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName" required="true"
      *        extendedMetaData="kind='attribute' name='correlationKeyRef'"
      * @generated
@@ -89,7 +88,7 @@ public interface CorrelationSubscription extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Process</em>' attribute.
      * @see #setProcess(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCorrelationSubscription_Process()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCorrelationSubscription_Process()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName" required="true"
      *        extendedMetaData="kind='attribute' name='process'"
      * @generated

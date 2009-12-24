@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.provider;
 
@@ -31,11 +30,11 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.mdt.bpmn.BpmnFactory;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.InputOutputSpecification;
-import org.eclipse.mdt.bpmn.bpmnFactory;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
-import org.eclipse.mdt.bpmn.di.diPackage;
+import org.eclipse.mdt.bpmn.di.DIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.mdt.bpmn.InputOutputSpecification} object.
@@ -85,13 +84,13 @@ public class InputOutputSpecificationItemProvider extends
             Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getInputOutputSpecification_DataInput());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getInputOutputSpecification_DataOutput());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getInputOutputSpecification_InputSet());
-            childrenFeatures.add(bpmnPackage.eINSTANCE
+            childrenFeatures.add(BpmnPackage.eINSTANCE
                     .getInputOutputSpecification_OutputSet());
         }
         return childrenFeatures;
@@ -147,10 +146,10 @@ public class InputOutputSpecificationItemProvider extends
         updateChildren(notification);
 
         switch (notification.getFeatureID(InputOutputSpecification.class)) {
-        case bpmnPackage.INPUT_OUTPUT_SPECIFICATION__DATA_INPUT:
-        case bpmnPackage.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUT:
-        case bpmnPackage.INPUT_OUTPUT_SPECIFICATION__INPUT_SET:
-        case bpmnPackage.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SET:
+        case BpmnPackage.INPUT_OUTPUT_SPECIFICATION__DATA_INPUT:
+        case BpmnPackage.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUT:
+        case BpmnPackage.INPUT_OUTPUT_SPECIFICATION__INPUT_SET:
+        case BpmnPackage.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SET:
             fireNotifyChanged(new ViewerNotification(notification, notification
                     .getNotifier(), true, false));
             return;
@@ -170,20 +169,20 @@ public class InputOutputSpecificationItemProvider extends
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getInputOutputSpecification_DataInput(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getInputOutputSpecification_DataInput(), BpmnFactory.eINSTANCE
                 .createDataInput()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getInputOutputSpecification_DataOutput(),
-                bpmnFactory.eINSTANCE.createDataOutput()));
+                BpmnFactory.eINSTANCE.createDataOutput()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getInputOutputSpecification_InputSet(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getInputOutputSpecification_InputSet(), BpmnFactory.eINSTANCE
                 .createInputSet()));
 
-        newChildDescriptors.add(createChildParameter(bpmnPackage.eINSTANCE
-                .getInputOutputSpecification_OutputSet(), bpmnFactory.eINSTANCE
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getInputOutputSpecification_OutputSet(), BpmnFactory.eINSTANCE
                 .createOutputSet()));
     }
 
@@ -207,10 +206,10 @@ public class InputOutputSpecificationItemProvider extends
             childObject = entry.getValue();
         }
 
-        boolean qualify = childFeature == diPackage.Literals.DOCUMENT_ROOT__CONNECTOR
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__VIEW
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__DIAGRAM
-                || childFeature == diPackage.Literals.DOCUMENT_ROOT__NODE;
+        boolean qualify = childFeature == DIPackage.Literals.DOCUMENT_ROOT__CONNECTOR
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__VIEW
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM
+                || childFeature == DIPackage.Literals.DOCUMENT_ROOT__NODE;
 
         if (qualify) {
             return getString("_UI_CreateChild_text2", //$NON-NLS-1$

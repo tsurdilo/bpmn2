@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -24,9 +23,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.CorrelationProperty;
 import org.eclipse.mdt.bpmn.CorrelationPropertyRetrievalExpression;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,7 +40,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class CorrelationPropertyImpl extends RootElementImpl implements CorrelationProperty {
+public class CorrelationPropertyImpl extends RootElementImpl implements
+        CorrelationProperty {
     /**
      * The cached value of the '{@link #getCorrelationPropertyRetrievalExpression() <em>Correlation Property Retrieval Expression</em>}' containment reference list.
      * <!-- begin-user-doc -->
@@ -68,7 +68,7 @@ public class CorrelationPropertyImpl extends RootElementImpl implements Correlat
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getCorrelationProperty();
+        return BpmnPackage.eINSTANCE.getCorrelationProperty();
     }
 
     /**
@@ -78,7 +78,10 @@ public class CorrelationPropertyImpl extends RootElementImpl implements Correlat
      */
     public EList<CorrelationPropertyRetrievalExpression> getCorrelationPropertyRetrievalExpression() {
         if (correlationPropertyRetrievalExpression == null) {
-            correlationPropertyRetrievalExpression = new EObjectContainmentEList<CorrelationPropertyRetrievalExpression>(CorrelationPropertyRetrievalExpression.class, this, bpmnPackage.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION);
+            correlationPropertyRetrievalExpression = new EObjectContainmentEList<CorrelationPropertyRetrievalExpression>(
+                    CorrelationPropertyRetrievalExpression.class,
+                    this,
+                    BpmnPackage.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION);
         }
         return correlationPropertyRetrievalExpression;
     }
@@ -89,10 +92,12 @@ public class CorrelationPropertyImpl extends RootElementImpl implements Correlat
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
-                return ((InternalEList<?>)getCorrelationPropertyRetrievalExpression()).basicRemove(otherEnd, msgs);
+        case BpmnPackage.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
+            return ((InternalEList<?>) getCorrelationPropertyRetrievalExpression())
+                    .basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -105,8 +110,8 @@ public class CorrelationPropertyImpl extends RootElementImpl implements Correlat
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
-                return getCorrelationPropertyRetrievalExpression();
+        case BpmnPackage.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
+            return getCorrelationPropertyRetrievalExpression();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -120,10 +125,12 @@ public class CorrelationPropertyImpl extends RootElementImpl implements Correlat
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
-                getCorrelationPropertyRetrievalExpression().clear();
-                getCorrelationPropertyRetrievalExpression().addAll((Collection<? extends CorrelationPropertyRetrievalExpression>)newValue);
-                return;
+        case BpmnPackage.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
+            getCorrelationPropertyRetrievalExpression().clear();
+            getCorrelationPropertyRetrievalExpression()
+                    .addAll(
+                            (Collection<? extends CorrelationPropertyRetrievalExpression>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -136,9 +143,9 @@ public class CorrelationPropertyImpl extends RootElementImpl implements Correlat
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
-                getCorrelationPropertyRetrievalExpression().clear();
-                return;
+        case BpmnPackage.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
+            getCorrelationPropertyRetrievalExpression().clear();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -151,8 +158,9 @@ public class CorrelationPropertyImpl extends RootElementImpl implements Correlat
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
-                return correlationPropertyRetrievalExpression != null && !correlationPropertyRetrievalExpression.isEmpty();
+        case BpmnPackage.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
+            return correlationPropertyRetrievalExpression != null
+                    && !correlationPropertyRetrievalExpression.isEmpty();
         }
         return super.eIsSet(featureID);
     }

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -26,8 +25,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.ConversationAssociation;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -44,7 +43,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class ConversationAssociationImpl extends BaseElementImpl implements ConversationAssociation {
+public class ConversationAssociationImpl extends BaseElementImpl implements
+        ConversationAssociation {
     /**
      * The cached value of the '{@link #getMessageFlowRef() <em>Message Flow Ref</em>}' attribute list.
      * <!-- begin-user-doc -->
@@ -111,7 +111,7 @@ public class ConversationAssociationImpl extends BaseElementImpl implements Conv
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getConversationAssociation();
+        return BpmnPackage.eINSTANCE.getConversationAssociation();
     }
 
     /**
@@ -121,7 +121,8 @@ public class ConversationAssociationImpl extends BaseElementImpl implements Conv
      */
     public EList<QName> getMessageFlowRef() {
         if (messageFlowRef == null) {
-            messageFlowRef = new EDataTypeEList<QName>(QName.class, this, bpmnPackage.CONVERSATION_ASSOCIATION__MESSAGE_FLOW_REF);
+            messageFlowRef = new EDataTypeEList<QName>(QName.class, this,
+                    BpmnPackage.CONVERSATION_ASSOCIATION__MESSAGE_FLOW_REF);
         }
         return messageFlowRef;
     }
@@ -144,7 +145,9 @@ public class ConversationAssociationImpl extends BaseElementImpl implements Conv
         QName oldConversationRef = conversationRef;
         conversationRef = newConversationRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.CONVERSATION_ASSOCIATION__CONVERSATION_REF, oldConversationRef, conversationRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.CONVERSATION_ASSOCIATION__CONVERSATION_REF,
+                    oldConversationRef, conversationRef));
     }
 
     /**
@@ -165,7 +168,9 @@ public class ConversationAssociationImpl extends BaseElementImpl implements Conv
         QName oldCorrelationKeyRef = correlationKeyRef;
         correlationKeyRef = newCorrelationKeyRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.CONVERSATION_ASSOCIATION__CORRELATION_KEY_REF, oldCorrelationKeyRef, correlationKeyRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.CONVERSATION_ASSOCIATION__CORRELATION_KEY_REF,
+                    oldCorrelationKeyRef, correlationKeyRef));
     }
 
     /**
@@ -176,12 +181,12 @@ public class ConversationAssociationImpl extends BaseElementImpl implements Conv
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.CONVERSATION_ASSOCIATION__MESSAGE_FLOW_REF:
-                return getMessageFlowRef();
-            case bpmnPackage.CONVERSATION_ASSOCIATION__CONVERSATION_REF:
-                return getConversationRef();
-            case bpmnPackage.CONVERSATION_ASSOCIATION__CORRELATION_KEY_REF:
-                return getCorrelationKeyRef();
+        case BpmnPackage.CONVERSATION_ASSOCIATION__MESSAGE_FLOW_REF:
+            return getMessageFlowRef();
+        case BpmnPackage.CONVERSATION_ASSOCIATION__CONVERSATION_REF:
+            return getConversationRef();
+        case BpmnPackage.CONVERSATION_ASSOCIATION__CORRELATION_KEY_REF:
+            return getCorrelationKeyRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -195,16 +200,16 @@ public class ConversationAssociationImpl extends BaseElementImpl implements Conv
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.CONVERSATION_ASSOCIATION__MESSAGE_FLOW_REF:
-                getMessageFlowRef().clear();
-                getMessageFlowRef().addAll((Collection<? extends QName>)newValue);
-                return;
-            case bpmnPackage.CONVERSATION_ASSOCIATION__CONVERSATION_REF:
-                setConversationRef((QName)newValue);
-                return;
-            case bpmnPackage.CONVERSATION_ASSOCIATION__CORRELATION_KEY_REF:
-                setCorrelationKeyRef((QName)newValue);
-                return;
+        case BpmnPackage.CONVERSATION_ASSOCIATION__MESSAGE_FLOW_REF:
+            getMessageFlowRef().clear();
+            getMessageFlowRef().addAll((Collection<? extends QName>) newValue);
+            return;
+        case BpmnPackage.CONVERSATION_ASSOCIATION__CONVERSATION_REF:
+            setConversationRef((QName) newValue);
+            return;
+        case BpmnPackage.CONVERSATION_ASSOCIATION__CORRELATION_KEY_REF:
+            setCorrelationKeyRef((QName) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -217,15 +222,15 @@ public class ConversationAssociationImpl extends BaseElementImpl implements Conv
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CONVERSATION_ASSOCIATION__MESSAGE_FLOW_REF:
-                getMessageFlowRef().clear();
-                return;
-            case bpmnPackage.CONVERSATION_ASSOCIATION__CONVERSATION_REF:
-                setConversationRef(CONVERSATION_REF_EDEFAULT);
-                return;
-            case bpmnPackage.CONVERSATION_ASSOCIATION__CORRELATION_KEY_REF:
-                setCorrelationKeyRef(CORRELATION_KEY_REF_EDEFAULT);
-                return;
+        case BpmnPackage.CONVERSATION_ASSOCIATION__MESSAGE_FLOW_REF:
+            getMessageFlowRef().clear();
+            return;
+        case BpmnPackage.CONVERSATION_ASSOCIATION__CONVERSATION_REF:
+            setConversationRef(CONVERSATION_REF_EDEFAULT);
+            return;
+        case BpmnPackage.CONVERSATION_ASSOCIATION__CORRELATION_KEY_REF:
+            setCorrelationKeyRef(CORRELATION_KEY_REF_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -238,12 +243,14 @@ public class ConversationAssociationImpl extends BaseElementImpl implements Conv
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CONVERSATION_ASSOCIATION__MESSAGE_FLOW_REF:
-                return messageFlowRef != null && !messageFlowRef.isEmpty();
-            case bpmnPackage.CONVERSATION_ASSOCIATION__CONVERSATION_REF:
-                return CONVERSATION_REF_EDEFAULT == null ? conversationRef != null : !CONVERSATION_REF_EDEFAULT.equals(conversationRef);
-            case bpmnPackage.CONVERSATION_ASSOCIATION__CORRELATION_KEY_REF:
-                return CORRELATION_KEY_REF_EDEFAULT == null ? correlationKeyRef != null : !CORRELATION_KEY_REF_EDEFAULT.equals(correlationKeyRef);
+        case BpmnPackage.CONVERSATION_ASSOCIATION__MESSAGE_FLOW_REF:
+            return messageFlowRef != null && !messageFlowRef.isEmpty();
+        case BpmnPackage.CONVERSATION_ASSOCIATION__CONVERSATION_REF:
+            return CONVERSATION_REF_EDEFAULT == null ? conversationRef != null
+                    : !CONVERSATION_REF_EDEFAULT.equals(conversationRef);
+        case BpmnPackage.CONVERSATION_ASSOCIATION__CORRELATION_KEY_REF:
+            return CORRELATION_KEY_REF_EDEFAULT == null ? correlationKeyRef != null
+                    : !CORRELATION_KEY_REF_EDEFAULT.equals(correlationKeyRef);
         }
         return super.eIsSet(featureID);
     }
@@ -255,7 +262,8 @@ public class ConversationAssociationImpl extends BaseElementImpl implements Conv
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (messageFlowRef: "); //$NON-NLS-1$

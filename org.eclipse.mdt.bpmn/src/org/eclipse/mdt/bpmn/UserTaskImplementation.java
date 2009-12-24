@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -23,7 +22,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>User Task Implementation</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getUserTaskImplementation()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getUserTaskImplementation()
  * @model extendedMetaData="name='tUserTaskImplementation'"
  * @generated
  */
@@ -134,13 +133,8 @@ public enum UserTaskImplementation implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    private static final UserTaskImplementation[] VALUES_ARRAY =
-        new UserTaskImplementation[] {
-            UNSPECIFIED,
-            OTHER,
-            WEB_SERVICE,
-            HUMAN_TASK_WEB_SERVICE,
-        };
+    private static final UserTaskImplementation[] VALUES_ARRAY = new UserTaskImplementation[] {
+            UNSPECIFIED, OTHER, WEB_SERVICE, HUMAN_TASK_WEB_SERVICE, };
 
     /**
      * A public read-only list of all the '<em><b>User Task Implementation</b></em>' enumerators.
@@ -148,7 +142,8 @@ public enum UserTaskImplementation implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final List<UserTaskImplementation> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+    public static final List<UserTaskImplementation> VALUES = Collections
+            .unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
     /**
      * Returns the '<em><b>User Task Implementation</b></em>' literal with the specified literal value.
@@ -190,10 +185,14 @@ public enum UserTaskImplementation implements Enumerator {
      */
     public static UserTaskImplementation get(int value) {
         switch (value) {
-            case UNSPECIFIED_VALUE: return UNSPECIFIED;
-            case OTHER_VALUE: return OTHER;
-            case WEB_SERVICE_VALUE: return WEB_SERVICE;
-            case HUMAN_TASK_WEB_SERVICE_VALUE: return HUMAN_TASK_WEB_SERVICE;
+        case UNSPECIFIED_VALUE:
+            return UNSPECIFIED;
+        case OTHER_VALUE:
+            return OTHER;
+        case WEB_SERVICE_VALUE:
+            return WEB_SERVICE;
+        case HUMAN_TASK_WEB_SERVICE_VALUE:
+            return HUMAN_TASK_WEB_SERVICE;
         }
         return null;
     }
@@ -237,7 +236,7 @@ public enum UserTaskImplementation implements Enumerator {
      * @generated
      */
     public int getValue() {
-      return value;
+        return value;
     }
 
     /**
@@ -246,7 +245,7 @@ public enum UserTaskImplementation implements Enumerator {
      * @generated
      */
     public String getName() {
-      return name;
+        return name;
     }
 
     /**
@@ -255,7 +254,7 @@ public enum UserTaskImplementation implements Enumerator {
      * @generated
      */
     public String getLiteral() {
-      return literal;
+        return literal;
     }
 
     /**
@@ -268,5 +267,5 @@ public enum UserTaskImplementation implements Enumerator {
     public String toString() {
         return literal;
     }
-    
+
 } //UserTaskImplementation

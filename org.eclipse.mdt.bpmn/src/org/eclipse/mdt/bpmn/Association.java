@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -28,7 +27,7 @@ import javax.xml.namespace.QName;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getAssociation()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getAssociation()
  * @model extendedMetaData="name='tAssociation' kind='elementOnly'"
  * @generated
  */
@@ -48,7 +47,7 @@ public interface Association extends Artifact {
      * @see #isSetAssociationDirection()
      * @see #unsetAssociationDirection()
      * @see #setAssociationDirection(AssociationDirection)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getAssociation_AssociationDirection()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getAssociation_AssociationDirection()
      * @model default="none" unsettable="true"
      *        extendedMetaData="kind='attribute' name='associationDirection'"
      * @generated
@@ -101,7 +100,7 @@ public interface Association extends Artifact {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Source Ref</em>' attribute.
      * @see #setSourceRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getAssociation_SourceRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getAssociation_SourceRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName" required="true"
      *        extendedMetaData="kind='attribute' name='sourceRef'"
      * @generated
@@ -128,7 +127,7 @@ public interface Association extends Artifact {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Target Ref</em>' attribute.
      * @see #setTargetRef(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getAssociation_TargetRef()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getAssociation_TargetRef()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName" required="true"
      *        extendedMetaData="kind='attribute' name='targetRef'"
      * @generated

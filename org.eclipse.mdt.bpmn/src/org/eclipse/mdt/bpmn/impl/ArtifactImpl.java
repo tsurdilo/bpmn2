@@ -8,14 +8,13 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.mdt.bpmn.Artifact;
-import org.eclipse.mdt.bpmn.bpmnPackage;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,7 +42,7 @@ public abstract class ArtifactImpl extends BaseElementImpl implements Artifact {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getArtifact();
+        return BpmnPackage.eINSTANCE.getArtifact();
     }
 
 } //ArtifactImpl

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -29,7 +28,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getInputOutputSpecification()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getInputOutputSpecification()
  * @model extendedMetaData="name='tInputOutputSpecification' kind='elementOnly'"
  * @generated
  */
@@ -44,7 +43,7 @@ public interface InputOutputSpecification extends BaseElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data Input</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getInputOutputSpecification_DataInput()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getInputOutputSpecification_DataInput()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='dataInput' namespace='##targetNamespace'"
      * @generated
@@ -61,7 +60,7 @@ public interface InputOutputSpecification extends BaseElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data Output</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getInputOutputSpecification_DataOutput()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getInputOutputSpecification_DataOutput()
      * @model containment="true"
      *        extendedMetaData="kind='element' name='dataOutput' namespace='##targetNamespace'"
      * @generated
@@ -78,7 +77,7 @@ public interface InputOutputSpecification extends BaseElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Input Set</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getInputOutputSpecification_InputSet()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getInputOutputSpecification_InputSet()
      * @model containment="true" required="true"
      *        extendedMetaData="kind='element' name='inputSet' namespace='##targetNamespace'"
      * @generated
@@ -95,7 +94,7 @@ public interface InputOutputSpecification extends BaseElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Output Set</em>' containment reference list.
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getInputOutputSpecification_OutputSet()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getInputOutputSpecification_OutputSet()
      * @model containment="true" required="true"
      *        extendedMetaData="kind='element' name='outputSet' namespace='##targetNamespace'"
      * @generated

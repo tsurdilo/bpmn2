@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -22,8 +21,8 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.FlowNode;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -76,7 +75,7 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getFlowNode();
+        return BpmnPackage.eINSTANCE.getFlowNode();
     }
 
     /**
@@ -86,7 +85,8 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
      */
     public EList<QName> getIncoming() {
         if (incoming == null) {
-            incoming = new EDataTypeEList<QName>(QName.class, this, bpmnPackage.FLOW_NODE__INCOMING);
+            incoming = new EDataTypeEList<QName>(QName.class, this,
+                    BpmnPackage.FLOW_NODE__INCOMING);
         }
         return incoming;
     }
@@ -98,7 +98,8 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
      */
     public EList<QName> getOutgoing() {
         if (outgoing == null) {
-            outgoing = new EDataTypeEList<QName>(QName.class, this, bpmnPackage.FLOW_NODE__OUTGOING);
+            outgoing = new EDataTypeEList<QName>(QName.class, this,
+                    BpmnPackage.FLOW_NODE__OUTGOING);
         }
         return outgoing;
     }
@@ -111,10 +112,10 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.FLOW_NODE__INCOMING:
-                return getIncoming();
-            case bpmnPackage.FLOW_NODE__OUTGOING:
-                return getOutgoing();
+        case BpmnPackage.FLOW_NODE__INCOMING:
+            return getIncoming();
+        case BpmnPackage.FLOW_NODE__OUTGOING:
+            return getOutgoing();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -128,14 +129,14 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.FLOW_NODE__INCOMING:
-                getIncoming().clear();
-                getIncoming().addAll((Collection<? extends QName>)newValue);
-                return;
-            case bpmnPackage.FLOW_NODE__OUTGOING:
-                getOutgoing().clear();
-                getOutgoing().addAll((Collection<? extends QName>)newValue);
-                return;
+        case BpmnPackage.FLOW_NODE__INCOMING:
+            getIncoming().clear();
+            getIncoming().addAll((Collection<? extends QName>) newValue);
+            return;
+        case BpmnPackage.FLOW_NODE__OUTGOING:
+            getOutgoing().clear();
+            getOutgoing().addAll((Collection<? extends QName>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -148,12 +149,12 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.FLOW_NODE__INCOMING:
-                getIncoming().clear();
-                return;
-            case bpmnPackage.FLOW_NODE__OUTGOING:
-                getOutgoing().clear();
-                return;
+        case BpmnPackage.FLOW_NODE__INCOMING:
+            getIncoming().clear();
+            return;
+        case BpmnPackage.FLOW_NODE__OUTGOING:
+            getOutgoing().clear();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -166,10 +167,10 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.FLOW_NODE__INCOMING:
-                return incoming != null && !incoming.isEmpty();
-            case bpmnPackage.FLOW_NODE__OUTGOING:
-                return outgoing != null && !outgoing.isEmpty();
+        case BpmnPackage.FLOW_NODE__INCOMING:
+            return incoming != null && !incoming.isEmpty();
+        case BpmnPackage.FLOW_NODE__OUTGOING:
+            return outgoing != null && !outgoing.isEmpty();
         }
         return super.eIsSet(featureID);
     }
@@ -181,7 +182,8 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (incoming: "); //$NON-NLS-1$

@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn;
 
@@ -26,7 +25,7 @@ import javax.xml.namespace.QName;
  * </ul>
  * </p>
  *
- * @see org.eclipse.mdt.bpmn.bpmnPackage#getCallActivity()
+ * @see org.eclipse.mdt.bpmn.BpmnPackage#getCallActivity()
  * @model extendedMetaData="name='tCallActivity' kind='elementOnly'"
  * @generated
  */
@@ -41,7 +40,7 @@ public interface CallActivity extends Activity {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Called Element</em>' attribute.
      * @see #setCalledElement(QName)
-     * @see org.eclipse.mdt.bpmn.bpmnPackage#getCallActivity_CalledElement()
+     * @see org.eclipse.mdt.bpmn.BpmnPackage#getCallActivity_CalledElement()
      * @model dataType="org.eclipse.emf.ecore.xml.type.QName"
      *        extendedMetaData="kind='attribute' name='calledElement'"
      * @generated

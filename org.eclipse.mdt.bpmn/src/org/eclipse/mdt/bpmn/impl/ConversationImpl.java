@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -30,12 +29,12 @@ import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.mdt.bpmn.Artifact;
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.Conversation;
 import org.eclipse.mdt.bpmn.ConversationNode;
 import org.eclipse.mdt.bpmn.CorrelationKey;
 import org.eclipse.mdt.bpmn.MessageFlow;
 import org.eclipse.mdt.bpmn.Participant;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -57,7 +56,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class ConversationImpl extends CallableElementImpl implements Conversation {
+public class ConversationImpl extends CallableElementImpl implements
+        Conversation {
     /**
      * The cached value of the '{@link #getConversationNodeGroup() <em>Conversation Node Group</em>}' attribute list.
      * <!-- begin-user-doc -->
@@ -134,7 +134,7 @@ public class ConversationImpl extends CallableElementImpl implements Conversatio
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getConversation();
+        return BpmnPackage.eINSTANCE.getConversation();
     }
 
     /**
@@ -144,7 +144,8 @@ public class ConversationImpl extends CallableElementImpl implements Conversatio
      */
     public FeatureMap getConversationNodeGroup() {
         if (conversationNodeGroup == null) {
-            conversationNodeGroup = new BasicFeatureMap(this, bpmnPackage.CONVERSATION__CONVERSATION_NODE_GROUP);
+            conversationNodeGroup = new BasicFeatureMap(this,
+                    BpmnPackage.CONVERSATION__CONVERSATION_NODE_GROUP);
         }
         return conversationNodeGroup;
     }
@@ -155,7 +156,8 @@ public class ConversationImpl extends CallableElementImpl implements Conversatio
      * @generated
      */
     public EList<ConversationNode> getConversationNode() {
-        return getConversationNodeGroup().list(bpmnPackage.eINSTANCE.getConversation_ConversationNode());
+        return getConversationNodeGroup().list(
+                BpmnPackage.eINSTANCE.getConversation_ConversationNode());
     }
 
     /**
@@ -165,7 +167,9 @@ public class ConversationImpl extends CallableElementImpl implements Conversatio
      */
     public EList<Participant> getParticipant() {
         if (participant == null) {
-            participant = new EObjectContainmentEList<Participant>(Participant.class, this, bpmnPackage.CONVERSATION__PARTICIPANT);
+            participant = new EObjectContainmentEList<Participant>(
+                    Participant.class, this,
+                    BpmnPackage.CONVERSATION__PARTICIPANT);
         }
         return participant;
     }
@@ -177,7 +181,8 @@ public class ConversationImpl extends CallableElementImpl implements Conversatio
      */
     public FeatureMap getArtifactGroup() {
         if (artifactGroup == null) {
-            artifactGroup = new BasicFeatureMap(this, bpmnPackage.CONVERSATION__ARTIFACT_GROUP);
+            artifactGroup = new BasicFeatureMap(this,
+                    BpmnPackage.CONVERSATION__ARTIFACT_GROUP);
         }
         return artifactGroup;
     }
@@ -188,7 +193,8 @@ public class ConversationImpl extends CallableElementImpl implements Conversatio
      * @generated
      */
     public EList<Artifact> getArtifact() {
-        return getArtifactGroup().list(bpmnPackage.eINSTANCE.getConversation_Artifact());
+        return getArtifactGroup().list(
+                BpmnPackage.eINSTANCE.getConversation_Artifact());
     }
 
     /**
@@ -198,7 +204,9 @@ public class ConversationImpl extends CallableElementImpl implements Conversatio
      */
     public EList<MessageFlow> getMessageFlow() {
         if (messageFlow == null) {
-            messageFlow = new EObjectContainmentEList<MessageFlow>(MessageFlow.class, this, bpmnPackage.CONVERSATION__MESSAGE_FLOW);
+            messageFlow = new EObjectContainmentEList<MessageFlow>(
+                    MessageFlow.class, this,
+                    BpmnPackage.CONVERSATION__MESSAGE_FLOW);
         }
         return messageFlow;
     }
@@ -210,7 +218,8 @@ public class ConversationImpl extends CallableElementImpl implements Conversatio
      */
     public EList<QName> getMessageFlowRef() {
         if (messageFlowRef == null) {
-            messageFlowRef = new EDataTypeEList<QName>(QName.class, this, bpmnPackage.CONVERSATION__MESSAGE_FLOW_REF);
+            messageFlowRef = new EDataTypeEList<QName>(QName.class, this,
+                    BpmnPackage.CONVERSATION__MESSAGE_FLOW_REF);
         }
         return messageFlowRef;
     }
@@ -222,7 +231,9 @@ public class ConversationImpl extends CallableElementImpl implements Conversatio
      */
     public EList<CorrelationKey> getCorrelationKey() {
         if (correlationKey == null) {
-            correlationKey = new EObjectContainmentEList<CorrelationKey>(CorrelationKey.class, this, bpmnPackage.CONVERSATION__CORRELATION_KEY);
+            correlationKey = new EObjectContainmentEList<CorrelationKey>(
+                    CorrelationKey.class, this,
+                    BpmnPackage.CONVERSATION__CORRELATION_KEY);
         }
         return correlationKey;
     }
@@ -233,22 +244,30 @@ public class ConversationImpl extends CallableElementImpl implements Conversatio
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd,
+            int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case bpmnPackage.CONVERSATION__CONVERSATION_NODE_GROUP:
-                return ((InternalEList<?>)getConversationNodeGroup()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.CONVERSATION__CONVERSATION_NODE:
-                return ((InternalEList<?>)getConversationNode()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.CONVERSATION__PARTICIPANT:
-                return ((InternalEList<?>)getParticipant()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.CONVERSATION__ARTIFACT_GROUP:
-                return ((InternalEList<?>)getArtifactGroup()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.CONVERSATION__ARTIFACT:
-                return ((InternalEList<?>)getArtifact()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.CONVERSATION__MESSAGE_FLOW:
-                return ((InternalEList<?>)getMessageFlow()).basicRemove(otherEnd, msgs);
-            case bpmnPackage.CONVERSATION__CORRELATION_KEY:
-                return ((InternalEList<?>)getCorrelationKey()).basicRemove(otherEnd, msgs);
+        case BpmnPackage.CONVERSATION__CONVERSATION_NODE_GROUP:
+            return ((InternalEList<?>) getConversationNodeGroup()).basicRemove(
+                    otherEnd, msgs);
+        case BpmnPackage.CONVERSATION__CONVERSATION_NODE:
+            return ((InternalEList<?>) getConversationNode()).basicRemove(
+                    otherEnd, msgs);
+        case BpmnPackage.CONVERSATION__PARTICIPANT:
+            return ((InternalEList<?>) getParticipant()).basicRemove(otherEnd,
+                    msgs);
+        case BpmnPackage.CONVERSATION__ARTIFACT_GROUP:
+            return ((InternalEList<?>) getArtifactGroup()).basicRemove(
+                    otherEnd, msgs);
+        case BpmnPackage.CONVERSATION__ARTIFACT:
+            return ((InternalEList<?>) getArtifact()).basicRemove(otherEnd,
+                    msgs);
+        case BpmnPackage.CONVERSATION__MESSAGE_FLOW:
+            return ((InternalEList<?>) getMessageFlow()).basicRemove(otherEnd,
+                    msgs);
+        case BpmnPackage.CONVERSATION__CORRELATION_KEY:
+            return ((InternalEList<?>) getCorrelationKey()).basicRemove(
+                    otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -261,24 +280,27 @@ public class ConversationImpl extends CallableElementImpl implements Conversatio
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.CONVERSATION__CONVERSATION_NODE_GROUP:
-                if (coreType) return getConversationNodeGroup();
-                return ((FeatureMap.Internal)getConversationNodeGroup()).getWrapper();
-            case bpmnPackage.CONVERSATION__CONVERSATION_NODE:
-                return getConversationNode();
-            case bpmnPackage.CONVERSATION__PARTICIPANT:
-                return getParticipant();
-            case bpmnPackage.CONVERSATION__ARTIFACT_GROUP:
-                if (coreType) return getArtifactGroup();
-                return ((FeatureMap.Internal)getArtifactGroup()).getWrapper();
-            case bpmnPackage.CONVERSATION__ARTIFACT:
-                return getArtifact();
-            case bpmnPackage.CONVERSATION__MESSAGE_FLOW:
-                return getMessageFlow();
-            case bpmnPackage.CONVERSATION__MESSAGE_FLOW_REF:
-                return getMessageFlowRef();
-            case bpmnPackage.CONVERSATION__CORRELATION_KEY:
-                return getCorrelationKey();
+        case BpmnPackage.CONVERSATION__CONVERSATION_NODE_GROUP:
+            if (coreType)
+                return getConversationNodeGroup();
+            return ((FeatureMap.Internal) getConversationNodeGroup())
+                    .getWrapper();
+        case BpmnPackage.CONVERSATION__CONVERSATION_NODE:
+            return getConversationNode();
+        case BpmnPackage.CONVERSATION__PARTICIPANT:
+            return getParticipant();
+        case BpmnPackage.CONVERSATION__ARTIFACT_GROUP:
+            if (coreType)
+                return getArtifactGroup();
+            return ((FeatureMap.Internal) getArtifactGroup()).getWrapper();
+        case BpmnPackage.CONVERSATION__ARTIFACT:
+            return getArtifact();
+        case BpmnPackage.CONVERSATION__MESSAGE_FLOW:
+            return getMessageFlow();
+        case BpmnPackage.CONVERSATION__MESSAGE_FLOW_REF:
+            return getMessageFlowRef();
+        case BpmnPackage.CONVERSATION__CORRELATION_KEY:
+            return getCorrelationKey();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -292,36 +314,40 @@ public class ConversationImpl extends CallableElementImpl implements Conversatio
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.CONVERSATION__CONVERSATION_NODE_GROUP:
-                ((FeatureMap.Internal)getConversationNodeGroup()).set(newValue);
-                return;
-            case bpmnPackage.CONVERSATION__CONVERSATION_NODE:
-                getConversationNode().clear();
-                getConversationNode().addAll((Collection<? extends ConversationNode>)newValue);
-                return;
-            case bpmnPackage.CONVERSATION__PARTICIPANT:
-                getParticipant().clear();
-                getParticipant().addAll((Collection<? extends Participant>)newValue);
-                return;
-            case bpmnPackage.CONVERSATION__ARTIFACT_GROUP:
-                ((FeatureMap.Internal)getArtifactGroup()).set(newValue);
-                return;
-            case bpmnPackage.CONVERSATION__ARTIFACT:
-                getArtifact().clear();
-                getArtifact().addAll((Collection<? extends Artifact>)newValue);
-                return;
-            case bpmnPackage.CONVERSATION__MESSAGE_FLOW:
-                getMessageFlow().clear();
-                getMessageFlow().addAll((Collection<? extends MessageFlow>)newValue);
-                return;
-            case bpmnPackage.CONVERSATION__MESSAGE_FLOW_REF:
-                getMessageFlowRef().clear();
-                getMessageFlowRef().addAll((Collection<? extends QName>)newValue);
-                return;
-            case bpmnPackage.CONVERSATION__CORRELATION_KEY:
-                getCorrelationKey().clear();
-                getCorrelationKey().addAll((Collection<? extends CorrelationKey>)newValue);
-                return;
+        case BpmnPackage.CONVERSATION__CONVERSATION_NODE_GROUP:
+            ((FeatureMap.Internal) getConversationNodeGroup()).set(newValue);
+            return;
+        case BpmnPackage.CONVERSATION__CONVERSATION_NODE:
+            getConversationNode().clear();
+            getConversationNode().addAll(
+                    (Collection<? extends ConversationNode>) newValue);
+            return;
+        case BpmnPackage.CONVERSATION__PARTICIPANT:
+            getParticipant().clear();
+            getParticipant().addAll(
+                    (Collection<? extends Participant>) newValue);
+            return;
+        case BpmnPackage.CONVERSATION__ARTIFACT_GROUP:
+            ((FeatureMap.Internal) getArtifactGroup()).set(newValue);
+            return;
+        case BpmnPackage.CONVERSATION__ARTIFACT:
+            getArtifact().clear();
+            getArtifact().addAll((Collection<? extends Artifact>) newValue);
+            return;
+        case BpmnPackage.CONVERSATION__MESSAGE_FLOW:
+            getMessageFlow().clear();
+            getMessageFlow().addAll(
+                    (Collection<? extends MessageFlow>) newValue);
+            return;
+        case BpmnPackage.CONVERSATION__MESSAGE_FLOW_REF:
+            getMessageFlowRef().clear();
+            getMessageFlowRef().addAll((Collection<? extends QName>) newValue);
+            return;
+        case BpmnPackage.CONVERSATION__CORRELATION_KEY:
+            getCorrelationKey().clear();
+            getCorrelationKey().addAll(
+                    (Collection<? extends CorrelationKey>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -334,30 +360,30 @@ public class ConversationImpl extends CallableElementImpl implements Conversatio
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CONVERSATION__CONVERSATION_NODE_GROUP:
-                getConversationNodeGroup().clear();
-                return;
-            case bpmnPackage.CONVERSATION__CONVERSATION_NODE:
-                getConversationNode().clear();
-                return;
-            case bpmnPackage.CONVERSATION__PARTICIPANT:
-                getParticipant().clear();
-                return;
-            case bpmnPackage.CONVERSATION__ARTIFACT_GROUP:
-                getArtifactGroup().clear();
-                return;
-            case bpmnPackage.CONVERSATION__ARTIFACT:
-                getArtifact().clear();
-                return;
-            case bpmnPackage.CONVERSATION__MESSAGE_FLOW:
-                getMessageFlow().clear();
-                return;
-            case bpmnPackage.CONVERSATION__MESSAGE_FLOW_REF:
-                getMessageFlowRef().clear();
-                return;
-            case bpmnPackage.CONVERSATION__CORRELATION_KEY:
-                getCorrelationKey().clear();
-                return;
+        case BpmnPackage.CONVERSATION__CONVERSATION_NODE_GROUP:
+            getConversationNodeGroup().clear();
+            return;
+        case BpmnPackage.CONVERSATION__CONVERSATION_NODE:
+            getConversationNode().clear();
+            return;
+        case BpmnPackage.CONVERSATION__PARTICIPANT:
+            getParticipant().clear();
+            return;
+        case BpmnPackage.CONVERSATION__ARTIFACT_GROUP:
+            getArtifactGroup().clear();
+            return;
+        case BpmnPackage.CONVERSATION__ARTIFACT:
+            getArtifact().clear();
+            return;
+        case BpmnPackage.CONVERSATION__MESSAGE_FLOW:
+            getMessageFlow().clear();
+            return;
+        case BpmnPackage.CONVERSATION__MESSAGE_FLOW_REF:
+            getMessageFlowRef().clear();
+            return;
+        case BpmnPackage.CONVERSATION__CORRELATION_KEY:
+            getCorrelationKey().clear();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -370,22 +396,23 @@ public class ConversationImpl extends CallableElementImpl implements Conversatio
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.CONVERSATION__CONVERSATION_NODE_GROUP:
-                return conversationNodeGroup != null && !conversationNodeGroup.isEmpty();
-            case bpmnPackage.CONVERSATION__CONVERSATION_NODE:
-                return !getConversationNode().isEmpty();
-            case bpmnPackage.CONVERSATION__PARTICIPANT:
-                return participant != null && !participant.isEmpty();
-            case bpmnPackage.CONVERSATION__ARTIFACT_GROUP:
-                return artifactGroup != null && !artifactGroup.isEmpty();
-            case bpmnPackage.CONVERSATION__ARTIFACT:
-                return !getArtifact().isEmpty();
-            case bpmnPackage.CONVERSATION__MESSAGE_FLOW:
-                return messageFlow != null && !messageFlow.isEmpty();
-            case bpmnPackage.CONVERSATION__MESSAGE_FLOW_REF:
-                return messageFlowRef != null && !messageFlowRef.isEmpty();
-            case bpmnPackage.CONVERSATION__CORRELATION_KEY:
-                return correlationKey != null && !correlationKey.isEmpty();
+        case BpmnPackage.CONVERSATION__CONVERSATION_NODE_GROUP:
+            return conversationNodeGroup != null
+                    && !conversationNodeGroup.isEmpty();
+        case BpmnPackage.CONVERSATION__CONVERSATION_NODE:
+            return !getConversationNode().isEmpty();
+        case BpmnPackage.CONVERSATION__PARTICIPANT:
+            return participant != null && !participant.isEmpty();
+        case BpmnPackage.CONVERSATION__ARTIFACT_GROUP:
+            return artifactGroup != null && !artifactGroup.isEmpty();
+        case BpmnPackage.CONVERSATION__ARTIFACT:
+            return !getArtifact().isEmpty();
+        case BpmnPackage.CONVERSATION__MESSAGE_FLOW:
+            return messageFlow != null && !messageFlow.isEmpty();
+        case BpmnPackage.CONVERSATION__MESSAGE_FLOW_REF:
+            return messageFlowRef != null && !messageFlowRef.isEmpty();
+        case BpmnPackage.CONVERSATION__CORRELATION_KEY:
+            return correlationKey != null && !correlationKey.isEmpty();
         }
         return super.eIsSet(featureID);
     }
@@ -397,7 +424,8 @@ public class ConversationImpl extends CallableElementImpl implements Conversatio
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (conversationNodeGroup: "); //$NON-NLS-1$

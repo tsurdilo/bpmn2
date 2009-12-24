@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -20,8 +19,8 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.FormalExpression;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,7 +36,8 @@ import org.eclipse.mdt.bpmn.bpmnPackage;
  *
  * @generated
  */
-public class FormalExpressionImpl extends ExpressionImpl implements FormalExpression {
+public class FormalExpressionImpl extends ExpressionImpl implements
+        FormalExpression {
     /**
      * The default value of the '{@link #getEvaluatesToTypeRef() <em>Evaluates To Type Ref</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -94,7 +94,7 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getFormalExpression();
+        return BpmnPackage.eINSTANCE.getFormalExpression();
     }
 
     /**
@@ -115,7 +115,9 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
         QName oldEvaluatesToTypeRef = evaluatesToTypeRef;
         evaluatesToTypeRef = newEvaluatesToTypeRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF, oldEvaluatesToTypeRef, evaluatesToTypeRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF,
+                    oldEvaluatesToTypeRef, evaluatesToTypeRef));
     }
 
     /**
@@ -136,7 +138,9 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
         String oldLanguage = language;
         language = newLanguage;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.FORMAL_EXPRESSION__LANGUAGE, oldLanguage, language));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.FORMAL_EXPRESSION__LANGUAGE, oldLanguage,
+                    language));
     }
 
     /**
@@ -147,10 +151,10 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF:
-                return getEvaluatesToTypeRef();
-            case bpmnPackage.FORMAL_EXPRESSION__LANGUAGE:
-                return getLanguage();
+        case BpmnPackage.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF:
+            return getEvaluatesToTypeRef();
+        case BpmnPackage.FORMAL_EXPRESSION__LANGUAGE:
+            return getLanguage();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -163,12 +167,12 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF:
-                setEvaluatesToTypeRef((QName)newValue);
-                return;
-            case bpmnPackage.FORMAL_EXPRESSION__LANGUAGE:
-                setLanguage((String)newValue);
-                return;
+        case BpmnPackage.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF:
+            setEvaluatesToTypeRef((QName) newValue);
+            return;
+        case BpmnPackage.FORMAL_EXPRESSION__LANGUAGE:
+            setLanguage((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -181,12 +185,12 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF:
-                setEvaluatesToTypeRef(EVALUATES_TO_TYPE_REF_EDEFAULT);
-                return;
-            case bpmnPackage.FORMAL_EXPRESSION__LANGUAGE:
-                setLanguage(LANGUAGE_EDEFAULT);
-                return;
+        case BpmnPackage.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF:
+            setEvaluatesToTypeRef(EVALUATES_TO_TYPE_REF_EDEFAULT);
+            return;
+        case BpmnPackage.FORMAL_EXPRESSION__LANGUAGE:
+            setLanguage(LANGUAGE_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -199,10 +203,13 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF:
-                return EVALUATES_TO_TYPE_REF_EDEFAULT == null ? evaluatesToTypeRef != null : !EVALUATES_TO_TYPE_REF_EDEFAULT.equals(evaluatesToTypeRef);
-            case bpmnPackage.FORMAL_EXPRESSION__LANGUAGE:
-                return LANGUAGE_EDEFAULT == null ? language != null : !LANGUAGE_EDEFAULT.equals(language);
+        case BpmnPackage.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF:
+            return EVALUATES_TO_TYPE_REF_EDEFAULT == null ? evaluatesToTypeRef != null
+                    : !EVALUATES_TO_TYPE_REF_EDEFAULT
+                            .equals(evaluatesToTypeRef);
+        case BpmnPackage.FORMAL_EXPRESSION__LANGUAGE:
+            return LANGUAGE_EDEFAULT == null ? language != null
+                    : !LANGUAGE_EDEFAULT.equals(language);
         }
         return super.eIsSet(featureID);
     }
@@ -214,7 +221,8 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (evaluatesToTypeRef: "); //$NON-NLS-1$

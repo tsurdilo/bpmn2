@@ -8,7 +8,6 @@
  *  Contributors:
  *     Intalio Inc. - initial API and implementation
  *
- * $Id$
  */
 package org.eclipse.mdt.bpmn.impl;
 
@@ -18,8 +17,8 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.mdt.bpmn.BpmnPackage;
 import org.eclipse.mdt.bpmn.DataState;
-import org.eclipse.mdt.bpmn.bpmnPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -71,7 +70,7 @@ public class DataStateImpl extends BaseElementImpl implements DataState {
      */
     @Override
     protected EClass eStaticClass() {
-        return bpmnPackage.eINSTANCE.getDataState();
+        return BpmnPackage.eINSTANCE.getDataState();
     }
 
     /**
@@ -92,7 +91,8 @@ public class DataStateImpl extends BaseElementImpl implements DataState {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, bpmnPackage.DATA_STATE__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnPackage.DATA_STATE__NAME, oldName, name));
     }
 
     /**
@@ -103,8 +103,8 @@ public class DataStateImpl extends BaseElementImpl implements DataState {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case bpmnPackage.DATA_STATE__NAME:
-                return getName();
+        case BpmnPackage.DATA_STATE__NAME:
+            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -117,9 +117,9 @@ public class DataStateImpl extends BaseElementImpl implements DataState {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case bpmnPackage.DATA_STATE__NAME:
-                setName((String)newValue);
-                return;
+        case BpmnPackage.DATA_STATE__NAME:
+            setName((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -132,9 +132,9 @@ public class DataStateImpl extends BaseElementImpl implements DataState {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case bpmnPackage.DATA_STATE__NAME:
-                setName(NAME_EDEFAULT);
-                return;
+        case BpmnPackage.DATA_STATE__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -147,8 +147,9 @@ public class DataStateImpl extends BaseElementImpl implements DataState {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case bpmnPackage.DATA_STATE__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case BpmnPackage.DATA_STATE__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
+                    .equals(name);
         }
         return super.eIsSet(featureID);
     }
@@ -160,7 +161,8 @@ public class DataStateImpl extends BaseElementImpl implements DataState {
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (name: "); //$NON-NLS-1$
