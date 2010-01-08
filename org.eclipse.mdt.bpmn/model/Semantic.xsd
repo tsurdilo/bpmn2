@@ -719,7 +719,7 @@
 	</xsd:complexType>	
 
 	<xsd:element name="formalExpression" type="tFormalExpression" substitutionGroup="expression"/>
-	<xsd:complexType name="tFormalExpression" mixed="true">
+	<xsd:complexType name="tFormalExpression">
 		<xsd:complexContent>
 			<xsd:extension base="tExpression">
 				<xsd:attribute name="language" type="xsd:anyURI" use="optional"/>
