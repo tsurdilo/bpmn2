@@ -80,7 +80,6 @@ import org.eclipse.ui.part.ISetSelectionTarget;
 import org.eclipse.bpmn.BpmnFactory;
 import org.eclipse.bpmn.BpmnPackage;
 import org.eclipse.bpmn.provider.bpmnEditPlugin;
-import org.eclipse.bpmn.provider.bpmnEditPlugin;
 
 import org.eclipse.core.runtime.Path;
 
