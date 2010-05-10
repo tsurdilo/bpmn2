@@ -37,7 +37,6 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.eclipse.bpmn.di.Diagram;
 
 /**
  * <!-- begin-user-doc -->

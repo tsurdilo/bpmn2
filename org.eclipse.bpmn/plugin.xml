@@ -20,7 +20,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://www.omg.org/bpmn20"
-            class="org.eclipse.mdt.bpmn.BpmnPackage"
+            class="org.eclipse.bpmn.BpmnPackage"
             genModel="model/BPMN.genmodel"/>
    </extension>
 
@@ -30,7 +30,7 @@
             base-type="org.eclipse.core.runtime.xml"
             default-charset="UTF-8"
             file-extensions="bpmn"
-            id="org.eclipse.mdt.bpmn.content-type"
+            id="org.eclipse.bpmn.content-type"
             name="BPMN 2.0 Content type"
             priority="normal">
          <describer
@@ -46,8 +46,8 @@
    <extension
          point="org.eclipse.emf.ecore.content_parser">
       <parser
-            class="org.eclipse.mdt.bpmn.util.BpmnResourceFactoryImpl"
-            contentTypeIdentifier="org.eclipse.mdt.bpmn.content-type">
+            class="org.eclipse.bpmn.util.BpmnResourceFactoryImpl"
+            contentTypeIdentifier="org.eclipse.bpmn.content-type">
       </parser>
    </extension>
 

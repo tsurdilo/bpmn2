@@ -39,9 +39,7 @@ import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
-import org.eclipse.bpmn.di.DIPackage;
 
-import org.eclipse.bpmn.di.impl.DIPackageImpl;
 
 /**
  * <!-- begin-user-doc -->

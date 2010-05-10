@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.EObject;
 
 import org.eclipse.emf.ecore.util.FeatureMap;
 
-import org.eclipse.bpmn.di.Diagram;
 
 /**
  * <!-- begin-user-doc -->
