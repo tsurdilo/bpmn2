@@ -133,8 +133,13 @@ public class InterfaceItemProvider extends RootElementItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/Interface.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Interface.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Interface.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -163,12 +168,12 @@ public class InterfaceItemProvider extends RootElementItemProvider implements
 
         switch (notification.getFeatureID(Interface.class)) {
         case BpmnPackage.INTERFACE__NAME:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.INTERFACE__OPERATION:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -186,9 +191,9 @@ public class InterfaceItemProvider extends RootElementItemProvider implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getInterface_Operation(), BpmnFactory.eINSTANCE
-                .createOperation()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getInterface_Operation(),
+                BpmnFactory.eINSTANCE.createOperation()));
     }
 
     /**

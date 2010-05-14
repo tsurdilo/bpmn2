@@ -100,8 +100,13 @@ public class EscalationItemProvider extends RootElementItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/Escalation.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Escalation.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Escalation.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -130,8 +135,8 @@ public class EscalationItemProvider extends RootElementItemProvider implements
 
         switch (notification.getFeatureID(Escalation.class)) {
         case BpmnPackage.ESCALATION__STRUCTURE_REF:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

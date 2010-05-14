@@ -209,8 +209,13 @@ public class DefinitionsItemProvider extends ItemProviderAdapter implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/Definitions.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Definitions.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Definitions.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -242,8 +247,8 @@ public class DefinitionsItemProvider extends ItemProviderAdapter implements
         case BpmnPackage.DEFINITIONS__ID:
         case BpmnPackage.DEFINITIONS__TARGET_NAMESPACE:
         case BpmnPackage.DEFINITIONS__TYPE_LANGUAGE:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.DEFINITIONS__IMPORT:
         case BpmnPackage.DEFINITIONS__EXTENSION:
@@ -251,8 +256,8 @@ public class DefinitionsItemProvider extends ItemProviderAdapter implements
         case BpmnPackage.DEFINITIONS__DIAGRAM:
         case BpmnPackage.DEFINITIONS__RELATIONSHIP:
         case BpmnPackage.DEFINITIONS__ANY_ATTRIBUTE:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -270,14 +275,13 @@ public class DefinitionsItemProvider extends ItemProviderAdapter implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors
-                .add(createChildParameter(BpmnPackage.eINSTANCE
-                        .getDefinitions_Import(), BpmnFactory.eINSTANCE
-                        .createImport()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getDefinitions_Import(),
+                BpmnFactory.eINSTANCE.createImport()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getDefinitions_Extension(), BpmnFactory.eINSTANCE
-                .createExtension()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getDefinitions_Extension(),
+                BpmnFactory.eINSTANCE.createExtension()));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDefinitions_RootElementGroup(), FeatureMapUtil.createEntry(
@@ -698,14 +702,13 @@ public class DefinitionsItemProvider extends ItemProviderAdapter implements
                 BpmnPackage.eINSTANCE.getDocumentRoot_TimerEventDefinition(),
                 BpmnFactory.eINSTANCE.createTimerEventDefinition())));
 
-        newChildDescriptors
-                .add(createChildParameter(BpmnPackage.eINSTANCE
-                        .getDefinitions_Diagram(), DIFactory.eINSTANCE
-                        .createDiagram()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getDefinitions_Diagram(),
+                DIFactory.eINSTANCE.createDiagram()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getDefinitions_Relationship(), BpmnFactory.eINSTANCE
-                .createRelationship()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getDefinitions_Relationship(),
+                BpmnFactory.eINSTANCE.createRelationship()));
     }
 
     /**

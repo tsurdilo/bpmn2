@@ -113,8 +113,17 @@ public class ComplexBehaviorDefinitionItemProvider extends
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/ComplexBehaviorDefinition.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/ComplexBehaviorDefinition.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/ComplexBehaviorDefinition.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -144,8 +153,8 @@ public class ComplexBehaviorDefinitionItemProvider extends
         switch (notification.getFeatureID(ComplexBehaviorDefinition.class)) {
         case BpmnPackage.COMPLEX_BEHAVIOR_DEFINITION__CONDITION:
         case BpmnPackage.COMPLEX_BEHAVIOR_DEFINITION__EVENT:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -163,13 +172,13 @@ public class ComplexBehaviorDefinitionItemProvider extends
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getComplexBehaviorDefinition_Condition(),
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getComplexBehaviorDefinition_Condition(),
                 BpmnFactory.eINSTANCE.createFormalExpression()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getComplexBehaviorDefinition_Event(), BpmnFactory.eINSTANCE
-                .createImplicitThrowEvent()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getComplexBehaviorDefinition_Event(),
+                BpmnFactory.eINSTANCE.createImplicitThrowEvent()));
     }
 
     /**

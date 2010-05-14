@@ -111,8 +111,17 @@ public class CorrelationPropertyItemProvider extends RootElementItemProvider
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/CorrelationProperty.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/CorrelationProperty.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/CorrelationProperty.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -141,8 +150,8 @@ public class CorrelationPropertyItemProvider extends RootElementItemProvider
 
         switch (notification.getFeatureID(CorrelationProperty.class)) {
         case BpmnPackage.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);

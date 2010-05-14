@@ -102,8 +102,17 @@ public class ChoreographyTaskItemProvider extends
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/ChoreographyTask.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/ChoreographyTask.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/ChoreographyTask.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -132,8 +141,8 @@ public class ChoreographyTaskItemProvider extends
 
         switch (notification.getFeatureID(ChoreographyTask.class)) {
         case BpmnPackage.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

@@ -161,8 +161,13 @@ public class BendpointItemProvider extends ItemProviderAdapter implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/Bendpoint.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Bendpoint.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Bendpoint.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -193,8 +198,8 @@ public class BendpointItemProvider extends ItemProviderAdapter implements
         case DIPackage.BENDPOINT__SOURCE_Y:
         case DIPackage.BENDPOINT__TARGET_X:
         case DIPackage.BENDPOINT__TARGET_Y:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

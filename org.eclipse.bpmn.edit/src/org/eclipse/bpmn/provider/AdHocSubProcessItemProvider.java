@@ -155,8 +155,17 @@ public class AdHocSubProcessItemProvider extends SubProcessItemProvider
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/AdHocSubProcess.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/AdHocSubProcess.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/AdHocSubProcess.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -186,12 +195,12 @@ public class AdHocSubProcessItemProvider extends SubProcessItemProvider
         switch (notification.getFeatureID(AdHocSubProcess.class)) {
         case BpmnPackage.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES:
         case BpmnPackage.AD_HOC_SUB_PROCESS__ORDERING:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -209,12 +218,12 @@ public class AdHocSubProcessItemProvider extends SubProcessItemProvider
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getAdHocSubProcess_CompletionCondition(),
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getAdHocSubProcess_CompletionCondition(),
                 BpmnFactory.eINSTANCE.createExpression()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getAdHocSubProcess_CompletionCondition(),
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getAdHocSubProcess_CompletionCondition(),
                 BpmnFactory.eINSTANCE.createFormalExpression()));
     }
 

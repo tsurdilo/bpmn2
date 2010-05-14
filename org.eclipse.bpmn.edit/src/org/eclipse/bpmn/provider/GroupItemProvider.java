@@ -100,8 +100,13 @@ public class GroupItemProvider extends ArtifactItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/Group.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Group.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Group.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -130,8 +135,8 @@ public class GroupItemProvider extends ArtifactItemProvider implements
 
         switch (notification.getFeatureID(Group.class)) {
         case BpmnPackage.GROUP__CATEGORY_REF:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

@@ -215,8 +215,17 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/MultiInstanceLoopCharacteristics.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/MultiInstanceLoopCharacteristics.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/MultiInstanceLoopCharacteristics.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -249,8 +258,8 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends
         case BpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__IS_SEQUENTIAL:
         case BpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__NONE_BEHAVIOR_EVENT_REF:
         case BpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__ONE_BEHAVIOR_EVENT_REF:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY:
         case BpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_INPUT:
@@ -259,8 +268,8 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends
         case BpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM:
         case BpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION:
         case BpmnPackage.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);

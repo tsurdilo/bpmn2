@@ -110,8 +110,13 @@ public class GlobalTaskItemProvider extends CallableElementItemProvider
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/GlobalTask.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/GlobalTask.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/GlobalTask.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -140,8 +145,8 @@ public class GlobalTaskItemProvider extends CallableElementItemProvider
 
         switch (notification.getFeatureID(GlobalTask.class)) {
         case BpmnPackage.GLOBAL_TASK__PERFORMER_GROUP:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);

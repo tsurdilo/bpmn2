@@ -117,8 +117,17 @@ public class InputOutputSpecificationItemProvider extends
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/InputOutputSpecification.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/InputOutputSpecification.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/InputOutputSpecification.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -150,8 +159,8 @@ public class InputOutputSpecificationItemProvider extends
         case BpmnPackage.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUT:
         case BpmnPackage.INPUT_OUTPUT_SPECIFICATION__INPUT_SET:
         case BpmnPackage.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SET:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -169,21 +178,21 @@ public class InputOutputSpecificationItemProvider extends
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getInputOutputSpecification_DataInput(), BpmnFactory.eINSTANCE
-                .createDataInput()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getInputOutputSpecification_DataInput(),
+                BpmnFactory.eINSTANCE.createDataInput()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getInputOutputSpecification_DataOutput(),
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getInputOutputSpecification_DataOutput(),
                 BpmnFactory.eINSTANCE.createDataOutput()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getInputOutputSpecification_InputSet(), BpmnFactory.eINSTANCE
-                .createInputSet()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getInputOutputSpecification_InputSet(),
+                BpmnFactory.eINSTANCE.createInputSet()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getInputOutputSpecification_OutputSet(), BpmnFactory.eINSTANCE
-                .createOutputSet()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getInputOutputSpecification_OutputSet(),
+                BpmnFactory.eINSTANCE.createOutputSet()));
     }
 
     /**

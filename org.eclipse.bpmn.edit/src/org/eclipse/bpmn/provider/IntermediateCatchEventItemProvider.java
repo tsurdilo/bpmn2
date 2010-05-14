@@ -76,8 +76,17 @@ public class IntermediateCatchEventItemProvider extends CatchEventItemProvider
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/IntermediateCatchEvent.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/IntermediateCatchEvent.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/IntermediateCatchEvent.gif")); //$NON-NLS-1$
+        }
     }
 
     /**

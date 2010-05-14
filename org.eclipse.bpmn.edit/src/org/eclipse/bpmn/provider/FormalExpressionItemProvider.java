@@ -122,8 +122,17 @@ public class FormalExpressionItemProvider extends ExpressionItemProvider
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/FormalExpression.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/FormalExpression.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/FormalExpression.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -153,8 +162,8 @@ public class FormalExpressionItemProvider extends ExpressionItemProvider
         switch (notification.getFeatureID(FormalExpression.class)) {
         case BpmnPackage.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF:
         case BpmnPackage.FORMAL_EXPRESSION__LANGUAGE:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

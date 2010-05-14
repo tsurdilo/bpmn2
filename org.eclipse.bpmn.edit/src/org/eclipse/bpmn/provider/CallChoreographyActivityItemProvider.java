@@ -135,8 +135,17 @@ public class CallChoreographyActivityItemProvider extends
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/CallChoreographyActivity.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/CallChoreographyActivity.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/CallChoreographyActivity.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -165,12 +174,12 @@ public class CallChoreographyActivityItemProvider extends
 
         switch (notification.getFeatureID(CallChoreographyActivity.class)) {
         case BpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__CALLED_ELEMENT:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__PARTICIPANT_ASSOCIATIONS:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);

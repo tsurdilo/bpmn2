@@ -100,8 +100,17 @@ public class CategoryValueItemProvider extends BaseElementItemProvider
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/CategoryValue.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/CategoryValue.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/CategoryValue.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -130,8 +139,8 @@ public class CategoryValueItemProvider extends BaseElementItemProvider
 
         switch (notification.getFeatureID(CategoryValue.class)) {
         case BpmnPackage.CATEGORY_VALUE__VALUE:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

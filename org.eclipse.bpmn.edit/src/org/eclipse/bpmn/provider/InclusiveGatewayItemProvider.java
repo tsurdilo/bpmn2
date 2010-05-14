@@ -100,8 +100,17 @@ public class InclusiveGatewayItemProvider extends GatewayItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/InclusiveGateway.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/InclusiveGateway.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/InclusiveGateway.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -130,8 +139,8 @@ public class InclusiveGatewayItemProvider extends GatewayItemProvider implements
 
         switch (notification.getFeatureID(InclusiveGateway.class)) {
         case BpmnPackage.INCLUSIVE_GATEWAY__DEFAULT:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

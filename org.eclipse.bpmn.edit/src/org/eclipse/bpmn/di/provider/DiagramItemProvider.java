@@ -104,8 +104,13 @@ public class DiagramItemProvider extends ViewItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/Diagram.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Diagram.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Diagram.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -134,8 +139,8 @@ public class DiagramItemProvider extends ViewItemProvider implements
 
         switch (notification.getFeatureID(Diagram.class)) {
         case DIPackage.DIAGRAM__CONNECTOR:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -154,8 +159,8 @@ public class DiagramItemProvider extends ViewItemProvider implements
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
         newChildDescriptors.add(createChildParameter(
-                DIPackage.Literals.DIAGRAM__CONNECTOR, DIFactory.eINSTANCE
-                        .createConnector()));
+                DIPackage.Literals.DIAGRAM__CONNECTOR,
+                DIFactory.eINSTANCE.createConnector()));
     }
 
 }

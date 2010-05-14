@@ -180,15 +180,15 @@ public class CatchEventItemProvider extends EventItemProvider implements
         switch (notification.getFeatureID(CatchEvent.class)) {
         case BpmnPackage.CATCH_EVENT__EVENT_DEFINITION_REFS:
         case BpmnPackage.CATCH_EVENT__PARALLEL_MULTIPLE:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.CATCH_EVENT__DATA_OUTPUTS:
         case BpmnPackage.CATCH_EVENT__DATA_OUTPUT_ASSOCIATIONS:
         case BpmnPackage.CATCH_EVENT__OUTPUT_SET:
         case BpmnPackage.CATCH_EVENT__EVENT_DEFINITION_GROUPS:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -206,27 +206,27 @@ public class CatchEventItemProvider extends EventItemProvider implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getCatchEvent_DataOutputs(), BpmnFactory.eINSTANCE
-                .createDataOutput()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getCatchEvent_DataOutputs(),
+                BpmnFactory.eINSTANCE.createDataOutput()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getCatchEvent_DataOutputAssociations(), BpmnFactory.eINSTANCE
-                .createDataOutputAssociation()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getCatchEvent_DataOutputAssociations(),
+                BpmnFactory.eINSTANCE.createDataOutputAssociation()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getCatchEvent_OutputSet(), BpmnFactory.eINSTANCE
-                .createOutputSet()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getCatchEvent_OutputSet(),
+                BpmnFactory.eINSTANCE.createOutputSet()));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getCatchEvent_EventDefinitionGroups(), FeatureMapUtil
-                .createEntry(BpmnPackage.eINSTANCE
-                        .getCatchEvent_EventDefinitions(),
+                .createEntry(
+                        BpmnPackage.eINSTANCE.getCatchEvent_EventDefinitions(),
                         BpmnFactory.eINSTANCE.createCancelEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getCatchEvent_EventDefinitionGroups(),
-                FeatureMapUtil
+        newChildDescriptors
+                .add(createChildParameter(BpmnPackage.eINSTANCE
+                        .getCatchEvent_EventDefinitionGroups(), FeatureMapUtil
                         .createEntry(BpmnPackage.eINSTANCE
                                 .getCatchEvent_EventDefinitions(),
                                 BpmnFactory.eINSTANCE
@@ -241,13 +241,13 @@ public class CatchEventItemProvider extends EventItemProvider implements
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getCatchEvent_EventDefinitionGroups(), FeatureMapUtil
-                .createEntry(BpmnPackage.eINSTANCE
-                        .getCatchEvent_EventDefinitions(),
+                .createEntry(
+                        BpmnPackage.eINSTANCE.getCatchEvent_EventDefinitions(),
                         BpmnFactory.eINSTANCE.createErrorEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getCatchEvent_EventDefinitionGroups(),
-                FeatureMapUtil
+        newChildDescriptors
+                .add(createChildParameter(BpmnPackage.eINSTANCE
+                        .getCatchEvent_EventDefinitionGroups(), FeatureMapUtil
                         .createEntry(BpmnPackage.eINSTANCE
                                 .getCatchEvent_EventDefinitions(),
                                 BpmnFactory.eINSTANCE
@@ -255,20 +255,20 @@ public class CatchEventItemProvider extends EventItemProvider implements
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getCatchEvent_EventDefinitionGroups(), FeatureMapUtil
-                .createEntry(BpmnPackage.eINSTANCE
-                        .getCatchEvent_EventDefinitions(),
+                .createEntry(
+                        BpmnPackage.eINSTANCE.getCatchEvent_EventDefinitions(),
                         BpmnFactory.eINSTANCE.createLinkEventDefinition())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getCatchEvent_EventDefinitionGroups(), FeatureMapUtil
-                .createEntry(BpmnPackage.eINSTANCE
-                        .getCatchEvent_EventDefinitions(),
+                .createEntry(
+                        BpmnPackage.eINSTANCE.getCatchEvent_EventDefinitions(),
                         BpmnFactory.eINSTANCE.createMessageEventDefinition())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getCatchEvent_EventDefinitionGroups(), FeatureMapUtil
-                .createEntry(BpmnPackage.eINSTANCE
-                        .getCatchEvent_EventDefinitions(),
+                .createEntry(
+                        BpmnPackage.eINSTANCE.getCatchEvent_EventDefinitions(),
                         BpmnFactory.eINSTANCE.createSignalEventDefinition())));
 
         newChildDescriptors
@@ -281,8 +281,8 @@ public class CatchEventItemProvider extends EventItemProvider implements
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getCatchEvent_EventDefinitionGroups(), FeatureMapUtil
-                .createEntry(BpmnPackage.eINSTANCE
-                        .getCatchEvent_EventDefinitions(),
+                .createEntry(
+                        BpmnPackage.eINSTANCE.getCatchEvent_EventDefinitions(),
                         BpmnFactory.eINSTANCE.createTimerEventDefinition())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
@@ -291,9 +291,9 @@ public class CatchEventItemProvider extends EventItemProvider implements
                         .getDocumentRoot_CancelEventDefinition(),
                         BpmnFactory.eINSTANCE.createCancelEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getCatchEvent_EventDefinitionGroups(),
-                FeatureMapUtil
+        newChildDescriptors
+                .add(createChildParameter(BpmnPackage.eINSTANCE
+                        .getCatchEvent_EventDefinitionGroups(), FeatureMapUtil
                         .createEntry(BpmnPackage.eINSTANCE
                                 .getDocumentRoot_CompensateEventDefinition(),
                                 BpmnFactory.eINSTANCE
@@ -312,9 +312,9 @@ public class CatchEventItemProvider extends EventItemProvider implements
                         .getDocumentRoot_ErrorEventDefinition(),
                         BpmnFactory.eINSTANCE.createErrorEventDefinition())));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getCatchEvent_EventDefinitionGroups(),
-                FeatureMapUtil
+        newChildDescriptors
+                .add(createChildParameter(BpmnPackage.eINSTANCE
+                        .getCatchEvent_EventDefinitionGroups(), FeatureMapUtil
                         .createEntry(BpmnPackage.eINSTANCE
                                 .getDocumentRoot_EscalationEventDefinition(),
                                 BpmnFactory.eINSTANCE

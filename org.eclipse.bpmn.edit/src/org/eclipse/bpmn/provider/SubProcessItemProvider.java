@@ -135,8 +135,13 @@ public class SubProcessItemProvider extends ActivityItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/SubProcess.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/SubProcess.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/SubProcess.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -165,13 +170,13 @@ public class SubProcessItemProvider extends ActivityItemProvider implements
 
         switch (notification.getFeatureID(SubProcess.class)) {
         case BpmnPackage.SUB_PROCESS__TRIGGERED_BY_EVENT:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.SUB_PROCESS__FLOW_ELEMENT_GROUPS:
         case BpmnPackage.SUB_PROCESS__ARTIFACT_GROUPS:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);

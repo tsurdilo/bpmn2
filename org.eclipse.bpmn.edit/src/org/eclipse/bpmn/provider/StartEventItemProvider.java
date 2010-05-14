@@ -100,8 +100,13 @@ public class StartEventItemProvider extends CatchEventItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/StartEvent.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/StartEvent.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/StartEvent.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -130,8 +135,8 @@ public class StartEventItemProvider extends CatchEventItemProvider implements
 
         switch (notification.getFeatureID(StartEvent.class)) {
         case BpmnPackage.START_EVENT__IS_INTERRUPTING:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

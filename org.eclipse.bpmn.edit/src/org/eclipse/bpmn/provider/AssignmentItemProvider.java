@@ -133,8 +133,13 @@ public class AssignmentItemProvider extends BaseElementItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/Assignment.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Assignment.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Assignment.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -163,13 +168,13 @@ public class AssignmentItemProvider extends BaseElementItemProvider implements
 
         switch (notification.getFeatureID(Assignment.class)) {
         case BpmnPackage.ASSIGNMENT__LANGUAGE:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.ASSIGNMENT__FROM:
         case BpmnPackage.ASSIGNMENT__TO:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -187,21 +192,21 @@ public class AssignmentItemProvider extends BaseElementItemProvider implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors
-                .add(createChildParameter(BpmnPackage.eINSTANCE
-                        .getAssignment_From(), BpmnFactory.eINSTANCE
-                        .createExpression()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getAssignment_From(),
+                BpmnFactory.eINSTANCE.createExpression()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getAssignment_From(), BpmnFactory.eINSTANCE
-                .createFormalExpression()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getAssignment_From(),
+                BpmnFactory.eINSTANCE.createFormalExpression()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getAssignment_To(), BpmnFactory.eINSTANCE.createExpression()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getAssignment_To(),
+                BpmnFactory.eINSTANCE.createExpression()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getAssignment_To(), BpmnFactory.eINSTANCE
-                .createFormalExpression()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getAssignment_To(),
+                BpmnFactory.eINSTANCE.createFormalExpression()));
     }
 
     /**

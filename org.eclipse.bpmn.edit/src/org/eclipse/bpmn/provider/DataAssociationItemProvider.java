@@ -131,8 +131,8 @@ public class DataAssociationItemProvider extends BaseElementItemProvider
         switch (notification.getFeatureID(DataAssociation.class)) {
         case BpmnPackage.DATA_ASSOCIATION__TRANSFORMATION:
         case BpmnPackage.DATA_ASSOCIATION__ASSIGNMENTS:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -150,13 +150,13 @@ public class DataAssociationItemProvider extends BaseElementItemProvider
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getDataAssociation_Transformation(), BpmnFactory.eINSTANCE
-                .createFormalExpression()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getDataAssociation_Transformation(),
+                BpmnFactory.eINSTANCE.createFormalExpression()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getDataAssociation_Assignments(), BpmnFactory.eINSTANCE
-                .createAssignment()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getDataAssociation_Assignments(),
+                BpmnFactory.eINSTANCE.createAssignment()));
     }
 
     /**

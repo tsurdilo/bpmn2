@@ -157,8 +157,17 @@ public class CorrelationSubscriptionItemProvider extends
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/CorrelationSubscription.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/CorrelationSubscription.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/CorrelationSubscription.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -188,12 +197,12 @@ public class CorrelationSubscriptionItemProvider extends
         switch (notification.getFeatureID(CorrelationSubscription.class)) {
         case BpmnPackage.CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF:
         case BpmnPackage.CORRELATION_SUBSCRIPTION__PROCESS:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.CORRELATION_SUBSCRIPTION__CORRELATION_PROPERTY_BINDING:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);

@@ -123,8 +123,17 @@ public class MessageFlowAssociationItemProvider extends BaseElementItemProvider
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/MessageFlowAssociation.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/MessageFlowAssociation.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/MessageFlowAssociation.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -154,8 +163,8 @@ public class MessageFlowAssociationItemProvider extends BaseElementItemProvider
         switch (notification.getFeatureID(MessageFlowAssociation.class)) {
         case BpmnPackage.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF:
         case BpmnPackage.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

@@ -135,8 +135,17 @@ public class ActivityResourceItemProvider extends BaseElementItemProvider
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/ActivityResource.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/ActivityResource.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/ActivityResource.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -165,13 +174,13 @@ public class ActivityResourceItemProvider extends BaseElementItemProvider
 
         switch (notification.getFeatureID(ActivityResource.class)) {
         case BpmnPackage.ACTIVITY_RESOURCE__RESOURCE_REF:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.ACTIVITY_RESOURCE__RESOURCE_ASSIGNMENT_EXPRESSION:
         case BpmnPackage.ACTIVITY_RESOURCE__RESOURCE_PARAMETER_BINDINGS:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);

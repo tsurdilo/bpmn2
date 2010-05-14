@@ -185,8 +185,13 @@ public class InputSetItemProvider extends BaseElementItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/InputSet.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/InputSet.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/InputSet.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -219,8 +224,8 @@ public class InputSetItemProvider extends BaseElementItemProvider implements
         case BpmnPackage.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
         case BpmnPackage.INPUT_SET__OUTPUT_SET_REFS:
         case BpmnPackage.INPUT_SET__NAME:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

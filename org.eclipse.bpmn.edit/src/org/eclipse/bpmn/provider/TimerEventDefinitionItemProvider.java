@@ -113,8 +113,17 @@ public class TimerEventDefinitionItemProvider extends
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/TimerEventDefinition.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/TimerEventDefinition.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/TimerEventDefinition.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -144,8 +153,8 @@ public class TimerEventDefinitionItemProvider extends
         switch (notification.getFeatureID(TimerEventDefinition.class)) {
         case BpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE:
         case BpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -163,21 +172,21 @@ public class TimerEventDefinitionItemProvider extends
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getTimerEventDefinition_TimeDate(), BpmnFactory.eINSTANCE
-                .createExpression()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getTimerEventDefinition_TimeDate(),
+                BpmnFactory.eINSTANCE.createExpression()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getTimerEventDefinition_TimeDate(), BpmnFactory.eINSTANCE
-                .createFormalExpression()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getTimerEventDefinition_TimeDate(),
+                BpmnFactory.eINSTANCE.createFormalExpression()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getTimerEventDefinition_TimeCycle(), BpmnFactory.eINSTANCE
-                .createExpression()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getTimerEventDefinition_TimeCycle(),
+                BpmnFactory.eINSTANCE.createExpression()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getTimerEventDefinition_TimeCycle(), BpmnFactory.eINSTANCE
-                .createFormalExpression()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getTimerEventDefinition_TimeCycle(),
+                BpmnFactory.eINSTANCE.createFormalExpression()));
     }
 
     /**

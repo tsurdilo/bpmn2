@@ -117,8 +117,13 @@ public class StyleItemProvider extends ItemProviderAdapter implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/Style.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Style.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Style.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -148,8 +153,8 @@ public class StyleItemProvider extends ItemProviderAdapter implements
         switch (notification.getFeatureID(Style.class)) {
         case DIPackage.STYLE__NAME:
         case DIPackage.STYLE__VALUE:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

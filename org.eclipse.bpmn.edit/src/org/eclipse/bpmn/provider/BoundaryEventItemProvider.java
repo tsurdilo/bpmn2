@@ -121,8 +121,17 @@ public class BoundaryEventItemProvider extends CatchEventItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/BoundaryEvent.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/BoundaryEvent.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/BoundaryEvent.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -152,8 +161,8 @@ public class BoundaryEventItemProvider extends CatchEventItemProvider implements
         switch (notification.getFeatureID(BoundaryEvent.class)) {
         case BpmnPackage.BOUNDARY_EVENT__ATTACHED_TO_REF:
         case BpmnPackage.BOUNDARY_EVENT__CANCEL_ACTIVITY:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

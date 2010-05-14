@@ -75,8 +75,17 @@ public class HumanPerformerItemProvider extends PerformerItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/HumanPerformer.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/HumanPerformer.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/HumanPerformer.gif")); //$NON-NLS-1$
+        }
     }
 
     /**

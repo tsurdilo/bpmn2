@@ -175,13 +175,13 @@ public class FlowElementItemProvider extends BaseElementItemProvider implements
         switch (notification.getFeatureID(FlowElement.class)) {
         case BpmnPackage.FLOW_ELEMENT__CATEGORY_VALUE_REF:
         case BpmnPackage.FLOW_ELEMENT__NAME:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.FLOW_ELEMENT__AUDITING:
         case BpmnPackage.FLOW_ELEMENT__MONITORING:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -199,13 +199,13 @@ public class FlowElementItemProvider extends BaseElementItemProvider implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getFlowElement_Auditing(), BpmnFactory.eINSTANCE
-                .createAuditing()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getFlowElement_Auditing(),
+                BpmnFactory.eINSTANCE.createAuditing()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getFlowElement_Monitoring(), BpmnFactory.eINSTANCE
-                .createMonitoring()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getFlowElement_Monitoring(),
+                BpmnFactory.eINSTANCE.createMonitoring()));
     }
 
     /**

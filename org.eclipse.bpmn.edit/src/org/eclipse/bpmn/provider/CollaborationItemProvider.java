@@ -188,8 +188,17 @@ public class CollaborationItemProvider extends RootElementItemProvider
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/Collaboration.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/Collaboration.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/Collaboration.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -220,8 +229,8 @@ public class CollaborationItemProvider extends RootElementItemProvider
         case BpmnPackage.COLLABORATION__CHOREOGRAPHY_REF:
         case BpmnPackage.COLLABORATION__IS_CLOSED:
         case BpmnPackage.COLLABORATION__NAME:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.COLLABORATION__PARTICIPANT:
         case BpmnPackage.COLLABORATION__MESSAGE_FLOW:
@@ -230,8 +239,8 @@ public class CollaborationItemProvider extends RootElementItemProvider
         case BpmnPackage.COLLABORATION__CONVERSATION_ASSOCIATION:
         case BpmnPackage.COLLABORATION__PARTICIPANT_ASSOCIATION:
         case BpmnPackage.COLLABORATION__MESSAGE_FLOW_ASSOCIATION:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -249,13 +258,13 @@ public class CollaborationItemProvider extends RootElementItemProvider
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getCollaboration_Participant(), BpmnFactory.eINSTANCE
-                .createParticipant()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getCollaboration_Participant(),
+                BpmnFactory.eINSTANCE.createParticipant()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getCollaboration_MessageFlow(), BpmnFactory.eINSTANCE
-                .createMessageFlow()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getCollaboration_MessageFlow(),
+                BpmnFactory.eINSTANCE.createMessageFlow()));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getCollaboration_ArtifactGroup(), FeatureMapUtil.createEntry(
@@ -287,21 +296,23 @@ public class CollaborationItemProvider extends RootElementItemProvider
                 BpmnPackage.eINSTANCE.getDocumentRoot_TextAnnotation(),
                 BpmnFactory.eINSTANCE.createTextAnnotation())));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getCollaboration_Conversation(), BpmnFactory.eINSTANCE
-                .createConversation()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getCollaboration_Conversation(),
+                BpmnFactory.eINSTANCE.createConversation()));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getCollaboration_ConversationAssociation(),
                 BpmnFactory.eINSTANCE.createConversationAssociation()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getCollaboration_ParticipantAssociation(),
-                BpmnFactory.eINSTANCE.createParticipantAssociation()));
+        newChildDescriptors
+                .add(createChildParameter(BpmnPackage.eINSTANCE
+                        .getCollaboration_ParticipantAssociation(),
+                        BpmnFactory.eINSTANCE.createParticipantAssociation()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getCollaboration_MessageFlowAssociation(),
-                BpmnFactory.eINSTANCE.createMessageFlowAssociation()));
+        newChildDescriptors
+                .add(createChildParameter(BpmnPackage.eINSTANCE
+                        .getCollaboration_MessageFlowAssociation(),
+                        BpmnFactory.eINSTANCE.createMessageFlowAssociation()));
     }
 
     /**

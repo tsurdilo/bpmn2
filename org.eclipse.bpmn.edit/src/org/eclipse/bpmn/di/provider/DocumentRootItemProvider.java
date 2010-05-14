@@ -114,8 +114,15 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/DocumentRoot.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator()
+                            .getImage("full/obj16/DocumentRoot.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator()
+                            .getImage("full/obj16/DocumentRoot.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -147,8 +154,8 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements
         case DIPackage.DOCUMENT_ROOT__DIAGRAM:
         case DIPackage.DOCUMENT_ROOT__NODE:
         case DIPackage.DOCUMENT_ROOT__STYLE:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -175,28 +182,28 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements
                 DIFactory.eINSTANCE.createConnector()));
 
         newChildDescriptors.add(createChildParameter(
-                DIPackage.Literals.DOCUMENT_ROOT__VIEW, DIFactory.eINSTANCE
-                        .createConnector()));
+                DIPackage.Literals.DOCUMENT_ROOT__VIEW,
+                DIFactory.eINSTANCE.createConnector()));
 
         newChildDescriptors.add(createChildParameter(
-                DIPackage.Literals.DOCUMENT_ROOT__VIEW, DIFactory.eINSTANCE
-                        .createDiagram()));
+                DIPackage.Literals.DOCUMENT_ROOT__VIEW,
+                DIFactory.eINSTANCE.createDiagram()));
 
         newChildDescriptors.add(createChildParameter(
-                DIPackage.Literals.DOCUMENT_ROOT__VIEW, DIFactory.eINSTANCE
-                        .createNode()));
+                DIPackage.Literals.DOCUMENT_ROOT__VIEW,
+                DIFactory.eINSTANCE.createNode()));
 
         newChildDescriptors.add(createChildParameter(
-                DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM, DIFactory.eINSTANCE
-                        .createDiagram()));
+                DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM,
+                DIFactory.eINSTANCE.createDiagram()));
 
         newChildDescriptors.add(createChildParameter(
-                DIPackage.Literals.DOCUMENT_ROOT__NODE, DIFactory.eINSTANCE
-                        .createNode()));
+                DIPackage.Literals.DOCUMENT_ROOT__NODE,
+                DIFactory.eINSTANCE.createNode()));
 
         newChildDescriptors.add(createChildParameter(
-                DIPackage.Literals.DOCUMENT_ROOT__STYLE, DIFactory.eINSTANCE
-                        .createStyle()));
+                DIPackage.Literals.DOCUMENT_ROOT__STYLE,
+                DIFactory.eINSTANCE.createStyle()));
     }
 
     /**

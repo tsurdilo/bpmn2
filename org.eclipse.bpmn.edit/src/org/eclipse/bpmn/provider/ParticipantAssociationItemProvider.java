@@ -123,8 +123,17 @@ public class ParticipantAssociationItemProvider extends BaseElementItemProvider
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/ParticipantAssociation.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/ParticipantAssociation.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/ParticipantAssociation.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -154,8 +163,8 @@ public class ParticipantAssociationItemProvider extends BaseElementItemProvider
         switch (notification.getFeatureID(ParticipantAssociation.class)) {
         case BpmnPackage.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF:
         case BpmnPackage.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

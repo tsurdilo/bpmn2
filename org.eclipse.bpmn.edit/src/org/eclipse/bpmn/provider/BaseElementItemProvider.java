@@ -158,14 +158,14 @@ public class BaseElementItemProvider extends ItemProviderAdapter implements
 
         switch (notification.getFeatureID(BaseElement.class)) {
         case BpmnPackage.BASE_ELEMENT__ID:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.BASE_ELEMENT__DOCUMENTATIONS:
         case BpmnPackage.BASE_ELEMENT__ANY:
         case BpmnPackage.BASE_ELEMENT__ANY_ATTRIBUTE:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -183,9 +183,9 @@ public class BaseElementItemProvider extends ItemProviderAdapter implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getBaseElement_Documentations(), BpmnFactory.eINSTANCE
-                .createDocumentation()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getBaseElement_Documentations(),
+                BpmnFactory.eINSTANCE.createDocumentation()));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getBaseElement_Any(), FeatureMapUtil.createEntry(
@@ -199,33 +199,33 @@ public class BaseElementItemProvider extends ItemProviderAdapter implements
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getBaseElement_Any(), FeatureMapUtil.createEntry(
-                DIPackage.Literals.DOCUMENT_ROOT__VIEW, DIFactory.eINSTANCE
-                        .createConnector())));
+                DIPackage.Literals.DOCUMENT_ROOT__VIEW,
+                DIFactory.eINSTANCE.createConnector())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getBaseElement_Any(), FeatureMapUtil.createEntry(
-                DIPackage.Literals.DOCUMENT_ROOT__VIEW, DIFactory.eINSTANCE
-                        .createDiagram())));
+                DIPackage.Literals.DOCUMENT_ROOT__VIEW,
+                DIFactory.eINSTANCE.createDiagram())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getBaseElement_Any(), FeatureMapUtil.createEntry(
-                DIPackage.Literals.DOCUMENT_ROOT__VIEW, DIFactory.eINSTANCE
-                        .createNode())));
+                DIPackage.Literals.DOCUMENT_ROOT__VIEW,
+                DIFactory.eINSTANCE.createNode())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getBaseElement_Any(), FeatureMapUtil.createEntry(
-                DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM, DIFactory.eINSTANCE
-                        .createDiagram())));
+                DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM,
+                DIFactory.eINSTANCE.createDiagram())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getBaseElement_Any(), FeatureMapUtil.createEntry(
-                DIPackage.Literals.DOCUMENT_ROOT__NODE, DIFactory.eINSTANCE
-                        .createNode())));
+                DIPackage.Literals.DOCUMENT_ROOT__NODE,
+                DIFactory.eINSTANCE.createNode())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getBaseElement_Any(), FeatureMapUtil.createEntry(
-                DIPackage.Literals.DOCUMENT_ROOT__STYLE, DIFactory.eINSTANCE
-                        .createStyle())));
+                DIPackage.Literals.DOCUMENT_ROOT__STYLE,
+                DIFactory.eINSTANCE.createStyle())));
     }
 
     /**

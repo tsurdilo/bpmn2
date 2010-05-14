@@ -110,8 +110,17 @@ public class TextAnnotationItemProvider extends ArtifactItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/TextAnnotation.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/TextAnnotation.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/TextAnnotation.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -140,8 +149,8 @@ public class TextAnnotationItemProvider extends ArtifactItemProvider implements
 
         switch (notification.getFeatureID(TextAnnotation.class)) {
         case BpmnPackage.TEXT_ANNOTATION__TEXT:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -159,8 +168,9 @@ public class TextAnnotationItemProvider extends ArtifactItemProvider implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getTextAnnotation_Text(), BpmnFactory.eINSTANCE.createText()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getTextAnnotation_Text(),
+                BpmnFactory.eINSTANCE.createText()));
     }
 
     /**

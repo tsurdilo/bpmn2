@@ -134,8 +134,17 @@ public class GlobalScriptTaskItemProvider extends GlobalTaskItemProvider
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/GlobalScriptTask.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/GlobalScriptTask.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/GlobalScriptTask.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -164,12 +173,12 @@ public class GlobalScriptTaskItemProvider extends GlobalTaskItemProvider
 
         switch (notification.getFeatureID(GlobalScriptTask.class)) {
         case BpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.GLOBAL_SCRIPT_TASK__SCRIPT:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -187,9 +196,9 @@ public class GlobalScriptTaskItemProvider extends GlobalTaskItemProvider
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getGlobalScriptTask_Script(), BpmnFactory.eINSTANCE
-                .createScript()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getGlobalScriptTask_Script(),
+                BpmnFactory.eINSTANCE.createScript()));
     }
 
     /**

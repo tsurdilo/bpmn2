@@ -121,8 +121,13 @@ public class ServiceTaskItemProvider extends TaskItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/ServiceTask.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/ServiceTask.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/ServiceTask.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -152,8 +157,8 @@ public class ServiceTaskItemProvider extends TaskItemProvider implements
         switch (notification.getFeatureID(ServiceTask.class)) {
         case BpmnPackage.SERVICE_TASK__IMPLEMENTATION:
         case BpmnPackage.SERVICE_TASK__OPERATION:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

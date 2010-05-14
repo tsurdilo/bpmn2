@@ -140,8 +140,8 @@ public class FlowNodeItemProvider extends FlowElementItemProvider implements
         switch (notification.getFeatureID(FlowNode.class)) {
         case BpmnPackage.FLOW_NODE__INCOMING:
         case BpmnPackage.FLOW_NODE__OUTGOING:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

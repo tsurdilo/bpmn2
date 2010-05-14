@@ -100,8 +100,17 @@ public class PartnerEntityItemProvider extends RootElementItemProvider
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/PartnerEntity.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/PartnerEntity.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/PartnerEntity.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -130,8 +139,8 @@ public class PartnerEntityItemProvider extends RootElementItemProvider
 
         switch (notification.getFeatureID(PartnerEntity.class)) {
         case BpmnPackage.PARTNER_ENTITY__NAME:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

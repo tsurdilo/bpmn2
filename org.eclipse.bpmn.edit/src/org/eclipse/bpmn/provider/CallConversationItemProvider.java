@@ -134,8 +134,17 @@ public class CallConversationItemProvider extends ConversationNodeItemProvider
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/CallConversation.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/CallConversation.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/CallConversation.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -164,12 +173,12 @@ public class CallConversationItemProvider extends ConversationNodeItemProvider
 
         switch (notification.getFeatureID(CallConversation.class)) {
         case BpmnPackage.CALL_CONVERSATION__CALLED_ELEMENT_REF:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.CALL_CONVERSATION__PARTICIPANT_ASSOCIATION:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);

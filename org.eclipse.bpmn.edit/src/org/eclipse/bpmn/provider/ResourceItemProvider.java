@@ -133,8 +133,13 @@ public class ResourceItemProvider extends RootElementItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/Resource.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Resource.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Resource.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -163,12 +168,12 @@ public class ResourceItemProvider extends RootElementItemProvider implements
 
         switch (notification.getFeatureID(Resource.class)) {
         case BpmnPackage.RESOURCE__NAME:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.RESOURCE__RESOURCE_PARAMETER:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -186,9 +191,9 @@ public class ResourceItemProvider extends RootElementItemProvider implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getResource_ResourceParameter(), BpmnFactory.eINSTANCE
-                .createResourceParameter()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getResource_ResourceParameter(),
+                BpmnFactory.eINSTANCE.createResourceParameter()));
     }
 
     /**

@@ -153,8 +153,13 @@ public class PropertyItemProvider extends BaseElementItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/Property.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Property.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Property.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -184,12 +189,12 @@ public class PropertyItemProvider extends BaseElementItemProvider implements
         switch (notification.getFeatureID(Property.class)) {
         case BpmnPackage.PROPERTY__ITEM_SUBJECT_REF:
         case BpmnPackage.PROPERTY__NAME:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.PROPERTY__DATA_STATE:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -207,9 +212,9 @@ public class PropertyItemProvider extends BaseElementItemProvider implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getProperty_DataState(), BpmnFactory.eINSTANCE
-                .createDataState()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getProperty_DataState(),
+                BpmnFactory.eINSTANCE.createDataState()));
     }
 
     /**

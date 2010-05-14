@@ -116,8 +116,13 @@ public class ScriptItemProvider extends ItemProviderAdapter implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/Script.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Script.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Script.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -144,8 +149,8 @@ public class ScriptItemProvider extends ItemProviderAdapter implements
 
         switch (notification.getFeatureID(Script.class)) {
         case BpmnPackage.SCRIPT__MIXED:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -1459,12 +1464,11 @@ public class ScriptItemProvider extends ItemProviderAdapter implements
         newChildDescriptors
                 .add(createChildParameter(
                         BpmnPackage.eINSTANCE.getScript_Mixed(),
-                        FeatureMapUtil
-                                .createEntry(
-                                        BpmnPackage.eINSTANCE
-                                                .getDocumentRoot_CorrelationPropertyRetrievalExpression(),
-                                        BpmnFactory.eINSTANCE
-                                                .createCorrelationPropertyRetrievalExpression())));
+                        FeatureMapUtil.createEntry(
+                                BpmnPackage.eINSTANCE
+                                        .getDocumentRoot_CorrelationPropertyRetrievalExpression(),
+                                BpmnFactory.eINSTANCE
+                                        .createCorrelationPropertyRetrievalExpression())));
 
         newChildDescriptors
                 .add(createChildParameter(BpmnPackage.eINSTANCE
@@ -1955,12 +1959,11 @@ public class ScriptItemProvider extends ItemProviderAdapter implements
         newChildDescriptors
                 .add(createChildParameter(
                         BpmnPackage.eINSTANCE.getScript_Mixed(),
-                        FeatureMapUtil
-                                .createEntry(
-                                        BpmnPackage.eINSTANCE
-                                                .getDocumentRoot_MultiInstanceLoopCharacteristics(),
-                                        BpmnFactory.eINSTANCE
-                                                .createMultiInstanceLoopCharacteristics())));
+                        FeatureMapUtil.createEntry(
+                                BpmnPackage.eINSTANCE
+                                        .getDocumentRoot_MultiInstanceLoopCharacteristics(),
+                                BpmnFactory.eINSTANCE
+                                        .createMultiInstanceLoopCharacteristics())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getScript_Mixed(), FeatureMapUtil.createEntry(
@@ -2215,33 +2218,33 @@ public class ScriptItemProvider extends ItemProviderAdapter implements
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getScript_Mixed(), FeatureMapUtil.createEntry(
-                DIPackage.Literals.DOCUMENT_ROOT__VIEW, DIFactory.eINSTANCE
-                        .createConnector())));
+                DIPackage.Literals.DOCUMENT_ROOT__VIEW,
+                DIFactory.eINSTANCE.createConnector())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getScript_Mixed(), FeatureMapUtil.createEntry(
-                DIPackage.Literals.DOCUMENT_ROOT__VIEW, DIFactory.eINSTANCE
-                        .createDiagram())));
+                DIPackage.Literals.DOCUMENT_ROOT__VIEW,
+                DIFactory.eINSTANCE.createDiagram())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getScript_Mixed(), FeatureMapUtil.createEntry(
-                DIPackage.Literals.DOCUMENT_ROOT__VIEW, DIFactory.eINSTANCE
-                        .createNode())));
+                DIPackage.Literals.DOCUMENT_ROOT__VIEW,
+                DIFactory.eINSTANCE.createNode())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getScript_Mixed(), FeatureMapUtil.createEntry(
-                DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM, DIFactory.eINSTANCE
-                        .createDiagram())));
+                DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM,
+                DIFactory.eINSTANCE.createDiagram())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getScript_Mixed(), FeatureMapUtil.createEntry(
-                DIPackage.Literals.DOCUMENT_ROOT__NODE, DIFactory.eINSTANCE
-                        .createNode())));
+                DIPackage.Literals.DOCUMENT_ROOT__NODE,
+                DIFactory.eINSTANCE.createNode())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getScript_Mixed(), FeatureMapUtil.createEntry(
-                DIPackage.Literals.DOCUMENT_ROOT__STYLE, DIFactory.eINSTANCE
-                        .createStyle())));
+                DIPackage.Literals.DOCUMENT_ROOT__STYLE,
+                DIFactory.eINSTANCE.createStyle())));
     }
 
     /**

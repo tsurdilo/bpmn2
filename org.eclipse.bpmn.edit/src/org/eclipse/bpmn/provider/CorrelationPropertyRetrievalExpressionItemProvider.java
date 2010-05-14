@@ -136,8 +136,19 @@ public class CorrelationPropertyRetrievalExpressionItemProvider extends
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/CorrelationPropertyRetrievalExpression.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator()
+                            .getImage(
+                                    "full/obj16/CorrelationPropertyRetrievalExpression.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator()
+                            .getImage(
+                                    "full/obj16/CorrelationPropertyRetrievalExpression.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -168,12 +179,12 @@ public class CorrelationPropertyRetrievalExpressionItemProvider extends
         switch (notification
                 .getFeatureID(CorrelationPropertyRetrievalExpression.class)) {
         case BpmnPackage.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_REF:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);

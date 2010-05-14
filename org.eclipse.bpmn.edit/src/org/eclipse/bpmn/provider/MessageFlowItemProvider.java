@@ -163,8 +163,13 @@ public class MessageFlowItemProvider extends BaseElementItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/MessageFlow.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/MessageFlow.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/MessageFlow.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -196,8 +201,8 @@ public class MessageFlowItemProvider extends BaseElementItemProvider implements
         case BpmnPackage.MESSAGE_FLOW__NAME:
         case BpmnPackage.MESSAGE_FLOW__SOURCE_REF:
         case BpmnPackage.MESSAGE_FLOW__TARGET_REF:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

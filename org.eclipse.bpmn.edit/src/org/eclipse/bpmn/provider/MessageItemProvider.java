@@ -121,8 +121,13 @@ public class MessageItemProvider extends RootElementItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/Message.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Message.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Message.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -152,8 +157,8 @@ public class MessageItemProvider extends RootElementItemProvider implements
         switch (notification.getFeatureID(Message.class)) {
         case BpmnPackage.MESSAGE__NAME:
         case BpmnPackage.MESSAGE__STRUCTURE_REF:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

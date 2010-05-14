@@ -175,8 +175,15 @@ public class SequenceFlowItemProvider extends FlowElementItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/SequenceFlow.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator()
+                            .getImage("full/obj16/SequenceFlow.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator()
+                            .getImage("full/obj16/SequenceFlow.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -207,12 +214,12 @@ public class SequenceFlowItemProvider extends FlowElementItemProvider implements
         case BpmnPackage.SEQUENCE_FLOW__IS_IMMEDIATE:
         case BpmnPackage.SEQUENCE_FLOW__SOURCE_REF:
         case BpmnPackage.SEQUENCE_FLOW__TARGET_REF:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.SEQUENCE_FLOW__CONDITION_EXPRESSION:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -230,13 +237,13 @@ public class SequenceFlowItemProvider extends FlowElementItemProvider implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getSequenceFlow_ConditionExpression(), BpmnFactory.eINSTANCE
-                .createExpression()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getSequenceFlow_ConditionExpression(),
+                BpmnFactory.eINSTANCE.createExpression()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getSequenceFlow_ConditionExpression(), BpmnFactory.eINSTANCE
-                .createFormalExpression()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getSequenceFlow_ConditionExpression(),
+                BpmnFactory.eINSTANCE.createFormalExpression()));
     }
 
     /**

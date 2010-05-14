@@ -142,8 +142,8 @@ public class ChoreographyActivityItemProvider extends FlowNodeItemProvider
         switch (notification.getFeatureID(ChoreographyActivity.class)) {
         case BpmnPackage.CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REF:
         case BpmnPackage.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

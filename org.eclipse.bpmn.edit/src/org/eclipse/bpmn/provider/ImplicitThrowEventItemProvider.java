@@ -76,8 +76,17 @@ public class ImplicitThrowEventItemProvider extends ThrowEventItemProvider
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/ImplicitThrowEvent.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/ImplicitThrowEvent.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/ImplicitThrowEvent.gif")); //$NON-NLS-1$
+        }
     }
 
     /**

@@ -122,8 +122,17 @@ public class CommunicationItemProvider extends ConversationNodeItemProvider
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/Communication.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/Communication.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/Communication.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -153,8 +162,8 @@ public class CommunicationItemProvider extends ConversationNodeItemProvider
         switch (notification.getFeatureID(Communication.class)) {
         case BpmnPackage.COMMUNICATION__MESSAGE_FLOW_REF:
         case BpmnPackage.COMMUNICATION__CORRELATION_KEY_REF:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

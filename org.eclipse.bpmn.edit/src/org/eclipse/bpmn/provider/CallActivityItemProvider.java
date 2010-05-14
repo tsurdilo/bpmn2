@@ -100,8 +100,15 @@ public class CallActivityItemProvider extends ActivityItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/CallActivity.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator()
+                            .getImage("full/obj16/CallActivity.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator()
+                            .getImage("full/obj16/CallActivity.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -130,8 +137,8 @@ public class CallActivityItemProvider extends ActivityItemProvider implements
 
         switch (notification.getFeatureID(CallActivity.class)) {
         case BpmnPackage.CALL_ACTIVITY__CALLED_ELEMENT:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

@@ -115,8 +115,17 @@ public class GlobalCommunicationItemProvider extends
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/GlobalCommunication.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/GlobalCommunication.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/GlobalCommunication.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -147,8 +156,8 @@ public class GlobalCommunicationItemProvider extends
         case BpmnPackage.GLOBAL_COMMUNICATION__PARTICIPANT:
         case BpmnPackage.GLOBAL_COMMUNICATION__MESSAGE_FLOW:
         case BpmnPackage.GLOBAL_COMMUNICATION__CORRELATION_KEY:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -166,17 +175,17 @@ public class GlobalCommunicationItemProvider extends
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getGlobalCommunication_Participant(), BpmnFactory.eINSTANCE
-                .createParticipant()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getGlobalCommunication_Participant(),
+                BpmnFactory.eINSTANCE.createParticipant()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getGlobalCommunication_MessageFlow(), BpmnFactory.eINSTANCE
-                .createMessageFlow()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getGlobalCommunication_MessageFlow(),
+                BpmnFactory.eINSTANCE.createMessageFlow()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getGlobalCommunication_CorrelationKey(), BpmnFactory.eINSTANCE
-                .createCorrelationKey()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getGlobalCommunication_CorrelationKey(),
+                BpmnFactory.eINSTANCE.createCorrelationKey()));
     }
 
     /**

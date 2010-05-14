@@ -148,8 +148,13 @@ public class ConnectorItemProvider extends ViewItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/Connector.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Connector.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Connector.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -179,12 +184,12 @@ public class ConnectorItemProvider extends ViewItemProvider implements
         switch (notification.getFeatureID(Connector.class)) {
         case DIPackage.CONNECTOR__SOURCE:
         case DIPackage.CONNECTOR__TARGET:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case DIPackage.CONNECTOR__BENDPOINT:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -203,8 +208,8 @@ public class ConnectorItemProvider extends ViewItemProvider implements
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
         newChildDescriptors.add(createChildParameter(
-                DIPackage.Literals.CONNECTOR__BENDPOINT, DIFactory.eINSTANCE
-                        .createBendpoint()));
+                DIPackage.Literals.CONNECTOR__BENDPOINT,
+                DIFactory.eINSTANCE.createBendpoint()));
     }
 
 }

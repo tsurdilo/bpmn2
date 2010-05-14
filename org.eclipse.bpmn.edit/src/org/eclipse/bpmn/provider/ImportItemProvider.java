@@ -138,8 +138,13 @@ public class ImportItemProvider extends ItemProviderAdapter implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/Import.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Import.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Import.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -170,8 +175,8 @@ public class ImportItemProvider extends ItemProviderAdapter implements
         case BpmnPackage.IMPORT__IMPORT_TYPE:
         case BpmnPackage.IMPORT__LOCATION:
         case BpmnPackage.IMPORT__NAMESPACE:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

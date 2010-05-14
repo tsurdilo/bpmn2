@@ -140,8 +140,17 @@ public class DocumentationItemProvider extends ItemProviderAdapter implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/Documentation.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/Documentation.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/Documentation.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -170,12 +179,12 @@ public class DocumentationItemProvider extends ItemProviderAdapter implements
 
         switch (notification.getFeatureID(Documentation.class)) {
         case BpmnPackage.DOCUMENTATION__ID:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.DOCUMENTATION__MIXED:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -1489,12 +1498,11 @@ public class DocumentationItemProvider extends ItemProviderAdapter implements
         newChildDescriptors
                 .add(createChildParameter(
                         BpmnPackage.eINSTANCE.getDocumentation_Mixed(),
-                        FeatureMapUtil
-                                .createEntry(
-                                        BpmnPackage.eINSTANCE
-                                                .getDocumentRoot_CorrelationPropertyRetrievalExpression(),
-                                        BpmnFactory.eINSTANCE
-                                                .createCorrelationPropertyRetrievalExpression())));
+                        FeatureMapUtil.createEntry(
+                                BpmnPackage.eINSTANCE
+                                        .getDocumentRoot_CorrelationPropertyRetrievalExpression(),
+                                BpmnFactory.eINSTANCE
+                                        .createCorrelationPropertyRetrievalExpression())));
 
         newChildDescriptors
                 .add(createChildParameter(BpmnPackage.eINSTANCE
@@ -1985,12 +1993,11 @@ public class DocumentationItemProvider extends ItemProviderAdapter implements
         newChildDescriptors
                 .add(createChildParameter(
                         BpmnPackage.eINSTANCE.getDocumentation_Mixed(),
-                        FeatureMapUtil
-                                .createEntry(
-                                        BpmnPackage.eINSTANCE
-                                                .getDocumentRoot_MultiInstanceLoopCharacteristics(),
-                                        BpmnFactory.eINSTANCE
-                                                .createMultiInstanceLoopCharacteristics())));
+                        FeatureMapUtil.createEntry(
+                                BpmnPackage.eINSTANCE
+                                        .getDocumentRoot_MultiInstanceLoopCharacteristics(),
+                                BpmnFactory.eINSTANCE
+                                        .createMultiInstanceLoopCharacteristics())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDocumentation_Mixed(), FeatureMapUtil.createEntry(
@@ -2245,33 +2252,33 @@ public class DocumentationItemProvider extends ItemProviderAdapter implements
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDocumentation_Mixed(), FeatureMapUtil.createEntry(
-                DIPackage.Literals.DOCUMENT_ROOT__VIEW, DIFactory.eINSTANCE
-                        .createConnector())));
+                DIPackage.Literals.DOCUMENT_ROOT__VIEW,
+                DIFactory.eINSTANCE.createConnector())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDocumentation_Mixed(), FeatureMapUtil.createEntry(
-                DIPackage.Literals.DOCUMENT_ROOT__VIEW, DIFactory.eINSTANCE
-                        .createDiagram())));
+                DIPackage.Literals.DOCUMENT_ROOT__VIEW,
+                DIFactory.eINSTANCE.createDiagram())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDocumentation_Mixed(), FeatureMapUtil.createEntry(
-                DIPackage.Literals.DOCUMENT_ROOT__VIEW, DIFactory.eINSTANCE
-                        .createNode())));
+                DIPackage.Literals.DOCUMENT_ROOT__VIEW,
+                DIFactory.eINSTANCE.createNode())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDocumentation_Mixed(), FeatureMapUtil.createEntry(
-                DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM, DIFactory.eINSTANCE
-                        .createDiagram())));
+                DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM,
+                DIFactory.eINSTANCE.createDiagram())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDocumentation_Mixed(), FeatureMapUtil.createEntry(
-                DIPackage.Literals.DOCUMENT_ROOT__NODE, DIFactory.eINSTANCE
-                        .createNode())));
+                DIPackage.Literals.DOCUMENT_ROOT__NODE,
+                DIFactory.eINSTANCE.createNode())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getDocumentation_Mixed(), FeatureMapUtil.createEntry(
-                DIPackage.Literals.DOCUMENT_ROOT__STYLE, DIFactory.eINSTANCE
-                        .createStyle())));
+                DIPackage.Literals.DOCUMENT_ROOT__STYLE,
+                DIFactory.eINSTANCE.createStyle())));
     }
 
     /**

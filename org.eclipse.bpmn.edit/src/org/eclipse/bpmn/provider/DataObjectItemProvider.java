@@ -154,8 +154,13 @@ public class DataObjectItemProvider extends FlowElementItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/DataObject.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/DataObject.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/DataObject.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -185,12 +190,12 @@ public class DataObjectItemProvider extends FlowElementItemProvider implements
         switch (notification.getFeatureID(DataObject.class)) {
         case BpmnPackage.DATA_OBJECT__IS_COLLECTION:
         case BpmnPackage.DATA_OBJECT__ITEM_SUBJECT_REF:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.DATA_OBJECT__DATA_STATE:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -208,9 +213,9 @@ public class DataObjectItemProvider extends FlowElementItemProvider implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getDataObject_DataState(), BpmnFactory.eINSTANCE
-                .createDataState()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getDataObject_DataState(),
+                BpmnFactory.eINSTANCE.createDataState()));
     }
 
     /**

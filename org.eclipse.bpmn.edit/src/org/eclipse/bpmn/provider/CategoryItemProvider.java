@@ -110,8 +110,13 @@ public class CategoryItemProvider extends RootElementItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/Category.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Category.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Category.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -140,8 +145,8 @@ public class CategoryItemProvider extends RootElementItemProvider implements
 
         switch (notification.getFeatureID(Category.class)) {
         case BpmnPackage.CATEGORY__CATEGORY_VALUE:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -159,9 +164,9 @@ public class CategoryItemProvider extends RootElementItemProvider implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getCategory_CategoryValue(), BpmnFactory.eINSTANCE
-                .createCategoryValue()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getCategory_CategoryValue(),
+                BpmnFactory.eINSTANCE.createCategoryValue()));
     }
 
     /**

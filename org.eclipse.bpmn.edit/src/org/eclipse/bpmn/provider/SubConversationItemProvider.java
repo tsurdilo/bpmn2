@@ -136,8 +136,17 @@ public class SubConversationItemProvider extends ConversationNodeItemProvider
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/SubConversation.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/SubConversation.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/SubConversation.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -166,13 +175,13 @@ public class SubConversationItemProvider extends ConversationNodeItemProvider
 
         switch (notification.getFeatureID(SubConversation.class)) {
         case BpmnPackage.SUB_CONVERSATION__CORRELATION_KEY_REF:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.SUB_CONVERSATION__CONVERSATION_NODE_GROUP:
         case BpmnPackage.SUB_CONVERSATION__ARTIFACT_GROUP:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -216,39 +225,40 @@ public class SubConversationItemProvider extends ConversationNodeItemProvider
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubConversation_ConversationNodeGroup(), FeatureMapUtil
-                .createEntry(BpmnPackage.eINSTANCE
-                        .getDocumentRoot_Communication(), BpmnFactory.eINSTANCE
-                        .createCommunication())));
+                .createEntry(
+                        BpmnPackage.eINSTANCE.getDocumentRoot_Communication(),
+                        BpmnFactory.eINSTANCE.createCommunication())));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getSubConversation_ConversationNodeGroup(), FeatureMapUtil
-                .createEntry(BpmnPackage.eINSTANCE
-                        .getDocumentRoot_SubConversation(),
-                        BpmnFactory.eINSTANCE.createSubConversation())));
-
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getSubConversation_ArtifactGroup(), FeatureMapUtil
-                .createEntry(BpmnPackage.eINSTANCE
-                        .getSubConversation_Artifact(), BpmnFactory.eINSTANCE
-                        .createAssociation())));
+        newChildDescriptors
+                .add(createChildParameter(BpmnPackage.eINSTANCE
+                        .getSubConversation_ConversationNodeGroup(),
+                        FeatureMapUtil.createEntry(BpmnPackage.eINSTANCE
+                                .getDocumentRoot_SubConversation(),
+                                BpmnFactory.eINSTANCE.createSubConversation())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubConversation_ArtifactGroup(), FeatureMapUtil
-                .createEntry(BpmnPackage.eINSTANCE
-                        .getSubConversation_Artifact(), BpmnFactory.eINSTANCE
-                        .createGroup())));
+                .createEntry(
+                        BpmnPackage.eINSTANCE.getSubConversation_Artifact(),
+                        BpmnFactory.eINSTANCE.createAssociation())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubConversation_ArtifactGroup(), FeatureMapUtil
-                .createEntry(BpmnPackage.eINSTANCE
-                        .getSubConversation_Artifact(), BpmnFactory.eINSTANCE
-                        .createTextAnnotation())));
+                .createEntry(
+                        BpmnPackage.eINSTANCE.getSubConversation_Artifact(),
+                        BpmnFactory.eINSTANCE.createGroup())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubConversation_ArtifactGroup(), FeatureMapUtil
-                .createEntry(BpmnPackage.eINSTANCE
-                        .getDocumentRoot_Association(), BpmnFactory.eINSTANCE
-                        .createAssociation())));
+                .createEntry(
+                        BpmnPackage.eINSTANCE.getSubConversation_Artifact(),
+                        BpmnFactory.eINSTANCE.createTextAnnotation())));
+
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getSubConversation_ArtifactGroup(), FeatureMapUtil
+                .createEntry(
+                        BpmnPackage.eINSTANCE.getDocumentRoot_Association(),
+                        BpmnFactory.eINSTANCE.createAssociation())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubConversation_ArtifactGroup(), FeatureMapUtil
@@ -257,8 +267,8 @@ public class SubConversationItemProvider extends ConversationNodeItemProvider
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getSubConversation_ArtifactGroup(), FeatureMapUtil
-                .createEntry(BpmnPackage.eINSTANCE
-                        .getDocumentRoot_TextAnnotation(),
+                .createEntry(
+                        BpmnPackage.eINSTANCE.getDocumentRoot_TextAnnotation(),
                         BpmnFactory.eINSTANCE.createTextAnnotation())));
     }
 

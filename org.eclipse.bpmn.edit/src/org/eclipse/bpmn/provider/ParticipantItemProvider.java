@@ -238,8 +238,13 @@ public class ParticipantItemProvider extends BaseElementItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/Participant.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Participant.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Participant.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -273,12 +278,12 @@ public class ParticipantItemProvider extends BaseElementItemProvider implements
         case BpmnPackage.PARTICIPANT__PARTNER_ENTITY_REF:
         case BpmnPackage.PARTICIPANT__PARTNER_ROLE_REF:
         case BpmnPackage.PARTICIPANT__PROCESS_REF:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -296,8 +301,8 @@ public class ParticipantItemProvider extends BaseElementItemProvider implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getParticipant_ParticipantMultiplicity(),
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getParticipant_ParticipantMultiplicity(),
                 BpmnFactory.eINSTANCE.createParticipantMultiplicity()));
     }
 

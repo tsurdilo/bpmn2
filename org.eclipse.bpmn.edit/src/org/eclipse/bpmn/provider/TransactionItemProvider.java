@@ -100,8 +100,13 @@ public class TransactionItemProvider extends ActivityItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/Transaction.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Transaction.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Transaction.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -130,8 +135,8 @@ public class TransactionItemProvider extends ActivityItemProvider implements
 
         switch (notification.getFeatureID(Transaction.class)) {
         case BpmnPackage.TRANSACTION__METHOD:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

@@ -227,8 +227,8 @@ public class ActivityItemProvider extends FlowNodeItemProvider implements
         case BpmnPackage.ACTIVITY__DEFAULT:
         case BpmnPackage.ACTIVITY__IS_FOR_COMPENSATION:
         case BpmnPackage.ACTIVITY__START_QUANTITY:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.ACTIVITY__IO_SPECIFICATION:
         case BpmnPackage.ACTIVITY__PROPERTIES:
@@ -236,8 +236,8 @@ public class ActivityItemProvider extends FlowNodeItemProvider implements
         case BpmnPackage.ACTIVITY__DATA_OUTPUT_ASSOCIATIONS:
         case BpmnPackage.ACTIVITY__ACTIVITY_RESOURCE_GROUPS:
         case BpmnPackage.ACTIVITY__LOOP_CHARACTERISTICS_GROUP:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -255,56 +255,56 @@ public class ActivityItemProvider extends FlowNodeItemProvider implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getActivity_IoSpecification(), BpmnFactory.eINSTANCE
-                .createInputOutputSpecification()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getActivity_IoSpecification(),
+                BpmnFactory.eINSTANCE.createInputOutputSpecification()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getActivity_Properties(), BpmnFactory.eINSTANCE
-                .createProperty()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getActivity_Properties(),
+                BpmnFactory.eINSTANCE.createProperty()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getActivity_DataInputAssociations(), BpmnFactory.eINSTANCE
-                .createDataInputAssociation()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getActivity_DataInputAssociations(),
+                BpmnFactory.eINSTANCE.createDataInputAssociation()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getActivity_DataOutputAssociations(), BpmnFactory.eINSTANCE
-                .createDataOutputAssociation()));
-
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getActivity_ActivityResourceGroups(), FeatureMapUtil
-                .createEntry(BpmnPackage.eINSTANCE
-                        .getActivity_ActivityResources(), BpmnFactory.eINSTANCE
-                        .createActivityResource())));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getActivity_DataOutputAssociations(),
+                BpmnFactory.eINSTANCE.createDataOutputAssociation()));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getActivity_ActivityResourceGroups(), FeatureMapUtil
-                .createEntry(BpmnPackage.eINSTANCE
-                        .getActivity_ActivityResources(), BpmnFactory.eINSTANCE
-                        .createPerformer())));
+                .createEntry(
+                        BpmnPackage.eINSTANCE.getActivity_ActivityResources(),
+                        BpmnFactory.eINSTANCE.createActivityResource())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getActivity_ActivityResourceGroups(), FeatureMapUtil
-                .createEntry(BpmnPackage.eINSTANCE
-                        .getActivity_ActivityResources(), BpmnFactory.eINSTANCE
-                        .createHumanPerformer())));
+                .createEntry(
+                        BpmnPackage.eINSTANCE.getActivity_ActivityResources(),
+                        BpmnFactory.eINSTANCE.createPerformer())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getActivity_ActivityResourceGroups(), FeatureMapUtil
-                .createEntry(BpmnPackage.eINSTANCE
-                        .getActivity_ActivityResources(), BpmnFactory.eINSTANCE
-                        .createPotentialOwner())));
-
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getActivity_ActivityResourceGroups(), FeatureMapUtil
-                .createEntry(BpmnPackage.eINSTANCE
-                        .getDocumentRoot_HumanPerformer(),
+                .createEntry(
+                        BpmnPackage.eINSTANCE.getActivity_ActivityResources(),
                         BpmnFactory.eINSTANCE.createHumanPerformer())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getActivity_ActivityResourceGroups(), FeatureMapUtil
-                .createEntry(BpmnPackage.eINSTANCE
-                        .getDocumentRoot_HumanPerformer(),
+                .createEntry(
+                        BpmnPackage.eINSTANCE.getActivity_ActivityResources(),
+                        BpmnFactory.eINSTANCE.createPotentialOwner())));
+
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getActivity_ActivityResourceGroups(), FeatureMapUtil
+                .createEntry(
+                        BpmnPackage.eINSTANCE.getDocumentRoot_HumanPerformer(),
+                        BpmnFactory.eINSTANCE.createHumanPerformer())));
+
+        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
+                .getActivity_ActivityResourceGroups(), FeatureMapUtil
+                .createEntry(
+                        BpmnPackage.eINSTANCE.getDocumentRoot_HumanPerformer(),
                         BpmnFactory.eINSTANCE.createPotentialOwner())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
@@ -324,23 +324,27 @@ public class ActivityItemProvider extends FlowNodeItemProvider implements
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getActivity_ActivityResourceGroups(), FeatureMapUtil
-                .createEntry(BpmnPackage.eINSTANCE
-                        .getDocumentRoot_PotentialOwner(),
+                .createEntry(
+                        BpmnPackage.eINSTANCE.getDocumentRoot_PotentialOwner(),
                         BpmnFactory.eINSTANCE.createPotentialOwner())));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getActivity_LoopCharacteristicsGroup(), FeatureMapUtil
-                .createEntry(BpmnPackage.eINSTANCE
-                        .getActivity_LoopCharacteristics(),
-                        BpmnFactory.eINSTANCE
-                                .createMultiInstanceLoopCharacteristics())));
+        newChildDescriptors
+                .add(createChildParameter(
+                        BpmnPackage.eINSTANCE
+                                .getActivity_LoopCharacteristicsGroup(),
+                        FeatureMapUtil.createEntry(
+                                BpmnPackage.eINSTANCE
+                                        .getActivity_LoopCharacteristics(),
+                                BpmnFactory.eINSTANCE
+                                        .createMultiInstanceLoopCharacteristics())));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getActivity_LoopCharacteristicsGroup(), FeatureMapUtil
-                .createEntry(BpmnPackage.eINSTANCE
-                        .getActivity_LoopCharacteristics(),
-                        BpmnFactory.eINSTANCE
-                                .createStandardLoopCharacteristics())));
+        newChildDescriptors
+                .add(createChildParameter(BpmnPackage.eINSTANCE
+                        .getActivity_LoopCharacteristicsGroup(), FeatureMapUtil
+                        .createEntry(BpmnPackage.eINSTANCE
+                                .getActivity_LoopCharacteristics(),
+                                BpmnFactory.eINSTANCE
+                                        .createStandardLoopCharacteristics())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getActivity_LoopCharacteristicsGroup(), FeatureMapUtil

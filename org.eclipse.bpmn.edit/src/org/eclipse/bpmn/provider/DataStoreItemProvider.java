@@ -196,8 +196,13 @@ public class DataStoreItemProvider extends RootElementItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/DataStore.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/DataStore.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/DataStore.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -229,12 +234,12 @@ public class DataStoreItemProvider extends RootElementItemProvider implements
         case BpmnPackage.DATA_STORE__IS_UNLIMITED:
         case BpmnPackage.DATA_STORE__ITEM_SUBJECT_REF:
         case BpmnPackage.DATA_STORE__NAME:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.DATA_STORE__DATA_STATE:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -252,9 +257,9 @@ public class DataStoreItemProvider extends RootElementItemProvider implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getDataStore_DataState(), BpmnFactory.eINSTANCE
-                .createDataState()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getDataStore_DataState(),
+                BpmnFactory.eINSTANCE.createDataState()));
     }
 
     /**

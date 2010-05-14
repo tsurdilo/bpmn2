@@ -141,8 +141,15 @@ public class ConversationItemProvider extends CallableElementItemProvider
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/Conversation.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator()
+                            .getImage("full/obj16/Conversation.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator()
+                            .getImage("full/obj16/Conversation.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -171,16 +178,16 @@ public class ConversationItemProvider extends CallableElementItemProvider
 
         switch (notification.getFeatureID(Conversation.class)) {
         case BpmnPackage.CONVERSATION__MESSAGE_FLOW_REF:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.CONVERSATION__CONVERSATION_NODE_GROUP:
         case BpmnPackage.CONVERSATION__PARTICIPANT:
         case BpmnPackage.CONVERSATION__ARTIFACT_GROUP:
         case BpmnPackage.CONVERSATION__MESSAGE_FLOW:
         case BpmnPackage.CONVERSATION__CORRELATION_KEY:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -224,19 +231,20 @@ public class ConversationItemProvider extends CallableElementItemProvider
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getConversation_ConversationNodeGroup(), FeatureMapUtil
-                .createEntry(BpmnPackage.eINSTANCE
-                        .getDocumentRoot_Communication(), BpmnFactory.eINSTANCE
-                        .createCommunication())));
+                .createEntry(
+                        BpmnPackage.eINSTANCE.getDocumentRoot_Communication(),
+                        BpmnFactory.eINSTANCE.createCommunication())));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getConversation_ConversationNodeGroup(), FeatureMapUtil
-                .createEntry(BpmnPackage.eINSTANCE
-                        .getDocumentRoot_SubConversation(),
-                        BpmnFactory.eINSTANCE.createSubConversation())));
+        newChildDescriptors
+                .add(createChildParameter(BpmnPackage.eINSTANCE
+                        .getConversation_ConversationNodeGroup(),
+                        FeatureMapUtil.createEntry(BpmnPackage.eINSTANCE
+                                .getDocumentRoot_SubConversation(),
+                                BpmnFactory.eINSTANCE.createSubConversation())));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getConversation_Participant(), BpmnFactory.eINSTANCE
-                .createParticipant()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getConversation_Participant(),
+                BpmnFactory.eINSTANCE.createParticipant()));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getConversation_ArtifactGroup(), FeatureMapUtil.createEntry(
@@ -268,13 +276,13 @@ public class ConversationItemProvider extends CallableElementItemProvider
                 BpmnPackage.eINSTANCE.getDocumentRoot_TextAnnotation(),
                 BpmnFactory.eINSTANCE.createTextAnnotation())));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getConversation_MessageFlow(), BpmnFactory.eINSTANCE
-                .createMessageFlow()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getConversation_MessageFlow(),
+                BpmnFactory.eINSTANCE.createMessageFlow()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getConversation_CorrelationKey(), BpmnFactory.eINSTANCE
-                .createCorrelationKey()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getConversation_CorrelationKey(),
+                BpmnFactory.eINSTANCE.createCorrelationKey()));
     }
 
     /**

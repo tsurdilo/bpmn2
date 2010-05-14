@@ -116,8 +116,13 @@ public class TextItemProvider extends ItemProviderAdapter implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/Text.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Text.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Text.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -144,8 +149,8 @@ public class TextItemProvider extends ItemProviderAdapter implements
 
         switch (notification.getFeatureID(Text.class)) {
         case BpmnPackage.TEXT__MIXED:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -838,12 +843,11 @@ public class TextItemProvider extends ItemProviderAdapter implements
         newChildDescriptors
                 .add(createChildParameter(
                         BpmnPackage.eINSTANCE.getText_Mixed(),
-                        FeatureMapUtil
-                                .createEntry(
-                                        BpmnPackage.eINSTANCE
-                                                .getDocumentRoot_BaseElement(),
-                                        BpmnFactory.eINSTANCE
-                                                .createMultiInstanceLoopCharacteristics())));
+                        FeatureMapUtil.createEntry(
+                                BpmnPackage.eINSTANCE
+                                        .getDocumentRoot_BaseElement(),
+                                BpmnFactory.eINSTANCE
+                                        .createMultiInstanceLoopCharacteristics())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getText_Mixed(), FeatureMapUtil.createEntry(
@@ -1463,12 +1467,11 @@ public class TextItemProvider extends ItemProviderAdapter implements
         newChildDescriptors
                 .add(createChildParameter(
                         BpmnPackage.eINSTANCE.getText_Mixed(),
-                        FeatureMapUtil
-                                .createEntry(
-                                        BpmnPackage.eINSTANCE
-                                                .getDocumentRoot_CorrelationPropertyRetrievalExpression(),
-                                        BpmnFactory.eINSTANCE
-                                                .createCorrelationPropertyRetrievalExpression())));
+                        FeatureMapUtil.createEntry(
+                                BpmnPackage.eINSTANCE
+                                        .getDocumentRoot_CorrelationPropertyRetrievalExpression(),
+                                BpmnFactory.eINSTANCE
+                                        .createCorrelationPropertyRetrievalExpression())));
 
         newChildDescriptors
                 .add(createChildParameter(
@@ -1917,12 +1920,11 @@ public class TextItemProvider extends ItemProviderAdapter implements
         newChildDescriptors
                 .add(createChildParameter(
                         BpmnPackage.eINSTANCE.getText_Mixed(),
-                        FeatureMapUtil
-                                .createEntry(
-                                        BpmnPackage.eINSTANCE
-                                                .getDocumentRoot_LoopCharacteristics(),
-                                        BpmnFactory.eINSTANCE
-                                                .createMultiInstanceLoopCharacteristics())));
+                        FeatureMapUtil.createEntry(
+                                BpmnPackage.eINSTANCE
+                                        .getDocumentRoot_LoopCharacteristics(),
+                                BpmnFactory.eINSTANCE
+                                        .createMultiInstanceLoopCharacteristics())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getText_Mixed(), FeatureMapUtil.createEntry(
@@ -1962,12 +1964,11 @@ public class TextItemProvider extends ItemProviderAdapter implements
         newChildDescriptors
                 .add(createChildParameter(
                         BpmnPackage.eINSTANCE.getText_Mixed(),
-                        FeatureMapUtil
-                                .createEntry(
-                                        BpmnPackage.eINSTANCE
-                                                .getDocumentRoot_MultiInstanceLoopCharacteristics(),
-                                        BpmnFactory.eINSTANCE
-                                                .createMultiInstanceLoopCharacteristics())));
+                        FeatureMapUtil.createEntry(
+                                BpmnPackage.eINSTANCE
+                                        .getDocumentRoot_MultiInstanceLoopCharacteristics(),
+                                BpmnFactory.eINSTANCE
+                                        .createMultiInstanceLoopCharacteristics())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getText_Mixed(), FeatureMapUtil.createEntry(
@@ -2223,33 +2224,33 @@ public class TextItemProvider extends ItemProviderAdapter implements
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getText_Mixed(), FeatureMapUtil.createEntry(
-                DIPackage.Literals.DOCUMENT_ROOT__VIEW, DIFactory.eINSTANCE
-                        .createConnector())));
+                DIPackage.Literals.DOCUMENT_ROOT__VIEW,
+                DIFactory.eINSTANCE.createConnector())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getText_Mixed(), FeatureMapUtil.createEntry(
-                DIPackage.Literals.DOCUMENT_ROOT__VIEW, DIFactory.eINSTANCE
-                        .createDiagram())));
+                DIPackage.Literals.DOCUMENT_ROOT__VIEW,
+                DIFactory.eINSTANCE.createDiagram())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getText_Mixed(), FeatureMapUtil.createEntry(
-                DIPackage.Literals.DOCUMENT_ROOT__VIEW, DIFactory.eINSTANCE
-                        .createNode())));
+                DIPackage.Literals.DOCUMENT_ROOT__VIEW,
+                DIFactory.eINSTANCE.createNode())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getText_Mixed(), FeatureMapUtil.createEntry(
-                DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM, DIFactory.eINSTANCE
-                        .createDiagram())));
+                DIPackage.Literals.DOCUMENT_ROOT__DIAGRAM,
+                DIFactory.eINSTANCE.createDiagram())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getText_Mixed(), FeatureMapUtil.createEntry(
-                DIPackage.Literals.DOCUMENT_ROOT__NODE, DIFactory.eINSTANCE
-                        .createNode())));
+                DIPackage.Literals.DOCUMENT_ROOT__NODE,
+                DIFactory.eINSTANCE.createNode())));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getText_Mixed(), FeatureMapUtil.createEntry(
-                DIPackage.Literals.DOCUMENT_ROOT__STYLE, DIFactory.eINSTANCE
-                        .createStyle())));
+                DIPackage.Literals.DOCUMENT_ROOT__STYLE,
+                DIFactory.eINSTANCE.createStyle())));
     }
 
     /**

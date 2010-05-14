@@ -99,8 +99,13 @@ public class ErrorItemProvider extends RootElementItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/Error.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Error.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Error.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -129,8 +134,8 @@ public class ErrorItemProvider extends RootElementItemProvider implements
 
         switch (notification.getFeatureID(org.eclipse.bpmn.Error.class)) {
         case BpmnPackage.ERROR__STRUCTURE_REF:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

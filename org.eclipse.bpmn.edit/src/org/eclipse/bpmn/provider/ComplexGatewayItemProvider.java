@@ -133,8 +133,17 @@ public class ComplexGatewayItemProvider extends GatewayItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/ComplexGateway.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/ComplexGateway.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/ComplexGateway.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -163,12 +172,12 @@ public class ComplexGatewayItemProvider extends GatewayItemProvider implements
 
         switch (notification.getFeatureID(ComplexGateway.class)) {
         case BpmnPackage.COMPLEX_GATEWAY__DEFAULT:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.COMPLEX_GATEWAY__ACTIVATION_CONDITION:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -186,13 +195,13 @@ public class ComplexGatewayItemProvider extends GatewayItemProvider implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getComplexGateway_ActivationCondition(), BpmnFactory.eINSTANCE
-                .createExpression()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getComplexGateway_ActivationCondition(),
+                BpmnFactory.eINSTANCE.createExpression()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getComplexGateway_ActivationCondition(), BpmnFactory.eINSTANCE
-                .createFormalExpression()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getComplexGateway_ActivationCondition(),
+                BpmnFactory.eINSTANCE.createFormalExpression()));
     }
 
     /**

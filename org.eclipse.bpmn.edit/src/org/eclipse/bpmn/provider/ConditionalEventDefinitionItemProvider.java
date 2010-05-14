@@ -111,8 +111,17 @@ public class ConditionalEventDefinitionItemProvider extends
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/ConditionalEventDefinition.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/ConditionalEventDefinition.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/ConditionalEventDefinition.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -141,8 +150,8 @@ public class ConditionalEventDefinitionItemProvider extends
 
         switch (notification.getFeatureID(ConditionalEventDefinition.class)) {
         case BpmnPackage.CONDITIONAL_EVENT_DEFINITION__CONDITION:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -160,13 +169,15 @@ public class ConditionalEventDefinitionItemProvider extends
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getConditionalEventDefinition_Condition(),
-                BpmnFactory.eINSTANCE.createExpression()));
+        newChildDescriptors
+                .add(createChildParameter(BpmnPackage.eINSTANCE
+                        .getConditionalEventDefinition_Condition(),
+                        BpmnFactory.eINSTANCE.createExpression()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getConditionalEventDefinition_Condition(),
-                BpmnFactory.eINSTANCE.createFormalExpression()));
+        newChildDescriptors
+                .add(createChildParameter(BpmnPackage.eINSTANCE
+                        .getConditionalEventDefinition_Condition(),
+                        BpmnFactory.eINSTANCE.createFormalExpression()));
     }
 
     /**

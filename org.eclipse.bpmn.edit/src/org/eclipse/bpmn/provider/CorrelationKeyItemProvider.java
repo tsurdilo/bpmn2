@@ -101,8 +101,17 @@ public class CorrelationKeyItemProvider extends BaseElementItemProvider
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/CorrelationKey.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/CorrelationKey.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/CorrelationKey.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -131,8 +140,8 @@ public class CorrelationKeyItemProvider extends BaseElementItemProvider
 
         switch (notification.getFeatureID(CorrelationKey.class)) {
         case BpmnPackage.CORRELATION_KEY__CORRELATION_PROPERTY_REF:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

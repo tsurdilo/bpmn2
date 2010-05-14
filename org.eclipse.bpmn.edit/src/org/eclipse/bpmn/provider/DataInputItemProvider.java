@@ -175,8 +175,13 @@ public class DataInputItemProvider extends BaseElementItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/DataInput.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/DataInput.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/DataInput.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -207,12 +212,12 @@ public class DataInputItemProvider extends BaseElementItemProvider implements
         case BpmnPackage.DATA_INPUT__IS_COLLECTION:
         case BpmnPackage.DATA_INPUT__ITEM_SUBJECT_REF:
         case BpmnPackage.DATA_INPUT__NAME:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.DATA_INPUT__DATA_STATE:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -230,9 +235,9 @@ public class DataInputItemProvider extends BaseElementItemProvider implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getDataInput_DataState(), BpmnFactory.eINSTANCE
-                .createDataState()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getDataInput_DataState(),
+                BpmnFactory.eINSTANCE.createDataState()));
     }
 
     /**

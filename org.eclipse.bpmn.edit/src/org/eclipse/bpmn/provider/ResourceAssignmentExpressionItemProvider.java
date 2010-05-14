@@ -112,8 +112,17 @@ public class ResourceAssignmentExpressionItemProvider extends
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/ResourceAssignmentExpression.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/ResourceAssignmentExpression.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/ResourceAssignmentExpression.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -142,8 +151,8 @@ public class ResourceAssignmentExpressionItemProvider extends
 
         switch (notification.getFeatureID(ResourceAssignmentExpression.class)) {
         case BpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION_GROUP:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);

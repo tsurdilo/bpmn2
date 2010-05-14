@@ -124,8 +124,17 @@ public class ParticipantMultiplicityItemProvider extends
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/ParticipantMultiplicity.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/ParticipantMultiplicity.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/ParticipantMultiplicity.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -155,8 +164,8 @@ public class ParticipantMultiplicityItemProvider extends
         switch (notification.getFeatureID(ParticipantMultiplicity.class)) {
         case BpmnPackage.PARTICIPANT_MULTIPLICITY__MAXIMUM:
         case BpmnPackage.PARTICIPANT_MULTIPLICITY__MINIMUM:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

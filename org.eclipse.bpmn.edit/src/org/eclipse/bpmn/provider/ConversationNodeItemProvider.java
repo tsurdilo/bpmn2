@@ -141,8 +141,8 @@ public class ConversationNodeItemProvider extends BaseElementItemProvider
         switch (notification.getFeatureID(ConversationNode.class)) {
         case BpmnPackage.CONVERSATION_NODE__PARTICIPANT_REF:
         case BpmnPackage.CONVERSATION_NODE__NAME:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

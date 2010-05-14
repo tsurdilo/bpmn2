@@ -135,8 +135,17 @@ public class ResourceParameterBindingItemProvider extends
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/ResourceParameterBinding.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/ResourceParameterBinding.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/ResourceParameterBinding.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -165,12 +174,12 @@ public class ResourceParameterBindingItemProvider extends
 
         switch (notification.getFeatureID(ResourceParameterBinding.class)) {
         case BpmnPackage.RESOURCE_PARAMETER_BINDING__PARAMETER_REF:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION_GROUP:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);

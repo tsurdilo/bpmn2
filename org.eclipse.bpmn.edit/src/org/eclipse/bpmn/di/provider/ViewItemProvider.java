@@ -237,13 +237,13 @@ public class ViewItemProvider extends ItemProviderAdapter implements
         case DIPackage.VIEW__ID:
         case DIPackage.VIEW__SOURCE_CONNECTOR:
         case DIPackage.VIEW__TARGET_CONNECTOR:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case DIPackage.VIEW__STYLE:
         case DIPackage.VIEW__CHILD:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -262,12 +262,12 @@ public class ViewItemProvider extends ItemProviderAdapter implements
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
         newChildDescriptors.add(createChildParameter(
-                DIPackage.Literals.VIEW__STYLE, DIFactory.eINSTANCE
-                        .createStyle()));
+                DIPackage.Literals.VIEW__STYLE,
+                DIFactory.eINSTANCE.createStyle()));
 
         newChildDescriptors.add(createChildParameter(
-                DIPackage.Literals.VIEW__CHILD, DIFactory.eINSTANCE
-                        .createNode()));
+                DIPackage.Literals.VIEW__CHILD,
+                DIFactory.eINSTANCE.createNode()));
     }
 
     /**

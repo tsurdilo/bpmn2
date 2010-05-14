@@ -100,8 +100,13 @@ public class GatewayItemProvider extends FlowNodeItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/Gateway.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Gateway.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Gateway.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -130,8 +135,8 @@ public class GatewayItemProvider extends FlowNodeItemProvider implements
 
         switch (notification.getFeatureID(Gateway.class)) {
         case BpmnPackage.GATEWAY__GATEWAY_DIRECTION:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

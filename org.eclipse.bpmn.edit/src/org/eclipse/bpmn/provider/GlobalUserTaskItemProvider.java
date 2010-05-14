@@ -134,8 +134,17 @@ public class GlobalUserTaskItemProvider extends GlobalTaskItemProvider
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/GlobalUserTask.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/GlobalUserTask.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/GlobalUserTask.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -164,12 +173,12 @@ public class GlobalUserTaskItemProvider extends GlobalTaskItemProvider
 
         switch (notification.getFeatureID(GlobalUserTask.class)) {
         case BpmnPackage.GLOBAL_USER_TASK__IMPLEMENTATION:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.GLOBAL_USER_TASK__RENDERING:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -187,9 +196,9 @@ public class GlobalUserTaskItemProvider extends GlobalTaskItemProvider
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getGlobalUserTask_Rendering(), BpmnFactory.eINSTANCE
-                .createRendering()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getGlobalUserTask_Rendering(),
+                BpmnFactory.eINSTANCE.createRendering()));
     }
 
     /**

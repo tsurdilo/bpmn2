@@ -123,8 +123,17 @@ public class EventBasedGatewayItemProvider extends GatewayItemProvider
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/EventBasedGateway.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/EventBasedGateway.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/EventBasedGateway.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -154,8 +163,8 @@ public class EventBasedGatewayItemProvider extends GatewayItemProvider
         switch (notification.getFeatureID(EventBasedGateway.class)) {
         case BpmnPackage.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE:
         case BpmnPackage.EVENT_BASED_GATEWAY__INSTANTIATE:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

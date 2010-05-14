@@ -145,8 +145,17 @@ public class InputOutputBindingItemProvider extends BaseElementItemProvider
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/InputOutputBinding.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/InputOutputBinding.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/InputOutputBinding.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -177,8 +186,8 @@ public class InputOutputBindingItemProvider extends BaseElementItemProvider
         case BpmnPackage.INPUT_OUTPUT_BINDING__INPUT_DATA_REF:
         case BpmnPackage.INPUT_OUTPUT_BINDING__OPERATION_REF:
         case BpmnPackage.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

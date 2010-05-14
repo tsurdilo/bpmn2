@@ -207,7 +207,12 @@ public class <%=genClass.getProviderClassName()%>
 <%}%>
 	public Object getImage(Object object)
 	{
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/<%=genClass.getName()%>.png"));<%=genModel.getNonNLS()%>
+		try {
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/<%=genClass.getName()%>.png"));<%=genModel.getNonNLS()%>
+		}
+		catch (java.util.MissingResourceException e) {
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/<%=genClass.getName()%>.gif"));<%=genModel.getNonNLS()%>
+		}
 	}
 
 <%}%>

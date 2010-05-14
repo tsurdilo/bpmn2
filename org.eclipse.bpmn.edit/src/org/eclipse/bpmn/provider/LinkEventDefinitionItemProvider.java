@@ -101,8 +101,17 @@ public class LinkEventDefinitionItemProvider extends
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/LinkEventDefinition.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/LinkEventDefinition.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/LinkEventDefinition.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -131,8 +140,8 @@ public class LinkEventDefinitionItemProvider extends
 
         switch (notification.getFeatureID(LinkEventDefinition.class)) {
         case BpmnPackage.LINK_EVENT_DEFINITION__NAME:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

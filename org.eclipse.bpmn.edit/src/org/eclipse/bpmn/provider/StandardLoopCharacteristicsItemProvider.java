@@ -157,8 +157,17 @@ public class StandardLoopCharacteristicsItemProvider extends
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/StandardLoopCharacteristics.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/StandardLoopCharacteristics.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/StandardLoopCharacteristics.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -188,12 +197,12 @@ public class StandardLoopCharacteristicsItemProvider extends
         switch (notification.getFeatureID(StandardLoopCharacteristics.class)) {
         case BpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM:
         case BpmnPackage.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);

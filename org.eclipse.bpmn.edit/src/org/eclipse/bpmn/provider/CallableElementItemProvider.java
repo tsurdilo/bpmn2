@@ -157,8 +157,17 @@ public class CallableElementItemProvider extends RootElementItemProvider
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/CallableElement.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/CallableElement.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/CallableElement.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -188,13 +197,13 @@ public class CallableElementItemProvider extends RootElementItemProvider
         switch (notification.getFeatureID(CallableElement.class)) {
         case BpmnPackage.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS:
         case BpmnPackage.CALLABLE_ELEMENT__NAME:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.CALLABLE_ELEMENT__IO_SPECIFICATION:
         case BpmnPackage.CALLABLE_ELEMENT__IO_BINDINGS:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -212,13 +221,13 @@ public class CallableElementItemProvider extends RootElementItemProvider
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getCallableElement_IoSpecification(), BpmnFactory.eINSTANCE
-                .createInputOutputSpecification()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getCallableElement_IoSpecification(),
+                BpmnFactory.eINSTANCE.createInputOutputSpecification()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getCallableElement_IoBindings(), BpmnFactory.eINSTANCE
-                .createInputOutputBinding()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getCallableElement_IoBindings(),
+                BpmnFactory.eINSTANCE.createInputOutputBinding()));
     }
 
     /**

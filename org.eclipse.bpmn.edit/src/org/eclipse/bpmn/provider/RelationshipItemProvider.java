@@ -163,8 +163,15 @@ public class RelationshipItemProvider extends BaseElementItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/Relationship.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator()
+                            .getImage("full/obj16/Relationship.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator()
+                            .getImage("full/obj16/Relationship.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -196,8 +203,8 @@ public class RelationshipItemProvider extends BaseElementItemProvider implements
         case BpmnPackage.RELATIONSHIP__TARGET:
         case BpmnPackage.RELATIONSHIP__DIRECTION:
         case BpmnPackage.RELATIONSHIP__TYPE:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);

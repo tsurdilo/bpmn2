@@ -162,13 +162,13 @@ public class BaseElementWithMixedContentItemProvider extends
 
         switch (notification.getFeatureID(BaseElementWithMixedContent.class)) {
         case BpmnPackage.BASE_ELEMENT_WITH_MIXED_CONTENT__ID:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.BASE_ELEMENT_WITH_MIXED_CONTENT__MIXED:
         case BpmnPackage.BASE_ELEMENT_WITH_MIXED_CONTENT__ANY_ATTRIBUTE:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);

@@ -137,8 +137,17 @@ public class GlobalChoreographyTaskItemProvider extends
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/GlobalChoreographyTask.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/GlobalChoreographyTask.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/GlobalChoreographyTask.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -167,13 +176,13 @@ public class GlobalChoreographyTaskItemProvider extends
 
         switch (notification.getFeatureID(GlobalChoreographyTask.class)) {
         case BpmnPackage.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.GLOBAL_CHOREOGRAPHY_TASK__PARTICIPANT:
         case BpmnPackage.GLOBAL_CHOREOGRAPHY_TASK__MESSAGE_FLOW:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -191,13 +200,13 @@ public class GlobalChoreographyTaskItemProvider extends
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getGlobalChoreographyTask_Participant(), BpmnFactory.eINSTANCE
-                .createParticipant()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getGlobalChoreographyTask_Participant(),
+                BpmnFactory.eINSTANCE.createParticipant()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getGlobalChoreographyTask_MessageFlow(), BpmnFactory.eINSTANCE
-                .createMessageFlow()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getGlobalChoreographyTask_MessageFlow(),
+                BpmnFactory.eINSTANCE.createMessageFlow()));
     }
 
     /**

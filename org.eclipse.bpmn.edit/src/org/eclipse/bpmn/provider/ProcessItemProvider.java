@@ -203,8 +203,13 @@ public class ProcessItemProvider extends CallableElementItemProvider implements
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/Process.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Process.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Process.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
@@ -236,8 +241,8 @@ public class ProcessItemProvider extends CallableElementItemProvider implements
         case BpmnPackage.PROCESS__DEFINITIONAL_COLLABORATION_REF:
         case BpmnPackage.PROCESS__IS_CLOSED:
         case BpmnPackage.PROCESS__PROCESS_TYPE:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), false, true));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), false, true));
             return;
         case BpmnPackage.PROCESS__AUDITING:
         case BpmnPackage.PROCESS__MONITORING:
@@ -245,8 +250,8 @@ public class ProcessItemProvider extends CallableElementItemProvider implements
         case BpmnPackage.PROCESS__LANE_SET:
         case BpmnPackage.PROCESS__FLOW_ELEMENT_GROUP:
         case BpmnPackage.PROCESS__ARTIFACT_GROUP:
-            fireNotifyChanged(new ViewerNotification(notification, notification
-                    .getNotifier(), true, false));
+            fireNotifyChanged(new ViewerNotification(notification,
+                    notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -264,22 +269,21 @@ public class ProcessItemProvider extends CallableElementItemProvider implements
             Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors
-                .add(createChildParameter(BpmnPackage.eINSTANCE
-                        .getProcess_Auditing(), BpmnFactory.eINSTANCE
-                        .createAuditing()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getProcess_Auditing(),
+                BpmnFactory.eINSTANCE.createAuditing()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getProcess_Monitoring(), BpmnFactory.eINSTANCE
-                .createMonitoring()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getProcess_Monitoring(),
+                BpmnFactory.eINSTANCE.createMonitoring()));
 
-        newChildDescriptors
-                .add(createChildParameter(BpmnPackage.eINSTANCE
-                        .getProcess_Property(), BpmnFactory.eINSTANCE
-                        .createProperty()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getProcess_Property(),
+                BpmnFactory.eINSTANCE.createProperty()));
 
-        newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
-                .getProcess_LaneSet(), BpmnFactory.eINSTANCE.createLaneSet()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnPackage.eINSTANCE.getProcess_LaneSet(),
+                BpmnFactory.eINSTANCE.createLaneSet()));
 
         newChildDescriptors.add(createChildParameter(BpmnPackage.eINSTANCE
                 .getProcess_FlowElementGroup(), FeatureMapUtil.createEntry(

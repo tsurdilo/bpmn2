@@ -76,8 +76,17 @@ public class TerminateEventDefinitionItemProvider extends
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage(
-                "full/obj16/TerminateEventDefinition.png")); //$NON-NLS-1$
+        try {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/TerminateEventDefinition.png")); //$NON-NLS-1$
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(
+                    object,
+                    getResourceLocator().getImage(
+                            "full/obj16/TerminateEventDefinition.gif")); //$NON-NLS-1$
+        }
     }
 
     /**
