@@ -145,12 +145,15 @@ COPYRIGHT
       category.description = "BPMN 2.0" #TODO
       category.features<< project("bpmn2:org.eclipse.bpmn.feature")
       site.categories << category
-      site.enhance do 
-        sign(site.to_s)
-        pack(site.to_s)
-        digest(site.to_s)
-      end
     end
-    package(:p2_from_site)
+    ec = task :eclipse_specific do
+      site = package(:site)
+       site.invoke
+      sign(site.to_s)
+      pack(site.to_s)
+      digest(site.to_s)
+    end
+    ec.enhance [package(:site)]
+    package(:p2_from_site).enhance([ec]).with :site => package(:site) 
   end
 end
