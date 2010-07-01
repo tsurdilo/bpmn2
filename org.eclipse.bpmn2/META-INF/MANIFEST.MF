@@ -8,9 +8,9 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.eclipse.bpmn2,
- org.eclipse.bpmn2.bpmn2di,
- org.eclipse.bpmn2.bpmn2di.impl,
- org.eclipse.bpmn2.bpmn2di.util,
+ org.eclipse.bpmn2.di,
+ org.eclipse.bpmn2.di.impl,
+ org.eclipse.bpmn2.di.util,
  org.eclipse.bpmn2.impl,
  org.eclipse.bpmn2.util,
  org.eclipse.dc,

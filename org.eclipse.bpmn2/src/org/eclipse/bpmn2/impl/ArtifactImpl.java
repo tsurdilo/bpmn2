@@ -16,7 +16,6 @@ package org.eclipse.bpmn2.impl;
 
 import org.eclipse.bpmn2.Artifact;
 import org.eclipse.bpmn2.Bpmn2Package;
-
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -29,23 +28,23 @@ import org.eclipse.emf.ecore.EClass;
  * @generated
  */
 public abstract class ArtifactImpl extends BaseElementImpl implements Artifact {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ArtifactImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ArtifactImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.ARTIFACT;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.ARTIFACT;
+    }
 
 } //ArtifactImpl

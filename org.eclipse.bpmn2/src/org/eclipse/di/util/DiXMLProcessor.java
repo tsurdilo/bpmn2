@@ -17,11 +17,8 @@ package org.eclipse.di.util;
 import java.util.Map;
 
 import org.eclipse.di.DiPackage;
-
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.resource.Resource;
-
 import org.eclipse.emf.ecore.xmi.util.XMLProcessor;
 
 /**
@@ -32,31 +29,31 @@ import org.eclipse.emf.ecore.xmi.util.XMLProcessor;
  */
 public class DiXMLProcessor extends XMLProcessor {
 
-	/**
-	 * Public constructor to instantiate the helper.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DiXMLProcessor() {
-		super((EPackage.Registry.INSTANCE));
-		DiPackage.eINSTANCE.eClass();
-	}
-	
-	/**
-	 * Register for "*" and "xml" file extensions the DiResourceFactoryImpl factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected Map<String, Resource.Factory> getRegistrations() {
-		if (registrations == null) {
-			super.getRegistrations();
-			registrations.put(XML_EXTENSION, new DiResourceFactoryImpl());
-			registrations.put(STAR_EXTENSION, new DiResourceFactoryImpl());
-		}
-		return registrations;
-	}
+    /**
+     * Public constructor to instantiate the helper.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public DiXMLProcessor() {
+        super((EPackage.Registry.INSTANCE));
+        DiPackage.eINSTANCE.eClass();
+    }
+
+    /**
+     * Register for "*" and "xml" file extensions the DiResourceFactoryImpl factory.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected Map<String, Resource.Factory> getRegistrations() {
+        if (registrations == null) {
+            super.getRegistrations();
+            registrations.put(XML_EXTENSION, new DiResourceFactoryImpl());
+            registrations.put(STAR_EXTENSION, new DiResourceFactoryImpl());
+        }
+        return registrations;
+    }
 
 } //DiXMLProcessor

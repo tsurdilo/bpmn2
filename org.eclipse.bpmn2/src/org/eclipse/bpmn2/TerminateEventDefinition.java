@@ -14,7 +14,6 @@
  */
 package org.eclipse.bpmn2;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Terminate Event Definition</b></em>'.

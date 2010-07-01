@@ -15,7 +15,6 @@
 package org.eclipse.bpmn2.util;
 
 import org.eclipse.emf.common.util.URI;
-
 import org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl;
 
 /**
@@ -26,15 +25,15 @@ import org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl;
  * @generated
  */
 public class Bpmn2ResourceImpl extends XMLResourceImpl {
-	/**
-	 * Creates an instance of the resource.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param uri the URI of the new resource.
-	 * @generated
-	 */
-	public Bpmn2ResourceImpl(URI uri) {
-		super(uri);
-	}
+    /**
+     * Creates an instance of the resource.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param uri the URI of the new resource.
+     * @generated
+     */
+    public Bpmn2ResourceImpl(URI uri) {
+        super(uri);
+    }
 
 } //Bpmn2ResourceImpl

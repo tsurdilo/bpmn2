@@ -14,7 +14,6 @@
  */
 package org.eclipse.di;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Node</b></em>'.

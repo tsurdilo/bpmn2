@@ -33,7 +33,7 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            class="org.eclipse.bpmn2.bpmn2di.Bpmn2DiPackage"
+            class="org.eclipse.bpmn2.di.BpmnDiPackage"
             genModel="model/BPMN20.genmodel"
             uri="http://www.omg.org/spec/BPMN/20100524/DI-XMI"/>
    </extension>
@@ -41,7 +41,7 @@
    <extension point="org.eclipse.emf.ecore.extension_parser">
       <parser
             type="bpmn2di"
-            class="org.eclipse.bpmn2.bpmn2di.util.Bpmn2DiResourceFactoryImpl"/>
+            class="org.eclipse.bpmn2.di.util.BpmnDiResourceFactoryImpl"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">

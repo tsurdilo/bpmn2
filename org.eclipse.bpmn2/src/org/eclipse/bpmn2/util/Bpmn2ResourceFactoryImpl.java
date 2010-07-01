@@ -29,42 +29,42 @@ import org.eclipse.emf.ecore.xmi.impl.ElementHandlerImpl;
  * @generated
  */
 public class Bpmn2ResourceFactoryImpl extends ResourceFactoryImpl {
-	/**
-	 * Creates an instance of the resource factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Bpmn2ResourceFactoryImpl() {
-		super();
-	}
+    /**
+     * Creates an instance of the resource factory.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Bpmn2ResourceFactoryImpl() {
+        super();
+    }
 
-	/**
-	 * Creates an instance of the resource.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public Resource createResource(URI uri) {
-		XMLResource result = new Bpmn2ResourceImpl(uri);
-		ExtendedMetaData extendedMetadata = new XmlExtendedMetadata();
-		result.getDefaultSaveOptions().put(XMLResource.OPTION_EXTENDED_META_DATA, extendedMetadata);
-		result.getDefaultLoadOptions().put(XMLResource.OPTION_EXTENDED_META_DATA, extendedMetadata);
+    /**
+     * Creates an instance of the resource.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated NOT
+     */
+    @Override
+    public Resource createResource(URI uri) {
+        XMLResource result = new Bpmn2ResourceImpl(uri);
+        ExtendedMetaData extendedMetadata = new XmlExtendedMetadata();
+        result.getDefaultSaveOptions().put(XMLResource.OPTION_EXTENDED_META_DATA, extendedMetadata);
+        result.getDefaultLoadOptions().put(XMLResource.OPTION_EXTENDED_META_DATA, extendedMetadata);
 
-		result.getDefaultSaveOptions().put(XMLResource.OPTION_SAVE_TYPE_INFORMATION, new OnlyContainmentTypeInfo());
+        result.getDefaultSaveOptions().put(XMLResource.OPTION_SAVE_TYPE_INFORMATION, new OnlyContainmentTypeInfo());
 
-		result.getDefaultLoadOptions().put(XMLResource.OPTION_USE_ENCODED_ATTRIBUTE_STYLE, Boolean.TRUE);
-		result.getDefaultSaveOptions().put(XMLResource.OPTION_USE_ENCODED_ATTRIBUTE_STYLE, Boolean.TRUE);
+        result.getDefaultLoadOptions().put(XMLResource.OPTION_USE_ENCODED_ATTRIBUTE_STYLE, Boolean.TRUE);
+        result.getDefaultSaveOptions().put(XMLResource.OPTION_USE_ENCODED_ATTRIBUTE_STYLE, Boolean.TRUE);
 
-		result.getDefaultLoadOptions().put(XMLResource.OPTION_USE_LEXICAL_HANDLER, Boolean.TRUE);
+        result.getDefaultLoadOptions().put(XMLResource.OPTION_USE_LEXICAL_HANDLER, Boolean.TRUE);
 
-		result.getDefaultLoadOptions().put(XMLResource.OPTION_URI_HANDLER, new QNameURIHandler());
-		result.getDefaultSaveOptions().put(XMLResource.OPTION_URI_HANDLER, new QNameURIHandler());
+        result.getDefaultLoadOptions().put(XMLResource.OPTION_URI_HANDLER, new QNameURIHandler());
+        result.getDefaultSaveOptions().put(XMLResource.OPTION_URI_HANDLER, new QNameURIHandler());
 
-		result.getDefaultSaveOptions().put(XMLResource.OPTION_ELEMENT_HANDLER, new ElementHandlerImpl(true));
+        result.getDefaultSaveOptions().put(XMLResource.OPTION_ELEMENT_HANDLER, new ElementHandlerImpl(true));
 
-		return result;
-	}
+        return result;
+    }
 
 } //Bpmn2ResourceFactoryImpl

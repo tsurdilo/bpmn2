@@ -16,7 +16,6 @@ package org.eclipse.di.impl;
 
 import org.eclipse.di.DiPackage;
 import org.eclipse.di.Node;
-
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -29,23 +28,23 @@ import org.eclipse.emf.ecore.EClass;
  * @generated
  */
 public abstract class NodeImpl extends DiagramElementImpl implements Node {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected NodeImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected NodeImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return DiPackage.Literals.NODE;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return DiPackage.Literals.NODE;
+    }
 
 } //NodeImpl

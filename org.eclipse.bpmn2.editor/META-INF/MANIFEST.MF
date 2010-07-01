@@ -8,7 +8,7 @@ Bundle-Activator: org.eclipse.bpmn2.presentation.bpmn2EditorPlugin$Implementatio
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: org.eclipse.bpmn2.bpmn2di.presentation,
+Export-Package: org.eclipse.bpmn2.di.presentation,
  org.eclipse.bpmn2.presentation,
  org.eclipse.dc.presentation,
  org.eclipse.di.presentation

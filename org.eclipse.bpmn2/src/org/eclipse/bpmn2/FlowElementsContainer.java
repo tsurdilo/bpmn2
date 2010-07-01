@@ -34,38 +34,38 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface FlowElementsContainer extends BaseElement {
-	/**
-	 * Returns the value of the '<em><b>Lane Sets</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.bpmn2.LaneSet}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Lane Sets</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Lane Sets</em>' containment reference list.
-	 * @see org.eclipse.bpmn2.Bpmn2Package#getFlowElementsContainer_LaneSets()
-	 * @model containment="true" ordered="false"
-	 *        extendedMetaData="kind='element' name='laneSet' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
-	 * @generated
-	 */
-	EList<LaneSet> getLaneSets();
+    /**
+     * Returns the value of the '<em><b>Lane Sets</b></em>' containment reference list.
+     * The list contents are of type {@link org.eclipse.bpmn2.LaneSet}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Lane Sets</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Lane Sets</em>' containment reference list.
+     * @see org.eclipse.bpmn2.Bpmn2Package#getFlowElementsContainer_LaneSets()
+     * @model containment="true" ordered="false"
+     *        extendedMetaData="kind='element' name='laneSet' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
+     * @generated
+     */
+    EList<LaneSet> getLaneSets();
 
-	/**
-	 * Returns the value of the '<em><b>Flow Elements</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.bpmn2.FlowElement}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Flow Elements</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Flow Elements</em>' containment reference list.
-	 * @see org.eclipse.bpmn2.Bpmn2Package#getFlowElementsContainer_FlowElements()
-	 * @model containment="true" ordered="false"
-	 *        extendedMetaData="kind='element' name='flowElement' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL' group='http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement'"
-	 * @generated
-	 */
-	EList<FlowElement> getFlowElements();
+    /**
+     * Returns the value of the '<em><b>Flow Elements</b></em>' containment reference list.
+     * The list contents are of type {@link org.eclipse.bpmn2.FlowElement}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Flow Elements</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Flow Elements</em>' containment reference list.
+     * @see org.eclipse.bpmn2.Bpmn2Package#getFlowElementsContainer_FlowElements()
+     * @model containment="true" ordered="false"
+     *        extendedMetaData="kind='element' name='flowElement' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL' group='http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement'"
+     * @generated
+     */
+    EList<FlowElement> getFlowElements();
 
 } // FlowElementsContainer

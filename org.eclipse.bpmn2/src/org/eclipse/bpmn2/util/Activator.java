@@ -17,7 +17,7 @@
 package org.eclipse.bpmn2.util;
 
 import org.eclipse.bpmn2.Bpmn2Package;
-import org.eclipse.bpmn2.bpmn2di.Bpmn2DiPackage;
+import org.eclipse.bpmn2.di.BpmnDiPackage;
 import org.eclipse.core.runtime.Plugin;
 import org.eclipse.dc.DcPackage;
 import org.eclipse.di.DiPackage;
@@ -35,7 +35,7 @@ public class Activator extends Plugin {
 
 		// register also the non-XMI namespaces, as they are needed to read XML files
 		registerNonXMINamespace(Bpmn2Package.eINSTANCE);
-		registerNonXMINamespace(Bpmn2DiPackage.eINSTANCE);
+		registerNonXMINamespace(BpmnDiPackage.eINSTANCE);
 		registerNonXMINamespace(DiPackage.eINSTANCE);
 		registerNonXMINamespace(DcPackage.eINSTANCE);
 
