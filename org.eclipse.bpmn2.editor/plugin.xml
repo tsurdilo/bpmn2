@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ 
+ Copyright (c) 2010 SAP AG.
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+ 
+ Contributors:
+    Reiner Hille-Doering (SAP AG) - initial API and implementation and/or initial documentation
+ 
+ </copyright>
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.eclipse.bpmn2.presentation.Bpmn2ModelWizardID"
+            name="%_UI_Bpmn2ModelWizard_label"
+            class="org.eclipse.bpmn2.presentation.Bpmn2ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Bpmn2ModelFile.gif">
+         <description>%_UI_Bpmn2ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.eclipse.bpmn2.presentation.Bpmn2EditorID"
+            name="%_UI_Bpmn2Editor_label"
+            icon="icons/full/obj16/Bpmn2ModelFile.gif"
+            extensions="bpmn2"
+            class="org.eclipse.bpmn2.presentation.Bpmn2Editor"
+            contributorClass="org.eclipse.bpmn2.presentation.Bpmn2ActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.eclipse.bpmn2.bpmn2di.presentation.Bpmn2DiModelWizardID"
+            name="%_UI_Bpmn2DiModelWizard_label"
+            class="org.eclipse.bpmn2.bpmn2di.presentation.Bpmn2DiModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Bpmn2DiModelFile.gif">
+         <description>%_UI_Bpmn2DiModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.eclipse.bpmn2.bpmn2di.presentation.Bpmn2DiEditorID"
+            name="%_UI_Bpmn2DiEditor_label"
+            icon="icons/full/obj16/Bpmn2DiModelFile.gif"
+            extensions="bpmn2di"
+            class="org.eclipse.bpmn2.bpmn2di.presentation.Bpmn2DiEditor"
+            contributorClass="org.eclipse.bpmn2.bpmn2di.presentation.Bpmn2DiActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.eclipse.di.presentation.DiModelWizardID"
+            name="%_UI_DiModelWizard_label"
+            class="org.eclipse.di.presentation.DiModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/DiModelFile.gif">
+         <description>%_UI_DiModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.eclipse.di.presentation.DiEditorID"
+            name="%_UI_DiEditor_label"
+            icon="icons/full/obj16/DiModelFile.gif"
+            extensions="di"
+            class="org.eclipse.di.presentation.DiEditor"
+            contributorClass="org.eclipse.di.presentation.DiActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.eclipse.dc.presentation.DcModelWizardID"
+            name="%_UI_DcModelWizard_label"
+            class="org.eclipse.dc.presentation.DcModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/DcModelFile.gif">
+         <description>%_UI_DcModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.eclipse.dc.presentation.DcEditorID"
+            name="%_UI_DcEditor_label"
+            icon="icons/full/obj16/DcModelFile.gif"
+            extensions="dc"
+            class="org.eclipse.dc.presentation.DcEditor"
+            contributorClass="org.eclipse.dc.presentation.DcActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

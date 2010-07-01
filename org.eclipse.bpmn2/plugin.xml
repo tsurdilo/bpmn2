@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ 
+ Copyright (c) 2010 SAP AG.
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+ 
+ Contributors:
+    Reiner Hille-Doering (SAP AG) - initial API and implementation and/or initial documentation
+ 
+ </copyright>
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="org.eclipse.bpmn2.Bpmn2Package"
+            genModel="model/BPMN20.genmodel"
+            uri="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="bpmn2"
+            class="org.eclipse.bpmn2.util.Bpmn2ResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="org.eclipse.bpmn2.bpmn2di.Bpmn2DiPackage"
+            genModel="model/BPMN20.genmodel"
+            uri="http://www.omg.org/spec/BPMN/20100524/DI-XMI"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="bpmn2di"
+            class="org.eclipse.bpmn2.bpmn2di.util.Bpmn2DiResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="org.eclipse.di.DiPackage"
+            genModel="model/BPMN20.genmodel"
+            uri="http://www.omg.org/spec/DD/20100524/DI-XMI"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="di"
+            class="org.eclipse.di.util.DiResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="org.eclipse.dc.DcPackage"
+            genModel="model/BPMN20.genmodel"
+            uri="http://www.omg.org/spec/DD/20100524/DC-XMI"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="dc"
+            class="org.eclipse.dc.util.DcResourceFactoryImpl"/>
+   </extension>
+
+</plugin>
