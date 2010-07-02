@@ -36,4 +36,25 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl {
         super(uri);
     }
 
+    /**
+     * @generated NOT
+     */
+    @Override
+    protected boolean useUUIDs() {
+        // We better have a UUID generated instead of having XMLResourceImpl writing URIs, that
+        // are not schema compliant
+        return true;
+    }
+    
+    /**
+     * @generated NOT
+     */
+    @Override
+    protected boolean assignIDsWhileLoading() {
+        // For some reason this must be false. 
+        // Else both, DocumentRoot and Definitions would create an ID (which is useless)
+        // which is then both written into the root element.
+        return false;
+    }
+
 } //Bpmn2ResourceImpl

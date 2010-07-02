@@ -124,6 +124,22 @@ public class ReceiveTaskItemProvider extends TaskItemProvider implements IEditin
     }
 
     /**
+     * This returns the image of the child object, if available.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object getCreateChildImage(Object owner, Object feature, Object child, Collection<?> selection) {
+        IItemLabelProvider imageProvider = (IItemLabelProvider)adapterFactory.adapt(child, IItemLabelProvider.class);
+        if (imageProvider != null) {
+            return imageProvider.getImage(child);
+        }
+
+        return super.getCreateChildImage(owner, feature, child, selection);
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
