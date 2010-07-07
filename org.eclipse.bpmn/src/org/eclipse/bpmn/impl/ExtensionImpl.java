@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.bpmn.BpmnPackage;
@@ -132,11 +133,9 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Documentation> getDocumentation() {
+    public List<Documentation> getDocumentation() {
         if (documentation == null) {
-            documentation = new EObjectContainmentEList<Documentation>(
-                    Documentation.class, this,
-                    BpmnPackage.EXTENSION__DOCUMENTATION);
+            documentation = new EObjectContainmentEList<Documentation>(Documentation.class, this, BpmnPackage.EXTENSION__DOCUMENTATION);
         }
         return documentation;
     }
@@ -159,9 +158,7 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
         QName oldDefinition = definition;
         definition = newDefinition;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.EXTENSION__DEFINITION, oldDefinition,
-                    definition));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.EXTENSION__DEFINITION, oldDefinition, definition));
     }
 
     /**
@@ -184,9 +181,8 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
         boolean oldMustUnderstandESet = mustUnderstandESet;
         mustUnderstandESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.EXTENSION__MUST_UNDERSTAND, oldMustUnderstand,
-                    mustUnderstand, !oldMustUnderstandESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.EXTENSION__MUST_UNDERSTAND, oldMustUnderstand, mustUnderstand,
+                    !oldMustUnderstandESet));
     }
 
     /**
@@ -200,9 +196,8 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
         mustUnderstand = MUST_UNDERSTAND_EDEFAULT;
         mustUnderstandESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    BpmnPackage.EXTENSION__MUST_UNDERSTAND, oldMustUnderstand,
-                    MUST_UNDERSTAND_EDEFAULT, oldMustUnderstandESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, BpmnPackage.EXTENSION__MUST_UNDERSTAND, oldMustUnderstand, MUST_UNDERSTAND_EDEFAULT,
+                    oldMustUnderstandESet));
     }
 
     /**
@@ -220,12 +215,10 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.EXTENSION__DOCUMENTATION:
-            return ((InternalEList<?>) getDocumentation()).basicRemove(
-                    otherEnd, msgs);
+            return ((InternalEList<?>) getDocumentation()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -259,8 +252,7 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
         switch (featureID) {
         case BpmnPackage.EXTENSION__DOCUMENTATION:
             getDocumentation().clear();
-            getDocumentation().addAll(
-                    (Collection<? extends Documentation>) newValue);
+            getDocumentation().addAll((Collection<? extends Documentation>) newValue);
             return;
         case BpmnPackage.EXTENSION__DEFINITION:
             setDefinition((QName) newValue);
@@ -304,8 +296,7 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
         case BpmnPackage.EXTENSION__DOCUMENTATION:
             return documentation != null && !documentation.isEmpty();
         case BpmnPackage.EXTENSION__DEFINITION:
-            return DEFINITION_EDEFAULT == null ? definition != null
-                    : !DEFINITION_EDEFAULT.equals(definition);
+            return DEFINITION_EDEFAULT == null ? definition != null : !DEFINITION_EDEFAULT.equals(definition);
         case BpmnPackage.EXTENSION__MUST_UNDERSTAND:
             return isSetMustUnderstand();
         }

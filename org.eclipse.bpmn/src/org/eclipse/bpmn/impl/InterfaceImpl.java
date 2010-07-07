@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn.BpmnPackage;
 import org.eclipse.bpmn.Interface;
 import org.eclipse.bpmn.Operation;
@@ -99,10 +100,9 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Operation> getOperation() {
+    public List<Operation> getOperation() {
         if (operation == null) {
-            operation = new EObjectContainmentEList<Operation>(Operation.class,
-                    this, BpmnPackage.INTERFACE__OPERATION);
+            operation = new EObjectContainmentEList<Operation>(Operation.class, this, BpmnPackage.INTERFACE__OPERATION);
         }
         return operation;
     }
@@ -125,8 +125,7 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.INTERFACE__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.INTERFACE__NAME, oldName, name));
     }
 
     /**
@@ -135,12 +134,10 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.INTERFACE__OPERATION:
-            return ((InternalEList<?>) getOperation()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getOperation()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -210,8 +207,7 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
         case BpmnPackage.INTERFACE__OPERATION:
             return operation != null && !operation.isEmpty();
         case BpmnPackage.INTERFACE__NAME:
-            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-                    .equals(name);
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }

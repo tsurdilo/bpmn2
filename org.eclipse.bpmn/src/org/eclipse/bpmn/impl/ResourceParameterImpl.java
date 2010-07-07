@@ -37,8 +37,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ResourceParameterImpl extends BaseElementImpl implements
-        ResourceParameter {
+public class ResourceParameterImpl extends BaseElementImpl implements ResourceParameter {
     /**
      * The default value of the '{@link #isIsRequired() <em>Is Required</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -147,9 +146,7 @@ public class ResourceParameterImpl extends BaseElementImpl implements
         boolean oldIsRequiredESet = isRequiredESet;
         isRequiredESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.RESOURCE_PARAMETER__IS_REQUIRED, oldIsRequired,
-                    isRequired, !oldIsRequiredESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.RESOURCE_PARAMETER__IS_REQUIRED, oldIsRequired, isRequired, !oldIsRequiredESet));
     }
 
     /**
@@ -163,9 +160,8 @@ public class ResourceParameterImpl extends BaseElementImpl implements
         isRequired = IS_REQUIRED_EDEFAULT;
         isRequiredESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    BpmnPackage.RESOURCE_PARAMETER__IS_REQUIRED, oldIsRequired,
-                    IS_REQUIRED_EDEFAULT, oldIsRequiredESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, BpmnPackage.RESOURCE_PARAMETER__IS_REQUIRED, oldIsRequired, IS_REQUIRED_EDEFAULT,
+                    oldIsRequiredESet));
     }
 
     /**
@@ -195,8 +191,7 @@ public class ResourceParameterImpl extends BaseElementImpl implements
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.RESOURCE_PARAMETER__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.RESOURCE_PARAMETER__NAME, oldName, name));
     }
 
     /**
@@ -217,8 +212,7 @@ public class ResourceParameterImpl extends BaseElementImpl implements
         QName oldType = type;
         type = newType;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.RESOURCE_PARAMETER__TYPE, oldType, type));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.RESOURCE_PARAMETER__TYPE, oldType, type));
     }
 
     /**
@@ -292,11 +286,9 @@ public class ResourceParameterImpl extends BaseElementImpl implements
         case BpmnPackage.RESOURCE_PARAMETER__IS_REQUIRED:
             return isSetIsRequired();
         case BpmnPackage.RESOURCE_PARAMETER__NAME:
-            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-                    .equals(name);
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         case BpmnPackage.RESOURCE_PARAMETER__TYPE:
-            return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT
-                    .equals(type);
+            return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
         }
         return super.eIsSet(featureID);
     }

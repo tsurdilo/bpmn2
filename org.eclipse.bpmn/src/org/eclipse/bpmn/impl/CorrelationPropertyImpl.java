@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn.BpmnPackage;
 import org.eclipse.bpmn.CorrelationProperty;
 import org.eclipse.bpmn.CorrelationPropertyRetrievalExpression;
@@ -40,8 +41,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class CorrelationPropertyImpl extends RootElementImpl implements
-        CorrelationProperty {
+public class CorrelationPropertyImpl extends RootElementImpl implements CorrelationProperty {
     /**
      * The cached value of the '{@link #getCorrelationPropertyRetrievalExpression() <em>Correlation Property Retrieval Expression</em>}' containment reference list.
      * <!-- begin-user-doc -->
@@ -76,12 +76,10 @@ public class CorrelationPropertyImpl extends RootElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<CorrelationPropertyRetrievalExpression> getCorrelationPropertyRetrievalExpression() {
+    public List<CorrelationPropertyRetrievalExpression> getCorrelationPropertyRetrievalExpression() {
         if (correlationPropertyRetrievalExpression == null) {
             correlationPropertyRetrievalExpression = new EObjectContainmentEList<CorrelationPropertyRetrievalExpression>(
-                    CorrelationPropertyRetrievalExpression.class,
-                    this,
-                    BpmnPackage.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION);
+                    CorrelationPropertyRetrievalExpression.class, this, BpmnPackage.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION);
         }
         return correlationPropertyRetrievalExpression;
     }
@@ -92,12 +90,10 @@ public class CorrelationPropertyImpl extends RootElementImpl implements
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
-            return ((InternalEList<?>) getCorrelationPropertyRetrievalExpression())
-                    .basicRemove(otherEnd, msgs);
+            return ((InternalEList<?>) getCorrelationPropertyRetrievalExpression()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -127,9 +123,7 @@ public class CorrelationPropertyImpl extends RootElementImpl implements
         switch (featureID) {
         case BpmnPackage.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
             getCorrelationPropertyRetrievalExpression().clear();
-            getCorrelationPropertyRetrievalExpression()
-                    .addAll(
-                            (Collection<? extends CorrelationPropertyRetrievalExpression>) newValue);
+            getCorrelationPropertyRetrievalExpression().addAll((Collection<? extends CorrelationPropertyRetrievalExpression>) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -159,8 +153,7 @@ public class CorrelationPropertyImpl extends RootElementImpl implements
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case BpmnPackage.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
-            return correlationPropertyRetrievalExpression != null
-                    && !correlationPropertyRetrievalExpression.isEmpty();
+            return correlationPropertyRetrievalExpression != null && !correlationPropertyRetrievalExpression.isEmpty();
         }
         return super.eIsSet(featureID);
     }

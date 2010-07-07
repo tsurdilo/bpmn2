@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.emf.common.util.EList;
@@ -73,7 +74,7 @@ public interface Conversation extends CallableElement {
      *        extendedMetaData="kind='element' name='conversationNode' namespace='##targetNamespace' group='conversationNode:group'"
      * @generated
      */
-    EList<ConversationNode> getConversationNode();
+    List<ConversationNode> getConversationNode();
 
     /**
      * Returns the value of the '<em><b>Participant</b></em>' containment reference list.
@@ -90,7 +91,7 @@ public interface Conversation extends CallableElement {
      *        extendedMetaData="kind='element' name='participant' namespace='##targetNamespace'"
      * @generated
      */
-    EList<Participant> getParticipant();
+    List<Participant> getParticipant();
 
     /**
      * Returns the value of the '<em><b>Artifact Group</b></em>' attribute list.
@@ -124,7 +125,7 @@ public interface Conversation extends CallableElement {
      *        extendedMetaData="kind='element' name='artifact' namespace='##targetNamespace' group='artifact:group'"
      * @generated
      */
-    EList<Artifact> getArtifact();
+    List<Artifact> getArtifact();
 
     /**
      * Returns the value of the '<em><b>Message Flow</b></em>' containment reference list.
@@ -141,7 +142,7 @@ public interface Conversation extends CallableElement {
      *        extendedMetaData="kind='element' name='messageFlow' namespace='##targetNamespace'"
      * @generated
      */
-    EList<MessageFlow> getMessageFlow();
+    List<MessageFlow> getMessageFlow();
 
     /**
      * Returns the value of the '<em><b>Message Flow Ref</b></em>' attribute list.
@@ -158,7 +159,7 @@ public interface Conversation extends CallableElement {
      *        extendedMetaData="kind='element' name='messageFlowRef' namespace='##targetNamespace'"
      * @generated
      */
-    EList<QName> getMessageFlowRef();
+    List<QName> getMessageFlowRef();
 
     /**
      * Returns the value of the '<em><b>Correlation Key</b></em>' containment reference list.
@@ -175,6 +176,6 @@ public interface Conversation extends CallableElement {
      *        extendedMetaData="kind='element' name='correlationKey' namespace='##targetNamespace'"
      * @generated
      */
-    EList<CorrelationKey> getCorrelationKey();
+    List<CorrelationKey> getCorrelationKey();
 
 } // Conversation

@@ -114,8 +114,7 @@ public class MessageImpl extends RootElementImpl implements Message {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.MESSAGE__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.MESSAGE__NAME, oldName, name));
     }
 
     /**
@@ -136,9 +135,7 @@ public class MessageImpl extends RootElementImpl implements Message {
         QName oldStructureRef = structureRef;
         structureRef = newStructureRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.MESSAGE__STRUCTURE_REF, oldStructureRef,
-                    structureRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.MESSAGE__STRUCTURE_REF, oldStructureRef, structureRef));
     }
 
     /**
@@ -202,11 +199,9 @@ public class MessageImpl extends RootElementImpl implements Message {
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case BpmnPackage.MESSAGE__NAME:
-            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-                    .equals(name);
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         case BpmnPackage.MESSAGE__STRUCTURE_REF:
-            return STRUCTURE_REF_EDEFAULT == null ? structureRef != null
-                    : !STRUCTURE_REF_EDEFAULT.equals(structureRef);
+            return STRUCTURE_REF_EDEFAULT == null ? structureRef != null : !STRUCTURE_REF_EDEFAULT.equals(structureRef);
         }
         return super.eIsSet(featureID);
     }

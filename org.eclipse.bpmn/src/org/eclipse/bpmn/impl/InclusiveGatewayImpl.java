@@ -33,8 +33,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class InclusiveGatewayImpl extends GatewayImpl implements
-        InclusiveGateway {
+public class InclusiveGatewayImpl extends GatewayImpl implements InclusiveGateway {
     /**
      * The default value of the '{@link #getDefault() <em>Default</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -92,9 +91,7 @@ public class InclusiveGatewayImpl extends GatewayImpl implements
         String oldDefault = default_;
         default_ = newDefault;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.INCLUSIVE_GATEWAY__DEFAULT, oldDefault,
-                    default_));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.INCLUSIVE_GATEWAY__DEFAULT, oldDefault, default_));
     }
 
     /**
@@ -150,8 +147,7 @@ public class InclusiveGatewayImpl extends GatewayImpl implements
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case BpmnPackage.INCLUSIVE_GATEWAY__DEFAULT:
-            return DEFAULT_EDEFAULT == null ? default_ != null
-                    : !DEFAULT_EDEFAULT.equals(default_);
+            return DEFAULT_EDEFAULT == null ? default_ != null : !DEFAULT_EDEFAULT.equals(default_);
         }
         return super.eIsSet(featureID);
     }

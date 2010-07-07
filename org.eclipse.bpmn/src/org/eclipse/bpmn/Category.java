@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -45,6 +46,6 @@ public interface Category extends RootElement {
      *        extendedMetaData="kind='element' name='categoryValue' namespace='##targetNamespace'"
      * @generated
      */
-    EList<CategoryValue> getCategoryValue();
+    List<CategoryValue> getCategoryValue();
 
 } // Category

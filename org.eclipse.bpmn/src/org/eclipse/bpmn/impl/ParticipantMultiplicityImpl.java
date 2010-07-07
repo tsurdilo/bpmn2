@@ -34,8 +34,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ParticipantMultiplicityImpl extends BaseElementImpl implements
-        ParticipantMultiplicity {
+public class ParticipantMultiplicityImpl extends BaseElementImpl implements ParticipantMultiplicity {
     /**
      * The default value of the '{@link #getMaximum() <em>Maximum</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -133,9 +132,7 @@ public class ParticipantMultiplicityImpl extends BaseElementImpl implements
         boolean oldMaximumESet = maximumESet;
         maximumESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.PARTICIPANT_MULTIPLICITY__MAXIMUM, oldMaximum,
-                    maximum, !oldMaximumESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.PARTICIPANT_MULTIPLICITY__MAXIMUM, oldMaximum, maximum, !oldMaximumESet));
     }
 
     /**
@@ -149,9 +146,7 @@ public class ParticipantMultiplicityImpl extends BaseElementImpl implements
         maximum = MAXIMUM_EDEFAULT;
         maximumESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    BpmnPackage.PARTICIPANT_MULTIPLICITY__MAXIMUM, oldMaximum,
-                    MAXIMUM_EDEFAULT, oldMaximumESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, BpmnPackage.PARTICIPANT_MULTIPLICITY__MAXIMUM, oldMaximum, MAXIMUM_EDEFAULT, oldMaximumESet));
     }
 
     /**
@@ -183,9 +178,7 @@ public class ParticipantMultiplicityImpl extends BaseElementImpl implements
         boolean oldMinimumESet = minimumESet;
         minimumESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.PARTICIPANT_MULTIPLICITY__MINIMUM, oldMinimum,
-                    minimum, !oldMinimumESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.PARTICIPANT_MULTIPLICITY__MINIMUM, oldMinimum, minimum, !oldMinimumESet));
     }
 
     /**
@@ -199,9 +192,7 @@ public class ParticipantMultiplicityImpl extends BaseElementImpl implements
         minimum = MINIMUM_EDEFAULT;
         minimumESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    BpmnPackage.PARTICIPANT_MULTIPLICITY__MINIMUM, oldMinimum,
-                    MINIMUM_EDEFAULT, oldMinimumESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, BpmnPackage.PARTICIPANT_MULTIPLICITY__MINIMUM, oldMinimum, MINIMUM_EDEFAULT, oldMinimumESet));
     }
 
     /**

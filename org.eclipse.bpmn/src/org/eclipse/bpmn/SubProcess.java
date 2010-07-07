@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.util.FeatureMap;
@@ -68,7 +69,7 @@ public interface SubProcess extends Activity {
      *        extendedMetaData="kind='element' name='flowElement' namespace='##targetNamespace' group='flowElement:group'"
      * @generated
      */
-    EList<FlowElement> getFlowElements();
+    List<FlowElement> getFlowElements();
 
     /**
      * Returns the value of the '<em><b>Artifact Groups</b></em>' attribute list.
@@ -102,7 +103,7 @@ public interface SubProcess extends Activity {
      *        extendedMetaData="kind='element' name='artifact' namespace='##targetNamespace' group='artifact:group'"
      * @generated
      */
-    EList<Artifact> getArtifacts();
+    List<Artifact> getArtifacts();
 
     /**
      * Returns the value of the '<em><b>Triggered By Event</b></em>' attribute.

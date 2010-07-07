@@ -37,8 +37,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class TimerEventDefinitionImpl extends EventDefinitionImpl implements
-        TimerEventDefinition {
+public class TimerEventDefinitionImpl extends EventDefinitionImpl implements TimerEventDefinition {
     /**
      * The cached value of the '{@link #getTimeDate() <em>Time Date</em>}' containment reference.
      * <!-- begin-user-doc -->
@@ -92,14 +91,11 @@ public class TimerEventDefinitionImpl extends EventDefinitionImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetTimeDate(Expression newTimeDate,
-            NotificationChain msgs) {
+    public NotificationChain basicSetTimeDate(Expression newTimeDate, NotificationChain msgs) {
         Expression oldTimeDate = timeDate;
         timeDate = newTimeDate;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this,
-                    Notification.SET,
-                    BpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE, oldTimeDate,
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE, oldTimeDate,
                     newTimeDate);
             if (msgs == null)
                 msgs = notification;
@@ -118,26 +114,14 @@ public class TimerEventDefinitionImpl extends EventDefinitionImpl implements
         if (newTimeDate != timeDate) {
             NotificationChain msgs = null;
             if (timeDate != null)
-                msgs = ((InternalEObject) timeDate)
-                        .eInverseRemove(
-                                this,
-                                EOPPOSITE_FEATURE_BASE
-                                        - BpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE,
-                                null, msgs);
+                msgs = ((InternalEObject) timeDate).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE, null, msgs);
             if (newTimeDate != null)
-                msgs = ((InternalEObject) newTimeDate)
-                        .eInverseAdd(
-                                this,
-                                EOPPOSITE_FEATURE_BASE
-                                        - BpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE,
-                                null, msgs);
+                msgs = ((InternalEObject) newTimeDate).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE, null, msgs);
             msgs = basicSetTimeDate(newTimeDate, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE, newTimeDate,
-                    newTimeDate));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE, newTimeDate, newTimeDate));
     }
 
     /**
@@ -154,15 +138,12 @@ public class TimerEventDefinitionImpl extends EventDefinitionImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetTimeCycle(Expression newTimeCycle,
-            NotificationChain msgs) {
+    public NotificationChain basicSetTimeCycle(Expression newTimeCycle, NotificationChain msgs) {
         Expression oldTimeCycle = timeCycle;
         timeCycle = newTimeCycle;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this,
-                    Notification.SET,
-                    BpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE,
-                    oldTimeCycle, newTimeCycle);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE, oldTimeCycle,
+                    newTimeCycle);
             if (msgs == null)
                 msgs = notification;
             else
@@ -180,26 +161,14 @@ public class TimerEventDefinitionImpl extends EventDefinitionImpl implements
         if (newTimeCycle != timeCycle) {
             NotificationChain msgs = null;
             if (timeCycle != null)
-                msgs = ((InternalEObject) timeCycle)
-                        .eInverseRemove(
-                                this,
-                                EOPPOSITE_FEATURE_BASE
-                                        - BpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE,
-                                null, msgs);
+                msgs = ((InternalEObject) timeCycle).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE, null, msgs);
             if (newTimeCycle != null)
-                msgs = ((InternalEObject) newTimeCycle)
-                        .eInverseAdd(
-                                this,
-                                EOPPOSITE_FEATURE_BASE
-                                        - BpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE,
-                                null, msgs);
+                msgs = ((InternalEObject) newTimeCycle).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE, null, msgs);
             msgs = basicSetTimeCycle(newTimeCycle, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE,
-                    newTimeCycle, newTimeCycle));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.TIMER_EVENT_DEFINITION__TIME_CYCLE, newTimeCycle, newTimeCycle));
     }
 
     /**
@@ -208,8 +177,7 @@ public class TimerEventDefinitionImpl extends EventDefinitionImpl implements
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.TIMER_EVENT_DEFINITION__TIME_DATE:
             return basicSetTimeDate(null, msgs);

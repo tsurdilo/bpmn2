@@ -102,9 +102,8 @@ public class StartEventImpl extends CatchEventImpl implements StartEvent {
         boolean oldIsInterruptingESet = isInterruptingESet;
         isInterruptingESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.START_EVENT__IS_INTERRUPTING,
-                    oldIsInterrupting, isInterrupting, !oldIsInterruptingESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.START_EVENT__IS_INTERRUPTING, oldIsInterrupting, isInterrupting,
+                    !oldIsInterruptingESet));
     }
 
     /**
@@ -118,9 +117,7 @@ public class StartEventImpl extends CatchEventImpl implements StartEvent {
         isInterrupting = IS_INTERRUPTING_EDEFAULT;
         isInterruptingESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    BpmnPackage.START_EVENT__IS_INTERRUPTING,
-                    oldIsInterrupting, IS_INTERRUPTING_EDEFAULT,
+            eNotify(new ENotificationImpl(this, Notification.UNSET, BpmnPackage.START_EVENT__IS_INTERRUPTING, oldIsInterrupting, IS_INTERRUPTING_EDEFAULT,
                     oldIsInterruptingESet));
     }
 

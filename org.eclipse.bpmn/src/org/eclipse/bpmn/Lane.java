@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -76,7 +77,7 @@ public interface Lane extends BaseElement {
      *        extendedMetaData="kind='element' name='flowElementRef' namespace='##targetNamespace'"
      * @generated
      */
-    EList<String> getFlowElementRef();
+    List<String> getFlowElementRef();
 
     /**
      * Returns the value of the '<em><b>Child Lane Set</b></em>' containment reference.

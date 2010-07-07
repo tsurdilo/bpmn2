@@ -44,8 +44,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ResourceParameterBindingImpl extends BaseElementImpl implements
-        ResourceParameterBinding {
+public class ResourceParameterBindingImpl extends BaseElementImpl implements ResourceParameterBinding {
     /**
      * The cached value of the '{@link #getExpressionGroup() <em>Expression Group</em>}' attribute list.
      * <!-- begin-user-doc -->
@@ -102,8 +101,7 @@ public class ResourceParameterBindingImpl extends BaseElementImpl implements
      */
     public FeatureMap getExpressionGroup() {
         if (expressionGroup == null) {
-            expressionGroup = new BasicFeatureMap(this,
-                    BpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION_GROUP);
+            expressionGroup = new BasicFeatureMap(this, BpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION_GROUP);
         }
         return expressionGroup;
     }
@@ -114,9 +112,7 @@ public class ResourceParameterBindingImpl extends BaseElementImpl implements
      * @generated
      */
     public Expression getExpression() {
-        return (Expression) getExpressionGroup().get(
-                BpmnPackage.eINSTANCE.getResourceParameterBinding_Expression(),
-                true);
+        return (Expression) getExpressionGroup().get(BpmnPackage.eINSTANCE.getResourceParameterBinding_Expression(), true);
     }
 
     /**
@@ -124,11 +120,8 @@ public class ResourceParameterBindingImpl extends BaseElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetExpression(Expression newExpression,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getExpressionGroup()).basicAdd(
-                BpmnPackage.eINSTANCE.getResourceParameterBinding_Expression(),
-                newExpression, msgs);
+    public NotificationChain basicSetExpression(Expression newExpression, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getExpressionGroup()).basicAdd(BpmnPackage.eINSTANCE.getResourceParameterBinding_Expression(), newExpression, msgs);
     }
 
     /**
@@ -137,8 +130,7 @@ public class ResourceParameterBindingImpl extends BaseElementImpl implements
      * @generated
      */
     public void setExpression(Expression newExpression) {
-        ((FeatureMap.Internal) getExpressionGroup()).set(BpmnPackage.eINSTANCE
-                .getResourceParameterBinding_Expression(), newExpression);
+        ((FeatureMap.Internal) getExpressionGroup()).set(BpmnPackage.eINSTANCE.getResourceParameterBinding_Expression(), newExpression);
     }
 
     /**
@@ -159,9 +151,7 @@ public class ResourceParameterBindingImpl extends BaseElementImpl implements
         QName oldParameterRef = parameterRef;
         parameterRef = newParameterRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.RESOURCE_PARAMETER_BINDING__PARAMETER_REF,
-                    oldParameterRef, parameterRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.RESOURCE_PARAMETER_BINDING__PARAMETER_REF, oldParameterRef, parameterRef));
     }
 
     /**
@@ -170,12 +160,10 @@ public class ResourceParameterBindingImpl extends BaseElementImpl implements
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION_GROUP:
-            return ((InternalEList<?>) getExpressionGroup()).basicRemove(
-                    otherEnd, msgs);
+            return ((InternalEList<?>) getExpressionGroup()).basicRemove(otherEnd, msgs);
         case BpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION:
             return basicSetExpression(null, msgs);
         }
@@ -257,8 +245,7 @@ public class ResourceParameterBindingImpl extends BaseElementImpl implements
         case BpmnPackage.RESOURCE_PARAMETER_BINDING__EXPRESSION:
             return getExpression() != null;
         case BpmnPackage.RESOURCE_PARAMETER_BINDING__PARAMETER_REF:
-            return PARAMETER_REF_EDEFAULT == null ? parameterRef != null
-                    : !PARAMETER_REF_EDEFAULT.equals(parameterRef);
+            return PARAMETER_REF_EDEFAULT == null ? parameterRef != null : !PARAMETER_REF_EDEFAULT.equals(parameterRef);
         }
         return super.eIsSet(featureID);
     }

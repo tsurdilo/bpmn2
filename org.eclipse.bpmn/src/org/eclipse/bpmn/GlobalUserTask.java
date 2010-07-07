@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -46,7 +47,7 @@ public interface GlobalUserTask extends GlobalTask {
      *        extendedMetaData="kind='element' name='rendering' namespace='##targetNamespace'"
      * @generated
      */
-    EList<Rendering> getRendering();
+    List<Rendering> getRendering();
 
     /**
      * Returns the value of the '<em><b>Implementation</b></em>' attribute.

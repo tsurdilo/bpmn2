@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.emf.common.util.EList;
@@ -104,7 +105,7 @@ public interface Operation extends BaseElement {
      *        extendedMetaData="kind='element' name='errorRef' namespace='##targetNamespace'"
      * @generated
      */
-    EList<QName> getErrorRef();
+    List<QName> getErrorRef();
 
     /**
      * Returns the value of the '<em><b>Name</b></em>' attribute.

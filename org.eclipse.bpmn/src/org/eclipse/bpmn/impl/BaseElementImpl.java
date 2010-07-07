@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn.BaseElement;
 import org.eclipse.bpmn.BpmnPackage;
 import org.eclipse.bpmn.Documentation;
@@ -49,8 +50,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public abstract class BaseElementImpl extends EObjectImpl implements
-        BaseElement {
+public abstract class BaseElementImpl extends EObjectImpl implements BaseElement {
     /**
      * The cached value of the '{@link #getDocumentations() <em>Documentations</em>}' containment reference list.
      * <!-- begin-user-doc -->
@@ -125,11 +125,9 @@ public abstract class BaseElementImpl extends EObjectImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Documentation> getDocumentations() {
+    public List<Documentation> getDocumentations() {
         if (documentations == null) {
-            documentations = new EObjectContainmentEList<Documentation>(
-                    Documentation.class, this,
-                    BpmnPackage.BASE_ELEMENT__DOCUMENTATIONS);
+            documentations = new EObjectContainmentEList<Documentation>(Documentation.class, this, BpmnPackage.BASE_ELEMENT__DOCUMENTATIONS);
         }
         return documentations;
     }
@@ -164,8 +162,7 @@ public abstract class BaseElementImpl extends EObjectImpl implements
         String oldId = id;
         id = newId;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.BASE_ELEMENT__ID, oldId, id));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.BASE_ELEMENT__ID, oldId, id));
     }
 
     /**
@@ -175,8 +172,7 @@ public abstract class BaseElementImpl extends EObjectImpl implements
      */
     public FeatureMap getAnyAttribute() {
         if (anyAttribute == null) {
-            anyAttribute = new BasicFeatureMap(this,
-                    BpmnPackage.BASE_ELEMENT__ANY_ATTRIBUTE);
+            anyAttribute = new BasicFeatureMap(this, BpmnPackage.BASE_ELEMENT__ANY_ATTRIBUTE);
         }
         return anyAttribute;
     }
@@ -187,17 +183,14 @@ public abstract class BaseElementImpl extends EObjectImpl implements
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.BASE_ELEMENT__DOCUMENTATIONS:
-            return ((InternalEList<?>) getDocumentations()).basicRemove(
-                    otherEnd, msgs);
+            return ((InternalEList<?>) getDocumentations()).basicRemove(otherEnd, msgs);
         case BpmnPackage.BASE_ELEMENT__ANY:
             return ((InternalEList<?>) getAny()).basicRemove(otherEnd, msgs);
         case BpmnPackage.BASE_ELEMENT__ANY_ATTRIBUTE:
-            return ((InternalEList<?>) getAnyAttribute()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getAnyAttribute()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -237,8 +230,7 @@ public abstract class BaseElementImpl extends EObjectImpl implements
         switch (featureID) {
         case BpmnPackage.BASE_ELEMENT__DOCUMENTATIONS:
             getDocumentations().clear();
-            getDocumentations().addAll(
-                    (Collection<? extends Documentation>) newValue);
+            getDocumentations().addAll((Collection<? extends Documentation>) newValue);
             return;
         case BpmnPackage.BASE_ELEMENT__ANY:
             ((FeatureMap.Internal) getAny()).set(newValue);

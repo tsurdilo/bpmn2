@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.emf.common.util.EList;
@@ -48,7 +49,7 @@ public interface CallChoreographyActivity extends ChoreographyActivity {
      *        extendedMetaData="kind='element' name='participantAssociation' namespace='##targetNamespace'"
      * @generated
      */
-    EList<ParticipantAssociation> getParticipantAssociations();
+    List<ParticipantAssociation> getParticipantAssociations();
 
     /**
      * Returns the value of the '<em><b>Called Element</b></em>' attribute.

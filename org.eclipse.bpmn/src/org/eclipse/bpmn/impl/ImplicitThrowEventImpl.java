@@ -25,8 +25,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class ImplicitThrowEventImpl extends ThrowEventImpl implements
-        ImplicitThrowEvent {
+public class ImplicitThrowEventImpl extends ThrowEventImpl implements ImplicitThrowEvent {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

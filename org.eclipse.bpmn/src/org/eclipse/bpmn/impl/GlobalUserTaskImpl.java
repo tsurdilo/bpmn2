@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn.BpmnPackage;
 import org.eclipse.bpmn.GlobalUserTask;
 import org.eclipse.bpmn.Rendering;
@@ -45,8 +46,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class GlobalUserTaskImpl extends GlobalTaskImpl implements
-        GlobalUserTask {
+public class GlobalUserTaskImpl extends GlobalTaskImpl implements GlobalUserTask {
     /**
      * The cached value of the '{@link #getRendering() <em>Rendering</em>}' containment reference list.
      * <!-- begin-user-doc -->
@@ -110,10 +110,9 @@ public class GlobalUserTaskImpl extends GlobalTaskImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Rendering> getRendering() {
+    public List<Rendering> getRendering() {
         if (rendering == null) {
-            rendering = new EObjectContainmentEList<Rendering>(Rendering.class,
-                    this, BpmnPackage.GLOBAL_USER_TASK__RENDERING);
+            rendering = new EObjectContainmentEList<Rendering>(Rendering.class, this, BpmnPackage.GLOBAL_USER_TASK__RENDERING);
         }
         return rendering;
     }
@@ -134,14 +133,12 @@ public class GlobalUserTaskImpl extends GlobalTaskImpl implements
      */
     public void setImplementation(UserTaskImplementation newImplementation) {
         UserTaskImplementation oldImplementation = implementation;
-        implementation = newImplementation == null ? IMPLEMENTATION_EDEFAULT
-                : newImplementation;
+        implementation = newImplementation == null ? IMPLEMENTATION_EDEFAULT : newImplementation;
         boolean oldImplementationESet = implementationESet;
         implementationESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.GLOBAL_USER_TASK__IMPLEMENTATION,
-                    oldImplementation, implementation, !oldImplementationESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.GLOBAL_USER_TASK__IMPLEMENTATION, oldImplementation, implementation,
+                    !oldImplementationESet));
     }
 
     /**
@@ -155,9 +152,7 @@ public class GlobalUserTaskImpl extends GlobalTaskImpl implements
         implementation = IMPLEMENTATION_EDEFAULT;
         implementationESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    BpmnPackage.GLOBAL_USER_TASK__IMPLEMENTATION,
-                    oldImplementation, IMPLEMENTATION_EDEFAULT,
+            eNotify(new ENotificationImpl(this, Notification.UNSET, BpmnPackage.GLOBAL_USER_TASK__IMPLEMENTATION, oldImplementation, IMPLEMENTATION_EDEFAULT,
                     oldImplementationESet));
     }
 
@@ -176,12 +171,10 @@ public class GlobalUserTaskImpl extends GlobalTaskImpl implements
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.GLOBAL_USER_TASK__RENDERING:
-            return ((InternalEList<?>) getRendering()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getRendering()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }

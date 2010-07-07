@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn.Artifact;
 import org.eclipse.bpmn.BpmnPackage;
 import org.eclipse.bpmn.ChoreographySubProcess;
@@ -45,8 +46,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ChoreographySubProcessImpl extends ChoreographyActivityImpl
-        implements ChoreographySubProcess {
+public class ChoreographySubProcessImpl extends ChoreographyActivityImpl implements ChoreographySubProcess {
     /**
      * The cached value of the '{@link #getFlowElementGroup() <em>Flow Element Group</em>}' attribute list.
      * <!-- begin-user-doc -->
@@ -93,8 +93,7 @@ public class ChoreographySubProcessImpl extends ChoreographyActivityImpl
      */
     public FeatureMap getFlowElementGroup() {
         if (flowElementGroup == null) {
-            flowElementGroup = new BasicFeatureMap(this,
-                    BpmnPackage.CHOREOGRAPHY_SUB_PROCESS__FLOW_ELEMENT_GROUP);
+            flowElementGroup = new BasicFeatureMap(this, BpmnPackage.CHOREOGRAPHY_SUB_PROCESS__FLOW_ELEMENT_GROUP);
         }
         return flowElementGroup;
     }
@@ -104,9 +103,8 @@ public class ChoreographySubProcessImpl extends ChoreographyActivityImpl
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<FlowElement> getFlowElement() {
-        return getFlowElementGroup().list(
-                BpmnPackage.eINSTANCE.getChoreographySubProcess_FlowElement());
+    public List<FlowElement> getFlowElement() {
+        return getFlowElementGroup().list(BpmnPackage.eINSTANCE.getChoreographySubProcess_FlowElement());
     }
 
     /**
@@ -116,8 +114,7 @@ public class ChoreographySubProcessImpl extends ChoreographyActivityImpl
      */
     public FeatureMap getArtifactGroup() {
         if (artifactGroup == null) {
-            artifactGroup = new BasicFeatureMap(this,
-                    BpmnPackage.CHOREOGRAPHY_SUB_PROCESS__ARTIFACT_GROUP);
+            artifactGroup = new BasicFeatureMap(this, BpmnPackage.CHOREOGRAPHY_SUB_PROCESS__ARTIFACT_GROUP);
         }
         return artifactGroup;
     }
@@ -127,9 +124,8 @@ public class ChoreographySubProcessImpl extends ChoreographyActivityImpl
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Artifact> getArtifact() {
-        return getArtifactGroup().list(
-                BpmnPackage.eINSTANCE.getChoreographySubProcess_Artifact());
+    public List<Artifact> getArtifact() {
+        return getArtifactGroup().list(BpmnPackage.eINSTANCE.getChoreographySubProcess_Artifact());
     }
 
     /**
@@ -138,21 +134,16 @@ public class ChoreographySubProcessImpl extends ChoreographyActivityImpl
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.CHOREOGRAPHY_SUB_PROCESS__FLOW_ELEMENT_GROUP:
-            return ((InternalEList<?>) getFlowElementGroup()).basicRemove(
-                    otherEnd, msgs);
+            return ((InternalEList<?>) getFlowElementGroup()).basicRemove(otherEnd, msgs);
         case BpmnPackage.CHOREOGRAPHY_SUB_PROCESS__FLOW_ELEMENT:
-            return ((InternalEList<?>) getFlowElement()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getFlowElement()).basicRemove(otherEnd, msgs);
         case BpmnPackage.CHOREOGRAPHY_SUB_PROCESS__ARTIFACT_GROUP:
-            return ((InternalEList<?>) getArtifactGroup()).basicRemove(
-                    otherEnd, msgs);
+            return ((InternalEList<?>) getArtifactGroup()).basicRemove(otherEnd, msgs);
         case BpmnPackage.CHOREOGRAPHY_SUB_PROCESS__ARTIFACT:
-            return ((InternalEList<?>) getArtifact()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getArtifact()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -195,8 +186,7 @@ public class ChoreographySubProcessImpl extends ChoreographyActivityImpl
             return;
         case BpmnPackage.CHOREOGRAPHY_SUB_PROCESS__FLOW_ELEMENT:
             getFlowElement().clear();
-            getFlowElement().addAll(
-                    (Collection<? extends FlowElement>) newValue);
+            getFlowElement().addAll((Collection<? extends FlowElement>) newValue);
             return;
         case BpmnPackage.CHOREOGRAPHY_SUB_PROCESS__ARTIFACT_GROUP:
             ((FeatureMap.Internal) getArtifactGroup()).set(newValue);

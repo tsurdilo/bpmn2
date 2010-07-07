@@ -6,7 +6,7 @@
     modelPluginID="org.eclipse.bpmn" templateDirectory="org.eclipse.bpmn/templates"
     dynamicTemplates="true" redirection="" forceOverwrite="true" modelName="bpmn"
     editPluginClass="org.eclipse.bpmn.provider.bpmnEditPlugin" editorPluginClass="org.eclipse.bpmn.presentation.BpmnEditorPlugin"
-    nonNLSMarkers="true" codeFormatting="true" testsDirectory="/org.eclipse.bpmn.tests/src"
+    nonNLSMarkers="true" suppressEMFTypes="true" codeFormatting="true" testsDirectory="/org.eclipse.bpmn.tests/src"
     testSuiteClass="org.eclipse.bpmn.tests.bpmnAllTests" importerID="org.eclipse.xsd.ecore.importer"
     complianceLevel="5.0" copyrightFields="false" editorPluginID="org.eclipse.bpmn.editor">
   <foreignModel>BPMN20.xsd</foreignModel>

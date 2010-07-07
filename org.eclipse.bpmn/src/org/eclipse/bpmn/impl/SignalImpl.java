@@ -114,8 +114,7 @@ public class SignalImpl extends RootElementImpl implements Signal {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.SIGNAL__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.SIGNAL__NAME, oldName, name));
     }
 
     /**
@@ -136,8 +135,7 @@ public class SignalImpl extends RootElementImpl implements Signal {
         QName oldStructure = structure;
         structure = newStructure;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.SIGNAL__STRUCTURE, oldStructure, structure));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.SIGNAL__STRUCTURE, oldStructure, structure));
     }
 
     /**
@@ -201,11 +199,9 @@ public class SignalImpl extends RootElementImpl implements Signal {
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case BpmnPackage.SIGNAL__NAME:
-            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-                    .equals(name);
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         case BpmnPackage.SIGNAL__STRUCTURE:
-            return STRUCTURE_EDEFAULT == null ? structure != null
-                    : !STRUCTURE_EDEFAULT.equals(structure);
+            return STRUCTURE_EDEFAULT == null ? structure != null : !STRUCTURE_EDEFAULT.equals(structure);
         }
         return super.eIsSet(featureID);
     }

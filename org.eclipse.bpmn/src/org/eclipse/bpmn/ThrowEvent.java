@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.emf.common.util.EList;
@@ -55,7 +56,7 @@ public interface ThrowEvent extends Event {
      *        extendedMetaData="kind='element' name='dataInput' namespace='##targetNamespace'"
      * @generated
      */
-    EList<DataInput> getDataInput();
+    List<DataInput> getDataInput();
 
     /**
      * Returns the value of the '<em><b>Data Input Association</b></em>' containment reference list.
@@ -72,7 +73,7 @@ public interface ThrowEvent extends Event {
      *        extendedMetaData="kind='element' name='dataInputAssociation' namespace='##targetNamespace'"
      * @generated
      */
-    EList<DataInputAssociation> getDataInputAssociation();
+    List<DataInputAssociation> getDataInputAssociation();
 
     /**
      * Returns the value of the '<em><b>Input Set</b></em>' containment reference.
@@ -133,7 +134,7 @@ public interface ThrowEvent extends Event {
      *        extendedMetaData="kind='element' name='eventDefinition' namespace='##targetNamespace' group='eventDefinition:group'"
      * @generated
      */
-    EList<EventDefinition> getEventDefinition();
+    List<EventDefinition> getEventDefinition();
 
     /**
      * Returns the value of the '<em><b>Event Definition Ref</b></em>' attribute list.
@@ -150,6 +151,6 @@ public interface ThrowEvent extends Event {
      *        extendedMetaData="kind='element' name='eventDefinitionRef' namespace='##targetNamespace'"
      * @generated
      */
-    EList<QName> getEventDefinitionRef();
+    List<QName> getEventDefinitionRef();
 
 } // ThrowEvent

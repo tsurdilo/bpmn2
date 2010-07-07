@@ -25,8 +25,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IntermediateCatchEventImpl extends CatchEventImpl implements
-        IntermediateCatchEvent {
+public class IntermediateCatchEventImpl extends CatchEventImpl implements IntermediateCatchEvent {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

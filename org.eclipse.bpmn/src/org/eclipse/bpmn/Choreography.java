@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.util.FeatureMap;
@@ -74,7 +75,7 @@ public interface Choreography extends CallableElement {
      *        extendedMetaData="kind='element' name='flowElement' namespace='##targetNamespace' group='flowElement:group'"
      * @generated
      */
-    EList<FlowElement> getFlowElements();
+    List<FlowElement> getFlowElements();
 
     /**
      * Returns the value of the '<em><b>Artifact Groups</b></em>' attribute list.
@@ -108,7 +109,7 @@ public interface Choreography extends CallableElement {
      *        extendedMetaData="kind='element' name='artifact' namespace='##targetNamespace' group='artifact:group'"
      * @generated
      */
-    EList<Artifact> getArtifacts();
+    List<Artifact> getArtifacts();
 
     /**
      * Returns the value of the '<em><b>Message Flows</b></em>' containment reference list.
@@ -125,7 +126,7 @@ public interface Choreography extends CallableElement {
      *        extendedMetaData="kind='element' name='messageFlow' namespace='##targetNamespace'"
      * @generated
      */
-    EList<MessageFlow> getMessageFlows();
+    List<MessageFlow> getMessageFlows();
 
     /**
      * Returns the value of the '<em><b>Participants</b></em>' containment reference list.
@@ -142,7 +143,7 @@ public interface Choreography extends CallableElement {
      *        extendedMetaData="kind='element' name='participant' namespace='##targetNamespace'"
      * @generated
      */
-    EList<Participant> getParticipants();
+    List<Participant> getParticipants();
 
     /**
      * Returns the value of the '<em><b>Conversations</b></em>' containment reference list.
@@ -159,7 +160,7 @@ public interface Choreography extends CallableElement {
      *        extendedMetaData="kind='element' name='conversation' namespace='##targetNamespace'"
      * @generated
      */
-    EList<Conversation> getConversations();
+    List<Conversation> getConversations();
 
     /**
      * Returns the value of the '<em><b>Conversation Associations</b></em>' containment reference list.
@@ -176,7 +177,7 @@ public interface Choreography extends CallableElement {
      *        extendedMetaData="kind='element' name='conversationAssociation' namespace='##targetNamespace'"
      * @generated
      */
-    EList<ConversationAssociation> getConversationAssociations();
+    List<ConversationAssociation> getConversationAssociations();
 
     /**
      * Returns the value of the '<em><b>Message Flow Associations</b></em>' containment reference list.
@@ -193,7 +194,7 @@ public interface Choreography extends CallableElement {
      *        extendedMetaData="kind='element' name='messageFlowAssociation' namespace='##targetNamespace'"
      * @generated
      */
-    EList<MessageFlowAssociation> getMessageFlowAssociations();
+    List<MessageFlowAssociation> getMessageFlowAssociations();
 
     /**
      * Returns the value of the '<em><b>Participant Associations</b></em>' containment reference list.
@@ -210,7 +211,7 @@ public interface Choreography extends CallableElement {
      *        extendedMetaData="kind='element' name='participantAssociation' namespace='##targetNamespace'"
      * @generated
      */
-    EList<ParticipantAssociation> getParticipantAssociations();
+    List<ParticipantAssociation> getParticipantAssociations();
 
     /**
      * Returns the value of the '<em><b>Is Closed</b></em>' attribute.

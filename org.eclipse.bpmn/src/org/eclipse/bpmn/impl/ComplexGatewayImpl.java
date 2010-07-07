@@ -101,14 +101,11 @@ public class ComplexGatewayImpl extends GatewayImpl implements ComplexGateway {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetActivationCondition(
-            Expression newActivationCondition, NotificationChain msgs) {
+    public NotificationChain basicSetActivationCondition(Expression newActivationCondition, NotificationChain msgs) {
         Expression oldActivationCondition = activationCondition;
         activationCondition = newActivationCondition;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this,
-                    Notification.SET,
-                    BpmnPackage.COMPLEX_GATEWAY__ACTIVATION_CONDITION,
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BpmnPackage.COMPLEX_GATEWAY__ACTIVATION_CONDITION,
                     oldActivationCondition, newActivationCondition);
             if (msgs == null)
                 msgs = notification;
@@ -127,26 +124,17 @@ public class ComplexGatewayImpl extends GatewayImpl implements ComplexGateway {
         if (newActivationCondition != activationCondition) {
             NotificationChain msgs = null;
             if (activationCondition != null)
-                msgs = ((InternalEObject) activationCondition)
-                        .eInverseRemove(
-                                this,
-                                EOPPOSITE_FEATURE_BASE
-                                        - BpmnPackage.COMPLEX_GATEWAY__ACTIVATION_CONDITION,
-                                null, msgs);
+                msgs = ((InternalEObject) activationCondition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.COMPLEX_GATEWAY__ACTIVATION_CONDITION,
+                        null, msgs);
             if (newActivationCondition != null)
-                msgs = ((InternalEObject) newActivationCondition)
-                        .eInverseAdd(
-                                this,
-                                EOPPOSITE_FEATURE_BASE
-                                        - BpmnPackage.COMPLEX_GATEWAY__ACTIVATION_CONDITION,
-                                null, msgs);
+                msgs = ((InternalEObject) newActivationCondition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.COMPLEX_GATEWAY__ACTIVATION_CONDITION,
+                        null, msgs);
             msgs = basicSetActivationCondition(newActivationCondition, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.COMPLEX_GATEWAY__ACTIVATION_CONDITION,
-                    newActivationCondition, newActivationCondition));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.COMPLEX_GATEWAY__ACTIVATION_CONDITION, newActivationCondition,
+                    newActivationCondition));
     }
 
     /**
@@ -167,8 +155,7 @@ public class ComplexGatewayImpl extends GatewayImpl implements ComplexGateway {
         String oldDefault = default_;
         default_ = newDefault;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.COMPLEX_GATEWAY__DEFAULT, oldDefault, default_));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.COMPLEX_GATEWAY__DEFAULT, oldDefault, default_));
     }
 
     /**
@@ -177,8 +164,7 @@ public class ComplexGatewayImpl extends GatewayImpl implements ComplexGateway {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.COMPLEX_GATEWAY__ACTIVATION_CONDITION:
             return basicSetActivationCondition(null, msgs);
@@ -249,8 +235,7 @@ public class ComplexGatewayImpl extends GatewayImpl implements ComplexGateway {
         case BpmnPackage.COMPLEX_GATEWAY__ACTIVATION_CONDITION:
             return activationCondition != null;
         case BpmnPackage.COMPLEX_GATEWAY__DEFAULT:
-            return DEFAULT_EDEFAULT == null ? default_ != null
-                    : !DEFAULT_EDEFAULT.equals(default_);
+            return DEFAULT_EDEFAULT == null ? default_ != null : !DEFAULT_EDEFAULT.equals(default_);
         }
         return super.eIsSet(featureID);
     }

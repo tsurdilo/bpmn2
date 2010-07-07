@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -74,6 +75,6 @@ public interface DataAssociation extends BaseElement {
      *        extendedMetaData="kind='element' name='assignment' namespace='##targetNamespace'"
      * @generated
      */
-    EList<Assignment> getAssignments();
+    List<Assignment> getAssignments();
 
 } // DataAssociation

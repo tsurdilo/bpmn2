@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.bpmn.BpmnPackage;
@@ -48,8 +49,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class GlobalChoreographyTaskImpl extends CallableElementImpl implements
-        GlobalChoreographyTask {
+public class GlobalChoreographyTaskImpl extends CallableElementImpl implements GlobalChoreographyTask {
     /**
      * The cached value of the '{@link #getParticipant() <em>Participant</em>}' containment reference list.
      * <!-- begin-user-doc -->
@@ -114,11 +114,9 @@ public class GlobalChoreographyTaskImpl extends CallableElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Participant> getParticipant() {
+    public List<Participant> getParticipant() {
         if (participant == null) {
-            participant = new EObjectContainmentEList<Participant>(
-                    Participant.class, this,
-                    BpmnPackage.GLOBAL_CHOREOGRAPHY_TASK__PARTICIPANT);
+            participant = new EObjectContainmentEList<Participant>(Participant.class, this, BpmnPackage.GLOBAL_CHOREOGRAPHY_TASK__PARTICIPANT);
         }
         return participant;
     }
@@ -128,11 +126,9 @@ public class GlobalChoreographyTaskImpl extends CallableElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<MessageFlow> getMessageFlow() {
+    public List<MessageFlow> getMessageFlow() {
         if (messageFlow == null) {
-            messageFlow = new EObjectContainmentEList<MessageFlow>(
-                    MessageFlow.class, this,
-                    BpmnPackage.GLOBAL_CHOREOGRAPHY_TASK__MESSAGE_FLOW);
+            messageFlow = new EObjectContainmentEList<MessageFlow>(MessageFlow.class, this, BpmnPackage.GLOBAL_CHOREOGRAPHY_TASK__MESSAGE_FLOW);
         }
         return messageFlow;
     }
@@ -155,10 +151,7 @@ public class GlobalChoreographyTaskImpl extends CallableElementImpl implements
         QName oldInitiatingParticipantRef = initiatingParticipantRef;
         initiatingParticipantRef = newInitiatingParticipantRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(
-                    this,
-                    Notification.SET,
-                    BpmnPackage.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF,
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF,
                     oldInitiatingParticipantRef, initiatingParticipantRef));
     }
 
@@ -168,15 +161,12 @@ public class GlobalChoreographyTaskImpl extends CallableElementImpl implements
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.GLOBAL_CHOREOGRAPHY_TASK__PARTICIPANT:
-            return ((InternalEList<?>) getParticipant()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getParticipant()).basicRemove(otherEnd, msgs);
         case BpmnPackage.GLOBAL_CHOREOGRAPHY_TASK__MESSAGE_FLOW:
-            return ((InternalEList<?>) getMessageFlow()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getMessageFlow()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -210,13 +200,11 @@ public class GlobalChoreographyTaskImpl extends CallableElementImpl implements
         switch (featureID) {
         case BpmnPackage.GLOBAL_CHOREOGRAPHY_TASK__PARTICIPANT:
             getParticipant().clear();
-            getParticipant().addAll(
-                    (Collection<? extends Participant>) newValue);
+            getParticipant().addAll((Collection<? extends Participant>) newValue);
             return;
         case BpmnPackage.GLOBAL_CHOREOGRAPHY_TASK__MESSAGE_FLOW:
             getMessageFlow().clear();
-            getMessageFlow().addAll(
-                    (Collection<? extends MessageFlow>) newValue);
+            getMessageFlow().addAll((Collection<? extends MessageFlow>) newValue);
             return;
         case BpmnPackage.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF:
             setInitiatingParticipantRef((QName) newValue);
@@ -259,9 +247,8 @@ public class GlobalChoreographyTaskImpl extends CallableElementImpl implements
         case BpmnPackage.GLOBAL_CHOREOGRAPHY_TASK__MESSAGE_FLOW:
             return messageFlow != null && !messageFlow.isEmpty();
         case BpmnPackage.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF:
-            return INITIATING_PARTICIPANT_REF_EDEFAULT == null ? initiatingParticipantRef != null
-                    : !INITIATING_PARTICIPANT_REF_EDEFAULT
-                            .equals(initiatingParticipantRef);
+            return INITIATING_PARTICIPANT_REF_EDEFAULT == null ? initiatingParticipantRef != null : !INITIATING_PARTICIPANT_REF_EDEFAULT
+                    .equals(initiatingParticipantRef);
         }
         return super.eIsSet(featureID);
     }

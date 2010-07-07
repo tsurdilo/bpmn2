@@ -36,8 +36,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ConditionalEventDefinitionImpl extends EventDefinitionImpl
-        implements ConditionalEventDefinition {
+public class ConditionalEventDefinitionImpl extends EventDefinitionImpl implements ConditionalEventDefinition {
     /**
      * The cached value of the '{@link #getCondition() <em>Condition</em>}' containment reference.
      * <!-- begin-user-doc -->
@@ -81,15 +80,12 @@ public class ConditionalEventDefinitionImpl extends EventDefinitionImpl
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetCondition(Expression newCondition,
-            NotificationChain msgs) {
+    public NotificationChain basicSetCondition(Expression newCondition, NotificationChain msgs) {
         Expression oldCondition = condition;
         condition = newCondition;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this,
-                    Notification.SET,
-                    BpmnPackage.CONDITIONAL_EVENT_DEFINITION__CONDITION,
-                    oldCondition, newCondition);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BpmnPackage.CONDITIONAL_EVENT_DEFINITION__CONDITION, oldCondition,
+                    newCondition);
             if (msgs == null)
                 msgs = notification;
             else
@@ -107,26 +103,16 @@ public class ConditionalEventDefinitionImpl extends EventDefinitionImpl
         if (newCondition != condition) {
             NotificationChain msgs = null;
             if (condition != null)
-                msgs = ((InternalEObject) condition)
-                        .eInverseRemove(
-                                this,
-                                EOPPOSITE_FEATURE_BASE
-                                        - BpmnPackage.CONDITIONAL_EVENT_DEFINITION__CONDITION,
-                                null, msgs);
+                msgs = ((InternalEObject) condition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.CONDITIONAL_EVENT_DEFINITION__CONDITION, null,
+                        msgs);
             if (newCondition != null)
-                msgs = ((InternalEObject) newCondition)
-                        .eInverseAdd(
-                                this,
-                                EOPPOSITE_FEATURE_BASE
-                                        - BpmnPackage.CONDITIONAL_EVENT_DEFINITION__CONDITION,
-                                null, msgs);
+                msgs = ((InternalEObject) newCondition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.CONDITIONAL_EVENT_DEFINITION__CONDITION, null,
+                        msgs);
             msgs = basicSetCondition(newCondition, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.CONDITIONAL_EVENT_DEFINITION__CONDITION,
-                    newCondition, newCondition));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.CONDITIONAL_EVENT_DEFINITION__CONDITION, newCondition, newCondition));
     }
 
     /**
@@ -135,8 +121,7 @@ public class ConditionalEventDefinitionImpl extends EventDefinitionImpl
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.CONDITIONAL_EVENT_DEFINITION__CONDITION:
             return basicSetCondition(null, msgs);

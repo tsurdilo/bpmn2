@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -47,7 +48,7 @@ public interface GlobalCommunication extends CallableElement {
      *        extendedMetaData="kind='element' name='participant' namespace='##targetNamespace'"
      * @generated
      */
-    EList<Participant> getParticipant();
+    List<Participant> getParticipant();
 
     /**
      * Returns the value of the '<em><b>Message Flow</b></em>' containment reference list.
@@ -64,7 +65,7 @@ public interface GlobalCommunication extends CallableElement {
      *        extendedMetaData="kind='element' name='messageFlow' namespace='##targetNamespace'"
      * @generated
      */
-    EList<MessageFlow> getMessageFlow();
+    List<MessageFlow> getMessageFlow();
 
     /**
      * Returns the value of the '<em><b>Correlation Key</b></em>' containment reference list.
@@ -81,6 +82,6 @@ public interface GlobalCommunication extends CallableElement {
      *        extendedMetaData="kind='element' name='correlationKey' namespace='##targetNamespace'"
      * @generated
      */
-    EList<CorrelationKey> getCorrelationKey();
+    List<CorrelationKey> getCorrelationKey();
 
 } // GlobalCommunication

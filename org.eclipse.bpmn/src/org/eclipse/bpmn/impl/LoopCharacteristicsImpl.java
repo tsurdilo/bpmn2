@@ -25,8 +25,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public abstract class LoopCharacteristicsImpl extends BaseElementImpl implements
-        LoopCharacteristics {
+public abstract class LoopCharacteristicsImpl extends BaseElementImpl implements LoopCharacteristics {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

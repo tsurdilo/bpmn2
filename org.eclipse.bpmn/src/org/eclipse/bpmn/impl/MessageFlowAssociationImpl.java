@@ -36,8 +36,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class MessageFlowAssociationImpl extends BaseElementImpl implements
-        MessageFlowAssociation {
+public class MessageFlowAssociationImpl extends BaseElementImpl implements MessageFlowAssociation {
     /**
      * The default value of the '{@link #getInnerMessageFlowRef() <em>Inner Message Flow Ref</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -115,11 +114,8 @@ public class MessageFlowAssociationImpl extends BaseElementImpl implements
         QName oldInnerMessageFlowRef = innerMessageFlowRef;
         innerMessageFlowRef = newInnerMessageFlowRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(
-                    this,
-                    Notification.SET,
-                    BpmnPackage.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF,
-                    oldInnerMessageFlowRef, innerMessageFlowRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF, oldInnerMessageFlowRef,
+                    innerMessageFlowRef));
     }
 
     /**
@@ -140,11 +136,8 @@ public class MessageFlowAssociationImpl extends BaseElementImpl implements
         QName oldOuterMessageFlowRef = outerMessageFlowRef;
         outerMessageFlowRef = newOuterMessageFlowRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(
-                    this,
-                    Notification.SET,
-                    BpmnPackage.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF,
-                    oldOuterMessageFlowRef, outerMessageFlowRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF, oldOuterMessageFlowRef,
+                    outerMessageFlowRef));
     }
 
     /**
@@ -208,13 +201,9 @@ public class MessageFlowAssociationImpl extends BaseElementImpl implements
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case BpmnPackage.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF:
-            return INNER_MESSAGE_FLOW_REF_EDEFAULT == null ? innerMessageFlowRef != null
-                    : !INNER_MESSAGE_FLOW_REF_EDEFAULT
-                            .equals(innerMessageFlowRef);
+            return INNER_MESSAGE_FLOW_REF_EDEFAULT == null ? innerMessageFlowRef != null : !INNER_MESSAGE_FLOW_REF_EDEFAULT.equals(innerMessageFlowRef);
         case BpmnPackage.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF:
-            return OUTER_MESSAGE_FLOW_REF_EDEFAULT == null ? outerMessageFlowRef != null
-                    : !OUTER_MESSAGE_FLOW_REF_EDEFAULT
-                            .equals(outerMessageFlowRef);
+            return OUTER_MESSAGE_FLOW_REF_EDEFAULT == null ? outerMessageFlowRef != null : !OUTER_MESSAGE_FLOW_REF_EDEFAULT.equals(outerMessageFlowRef);
         }
         return super.eIsSet(featureID);
     }

@@ -143,14 +143,12 @@ public class SendTaskImpl extends TaskImpl implements SendTask {
      */
     public void setImplementation(ServiceImplementation newImplementation) {
         ServiceImplementation oldImplementation = implementation;
-        implementation = newImplementation == null ? IMPLEMENTATION_EDEFAULT
-                : newImplementation;
+        implementation = newImplementation == null ? IMPLEMENTATION_EDEFAULT : newImplementation;
         boolean oldImplementationESet = implementationESet;
         implementationESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.SEND_TASK__IMPLEMENTATION, oldImplementation,
-                    implementation, !oldImplementationESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.SEND_TASK__IMPLEMENTATION, oldImplementation, implementation,
+                    !oldImplementationESet));
     }
 
     /**
@@ -164,9 +162,8 @@ public class SendTaskImpl extends TaskImpl implements SendTask {
         implementation = IMPLEMENTATION_EDEFAULT;
         implementationESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    BpmnPackage.SEND_TASK__IMPLEMENTATION, oldImplementation,
-                    IMPLEMENTATION_EDEFAULT, oldImplementationESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, BpmnPackage.SEND_TASK__IMPLEMENTATION, oldImplementation, IMPLEMENTATION_EDEFAULT,
+                    oldImplementationESet));
     }
 
     /**
@@ -196,9 +193,7 @@ public class SendTaskImpl extends TaskImpl implements SendTask {
         QName oldMessageRef = messageRef;
         messageRef = newMessageRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.SEND_TASK__MESSAGE_REF, oldMessageRef,
-                    messageRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.SEND_TASK__MESSAGE_REF, oldMessageRef, messageRef));
     }
 
     /**
@@ -219,9 +214,7 @@ public class SendTaskImpl extends TaskImpl implements SendTask {
         QName oldOperationRef = operationRef;
         operationRef = newOperationRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.SEND_TASK__OPERATION_REF, oldOperationRef,
-                    operationRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.SEND_TASK__OPERATION_REF, oldOperationRef, operationRef));
     }
 
     /**
@@ -295,11 +288,9 @@ public class SendTaskImpl extends TaskImpl implements SendTask {
         case BpmnPackage.SEND_TASK__IMPLEMENTATION:
             return isSetImplementation();
         case BpmnPackage.SEND_TASK__MESSAGE_REF:
-            return MESSAGE_REF_EDEFAULT == null ? messageRef != null
-                    : !MESSAGE_REF_EDEFAULT.equals(messageRef);
+            return MESSAGE_REF_EDEFAULT == null ? messageRef != null : !MESSAGE_REF_EDEFAULT.equals(messageRef);
         case BpmnPackage.SEND_TASK__OPERATION_REF:
-            return OPERATION_REF_EDEFAULT == null ? operationRef != null
-                    : !OPERATION_REF_EDEFAULT.equals(operationRef);
+            return OPERATION_REF_EDEFAULT == null ? operationRef != null : !OPERATION_REF_EDEFAULT.equals(operationRef);
         }
         return super.eIsSet(featureID);
     }

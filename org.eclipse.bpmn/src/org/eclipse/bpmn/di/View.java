@@ -58,7 +58,7 @@ public interface View extends EObject {
      *        extendedMetaData="kind='element' name='style' namespace='##targetNamespace'"
      * @generated
      */
-    EList<Style> getStyle();
+    List<Style> getStyle();
 
     /**
      * Returns the value of the '<em><b>Child</b></em>' containment reference list.
@@ -75,7 +75,7 @@ public interface View extends EObject {
      *        extendedMetaData="kind='element' name='child' namespace='##targetNamespace'"
      * @generated
      */
-    EList<Node> getChild();
+    List<Node> getChild();
 
     /**
      * Returns the value of the '<em><b>Context</b></em>' attribute.

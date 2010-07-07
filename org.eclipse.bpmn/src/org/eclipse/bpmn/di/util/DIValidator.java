@@ -109,8 +109,7 @@ public class DIValidator extends EObjectValidator {
      * @generated
      */
     @Override
-    protected boolean validate(int classifierID, Object value,
-            DiagnosticChain diagnostics, Map<Object, Object> context) {
+    protected boolean validate(int classifierID, Object value, DiagnosticChain diagnostics, Map<Object, Object> context) {
         switch (classifierID) {
         case DIPackage.BENDPOINT:
             return validateBendpoint((Bendpoint) value, diagnostics, context);
@@ -119,8 +118,7 @@ public class DIValidator extends EObjectValidator {
         case DIPackage.DIAGRAM:
             return validateDiagram((Diagram) value, diagnostics, context);
         case DIPackage.DOCUMENT_ROOT:
-            return validateDocumentRoot((DocumentRoot) value, diagnostics,
-                    context);
+            return validateDocumentRoot((DocumentRoot) value, diagnostics, context);
         case DIPackage.NODE:
             return validateNode((Node) value, diagnostics, context);
         case DIPackage.STYLE:
@@ -130,11 +128,9 @@ public class DIValidator extends EObjectValidator {
         case DIPackage.DEFINITION_TYPE:
             return validateDefinitionType((List<?>) value, diagnostics, context);
         case DIPackage.SOURCE_CONNECTOR_TYPE:
-            return validateSourceConnectorType((List<?>) value, diagnostics,
-                    context);
+            return validateSourceConnectorType((List<?>) value, diagnostics, context);
         case DIPackage.TARGET_CONNECTOR_TYPE:
-            return validateTargetConnectorType((List<?>) value, diagnostics,
-                    context);
+            return validateTargetConnectorType((List<?>) value, diagnostics, context);
         default:
             return true;
         }
@@ -145,8 +141,7 @@ public class DIValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateBendpoint(Bendpoint bendpoint,
-            DiagnosticChain diagnostics, Map<Object, Object> context) {
+    public boolean validateBendpoint(Bendpoint bendpoint, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return validate_EveryDefaultConstraint(bendpoint, diagnostics, context);
     }
 
@@ -155,8 +150,7 @@ public class DIValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateConnector(Connector connector,
-            DiagnosticChain diagnostics, Map<Object, Object> context) {
+    public boolean validateConnector(Connector connector, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return validate_EveryDefaultConstraint(connector, diagnostics, context);
     }
 
@@ -165,8 +159,7 @@ public class DIValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateDiagram(Diagram diagram,
-            DiagnosticChain diagnostics, Map<Object, Object> context) {
+    public boolean validateDiagram(Diagram diagram, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return validate_EveryDefaultConstraint(diagram, diagnostics, context);
     }
 
@@ -175,10 +168,8 @@ public class DIValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateDocumentRoot(DocumentRoot documentRoot,
-            DiagnosticChain diagnostics, Map<Object, Object> context) {
-        return validate_EveryDefaultConstraint(documentRoot, diagnostics,
-                context);
+    public boolean validateDocumentRoot(DocumentRoot documentRoot, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(documentRoot, diagnostics, context);
     }
 
     /**
@@ -186,8 +177,7 @@ public class DIValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateNode(Node node, DiagnosticChain diagnostics,
-            Map<Object, Object> context) {
+    public boolean validateNode(Node node, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return validate_EveryDefaultConstraint(node, diagnostics, context);
     }
 
@@ -196,8 +186,7 @@ public class DIValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateStyle(Style style, DiagnosticChain diagnostics,
-            Map<Object, Object> context) {
+    public boolean validateStyle(Style style, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return validate_EveryDefaultConstraint(style, diagnostics, context);
     }
 
@@ -206,8 +195,7 @@ public class DIValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateView(View view, DiagnosticChain diagnostics,
-            Map<Object, Object> context) {
+    public boolean validateView(View view, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return validate_EveryDefaultConstraint(view, diagnostics, context);
     }
 
@@ -216,10 +204,8 @@ public class DIValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateDefinitionType(List<?> definitionType,
-            DiagnosticChain diagnostics, Map<Object, Object> context) {
-        boolean result = validateDefinitionType_ItemType(definitionType,
-                diagnostics, context);
+    public boolean validateDefinitionType(List<?> definitionType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        boolean result = validateDefinitionType_ItemType(definitionType, diagnostics, context);
         return result;
     }
 
@@ -229,19 +215,15 @@ public class DIValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateDefinitionType_ItemType(List<?> definitionType,
-            DiagnosticChain diagnostics, Map<Object, Object> context) {
+    public boolean validateDefinitionType_ItemType(List<?> definitionType, DiagnosticChain diagnostics, Map<Object, Object> context) {
         boolean result = true;
-        for (Iterator<?> i = definitionType.iterator(); i.hasNext()
-                && (result || diagnostics != null);) {
+        for (Iterator<?> i = definitionType.iterator(); i.hasNext() && (result || diagnostics != null);) {
             Object item = i.next();
             if (XMLTypePackage.Literals.QNAME.isInstance(item)) {
-                result &= xmlTypeValidator.validateQName((QName) item,
-                        diagnostics, context);
+                result &= xmlTypeValidator.validateQName((QName) item, diagnostics, context);
             } else {
                 result = false;
-                reportDataValueTypeViolation(XMLTypePackage.Literals.QNAME,
-                        item, diagnostics, context);
+                reportDataValueTypeViolation(XMLTypePackage.Literals.QNAME, item, diagnostics, context);
             }
         }
         return result;
@@ -252,10 +234,8 @@ public class DIValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateSourceConnectorType(List<?> sourceConnectorType,
-            DiagnosticChain diagnostics, Map<Object, Object> context) {
-        boolean result = validateSourceConnectorType_ItemType(
-                sourceConnectorType, diagnostics, context);
+    public boolean validateSourceConnectorType(List<?> sourceConnectorType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        boolean result = validateSourceConnectorType_ItemType(sourceConnectorType, diagnostics, context);
         return result;
     }
 
@@ -265,20 +245,15 @@ public class DIValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateSourceConnectorType_ItemType(
-            List<?> sourceConnectorType, DiagnosticChain diagnostics,
-            Map<Object, Object> context) {
+    public boolean validateSourceConnectorType_ItemType(List<?> sourceConnectorType, DiagnosticChain diagnostics, Map<Object, Object> context) {
         boolean result = true;
-        for (Iterator<?> i = sourceConnectorType.iterator(); i.hasNext()
-                && (result || diagnostics != null);) {
+        for (Iterator<?> i = sourceConnectorType.iterator(); i.hasNext() && (result || diagnostics != null);) {
             Object item = i.next();
             if (XMLTypePackage.Literals.ANY_URI.isInstance(item)) {
-                result &= xmlTypeValidator.validateAnyURI((String) item,
-                        diagnostics, context);
+                result &= xmlTypeValidator.validateAnyURI((String) item, diagnostics, context);
             } else {
                 result = false;
-                reportDataValueTypeViolation(XMLTypePackage.Literals.ANY_URI,
-                        item, diagnostics, context);
+                reportDataValueTypeViolation(XMLTypePackage.Literals.ANY_URI, item, diagnostics, context);
             }
         }
         return result;
@@ -289,10 +264,8 @@ public class DIValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateTargetConnectorType(List<?> targetConnectorType,
-            DiagnosticChain diagnostics, Map<Object, Object> context) {
-        boolean result = validateTargetConnectorType_ItemType(
-                targetConnectorType, diagnostics, context);
+    public boolean validateTargetConnectorType(List<?> targetConnectorType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        boolean result = validateTargetConnectorType_ItemType(targetConnectorType, diagnostics, context);
         return result;
     }
 
@@ -302,20 +275,15 @@ public class DIValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateTargetConnectorType_ItemType(
-            List<?> targetConnectorType, DiagnosticChain diagnostics,
-            Map<Object, Object> context) {
+    public boolean validateTargetConnectorType_ItemType(List<?> targetConnectorType, DiagnosticChain diagnostics, Map<Object, Object> context) {
         boolean result = true;
-        for (Iterator<?> i = targetConnectorType.iterator(); i.hasNext()
-                && (result || diagnostics != null);) {
+        for (Iterator<?> i = targetConnectorType.iterator(); i.hasNext() && (result || diagnostics != null);) {
             Object item = i.next();
             if (XMLTypePackage.Literals.ANY_URI.isInstance(item)) {
-                result &= xmlTypeValidator.validateAnyURI((String) item,
-                        diagnostics, context);
+                result &= xmlTypeValidator.validateAnyURI((String) item, diagnostics, context);
             } else {
                 result = false;
-                reportDataValueTypeViolation(XMLTypePackage.Literals.ANY_URI,
-                        item, diagnostics, context);
+                reportDataValueTypeViolation(XMLTypePackage.Literals.ANY_URI, item, diagnostics, context);
             }
         }
         return result;

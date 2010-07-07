@@ -39,8 +39,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class CorrelationPropertyBindingImpl extends BaseElementImpl implements
-        CorrelationPropertyBinding {
+public class CorrelationPropertyBindingImpl extends BaseElementImpl implements CorrelationPropertyBinding {
     /**
      * The cached value of the '{@link #getDataPath() <em>Data Path</em>}' containment reference.
      * <!-- begin-user-doc -->
@@ -104,15 +103,12 @@ public class CorrelationPropertyBindingImpl extends BaseElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetDataPath(FormalExpression newDataPath,
-            NotificationChain msgs) {
+    public NotificationChain basicSetDataPath(FormalExpression newDataPath, NotificationChain msgs) {
         FormalExpression oldDataPath = dataPath;
         dataPath = newDataPath;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this,
-                    Notification.SET,
-                    BpmnPackage.CORRELATION_PROPERTY_BINDING__DATA_PATH,
-                    oldDataPath, newDataPath);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BpmnPackage.CORRELATION_PROPERTY_BINDING__DATA_PATH, oldDataPath,
+                    newDataPath);
             if (msgs == null)
                 msgs = notification;
             else
@@ -130,26 +126,16 @@ public class CorrelationPropertyBindingImpl extends BaseElementImpl implements
         if (newDataPath != dataPath) {
             NotificationChain msgs = null;
             if (dataPath != null)
-                msgs = ((InternalEObject) dataPath)
-                        .eInverseRemove(
-                                this,
-                                EOPPOSITE_FEATURE_BASE
-                                        - BpmnPackage.CORRELATION_PROPERTY_BINDING__DATA_PATH,
-                                null, msgs);
+                msgs = ((InternalEObject) dataPath).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.CORRELATION_PROPERTY_BINDING__DATA_PATH, null,
+                        msgs);
             if (newDataPath != null)
-                msgs = ((InternalEObject) newDataPath)
-                        .eInverseAdd(
-                                this,
-                                EOPPOSITE_FEATURE_BASE
-                                        - BpmnPackage.CORRELATION_PROPERTY_BINDING__DATA_PATH,
-                                null, msgs);
+                msgs = ((InternalEObject) newDataPath).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.CORRELATION_PROPERTY_BINDING__DATA_PATH, null,
+                        msgs);
             msgs = basicSetDataPath(newDataPath, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.CORRELATION_PROPERTY_BINDING__DATA_PATH,
-                    newDataPath, newDataPath));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.CORRELATION_PROPERTY_BINDING__DATA_PATH, newDataPath, newDataPath));
     }
 
     /**
@@ -170,10 +156,7 @@ public class CorrelationPropertyBindingImpl extends BaseElementImpl implements
         QName oldCorrelationPropertyRef = correlationPropertyRef;
         correlationPropertyRef = newCorrelationPropertyRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(
-                    this,
-                    Notification.SET,
-                    BpmnPackage.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF,
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF,
                     oldCorrelationPropertyRef, correlationPropertyRef));
     }
 
@@ -183,8 +166,7 @@ public class CorrelationPropertyBindingImpl extends BaseElementImpl implements
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.CORRELATION_PROPERTY_BINDING__DATA_PATH:
             return basicSetDataPath(null, msgs);
@@ -255,9 +237,8 @@ public class CorrelationPropertyBindingImpl extends BaseElementImpl implements
         case BpmnPackage.CORRELATION_PROPERTY_BINDING__DATA_PATH:
             return dataPath != null;
         case BpmnPackage.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF:
-            return CORRELATION_PROPERTY_REF_EDEFAULT == null ? correlationPropertyRef != null
-                    : !CORRELATION_PROPERTY_REF_EDEFAULT
-                            .equals(correlationPropertyRef);
+            return CORRELATION_PROPERTY_REF_EDEFAULT == null ? correlationPropertyRef != null : !CORRELATION_PROPERTY_REF_EDEFAULT
+                    .equals(correlationPropertyRef);
         }
         return super.eIsSet(featureID);
     }

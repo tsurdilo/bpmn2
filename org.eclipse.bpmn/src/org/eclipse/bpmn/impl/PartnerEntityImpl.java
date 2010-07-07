@@ -91,8 +91,7 @@ public class PartnerEntityImpl extends RootElementImpl implements PartnerEntity 
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.PARTNER_ENTITY__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.PARTNER_ENTITY__NAME, oldName, name));
     }
 
     /**
@@ -148,8 +147,7 @@ public class PartnerEntityImpl extends RootElementImpl implements PartnerEntity 
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case BpmnPackage.PARTNER_ENTITY__NAME:
-            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-                    .equals(name);
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }

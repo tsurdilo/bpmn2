@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.bpmn.BpmnPackage;
@@ -42,8 +43,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  *
  * @generated
  */
-public abstract class ConversationNodeImpl extends BaseElementImpl implements
-        ConversationNode {
+public abstract class ConversationNodeImpl extends BaseElementImpl implements ConversationNode {
     /**
      * The cached value of the '{@link #getParticipantRef() <em>Participant Ref</em>}' attribute list.
      * <!-- begin-user-doc -->
@@ -98,10 +98,9 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<QName> getParticipantRef() {
+    public List<QName> getParticipantRef() {
         if (participantRef == null) {
-            participantRef = new EDataTypeEList<QName>(QName.class, this,
-                    BpmnPackage.CONVERSATION_NODE__PARTICIPANT_REF);
+            participantRef = new EDataTypeEList<QName>(QName.class, this, BpmnPackage.CONVERSATION_NODE__PARTICIPANT_REF);
         }
         return participantRef;
     }
@@ -124,8 +123,7 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.CONVERSATION_NODE__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.CONVERSATION_NODE__NAME, oldName, name));
     }
 
     /**
@@ -193,8 +191,7 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements
         case BpmnPackage.CONVERSATION_NODE__PARTICIPANT_REF:
             return participantRef != null && !participantRef.isEmpty();
         case BpmnPackage.CONVERSATION_NODE__NAME:
-            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-                    .equals(name);
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }

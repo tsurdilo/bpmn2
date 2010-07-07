@@ -103,9 +103,7 @@ public class TransactionImpl extends ActivityImpl implements Transaction {
         boolean oldMethodESet = methodESet;
         methodESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.TRANSACTION__METHOD, oldMethod, method,
-                    !oldMethodESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.TRANSACTION__METHOD, oldMethod, method, !oldMethodESet));
     }
 
     /**
@@ -119,9 +117,7 @@ public class TransactionImpl extends ActivityImpl implements Transaction {
         method = METHOD_EDEFAULT;
         methodESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    BpmnPackage.TRANSACTION__METHOD, oldMethod,
-                    METHOD_EDEFAULT, oldMethodESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, BpmnPackage.TRANSACTION__METHOD, oldMethod, METHOD_EDEFAULT, oldMethodESet));
     }
 
     /**

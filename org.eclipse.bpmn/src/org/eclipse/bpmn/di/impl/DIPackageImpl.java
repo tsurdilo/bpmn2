@@ -157,14 +157,11 @@ public class DIPackageImpl extends EPackageImpl implements DIPackage {
      */
     public static DIPackage init() {
         if (isInited)
-            return (DIPackage) EPackage.Registry.INSTANCE
-                    .getEPackage(DIPackage.eNS_URI);
+            return (DIPackage) EPackage.Registry.INSTANCE.getEPackage(DIPackage.eNS_URI);
 
         // Obtain or create and register package
-        DIPackageImpl theDIPackage = (DIPackageImpl) (EPackage.Registry.INSTANCE
-                .get(eNS_URI) instanceof DIPackageImpl ? EPackage.Registry.INSTANCE
-                .get(eNS_URI)
-                : new DIPackageImpl());
+        DIPackageImpl theDIPackage = (DIPackageImpl) (EPackage.Registry.INSTANCE.get(eNS_URI) instanceof DIPackageImpl ? EPackage.Registry.INSTANCE
+                .get(eNS_URI) : new DIPackageImpl());
 
         isInited = true;
 
@@ -172,8 +169,7 @@ public class DIPackageImpl extends EPackageImpl implements DIPackage {
         XMLTypePackage.eINSTANCE.eClass();
 
         // Obtain or create and register interdependencies
-        BpmnPackageImpl theBpmnPackage = (BpmnPackageImpl) (EPackage.Registry.INSTANCE
-                .getEPackage(BpmnPackage.eNS_URI) instanceof BpmnPackageImpl ? EPackage.Registry.INSTANCE
+        BpmnPackageImpl theBpmnPackage = (BpmnPackageImpl) (EPackage.Registry.INSTANCE.getEPackage(BpmnPackage.eNS_URI) instanceof BpmnPackageImpl ? EPackage.Registry.INSTANCE
                 .getEPackage(BpmnPackage.eNS_URI)
                 : BpmnPackage.eINSTANCE);
 
@@ -190,12 +186,11 @@ public class DIPackageImpl extends EPackageImpl implements DIPackage {
         theBpmnPackage.fixPackageContents();
 
         // Register package validator
-        EValidator.Registry.INSTANCE.put(theDIPackage,
-                new EValidator.Descriptor() {
-                    public EValidator getEValidator() {
-                        return DIValidator.INSTANCE;
-                    }
-                });
+        EValidator.Registry.INSTANCE.put(theDIPackage, new EValidator.Descriptor() {
+            public EValidator getEValidator() {
+                return DIValidator.INSTANCE;
+            }
+        });
 
         // Mark meta-data to indicate it can't be changed
         theDIPackage.freeze();
@@ -629,8 +624,7 @@ public class DIPackageImpl extends EPackageImpl implements DIPackage {
         setNsURI(eNS_URI);
 
         // Obtain other dependent packages
-        XMLTypePackage theXMLTypePackage = (XMLTypePackage) EPackage.Registry.INSTANCE
-                .getEPackage(XMLTypePackage.eNS_URI);
+        XMLTypePackage theXMLTypePackage = (XMLTypePackage) EPackage.Registry.INSTANCE.getEPackage(XMLTypePackage.eNS_URI);
 
         // Create type parameters
 
@@ -642,62 +636,36 @@ public class DIPackageImpl extends EPackageImpl implements DIPackage {
         nodeEClass.getESuperTypes().add(this.getView());
 
         // Initialize classes and features; add operations and parameters
-        initEClass(
-                bendpointEClass,
-                Bendpoint.class,
-                "Bendpoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
-        initEAttribute(
-                getBendpoint_SourceX(),
-                theXMLTypePackage.getInt(),
+        initEClass(bendpointEClass, Bendpoint.class, "Bendpoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+        initEAttribute(getBendpoint_SourceX(), theXMLTypePackage.getInt(),
                 "sourceX", null, 1, 1, Bendpoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
-        initEAttribute(
-                getBendpoint_SourceY(),
-                theXMLTypePackage.getInt(),
+        initEAttribute(getBendpoint_SourceY(), theXMLTypePackage.getInt(),
                 "sourceY", null, 1, 1, Bendpoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
-        initEAttribute(
-                getBendpoint_TargetX(),
-                theXMLTypePackage.getInt(),
+        initEAttribute(getBendpoint_TargetX(), theXMLTypePackage.getInt(),
                 "targetX", null, 1, 1, Bendpoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
-        initEAttribute(
-                getBendpoint_TargetY(),
-                theXMLTypePackage.getInt(),
+        initEAttribute(getBendpoint_TargetY(), theXMLTypePackage.getInt(),
                 "targetY", null, 1, 1, Bendpoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
-        initEClass(
-                connectorEClass,
-                Connector.class,
-                "Connector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+        initEClass(connectorEClass, Connector.class, "Connector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
         initEReference(
                 getConnector_Bendpoint(),
                 this.getBendpoint(),
                 null,
                 "bendpoint", null, 0, -1, Connector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
-        initEAttribute(
-                getConnector_Source(),
-                theXMLTypePackage.getAnyURI(),
+        initEAttribute(getConnector_Source(), theXMLTypePackage.getAnyURI(),
                 "source", null, 1, 1, Connector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
-        initEAttribute(
-                getConnector_Target(),
-                theXMLTypePackage.getAnyURI(),
+        initEAttribute(getConnector_Target(), theXMLTypePackage.getAnyURI(),
                 "target", null, 1, 1, Connector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
-        initEClass(
-                diagramEClass,
-                Diagram.class,
-                "Diagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+        initEClass(diagramEClass, Diagram.class, "Diagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
         initEReference(
                 getDiagram_Connector(),
                 this.getConnector(),
                 null,
                 "connector", null, 0, -1, Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
-        initEClass(
-                documentRootEClass,
-                DocumentRoot.class,
-                "DocumentRoot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
-        initEAttribute(
-                getDocumentRoot_Mixed(),
-                ecorePackage.getEFeatureMapEntry(),
+        initEClass(documentRootEClass, DocumentRoot.class, "DocumentRoot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+        initEAttribute(getDocumentRoot_Mixed(), ecorePackage.getEFeatureMapEntry(),
                 "mixed", null, 0, -1, null, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
         initEReference(
                 getDocumentRoot_XMLNSPrefixMap(),
@@ -740,26 +708,15 @@ public class DIPackageImpl extends EPackageImpl implements DIPackage {
                 null,
                 "style", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
-        initEClass(
-                nodeEClass,
-                Node.class,
-                "Node", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+        initEClass(nodeEClass, Node.class, "Node", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 
-        initEClass(
-                styleEClass,
-                Style.class,
-                "Style", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
-        initEAttribute(
-                getStyle_Name(),
-                theXMLTypePackage.getNCName(),
+        initEClass(styleEClass, Style.class, "Style", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+        initEAttribute(getStyle_Name(), theXMLTypePackage.getNCName(),
                 "name", null, 1, 1, Style.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
-        initEAttribute(
-                getStyle_Value(),
-                theXMLTypePackage.getString(),
+        initEAttribute(getStyle_Value(), theXMLTypePackage.getString(),
                 "value", null, 1, 1, Style.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
-        initEClass(viewEClass, View.class,
-                "View", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+        initEClass(viewEClass, View.class, "View", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
         initEReference(
                 getView_Style(),
                 this.getStyle(),
@@ -770,17 +727,11 @@ public class DIPackageImpl extends EPackageImpl implements DIPackage {
                 this.getNode(),
                 null,
                 "child", null, 0, -1, View.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
-        initEAttribute(
-                getView_Context(),
-                theXMLTypePackage.getAnyURI(),
+        initEAttribute(getView_Context(), theXMLTypePackage.getAnyURI(),
                 "context", null, 0, 1, View.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
-        initEAttribute(
-                getView_Definition(),
-                this.getDefinitionType(),
+        initEAttribute(getView_Definition(), this.getDefinitionType(),
                 "definition", null, 1, 1, View.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
-        initEAttribute(
-                getView_Id(),
-                theXMLTypePackage.getNCName(),
+        initEAttribute(getView_Id(), theXMLTypePackage.getNCName(),
                 "id", null, 1, 1, View.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
         initEAttribute(
                 getView_SourceConnector(),
@@ -792,16 +743,9 @@ public class DIPackageImpl extends EPackageImpl implements DIPackage {
                 "targetConnector", null, 0, 1, View.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
         // Initialize data types
-        initEDataType(definitionTypeEDataType, List.class,
-                "DefinitionType", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
-        initEDataType(
-                sourceConnectorTypeEDataType,
-                List.class,
-                "SourceConnectorType", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
-        initEDataType(
-                targetConnectorTypeEDataType,
-                List.class,
-                "TargetConnectorType", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+        initEDataType(definitionTypeEDataType, List.class, "DefinitionType", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+        initEDataType(sourceConnectorTypeEDataType, List.class, "SourceConnectorType", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+        initEDataType(targetConnectorTypeEDataType, List.class, "TargetConnectorType", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 
         // Create resource
         createResource(eNS_URI);
@@ -819,155 +763,125 @@ public class DIPackageImpl extends EPackageImpl implements DIPackage {
      */
     protected void createExtendedMetaDataAnnotations() {
         String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData"; //$NON-NLS-1$		
-        addAnnotation(bendpointEClass, source, new String[] {
-                "name", "Bendpoint", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(bendpointEClass, source, new String[] { "name", "Bendpoint", //$NON-NLS-1$ //$NON-NLS-2$
                 "kind", "empty" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(getBendpoint_SourceX(), source, new String[] {
-                "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(getBendpoint_SourceX(), source, new String[] { "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
                 "name", "sourceX" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(getBendpoint_SourceY(), source, new String[] {
-                "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(getBendpoint_SourceY(), source, new String[] { "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
                 "name", "sourceY" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(getBendpoint_TargetX(), source, new String[] {
-                "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(getBendpoint_TargetX(), source, new String[] { "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
                 "name", "targetX" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(getBendpoint_TargetY(), source, new String[] {
-                "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(getBendpoint_TargetY(), source, new String[] { "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
                 "name", "targetY" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(connectorEClass, source, new String[] {
-                "name", "Connector", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(connectorEClass, source, new String[] { "name", "Connector", //$NON-NLS-1$ //$NON-NLS-2$
                 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(getConnector_Bendpoint(), source, new String[] {
-                "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(getConnector_Bendpoint(), source, new String[] { "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
                 "name", "bendpoint", //$NON-NLS-1$ //$NON-NLS-2$
                 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(getConnector_Source(), source, new String[] {
-                "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(getConnector_Source(), source, new String[] { "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
                 "name", "source" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(getConnector_Target(), source, new String[] {
-                "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(getConnector_Target(), source, new String[] { "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
                 "name", "target" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(definitionTypeEDataType, source, new String[] {
-                "name", "definition_._type", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(definitionTypeEDataType, source, new String[] { "name", "definition_._type", //$NON-NLS-1$ //$NON-NLS-2$
                 "itemType", "http://www.eclipse.org/emf/2003/XMLType#QName" //$NON-NLS-1$ //$NON-NLS-2$
         });
         addAnnotation(diagramEClass, source, new String[] { "name", "Diagram", //$NON-NLS-1$ //$NON-NLS-2$
                 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(getDiagram_Connector(), source, new String[] {
-                "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(getDiagram_Connector(), source, new String[] { "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
                 "name", "connector", //$NON-NLS-1$ //$NON-NLS-2$
                 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
         });
         addAnnotation(documentRootEClass, source, new String[] { "name", "", //$NON-NLS-1$ //$NON-NLS-2$
                 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(getDocumentRoot_Mixed(), source, new String[] {
-                "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(getDocumentRoot_Mixed(), source, new String[] { "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
                 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(getDocumentRoot_XMLNSPrefixMap(), source, new String[] {
-                "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(getDocumentRoot_XMLNSPrefixMap(), source, new String[] { "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
                 "name", "xmlns:prefix" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(getDocumentRoot_XSISchemaLocation(), source,
-                new String[] { "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-                        "name", "xsi:schemaLocation" //$NON-NLS-1$ //$NON-NLS-2$
-                });
-        addAnnotation(getDocumentRoot_Bendpoint(), source, new String[] {
-                "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(getDocumentRoot_XSISchemaLocation(), source, new String[] { "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+                "name", "xsi:schemaLocation" //$NON-NLS-1$ //$NON-NLS-2$
+        });
+        addAnnotation(getDocumentRoot_Bendpoint(), source, new String[] { "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
                 "name", "bendpoint", //$NON-NLS-1$ //$NON-NLS-2$
                 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(getDocumentRoot_Connector(), source, new String[] {
-                "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(getDocumentRoot_Connector(), source, new String[] { "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
                 "name", "connector", //$NON-NLS-1$ //$NON-NLS-2$
                 "namespace", "##targetNamespace", //$NON-NLS-1$ //$NON-NLS-2$
                 "affiliation", "view" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(getDocumentRoot_View(), source, new String[] {
-                "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(getDocumentRoot_View(), source, new String[] { "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
                 "name", "view", //$NON-NLS-1$ //$NON-NLS-2$
                 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(getDocumentRoot_Diagram(), source, new String[] {
-                "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(getDocumentRoot_Diagram(), source, new String[] { "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
                 "name", "diagram", //$NON-NLS-1$ //$NON-NLS-2$
                 "namespace", "##targetNamespace", //$NON-NLS-1$ //$NON-NLS-2$
                 "affiliation", "view" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(getDocumentRoot_Node(), source, new String[] {
-                "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(getDocumentRoot_Node(), source, new String[] { "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
                 "name", "node", //$NON-NLS-1$ //$NON-NLS-2$
                 "namespace", "##targetNamespace", //$NON-NLS-1$ //$NON-NLS-2$
                 "affiliation", "view" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(getDocumentRoot_Style(), source, new String[] {
-                "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(getDocumentRoot_Style(), source, new String[] { "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
                 "name", "style", //$NON-NLS-1$ //$NON-NLS-2$
                 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
         });
         addAnnotation(nodeEClass, source, new String[] { "name", "Node", //$NON-NLS-1$ //$NON-NLS-2$
                 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(sourceConnectorTypeEDataType, source, new String[] {
-                "name", "sourceConnector_._type", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(sourceConnectorTypeEDataType, source, new String[] { "name", "sourceConnector_._type", //$NON-NLS-1$ //$NON-NLS-2$
                 "itemType", "http://www.eclipse.org/emf/2003/XMLType#anyURI" //$NON-NLS-1$ //$NON-NLS-2$
         });
         addAnnotation(styleEClass, source, new String[] { "name", "Style", //$NON-NLS-1$ //$NON-NLS-2$
                 "kind", "empty" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(getStyle_Name(), source, new String[] {
-                "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(getStyle_Name(), source, new String[] { "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
                 "name", "name" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(getStyle_Value(), source, new String[] {
-                "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(getStyle_Value(), source, new String[] { "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
                 "name", "value" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(targetConnectorTypeEDataType, source, new String[] {
-                "name", "targetConnector_._type", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(targetConnectorTypeEDataType, source, new String[] { "name", "targetConnector_._type", //$NON-NLS-1$ //$NON-NLS-2$
                 "itemType", "http://www.eclipse.org/emf/2003/XMLType#anyURI" //$NON-NLS-1$ //$NON-NLS-2$
         });
         addAnnotation(viewEClass, source, new String[] { "name", "View", //$NON-NLS-1$ //$NON-NLS-2$
                 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(getView_Style(), source, new String[] {
-                "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(getView_Style(), source, new String[] { "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
                 "name", "style", //$NON-NLS-1$ //$NON-NLS-2$
                 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(getView_Child(), source, new String[] {
-                "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(getView_Child(), source, new String[] { "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
                 "name", "child", //$NON-NLS-1$ //$NON-NLS-2$
                 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(getView_Context(), source, new String[] {
-                "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(getView_Context(), source, new String[] { "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
                 "name", "context" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(getView_Definition(), source, new String[] {
-                "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(getView_Definition(), source, new String[] { "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
                 "name", "definition" //$NON-NLS-1$ //$NON-NLS-2$
         });
         addAnnotation(getView_Id(), source, new String[] { "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
                 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(getView_SourceConnector(), source, new String[] {
-                "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(getView_SourceConnector(), source, new String[] { "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
                 "name", "sourceConnector" //$NON-NLS-1$ //$NON-NLS-2$
         });
-        addAnnotation(getView_TargetConnector(), source, new String[] {
-                "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+        addAnnotation(getView_TargetConnector(), source, new String[] { "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
                 "name", "targetConnector" //$NON-NLS-1$ //$NON-NLS-2$
         });
     }

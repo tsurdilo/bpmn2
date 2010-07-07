@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.emf.common.util.EList;
@@ -49,7 +50,7 @@ public interface FlowNode extends FlowElement {
      *        extendedMetaData="kind='element' name='incoming' namespace='##targetNamespace'"
      * @generated
      */
-    EList<QName> getIncoming();
+    List<QName> getIncoming();
 
     /**
      * Returns the value of the '<em><b>Outgoing</b></em>' attribute list.
@@ -66,6 +67,6 @@ public interface FlowNode extends FlowElement {
      *        extendedMetaData="kind='element' name='outgoing' namespace='##targetNamespace'"
      * @generated
      */
-    EList<QName> getOutgoing();
+    List<QName> getOutgoing();
 
 } // FlowNode

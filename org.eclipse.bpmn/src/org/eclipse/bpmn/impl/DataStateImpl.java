@@ -91,8 +91,7 @@ public class DataStateImpl extends BaseElementImpl implements DataState {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.DATA_STATE__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.DATA_STATE__NAME, oldName, name));
     }
 
     /**
@@ -148,8 +147,7 @@ public class DataStateImpl extends BaseElementImpl implements DataState {
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case BpmnPackage.DATA_STATE__NAME:
-            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-                    .equals(name);
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }

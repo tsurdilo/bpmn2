@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn.Assignment;
 import org.eclipse.bpmn.BpmnPackage;
 import org.eclipse.bpmn.DataAssociation;
@@ -45,8 +46,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public abstract class DataAssociationImpl extends BaseElementImpl implements
-        DataAssociation {
+public abstract class DataAssociationImpl extends BaseElementImpl implements DataAssociation {
     /**
      * The cached value of the '{@link #getTransformation() <em>Transformation</em>}' containment reference.
      * <!-- begin-user-doc -->
@@ -100,15 +100,12 @@ public abstract class DataAssociationImpl extends BaseElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetTransformation(
-            FormalExpression newTransformation, NotificationChain msgs) {
+    public NotificationChain basicSetTransformation(FormalExpression newTransformation, NotificationChain msgs) {
         FormalExpression oldTransformation = transformation;
         transformation = newTransformation;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this,
-                    Notification.SET,
-                    BpmnPackage.DATA_ASSOCIATION__TRANSFORMATION,
-                    oldTransformation, newTransformation);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BpmnPackage.DATA_ASSOCIATION__TRANSFORMATION, oldTransformation,
+                    newTransformation);
             if (msgs == null)
                 msgs = notification;
             else
@@ -126,22 +123,16 @@ public abstract class DataAssociationImpl extends BaseElementImpl implements
         if (newTransformation != transformation) {
             NotificationChain msgs = null;
             if (transformation != null)
-                msgs = ((InternalEObject) transformation).eInverseRemove(this,
-                        EOPPOSITE_FEATURE_BASE
-                                - BpmnPackage.DATA_ASSOCIATION__TRANSFORMATION,
-                        null, msgs);
+                msgs = ((InternalEObject) transformation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.DATA_ASSOCIATION__TRANSFORMATION, null,
+                        msgs);
             if (newTransformation != null)
-                msgs = ((InternalEObject) newTransformation).eInverseAdd(this,
-                        EOPPOSITE_FEATURE_BASE
-                                - BpmnPackage.DATA_ASSOCIATION__TRANSFORMATION,
-                        null, msgs);
+                msgs = ((InternalEObject) newTransformation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.DATA_ASSOCIATION__TRANSFORMATION, null,
+                        msgs);
             msgs = basicSetTransformation(newTransformation, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.DATA_ASSOCIATION__TRANSFORMATION,
-                    newTransformation, newTransformation));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.DATA_ASSOCIATION__TRANSFORMATION, newTransformation, newTransformation));
     }
 
     /**
@@ -149,11 +140,9 @@ public abstract class DataAssociationImpl extends BaseElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Assignment> getAssignments() {
+    public List<Assignment> getAssignments() {
         if (assignments == null) {
-            assignments = new EObjectContainmentEList<Assignment>(
-                    Assignment.class, this,
-                    BpmnPackage.DATA_ASSOCIATION__ASSIGNMENTS);
+            assignments = new EObjectContainmentEList<Assignment>(Assignment.class, this, BpmnPackage.DATA_ASSOCIATION__ASSIGNMENTS);
         }
         return assignments;
     }
@@ -164,14 +153,12 @@ public abstract class DataAssociationImpl extends BaseElementImpl implements
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.DATA_ASSOCIATION__TRANSFORMATION:
             return basicSetTransformation(null, msgs);
         case BpmnPackage.DATA_ASSOCIATION__ASSIGNMENTS:
-            return ((InternalEList<?>) getAssignments()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getAssignments()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -206,8 +193,7 @@ public abstract class DataAssociationImpl extends BaseElementImpl implements
             return;
         case BpmnPackage.DATA_ASSOCIATION__ASSIGNMENTS:
             getAssignments().clear();
-            getAssignments()
-                    .addAll((Collection<? extends Assignment>) newValue);
+            getAssignments().addAll((Collection<? extends Assignment>) newValue);
             return;
         }
         super.eSet(featureID, newValue);

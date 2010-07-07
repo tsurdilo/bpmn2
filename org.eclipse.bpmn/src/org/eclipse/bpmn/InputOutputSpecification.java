@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -48,7 +49,7 @@ public interface InputOutputSpecification extends BaseElement {
      *        extendedMetaData="kind='element' name='dataInput' namespace='##targetNamespace'"
      * @generated
      */
-    EList<DataInput> getDataInput();
+    List<DataInput> getDataInput();
 
     /**
      * Returns the value of the '<em><b>Data Output</b></em>' containment reference list.
@@ -65,7 +66,7 @@ public interface InputOutputSpecification extends BaseElement {
      *        extendedMetaData="kind='element' name='dataOutput' namespace='##targetNamespace'"
      * @generated
      */
-    EList<DataOutput> getDataOutput();
+    List<DataOutput> getDataOutput();
 
     /**
      * Returns the value of the '<em><b>Input Set</b></em>' containment reference list.
@@ -82,7 +83,7 @@ public interface InputOutputSpecification extends BaseElement {
      *        extendedMetaData="kind='element' name='inputSet' namespace='##targetNamespace'"
      * @generated
      */
-    EList<InputSet> getInputSet();
+    List<InputSet> getInputSet();
 
     /**
      * Returns the value of the '<em><b>Output Set</b></em>' containment reference list.
@@ -99,6 +100,6 @@ public interface InputOutputSpecification extends BaseElement {
      *        extendedMetaData="kind='element' name='outputSet' namespace='##targetNamespace'"
      * @generated
      */
-    EList<OutputSet> getOutputSet();
+    List<OutputSet> getOutputSet();
 
 } // InputOutputSpecification

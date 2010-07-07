@@ -36,8 +36,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class MessageEventDefinitionImpl extends EventDefinitionImpl implements
-        MessageEventDefinition {
+public class MessageEventDefinitionImpl extends EventDefinitionImpl implements MessageEventDefinition {
     /**
      * The default value of the '{@link #getOperationRef() <em>Operation Ref</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -115,9 +114,7 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements
         QName oldOperationRef = operationRef;
         operationRef = newOperationRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.MESSAGE_EVENT_DEFINITION__OPERATION_REF,
-                    oldOperationRef, operationRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.MESSAGE_EVENT_DEFINITION__OPERATION_REF, oldOperationRef, operationRef));
     }
 
     /**
@@ -138,9 +135,7 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements
         QName oldMessageRef = messageRef;
         messageRef = newMessageRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.MESSAGE_EVENT_DEFINITION__MESSAGE_REF,
-                    oldMessageRef, messageRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.MESSAGE_EVENT_DEFINITION__MESSAGE_REF, oldMessageRef, messageRef));
     }
 
     /**
@@ -204,11 +199,9 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case BpmnPackage.MESSAGE_EVENT_DEFINITION__OPERATION_REF:
-            return OPERATION_REF_EDEFAULT == null ? operationRef != null
-                    : !OPERATION_REF_EDEFAULT.equals(operationRef);
+            return OPERATION_REF_EDEFAULT == null ? operationRef != null : !OPERATION_REF_EDEFAULT.equals(operationRef);
         case BpmnPackage.MESSAGE_EVENT_DEFINITION__MESSAGE_REF:
-            return MESSAGE_REF_EDEFAULT == null ? messageRef != null
-                    : !MESSAGE_REF_EDEFAULT.equals(messageRef);
+            return MESSAGE_REF_EDEFAULT == null ? messageRef != null : !MESSAGE_REF_EDEFAULT.equals(messageRef);
         }
         return super.eIsSet(featureID);
     }

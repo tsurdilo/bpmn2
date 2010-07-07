@@ -11,13 +11,13 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import org.eclipse.bpmn.di.Diagram;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
 
 import org.eclipse.emf.ecore.util.FeatureMap;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -61,7 +61,7 @@ public interface Definitions extends EObject {
      *        extendedMetaData="kind='element' name='import' namespace='##targetNamespace'"
      * @generated
      */
-    EList<Import> getImport();
+    List<Import> getImport();
 
     /**
      * Returns the value of the '<em><b>Extension</b></em>' containment reference list.
@@ -78,7 +78,7 @@ public interface Definitions extends EObject {
      *        extendedMetaData="kind='element' name='extension' namespace='##targetNamespace'"
      * @generated
      */
-    EList<Extension> getExtension();
+    List<Extension> getExtension();
 
     /**
      * Returns the value of the '<em><b>Root Element Group</b></em>' attribute list.
@@ -112,7 +112,7 @@ public interface Definitions extends EObject {
      *        extendedMetaData="kind='element' name='rootElement' namespace='##targetNamespace' group='rootElement:group'"
      * @generated
      */
-    EList<RootElement> getRootElement();
+    List<RootElement> getRootElement();
 
     /**
      * Returns the value of the '<em><b>Diagram</b></em>' containment reference list.
@@ -129,7 +129,7 @@ public interface Definitions extends EObject {
      *        extendedMetaData="kind='element' name='diagram' namespace='http://www.omg.com/di/1.0.0'"
      * @generated
      */
-    EList<Diagram> getDiagram();
+    List<Diagram> getDiagram();
 
     /**
      * Returns the value of the '<em><b>Relationship</b></em>' containment reference list.
@@ -146,7 +146,7 @@ public interface Definitions extends EObject {
      *        extendedMetaData="kind='element' name='relationship' namespace='##targetNamespace'"
      * @generated
      */
-    EList<Relationship> getRelationship();
+    List<Relationship> getRelationship();
 
     /**
      * Returns the value of the '<em><b>Expression Language</b></em>' attribute.

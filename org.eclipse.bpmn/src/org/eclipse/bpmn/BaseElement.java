@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -53,7 +54,7 @@ public interface BaseElement extends EObject {
      *        extendedMetaData="kind='element' name='documentation' namespace='##targetNamespace'"
      * @generated
      */
-    EList<Documentation> getDocumentations();
+    List<Documentation> getDocumentations();
 
     /**
      * Returns the value of the '<em><b>Any</b></em>' attribute list.

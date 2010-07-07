@@ -110,8 +110,7 @@ public class DocumentationImpl extends EObjectImpl implements Documentation {
      * @generated
      */
     public FeatureMap getAny() {
-        return (FeatureMap) getMixed().<FeatureMap.Entry> list(
-                BpmnPackage.eINSTANCE.getDocumentation_Any());
+        return (FeatureMap) getMixed().<FeatureMap.Entry> list(BpmnPackage.eINSTANCE.getDocumentation_Any());
     }
 
     /**
@@ -132,8 +131,7 @@ public class DocumentationImpl extends EObjectImpl implements Documentation {
         String oldId = id;
         id = newId;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.DOCUMENTATION__ID, oldId, id));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.DOCUMENTATION__ID, oldId, id));
     }
 
     /**
@@ -142,8 +140,7 @@ public class DocumentationImpl extends EObjectImpl implements Documentation {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.DOCUMENTATION__MIXED:
             return ((InternalEList<?>) getMixed()).basicRemove(otherEnd, msgs);

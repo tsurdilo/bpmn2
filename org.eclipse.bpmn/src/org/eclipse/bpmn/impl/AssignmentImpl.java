@@ -112,14 +112,11 @@ public class AssignmentImpl extends BaseElementImpl implements Assignment {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetFrom(BaseElementWithMixedContent newFrom,
-            NotificationChain msgs) {
+    public NotificationChain basicSetFrom(BaseElementWithMixedContent newFrom, NotificationChain msgs) {
         BaseElementWithMixedContent oldFrom = from;
         from = newFrom;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this,
-                    Notification.SET, BpmnPackage.ASSIGNMENT__FROM, oldFrom,
-                    newFrom);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BpmnPackage.ASSIGNMENT__FROM, oldFrom, newFrom);
             if (msgs == null)
                 msgs = notification;
             else
@@ -137,19 +134,14 @@ public class AssignmentImpl extends BaseElementImpl implements Assignment {
         if (newFrom != from) {
             NotificationChain msgs = null;
             if (from != null)
-                msgs = ((InternalEObject) from).eInverseRemove(this,
-                        EOPPOSITE_FEATURE_BASE - BpmnPackage.ASSIGNMENT__FROM,
-                        null, msgs);
+                msgs = ((InternalEObject) from).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.ASSIGNMENT__FROM, null, msgs);
             if (newFrom != null)
-                msgs = ((InternalEObject) newFrom).eInverseAdd(this,
-                        EOPPOSITE_FEATURE_BASE - BpmnPackage.ASSIGNMENT__FROM,
-                        null, msgs);
+                msgs = ((InternalEObject) newFrom).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.ASSIGNMENT__FROM, null, msgs);
             msgs = basicSetFrom(newFrom, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.ASSIGNMENT__FROM, newFrom, newFrom));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.ASSIGNMENT__FROM, newFrom, newFrom));
     }
 
     /**
@@ -166,13 +158,11 @@ public class AssignmentImpl extends BaseElementImpl implements Assignment {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetTo(BaseElementWithMixedContent newTo,
-            NotificationChain msgs) {
+    public NotificationChain basicSetTo(BaseElementWithMixedContent newTo, NotificationChain msgs) {
         BaseElementWithMixedContent oldTo = to;
         to = newTo;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this,
-                    Notification.SET, BpmnPackage.ASSIGNMENT__TO, oldTo, newTo);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BpmnPackage.ASSIGNMENT__TO, oldTo, newTo);
             if (msgs == null)
                 msgs = notification;
             else
@@ -190,19 +180,14 @@ public class AssignmentImpl extends BaseElementImpl implements Assignment {
         if (newTo != to) {
             NotificationChain msgs = null;
             if (to != null)
-                msgs = ((InternalEObject) to).eInverseRemove(this,
-                        EOPPOSITE_FEATURE_BASE - BpmnPackage.ASSIGNMENT__TO,
-                        null, msgs);
+                msgs = ((InternalEObject) to).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.ASSIGNMENT__TO, null, msgs);
             if (newTo != null)
-                msgs = ((InternalEObject) newTo).eInverseAdd(this,
-                        EOPPOSITE_FEATURE_BASE - BpmnPackage.ASSIGNMENT__TO,
-                        null, msgs);
+                msgs = ((InternalEObject) newTo).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.ASSIGNMENT__TO, null, msgs);
             msgs = basicSetTo(newTo, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.ASSIGNMENT__TO, newTo, newTo));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.ASSIGNMENT__TO, newTo, newTo));
     }
 
     /**
@@ -223,8 +208,7 @@ public class AssignmentImpl extends BaseElementImpl implements Assignment {
         String oldLanguage = language;
         language = newLanguage;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.ASSIGNMENT__LANGUAGE, oldLanguage, language));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.ASSIGNMENT__LANGUAGE, oldLanguage, language));
     }
 
     /**
@@ -233,8 +217,7 @@ public class AssignmentImpl extends BaseElementImpl implements Assignment {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.ASSIGNMENT__FROM:
             return basicSetFrom(null, msgs);
@@ -317,8 +300,7 @@ public class AssignmentImpl extends BaseElementImpl implements Assignment {
         case BpmnPackage.ASSIGNMENT__TO:
             return to != null;
         case BpmnPackage.ASSIGNMENT__LANGUAGE:
-            return LANGUAGE_EDEFAULT == null ? language != null
-                    : !LANGUAGE_EDEFAULT.equals(language);
+            return LANGUAGE_EDEFAULT == null ? language != null : !LANGUAGE_EDEFAULT.equals(language);
         }
         return super.eIsSet(featureID);
     }

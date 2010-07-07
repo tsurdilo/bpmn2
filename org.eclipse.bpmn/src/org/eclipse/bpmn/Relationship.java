@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.emf.common.util.EList;
@@ -50,7 +51,7 @@ public interface Relationship extends BaseElement {
      *        extendedMetaData="kind='element' name='source' namespace='##targetNamespace'"
      * @generated
      */
-    EList<QName> getSource();
+    List<QName> getSource();
 
     /**
      * Returns the value of the '<em><b>Target</b></em>' attribute list.
@@ -67,7 +68,7 @@ public interface Relationship extends BaseElement {
      *        extendedMetaData="kind='element' name='target' namespace='##targetNamespace'"
      * @generated
      */
-    EList<QName> getTarget();
+    List<QName> getTarget();
 
     /**
      * Returns the value of the '<em><b>Direction</b></em>' attribute.

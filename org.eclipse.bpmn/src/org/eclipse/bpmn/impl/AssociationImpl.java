@@ -141,18 +141,14 @@ public class AssociationImpl extends ArtifactImpl implements Association {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setAssociationDirection(
-            AssociationDirection newAssociationDirection) {
+    public void setAssociationDirection(AssociationDirection newAssociationDirection) {
         AssociationDirection oldAssociationDirection = associationDirection;
-        associationDirection = newAssociationDirection == null ? ASSOCIATION_DIRECTION_EDEFAULT
-                : newAssociationDirection;
+        associationDirection = newAssociationDirection == null ? ASSOCIATION_DIRECTION_EDEFAULT : newAssociationDirection;
         boolean oldAssociationDirectionESet = associationDirectionESet;
         associationDirectionESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.ASSOCIATION__ASSOCIATION_DIRECTION,
-                    oldAssociationDirection, associationDirection,
-                    !oldAssociationDirectionESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.ASSOCIATION__ASSOCIATION_DIRECTION, oldAssociationDirection,
+                    associationDirection, !oldAssociationDirectionESet));
     }
 
     /**
@@ -166,10 +162,8 @@ public class AssociationImpl extends ArtifactImpl implements Association {
         associationDirection = ASSOCIATION_DIRECTION_EDEFAULT;
         associationDirectionESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    BpmnPackage.ASSOCIATION__ASSOCIATION_DIRECTION,
-                    oldAssociationDirection, ASSOCIATION_DIRECTION_EDEFAULT,
-                    oldAssociationDirectionESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, BpmnPackage.ASSOCIATION__ASSOCIATION_DIRECTION, oldAssociationDirection,
+                    ASSOCIATION_DIRECTION_EDEFAULT, oldAssociationDirectionESet));
     }
 
     /**
@@ -199,9 +193,7 @@ public class AssociationImpl extends ArtifactImpl implements Association {
         QName oldSourceRef = sourceRef;
         sourceRef = newSourceRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.ASSOCIATION__SOURCE_REF, oldSourceRef,
-                    sourceRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.ASSOCIATION__SOURCE_REF, oldSourceRef, sourceRef));
     }
 
     /**
@@ -222,9 +214,7 @@ public class AssociationImpl extends ArtifactImpl implements Association {
         QName oldTargetRef = targetRef;
         targetRef = newTargetRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.ASSOCIATION__TARGET_REF, oldTargetRef,
-                    targetRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.ASSOCIATION__TARGET_REF, oldTargetRef, targetRef));
     }
 
     /**
@@ -298,11 +288,9 @@ public class AssociationImpl extends ArtifactImpl implements Association {
         case BpmnPackage.ASSOCIATION__ASSOCIATION_DIRECTION:
             return isSetAssociationDirection();
         case BpmnPackage.ASSOCIATION__SOURCE_REF:
-            return SOURCE_REF_EDEFAULT == null ? sourceRef != null
-                    : !SOURCE_REF_EDEFAULT.equals(sourceRef);
+            return SOURCE_REF_EDEFAULT == null ? sourceRef != null : !SOURCE_REF_EDEFAULT.equals(sourceRef);
         case BpmnPackage.ASSOCIATION__TARGET_REF:
-            return TARGET_REF_EDEFAULT == null ? targetRef != null
-                    : !TARGET_REF_EDEFAULT.equals(targetRef);
+            return TARGET_REF_EDEFAULT == null ? targetRef != null : !TARGET_REF_EDEFAULT.equals(targetRef);
         }
         return super.eIsSet(featureID);
     }

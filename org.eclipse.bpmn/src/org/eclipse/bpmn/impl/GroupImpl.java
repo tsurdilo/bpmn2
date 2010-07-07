@@ -93,9 +93,7 @@ public class GroupImpl extends ArtifactImpl implements Group {
         QName oldCategoryRef = categoryRef;
         categoryRef = newCategoryRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.GROUP__CATEGORY_REF, oldCategoryRef,
-                    categoryRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.GROUP__CATEGORY_REF, oldCategoryRef, categoryRef));
     }
 
     /**
@@ -151,8 +149,7 @@ public class GroupImpl extends ArtifactImpl implements Group {
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case BpmnPackage.GROUP__CATEGORY_REF:
-            return CATEGORY_REF_EDEFAULT == null ? categoryRef != null
-                    : !CATEGORY_REF_EDEFAULT.equals(categoryRef);
+            return CATEGORY_REF_EDEFAULT == null ? categoryRef != null : !CATEGORY_REF_EDEFAULT.equals(categoryRef);
         }
         return super.eIsSet(featureID);
     }

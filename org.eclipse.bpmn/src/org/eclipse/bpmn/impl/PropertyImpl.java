@@ -124,14 +124,11 @@ public class PropertyImpl extends BaseElementImpl implements Property {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetDataState(DataState newDataState,
-            NotificationChain msgs) {
+    public NotificationChain basicSetDataState(DataState newDataState, NotificationChain msgs) {
         DataState oldDataState = dataState;
         dataState = newDataState;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this,
-                    Notification.SET, BpmnPackage.PROPERTY__DATA_STATE,
-                    oldDataState, newDataState);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BpmnPackage.PROPERTY__DATA_STATE, oldDataState, newDataState);
             if (msgs == null)
                 msgs = notification;
             else
@@ -149,20 +146,14 @@ public class PropertyImpl extends BaseElementImpl implements Property {
         if (newDataState != dataState) {
             NotificationChain msgs = null;
             if (dataState != null)
-                msgs = ((InternalEObject) dataState).eInverseRemove(this,
-                        EOPPOSITE_FEATURE_BASE
-                                - BpmnPackage.PROPERTY__DATA_STATE, null, msgs);
+                msgs = ((InternalEObject) dataState).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.PROPERTY__DATA_STATE, null, msgs);
             if (newDataState != null)
-                msgs = ((InternalEObject) newDataState).eInverseAdd(this,
-                        EOPPOSITE_FEATURE_BASE
-                                - BpmnPackage.PROPERTY__DATA_STATE, null, msgs);
+                msgs = ((InternalEObject) newDataState).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.PROPERTY__DATA_STATE, null, msgs);
             msgs = basicSetDataState(newDataState, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.PROPERTY__DATA_STATE, newDataState,
-                    newDataState));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.PROPERTY__DATA_STATE, newDataState, newDataState));
     }
 
     /**
@@ -183,9 +174,7 @@ public class PropertyImpl extends BaseElementImpl implements Property {
         QName oldItemSubjectRef = itemSubjectRef;
         itemSubjectRef = newItemSubjectRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.PROPERTY__ITEM_SUBJECT_REF, oldItemSubjectRef,
-                    itemSubjectRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.PROPERTY__ITEM_SUBJECT_REF, oldItemSubjectRef, itemSubjectRef));
     }
 
     /**
@@ -206,8 +195,7 @@ public class PropertyImpl extends BaseElementImpl implements Property {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.PROPERTY__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.PROPERTY__NAME, oldName, name));
     }
 
     /**
@@ -216,8 +204,7 @@ public class PropertyImpl extends BaseElementImpl implements Property {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.PROPERTY__DATA_STATE:
             return basicSetDataState(null, msgs);
@@ -296,11 +283,9 @@ public class PropertyImpl extends BaseElementImpl implements Property {
         case BpmnPackage.PROPERTY__DATA_STATE:
             return dataState != null;
         case BpmnPackage.PROPERTY__ITEM_SUBJECT_REF:
-            return ITEM_SUBJECT_REF_EDEFAULT == null ? itemSubjectRef != null
-                    : !ITEM_SUBJECT_REF_EDEFAULT.equals(itemSubjectRef);
+            return ITEM_SUBJECT_REF_EDEFAULT == null ? itemSubjectRef != null : !ITEM_SUBJECT_REF_EDEFAULT.equals(itemSubjectRef);
         case BpmnPackage.PROPERTY__NAME:
-            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-                    .equals(name);
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }

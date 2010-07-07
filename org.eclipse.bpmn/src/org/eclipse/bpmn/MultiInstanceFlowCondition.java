@@ -133,8 +133,7 @@ public enum MultiInstanceFlowCondition implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    private static final MultiInstanceFlowCondition[] VALUES_ARRAY = new MultiInstanceFlowCondition[] {
-            NONE, ONE, ALL, COMPLEX, };
+    private static final MultiInstanceFlowCondition[] VALUES_ARRAY = new MultiInstanceFlowCondition[] { NONE, ONE, ALL, COMPLEX, };
 
     /**
      * A public read-only list of all the '<em><b>Multi Instance Flow Condition</b></em>' enumerators.
@@ -142,8 +141,7 @@ public enum MultiInstanceFlowCondition implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final List<MultiInstanceFlowCondition> VALUES = Collections
-            .unmodifiableList(Arrays.asList(VALUES_ARRAY));
+    public static final List<MultiInstanceFlowCondition> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
     /**
      * Returns the '<em><b>Multi Instance Flow Condition</b></em>' literal with the specified literal value.

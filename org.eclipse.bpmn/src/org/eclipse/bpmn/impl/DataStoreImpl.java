@@ -177,14 +177,11 @@ public class DataStoreImpl extends RootElementImpl implements DataStore {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetDataState(DataState newDataState,
-            NotificationChain msgs) {
+    public NotificationChain basicSetDataState(DataState newDataState, NotificationChain msgs) {
         DataState oldDataState = dataState;
         dataState = newDataState;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this,
-                    Notification.SET, BpmnPackage.DATA_STORE__DATA_STATE,
-                    oldDataState, newDataState);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BpmnPackage.DATA_STORE__DATA_STATE, oldDataState, newDataState);
             if (msgs == null)
                 msgs = notification;
             else
@@ -202,22 +199,14 @@ public class DataStoreImpl extends RootElementImpl implements DataStore {
         if (newDataState != dataState) {
             NotificationChain msgs = null;
             if (dataState != null)
-                msgs = ((InternalEObject) dataState).eInverseRemove(this,
-                        EOPPOSITE_FEATURE_BASE
-                                - BpmnPackage.DATA_STORE__DATA_STATE, null,
-                        msgs);
+                msgs = ((InternalEObject) dataState).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.DATA_STORE__DATA_STATE, null, msgs);
             if (newDataState != null)
-                msgs = ((InternalEObject) newDataState).eInverseAdd(this,
-                        EOPPOSITE_FEATURE_BASE
-                                - BpmnPackage.DATA_STORE__DATA_STATE, null,
-                        msgs);
+                msgs = ((InternalEObject) newDataState).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.DATA_STORE__DATA_STATE, null, msgs);
             msgs = basicSetDataState(newDataState, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.DATA_STORE__DATA_STATE, newDataState,
-                    newDataState));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.DATA_STORE__DATA_STATE, newDataState, newDataState));
     }
 
     /**
@@ -238,8 +227,7 @@ public class DataStoreImpl extends RootElementImpl implements DataStore {
         BigInteger oldCapacity = capacity;
         capacity = newCapacity;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.DATA_STORE__CAPACITY, oldCapacity, capacity));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.DATA_STORE__CAPACITY, oldCapacity, capacity));
     }
 
     /**
@@ -262,9 +250,7 @@ public class DataStoreImpl extends RootElementImpl implements DataStore {
         boolean oldIsUnlimitedESet = isUnlimitedESet;
         isUnlimitedESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.DATA_STORE__IS_UNLIMITED, oldIsUnlimited,
-                    isUnlimited, !oldIsUnlimitedESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.DATA_STORE__IS_UNLIMITED, oldIsUnlimited, isUnlimited, !oldIsUnlimitedESet));
     }
 
     /**
@@ -278,9 +264,8 @@ public class DataStoreImpl extends RootElementImpl implements DataStore {
         isUnlimited = IS_UNLIMITED_EDEFAULT;
         isUnlimitedESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    BpmnPackage.DATA_STORE__IS_UNLIMITED, oldIsUnlimited,
-                    IS_UNLIMITED_EDEFAULT, oldIsUnlimitedESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, BpmnPackage.DATA_STORE__IS_UNLIMITED, oldIsUnlimited, IS_UNLIMITED_EDEFAULT,
+                    oldIsUnlimitedESet));
     }
 
     /**
@@ -310,9 +295,7 @@ public class DataStoreImpl extends RootElementImpl implements DataStore {
         QName oldItemSubjectRef = itemSubjectRef;
         itemSubjectRef = newItemSubjectRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.DATA_STORE__ITEM_SUBJECT_REF,
-                    oldItemSubjectRef, itemSubjectRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.DATA_STORE__ITEM_SUBJECT_REF, oldItemSubjectRef, itemSubjectRef));
     }
 
     /**
@@ -333,8 +316,7 @@ public class DataStoreImpl extends RootElementImpl implements DataStore {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.DATA_STORE__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.DATA_STORE__NAME, oldName, name));
     }
 
     /**
@@ -343,8 +325,7 @@ public class DataStoreImpl extends RootElementImpl implements DataStore {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.DATA_STORE__DATA_STATE:
             return basicSetDataState(null, msgs);
@@ -439,16 +420,13 @@ public class DataStoreImpl extends RootElementImpl implements DataStore {
         case BpmnPackage.DATA_STORE__DATA_STATE:
             return dataState != null;
         case BpmnPackage.DATA_STORE__CAPACITY:
-            return CAPACITY_EDEFAULT == null ? capacity != null
-                    : !CAPACITY_EDEFAULT.equals(capacity);
+            return CAPACITY_EDEFAULT == null ? capacity != null : !CAPACITY_EDEFAULT.equals(capacity);
         case BpmnPackage.DATA_STORE__IS_UNLIMITED:
             return isSetIsUnlimited();
         case BpmnPackage.DATA_STORE__ITEM_SUBJECT_REF:
-            return ITEM_SUBJECT_REF_EDEFAULT == null ? itemSubjectRef != null
-                    : !ITEM_SUBJECT_REF_EDEFAULT.equals(itemSubjectRef);
+            return ITEM_SUBJECT_REF_EDEFAULT == null ? itemSubjectRef != null : !ITEM_SUBJECT_REF_EDEFAULT.equals(itemSubjectRef);
         case BpmnPackage.DATA_STORE__NAME:
-            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-                    .equals(name);
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }

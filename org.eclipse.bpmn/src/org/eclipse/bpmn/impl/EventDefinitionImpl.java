@@ -25,8 +25,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public abstract class EventDefinitionImpl extends RootElementImpl implements
-        EventDefinition {
+public abstract class EventDefinitionImpl extends RootElementImpl implements EventDefinition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

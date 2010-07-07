@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.Map;
 import org.eclipse.emf.common.util.EMap;
 
 import org.eclipse.emf.ecore.EObject;
@@ -202,7 +203,7 @@ public interface DocumentRoot extends EObject {
      *        extendedMetaData="kind='attribute' name='xmlns:prefix'"
      * @generated
      */
-    EMap<String, String> getXMLNSPrefixMap();
+    Map<String, String> getXMLNSPrefixMap();
 
     /**
      * Returns the value of the '<em><b>XSI Schema Location</b></em>' map.
@@ -220,7 +221,7 @@ public interface DocumentRoot extends EObject {
      *        extendedMetaData="kind='attribute' name='xsi:schemaLocation'"
      * @generated
      */
-    EMap<String, String> getXSISchemaLocation();
+    Map<String, String> getXSISchemaLocation();
 
     /**
      * Returns the value of the '<em><b>Activity</b></em>' containment reference.
@@ -1273,8 +1274,7 @@ public interface DocumentRoot extends EObject {
      * @see #getCorrelationPropertyRetrievalExpression()
      * @generated
      */
-    void setCorrelationPropertyRetrievalExpression(
-            CorrelationPropertyRetrievalExpression value);
+    void setCorrelationPropertyRetrievalExpression(CorrelationPropertyRetrievalExpression value);
 
     /**
      * Returns the value of the '<em><b>Correlation Subscription</b></em>' containment reference.
@@ -2802,8 +2802,7 @@ public interface DocumentRoot extends EObject {
      * @see #getMultiInstanceLoopCharacteristics()
      * @generated
      */
-    void setMultiInstanceLoopCharacteristics(
-            MultiInstanceLoopCharacteristics value);
+    void setMultiInstanceLoopCharacteristics(MultiInstanceLoopCharacteristics value);
 
     /**
      * Returns the value of the '<em><b>Operation</b></em>' containment reference.

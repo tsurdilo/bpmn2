@@ -84,9 +84,7 @@ public class TextAnnotationImpl extends ArtifactImpl implements TextAnnotation {
         Text oldText = text;
         text = newText;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this,
-                    Notification.SET, BpmnPackage.TEXT_ANNOTATION__TEXT,
-                    oldText, newText);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BpmnPackage.TEXT_ANNOTATION__TEXT, oldText, newText);
             if (msgs == null)
                 msgs = notification;
             else
@@ -104,19 +102,14 @@ public class TextAnnotationImpl extends ArtifactImpl implements TextAnnotation {
         if (newText != text) {
             NotificationChain msgs = null;
             if (text != null)
-                msgs = ((InternalEObject) text)
-                        .eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                                - BpmnPackage.TEXT_ANNOTATION__TEXT, null, msgs);
+                msgs = ((InternalEObject) text).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.TEXT_ANNOTATION__TEXT, null, msgs);
             if (newText != null)
-                msgs = ((InternalEObject) newText)
-                        .eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                                - BpmnPackage.TEXT_ANNOTATION__TEXT, null, msgs);
+                msgs = ((InternalEObject) newText).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.TEXT_ANNOTATION__TEXT, null, msgs);
             msgs = basicSetText(newText, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.TEXT_ANNOTATION__TEXT, newText, newText));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.TEXT_ANNOTATION__TEXT, newText, newText));
     }
 
     /**
@@ -125,8 +118,7 @@ public class TextAnnotationImpl extends ArtifactImpl implements TextAnnotation {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.TEXT_ANNOTATION__TEXT:
             return basicSetText(null, msgs);

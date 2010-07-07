@@ -39,8 +39,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class CorrelationPropertyRetrievalExpressionImpl extends BaseElementImpl
-        implements CorrelationPropertyRetrievalExpression {
+public class CorrelationPropertyRetrievalExpressionImpl extends BaseElementImpl implements CorrelationPropertyRetrievalExpression {
     /**
      * The cached value of the '{@link #getMessagePath() <em>Message Path</em>}' containment reference.
      * <!-- begin-user-doc -->
@@ -87,8 +86,7 @@ public class CorrelationPropertyRetrievalExpressionImpl extends BaseElementImpl
      */
     @Override
     protected EClass eStaticClass() {
-        return BpmnPackage.eINSTANCE
-                .getCorrelationPropertyRetrievalExpression();
+        return BpmnPackage.eINSTANCE.getCorrelationPropertyRetrievalExpression();
     }
 
     /**
@@ -105,15 +103,11 @@ public class CorrelationPropertyRetrievalExpressionImpl extends BaseElementImpl
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetMessagePath(
-            FormalExpression newMessagePath, NotificationChain msgs) {
+    public NotificationChain basicSetMessagePath(FormalExpression newMessagePath, NotificationChain msgs) {
         FormalExpression oldMessagePath = messagePath;
         messagePath = newMessagePath;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(
-                    this,
-                    Notification.SET,
-                    BpmnPackage.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH,
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BpmnPackage.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH,
                     oldMessagePath, newMessagePath);
             if (msgs == null)
                 msgs = notification;
@@ -132,28 +126,17 @@ public class CorrelationPropertyRetrievalExpressionImpl extends BaseElementImpl
         if (newMessagePath != messagePath) {
             NotificationChain msgs = null;
             if (messagePath != null)
-                msgs = ((InternalEObject) messagePath)
-                        .eInverseRemove(
-                                this,
-                                EOPPOSITE_FEATURE_BASE
-                                        - BpmnPackage.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH,
-                                null, msgs);
+                msgs = ((InternalEObject) messagePath).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - BpmnPackage.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH, null, msgs);
             if (newMessagePath != null)
-                msgs = ((InternalEObject) newMessagePath)
-                        .eInverseAdd(
-                                this,
-                                EOPPOSITE_FEATURE_BASE
-                                        - BpmnPackage.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH,
-                                null, msgs);
+                msgs = ((InternalEObject) newMessagePath).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - BpmnPackage.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH, null, msgs);
             msgs = basicSetMessagePath(newMessagePath, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(
-                    this,
-                    Notification.SET,
-                    BpmnPackage.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH,
-                    newMessagePath, newMessagePath));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH, newMessagePath,
+                    newMessagePath));
     }
 
     /**
@@ -174,11 +157,7 @@ public class CorrelationPropertyRetrievalExpressionImpl extends BaseElementImpl
         QName oldMessageRef = messageRef;
         messageRef = newMessageRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(
-                    this,
-                    Notification.SET,
-                    BpmnPackage.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_REF,
-                    oldMessageRef, messageRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_REF, oldMessageRef, messageRef));
     }
 
     /**
@@ -187,8 +166,7 @@ public class CorrelationPropertyRetrievalExpressionImpl extends BaseElementImpl
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH:
             return basicSetMessagePath(null, msgs);
@@ -259,8 +237,7 @@ public class CorrelationPropertyRetrievalExpressionImpl extends BaseElementImpl
         case BpmnPackage.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH:
             return messagePath != null;
         case BpmnPackage.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_REF:
-            return MESSAGE_REF_EDEFAULT == null ? messageRef != null
-                    : !MESSAGE_REF_EDEFAULT.equals(messageRef);
+            return MESSAGE_REF_EDEFAULT == null ? messageRef != null : !MESSAGE_REF_EDEFAULT.equals(messageRef);
         }
         return super.eIsSet(featureID);
     }

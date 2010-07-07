@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.bpmn.BpmnPackage;
@@ -83,10 +84,9 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<QName> getIncoming() {
+    public List<QName> getIncoming() {
         if (incoming == null) {
-            incoming = new EDataTypeEList<QName>(QName.class, this,
-                    BpmnPackage.FLOW_NODE__INCOMING);
+            incoming = new EDataTypeEList<QName>(QName.class, this, BpmnPackage.FLOW_NODE__INCOMING);
         }
         return incoming;
     }
@@ -96,10 +96,9 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<QName> getOutgoing() {
+    public List<QName> getOutgoing() {
         if (outgoing == null) {
-            outgoing = new EDataTypeEList<QName>(QName.class, this,
-                    BpmnPackage.FLOW_NODE__OUTGOING);
+            outgoing = new EDataTypeEList<QName>(QName.class, this, BpmnPackage.FLOW_NODE__OUTGOING);
         }
         return outgoing;
     }

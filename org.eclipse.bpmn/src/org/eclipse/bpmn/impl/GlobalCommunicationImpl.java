@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn.BpmnPackage;
 import org.eclipse.bpmn.CorrelationKey;
 import org.eclipse.bpmn.GlobalCommunication;
@@ -44,8 +45,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class GlobalCommunicationImpl extends CallableElementImpl implements
-        GlobalCommunication {
+public class GlobalCommunicationImpl extends CallableElementImpl implements GlobalCommunication {
     /**
      * The cached value of the '{@link #getParticipant() <em>Participant</em>}' containment reference list.
      * <!-- begin-user-doc -->
@@ -100,11 +100,9 @@ public class GlobalCommunicationImpl extends CallableElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Participant> getParticipant() {
+    public List<Participant> getParticipant() {
         if (participant == null) {
-            participant = new EObjectContainmentEList<Participant>(
-                    Participant.class, this,
-                    BpmnPackage.GLOBAL_COMMUNICATION__PARTICIPANT);
+            participant = new EObjectContainmentEList<Participant>(Participant.class, this, BpmnPackage.GLOBAL_COMMUNICATION__PARTICIPANT);
         }
         return participant;
     }
@@ -114,11 +112,9 @@ public class GlobalCommunicationImpl extends CallableElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<MessageFlow> getMessageFlow() {
+    public List<MessageFlow> getMessageFlow() {
         if (messageFlow == null) {
-            messageFlow = new EObjectContainmentEList<MessageFlow>(
-                    MessageFlow.class, this,
-                    BpmnPackage.GLOBAL_COMMUNICATION__MESSAGE_FLOW);
+            messageFlow = new EObjectContainmentEList<MessageFlow>(MessageFlow.class, this, BpmnPackage.GLOBAL_COMMUNICATION__MESSAGE_FLOW);
         }
         return messageFlow;
     }
@@ -128,11 +124,9 @@ public class GlobalCommunicationImpl extends CallableElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<CorrelationKey> getCorrelationKey() {
+    public List<CorrelationKey> getCorrelationKey() {
         if (correlationKey == null) {
-            correlationKey = new EObjectContainmentEList<CorrelationKey>(
-                    CorrelationKey.class, this,
-                    BpmnPackage.GLOBAL_COMMUNICATION__CORRELATION_KEY);
+            correlationKey = new EObjectContainmentEList<CorrelationKey>(CorrelationKey.class, this, BpmnPackage.GLOBAL_COMMUNICATION__CORRELATION_KEY);
         }
         return correlationKey;
     }
@@ -143,18 +137,14 @@ public class GlobalCommunicationImpl extends CallableElementImpl implements
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.GLOBAL_COMMUNICATION__PARTICIPANT:
-            return ((InternalEList<?>) getParticipant()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getParticipant()).basicRemove(otherEnd, msgs);
         case BpmnPackage.GLOBAL_COMMUNICATION__MESSAGE_FLOW:
-            return ((InternalEList<?>) getMessageFlow()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getMessageFlow()).basicRemove(otherEnd, msgs);
         case BpmnPackage.GLOBAL_COMMUNICATION__CORRELATION_KEY:
-            return ((InternalEList<?>) getCorrelationKey()).basicRemove(
-                    otherEnd, msgs);
+            return ((InternalEList<?>) getCorrelationKey()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -188,18 +178,15 @@ public class GlobalCommunicationImpl extends CallableElementImpl implements
         switch (featureID) {
         case BpmnPackage.GLOBAL_COMMUNICATION__PARTICIPANT:
             getParticipant().clear();
-            getParticipant().addAll(
-                    (Collection<? extends Participant>) newValue);
+            getParticipant().addAll((Collection<? extends Participant>) newValue);
             return;
         case BpmnPackage.GLOBAL_COMMUNICATION__MESSAGE_FLOW:
             getMessageFlow().clear();
-            getMessageFlow().addAll(
-                    (Collection<? extends MessageFlow>) newValue);
+            getMessageFlow().addAll((Collection<? extends MessageFlow>) newValue);
             return;
         case BpmnPackage.GLOBAL_COMMUNICATION__CORRELATION_KEY:
             getCorrelationKey().clear();
-            getCorrelationKey().addAll(
-                    (Collection<? extends CorrelationKey>) newValue);
+            getCorrelationKey().addAll((Collection<? extends CorrelationKey>) newValue);
             return;
         }
         super.eSet(featureID, newValue);

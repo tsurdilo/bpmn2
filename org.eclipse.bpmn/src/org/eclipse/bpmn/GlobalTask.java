@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.util.FeatureMap;
@@ -65,6 +66,6 @@ public interface GlobalTask extends CallableElement {
      *        extendedMetaData="kind='element' name='performer' namespace='##targetNamespace' group='performer:group'"
      * @generated
      */
-    EList<Performer> getPerformer();
+    List<Performer> getPerformer();
 
 } // GlobalTask

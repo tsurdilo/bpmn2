@@ -133,14 +133,11 @@ public class DataObjectImpl extends FlowElementImpl implements DataObject {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetDataState(DataState newDataState,
-            NotificationChain msgs) {
+    public NotificationChain basicSetDataState(DataState newDataState, NotificationChain msgs) {
         DataState oldDataState = dataState;
         dataState = newDataState;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this,
-                    Notification.SET, BpmnPackage.DATA_OBJECT__DATA_STATE,
-                    oldDataState, newDataState);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BpmnPackage.DATA_OBJECT__DATA_STATE, oldDataState, newDataState);
             if (msgs == null)
                 msgs = notification;
             else
@@ -158,22 +155,14 @@ public class DataObjectImpl extends FlowElementImpl implements DataObject {
         if (newDataState != dataState) {
             NotificationChain msgs = null;
             if (dataState != null)
-                msgs = ((InternalEObject) dataState).eInverseRemove(this,
-                        EOPPOSITE_FEATURE_BASE
-                                - BpmnPackage.DATA_OBJECT__DATA_STATE, null,
-                        msgs);
+                msgs = ((InternalEObject) dataState).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.DATA_OBJECT__DATA_STATE, null, msgs);
             if (newDataState != null)
-                msgs = ((InternalEObject) newDataState).eInverseAdd(this,
-                        EOPPOSITE_FEATURE_BASE
-                                - BpmnPackage.DATA_OBJECT__DATA_STATE, null,
-                        msgs);
+                msgs = ((InternalEObject) newDataState).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.DATA_OBJECT__DATA_STATE, null, msgs);
             msgs = basicSetDataState(newDataState, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.DATA_OBJECT__DATA_STATE, newDataState,
-                    newDataState));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.DATA_OBJECT__DATA_STATE, newDataState, newDataState));
     }
 
     /**
@@ -196,9 +185,7 @@ public class DataObjectImpl extends FlowElementImpl implements DataObject {
         boolean oldIsCollectionESet = isCollectionESet;
         isCollectionESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.DATA_OBJECT__IS_COLLECTION, oldIsCollection,
-                    isCollection, !oldIsCollectionESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.DATA_OBJECT__IS_COLLECTION, oldIsCollection, isCollection, !oldIsCollectionESet));
     }
 
     /**
@@ -212,9 +199,8 @@ public class DataObjectImpl extends FlowElementImpl implements DataObject {
         isCollection = IS_COLLECTION_EDEFAULT;
         isCollectionESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    BpmnPackage.DATA_OBJECT__IS_COLLECTION, oldIsCollection,
-                    IS_COLLECTION_EDEFAULT, oldIsCollectionESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, BpmnPackage.DATA_OBJECT__IS_COLLECTION, oldIsCollection, IS_COLLECTION_EDEFAULT,
+                    oldIsCollectionESet));
     }
 
     /**
@@ -244,9 +230,7 @@ public class DataObjectImpl extends FlowElementImpl implements DataObject {
         QName oldItemSubjectRef = itemSubjectRef;
         itemSubjectRef = newItemSubjectRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.DATA_OBJECT__ITEM_SUBJECT_REF,
-                    oldItemSubjectRef, itemSubjectRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.DATA_OBJECT__ITEM_SUBJECT_REF, oldItemSubjectRef, itemSubjectRef));
     }
 
     /**
@@ -255,8 +239,7 @@ public class DataObjectImpl extends FlowElementImpl implements DataObject {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.DATA_OBJECT__DATA_STATE:
             return basicSetDataState(null, msgs);
@@ -337,8 +320,7 @@ public class DataObjectImpl extends FlowElementImpl implements DataObject {
         case BpmnPackage.DATA_OBJECT__IS_COLLECTION:
             return isSetIsCollection();
         case BpmnPackage.DATA_OBJECT__ITEM_SUBJECT_REF:
-            return ITEM_SUBJECT_REF_EDEFAULT == null ? itemSubjectRef != null
-                    : !ITEM_SUBJECT_REF_EDEFAULT.equals(itemSubjectRef);
+            return ITEM_SUBJECT_REF_EDEFAULT == null ? itemSubjectRef != null : !ITEM_SUBJECT_REF_EDEFAULT.equals(itemSubjectRef);
         }
         return super.eIsSet(featureID);
     }

@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.emf.common.util.EList;
@@ -51,7 +52,7 @@ public interface Extension extends EObject {
      *        extendedMetaData="kind='element' name='documentation' namespace='##targetNamespace'"
      * @generated
      */
-    EList<Documentation> getDocumentation();
+    List<Documentation> getDocumentation();
 
     /**
      * Returns the value of the '<em><b>Definition</b></em>' attribute.

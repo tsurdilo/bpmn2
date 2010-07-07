@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn.di;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -45,6 +46,6 @@ public interface Diagram extends View {
      *        extendedMetaData="kind='element' name='connector' namespace='##targetNamespace'"
      * @generated
      */
-    EList<Connector> getConnector();
+    List<Connector> getConnector();
 
 } // Diagram
