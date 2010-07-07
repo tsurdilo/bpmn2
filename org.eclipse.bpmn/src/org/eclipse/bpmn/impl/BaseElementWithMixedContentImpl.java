@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn.BaseElementWithMixedContent;
 import org.eclipse.bpmn.BpmnPackage;
 import org.eclipse.bpmn.Category;
@@ -51,8 +52,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public abstract class BaseElementWithMixedContentImpl extends EObjectImpl
-        implements BaseElementWithMixedContent {
+public abstract class BaseElementWithMixedContentImpl extends EObjectImpl implements BaseElementWithMixedContent {
     /**
      * The cached value of the '{@link #getMixed() <em>Mixed</em>}' attribute list.
      * <!-- begin-user-doc -->
@@ -119,8 +119,7 @@ public abstract class BaseElementWithMixedContentImpl extends EObjectImpl
      */
     public FeatureMap getMixed() {
         if (mixed == null) {
-            mixed = new BasicFeatureMap(this,
-                    BpmnPackage.BASE_ELEMENT_WITH_MIXED_CONTENT__MIXED);
+            mixed = new BasicFeatureMap(this, BpmnPackage.BASE_ELEMENT_WITH_MIXED_CONTENT__MIXED);
         }
         return mixed;
     }
@@ -130,10 +129,8 @@ public abstract class BaseElementWithMixedContentImpl extends EObjectImpl
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Documentation> getDocumentation() {
-        return getMixed().list(
-                BpmnPackage.eINSTANCE
-                        .getBaseElementWithMixedContent_Documentation());
+    public List<Documentation> getDocumentation() {
+        return getMixed().list(BpmnPackage.eINSTANCE.getBaseElementWithMixedContent_Documentation());
     }
 
     /**
@@ -141,11 +138,8 @@ public abstract class BaseElementWithMixedContentImpl extends EObjectImpl
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Category> getCategory() {
-        return getMixed()
-                .list(
-                        BpmnPackage.eINSTANCE
-                                .getBaseElementWithMixedContent_Category());
+    public List<Category> getCategory() {
+        return getMixed().list(BpmnPackage.eINSTANCE.getBaseElementWithMixedContent_Category());
     }
 
     /**
@@ -154,8 +148,7 @@ public abstract class BaseElementWithMixedContentImpl extends EObjectImpl
      * @generated
      */
     public FeatureMap getAny() {
-        return (FeatureMap) getMixed().<FeatureMap.Entry> list(
-                BpmnPackage.eINSTANCE.getBaseElementWithMixedContent_Any());
+        return (FeatureMap) getMixed().<FeatureMap.Entry> list(BpmnPackage.eINSTANCE.getBaseElementWithMixedContent_Any());
     }
 
     /**
@@ -176,8 +169,7 @@ public abstract class BaseElementWithMixedContentImpl extends EObjectImpl
         String oldId = id;
         id = newId;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.BASE_ELEMENT_WITH_MIXED_CONTENT__ID, oldId, id));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.BASE_ELEMENT_WITH_MIXED_CONTENT__ID, oldId, id));
     }
 
     /**
@@ -187,8 +179,7 @@ public abstract class BaseElementWithMixedContentImpl extends EObjectImpl
      */
     public FeatureMap getAnyAttribute() {
         if (anyAttribute == null) {
-            anyAttribute = new BasicFeatureMap(this,
-                    BpmnPackage.BASE_ELEMENT_WITH_MIXED_CONTENT__ANY_ATTRIBUTE);
+            anyAttribute = new BasicFeatureMap(this, BpmnPackage.BASE_ELEMENT_WITH_MIXED_CONTENT__ANY_ATTRIBUTE);
         }
         return anyAttribute;
     }
@@ -199,22 +190,18 @@ public abstract class BaseElementWithMixedContentImpl extends EObjectImpl
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.BASE_ELEMENT_WITH_MIXED_CONTENT__MIXED:
             return ((InternalEList<?>) getMixed()).basicRemove(otherEnd, msgs);
         case BpmnPackage.BASE_ELEMENT_WITH_MIXED_CONTENT__DOCUMENTATION:
-            return ((InternalEList<?>) getDocumentation()).basicRemove(
-                    otherEnd, msgs);
+            return ((InternalEList<?>) getDocumentation()).basicRemove(otherEnd, msgs);
         case BpmnPackage.BASE_ELEMENT_WITH_MIXED_CONTENT__CATEGORY:
-            return ((InternalEList<?>) getCategory()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getCategory()).basicRemove(otherEnd, msgs);
         case BpmnPackage.BASE_ELEMENT_WITH_MIXED_CONTENT__ANY:
             return ((InternalEList<?>) getAny()).basicRemove(otherEnd, msgs);
         case BpmnPackage.BASE_ELEMENT_WITH_MIXED_CONTENT__ANY_ATTRIBUTE:
-            return ((InternalEList<?>) getAnyAttribute()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getAnyAttribute()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -263,8 +250,7 @@ public abstract class BaseElementWithMixedContentImpl extends EObjectImpl
             return;
         case BpmnPackage.BASE_ELEMENT_WITH_MIXED_CONTENT__DOCUMENTATION:
             getDocumentation().clear();
-            getDocumentation().addAll(
-                    (Collection<? extends Documentation>) newValue);
+            getDocumentation().addAll((Collection<? extends Documentation>) newValue);
             return;
         case BpmnPackage.BASE_ELEMENT_WITH_MIXED_CONTENT__CATEGORY:
             getCategory().clear();

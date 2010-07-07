@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.bpmn.BpmnPackage;
@@ -42,8 +43,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  *
  * @generated
  */
-public class CommunicationImpl extends ConversationNodeImpl implements
-        Communication {
+public class CommunicationImpl extends ConversationNodeImpl implements Communication {
     /**
      * The cached value of the '{@link #getMessageFlowRef() <em>Message Flow Ref</em>}' attribute list.
      * <!-- begin-user-doc -->
@@ -98,10 +98,9 @@ public class CommunicationImpl extends ConversationNodeImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<QName> getMessageFlowRef() {
+    public List<QName> getMessageFlowRef() {
         if (messageFlowRef == null) {
-            messageFlowRef = new EDataTypeEList<QName>(QName.class, this,
-                    BpmnPackage.COMMUNICATION__MESSAGE_FLOW_REF);
+            messageFlowRef = new EDataTypeEList<QName>(QName.class, this, BpmnPackage.COMMUNICATION__MESSAGE_FLOW_REF);
         }
         return messageFlowRef;
     }
@@ -124,9 +123,7 @@ public class CommunicationImpl extends ConversationNodeImpl implements
         QName oldCorrelationKeyRef = correlationKeyRef;
         correlationKeyRef = newCorrelationKeyRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.COMMUNICATION__CORRELATION_KEY_REF,
-                    oldCorrelationKeyRef, correlationKeyRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.COMMUNICATION__CORRELATION_KEY_REF, oldCorrelationKeyRef, correlationKeyRef));
     }
 
     /**
@@ -194,8 +191,7 @@ public class CommunicationImpl extends ConversationNodeImpl implements
         case BpmnPackage.COMMUNICATION__MESSAGE_FLOW_REF:
             return messageFlowRef != null && !messageFlowRef.isEmpty();
         case BpmnPackage.COMMUNICATION__CORRELATION_KEY_REF:
-            return CORRELATION_KEY_REF_EDEFAULT == null ? correlationKeyRef != null
-                    : !CORRELATION_KEY_REF_EDEFAULT.equals(correlationKeyRef);
+            return CORRELATION_KEY_REF_EDEFAULT == null ? correlationKeyRef != null : !CORRELATION_KEY_REF_EDEFAULT.equals(correlationKeyRef);
         }
         return super.eIsSet(featureID);
     }

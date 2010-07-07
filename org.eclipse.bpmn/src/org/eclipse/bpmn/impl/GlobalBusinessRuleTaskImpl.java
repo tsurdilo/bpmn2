@@ -25,8 +25,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class GlobalBusinessRuleTaskImpl extends GlobalTaskImpl implements
-        GlobalBusinessRuleTask {
+public class GlobalBusinessRuleTaskImpl extends GlobalTaskImpl implements GlobalBusinessRuleTask {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

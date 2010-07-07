@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.bpmn.BpmnPackage;
@@ -46,8 +47,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class CallChoreographyActivityImpl extends ChoreographyActivityImpl
-        implements CallChoreographyActivity {
+public class CallChoreographyActivityImpl extends ChoreographyActivityImpl implements CallChoreographyActivity {
     /**
      * The cached value of the '{@link #getParticipantAssociations() <em>Participant Associations</em>}' containment reference list.
      * <!-- begin-user-doc -->
@@ -102,11 +102,9 @@ public class CallChoreographyActivityImpl extends ChoreographyActivityImpl
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ParticipantAssociation> getParticipantAssociations() {
+    public List<ParticipantAssociation> getParticipantAssociations() {
         if (participantAssociations == null) {
-            participantAssociations = new EObjectContainmentEList<ParticipantAssociation>(
-                    ParticipantAssociation.class,
-                    this,
+            participantAssociations = new EObjectContainmentEList<ParticipantAssociation>(ParticipantAssociation.class, this,
                     BpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__PARTICIPANT_ASSOCIATIONS);
         }
         return participantAssociations;
@@ -130,9 +128,7 @@ public class CallChoreographyActivityImpl extends ChoreographyActivityImpl
         QName oldCalledElement = calledElement;
         calledElement = newCalledElement;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__CALLED_ELEMENT,
-                    oldCalledElement, calledElement));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__CALLED_ELEMENT, oldCalledElement, calledElement));
     }
 
     /**
@@ -141,12 +137,10 @@ public class CallChoreographyActivityImpl extends ChoreographyActivityImpl
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__PARTICIPANT_ASSOCIATIONS:
-            return ((InternalEList<?>) getParticipantAssociations())
-                    .basicRemove(otherEnd, msgs);
+            return ((InternalEList<?>) getParticipantAssociations()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -178,8 +172,7 @@ public class CallChoreographyActivityImpl extends ChoreographyActivityImpl
         switch (featureID) {
         case BpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__PARTICIPANT_ASSOCIATIONS:
             getParticipantAssociations().clear();
-            getParticipantAssociations().addAll(
-                    (Collection<? extends ParticipantAssociation>) newValue);
+            getParticipantAssociations().addAll((Collection<? extends ParticipantAssociation>) newValue);
             return;
         case BpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__CALLED_ELEMENT:
             setCalledElement((QName) newValue);
@@ -215,11 +208,9 @@ public class CallChoreographyActivityImpl extends ChoreographyActivityImpl
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case BpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__PARTICIPANT_ASSOCIATIONS:
-            return participantAssociations != null
-                    && !participantAssociations.isEmpty();
+            return participantAssociations != null && !participantAssociations.isEmpty();
         case BpmnPackage.CALL_CHOREOGRAPHY_ACTIVITY__CALLED_ELEMENT:
-            return CALLED_ELEMENT_EDEFAULT == null ? calledElement != null
-                    : !CALLED_ELEMENT_EDEFAULT.equals(calledElement);
+            return CALLED_ELEMENT_EDEFAULT == null ? calledElement != null : !CALLED_ELEMENT_EDEFAULT.equals(calledElement);
         }
         return super.eIsSet(featureID);
     }

@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.emf.common.util.EList;
@@ -49,7 +50,7 @@ public interface ConversationNode extends BaseElement {
      *        extendedMetaData="kind='element' name='participantRef' namespace='##targetNamespace'"
      * @generated
      */
-    EList<QName> getParticipantRef();
+    List<QName> getParticipantRef();
 
     /**
      * Returns the value of the '<em><b>Name</b></em>' attribute.

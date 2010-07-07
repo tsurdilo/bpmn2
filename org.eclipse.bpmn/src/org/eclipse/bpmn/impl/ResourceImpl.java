@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn.BpmnPackage;
 import org.eclipse.bpmn.Resource;
 import org.eclipse.bpmn.ResourceParameter;
@@ -99,11 +100,9 @@ public class ResourceImpl extends RootElementImpl implements Resource {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ResourceParameter> getResourceParameter() {
+    public List<ResourceParameter> getResourceParameter() {
         if (resourceParameter == null) {
-            resourceParameter = new EObjectContainmentEList<ResourceParameter>(
-                    ResourceParameter.class, this,
-                    BpmnPackage.RESOURCE__RESOURCE_PARAMETER);
+            resourceParameter = new EObjectContainmentEList<ResourceParameter>(ResourceParameter.class, this, BpmnPackage.RESOURCE__RESOURCE_PARAMETER);
         }
         return resourceParameter;
     }
@@ -126,8 +125,7 @@ public class ResourceImpl extends RootElementImpl implements Resource {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.RESOURCE__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.RESOURCE__NAME, oldName, name));
     }
 
     /**
@@ -136,12 +134,10 @@ public class ResourceImpl extends RootElementImpl implements Resource {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.RESOURCE__RESOURCE_PARAMETER:
-            return ((InternalEList<?>) getResourceParameter()).basicRemove(
-                    otherEnd, msgs);
+            return ((InternalEList<?>) getResourceParameter()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -173,8 +169,7 @@ public class ResourceImpl extends RootElementImpl implements Resource {
         switch (featureID) {
         case BpmnPackage.RESOURCE__RESOURCE_PARAMETER:
             getResourceParameter().clear();
-            getResourceParameter().addAll(
-                    (Collection<? extends ResourceParameter>) newValue);
+            getResourceParameter().addAll((Collection<? extends ResourceParameter>) newValue);
             return;
         case BpmnPackage.RESOURCE__NAME:
             setName((String) newValue);
@@ -212,8 +207,7 @@ public class ResourceImpl extends RootElementImpl implements Resource {
         case BpmnPackage.RESOURCE__RESOURCE_PARAMETER:
             return resourceParameter != null && !resourceParameter.isEmpty();
         case BpmnPackage.RESOURCE__NAME:
-            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-                    .equals(name);
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }

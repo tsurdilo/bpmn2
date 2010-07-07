@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.bpmn.BpmnPackage;
@@ -46,8 +47,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class CallConversationImpl extends ConversationNodeImpl implements
-        CallConversation {
+public class CallConversationImpl extends ConversationNodeImpl implements CallConversation {
     /**
      * The cached value of the '{@link #getParticipantAssociation() <em>Participant Association</em>}' containment reference list.
      * <!-- begin-user-doc -->
@@ -102,10 +102,9 @@ public class CallConversationImpl extends ConversationNodeImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ParticipantAssociation> getParticipantAssociation() {
+    public List<ParticipantAssociation> getParticipantAssociation() {
         if (participantAssociation == null) {
-            participantAssociation = new EObjectContainmentEList<ParticipantAssociation>(
-                    ParticipantAssociation.class, this,
+            participantAssociation = new EObjectContainmentEList<ParticipantAssociation>(ParticipantAssociation.class, this,
                     BpmnPackage.CALL_CONVERSATION__PARTICIPANT_ASSOCIATION);
         }
         return participantAssociation;
@@ -129,9 +128,7 @@ public class CallConversationImpl extends ConversationNodeImpl implements
         QName oldCalledElementRef = calledElementRef;
         calledElementRef = newCalledElementRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.CALL_CONVERSATION__CALLED_ELEMENT_REF,
-                    oldCalledElementRef, calledElementRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.CALL_CONVERSATION__CALLED_ELEMENT_REF, oldCalledElementRef, calledElementRef));
     }
 
     /**
@@ -140,12 +137,10 @@ public class CallConversationImpl extends ConversationNodeImpl implements
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.CALL_CONVERSATION__PARTICIPANT_ASSOCIATION:
-            return ((InternalEList<?>) getParticipantAssociation())
-                    .basicRemove(otherEnd, msgs);
+            return ((InternalEList<?>) getParticipantAssociation()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -177,8 +172,7 @@ public class CallConversationImpl extends ConversationNodeImpl implements
         switch (featureID) {
         case BpmnPackage.CALL_CONVERSATION__PARTICIPANT_ASSOCIATION:
             getParticipantAssociation().clear();
-            getParticipantAssociation().addAll(
-                    (Collection<? extends ParticipantAssociation>) newValue);
+            getParticipantAssociation().addAll((Collection<? extends ParticipantAssociation>) newValue);
             return;
         case BpmnPackage.CALL_CONVERSATION__CALLED_ELEMENT_REF:
             setCalledElementRef((QName) newValue);
@@ -214,11 +208,9 @@ public class CallConversationImpl extends ConversationNodeImpl implements
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case BpmnPackage.CALL_CONVERSATION__PARTICIPANT_ASSOCIATION:
-            return participantAssociation != null
-                    && !participantAssociation.isEmpty();
+            return participantAssociation != null && !participantAssociation.isEmpty();
         case BpmnPackage.CALL_CONVERSATION__CALLED_ELEMENT_REF:
-            return CALLED_ELEMENT_REF_EDEFAULT == null ? calledElementRef != null
-                    : !CALLED_ELEMENT_REF_EDEFAULT.equals(calledElementRef);
+            return CALLED_ELEMENT_REF_EDEFAULT == null ? calledElementRef != null : !CALLED_ELEMENT_REF_EDEFAULT.equals(calledElementRef);
         }
         return super.eIsSet(featureID);
     }

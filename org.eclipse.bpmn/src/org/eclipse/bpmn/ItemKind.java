@@ -83,8 +83,7 @@ public enum ItemKind implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    private static final ItemKind[] VALUES_ARRAY = new ItemKind[] {
-            INFORMATION, PHYSICAL, };
+    private static final ItemKind[] VALUES_ARRAY = new ItemKind[] { INFORMATION, PHYSICAL, };
 
     /**
      * A public read-only list of all the '<em><b>Item Kind</b></em>' enumerators.
@@ -92,8 +91,7 @@ public enum ItemKind implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final List<ItemKind> VALUES = Collections
-            .unmodifiableList(Arrays.asList(VALUES_ARRAY));
+    public static final List<ItemKind> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
     /**
      * Returns the '<em><b>Item Kind</b></em>' literal with the specified literal value.

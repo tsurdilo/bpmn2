@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.bpmn.Artifact;
@@ -64,8 +65,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ProcessImpl extends CallableElementImpl implements
-        org.eclipse.bpmn.Process {
+public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn.Process {
     /**
      * The cached value of the '{@link #getAuditing() <em>Auditing</em>}' containment reference.
      * <!-- begin-user-doc -->
@@ -247,14 +247,11 @@ public class ProcessImpl extends CallableElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetAuditing(Auditing newAuditing,
-            NotificationChain msgs) {
+    public NotificationChain basicSetAuditing(Auditing newAuditing, NotificationChain msgs) {
         Auditing oldAuditing = auditing;
         auditing = newAuditing;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this,
-                    Notification.SET, BpmnPackage.PROCESS__AUDITING,
-                    oldAuditing, newAuditing);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BpmnPackage.PROCESS__AUDITING, oldAuditing, newAuditing);
             if (msgs == null)
                 msgs = notification;
             else
@@ -272,19 +269,14 @@ public class ProcessImpl extends CallableElementImpl implements
         if (newAuditing != auditing) {
             NotificationChain msgs = null;
             if (auditing != null)
-                msgs = ((InternalEObject) auditing).eInverseRemove(this,
-                        EOPPOSITE_FEATURE_BASE - BpmnPackage.PROCESS__AUDITING,
-                        null, msgs);
+                msgs = ((InternalEObject) auditing).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.PROCESS__AUDITING, null, msgs);
             if (newAuditing != null)
-                msgs = ((InternalEObject) newAuditing).eInverseAdd(this,
-                        EOPPOSITE_FEATURE_BASE - BpmnPackage.PROCESS__AUDITING,
-                        null, msgs);
+                msgs = ((InternalEObject) newAuditing).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.PROCESS__AUDITING, null, msgs);
             msgs = basicSetAuditing(newAuditing, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.PROCESS__AUDITING, newAuditing, newAuditing));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.PROCESS__AUDITING, newAuditing, newAuditing));
     }
 
     /**
@@ -301,14 +293,11 @@ public class ProcessImpl extends CallableElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetMonitoring(Monitoring newMonitoring,
-            NotificationChain msgs) {
+    public NotificationChain basicSetMonitoring(Monitoring newMonitoring, NotificationChain msgs) {
         Monitoring oldMonitoring = monitoring;
         monitoring = newMonitoring;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this,
-                    Notification.SET, BpmnPackage.PROCESS__MONITORING,
-                    oldMonitoring, newMonitoring);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BpmnPackage.PROCESS__MONITORING, oldMonitoring, newMonitoring);
             if (msgs == null)
                 msgs = notification;
             else
@@ -326,20 +315,14 @@ public class ProcessImpl extends CallableElementImpl implements
         if (newMonitoring != monitoring) {
             NotificationChain msgs = null;
             if (monitoring != null)
-                msgs = ((InternalEObject) monitoring).eInverseRemove(this,
-                        EOPPOSITE_FEATURE_BASE
-                                - BpmnPackage.PROCESS__MONITORING, null, msgs);
+                msgs = ((InternalEObject) monitoring).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.PROCESS__MONITORING, null, msgs);
             if (newMonitoring != null)
-                msgs = ((InternalEObject) newMonitoring).eInverseAdd(this,
-                        EOPPOSITE_FEATURE_BASE
-                                - BpmnPackage.PROCESS__MONITORING, null, msgs);
+                msgs = ((InternalEObject) newMonitoring).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.PROCESS__MONITORING, null, msgs);
             msgs = basicSetMonitoring(newMonitoring, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.PROCESS__MONITORING, newMonitoring,
-                    newMonitoring));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.PROCESS__MONITORING, newMonitoring, newMonitoring));
     }
 
     /**
@@ -347,10 +330,9 @@ public class ProcessImpl extends CallableElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Property> getProperty() {
+    public List<Property> getProperty() {
         if (property == null) {
-            property = new EObjectContainmentEList<Property>(Property.class,
-                    this, BpmnPackage.PROCESS__PROPERTY);
+            property = new EObjectContainmentEList<Property>(Property.class, this, BpmnPackage.PROCESS__PROPERTY);
         }
         return property;
     }
@@ -360,10 +342,9 @@ public class ProcessImpl extends CallableElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<LaneSet> getLaneSet() {
+    public List<LaneSet> getLaneSet() {
         if (laneSet == null) {
-            laneSet = new EObjectContainmentEList<LaneSet>(LaneSet.class, this,
-                    BpmnPackage.PROCESS__LANE_SET);
+            laneSet = new EObjectContainmentEList<LaneSet>(LaneSet.class, this, BpmnPackage.PROCESS__LANE_SET);
         }
         return laneSet;
     }
@@ -375,8 +356,7 @@ public class ProcessImpl extends CallableElementImpl implements
      */
     public FeatureMap getFlowElementGroup() {
         if (flowElementGroup == null) {
-            flowElementGroup = new BasicFeatureMap(this,
-                    BpmnPackage.PROCESS__FLOW_ELEMENT_GROUP);
+            flowElementGroup = new BasicFeatureMap(this, BpmnPackage.PROCESS__FLOW_ELEMENT_GROUP);
         }
         return flowElementGroup;
     }
@@ -386,9 +366,8 @@ public class ProcessImpl extends CallableElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<FlowElement> getFlowElement() {
-        return getFlowElementGroup().list(
-                BpmnPackage.eINSTANCE.getProcess_FlowElement());
+    public List<FlowElement> getFlowElement() {
+        return getFlowElementGroup().list(BpmnPackage.eINSTANCE.getProcess_FlowElement());
     }
 
     /**
@@ -398,8 +377,7 @@ public class ProcessImpl extends CallableElementImpl implements
      */
     public FeatureMap getArtifactGroup() {
         if (artifactGroup == null) {
-            artifactGroup = new BasicFeatureMap(this,
-                    BpmnPackage.PROCESS__ARTIFACT_GROUP);
+            artifactGroup = new BasicFeatureMap(this, BpmnPackage.PROCESS__ARTIFACT_GROUP);
         }
         return artifactGroup;
     }
@@ -409,9 +387,8 @@ public class ProcessImpl extends CallableElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Artifact> getArtifact() {
-        return getArtifactGroup().list(
-                BpmnPackage.eINSTANCE.getProcess_Artifact());
+    public List<Artifact> getArtifact() {
+        return getArtifactGroup().list(BpmnPackage.eINSTANCE.getProcess_Artifact());
     }
 
     /**
@@ -419,10 +396,9 @@ public class ProcessImpl extends CallableElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<QName> getSupports() {
+    public List<QName> getSupports() {
         if (supports == null) {
-            supports = new EDataTypeEList<QName>(QName.class, this,
-                    BpmnPackage.PROCESS__SUPPORTS);
+            supports = new EDataTypeEList<QName>(QName.class, this, BpmnPackage.PROCESS__SUPPORTS);
         }
         return supports;
     }
@@ -441,14 +417,11 @@ public class ProcessImpl extends CallableElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setDefinitionalCollaborationRef(
-            QName newDefinitionalCollaborationRef) {
+    public void setDefinitionalCollaborationRef(QName newDefinitionalCollaborationRef) {
         QName oldDefinitionalCollaborationRef = definitionalCollaborationRef;
         definitionalCollaborationRef = newDefinitionalCollaborationRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.PROCESS__DEFINITIONAL_COLLABORATION_REF,
-                    oldDefinitionalCollaborationRef,
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.PROCESS__DEFINITIONAL_COLLABORATION_REF, oldDefinitionalCollaborationRef,
                     definitionalCollaborationRef));
     }
 
@@ -472,9 +445,7 @@ public class ProcessImpl extends CallableElementImpl implements
         boolean oldIsClosedESet = isClosedESet;
         isClosedESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.PROCESS__IS_CLOSED, oldIsClosed, isClosed,
-                    !oldIsClosedESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.PROCESS__IS_CLOSED, oldIsClosed, isClosed, !oldIsClosedESet));
     }
 
     /**
@@ -488,9 +459,7 @@ public class ProcessImpl extends CallableElementImpl implements
         isClosed = IS_CLOSED_EDEFAULT;
         isClosedESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    BpmnPackage.PROCESS__IS_CLOSED, oldIsClosed,
-                    IS_CLOSED_EDEFAULT, oldIsClosedESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, BpmnPackage.PROCESS__IS_CLOSED, oldIsClosed, IS_CLOSED_EDEFAULT, oldIsClosedESet));
     }
 
     /**
@@ -518,14 +487,11 @@ public class ProcessImpl extends CallableElementImpl implements
      */
     public void setProcessType(ProcessType newProcessType) {
         ProcessType oldProcessType = processType;
-        processType = newProcessType == null ? PROCESS_TYPE_EDEFAULT
-                : newProcessType;
+        processType = newProcessType == null ? PROCESS_TYPE_EDEFAULT : newProcessType;
         boolean oldProcessTypeESet = processTypeESet;
         processTypeESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.PROCESS__PROCESS_TYPE, oldProcessType,
-                    processType, !oldProcessTypeESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.PROCESS__PROCESS_TYPE, oldProcessType, processType, !oldProcessTypeESet));
     }
 
     /**
@@ -539,9 +505,8 @@ public class ProcessImpl extends CallableElementImpl implements
         processType = PROCESS_TYPE_EDEFAULT;
         processTypeESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    BpmnPackage.PROCESS__PROCESS_TYPE, oldProcessType,
-                    PROCESS_TYPE_EDEFAULT, oldProcessTypeESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, BpmnPackage.PROCESS__PROCESS_TYPE, oldProcessType, PROCESS_TYPE_EDEFAULT,
+                    oldProcessTypeESet));
     }
 
     /**
@@ -559,31 +524,24 @@ public class ProcessImpl extends CallableElementImpl implements
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.PROCESS__AUDITING:
             return basicSetAuditing(null, msgs);
         case BpmnPackage.PROCESS__MONITORING:
             return basicSetMonitoring(null, msgs);
         case BpmnPackage.PROCESS__PROPERTY:
-            return ((InternalEList<?>) getProperty()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getProperty()).basicRemove(otherEnd, msgs);
         case BpmnPackage.PROCESS__LANE_SET:
-            return ((InternalEList<?>) getLaneSet())
-                    .basicRemove(otherEnd, msgs);
+            return ((InternalEList<?>) getLaneSet()).basicRemove(otherEnd, msgs);
         case BpmnPackage.PROCESS__FLOW_ELEMENT_GROUP:
-            return ((InternalEList<?>) getFlowElementGroup()).basicRemove(
-                    otherEnd, msgs);
+            return ((InternalEList<?>) getFlowElementGroup()).basicRemove(otherEnd, msgs);
         case BpmnPackage.PROCESS__FLOW_ELEMENT:
-            return ((InternalEList<?>) getFlowElement()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getFlowElement()).basicRemove(otherEnd, msgs);
         case BpmnPackage.PROCESS__ARTIFACT_GROUP:
-            return ((InternalEList<?>) getArtifactGroup()).basicRemove(
-                    otherEnd, msgs);
+            return ((InternalEList<?>) getArtifactGroup()).basicRemove(otherEnd, msgs);
         case BpmnPackage.PROCESS__ARTIFACT:
-            return ((InternalEList<?>) getArtifact()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getArtifact()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -656,8 +614,7 @@ public class ProcessImpl extends CallableElementImpl implements
             return;
         case BpmnPackage.PROCESS__FLOW_ELEMENT:
             getFlowElement().clear();
-            getFlowElement().addAll(
-                    (Collection<? extends FlowElement>) newValue);
+            getFlowElement().addAll((Collection<? extends FlowElement>) newValue);
             return;
         case BpmnPackage.PROCESS__ARTIFACT_GROUP:
             ((FeatureMap.Internal) getArtifactGroup()).set(newValue);
@@ -758,9 +715,8 @@ public class ProcessImpl extends CallableElementImpl implements
         case BpmnPackage.PROCESS__SUPPORTS:
             return supports != null && !supports.isEmpty();
         case BpmnPackage.PROCESS__DEFINITIONAL_COLLABORATION_REF:
-            return DEFINITIONAL_COLLABORATION_REF_EDEFAULT == null ? definitionalCollaborationRef != null
-                    : !DEFINITIONAL_COLLABORATION_REF_EDEFAULT
-                            .equals(definitionalCollaborationRef);
+            return DEFINITIONAL_COLLABORATION_REF_EDEFAULT == null ? definitionalCollaborationRef != null : !DEFINITIONAL_COLLABORATION_REF_EDEFAULT
+                    .equals(definitionalCollaborationRef);
         case BpmnPackage.PROCESS__IS_CLOSED:
             return isSetIsClosed();
         case BpmnPackage.PROCESS__PROCESS_TYPE:

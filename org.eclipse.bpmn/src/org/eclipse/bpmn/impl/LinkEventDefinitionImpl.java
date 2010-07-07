@@ -33,8 +33,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class LinkEventDefinitionImpl extends EventDefinitionImpl implements
-        LinkEventDefinition {
+public class LinkEventDefinitionImpl extends EventDefinitionImpl implements LinkEventDefinition {
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -92,8 +91,7 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.LINK_EVENT_DEFINITION__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.LINK_EVENT_DEFINITION__NAME, oldName, name));
     }
 
     /**
@@ -149,8 +147,7 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case BpmnPackage.LINK_EVENT_DEFINITION__NAME:
-            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-                    .equals(name);
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }

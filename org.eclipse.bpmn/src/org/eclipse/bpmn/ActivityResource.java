@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.emf.common.util.EList;
@@ -76,7 +77,7 @@ public interface ActivityResource extends BaseElement {
      *        extendedMetaData="kind='element' name='resourceParameterBinding' namespace='##targetNamespace'"
      * @generated
      */
-    EList<ResourceParameterBinding> getResourceParameterBindings();
+    List<ResourceParameterBinding> getResourceParameterBindings();
 
     /**
      * Returns the value of the '<em><b>Resource Ref</b></em>' attribute.

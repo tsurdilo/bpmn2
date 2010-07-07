@@ -25,8 +25,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IntermediateThrowEventImpl extends ThrowEventImpl implements
-        IntermediateThrowEvent {
+public class IntermediateThrowEventImpl extends ThrowEventImpl implements IntermediateThrowEvent {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

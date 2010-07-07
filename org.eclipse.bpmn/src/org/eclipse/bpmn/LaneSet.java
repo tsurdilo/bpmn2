@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -45,6 +46,6 @@ public interface LaneSet extends BaseElement {
      *        extendedMetaData="kind='element' name='lane' namespace='##targetNamespace'"
      * @generated
      */
-    EList<Lane> getLane();
+    List<Lane> getLane();
 
 } // LaneSet

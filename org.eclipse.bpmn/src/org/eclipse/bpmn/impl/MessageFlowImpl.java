@@ -156,9 +156,7 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
         QName oldMessageRef = messageRef;
         messageRef = newMessageRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.MESSAGE_FLOW__MESSAGE_REF, oldMessageRef,
-                    messageRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.MESSAGE_FLOW__MESSAGE_REF, oldMessageRef, messageRef));
     }
 
     /**
@@ -179,8 +177,7 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.MESSAGE_FLOW__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.MESSAGE_FLOW__NAME, oldName, name));
     }
 
     /**
@@ -201,9 +198,7 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
         QName oldSourceRef = sourceRef;
         sourceRef = newSourceRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.MESSAGE_FLOW__SOURCE_REF, oldSourceRef,
-                    sourceRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.MESSAGE_FLOW__SOURCE_REF, oldSourceRef, sourceRef));
     }
 
     /**
@@ -224,9 +219,7 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
         QName oldTargetRef = targetRef;
         targetRef = newTargetRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.MESSAGE_FLOW__TARGET_REF, oldTargetRef,
-                    targetRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.MESSAGE_FLOW__TARGET_REF, oldTargetRef, targetRef));
     }
 
     /**
@@ -306,17 +299,13 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case BpmnPackage.MESSAGE_FLOW__MESSAGE_REF:
-            return MESSAGE_REF_EDEFAULT == null ? messageRef != null
-                    : !MESSAGE_REF_EDEFAULT.equals(messageRef);
+            return MESSAGE_REF_EDEFAULT == null ? messageRef != null : !MESSAGE_REF_EDEFAULT.equals(messageRef);
         case BpmnPackage.MESSAGE_FLOW__NAME:
-            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-                    .equals(name);
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         case BpmnPackage.MESSAGE_FLOW__SOURCE_REF:
-            return SOURCE_REF_EDEFAULT == null ? sourceRef != null
-                    : !SOURCE_REF_EDEFAULT.equals(sourceRef);
+            return SOURCE_REF_EDEFAULT == null ? sourceRef != null : !SOURCE_REF_EDEFAULT.equals(sourceRef);
         case BpmnPackage.MESSAGE_FLOW__TARGET_REF:
-            return TARGET_REF_EDEFAULT == null ? targetRef != null
-                    : !TARGET_REF_EDEFAULT.equals(targetRef);
+            return TARGET_REF_EDEFAULT == null ? targetRef != null : !TARGET_REF_EDEFAULT.equals(targetRef);
         }
         return super.eIsSet(featureID);
     }

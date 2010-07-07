@@ -207,8 +207,7 @@ public class BpmnSwitch<T> {
             return doSwitch(theEClass.getClassifierID(), theEObject);
         } else {
             List<EClass> eSuperTypes = theEClass.getESuperTypes();
-            return eSuperTypes.isEmpty() ? defaultCase(theEObject) : doSwitch(
-                    eSuperTypes.get(0), theEObject);
+            return eSuperTypes.isEmpty() ? defaultCase(theEObject) : doSwitch(eSuperTypes.get(0), theEObject);
         }
     }
 
@@ -2339,8 +2338,7 @@ public class BpmnSwitch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseCorrelationPropertyRetrievalExpression(
-            CorrelationPropertyRetrievalExpression object) {
+    public T caseCorrelationPropertyRetrievalExpression(CorrelationPropertyRetrievalExpression object) {
         return null;
     }
 
@@ -3210,8 +3208,7 @@ public class BpmnSwitch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseMultiInstanceLoopCharacteristics(
-            MultiInstanceLoopCharacteristics object) {
+    public T caseMultiInstanceLoopCharacteristics(MultiInstanceLoopCharacteristics object) {
         return null;
     }
 
@@ -3466,8 +3463,7 @@ public class BpmnSwitch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseResourceAssignmentExpression(
-            ResourceAssignmentExpression object) {
+    public T caseResourceAssignmentExpression(ResourceAssignmentExpression object) {
         return null;
     }
 

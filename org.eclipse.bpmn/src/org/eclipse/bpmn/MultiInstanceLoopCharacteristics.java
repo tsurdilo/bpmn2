@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.emf.common.util.EList;
@@ -192,7 +193,7 @@ public interface MultiInstanceLoopCharacteristics extends LoopCharacteristics {
      *        extendedMetaData="kind='element' name='complexBehaviorDefinition' namespace='##targetNamespace'"
      * @generated
      */
-    EList<ComplexBehaviorDefinition> getComplexBehaviorDefinition();
+    List<ComplexBehaviorDefinition> getComplexBehaviorDefinition();
 
     /**
      * Returns the value of the '<em><b>Completion Condition</b></em>' containment reference.

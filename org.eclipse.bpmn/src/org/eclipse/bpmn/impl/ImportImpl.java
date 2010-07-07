@@ -134,8 +134,7 @@ public class ImportImpl extends EObjectImpl implements Import {
         String oldImportType = importType;
         importType = newImportType;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.IMPORT__IMPORT_TYPE, oldImportType, importType));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.IMPORT__IMPORT_TYPE, oldImportType, importType));
     }
 
     /**
@@ -156,8 +155,7 @@ public class ImportImpl extends EObjectImpl implements Import {
         String oldLocation = location;
         location = newLocation;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.IMPORT__LOCATION, oldLocation, location));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.IMPORT__LOCATION, oldLocation, location));
     }
 
     /**
@@ -178,8 +176,7 @@ public class ImportImpl extends EObjectImpl implements Import {
         String oldNamespace = namespace;
         namespace = newNamespace;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.IMPORT__NAMESPACE, oldNamespace, namespace));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.IMPORT__NAMESPACE, oldNamespace, namespace));
     }
 
     /**
@@ -251,14 +248,11 @@ public class ImportImpl extends EObjectImpl implements Import {
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case BpmnPackage.IMPORT__IMPORT_TYPE:
-            return IMPORT_TYPE_EDEFAULT == null ? importType != null
-                    : !IMPORT_TYPE_EDEFAULT.equals(importType);
+            return IMPORT_TYPE_EDEFAULT == null ? importType != null : !IMPORT_TYPE_EDEFAULT.equals(importType);
         case BpmnPackage.IMPORT__LOCATION:
-            return LOCATION_EDEFAULT == null ? location != null
-                    : !LOCATION_EDEFAULT.equals(location);
+            return LOCATION_EDEFAULT == null ? location != null : !LOCATION_EDEFAULT.equals(location);
         case BpmnPackage.IMPORT__NAMESPACE:
-            return NAMESPACE_EDEFAULT == null ? namespace != null
-                    : !NAMESPACE_EDEFAULT.equals(namespace);
+            return NAMESPACE_EDEFAULT == null ? namespace != null : !NAMESPACE_EDEFAULT.equals(namespace);
         }
         return super.eIsSet(featureID);
     }

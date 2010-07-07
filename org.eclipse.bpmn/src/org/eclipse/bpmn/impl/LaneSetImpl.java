@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn.BpmnPackage;
 import org.eclipse.bpmn.Lane;
 import org.eclipse.bpmn.LaneSet;
@@ -75,10 +76,9 @@ public class LaneSetImpl extends BaseElementImpl implements LaneSet {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Lane> getLane() {
+    public List<Lane> getLane() {
         if (lane == null) {
-            lane = new EObjectContainmentEList<Lane>(Lane.class, this,
-                    BpmnPackage.LANE_SET__LANE);
+            lane = new EObjectContainmentEList<Lane>(Lane.class, this, BpmnPackage.LANE_SET__LANE);
         }
         return lane;
     }
@@ -89,8 +89,7 @@ public class LaneSetImpl extends BaseElementImpl implements LaneSet {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.LANE_SET__LANE:
             return ((InternalEList<?>) getLane()).basicRemove(otherEnd, msgs);

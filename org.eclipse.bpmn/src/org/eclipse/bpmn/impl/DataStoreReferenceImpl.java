@@ -40,8 +40,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class DataStoreReferenceImpl extends FlowElementImpl implements
-        DataStoreReference {
+public class DataStoreReferenceImpl extends FlowElementImpl implements DataStoreReference {
     /**
      * The cached value of the '{@link #getDataState() <em>Data State</em>}' containment reference.
      * <!-- begin-user-doc -->
@@ -125,14 +124,11 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetDataState(DataState newDataState,
-            NotificationChain msgs) {
+    public NotificationChain basicSetDataState(DataState newDataState, NotificationChain msgs) {
         DataState oldDataState = dataState;
         dataState = newDataState;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this,
-                    Notification.SET,
-                    BpmnPackage.DATA_STORE_REFERENCE__DATA_STATE, oldDataState,
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BpmnPackage.DATA_STORE_REFERENCE__DATA_STATE, oldDataState,
                     newDataState);
             if (msgs == null)
                 msgs = notification;
@@ -151,22 +147,14 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements
         if (newDataState != dataState) {
             NotificationChain msgs = null;
             if (dataState != null)
-                msgs = ((InternalEObject) dataState).eInverseRemove(this,
-                        EOPPOSITE_FEATURE_BASE
-                                - BpmnPackage.DATA_STORE_REFERENCE__DATA_STATE,
-                        null, msgs);
+                msgs = ((InternalEObject) dataState).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.DATA_STORE_REFERENCE__DATA_STATE, null, msgs);
             if (newDataState != null)
-                msgs = ((InternalEObject) newDataState).eInverseAdd(this,
-                        EOPPOSITE_FEATURE_BASE
-                                - BpmnPackage.DATA_STORE_REFERENCE__DATA_STATE,
-                        null, msgs);
+                msgs = ((InternalEObject) newDataState).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.DATA_STORE_REFERENCE__DATA_STATE, null, msgs);
             msgs = basicSetDataState(newDataState, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.DATA_STORE_REFERENCE__DATA_STATE, newDataState,
-                    newDataState));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.DATA_STORE_REFERENCE__DATA_STATE, newDataState, newDataState));
     }
 
     /**
@@ -187,9 +175,7 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements
         QName oldDataStoreRef = dataStoreRef;
         dataStoreRef = newDataStoreRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.DATA_STORE_REFERENCE__DATA_STORE_REF,
-                    oldDataStoreRef, dataStoreRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.DATA_STORE_REFERENCE__DATA_STORE_REF, oldDataStoreRef, dataStoreRef));
     }
 
     /**
@@ -210,9 +196,7 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements
         QName oldItemSubjectRef = itemSubjectRef;
         itemSubjectRef = newItemSubjectRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.DATA_STORE_REFERENCE__ITEM_SUBJECT_REF,
-                    oldItemSubjectRef, itemSubjectRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.DATA_STORE_REFERENCE__ITEM_SUBJECT_REF, oldItemSubjectRef, itemSubjectRef));
     }
 
     /**
@@ -221,8 +205,7 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.DATA_STORE_REFERENCE__DATA_STATE:
             return basicSetDataState(null, msgs);
@@ -301,11 +284,9 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements
         case BpmnPackage.DATA_STORE_REFERENCE__DATA_STATE:
             return dataState != null;
         case BpmnPackage.DATA_STORE_REFERENCE__DATA_STORE_REF:
-            return DATA_STORE_REF_EDEFAULT == null ? dataStoreRef != null
-                    : !DATA_STORE_REF_EDEFAULT.equals(dataStoreRef);
+            return DATA_STORE_REF_EDEFAULT == null ? dataStoreRef != null : !DATA_STORE_REF_EDEFAULT.equals(dataStoreRef);
         case BpmnPackage.DATA_STORE_REFERENCE__ITEM_SUBJECT_REF:
-            return ITEM_SUBJECT_REF_EDEFAULT == null ? itemSubjectRef != null
-                    : !ITEM_SUBJECT_REF_EDEFAULT.equals(itemSubjectRef);
+            return ITEM_SUBJECT_REF_EDEFAULT == null ? itemSubjectRef != null : !ITEM_SUBJECT_REF_EDEFAULT.equals(itemSubjectRef);
         }
         return super.eIsSet(featureID);
     }

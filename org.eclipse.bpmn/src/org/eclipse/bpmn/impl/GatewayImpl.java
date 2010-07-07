@@ -99,14 +99,11 @@ public class GatewayImpl extends FlowNodeImpl implements Gateway {
      */
     public void setGatewayDirection(GatewayDirection newGatewayDirection) {
         GatewayDirection oldGatewayDirection = gatewayDirection;
-        gatewayDirection = newGatewayDirection == null ? GATEWAY_DIRECTION_EDEFAULT
-                : newGatewayDirection;
+        gatewayDirection = newGatewayDirection == null ? GATEWAY_DIRECTION_EDEFAULT : newGatewayDirection;
         boolean oldGatewayDirectionESet = gatewayDirectionESet;
         gatewayDirectionESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.GATEWAY__GATEWAY_DIRECTION,
-                    oldGatewayDirection, gatewayDirection,
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.GATEWAY__GATEWAY_DIRECTION, oldGatewayDirection, gatewayDirection,
                     !oldGatewayDirectionESet));
     }
 
@@ -121,9 +118,7 @@ public class GatewayImpl extends FlowNodeImpl implements Gateway {
         gatewayDirection = GATEWAY_DIRECTION_EDEFAULT;
         gatewayDirectionESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    BpmnPackage.GATEWAY__GATEWAY_DIRECTION,
-                    oldGatewayDirection, GATEWAY_DIRECTION_EDEFAULT,
+            eNotify(new ENotificationImpl(this, Notification.UNSET, BpmnPackage.GATEWAY__GATEWAY_DIRECTION, oldGatewayDirection, GATEWAY_DIRECTION_EDEFAULT,
                     oldGatewayDirectionESet));
     }
 

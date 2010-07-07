@@ -38,8 +38,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements
-        ComplexBehaviorDefinition {
+public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements ComplexBehaviorDefinition {
     /**
      * The cached value of the '{@link #getCondition() <em>Condition</em>}' containment reference.
      * <!-- begin-user-doc -->
@@ -93,15 +92,12 @@ public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetCondition(FormalExpression newCondition,
-            NotificationChain msgs) {
+    public NotificationChain basicSetCondition(FormalExpression newCondition, NotificationChain msgs) {
         FormalExpression oldCondition = condition;
         condition = newCondition;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this,
-                    Notification.SET,
-                    BpmnPackage.COMPLEX_BEHAVIOR_DEFINITION__CONDITION,
-                    oldCondition, newCondition);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BpmnPackage.COMPLEX_BEHAVIOR_DEFINITION__CONDITION, oldCondition,
+                    newCondition);
             if (msgs == null)
                 msgs = notification;
             else
@@ -119,26 +115,16 @@ public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements
         if (newCondition != condition) {
             NotificationChain msgs = null;
             if (condition != null)
-                msgs = ((InternalEObject) condition)
-                        .eInverseRemove(
-                                this,
-                                EOPPOSITE_FEATURE_BASE
-                                        - BpmnPackage.COMPLEX_BEHAVIOR_DEFINITION__CONDITION,
-                                null, msgs);
+                msgs = ((InternalEObject) condition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.COMPLEX_BEHAVIOR_DEFINITION__CONDITION, null,
+                        msgs);
             if (newCondition != null)
-                msgs = ((InternalEObject) newCondition)
-                        .eInverseAdd(
-                                this,
-                                EOPPOSITE_FEATURE_BASE
-                                        - BpmnPackage.COMPLEX_BEHAVIOR_DEFINITION__CONDITION,
-                                null, msgs);
+                msgs = ((InternalEObject) newCondition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.COMPLEX_BEHAVIOR_DEFINITION__CONDITION, null,
+                        msgs);
             msgs = basicSetCondition(newCondition, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.COMPLEX_BEHAVIOR_DEFINITION__CONDITION,
-                    newCondition, newCondition));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.COMPLEX_BEHAVIOR_DEFINITION__CONDITION, newCondition, newCondition));
     }
 
     /**
@@ -155,15 +141,11 @@ public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetEvent(ImplicitThrowEvent newEvent,
-            NotificationChain msgs) {
+    public NotificationChain basicSetEvent(ImplicitThrowEvent newEvent, NotificationChain msgs) {
         ImplicitThrowEvent oldEvent = event;
         event = newEvent;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this,
-                    Notification.SET,
-                    BpmnPackage.COMPLEX_BEHAVIOR_DEFINITION__EVENT, oldEvent,
-                    newEvent);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BpmnPackage.COMPLEX_BEHAVIOR_DEFINITION__EVENT, oldEvent, newEvent);
             if (msgs == null)
                 msgs = notification;
             else
@@ -181,26 +163,14 @@ public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements
         if (newEvent != event) {
             NotificationChain msgs = null;
             if (event != null)
-                msgs = ((InternalEObject) event)
-                        .eInverseRemove(
-                                this,
-                                EOPPOSITE_FEATURE_BASE
-                                        - BpmnPackage.COMPLEX_BEHAVIOR_DEFINITION__EVENT,
-                                null, msgs);
+                msgs = ((InternalEObject) event).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.COMPLEX_BEHAVIOR_DEFINITION__EVENT, null, msgs);
             if (newEvent != null)
-                msgs = ((InternalEObject) newEvent)
-                        .eInverseAdd(
-                                this,
-                                EOPPOSITE_FEATURE_BASE
-                                        - BpmnPackage.COMPLEX_BEHAVIOR_DEFINITION__EVENT,
-                                null, msgs);
+                msgs = ((InternalEObject) newEvent).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.COMPLEX_BEHAVIOR_DEFINITION__EVENT, null, msgs);
             msgs = basicSetEvent(newEvent, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.COMPLEX_BEHAVIOR_DEFINITION__EVENT, newEvent,
-                    newEvent));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.COMPLEX_BEHAVIOR_DEFINITION__EVENT, newEvent, newEvent));
     }
 
     /**
@@ -209,8 +179,7 @@ public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.COMPLEX_BEHAVIOR_DEFINITION__CONDITION:
             return basicSetCondition(null, msgs);

@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.emf.common.util.EList;
@@ -114,7 +115,7 @@ public interface Process extends CallableElement {
      *        extendedMetaData="kind='element' name='property' namespace='##targetNamespace'"
      * @generated
      */
-    EList<Property> getProperty();
+    List<Property> getProperty();
 
     /**
      * Returns the value of the '<em><b>Lane Set</b></em>' containment reference list.
@@ -131,7 +132,7 @@ public interface Process extends CallableElement {
      *        extendedMetaData="kind='element' name='laneSet' namespace='##targetNamespace'"
      * @generated
      */
-    EList<LaneSet> getLaneSet();
+    List<LaneSet> getLaneSet();
 
     /**
      * Returns the value of the '<em><b>Flow Element Group</b></em>' attribute list.
@@ -165,7 +166,7 @@ public interface Process extends CallableElement {
      *        extendedMetaData="kind='element' name='flowElement' namespace='##targetNamespace' group='flowElement:group'"
      * @generated
      */
-    EList<FlowElement> getFlowElement();
+    List<FlowElement> getFlowElement();
 
     /**
      * Returns the value of the '<em><b>Artifact Group</b></em>' attribute list.
@@ -199,7 +200,7 @@ public interface Process extends CallableElement {
      *        extendedMetaData="kind='element' name='artifact' namespace='##targetNamespace' group='artifact:group'"
      * @generated
      */
-    EList<Artifact> getArtifact();
+    List<Artifact> getArtifact();
 
     /**
      * Returns the value of the '<em><b>Supports</b></em>' attribute list.
@@ -216,7 +217,7 @@ public interface Process extends CallableElement {
      *        extendedMetaData="kind='element' name='supports' namespace='##targetNamespace'"
      * @generated
      */
-    EList<QName> getSupports();
+    List<QName> getSupports();
 
     /**
      * Returns the value of the '<em><b>Definitional Collaboration Ref</b></em>' attribute.

@@ -108,8 +108,7 @@ public enum TransactionMethod implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    private static final TransactionMethod[] VALUES_ARRAY = new TransactionMethod[] {
-            COMPENSATE, IMAGE, STORE, };
+    private static final TransactionMethod[] VALUES_ARRAY = new TransactionMethod[] { COMPENSATE, IMAGE, STORE, };
 
     /**
      * A public read-only list of all the '<em><b>Transaction Method</b></em>' enumerators.
@@ -117,8 +116,7 @@ public enum TransactionMethod implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final List<TransactionMethod> VALUES = Collections
-            .unmodifiableList(Arrays.asList(VALUES_ARRAY));
+    public static final List<TransactionMethod> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
     /**
      * Returns the '<em><b>Transaction Method</b></em>' literal with the specified literal value.

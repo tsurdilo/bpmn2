@@ -25,8 +25,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class CancelEventDefinitionImpl extends EventDefinitionImpl implements
-        CancelEventDefinition {
+public class CancelEventDefinitionImpl extends EventDefinitionImpl implements CancelEventDefinition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

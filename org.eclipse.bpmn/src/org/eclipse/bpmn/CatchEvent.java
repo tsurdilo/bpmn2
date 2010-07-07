@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.emf.common.util.EList;
@@ -56,7 +57,7 @@ public interface CatchEvent extends Event {
      *        extendedMetaData="kind='element' name='dataOutput' namespace='##targetNamespace'"
      * @generated
      */
-    EList<DataOutput> getDataOutputs();
+    List<DataOutput> getDataOutputs();
 
     /**
      * Returns the value of the '<em><b>Data Output Associations</b></em>' containment reference list.
@@ -73,7 +74,7 @@ public interface CatchEvent extends Event {
      *        extendedMetaData="kind='element' name='dataOutputAssociation' namespace='##targetNamespace'"
      * @generated
      */
-    EList<DataOutputAssociation> getDataOutputAssociations();
+    List<DataOutputAssociation> getDataOutputAssociations();
 
     /**
      * Returns the value of the '<em><b>Output Set</b></em>' containment reference.
@@ -134,7 +135,7 @@ public interface CatchEvent extends Event {
      *        extendedMetaData="kind='element' name='eventDefinition' namespace='##targetNamespace' group='eventDefinition:group'"
      * @generated
      */
-    EList<EventDefinition> getEventDefinitions();
+    List<EventDefinition> getEventDefinitions();
 
     /**
      * Returns the value of the '<em><b>Event Definition Refs</b></em>' attribute list.
@@ -151,7 +152,7 @@ public interface CatchEvent extends Event {
      *        extendedMetaData="kind='element' name='eventDefinitionRef' namespace='##targetNamespace'"
      * @generated
      */
-    EList<QName> getEventDefinitionRefs();
+    List<QName> getEventDefinitionRefs();
 
     /**
      * Returns the value of the '<em><b>Parallel Multiple</b></em>' attribute.

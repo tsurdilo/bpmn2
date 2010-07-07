@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.bpmn.BpmnPackage;
@@ -139,10 +140,9 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<QName> getSource() {
+    public List<QName> getSource() {
         if (source == null) {
-            source = new EDataTypeEList<QName>(QName.class, this,
-                    BpmnPackage.RELATIONSHIP__SOURCE);
+            source = new EDataTypeEList<QName>(QName.class, this, BpmnPackage.RELATIONSHIP__SOURCE);
         }
         return source;
     }
@@ -152,10 +152,9 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<QName> getTarget() {
+    public List<QName> getTarget() {
         if (target == null) {
-            target = new EDataTypeEList<QName>(QName.class, this,
-                    BpmnPackage.RELATIONSHIP__TARGET);
+            target = new EDataTypeEList<QName>(QName.class, this, BpmnPackage.RELATIONSHIP__TARGET);
         }
         return target;
     }
@@ -180,9 +179,7 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
         boolean oldDirectionESet = directionESet;
         directionESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.RELATIONSHIP__DIRECTION, oldDirection,
-                    direction, !oldDirectionESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.RELATIONSHIP__DIRECTION, oldDirection, direction, !oldDirectionESet));
     }
 
     /**
@@ -196,9 +193,7 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
         direction = DIRECTION_EDEFAULT;
         directionESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    BpmnPackage.RELATIONSHIP__DIRECTION, oldDirection,
-                    DIRECTION_EDEFAULT, oldDirectionESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, BpmnPackage.RELATIONSHIP__DIRECTION, oldDirection, DIRECTION_EDEFAULT, oldDirectionESet));
     }
 
     /**
@@ -228,8 +223,7 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
         String oldType = type;
         type = newType;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.RELATIONSHIP__TYPE, oldType, type));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.RELATIONSHIP__TYPE, oldType, type));
     }
 
     /**
@@ -318,8 +312,7 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
         case BpmnPackage.RELATIONSHIP__DIRECTION:
             return isSetDirection();
         case BpmnPackage.RELATIONSHIP__TYPE:
-            return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT
-                    .equals(type);
+            return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
         }
         return super.eIsSet(featureID);
     }

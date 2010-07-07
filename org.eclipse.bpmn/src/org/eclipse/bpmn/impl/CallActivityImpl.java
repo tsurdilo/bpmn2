@@ -93,9 +93,7 @@ public class CallActivityImpl extends ActivityImpl implements CallActivity {
         QName oldCalledElement = calledElement;
         calledElement = newCalledElement;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.CALL_ACTIVITY__CALLED_ELEMENT,
-                    oldCalledElement, calledElement));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.CALL_ACTIVITY__CALLED_ELEMENT, oldCalledElement, calledElement));
     }
 
     /**
@@ -151,8 +149,7 @@ public class CallActivityImpl extends ActivityImpl implements CallActivity {
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case BpmnPackage.CALL_ACTIVITY__CALLED_ELEMENT:
-            return CALLED_ELEMENT_EDEFAULT == null ? calledElement != null
-                    : !CALLED_ELEMENT_EDEFAULT.equals(calledElement);
+            return CALLED_ELEMENT_EDEFAULT == null ? calledElement != null : !CALLED_ELEMENT_EDEFAULT.equals(calledElement);
         }
         return super.eIsSet(featureID);
     }

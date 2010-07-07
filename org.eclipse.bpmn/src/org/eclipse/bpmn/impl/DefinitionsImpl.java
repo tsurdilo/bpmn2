@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn.BpmnPackage;
 import org.eclipse.bpmn.Definitions;
 import org.eclipse.bpmn.Extension;
@@ -36,7 +37,6 @@ import org.eclipse.emf.ecore.util.BasicFeatureMap;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -244,10 +244,9 @@ public class DefinitionsImpl extends EObjectImpl implements Definitions {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Import> getImport() {
+    public List<Import> getImport() {
         if (import_ == null) {
-            import_ = new EObjectContainmentEList<Import>(Import.class, this,
-                    BpmnPackage.DEFINITIONS__IMPORT);
+            import_ = new EObjectContainmentEList<Import>(Import.class, this, BpmnPackage.DEFINITIONS__IMPORT);
         }
         return import_;
     }
@@ -257,10 +256,9 @@ public class DefinitionsImpl extends EObjectImpl implements Definitions {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Extension> getExtension() {
+    public List<Extension> getExtension() {
         if (extension == null) {
-            extension = new EObjectContainmentEList<Extension>(Extension.class,
-                    this, BpmnPackage.DEFINITIONS__EXTENSION);
+            extension = new EObjectContainmentEList<Extension>(Extension.class, this, BpmnPackage.DEFINITIONS__EXTENSION);
         }
         return extension;
     }
@@ -272,8 +270,7 @@ public class DefinitionsImpl extends EObjectImpl implements Definitions {
      */
     public FeatureMap getRootElementGroup() {
         if (rootElementGroup == null) {
-            rootElementGroup = new BasicFeatureMap(this,
-                    BpmnPackage.DEFINITIONS__ROOT_ELEMENT_GROUP);
+            rootElementGroup = new BasicFeatureMap(this, BpmnPackage.DEFINITIONS__ROOT_ELEMENT_GROUP);
         }
         return rootElementGroup;
     }
@@ -283,9 +280,8 @@ public class DefinitionsImpl extends EObjectImpl implements Definitions {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<RootElement> getRootElement() {
-        return getRootElementGroup().list(
-                BpmnPackage.eINSTANCE.getDefinitions_RootElement());
+    public List<RootElement> getRootElement() {
+        return getRootElementGroup().list(BpmnPackage.eINSTANCE.getDefinitions_RootElement());
     }
 
     /**
@@ -293,10 +289,9 @@ public class DefinitionsImpl extends EObjectImpl implements Definitions {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Diagram> getDiagram() {
+    public List<Diagram> getDiagram() {
         if (diagram == null) {
-            diagram = new EObjectContainmentEList<Diagram>(Diagram.class, this,
-                    BpmnPackage.DEFINITIONS__DIAGRAM);
+            diagram = new EObjectContainmentEList<Diagram>(Diagram.class, this, BpmnPackage.DEFINITIONS__DIAGRAM);
         }
         return diagram;
     }
@@ -306,11 +301,9 @@ public class DefinitionsImpl extends EObjectImpl implements Definitions {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Relationship> getRelationship() {
+    public List<Relationship> getRelationship() {
         if (relationship == null) {
-            relationship = new EObjectContainmentEList<Relationship>(
-                    Relationship.class, this,
-                    BpmnPackage.DEFINITIONS__RELATIONSHIP);
+            relationship = new EObjectContainmentEList<Relationship>(Relationship.class, this, BpmnPackage.DEFINITIONS__RELATIONSHIP);
         }
         return relationship;
     }
@@ -335,9 +328,7 @@ public class DefinitionsImpl extends EObjectImpl implements Definitions {
         boolean oldExpressionLanguageESet = expressionLanguageESet;
         expressionLanguageESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.DEFINITIONS__EXPRESSION_LANGUAGE,
-                    oldExpressionLanguage, expressionLanguage,
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.DEFINITIONS__EXPRESSION_LANGUAGE, oldExpressionLanguage, expressionLanguage,
                     !oldExpressionLanguageESet));
     }
 
@@ -352,10 +343,8 @@ public class DefinitionsImpl extends EObjectImpl implements Definitions {
         expressionLanguage = EXPRESSION_LANGUAGE_EDEFAULT;
         expressionLanguageESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    BpmnPackage.DEFINITIONS__EXPRESSION_LANGUAGE,
-                    oldExpressionLanguage, EXPRESSION_LANGUAGE_EDEFAULT,
-                    oldExpressionLanguageESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, BpmnPackage.DEFINITIONS__EXPRESSION_LANGUAGE, oldExpressionLanguage,
+                    EXPRESSION_LANGUAGE_EDEFAULT, oldExpressionLanguageESet));
     }
 
     /**
@@ -385,8 +374,7 @@ public class DefinitionsImpl extends EObjectImpl implements Definitions {
         String oldId = id;
         id = newId;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.DEFINITIONS__ID, oldId, id));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.DEFINITIONS__ID, oldId, id));
     }
 
     /**
@@ -407,9 +395,7 @@ public class DefinitionsImpl extends EObjectImpl implements Definitions {
         String oldTargetNamespace = targetNamespace;
         targetNamespace = newTargetNamespace;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.DEFINITIONS__TARGET_NAMESPACE,
-                    oldTargetNamespace, targetNamespace));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.DEFINITIONS__TARGET_NAMESPACE, oldTargetNamespace, targetNamespace));
     }
 
     /**
@@ -432,9 +418,7 @@ public class DefinitionsImpl extends EObjectImpl implements Definitions {
         boolean oldTypeLanguageESet = typeLanguageESet;
         typeLanguageESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.DEFINITIONS__TYPE_LANGUAGE, oldTypeLanguage,
-                    typeLanguage, !oldTypeLanguageESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.DEFINITIONS__TYPE_LANGUAGE, oldTypeLanguage, typeLanguage, !oldTypeLanguageESet));
     }
 
     /**
@@ -448,9 +432,8 @@ public class DefinitionsImpl extends EObjectImpl implements Definitions {
         typeLanguage = TYPE_LANGUAGE_EDEFAULT;
         typeLanguageESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    BpmnPackage.DEFINITIONS__TYPE_LANGUAGE, oldTypeLanguage,
-                    TYPE_LANGUAGE_EDEFAULT, oldTypeLanguageESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, BpmnPackage.DEFINITIONS__TYPE_LANGUAGE, oldTypeLanguage, TYPE_LANGUAGE_EDEFAULT,
+                    oldTypeLanguageESet));
     }
 
     /**
@@ -469,8 +452,7 @@ public class DefinitionsImpl extends EObjectImpl implements Definitions {
      */
     public FeatureMap getAnyAttribute() {
         if (anyAttribute == null) {
-            anyAttribute = new BasicFeatureMap(this,
-                    BpmnPackage.DEFINITIONS__ANY_ATTRIBUTE);
+            anyAttribute = new BasicFeatureMap(this, BpmnPackage.DEFINITIONS__ANY_ATTRIBUTE);
         }
         return anyAttribute;
     }
@@ -481,29 +463,22 @@ public class DefinitionsImpl extends EObjectImpl implements Definitions {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.DEFINITIONS__IMPORT:
             return ((InternalEList<?>) getImport()).basicRemove(otherEnd, msgs);
         case BpmnPackage.DEFINITIONS__EXTENSION:
-            return ((InternalEList<?>) getExtension()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getExtension()).basicRemove(otherEnd, msgs);
         case BpmnPackage.DEFINITIONS__ROOT_ELEMENT_GROUP:
-            return ((InternalEList<?>) getRootElementGroup()).basicRemove(
-                    otherEnd, msgs);
+            return ((InternalEList<?>) getRootElementGroup()).basicRemove(otherEnd, msgs);
         case BpmnPackage.DEFINITIONS__ROOT_ELEMENT:
-            return ((InternalEList<?>) getRootElement()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getRootElement()).basicRemove(otherEnd, msgs);
         case BpmnPackage.DEFINITIONS__DIAGRAM:
-            return ((InternalEList<?>) getDiagram())
-                    .basicRemove(otherEnd, msgs);
+            return ((InternalEList<?>) getDiagram()).basicRemove(otherEnd, msgs);
         case BpmnPackage.DEFINITIONS__RELATIONSHIP:
-            return ((InternalEList<?>) getRelationship()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getRelationship()).basicRemove(otherEnd, msgs);
         case BpmnPackage.DEFINITIONS__ANY_ATTRIBUTE:
-            return ((InternalEList<?>) getAnyAttribute()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getAnyAttribute()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -568,8 +543,7 @@ public class DefinitionsImpl extends EObjectImpl implements Definitions {
             return;
         case BpmnPackage.DEFINITIONS__ROOT_ELEMENT:
             getRootElement().clear();
-            getRootElement().addAll(
-                    (Collection<? extends RootElement>) newValue);
+            getRootElement().addAll((Collection<? extends RootElement>) newValue);
             return;
         case BpmnPackage.DEFINITIONS__DIAGRAM:
             getDiagram().clear();
@@ -577,8 +551,7 @@ public class DefinitionsImpl extends EObjectImpl implements Definitions {
             return;
         case BpmnPackage.DEFINITIONS__RELATIONSHIP:
             getRelationship().clear();
-            getRelationship().addAll(
-                    (Collection<? extends Relationship>) newValue);
+            getRelationship().addAll((Collection<? extends Relationship>) newValue);
             return;
         case BpmnPackage.DEFINITIONS__EXPRESSION_LANGUAGE:
             setExpressionLanguage((String) newValue);
@@ -669,8 +642,7 @@ public class DefinitionsImpl extends EObjectImpl implements Definitions {
         case BpmnPackage.DEFINITIONS__ID:
             return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
         case BpmnPackage.DEFINITIONS__TARGET_NAMESPACE:
-            return TARGET_NAMESPACE_EDEFAULT == null ? targetNamespace != null
-                    : !TARGET_NAMESPACE_EDEFAULT.equals(targetNamespace);
+            return TARGET_NAMESPACE_EDEFAULT == null ? targetNamespace != null : !TARGET_NAMESPACE_EDEFAULT.equals(targetNamespace);
         case BpmnPackage.DEFINITIONS__TYPE_LANGUAGE:
             return isSetTypeLanguage();
         case BpmnPackage.DEFINITIONS__ANY_ATTRIBUTE:

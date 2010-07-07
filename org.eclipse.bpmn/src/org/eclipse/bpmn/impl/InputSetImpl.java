@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn.BpmnPackage;
 import org.eclipse.bpmn.InputSet;
 
@@ -128,10 +129,9 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<String> getDataInputRefs() {
+    public List<String> getDataInputRefs() {
         if (dataInputRefs == null) {
-            dataInputRefs = new EDataTypeEList<String>(String.class, this,
-                    BpmnPackage.INPUT_SET__DATA_INPUT_REFS);
+            dataInputRefs = new EDataTypeEList<String>(String.class, this, BpmnPackage.INPUT_SET__DATA_INPUT_REFS);
         }
         return dataInputRefs;
     }
@@ -141,10 +141,9 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<String> getOptionalInputRefs() {
+    public List<String> getOptionalInputRefs() {
         if (optionalInputRefs == null) {
-            optionalInputRefs = new EDataTypeEList<String>(String.class, this,
-                    BpmnPackage.INPUT_SET__OPTIONAL_INPUT_REFS);
+            optionalInputRefs = new EDataTypeEList<String>(String.class, this, BpmnPackage.INPUT_SET__OPTIONAL_INPUT_REFS);
         }
         return optionalInputRefs;
     }
@@ -154,10 +153,9 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<String> getWhileExecutingInputRefs() {
+    public List<String> getWhileExecutingInputRefs() {
         if (whileExecutingInputRefs == null) {
-            whileExecutingInputRefs = new EDataTypeEList<String>(String.class,
-                    this, BpmnPackage.INPUT_SET__WHILE_EXECUTING_INPUT_REFS);
+            whileExecutingInputRefs = new EDataTypeEList<String>(String.class, this, BpmnPackage.INPUT_SET__WHILE_EXECUTING_INPUT_REFS);
         }
         return whileExecutingInputRefs;
     }
@@ -167,10 +165,9 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<String> getOutputSetRefs() {
+    public List<String> getOutputSetRefs() {
         if (outputSetRefs == null) {
-            outputSetRefs = new EDataTypeEList<String>(String.class, this,
-                    BpmnPackage.INPUT_SET__OUTPUT_SET_REFS);
+            outputSetRefs = new EDataTypeEList<String>(String.class, this, BpmnPackage.INPUT_SET__OUTPUT_SET_REFS);
         }
         return outputSetRefs;
     }
@@ -193,8 +190,7 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.INPUT_SET__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.INPUT_SET__NAME, oldName, name));
     }
 
     /**
@@ -234,13 +230,11 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
             return;
         case BpmnPackage.INPUT_SET__OPTIONAL_INPUT_REFS:
             getOptionalInputRefs().clear();
-            getOptionalInputRefs().addAll(
-                    (Collection<? extends String>) newValue);
+            getOptionalInputRefs().addAll((Collection<? extends String>) newValue);
             return;
         case BpmnPackage.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
             getWhileExecutingInputRefs().clear();
-            getWhileExecutingInputRefs().addAll(
-                    (Collection<? extends String>) newValue);
+            getWhileExecutingInputRefs().addAll((Collection<? extends String>) newValue);
             return;
         case BpmnPackage.INPUT_SET__OUTPUT_SET_REFS:
             getOutputSetRefs().clear();
@@ -293,13 +287,11 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
         case BpmnPackage.INPUT_SET__OPTIONAL_INPUT_REFS:
             return optionalInputRefs != null && !optionalInputRefs.isEmpty();
         case BpmnPackage.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
-            return whileExecutingInputRefs != null
-                    && !whileExecutingInputRefs.isEmpty();
+            return whileExecutingInputRefs != null && !whileExecutingInputRefs.isEmpty();
         case BpmnPackage.INPUT_SET__OUTPUT_SET_REFS:
             return outputSetRefs != null && !outputSetRefs.isEmpty();
         case BpmnPackage.INPUT_SET__NAME:
-            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-                    .equals(name);
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }

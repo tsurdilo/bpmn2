@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn.BpmnPackage;
 import org.eclipse.bpmn.DataInput;
 import org.eclipse.bpmn.DataOutput;
@@ -46,8 +47,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class InputOutputSpecificationImpl extends BaseElementImpl implements
-        InputOutputSpecification {
+public class InputOutputSpecificationImpl extends BaseElementImpl implements InputOutputSpecification {
     /**
      * The cached value of the '{@link #getDataInput() <em>Data Input</em>}' containment reference list.
      * <!-- begin-user-doc -->
@@ -112,10 +112,9 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<DataInput> getDataInput() {
+    public List<DataInput> getDataInput() {
         if (dataInput == null) {
-            dataInput = new EObjectContainmentEList<DataInput>(DataInput.class,
-                    this, BpmnPackage.INPUT_OUTPUT_SPECIFICATION__DATA_INPUT);
+            dataInput = new EObjectContainmentEList<DataInput>(DataInput.class, this, BpmnPackage.INPUT_OUTPUT_SPECIFICATION__DATA_INPUT);
         }
         return dataInput;
     }
@@ -125,11 +124,9 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<DataOutput> getDataOutput() {
+    public List<DataOutput> getDataOutput() {
         if (dataOutput == null) {
-            dataOutput = new EObjectContainmentEList<DataOutput>(
-                    DataOutput.class, this,
-                    BpmnPackage.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUT);
+            dataOutput = new EObjectContainmentEList<DataOutput>(DataOutput.class, this, BpmnPackage.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUT);
         }
         return dataOutput;
     }
@@ -139,10 +136,9 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<InputSet> getInputSet() {
+    public List<InputSet> getInputSet() {
         if (inputSet == null) {
-            inputSet = new EObjectContainmentEList<InputSet>(InputSet.class,
-                    this, BpmnPackage.INPUT_OUTPUT_SPECIFICATION__INPUT_SET);
+            inputSet = new EObjectContainmentEList<InputSet>(InputSet.class, this, BpmnPackage.INPUT_OUTPUT_SPECIFICATION__INPUT_SET);
         }
         return inputSet;
     }
@@ -152,10 +148,9 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<OutputSet> getOutputSet() {
+    public List<OutputSet> getOutputSet() {
         if (outputSet == null) {
-            outputSet = new EObjectContainmentEList<OutputSet>(OutputSet.class,
-                    this, BpmnPackage.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SET);
+            outputSet = new EObjectContainmentEList<OutputSet>(OutputSet.class, this, BpmnPackage.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SET);
         }
         return outputSet;
     }
@@ -166,21 +161,16 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.INPUT_OUTPUT_SPECIFICATION__DATA_INPUT:
-            return ((InternalEList<?>) getDataInput()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getDataInput()).basicRemove(otherEnd, msgs);
         case BpmnPackage.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUT:
-            return ((InternalEList<?>) getDataOutput()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getDataOutput()).basicRemove(otherEnd, msgs);
         case BpmnPackage.INPUT_OUTPUT_SPECIFICATION__INPUT_SET:
-            return ((InternalEList<?>) getInputSet()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getInputSet()).basicRemove(otherEnd, msgs);
         case BpmnPackage.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SET:
-            return ((InternalEList<?>) getOutputSet()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getOutputSet()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }

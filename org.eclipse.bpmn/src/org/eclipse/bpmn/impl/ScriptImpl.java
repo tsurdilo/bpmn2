@@ -87,8 +87,7 @@ public class ScriptImpl extends EObjectImpl implements Script {
      * @generated
      */
     public FeatureMap getAny() {
-        return (FeatureMap) getMixed().<FeatureMap.Entry> list(
-                BpmnPackage.eINSTANCE.getScript_Any());
+        return (FeatureMap) getMixed().<FeatureMap.Entry> list(BpmnPackage.eINSTANCE.getScript_Any());
     }
 
     /**
@@ -97,8 +96,7 @@ public class ScriptImpl extends EObjectImpl implements Script {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.SCRIPT__MIXED:
             return ((InternalEList<?>) getMixed()).basicRemove(otherEnd, msgs);

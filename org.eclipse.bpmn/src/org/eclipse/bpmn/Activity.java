@@ -13,6 +13,7 @@ package org.eclipse.bpmn;
 
 import java.math.BigInteger;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.util.FeatureMap;
@@ -88,7 +89,7 @@ public interface Activity extends FlowNode {
      *        extendedMetaData="kind='element' name='property' namespace='##targetNamespace'"
      * @generated
      */
-    EList<Property> getProperties();
+    List<Property> getProperties();
 
     /**
      * Returns the value of the '<em><b>Data Input Associations</b></em>' containment reference list.
@@ -105,7 +106,7 @@ public interface Activity extends FlowNode {
      *        extendedMetaData="kind='element' name='dataInputAssociation' namespace='##targetNamespace'"
      * @generated
      */
-    EList<DataInputAssociation> getDataInputAssociations();
+    List<DataInputAssociation> getDataInputAssociations();
 
     /**
      * Returns the value of the '<em><b>Data Output Associations</b></em>' containment reference list.
@@ -122,7 +123,7 @@ public interface Activity extends FlowNode {
      *        extendedMetaData="kind='element' name='dataOutputAssociation' namespace='##targetNamespace'"
      * @generated
      */
-    EList<DataOutputAssociation> getDataOutputAssociations();
+    List<DataOutputAssociation> getDataOutputAssociations();
 
     /**
      * Returns the value of the '<em><b>Activity Resource Groups</b></em>' attribute list.
@@ -156,7 +157,7 @@ public interface Activity extends FlowNode {
      *        extendedMetaData="kind='element' name='activityResource' namespace='##targetNamespace' group='activityResource:group'"
      * @generated
      */
-    EList<ActivityResource> getActivityResources();
+    List<ActivityResource> getActivityResources();
 
     /**
      * Returns the value of the '<em><b>Loop Characteristics Group</b></em>' attribute list.

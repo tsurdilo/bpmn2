@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn.BpmnPackage;
 import org.eclipse.bpmn.Category;
 import org.eclipse.bpmn.CategoryValue;
@@ -75,11 +76,9 @@ public class CategoryImpl extends RootElementImpl implements Category {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<CategoryValue> getCategoryValue() {
+    public List<CategoryValue> getCategoryValue() {
         if (categoryValue == null) {
-            categoryValue = new EObjectContainmentEList<CategoryValue>(
-                    CategoryValue.class, this,
-                    BpmnPackage.CATEGORY__CATEGORY_VALUE);
+            categoryValue = new EObjectContainmentEList<CategoryValue>(CategoryValue.class, this, BpmnPackage.CATEGORY__CATEGORY_VALUE);
         }
         return categoryValue;
     }
@@ -90,12 +89,10 @@ public class CategoryImpl extends RootElementImpl implements Category {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.CATEGORY__CATEGORY_VALUE:
-            return ((InternalEList<?>) getCategoryValue()).basicRemove(
-                    otherEnd, msgs);
+            return ((InternalEList<?>) getCategoryValue()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -125,8 +122,7 @@ public class CategoryImpl extends RootElementImpl implements Category {
         switch (featureID) {
         case BpmnPackage.CATEGORY__CATEGORY_VALUE:
             getCategoryValue().clear();
-            getCategoryValue().addAll(
-                    (Collection<? extends CategoryValue>) newValue);
+            getCategoryValue().addAll((Collection<? extends CategoryValue>) newValue);
             return;
         }
         super.eSet(featureID, newValue);

@@ -123,9 +123,7 @@ public class BoundaryEventImpl extends CatchEventImpl implements BoundaryEvent {
         QName oldAttachedToRef = attachedToRef;
         attachedToRef = newAttachedToRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.BOUNDARY_EVENT__ATTACHED_TO_REF,
-                    oldAttachedToRef, attachedToRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.BOUNDARY_EVENT__ATTACHED_TO_REF, oldAttachedToRef, attachedToRef));
     }
 
     /**
@@ -148,9 +146,8 @@ public class BoundaryEventImpl extends CatchEventImpl implements BoundaryEvent {
         boolean oldCancelActivityESet = cancelActivityESet;
         cancelActivityESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.BOUNDARY_EVENT__CANCEL_ACTIVITY,
-                    oldCancelActivity, cancelActivity, !oldCancelActivityESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.BOUNDARY_EVENT__CANCEL_ACTIVITY, oldCancelActivity, cancelActivity,
+                    !oldCancelActivityESet));
     }
 
     /**
@@ -164,9 +161,7 @@ public class BoundaryEventImpl extends CatchEventImpl implements BoundaryEvent {
         cancelActivity = CANCEL_ACTIVITY_EDEFAULT;
         cancelActivityESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    BpmnPackage.BOUNDARY_EVENT__CANCEL_ACTIVITY,
-                    oldCancelActivity, CANCEL_ACTIVITY_EDEFAULT,
+            eNotify(new ENotificationImpl(this, Notification.UNSET, BpmnPackage.BOUNDARY_EVENT__CANCEL_ACTIVITY, oldCancelActivity, CANCEL_ACTIVITY_EDEFAULT,
                     oldCancelActivityESet));
     }
 
@@ -240,8 +235,7 @@ public class BoundaryEventImpl extends CatchEventImpl implements BoundaryEvent {
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case BpmnPackage.BOUNDARY_EVENT__ATTACHED_TO_REF:
-            return ATTACHED_TO_REF_EDEFAULT == null ? attachedToRef != null
-                    : !ATTACHED_TO_REF_EDEFAULT.equals(attachedToRef);
+            return ATTACHED_TO_REF_EDEFAULT == null ? attachedToRef != null : !ATTACHED_TO_REF_EDEFAULT.equals(attachedToRef);
         case BpmnPackage.BOUNDARY_EVENT__CANCEL_ACTIVITY:
             return isSetCancelActivity();
         }

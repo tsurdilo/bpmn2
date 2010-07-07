@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.util.FeatureMap;
@@ -67,7 +68,7 @@ public interface ChoreographySubProcess extends ChoreographyActivity {
      *        extendedMetaData="kind='element' name='flowElement' namespace='##targetNamespace' group='flowElement:group'"
      * @generated
      */
-    EList<FlowElement> getFlowElement();
+    List<FlowElement> getFlowElement();
 
     /**
      * Returns the value of the '<em><b>Artifact Group</b></em>' attribute list.
@@ -101,6 +102,6 @@ public interface ChoreographySubProcess extends ChoreographyActivity {
      *        extendedMetaData="kind='element' name='artifact' namespace='##targetNamespace' group='artifact:group'"
      * @generated
      */
-    EList<Artifact> getArtifact();
+    List<Artifact> getArtifact();
 
 } // ChoreographySubProcess

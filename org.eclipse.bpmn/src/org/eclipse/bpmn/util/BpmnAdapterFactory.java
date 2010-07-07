@@ -253,8 +253,7 @@ public class BpmnAdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseBaseElementWithMixedContent(
-                BaseElementWithMixedContent object) {
+        public Adapter caseBaseElementWithMixedContent(BaseElementWithMixedContent object) {
             return createBaseElementWithMixedContentAdapter();
         }
 
@@ -279,8 +278,7 @@ public class BpmnAdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseCallChoreographyActivity(
-                CallChoreographyActivity object) {
+        public Adapter caseCallChoreographyActivity(CallChoreographyActivity object) {
             return createCallChoreographyActivityAdapter();
         }
 
@@ -340,14 +338,12 @@ public class BpmnAdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseCompensateEventDefinition(
-                CompensateEventDefinition object) {
+        public Adapter caseCompensateEventDefinition(CompensateEventDefinition object) {
             return createCompensateEventDefinitionAdapter();
         }
 
         @Override
-        public Adapter caseComplexBehaviorDefinition(
-                ComplexBehaviorDefinition object) {
+        public Adapter caseComplexBehaviorDefinition(ComplexBehaviorDefinition object) {
             return createComplexBehaviorDefinitionAdapter();
         }
 
@@ -357,8 +353,7 @@ public class BpmnAdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseConditionalEventDefinition(
-                ConditionalEventDefinition object) {
+        public Adapter caseConditionalEventDefinition(ConditionalEventDefinition object) {
             return createConditionalEventDefinitionAdapter();
         }
 
@@ -368,8 +363,7 @@ public class BpmnAdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseConversationAssociation(
-                ConversationAssociation object) {
+        public Adapter caseConversationAssociation(ConversationAssociation object) {
             return createConversationAssociationAdapter();
         }
 
@@ -389,20 +383,17 @@ public class BpmnAdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseCorrelationPropertyBinding(
-                CorrelationPropertyBinding object) {
+        public Adapter caseCorrelationPropertyBinding(CorrelationPropertyBinding object) {
             return createCorrelationPropertyBindingAdapter();
         }
 
         @Override
-        public Adapter caseCorrelationPropertyRetrievalExpression(
-                CorrelationPropertyRetrievalExpression object) {
+        public Adapter caseCorrelationPropertyRetrievalExpression(CorrelationPropertyRetrievalExpression object) {
             return createCorrelationPropertyRetrievalExpressionAdapter();
         }
 
         @Override
-        public Adapter caseCorrelationSubscription(
-                CorrelationSubscription object) {
+        public Adapter caseCorrelationSubscription(CorrelationSubscription object) {
             return createCorrelationSubscriptionAdapter();
         }
 
@@ -487,8 +478,7 @@ public class BpmnAdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseEscalationEventDefinition(
-                EscalationEventDefinition object) {
+        public Adapter caseEscalationEventDefinition(EscalationEventDefinition object) {
             return createEscalationEventDefinitionAdapter();
         }
 
@@ -608,8 +598,7 @@ public class BpmnAdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseInputOutputSpecification(
-                InputOutputSpecification object) {
+        public Adapter caseInputOutputSpecification(InputOutputSpecification object) {
             return createInputOutputSpecificationAdapter();
         }
 
@@ -689,8 +678,7 @@ public class BpmnAdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseMultiInstanceLoopCharacteristics(
-                MultiInstanceLoopCharacteristics object) {
+        public Adapter caseMultiInstanceLoopCharacteristics(MultiInstanceLoopCharacteristics object) {
             return createMultiInstanceLoopCharacteristicsAdapter();
         }
 
@@ -720,8 +708,7 @@ public class BpmnAdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseParticipantMultiplicity(
-                ParticipantMultiplicity object) {
+        public Adapter caseParticipantMultiplicity(ParticipantMultiplicity object) {
             return createParticipantMultiplicityAdapter();
         }
 
@@ -776,8 +763,7 @@ public class BpmnAdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseResourceAssignmentExpression(
-                ResourceAssignmentExpression object) {
+        public Adapter caseResourceAssignmentExpression(ResourceAssignmentExpression object) {
             return createResourceAssignmentExpressionAdapter();
         }
 
@@ -787,8 +773,7 @@ public class BpmnAdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseResourceParameterBinding(
-                ResourceParameterBinding object) {
+        public Adapter caseResourceParameterBinding(ResourceParameterBinding object) {
             return createResourceParameterBindingAdapter();
         }
 
@@ -833,8 +818,7 @@ public class BpmnAdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseStandardLoopCharacteristics(
-                StandardLoopCharacteristics object) {
+        public Adapter caseStandardLoopCharacteristics(StandardLoopCharacteristics object) {
             return createStandardLoopCharacteristicsAdapter();
         }
 
@@ -859,8 +843,7 @@ public class BpmnAdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseTerminateEventDefinition(
-                TerminateEventDefinition object) {
+        public Adapter caseTerminateEventDefinition(TerminateEventDefinition object) {
             return createTerminateEventDefinitionAdapter();
         }
 

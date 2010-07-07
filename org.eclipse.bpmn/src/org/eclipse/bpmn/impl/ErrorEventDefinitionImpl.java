@@ -36,8 +36,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements
-        ErrorEventDefinition {
+public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements ErrorEventDefinition {
     /**
      * The default value of the '{@link #getErrorCode() <em>Error Code</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -115,9 +114,7 @@ public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements
         String oldErrorCode = errorCode;
         errorCode = newErrorCode;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.ERROR_EVENT_DEFINITION__ERROR_CODE,
-                    oldErrorCode, errorCode));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.ERROR_EVENT_DEFINITION__ERROR_CODE, oldErrorCode, errorCode));
     }
 
     /**
@@ -138,9 +135,7 @@ public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements
         QName oldErrorRef = errorRef;
         errorRef = newErrorRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.ERROR_EVENT_DEFINITION__ERROR_REF, oldErrorRef,
-                    errorRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.ERROR_EVENT_DEFINITION__ERROR_REF, oldErrorRef, errorRef));
     }
 
     /**
@@ -204,11 +199,9 @@ public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case BpmnPackage.ERROR_EVENT_DEFINITION__ERROR_CODE:
-            return ERROR_CODE_EDEFAULT == null ? errorCode != null
-                    : !ERROR_CODE_EDEFAULT.equals(errorCode);
+            return ERROR_CODE_EDEFAULT == null ? errorCode != null : !ERROR_CODE_EDEFAULT.equals(errorCode);
         case BpmnPackage.ERROR_EVENT_DEFINITION__ERROR_REF:
-            return ERROR_REF_EDEFAULT == null ? errorRef != null
-                    : !ERROR_REF_EDEFAULT.equals(errorRef);
+            return ERROR_REF_EDEFAULT == null ? errorRef != null : !ERROR_REF_EDEFAULT.equals(errorRef);
         }
         return super.eIsSet(featureID);
     }

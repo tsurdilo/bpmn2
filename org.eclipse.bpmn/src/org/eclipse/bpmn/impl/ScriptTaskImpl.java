@@ -101,14 +101,11 @@ public class ScriptTaskImpl extends TaskImpl implements ScriptTask {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetScript(Script newScript,
-            NotificationChain msgs) {
+    public NotificationChain basicSetScript(Script newScript, NotificationChain msgs) {
         Script oldScript = script;
         script = newScript;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this,
-                    Notification.SET, BpmnPackage.SCRIPT_TASK__SCRIPT,
-                    oldScript, newScript);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BpmnPackage.SCRIPT_TASK__SCRIPT, oldScript, newScript);
             if (msgs == null)
                 msgs = notification;
             else
@@ -126,19 +123,14 @@ public class ScriptTaskImpl extends TaskImpl implements ScriptTask {
         if (newScript != script) {
             NotificationChain msgs = null;
             if (script != null)
-                msgs = ((InternalEObject) script).eInverseRemove(this,
-                        EOPPOSITE_FEATURE_BASE
-                                - BpmnPackage.SCRIPT_TASK__SCRIPT, null, msgs);
+                msgs = ((InternalEObject) script).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.SCRIPT_TASK__SCRIPT, null, msgs);
             if (newScript != null)
-                msgs = ((InternalEObject) newScript).eInverseAdd(this,
-                        EOPPOSITE_FEATURE_BASE
-                                - BpmnPackage.SCRIPT_TASK__SCRIPT, null, msgs);
+                msgs = ((InternalEObject) newScript).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.SCRIPT_TASK__SCRIPT, null, msgs);
             msgs = basicSetScript(newScript, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.SCRIPT_TASK__SCRIPT, newScript, newScript));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.SCRIPT_TASK__SCRIPT, newScript, newScript));
     }
 
     /**
@@ -159,9 +151,7 @@ public class ScriptTaskImpl extends TaskImpl implements ScriptTask {
         String oldScriptLanguage = scriptLanguage;
         scriptLanguage = newScriptLanguage;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.SCRIPT_TASK__SCRIPT_LANGUAGE,
-                    oldScriptLanguage, scriptLanguage));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.SCRIPT_TASK__SCRIPT_LANGUAGE, oldScriptLanguage, scriptLanguage));
     }
 
     /**
@@ -170,8 +160,7 @@ public class ScriptTaskImpl extends TaskImpl implements ScriptTask {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.SCRIPT_TASK__SCRIPT:
             return basicSetScript(null, msgs);
@@ -242,8 +231,7 @@ public class ScriptTaskImpl extends TaskImpl implements ScriptTask {
         case BpmnPackage.SCRIPT_TASK__SCRIPT:
             return script != null;
         case BpmnPackage.SCRIPT_TASK__SCRIPT_LANGUAGE:
-            return SCRIPT_LANGUAGE_EDEFAULT == null ? scriptLanguage != null
-                    : !SCRIPT_LANGUAGE_EDEFAULT.equals(scriptLanguage);
+            return SCRIPT_LANGUAGE_EDEFAULT == null ? scriptLanguage != null : !SCRIPT_LANGUAGE_EDEFAULT.equals(scriptLanguage);
         }
         return super.eIsSet(featureID);
     }

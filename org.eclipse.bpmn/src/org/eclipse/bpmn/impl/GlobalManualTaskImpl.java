@@ -25,8 +25,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class GlobalManualTaskImpl extends GlobalTaskImpl implements
-        GlobalManualTask {
+public class GlobalManualTaskImpl extends GlobalTaskImpl implements GlobalManualTask {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

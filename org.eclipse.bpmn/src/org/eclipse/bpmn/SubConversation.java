@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.emf.common.util.EList;
@@ -70,7 +71,7 @@ public interface SubConversation extends ConversationNode {
      *        extendedMetaData="kind='element' name='conversationNode' namespace='##targetNamespace' group='conversationNode:group'"
      * @generated
      */
-    EList<ConversationNode> getConversationNode();
+    List<ConversationNode> getConversationNode();
 
     /**
      * Returns the value of the '<em><b>Artifact Group</b></em>' attribute list.
@@ -104,7 +105,7 @@ public interface SubConversation extends ConversationNode {
      *        extendedMetaData="kind='element' name='artifact' namespace='##targetNamespace' group='artifact:group'"
      * @generated
      */
-    EList<Artifact> getArtifact();
+    List<Artifact> getArtifact();
 
     /**
      * Returns the value of the '<em><b>Correlation Key Ref</b></em>' attribute.

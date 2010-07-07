@@ -25,8 +25,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class ExpressionImpl extends BaseElementWithMixedContentImpl implements
-        Expression {
+public class ExpressionImpl extends BaseElementWithMixedContentImpl implements Expression {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

@@ -36,8 +36,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class FormalExpressionImpl extends ExpressionImpl implements
-        FormalExpression {
+public class FormalExpressionImpl extends ExpressionImpl implements FormalExpression {
     /**
      * The default value of the '{@link #getEvaluatesToTypeRef() <em>Evaluates To Type Ref</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -115,9 +114,8 @@ public class FormalExpressionImpl extends ExpressionImpl implements
         QName oldEvaluatesToTypeRef = evaluatesToTypeRef;
         evaluatesToTypeRef = newEvaluatesToTypeRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF,
-                    oldEvaluatesToTypeRef, evaluatesToTypeRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF, oldEvaluatesToTypeRef,
+                    evaluatesToTypeRef));
     }
 
     /**
@@ -138,9 +136,7 @@ public class FormalExpressionImpl extends ExpressionImpl implements
         String oldLanguage = language;
         language = newLanguage;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.FORMAL_EXPRESSION__LANGUAGE, oldLanguage,
-                    language));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.FORMAL_EXPRESSION__LANGUAGE, oldLanguage, language));
     }
 
     /**
@@ -204,12 +200,9 @@ public class FormalExpressionImpl extends ExpressionImpl implements
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case BpmnPackage.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF:
-            return EVALUATES_TO_TYPE_REF_EDEFAULT == null ? evaluatesToTypeRef != null
-                    : !EVALUATES_TO_TYPE_REF_EDEFAULT
-                            .equals(evaluatesToTypeRef);
+            return EVALUATES_TO_TYPE_REF_EDEFAULT == null ? evaluatesToTypeRef != null : !EVALUATES_TO_TYPE_REF_EDEFAULT.equals(evaluatesToTypeRef);
         case BpmnPackage.FORMAL_EXPRESSION__LANGUAGE:
-            return LANGUAGE_EDEFAULT == null ? language != null
-                    : !LANGUAGE_EDEFAULT.equals(language);
+            return LANGUAGE_EDEFAULT == null ? language != null : !LANGUAGE_EDEFAULT.equals(language);
         }
         return super.eIsSet(featureID);
     }

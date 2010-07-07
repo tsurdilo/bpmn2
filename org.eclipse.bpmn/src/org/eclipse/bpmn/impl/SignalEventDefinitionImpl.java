@@ -35,8 +35,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class SignalEventDefinitionImpl extends EventDefinitionImpl implements
-        SignalEventDefinition {
+public class SignalEventDefinitionImpl extends EventDefinitionImpl implements SignalEventDefinition {
     /**
      * The default value of the '{@link #getSignal() <em>Signal</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -94,9 +93,7 @@ public class SignalEventDefinitionImpl extends EventDefinitionImpl implements
         QName oldSignal = signal;
         signal = newSignal;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.SIGNAL_EVENT_DEFINITION__SIGNAL, oldSignal,
-                    signal));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.SIGNAL_EVENT_DEFINITION__SIGNAL, oldSignal, signal));
     }
 
     /**
@@ -152,8 +149,7 @@ public class SignalEventDefinitionImpl extends EventDefinitionImpl implements
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case BpmnPackage.SIGNAL_EVENT_DEFINITION__SIGNAL:
-            return SIGNAL_EDEFAULT == null ? signal != null : !SIGNAL_EDEFAULT
-                    .equals(signal);
+            return SIGNAL_EDEFAULT == null ? signal != null : !SIGNAL_EDEFAULT.equals(signal);
         }
         return super.eIsSet(featureID);
     }

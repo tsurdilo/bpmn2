@@ -34,8 +34,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ErrorImpl extends RootElementImpl implements
-        org.eclipse.bpmn.Error {
+public class ErrorImpl extends RootElementImpl implements org.eclipse.bpmn.Error {
     /**
      * The default value of the '{@link #getStructureRef() <em>Structure Ref</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -93,9 +92,7 @@ public class ErrorImpl extends RootElementImpl implements
         QName oldStructureRef = structureRef;
         structureRef = newStructureRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.ERROR__STRUCTURE_REF, oldStructureRef,
-                    structureRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.ERROR__STRUCTURE_REF, oldStructureRef, structureRef));
     }
 
     /**
@@ -151,8 +148,7 @@ public class ErrorImpl extends RootElementImpl implements
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case BpmnPackage.ERROR__STRUCTURE_REF:
-            return STRUCTURE_REF_EDEFAULT == null ? structureRef != null
-                    : !STRUCTURE_REF_EDEFAULT.equals(structureRef);
+            return STRUCTURE_REF_EDEFAULT == null ? structureRef != null : !STRUCTURE_REF_EDEFAULT.equals(structureRef);
         }
         return super.eIsSet(featureID);
     }

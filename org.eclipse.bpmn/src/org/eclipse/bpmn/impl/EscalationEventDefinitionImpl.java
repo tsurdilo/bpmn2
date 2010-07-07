@@ -36,8 +36,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class EscalationEventDefinitionImpl extends EventDefinitionImpl
-        implements EscalationEventDefinition {
+public class EscalationEventDefinitionImpl extends EventDefinitionImpl implements EscalationEventDefinition {
     /**
      * The default value of the '{@link #getEscalationCode() <em>Escalation Code</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -115,9 +114,7 @@ public class EscalationEventDefinitionImpl extends EventDefinitionImpl
         String oldEscalationCode = escalationCode;
         escalationCode = newEscalationCode;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.ESCALATION_EVENT_DEFINITION__ESCALATION_CODE,
-                    oldEscalationCode, escalationCode));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.ESCALATION_EVENT_DEFINITION__ESCALATION_CODE, oldEscalationCode, escalationCode));
     }
 
     /**
@@ -138,9 +135,7 @@ public class EscalationEventDefinitionImpl extends EventDefinitionImpl
         QName oldEscalationRef = escalationRef;
         escalationRef = newEscalationRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.ESCALATION_EVENT_DEFINITION__ESCALATION_REF,
-                    oldEscalationRef, escalationRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.ESCALATION_EVENT_DEFINITION__ESCALATION_REF, oldEscalationRef, escalationRef));
     }
 
     /**
@@ -204,11 +199,9 @@ public class EscalationEventDefinitionImpl extends EventDefinitionImpl
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case BpmnPackage.ESCALATION_EVENT_DEFINITION__ESCALATION_CODE:
-            return ESCALATION_CODE_EDEFAULT == null ? escalationCode != null
-                    : !ESCALATION_CODE_EDEFAULT.equals(escalationCode);
+            return ESCALATION_CODE_EDEFAULT == null ? escalationCode != null : !ESCALATION_CODE_EDEFAULT.equals(escalationCode);
         case BpmnPackage.ESCALATION_EVENT_DEFINITION__ESCALATION_REF:
-            return ESCALATION_REF_EDEFAULT == null ? escalationRef != null
-                    : !ESCALATION_REF_EDEFAULT.equals(escalationRef);
+            return ESCALATION_REF_EDEFAULT == null ? escalationRef != null : !ESCALATION_REF_EDEFAULT.equals(escalationRef);
         }
         return super.eIsSet(featureID);
     }

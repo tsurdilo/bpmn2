@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.bpmn.BpmnPackage;
@@ -42,8 +43,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  *
  * @generated
  */
-public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements
-        ChoreographyActivity {
+public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements ChoreographyActivity {
     /**
      * The cached value of the '{@link #getParticipantRef() <em>Participant Ref</em>}' attribute list.
      * <!-- begin-user-doc -->
@@ -98,10 +98,9 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<QName> getParticipantRef() {
+    public List<QName> getParticipantRef() {
         if (participantRef == null) {
-            participantRef = new EDataTypeEList<QName>(QName.class, this,
-                    BpmnPackage.CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REF);
+            participantRef = new EDataTypeEList<QName>(QName.class, this, BpmnPackage.CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REF);
         }
         return participantRef;
     }
@@ -124,11 +123,8 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements
         QName oldInitiatingParticipantRef = initiatingParticipantRef;
         initiatingParticipantRef = newInitiatingParticipantRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(
-                    this,
-                    Notification.SET,
-                    BpmnPackage.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF,
-                    oldInitiatingParticipantRef, initiatingParticipantRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF, oldInitiatingParticipantRef,
+                    initiatingParticipantRef));
     }
 
     /**
@@ -196,9 +192,8 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements
         case BpmnPackage.CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REF:
             return participantRef != null && !participantRef.isEmpty();
         case BpmnPackage.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF:
-            return INITIATING_PARTICIPANT_REF_EDEFAULT == null ? initiatingParticipantRef != null
-                    : !INITIATING_PARTICIPANT_REF_EDEFAULT
-                            .equals(initiatingParticipantRef);
+            return INITIATING_PARTICIPANT_REF_EDEFAULT == null ? initiatingParticipantRef != null : !INITIATING_PARTICIPANT_REF_EDEFAULT
+                    .equals(initiatingParticipantRef);
         }
         return super.eIsSet(featureID);
     }

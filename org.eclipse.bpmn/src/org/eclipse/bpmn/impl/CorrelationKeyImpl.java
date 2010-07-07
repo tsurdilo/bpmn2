@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.bpmn.BpmnPackage;
@@ -37,8 +38,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  *
  * @generated
  */
-public class CorrelationKeyImpl extends BaseElementImpl implements
-        CorrelationKey {
+public class CorrelationKeyImpl extends BaseElementImpl implements CorrelationKey {
     /**
      * The cached value of the '{@link #getCorrelationPropertyRef() <em>Correlation Property Ref</em>}' attribute list.
      * <!-- begin-user-doc -->
@@ -73,10 +73,9 @@ public class CorrelationKeyImpl extends BaseElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<QName> getCorrelationPropertyRef() {
+    public List<QName> getCorrelationPropertyRef() {
         if (correlationPropertyRef == null) {
-            correlationPropertyRef = new EDataTypeEList<QName>(QName.class,
-                    this, BpmnPackage.CORRELATION_KEY__CORRELATION_PROPERTY_REF);
+            correlationPropertyRef = new EDataTypeEList<QName>(QName.class, this, BpmnPackage.CORRELATION_KEY__CORRELATION_PROPERTY_REF);
         }
         return correlationPropertyRef;
     }
@@ -106,8 +105,7 @@ public class CorrelationKeyImpl extends BaseElementImpl implements
         switch (featureID) {
         case BpmnPackage.CORRELATION_KEY__CORRELATION_PROPERTY_REF:
             getCorrelationPropertyRef().clear();
-            getCorrelationPropertyRef().addAll(
-                    (Collection<? extends QName>) newValue);
+            getCorrelationPropertyRef().addAll((Collection<? extends QName>) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -137,8 +135,7 @@ public class CorrelationKeyImpl extends BaseElementImpl implements
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case BpmnPackage.CORRELATION_KEY__CORRELATION_PROPERTY_REF:
-            return correlationPropertyRef != null
-                    && !correlationPropertyRef.isEmpty();
+            return correlationPropertyRef != null && !correlationPropertyRef.isEmpty();
         }
         return super.eIsSet(featureID);
     }

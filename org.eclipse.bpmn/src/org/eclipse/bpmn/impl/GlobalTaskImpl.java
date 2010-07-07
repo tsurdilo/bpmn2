@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn.BpmnPackage;
 import org.eclipse.bpmn.GlobalTask;
 import org.eclipse.bpmn.Performer;
@@ -79,8 +80,7 @@ public class GlobalTaskImpl extends CallableElementImpl implements GlobalTask {
      */
     public FeatureMap getPerformerGroup() {
         if (performerGroup == null) {
-            performerGroup = new BasicFeatureMap(this,
-                    BpmnPackage.GLOBAL_TASK__PERFORMER_GROUP);
+            performerGroup = new BasicFeatureMap(this, BpmnPackage.GLOBAL_TASK__PERFORMER_GROUP);
         }
         return performerGroup;
     }
@@ -90,9 +90,8 @@ public class GlobalTaskImpl extends CallableElementImpl implements GlobalTask {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Performer> getPerformer() {
-        return getPerformerGroup().list(
-                BpmnPackage.eINSTANCE.getGlobalTask_Performer());
+    public List<Performer> getPerformer() {
+        return getPerformerGroup().list(BpmnPackage.eINSTANCE.getGlobalTask_Performer());
     }
 
     /**
@@ -101,15 +100,12 @@ public class GlobalTaskImpl extends CallableElementImpl implements GlobalTask {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.GLOBAL_TASK__PERFORMER_GROUP:
-            return ((InternalEList<?>) getPerformerGroup()).basicRemove(
-                    otherEnd, msgs);
+            return ((InternalEList<?>) getPerformerGroup()).basicRemove(otherEnd, msgs);
         case BpmnPackage.GLOBAL_TASK__PERFORMER:
-            return ((InternalEList<?>) getPerformer()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getPerformer()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }

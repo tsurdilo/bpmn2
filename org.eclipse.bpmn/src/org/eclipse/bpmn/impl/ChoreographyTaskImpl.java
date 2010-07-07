@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.bpmn.BpmnPackage;
@@ -37,8 +38,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  *
  * @generated
  */
-public class ChoreographyTaskImpl extends ChoreographyActivityImpl implements
-        ChoreographyTask {
+public class ChoreographyTaskImpl extends ChoreographyActivityImpl implements ChoreographyTask {
     /**
      * The cached value of the '{@link #getMessageFlowRef() <em>Message Flow Ref</em>}' attribute list.
      * <!-- begin-user-doc -->
@@ -73,10 +73,9 @@ public class ChoreographyTaskImpl extends ChoreographyActivityImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<QName> getMessageFlowRef() {
+    public List<QName> getMessageFlowRef() {
         if (messageFlowRef == null) {
-            messageFlowRef = new EDataTypeEList<QName>(QName.class, this,
-                    BpmnPackage.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF);
+            messageFlowRef = new EDataTypeEList<QName>(QName.class, this, BpmnPackage.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF);
         }
         return messageFlowRef;
     }

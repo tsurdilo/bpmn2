@@ -33,8 +33,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ExclusiveGatewayImpl extends GatewayImpl implements
-        ExclusiveGateway {
+public class ExclusiveGatewayImpl extends GatewayImpl implements ExclusiveGateway {
     /**
      * The default value of the '{@link #getDefault() <em>Default</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -92,9 +91,7 @@ public class ExclusiveGatewayImpl extends GatewayImpl implements
         String oldDefault = default_;
         default_ = newDefault;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.EXCLUSIVE_GATEWAY__DEFAULT, oldDefault,
-                    default_));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.EXCLUSIVE_GATEWAY__DEFAULT, oldDefault, default_));
     }
 
     /**
@@ -150,8 +147,7 @@ public class ExclusiveGatewayImpl extends GatewayImpl implements
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case BpmnPackage.EXCLUSIVE_GATEWAY__DEFAULT:
-            return DEFAULT_EDEFAULT == null ? default_ != null
-                    : !DEFAULT_EDEFAULT.equals(default_);
+            return DEFAULT_EDEFAULT == null ? default_ != null : !DEFAULT_EDEFAULT.equals(default_);
         }
         return super.eIsSet(featureID);
     }

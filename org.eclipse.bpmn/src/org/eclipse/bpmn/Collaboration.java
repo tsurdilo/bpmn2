@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.emf.common.util.EList;
@@ -59,7 +60,7 @@ public interface Collaboration extends RootElement {
      *        extendedMetaData="kind='element' name='participant' namespace='##targetNamespace'"
      * @generated
      */
-    EList<Participant> getParticipant();
+    List<Participant> getParticipant();
 
     /**
      * Returns the value of the '<em><b>Message Flow</b></em>' containment reference list.
@@ -76,7 +77,7 @@ public interface Collaboration extends RootElement {
      *        extendedMetaData="kind='element' name='messageFlow' namespace='##targetNamespace'"
      * @generated
      */
-    EList<MessageFlow> getMessageFlow();
+    List<MessageFlow> getMessageFlow();
 
     /**
      * Returns the value of the '<em><b>Artifact Group</b></em>' attribute list.
@@ -110,7 +111,7 @@ public interface Collaboration extends RootElement {
      *        extendedMetaData="kind='element' name='artifact' namespace='##targetNamespace' group='artifact:group'"
      * @generated
      */
-    EList<Artifact> getArtifact();
+    List<Artifact> getArtifact();
 
     /**
      * Returns the value of the '<em><b>Conversation</b></em>' containment reference list.
@@ -127,7 +128,7 @@ public interface Collaboration extends RootElement {
      *        extendedMetaData="kind='element' name='conversation' namespace='##targetNamespace'"
      * @generated
      */
-    EList<Conversation> getConversation();
+    List<Conversation> getConversation();
 
     /**
      * Returns the value of the '<em><b>Conversation Association</b></em>' containment reference list.
@@ -144,7 +145,7 @@ public interface Collaboration extends RootElement {
      *        extendedMetaData="kind='element' name='conversationAssociation' namespace='##targetNamespace'"
      * @generated
      */
-    EList<ConversationAssociation> getConversationAssociation();
+    List<ConversationAssociation> getConversationAssociation();
 
     /**
      * Returns the value of the '<em><b>Participant Association</b></em>' containment reference list.
@@ -161,7 +162,7 @@ public interface Collaboration extends RootElement {
      *        extendedMetaData="kind='element' name='participantAssociation' namespace='##targetNamespace'"
      * @generated
      */
-    EList<ParticipantAssociation> getParticipantAssociation();
+    List<ParticipantAssociation> getParticipantAssociation();
 
     /**
      * Returns the value of the '<em><b>Message Flow Association</b></em>' containment reference list.
@@ -178,7 +179,7 @@ public interface Collaboration extends RootElement {
      *        extendedMetaData="kind='element' name='messageFlowAssociation' namespace='##targetNamespace'"
      * @generated
      */
-    EList<MessageFlowAssociation> getMessageFlowAssociation();
+    List<MessageFlowAssociation> getMessageFlowAssociation();
 
     /**
      * Returns the value of the '<em><b>Choreography Ref</b></em>' attribute.

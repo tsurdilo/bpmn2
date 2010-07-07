@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.bpmn.BpmnPackage;
@@ -42,8 +43,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  *
  * @generated
  */
-public class DataInputAssociationImpl extends DataAssociationImpl implements
-        DataInputAssociation {
+public class DataInputAssociationImpl extends DataAssociationImpl implements DataInputAssociation {
     /**
      * The cached value of the '{@link #getSourceRef() <em>Source Ref</em>}' attribute list.
      * <!-- begin-user-doc -->
@@ -98,10 +98,9 @@ public class DataInputAssociationImpl extends DataAssociationImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<QName> getSourceRef() {
+    public List<QName> getSourceRef() {
         if (sourceRef == null) {
-            sourceRef = new EDataTypeEList<QName>(QName.class, this,
-                    BpmnPackage.DATA_INPUT_ASSOCIATION__SOURCE_REF);
+            sourceRef = new EDataTypeEList<QName>(QName.class, this, BpmnPackage.DATA_INPUT_ASSOCIATION__SOURCE_REF);
         }
         return sourceRef;
     }
@@ -124,9 +123,7 @@ public class DataInputAssociationImpl extends DataAssociationImpl implements
         QName oldTargetRef = targetRef;
         targetRef = newTargetRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.DATA_INPUT_ASSOCIATION__TARGET_REF,
-                    oldTargetRef, targetRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.DATA_INPUT_ASSOCIATION__TARGET_REF, oldTargetRef, targetRef));
     }
 
     /**
@@ -194,8 +191,7 @@ public class DataInputAssociationImpl extends DataAssociationImpl implements
         case BpmnPackage.DATA_INPUT_ASSOCIATION__SOURCE_REF:
             return sourceRef != null && !sourceRef.isEmpty();
         case BpmnPackage.DATA_INPUT_ASSOCIATION__TARGET_REF:
-            return TARGET_REF_EDEFAULT == null ? targetRef != null
-                    : !TARGET_REF_EDEFAULT.equals(targetRef);
+            return TARGET_REF_EDEFAULT == null ? targetRef != null : !TARGET_REF_EDEFAULT.equals(targetRef);
         }
         return super.eIsSet(featureID);
     }

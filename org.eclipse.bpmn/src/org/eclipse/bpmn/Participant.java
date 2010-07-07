@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.emf.common.util.EList;
@@ -53,7 +54,7 @@ public interface Participant extends BaseElement {
      *        extendedMetaData="kind='element' name='interfaceRef' namespace='##targetNamespace'"
      * @generated
      */
-    EList<QName> getInterfaceRef();
+    List<QName> getInterfaceRef();
 
     /**
      * Returns the value of the '<em><b>End Point Ref</b></em>' attribute list.
@@ -70,7 +71,7 @@ public interface Participant extends BaseElement {
      *        extendedMetaData="kind='element' name='endPointRef' namespace='##targetNamespace'"
      * @generated
      */
-    EList<QName> getEndPointRef();
+    List<QName> getEndPointRef();
 
     /**
      * Returns the value of the '<em><b>Participant Multiplicity</b></em>' containment reference.

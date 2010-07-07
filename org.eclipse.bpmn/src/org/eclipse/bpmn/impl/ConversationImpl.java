@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.bpmn.Artifact;
@@ -56,8 +57,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ConversationImpl extends CallableElementImpl implements
-        Conversation {
+public class ConversationImpl extends CallableElementImpl implements Conversation {
     /**
      * The cached value of the '{@link #getConversationNodeGroup() <em>Conversation Node Group</em>}' attribute list.
      * <!-- begin-user-doc -->
@@ -144,8 +144,7 @@ public class ConversationImpl extends CallableElementImpl implements
      */
     public FeatureMap getConversationNodeGroup() {
         if (conversationNodeGroup == null) {
-            conversationNodeGroup = new BasicFeatureMap(this,
-                    BpmnPackage.CONVERSATION__CONVERSATION_NODE_GROUP);
+            conversationNodeGroup = new BasicFeatureMap(this, BpmnPackage.CONVERSATION__CONVERSATION_NODE_GROUP);
         }
         return conversationNodeGroup;
     }
@@ -155,9 +154,8 @@ public class ConversationImpl extends CallableElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ConversationNode> getConversationNode() {
-        return getConversationNodeGroup().list(
-                BpmnPackage.eINSTANCE.getConversation_ConversationNode());
+    public List<ConversationNode> getConversationNode() {
+        return getConversationNodeGroup().list(BpmnPackage.eINSTANCE.getConversation_ConversationNode());
     }
 
     /**
@@ -165,11 +163,9 @@ public class ConversationImpl extends CallableElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Participant> getParticipant() {
+    public List<Participant> getParticipant() {
         if (participant == null) {
-            participant = new EObjectContainmentEList<Participant>(
-                    Participant.class, this,
-                    BpmnPackage.CONVERSATION__PARTICIPANT);
+            participant = new EObjectContainmentEList<Participant>(Participant.class, this, BpmnPackage.CONVERSATION__PARTICIPANT);
         }
         return participant;
     }
@@ -181,8 +177,7 @@ public class ConversationImpl extends CallableElementImpl implements
      */
     public FeatureMap getArtifactGroup() {
         if (artifactGroup == null) {
-            artifactGroup = new BasicFeatureMap(this,
-                    BpmnPackage.CONVERSATION__ARTIFACT_GROUP);
+            artifactGroup = new BasicFeatureMap(this, BpmnPackage.CONVERSATION__ARTIFACT_GROUP);
         }
         return artifactGroup;
     }
@@ -192,9 +187,8 @@ public class ConversationImpl extends CallableElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Artifact> getArtifact() {
-        return getArtifactGroup().list(
-                BpmnPackage.eINSTANCE.getConversation_Artifact());
+    public List<Artifact> getArtifact() {
+        return getArtifactGroup().list(BpmnPackage.eINSTANCE.getConversation_Artifact());
     }
 
     /**
@@ -202,11 +196,9 @@ public class ConversationImpl extends CallableElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<MessageFlow> getMessageFlow() {
+    public List<MessageFlow> getMessageFlow() {
         if (messageFlow == null) {
-            messageFlow = new EObjectContainmentEList<MessageFlow>(
-                    MessageFlow.class, this,
-                    BpmnPackage.CONVERSATION__MESSAGE_FLOW);
+            messageFlow = new EObjectContainmentEList<MessageFlow>(MessageFlow.class, this, BpmnPackage.CONVERSATION__MESSAGE_FLOW);
         }
         return messageFlow;
     }
@@ -216,10 +208,9 @@ public class ConversationImpl extends CallableElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<QName> getMessageFlowRef() {
+    public List<QName> getMessageFlowRef() {
         if (messageFlowRef == null) {
-            messageFlowRef = new EDataTypeEList<QName>(QName.class, this,
-                    BpmnPackage.CONVERSATION__MESSAGE_FLOW_REF);
+            messageFlowRef = new EDataTypeEList<QName>(QName.class, this, BpmnPackage.CONVERSATION__MESSAGE_FLOW_REF);
         }
         return messageFlowRef;
     }
@@ -229,11 +220,9 @@ public class ConversationImpl extends CallableElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<CorrelationKey> getCorrelationKey() {
+    public List<CorrelationKey> getCorrelationKey() {
         if (correlationKey == null) {
-            correlationKey = new EObjectContainmentEList<CorrelationKey>(
-                    CorrelationKey.class, this,
-                    BpmnPackage.CONVERSATION__CORRELATION_KEY);
+            correlationKey = new EObjectContainmentEList<CorrelationKey>(CorrelationKey.class, this, BpmnPackage.CONVERSATION__CORRELATION_KEY);
         }
         return correlationKey;
     }
@@ -244,30 +233,22 @@ public class ConversationImpl extends CallableElementImpl implements
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.CONVERSATION__CONVERSATION_NODE_GROUP:
-            return ((InternalEList<?>) getConversationNodeGroup()).basicRemove(
-                    otherEnd, msgs);
+            return ((InternalEList<?>) getConversationNodeGroup()).basicRemove(otherEnd, msgs);
         case BpmnPackage.CONVERSATION__CONVERSATION_NODE:
-            return ((InternalEList<?>) getConversationNode()).basicRemove(
-                    otherEnd, msgs);
+            return ((InternalEList<?>) getConversationNode()).basicRemove(otherEnd, msgs);
         case BpmnPackage.CONVERSATION__PARTICIPANT:
-            return ((InternalEList<?>) getParticipant()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getParticipant()).basicRemove(otherEnd, msgs);
         case BpmnPackage.CONVERSATION__ARTIFACT_GROUP:
-            return ((InternalEList<?>) getArtifactGroup()).basicRemove(
-                    otherEnd, msgs);
+            return ((InternalEList<?>) getArtifactGroup()).basicRemove(otherEnd, msgs);
         case BpmnPackage.CONVERSATION__ARTIFACT:
-            return ((InternalEList<?>) getArtifact()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getArtifact()).basicRemove(otherEnd, msgs);
         case BpmnPackage.CONVERSATION__MESSAGE_FLOW:
-            return ((InternalEList<?>) getMessageFlow()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getMessageFlow()).basicRemove(otherEnd, msgs);
         case BpmnPackage.CONVERSATION__CORRELATION_KEY:
-            return ((InternalEList<?>) getCorrelationKey()).basicRemove(
-                    otherEnd, msgs);
+            return ((InternalEList<?>) getCorrelationKey()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -283,8 +264,7 @@ public class ConversationImpl extends CallableElementImpl implements
         case BpmnPackage.CONVERSATION__CONVERSATION_NODE_GROUP:
             if (coreType)
                 return getConversationNodeGroup();
-            return ((FeatureMap.Internal) getConversationNodeGroup())
-                    .getWrapper();
+            return ((FeatureMap.Internal) getConversationNodeGroup()).getWrapper();
         case BpmnPackage.CONVERSATION__CONVERSATION_NODE:
             return getConversationNode();
         case BpmnPackage.CONVERSATION__PARTICIPANT:
@@ -319,13 +299,11 @@ public class ConversationImpl extends CallableElementImpl implements
             return;
         case BpmnPackage.CONVERSATION__CONVERSATION_NODE:
             getConversationNode().clear();
-            getConversationNode().addAll(
-                    (Collection<? extends ConversationNode>) newValue);
+            getConversationNode().addAll((Collection<? extends ConversationNode>) newValue);
             return;
         case BpmnPackage.CONVERSATION__PARTICIPANT:
             getParticipant().clear();
-            getParticipant().addAll(
-                    (Collection<? extends Participant>) newValue);
+            getParticipant().addAll((Collection<? extends Participant>) newValue);
             return;
         case BpmnPackage.CONVERSATION__ARTIFACT_GROUP:
             ((FeatureMap.Internal) getArtifactGroup()).set(newValue);
@@ -336,8 +314,7 @@ public class ConversationImpl extends CallableElementImpl implements
             return;
         case BpmnPackage.CONVERSATION__MESSAGE_FLOW:
             getMessageFlow().clear();
-            getMessageFlow().addAll(
-                    (Collection<? extends MessageFlow>) newValue);
+            getMessageFlow().addAll((Collection<? extends MessageFlow>) newValue);
             return;
         case BpmnPackage.CONVERSATION__MESSAGE_FLOW_REF:
             getMessageFlowRef().clear();
@@ -345,8 +322,7 @@ public class ConversationImpl extends CallableElementImpl implements
             return;
         case BpmnPackage.CONVERSATION__CORRELATION_KEY:
             getCorrelationKey().clear();
-            getCorrelationKey().addAll(
-                    (Collection<? extends CorrelationKey>) newValue);
+            getCorrelationKey().addAll((Collection<? extends CorrelationKey>) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -397,8 +373,7 @@ public class ConversationImpl extends CallableElementImpl implements
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case BpmnPackage.CONVERSATION__CONVERSATION_NODE_GROUP:
-            return conversationNodeGroup != null
-                    && !conversationNodeGroup.isEmpty();
+            return conversationNodeGroup != null && !conversationNodeGroup.isEmpty();
         case BpmnPackage.CONVERSATION__CONVERSATION_NODE:
             return !getConversationNode().isEmpty();
         case BpmnPackage.CONVERSATION__PARTICIPANT:

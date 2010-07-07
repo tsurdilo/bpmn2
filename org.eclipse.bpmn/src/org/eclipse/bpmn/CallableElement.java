@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.emf.common.util.EList;
@@ -50,7 +51,7 @@ public interface CallableElement extends RootElement {
      *        extendedMetaData="kind='element' name='supportedInterfaceRef' namespace='##targetNamespace'"
      * @generated
      */
-    EList<QName> getSupportedInterfaceRefs();
+    List<QName> getSupportedInterfaceRefs();
 
     /**
      * Returns the value of the '<em><b>Io Specification</b></em>' containment reference.
@@ -94,7 +95,7 @@ public interface CallableElement extends RootElement {
      *        extendedMetaData="kind='element' name='ioBinding' namespace='##targetNamespace'"
      * @generated
      */
-    EList<InputOutputBinding> getIoBindings();
+    List<InputOutputBinding> getIoBindings();
 
     /**
      * Returns the value of the '<em><b>Name</b></em>' attribute.

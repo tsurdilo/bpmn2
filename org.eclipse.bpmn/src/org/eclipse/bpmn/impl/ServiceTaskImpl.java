@@ -122,14 +122,12 @@ public class ServiceTaskImpl extends TaskImpl implements ServiceTask {
      */
     public void setImplementation(ServiceImplementation newImplementation) {
         ServiceImplementation oldImplementation = implementation;
-        implementation = newImplementation == null ? IMPLEMENTATION_EDEFAULT
-                : newImplementation;
+        implementation = newImplementation == null ? IMPLEMENTATION_EDEFAULT : newImplementation;
         boolean oldImplementationESet = implementationESet;
         implementationESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.SERVICE_TASK__IMPLEMENTATION,
-                    oldImplementation, implementation, !oldImplementationESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.SERVICE_TASK__IMPLEMENTATION, oldImplementation, implementation,
+                    !oldImplementationESet));
     }
 
     /**
@@ -143,9 +141,7 @@ public class ServiceTaskImpl extends TaskImpl implements ServiceTask {
         implementation = IMPLEMENTATION_EDEFAULT;
         implementationESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    BpmnPackage.SERVICE_TASK__IMPLEMENTATION,
-                    oldImplementation, IMPLEMENTATION_EDEFAULT,
+            eNotify(new ENotificationImpl(this, Notification.UNSET, BpmnPackage.SERVICE_TASK__IMPLEMENTATION, oldImplementation, IMPLEMENTATION_EDEFAULT,
                     oldImplementationESet));
     }
 
@@ -176,9 +172,7 @@ public class ServiceTaskImpl extends TaskImpl implements ServiceTask {
         QName oldOperation = operation;
         operation = newOperation;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.SERVICE_TASK__OPERATION, oldOperation,
-                    operation));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.SERVICE_TASK__OPERATION, oldOperation, operation));
     }
 
     /**
@@ -244,8 +238,7 @@ public class ServiceTaskImpl extends TaskImpl implements ServiceTask {
         case BpmnPackage.SERVICE_TASK__IMPLEMENTATION:
             return isSetImplementation();
         case BpmnPackage.SERVICE_TASK__OPERATION:
-            return OPERATION_EDEFAULT == null ? operation != null
-                    : !OPERATION_EDEFAULT.equals(operation);
+            return OPERATION_EDEFAULT == null ? operation != null : !OPERATION_EDEFAULT.equals(operation);
         }
         return super.eIsSet(featureID);
     }

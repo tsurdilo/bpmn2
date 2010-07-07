@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.emf.common.util.EList;
@@ -49,7 +50,7 @@ public interface GlobalChoreographyTask extends CallableElement {
      *        extendedMetaData="kind='element' name='participant' namespace='##targetNamespace'"
      * @generated
      */
-    EList<Participant> getParticipant();
+    List<Participant> getParticipant();
 
     /**
      * Returns the value of the '<em><b>Message Flow</b></em>' containment reference list.
@@ -66,7 +67,7 @@ public interface GlobalChoreographyTask extends CallableElement {
      *        extendedMetaData="kind='element' name='messageFlow' namespace='##targetNamespace'"
      * @generated
      */
-    EList<MessageFlow> getMessageFlow();
+    List<MessageFlow> getMessageFlow();
 
     /**
      * Returns the value of the '<em><b>Initiating Participant Ref</b></em>' attribute.

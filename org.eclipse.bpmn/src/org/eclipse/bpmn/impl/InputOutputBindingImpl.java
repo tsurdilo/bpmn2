@@ -37,8 +37,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class InputOutputBindingImpl extends BaseElementImpl implements
-        InputOutputBinding {
+public class InputOutputBindingImpl extends BaseElementImpl implements InputOutputBinding {
     /**
      * The default value of the '{@link #getInputDataRef() <em>Input Data Ref</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -136,9 +135,7 @@ public class InputOutputBindingImpl extends BaseElementImpl implements
         String oldInputDataRef = inputDataRef;
         inputDataRef = newInputDataRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.INPUT_OUTPUT_BINDING__INPUT_DATA_REF,
-                    oldInputDataRef, inputDataRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.INPUT_OUTPUT_BINDING__INPUT_DATA_REF, oldInputDataRef, inputDataRef));
     }
 
     /**
@@ -159,9 +156,7 @@ public class InputOutputBindingImpl extends BaseElementImpl implements
         QName oldOperationRef = operationRef;
         operationRef = newOperationRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.INPUT_OUTPUT_BINDING__OPERATION_REF,
-                    oldOperationRef, operationRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.INPUT_OUTPUT_BINDING__OPERATION_REF, oldOperationRef, operationRef));
     }
 
     /**
@@ -182,9 +177,7 @@ public class InputOutputBindingImpl extends BaseElementImpl implements
         String oldOutputDataRef = outputDataRef;
         outputDataRef = newOutputDataRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF,
-                    oldOutputDataRef, outputDataRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF, oldOutputDataRef, outputDataRef));
     }
 
     /**
@@ -256,14 +249,11 @@ public class InputOutputBindingImpl extends BaseElementImpl implements
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case BpmnPackage.INPUT_OUTPUT_BINDING__INPUT_DATA_REF:
-            return INPUT_DATA_REF_EDEFAULT == null ? inputDataRef != null
-                    : !INPUT_DATA_REF_EDEFAULT.equals(inputDataRef);
+            return INPUT_DATA_REF_EDEFAULT == null ? inputDataRef != null : !INPUT_DATA_REF_EDEFAULT.equals(inputDataRef);
         case BpmnPackage.INPUT_OUTPUT_BINDING__OPERATION_REF:
-            return OPERATION_REF_EDEFAULT == null ? operationRef != null
-                    : !OPERATION_REF_EDEFAULT.equals(operationRef);
+            return OPERATION_REF_EDEFAULT == null ? operationRef != null : !OPERATION_REF_EDEFAULT.equals(operationRef);
         case BpmnPackage.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF:
-            return OUTPUT_DATA_REF_EDEFAULT == null ? outputDataRef != null
-                    : !OUTPUT_DATA_REF_EDEFAULT.equals(outputDataRef);
+            return OUTPUT_DATA_REF_EDEFAULT == null ? outputDataRef != null : !OUTPUT_DATA_REF_EDEFAULT.equals(outputDataRef);
         }
         return super.eIsSet(featureID);
     }

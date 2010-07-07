@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.bpmn.Auditing;
@@ -48,8 +49,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  *
  * @generated
  */
-public abstract class FlowElementImpl extends BaseElementImpl implements
-        FlowElement {
+public abstract class FlowElementImpl extends BaseElementImpl implements FlowElement {
     /**
      * The cached value of the '{@link #getAuditing() <em>Auditing</em>}' containment reference.
      * <!-- begin-user-doc -->
@@ -133,14 +133,11 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetAuditing(Auditing newAuditing,
-            NotificationChain msgs) {
+    public NotificationChain basicSetAuditing(Auditing newAuditing, NotificationChain msgs) {
         Auditing oldAuditing = auditing;
         auditing = newAuditing;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this,
-                    Notification.SET, BpmnPackage.FLOW_ELEMENT__AUDITING,
-                    oldAuditing, newAuditing);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BpmnPackage.FLOW_ELEMENT__AUDITING, oldAuditing, newAuditing);
             if (msgs == null)
                 msgs = notification;
             else
@@ -158,22 +155,14 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
         if (newAuditing != auditing) {
             NotificationChain msgs = null;
             if (auditing != null)
-                msgs = ((InternalEObject) auditing).eInverseRemove(this,
-                        EOPPOSITE_FEATURE_BASE
-                                - BpmnPackage.FLOW_ELEMENT__AUDITING, null,
-                        msgs);
+                msgs = ((InternalEObject) auditing).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.FLOW_ELEMENT__AUDITING, null, msgs);
             if (newAuditing != null)
-                msgs = ((InternalEObject) newAuditing).eInverseAdd(this,
-                        EOPPOSITE_FEATURE_BASE
-                                - BpmnPackage.FLOW_ELEMENT__AUDITING, null,
-                        msgs);
+                msgs = ((InternalEObject) newAuditing).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.FLOW_ELEMENT__AUDITING, null, msgs);
             msgs = basicSetAuditing(newAuditing, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.FLOW_ELEMENT__AUDITING, newAuditing,
-                    newAuditing));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.FLOW_ELEMENT__AUDITING, newAuditing, newAuditing));
     }
 
     /**
@@ -190,14 +179,11 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetMonitoring(Monitoring newMonitoring,
-            NotificationChain msgs) {
+    public NotificationChain basicSetMonitoring(Monitoring newMonitoring, NotificationChain msgs) {
         Monitoring oldMonitoring = monitoring;
         monitoring = newMonitoring;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this,
-                    Notification.SET, BpmnPackage.FLOW_ELEMENT__MONITORING,
-                    oldMonitoring, newMonitoring);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BpmnPackage.FLOW_ELEMENT__MONITORING, oldMonitoring, newMonitoring);
             if (msgs == null)
                 msgs = notification;
             else
@@ -215,22 +201,14 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
         if (newMonitoring != monitoring) {
             NotificationChain msgs = null;
             if (monitoring != null)
-                msgs = ((InternalEObject) monitoring).eInverseRemove(this,
-                        EOPPOSITE_FEATURE_BASE
-                                - BpmnPackage.FLOW_ELEMENT__MONITORING, null,
-                        msgs);
+                msgs = ((InternalEObject) monitoring).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.FLOW_ELEMENT__MONITORING, null, msgs);
             if (newMonitoring != null)
-                msgs = ((InternalEObject) newMonitoring).eInverseAdd(this,
-                        EOPPOSITE_FEATURE_BASE
-                                - BpmnPackage.FLOW_ELEMENT__MONITORING, null,
-                        msgs);
+                msgs = ((InternalEObject) newMonitoring).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BpmnPackage.FLOW_ELEMENT__MONITORING, null, msgs);
             msgs = basicSetMonitoring(newMonitoring, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.FLOW_ELEMENT__MONITORING, newMonitoring,
-                    newMonitoring));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.FLOW_ELEMENT__MONITORING, newMonitoring, newMonitoring));
     }
 
     /**
@@ -238,10 +216,9 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<QName> getCategoryValueRef() {
+    public List<QName> getCategoryValueRef() {
         if (categoryValueRef == null) {
-            categoryValueRef = new EDataTypeEList<QName>(QName.class, this,
-                    BpmnPackage.FLOW_ELEMENT__CATEGORY_VALUE_REF);
+            categoryValueRef = new EDataTypeEList<QName>(QName.class, this, BpmnPackage.FLOW_ELEMENT__CATEGORY_VALUE_REF);
         }
         return categoryValueRef;
     }
@@ -264,8 +241,7 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.FLOW_ELEMENT__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.FLOW_ELEMENT__NAME, oldName, name));
     }
 
     /**
@@ -274,8 +250,7 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.FLOW_ELEMENT__AUDITING:
             return basicSetAuditing(null, msgs);
@@ -322,8 +297,7 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
             return;
         case BpmnPackage.FLOW_ELEMENT__CATEGORY_VALUE_REF:
             getCategoryValueRef().clear();
-            getCategoryValueRef()
-                    .addAll((Collection<? extends QName>) newValue);
+            getCategoryValueRef().addAll((Collection<? extends QName>) newValue);
             return;
         case BpmnPackage.FLOW_ELEMENT__NAME:
             setName((String) newValue);
@@ -371,8 +345,7 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
         case BpmnPackage.FLOW_ELEMENT__CATEGORY_VALUE_REF:
             return categoryValueRef != null && !categoryValueRef.isEmpty();
         case BpmnPackage.FLOW_ELEMENT__NAME:
-            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-                    .equals(name);
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }

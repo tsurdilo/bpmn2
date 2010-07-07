@@ -13,6 +13,7 @@ package org.eclipse.bpmn.di.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn.di.Connector;
 import org.eclipse.bpmn.di.DIPackage;
 import org.eclipse.bpmn.di.Diagram;
@@ -75,10 +76,9 @@ public class DiagramImpl extends ViewImpl implements Diagram {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Connector> getConnector() {
+    public List<Connector> getConnector() {
         if (connector == null) {
-            connector = new EObjectContainmentEList<Connector>(Connector.class,
-                    this, DIPackage.DIAGRAM__CONNECTOR);
+            connector = new EObjectContainmentEList<Connector>(Connector.class, this, DIPackage.DIAGRAM__CONNECTOR);
         }
         return connector;
     }
@@ -89,12 +89,10 @@ public class DiagramImpl extends ViewImpl implements Diagram {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case DIPackage.DIAGRAM__CONNECTOR:
-            return ((InternalEList<?>) getConnector()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getConnector()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }

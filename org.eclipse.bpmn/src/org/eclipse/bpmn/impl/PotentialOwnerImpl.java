@@ -25,8 +25,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class PotentialOwnerImpl extends HumanPerformerImpl implements
-        PotentialOwner {
+public class PotentialOwnerImpl extends HumanPerformerImpl implements PotentialOwner {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

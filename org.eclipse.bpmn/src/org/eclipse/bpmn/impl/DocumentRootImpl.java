@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn.impl;
 
+import java.util.Map;
 import org.eclipse.bpmn.Activity;
 import org.eclipse.bpmn.ActivityResource;
 import org.eclipse.bpmn.AdHocSubProcess;
@@ -377,14 +378,12 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EMap<String, String> getXMLNSPrefixMap() {
+    public Map<String, String> getXMLNSPrefixMap() {
         if (xMLNSPrefixMap == null) {
-            xMLNSPrefixMap = new EcoreEMap<String, String>(
-                    EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY,
-                    EStringToStringMapEntryImpl.class, this,
+            xMLNSPrefixMap = new EcoreEMap<String, String>(EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY, EStringToStringMapEntryImpl.class, this,
                     BpmnPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP);
         }
-        return xMLNSPrefixMap;
+        return xMLNSPrefixMap.map();
     }
 
     /**
@@ -392,14 +391,12 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EMap<String, String> getXSISchemaLocation() {
+    public Map<String, String> getXSISchemaLocation() {
         if (xSISchemaLocation == null) {
-            xSISchemaLocation = new EcoreEMap<String, String>(
-                    EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY,
-                    EStringToStringMapEntryImpl.class, this,
+            xSISchemaLocation = new EcoreEMap<String, String>(EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY, EStringToStringMapEntryImpl.class, this,
                     BpmnPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION);
         }
-        return xSISchemaLocation;
+        return xSISchemaLocation.map();
     }
 
     /**
@@ -408,8 +405,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Activity getActivity() {
-        return (Activity) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Activity(), true);
+        return (Activity) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Activity(), true);
     }
 
     /**
@@ -417,11 +413,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetActivity(Activity newActivity,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Activity(), newActivity,
-                msgs);
+    public NotificationChain basicSetActivity(Activity newActivity, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Activity(), newActivity, msgs);
     }
 
     /**
@@ -430,8 +423,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setActivity(Activity newActivity) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Activity(), newActivity);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Activity(), newActivity);
     }
 
     /**
@@ -440,8 +432,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ActivityResource getActivityResource() {
-        return (ActivityResource) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ActivityResource(), true);
+        return (ActivityResource) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_ActivityResource(), true);
     }
 
     /**
@@ -449,11 +440,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetActivityResource(
-            ActivityResource newActivityResource, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ActivityResource(),
-                newActivityResource, msgs);
+    public NotificationChain basicSetActivityResource(ActivityResource newActivityResource, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_ActivityResource(), newActivityResource, msgs);
     }
 
     /**
@@ -462,8 +450,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setActivityResource(ActivityResource newActivityResource) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_ActivityResource(), newActivityResource);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_ActivityResource(), newActivityResource);
     }
 
     /**
@@ -472,8 +459,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public AdHocSubProcess getAdHocSubProcess() {
-        return (AdHocSubProcess) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_AdHocSubProcess(), true);
+        return (AdHocSubProcess) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_AdHocSubProcess(), true);
     }
 
     /**
@@ -481,11 +467,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetAdHocSubProcess(
-            AdHocSubProcess newAdHocSubProcess, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_AdHocSubProcess(),
-                newAdHocSubProcess, msgs);
+    public NotificationChain basicSetAdHocSubProcess(AdHocSubProcess newAdHocSubProcess, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_AdHocSubProcess(), newAdHocSubProcess, msgs);
     }
 
     /**
@@ -494,8 +477,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setAdHocSubProcess(AdHocSubProcess newAdHocSubProcess) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_AdHocSubProcess(), newAdHocSubProcess);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_AdHocSubProcess(), newAdHocSubProcess);
     }
 
     /**
@@ -504,8 +486,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public FlowElement getFlowElement() {
-        return (FlowElement) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_FlowElement(), true);
+        return (FlowElement) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_FlowElement(), true);
     }
 
     /**
@@ -513,11 +494,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetFlowElement(FlowElement newFlowElement,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_FlowElement(),
-                newFlowElement, msgs);
+    public NotificationChain basicSetFlowElement(FlowElement newFlowElement, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_FlowElement(), newFlowElement, msgs);
     }
 
     /**
@@ -526,8 +504,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setFlowElement(FlowElement newFlowElement) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_FlowElement(), newFlowElement);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_FlowElement(), newFlowElement);
     }
 
     /**
@@ -536,8 +513,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Artifact getArtifact() {
-        return (Artifact) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Artifact(), true);
+        return (Artifact) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Artifact(), true);
     }
 
     /**
@@ -545,11 +521,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetArtifact(Artifact newArtifact,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Artifact(), newArtifact,
-                msgs);
+    public NotificationChain basicSetArtifact(Artifact newArtifact, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Artifact(), newArtifact, msgs);
     }
 
     /**
@@ -558,8 +531,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setArtifact(Artifact newArtifact) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Artifact(), newArtifact);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Artifact(), newArtifact);
     }
 
     /**
@@ -568,8 +540,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Assignment getAssignment() {
-        return (Assignment) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Assignment(), true);
+        return (Assignment) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Assignment(), true);
     }
 
     /**
@@ -577,11 +548,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetAssignment(Assignment newAssignment,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Assignment(),
-                newAssignment, msgs);
+    public NotificationChain basicSetAssignment(Assignment newAssignment, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Assignment(), newAssignment, msgs);
     }
 
     /**
@@ -590,8 +558,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setAssignment(Assignment newAssignment) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Assignment(), newAssignment);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Assignment(), newAssignment);
     }
 
     /**
@@ -600,8 +567,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Association getAssociation() {
-        return (Association) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Association(), true);
+        return (Association) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Association(), true);
     }
 
     /**
@@ -609,11 +575,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetAssociation(Association newAssociation,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Association(),
-                newAssociation, msgs);
+    public NotificationChain basicSetAssociation(Association newAssociation, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Association(), newAssociation, msgs);
     }
 
     /**
@@ -622,8 +585,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setAssociation(Association newAssociation) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Association(), newAssociation);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Association(), newAssociation);
     }
 
     /**
@@ -632,8 +594,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Auditing getAuditing() {
-        return (Auditing) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Auditing(), true);
+        return (Auditing) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Auditing(), true);
     }
 
     /**
@@ -641,11 +602,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetAuditing(Auditing newAuditing,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Auditing(), newAuditing,
-                msgs);
+    public NotificationChain basicSetAuditing(Auditing newAuditing, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Auditing(), newAuditing, msgs);
     }
 
     /**
@@ -654,8 +612,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setAuditing(Auditing newAuditing) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Auditing(), newAuditing);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Auditing(), newAuditing);
     }
 
     /**
@@ -664,8 +621,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public BaseElement getBaseElement() {
-        return (BaseElement) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_BaseElement(), true);
+        return (BaseElement) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_BaseElement(), true);
     }
 
     /**
@@ -673,11 +629,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetBaseElement(BaseElement newBaseElement,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_BaseElement(),
-                newBaseElement, msgs);
+    public NotificationChain basicSetBaseElement(BaseElement newBaseElement, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_BaseElement(), newBaseElement, msgs);
     }
 
     /**
@@ -686,8 +639,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setBaseElement(BaseElement newBaseElement) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_BaseElement(), newBaseElement);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_BaseElement(), newBaseElement);
     }
 
     /**
@@ -696,9 +648,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public BaseElementWithMixedContent getBaseElementWithMixedContent() {
-        return (BaseElementWithMixedContent) getMixed().get(
-                BpmnPackage.eINSTANCE
-                        .getDocumentRoot_BaseElementWithMixedContent(), true);
+        return (BaseElementWithMixedContent) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_BaseElementWithMixedContent(), true);
     }
 
     /**
@@ -706,407 +656,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetBaseElementWithMixedContent(
-            BaseElementWithMixedContent newBaseElementWithMixedContent,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE
-                        .getDocumentRoot_BaseElementWithMixedContent(),
-                newBaseElementWithMixedContent, msgs);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setBaseElementWithMixedContent(
-            BaseElementWithMixedContent newBaseElementWithMixedContent) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_BaseElementWithMixedContent(),
-                newBaseElementWithMixedContent);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public BoundaryEvent getBoundaryEvent() {
-        return (BoundaryEvent) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_BoundaryEvent(), true);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetBoundaryEvent(
-            BoundaryEvent newBoundaryEvent, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_BoundaryEvent(),
-                newBoundaryEvent, msgs);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setBoundaryEvent(BoundaryEvent newBoundaryEvent) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_BoundaryEvent(), newBoundaryEvent);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public BusinessRuleTask getBusinessRuleTask() {
-        return (BusinessRuleTask) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_BusinessRuleTask(), true);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetBusinessRuleTask(
-            BusinessRuleTask newBusinessRuleTask, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_BusinessRuleTask(),
-                newBusinessRuleTask, msgs);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setBusinessRuleTask(BusinessRuleTask newBusinessRuleTask) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_BusinessRuleTask(), newBusinessRuleTask);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public CallableElement getCallableElement() {
-        return (CallableElement) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_CallableElement(), true);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetCallableElement(
-            CallableElement newCallableElement, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_CallableElement(),
-                newCallableElement, msgs);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setCallableElement(CallableElement newCallableElement) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_CallableElement(), newCallableElement);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public CallActivity getCallActivity() {
-        return (CallActivity) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_CallActivity(), true);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetCallActivity(CallActivity newCallActivity,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_CallActivity(),
-                newCallActivity, msgs);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setCallActivity(CallActivity newCallActivity) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_CallActivity(), newCallActivity);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public CallChoreographyActivity getCallChoreographyActivity() {
-        return (CallChoreographyActivity) getMixed().get(
-                BpmnPackage.eINSTANCE
-                        .getDocumentRoot_CallChoreographyActivity(), true);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetCallChoreographyActivity(
-            CallChoreographyActivity newCallChoreographyActivity,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE
-                        .getDocumentRoot_CallChoreographyActivity(),
-                newCallChoreographyActivity, msgs);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setCallChoreographyActivity(
-            CallChoreographyActivity newCallChoreographyActivity) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_CallChoreographyActivity(),
-                newCallChoreographyActivity);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public CallConversation getCallConversation() {
-        return (CallConversation) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_CallConversation(), true);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetCallConversation(
-            CallConversation newCallConversation, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_CallConversation(),
-                newCallConversation, msgs);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setCallConversation(CallConversation newCallConversation) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_CallConversation(), newCallConversation);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public ConversationNode getConversationNode() {
-        return (ConversationNode) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ConversationNode(), true);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetConversationNode(
-            ConversationNode newConversationNode, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ConversationNode(),
-                newConversationNode, msgs);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setConversationNode(ConversationNode newConversationNode) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_ConversationNode(), newConversationNode);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public CancelEventDefinition getCancelEventDefinition() {
-        return (CancelEventDefinition) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_CancelEventDefinition(),
-                true);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetCancelEventDefinition(
-            CancelEventDefinition newCancelEventDefinition,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_CancelEventDefinition(),
-                newCancelEventDefinition, msgs);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setCancelEventDefinition(
-            CancelEventDefinition newCancelEventDefinition) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_CancelEventDefinition(),
-                newCancelEventDefinition);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public EventDefinition getEventDefinition() {
-        return (EventDefinition) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_EventDefinition(), true);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetEventDefinition(
-            EventDefinition newEventDefinition, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_EventDefinition(),
-                newEventDefinition, msgs);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setEventDefinition(EventDefinition newEventDefinition) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_EventDefinition(), newEventDefinition);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public RootElement getRootElement() {
-        return (RootElement) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_RootElement(), true);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetRootElement(RootElement newRootElement,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_RootElement(),
-                newRootElement, msgs);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setRootElement(RootElement newRootElement) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_RootElement(), newRootElement);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public CatchEvent getCatchEvent() {
-        return (CatchEvent) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_CatchEvent(), true);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetCatchEvent(CatchEvent newCatchEvent,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_CatchEvent(),
-                newCatchEvent, msgs);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setCatchEvent(CatchEvent newCatchEvent) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_CatchEvent(), newCatchEvent);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public Category getCategory() {
-        return (Category) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Category(), true);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetCategory(Category newCategory,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Category(), newCategory,
+    public NotificationChain basicSetBaseElementWithMixedContent(BaseElementWithMixedContent newBaseElementWithMixedContent, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_BaseElementWithMixedContent(), newBaseElementWithMixedContent,
                 msgs);
     }
 
@@ -1115,9 +666,332 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
+    public void setBaseElementWithMixedContent(BaseElementWithMixedContent newBaseElementWithMixedContent) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_BaseElementWithMixedContent(), newBaseElementWithMixedContent);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public BoundaryEvent getBoundaryEvent() {
+        return (BoundaryEvent) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_BoundaryEvent(), true);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetBoundaryEvent(BoundaryEvent newBoundaryEvent, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_BoundaryEvent(), newBoundaryEvent, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setBoundaryEvent(BoundaryEvent newBoundaryEvent) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_BoundaryEvent(), newBoundaryEvent);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public BusinessRuleTask getBusinessRuleTask() {
+        return (BusinessRuleTask) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_BusinessRuleTask(), true);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetBusinessRuleTask(BusinessRuleTask newBusinessRuleTask, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_BusinessRuleTask(), newBusinessRuleTask, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setBusinessRuleTask(BusinessRuleTask newBusinessRuleTask) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_BusinessRuleTask(), newBusinessRuleTask);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public CallableElement getCallableElement() {
+        return (CallableElement) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_CallableElement(), true);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetCallableElement(CallableElement newCallableElement, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_CallableElement(), newCallableElement, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setCallableElement(CallableElement newCallableElement) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_CallableElement(), newCallableElement);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public CallActivity getCallActivity() {
+        return (CallActivity) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_CallActivity(), true);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetCallActivity(CallActivity newCallActivity, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_CallActivity(), newCallActivity, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setCallActivity(CallActivity newCallActivity) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_CallActivity(), newCallActivity);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public CallChoreographyActivity getCallChoreographyActivity() {
+        return (CallChoreographyActivity) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_CallChoreographyActivity(), true);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetCallChoreographyActivity(CallChoreographyActivity newCallChoreographyActivity, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_CallChoreographyActivity(), newCallChoreographyActivity, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setCallChoreographyActivity(CallChoreographyActivity newCallChoreographyActivity) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_CallChoreographyActivity(), newCallChoreographyActivity);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public CallConversation getCallConversation() {
+        return (CallConversation) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_CallConversation(), true);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetCallConversation(CallConversation newCallConversation, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_CallConversation(), newCallConversation, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setCallConversation(CallConversation newCallConversation) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_CallConversation(), newCallConversation);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public ConversationNode getConversationNode() {
+        return (ConversationNode) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_ConversationNode(), true);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetConversationNode(ConversationNode newConversationNode, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_ConversationNode(), newConversationNode, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setConversationNode(ConversationNode newConversationNode) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_ConversationNode(), newConversationNode);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public CancelEventDefinition getCancelEventDefinition() {
+        return (CancelEventDefinition) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_CancelEventDefinition(), true);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetCancelEventDefinition(CancelEventDefinition newCancelEventDefinition, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_CancelEventDefinition(), newCancelEventDefinition, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setCancelEventDefinition(CancelEventDefinition newCancelEventDefinition) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_CancelEventDefinition(), newCancelEventDefinition);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EventDefinition getEventDefinition() {
+        return (EventDefinition) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_EventDefinition(), true);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetEventDefinition(EventDefinition newEventDefinition, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_EventDefinition(), newEventDefinition, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setEventDefinition(EventDefinition newEventDefinition) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_EventDefinition(), newEventDefinition);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public RootElement getRootElement() {
+        return (RootElement) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_RootElement(), true);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetRootElement(RootElement newRootElement, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_RootElement(), newRootElement, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setRootElement(RootElement newRootElement) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_RootElement(), newRootElement);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public CatchEvent getCatchEvent() {
+        return (CatchEvent) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_CatchEvent(), true);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetCatchEvent(CatchEvent newCatchEvent, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_CatchEvent(), newCatchEvent, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setCatchEvent(CatchEvent newCatchEvent) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_CatchEvent(), newCatchEvent);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Category getCategory() {
+        return (Category) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Category(), true);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetCategory(Category newCategory, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Category(), newCategory, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public void setCategory(Category newCategory) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Category(), newCategory);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Category(), newCategory);
     }
 
     /**
@@ -1126,8 +1000,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public CategoryValue getCategoryValue() {
-        return (CategoryValue) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_CategoryValue(), true);
+        return (CategoryValue) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_CategoryValue(), true);
     }
 
     /**
@@ -1135,11 +1008,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetCategoryValue(
-            CategoryValue newCategoryValue, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_CategoryValue(),
-                newCategoryValue, msgs);
+    public NotificationChain basicSetCategoryValue(CategoryValue newCategoryValue, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_CategoryValue(), newCategoryValue, msgs);
     }
 
     /**
@@ -1148,8 +1018,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setCategoryValue(CategoryValue newCategoryValue) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_CategoryValue(), newCategoryValue);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_CategoryValue(), newCategoryValue);
     }
 
     /**
@@ -1158,8 +1027,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Choreography getChoreography() {
-        return (Choreography) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Choreography(), true);
+        return (Choreography) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Choreography(), true);
     }
 
     /**
@@ -1167,11 +1035,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetChoreography(Choreography newChoreography,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Choreography(),
-                newChoreography, msgs);
+    public NotificationChain basicSetChoreography(Choreography newChoreography, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Choreography(), newChoreography, msgs);
     }
 
     /**
@@ -1180,8 +1045,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setChoreography(Choreography newChoreography) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Choreography(), newChoreography);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Choreography(), newChoreography);
     }
 
     /**
@@ -1190,9 +1054,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ChoreographyActivity getChoreographyActivity() {
-        return (ChoreographyActivity) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ChoreographyActivity(),
-                true);
+        return (ChoreographyActivity) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_ChoreographyActivity(), true);
     }
 
     /**
@@ -1200,11 +1062,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetChoreographyActivity(
-            ChoreographyActivity newChoreographyActivity, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ChoreographyActivity(),
-                newChoreographyActivity, msgs);
+    public NotificationChain basicSetChoreographyActivity(ChoreographyActivity newChoreographyActivity, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_ChoreographyActivity(), newChoreographyActivity, msgs);
     }
 
     /**
@@ -1212,11 +1071,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setChoreographyActivity(
-            ChoreographyActivity newChoreographyActivity) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_ChoreographyActivity(),
-                newChoreographyActivity);
+    public void setChoreographyActivity(ChoreographyActivity newChoreographyActivity) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_ChoreographyActivity(), newChoreographyActivity);
     }
 
     /**
@@ -1225,9 +1081,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ChoreographySubProcess getChoreographySubProcess() {
-        return (ChoreographySubProcess) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ChoreographySubProcess(),
-                true);
+        return (ChoreographySubProcess) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_ChoreographySubProcess(), true);
     }
 
     /**
@@ -1235,12 +1089,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetChoreographySubProcess(
-            ChoreographySubProcess newChoreographySubProcess,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ChoreographySubProcess(),
-                newChoreographySubProcess, msgs);
+    public NotificationChain basicSetChoreographySubProcess(ChoreographySubProcess newChoreographySubProcess, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_ChoreographySubProcess(), newChoreographySubProcess, msgs);
     }
 
     /**
@@ -1248,11 +1098,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setChoreographySubProcess(
-            ChoreographySubProcess newChoreographySubProcess) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_ChoreographySubProcess(),
-                newChoreographySubProcess);
+    public void setChoreographySubProcess(ChoreographySubProcess newChoreographySubProcess) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_ChoreographySubProcess(), newChoreographySubProcess);
     }
 
     /**
@@ -1261,8 +1108,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ChoreographyTask getChoreographyTask() {
-        return (ChoreographyTask) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ChoreographyTask(), true);
+        return (ChoreographyTask) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_ChoreographyTask(), true);
     }
 
     /**
@@ -1270,11 +1116,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetChoreographyTask(
-            ChoreographyTask newChoreographyTask, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ChoreographyTask(),
-                newChoreographyTask, msgs);
+    public NotificationChain basicSetChoreographyTask(ChoreographyTask newChoreographyTask, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_ChoreographyTask(), newChoreographyTask, msgs);
     }
 
     /**
@@ -1283,8 +1126,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setChoreographyTask(ChoreographyTask newChoreographyTask) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_ChoreographyTask(), newChoreographyTask);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_ChoreographyTask(), newChoreographyTask);
     }
 
     /**
@@ -1293,8 +1135,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Collaboration getCollaboration() {
-        return (Collaboration) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Collaboration(), true);
+        return (Collaboration) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Collaboration(), true);
     }
 
     /**
@@ -1302,11 +1143,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetCollaboration(
-            Collaboration newCollaboration, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Collaboration(),
-                newCollaboration, msgs);
+    public NotificationChain basicSetCollaboration(Collaboration newCollaboration, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Collaboration(), newCollaboration, msgs);
     }
 
     /**
@@ -1315,8 +1153,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setCollaboration(Collaboration newCollaboration) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Collaboration(), newCollaboration);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Collaboration(), newCollaboration);
     }
 
     /**
@@ -1325,8 +1162,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Communication getCommunication() {
-        return (Communication) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Communication(), true);
+        return (Communication) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Communication(), true);
     }
 
     /**
@@ -1334,11 +1170,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetCommunication(
-            Communication newCommunication, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Communication(),
-                newCommunication, msgs);
+    public NotificationChain basicSetCommunication(Communication newCommunication, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Communication(), newCommunication, msgs);
     }
 
     /**
@@ -1347,8 +1180,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setCommunication(Communication newCommunication) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Communication(), newCommunication);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Communication(), newCommunication);
     }
 
     /**
@@ -1357,9 +1189,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public CompensateEventDefinition getCompensateEventDefinition() {
-        return (CompensateEventDefinition) getMixed().get(
-                BpmnPackage.eINSTANCE
-                        .getDocumentRoot_CompensateEventDefinition(), true);
+        return (CompensateEventDefinition) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_CompensateEventDefinition(), true);
     }
 
     /**
@@ -1367,13 +1197,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetCompensateEventDefinition(
-            CompensateEventDefinition newCompensateEventDefinition,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE
-                        .getDocumentRoot_CompensateEventDefinition(),
-                newCompensateEventDefinition, msgs);
+    public NotificationChain basicSetCompensateEventDefinition(CompensateEventDefinition newCompensateEventDefinition, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_CompensateEventDefinition(), newCompensateEventDefinition,
+                msgs);
     }
 
     /**
@@ -1381,11 +1207,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setCompensateEventDefinition(
-            CompensateEventDefinition newCompensateEventDefinition) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_CompensateEventDefinition(),
-                newCompensateEventDefinition);
+    public void setCompensateEventDefinition(CompensateEventDefinition newCompensateEventDefinition) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_CompensateEventDefinition(), newCompensateEventDefinition);
     }
 
     /**
@@ -1394,9 +1217,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ComplexBehaviorDefinition getComplexBehaviorDefinition() {
-        return (ComplexBehaviorDefinition) getMixed().get(
-                BpmnPackage.eINSTANCE
-                        .getDocumentRoot_ComplexBehaviorDefinition(), true);
+        return (ComplexBehaviorDefinition) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_ComplexBehaviorDefinition(), true);
     }
 
     /**
@@ -1404,13 +1225,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetComplexBehaviorDefinition(
-            ComplexBehaviorDefinition newComplexBehaviorDefinition,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE
-                        .getDocumentRoot_ComplexBehaviorDefinition(),
-                newComplexBehaviorDefinition, msgs);
+    public NotificationChain basicSetComplexBehaviorDefinition(ComplexBehaviorDefinition newComplexBehaviorDefinition, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_ComplexBehaviorDefinition(), newComplexBehaviorDefinition,
+                msgs);
     }
 
     /**
@@ -1418,11 +1235,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setComplexBehaviorDefinition(
-            ComplexBehaviorDefinition newComplexBehaviorDefinition) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_ComplexBehaviorDefinition(),
-                newComplexBehaviorDefinition);
+    public void setComplexBehaviorDefinition(ComplexBehaviorDefinition newComplexBehaviorDefinition) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_ComplexBehaviorDefinition(), newComplexBehaviorDefinition);
     }
 
     /**
@@ -1431,8 +1245,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ComplexGateway getComplexGateway() {
-        return (ComplexGateway) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ComplexGateway(), true);
+        return (ComplexGateway) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_ComplexGateway(), true);
     }
 
     /**
@@ -1440,11 +1253,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetComplexGateway(
-            ComplexGateway newComplexGateway, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ComplexGateway(),
-                newComplexGateway, msgs);
+    public NotificationChain basicSetComplexGateway(ComplexGateway newComplexGateway, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_ComplexGateway(), newComplexGateway, msgs);
     }
 
     /**
@@ -1453,8 +1263,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setComplexGateway(ComplexGateway newComplexGateway) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_ComplexGateway(), newComplexGateway);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_ComplexGateway(), newComplexGateway);
     }
 
     /**
@@ -1463,9 +1272,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ConditionalEventDefinition getConditionalEventDefinition() {
-        return (ConditionalEventDefinition) getMixed().get(
-                BpmnPackage.eINSTANCE
-                        .getDocumentRoot_ConditionalEventDefinition(), true);
+        return (ConditionalEventDefinition) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_ConditionalEventDefinition(), true);
     }
 
     /**
@@ -1473,13 +1280,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetConditionalEventDefinition(
-            ConditionalEventDefinition newConditionalEventDefinition,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE
-                        .getDocumentRoot_ConditionalEventDefinition(),
-                newConditionalEventDefinition, msgs);
+    public NotificationChain basicSetConditionalEventDefinition(ConditionalEventDefinition newConditionalEventDefinition, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_ConditionalEventDefinition(), newConditionalEventDefinition,
+                msgs);
     }
 
     /**
@@ -1487,11 +1290,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setConditionalEventDefinition(
-            ConditionalEventDefinition newConditionalEventDefinition) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_ConditionalEventDefinition(),
-                newConditionalEventDefinition);
+    public void setConditionalEventDefinition(ConditionalEventDefinition newConditionalEventDefinition) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_ConditionalEventDefinition(), newConditionalEventDefinition);
     }
 
     /**
@@ -1500,8 +1300,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Conversation getConversation() {
-        return (Conversation) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Conversation(), true);
+        return (Conversation) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Conversation(), true);
     }
 
     /**
@@ -1509,11 +1308,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetConversation(Conversation newConversation,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Conversation(),
-                newConversation, msgs);
+    public NotificationChain basicSetConversation(Conversation newConversation, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Conversation(), newConversation, msgs);
     }
 
     /**
@@ -1522,8 +1318,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setConversation(Conversation newConversation) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Conversation(), newConversation);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Conversation(), newConversation);
     }
 
     /**
@@ -1532,11 +1327,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ConversationAssociation getConversationAssociation() {
-        return (ConversationAssociation) getMixed()
-                .get(
-                        BpmnPackage.eINSTANCE
-                                .getDocumentRoot_ConversationAssociation(),
-                        true);
+        return (ConversationAssociation) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_ConversationAssociation(), true);
     }
 
     /**
@@ -1544,13 +1335,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetConversationAssociation(
-            ConversationAssociation newConversationAssociation,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed())
-                .basicAdd(BpmnPackage.eINSTANCE
-                        .getDocumentRoot_ConversationAssociation(),
-                        newConversationAssociation, msgs);
+    public NotificationChain basicSetConversationAssociation(ConversationAssociation newConversationAssociation, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_ConversationAssociation(), newConversationAssociation, msgs);
     }
 
     /**
@@ -1558,11 +1344,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setConversationAssociation(
-            ConversationAssociation newConversationAssociation) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_ConversationAssociation(),
-                newConversationAssociation);
+    public void setConversationAssociation(ConversationAssociation newConversationAssociation) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_ConversationAssociation(), newConversationAssociation);
     }
 
     /**
@@ -1571,8 +1354,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public CorrelationKey getCorrelationKey() {
-        return (CorrelationKey) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_CorrelationKey(), true);
+        return (CorrelationKey) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_CorrelationKey(), true);
     }
 
     /**
@@ -1580,11 +1362,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetCorrelationKey(
-            CorrelationKey newCorrelationKey, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_CorrelationKey(),
-                newCorrelationKey, msgs);
+    public NotificationChain basicSetCorrelationKey(CorrelationKey newCorrelationKey, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_CorrelationKey(), newCorrelationKey, msgs);
     }
 
     /**
@@ -1593,8 +1372,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setCorrelationKey(CorrelationKey newCorrelationKey) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_CorrelationKey(), newCorrelationKey);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_CorrelationKey(), newCorrelationKey);
     }
 
     /**
@@ -1603,9 +1381,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public CorrelationProperty getCorrelationProperty() {
-        return (CorrelationProperty) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_CorrelationProperty(),
-                true);
+        return (CorrelationProperty) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_CorrelationProperty(), true);
     }
 
     /**
@@ -1613,11 +1389,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetCorrelationProperty(
-            CorrelationProperty newCorrelationProperty, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_CorrelationProperty(),
-                newCorrelationProperty, msgs);
+    public NotificationChain basicSetCorrelationProperty(CorrelationProperty newCorrelationProperty, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_CorrelationProperty(), newCorrelationProperty, msgs);
     }
 
     /**
@@ -1625,10 +1398,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setCorrelationProperty(
-            CorrelationProperty newCorrelationProperty) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_CorrelationProperty(), newCorrelationProperty);
+    public void setCorrelationProperty(CorrelationProperty newCorrelationProperty) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_CorrelationProperty(), newCorrelationProperty);
     }
 
     /**
@@ -1637,9 +1408,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public CorrelationPropertyBinding getCorrelationPropertyBinding() {
-        return (CorrelationPropertyBinding) getMixed().get(
-                BpmnPackage.eINSTANCE
-                        .getDocumentRoot_CorrelationPropertyBinding(), true);
+        return (CorrelationPropertyBinding) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_CorrelationPropertyBinding(), true);
     }
 
     /**
@@ -1647,13 +1416,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetCorrelationPropertyBinding(
-            CorrelationPropertyBinding newCorrelationPropertyBinding,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE
-                        .getDocumentRoot_CorrelationPropertyBinding(),
-                newCorrelationPropertyBinding, msgs);
+    public NotificationChain basicSetCorrelationPropertyBinding(CorrelationPropertyBinding newCorrelationPropertyBinding, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_CorrelationPropertyBinding(), newCorrelationPropertyBinding,
+                msgs);
     }
 
     /**
@@ -1661,11 +1426,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setCorrelationPropertyBinding(
-            CorrelationPropertyBinding newCorrelationPropertyBinding) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_CorrelationPropertyBinding(),
-                newCorrelationPropertyBinding);
+    public void setCorrelationPropertyBinding(CorrelationPropertyBinding newCorrelationPropertyBinding) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_CorrelationPropertyBinding(), newCorrelationPropertyBinding);
     }
 
     /**
@@ -1674,11 +1436,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public CorrelationPropertyRetrievalExpression getCorrelationPropertyRetrievalExpression() {
-        return (CorrelationPropertyRetrievalExpression) getMixed()
-                .get(
-                        BpmnPackage.eINSTANCE
-                                .getDocumentRoot_CorrelationPropertyRetrievalExpression(),
-                        true);
+        return (CorrelationPropertyRetrievalExpression) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_CorrelationPropertyRetrievalExpression(), true);
     }
 
     /**
@@ -1686,14 +1444,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetCorrelationPropertyRetrievalExpression(
-            CorrelationPropertyRetrievalExpression newCorrelationPropertyRetrievalExpression,
+    public NotificationChain basicSetCorrelationPropertyRetrievalExpression(CorrelationPropertyRetrievalExpression newCorrelationPropertyRetrievalExpression,
             NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed())
-                .basicAdd(
-                        BpmnPackage.eINSTANCE
-                                .getDocumentRoot_CorrelationPropertyRetrievalExpression(),
-                        newCorrelationPropertyRetrievalExpression, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_CorrelationPropertyRetrievalExpression(),
+                newCorrelationPropertyRetrievalExpression, msgs);
     }
 
     /**
@@ -1701,10 +1455,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setCorrelationPropertyRetrievalExpression(
-            CorrelationPropertyRetrievalExpression newCorrelationPropertyRetrievalExpression) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_CorrelationPropertyRetrievalExpression(),
+    public void setCorrelationPropertyRetrievalExpression(CorrelationPropertyRetrievalExpression newCorrelationPropertyRetrievalExpression) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_CorrelationPropertyRetrievalExpression(),
                 newCorrelationPropertyRetrievalExpression);
     }
 
@@ -1714,11 +1466,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public CorrelationSubscription getCorrelationSubscription() {
-        return (CorrelationSubscription) getMixed()
-                .get(
-                        BpmnPackage.eINSTANCE
-                                .getDocumentRoot_CorrelationSubscription(),
-                        true);
+        return (CorrelationSubscription) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_CorrelationSubscription(), true);
     }
 
     /**
@@ -1726,13 +1474,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetCorrelationSubscription(
-            CorrelationSubscription newCorrelationSubscription,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed())
-                .basicAdd(BpmnPackage.eINSTANCE
-                        .getDocumentRoot_CorrelationSubscription(),
-                        newCorrelationSubscription, msgs);
+    public NotificationChain basicSetCorrelationSubscription(CorrelationSubscription newCorrelationSubscription, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_CorrelationSubscription(), newCorrelationSubscription, msgs);
     }
 
     /**
@@ -1740,11 +1483,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setCorrelationSubscription(
-            CorrelationSubscription newCorrelationSubscription) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_CorrelationSubscription(),
-                newCorrelationSubscription);
+    public void setCorrelationSubscription(CorrelationSubscription newCorrelationSubscription) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_CorrelationSubscription(), newCorrelationSubscription);
     }
 
     /**
@@ -1753,8 +1493,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public DataAssociation getDataAssociation() {
-        return (DataAssociation) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_DataAssociation(), true);
+        return (DataAssociation) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_DataAssociation(), true);
     }
 
     /**
@@ -1762,11 +1501,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetDataAssociation(
-            DataAssociation newDataAssociation, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_DataAssociation(),
-                newDataAssociation, msgs);
+    public NotificationChain basicSetDataAssociation(DataAssociation newDataAssociation, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_DataAssociation(), newDataAssociation, msgs);
     }
 
     /**
@@ -1775,8 +1511,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setDataAssociation(DataAssociation newDataAssociation) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_DataAssociation(), newDataAssociation);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_DataAssociation(), newDataAssociation);
     }
 
     /**
@@ -1785,8 +1520,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public DataInput getDataInput() {
-        return (DataInput) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_DataInput(), true);
+        return (DataInput) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_DataInput(), true);
     }
 
     /**
@@ -1794,11 +1528,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetDataInput(DataInput newDataInput,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_DataInput(),
-                newDataInput, msgs);
+    public NotificationChain basicSetDataInput(DataInput newDataInput, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_DataInput(), newDataInput, msgs);
     }
 
     /**
@@ -1807,8 +1538,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setDataInput(DataInput newDataInput) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_DataInput(), newDataInput);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_DataInput(), newDataInput);
     }
 
     /**
@@ -1817,9 +1547,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public DataInputAssociation getDataInputAssociation() {
-        return (DataInputAssociation) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_DataInputAssociation(),
-                true);
+        return (DataInputAssociation) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_DataInputAssociation(), true);
     }
 
     /**
@@ -1827,11 +1555,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetDataInputAssociation(
-            DataInputAssociation newDataInputAssociation, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_DataInputAssociation(),
-                newDataInputAssociation, msgs);
+    public NotificationChain basicSetDataInputAssociation(DataInputAssociation newDataInputAssociation, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_DataInputAssociation(), newDataInputAssociation, msgs);
     }
 
     /**
@@ -1839,11 +1564,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setDataInputAssociation(
-            DataInputAssociation newDataInputAssociation) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_DataInputAssociation(),
-                newDataInputAssociation);
+    public void setDataInputAssociation(DataInputAssociation newDataInputAssociation) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_DataInputAssociation(), newDataInputAssociation);
     }
 
     /**
@@ -1852,8 +1574,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public DataObject getDataObject() {
-        return (DataObject) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_DataObject(), true);
+        return (DataObject) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_DataObject(), true);
     }
 
     /**
@@ -1861,11 +1582,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetDataObject(DataObject newDataObject,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_DataObject(),
-                newDataObject, msgs);
+    public NotificationChain basicSetDataObject(DataObject newDataObject, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_DataObject(), newDataObject, msgs);
     }
 
     /**
@@ -1874,8 +1592,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setDataObject(DataObject newDataObject) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_DataObject(), newDataObject);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_DataObject(), newDataObject);
     }
 
     /**
@@ -1884,8 +1601,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public DataOutput getDataOutput() {
-        return (DataOutput) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_DataOutput(), true);
+        return (DataOutput) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_DataOutput(), true);
     }
 
     /**
@@ -1893,11 +1609,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetDataOutput(DataOutput newDataOutput,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_DataOutput(),
-                newDataOutput, msgs);
+    public NotificationChain basicSetDataOutput(DataOutput newDataOutput, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_DataOutput(), newDataOutput, msgs);
     }
 
     /**
@@ -1906,8 +1619,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setDataOutput(DataOutput newDataOutput) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_DataOutput(), newDataOutput);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_DataOutput(), newDataOutput);
     }
 
     /**
@@ -1916,9 +1628,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public DataOutputAssociation getDataOutputAssociation() {
-        return (DataOutputAssociation) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_DataOutputAssociation(),
-                true);
+        return (DataOutputAssociation) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_DataOutputAssociation(), true);
     }
 
     /**
@@ -1926,12 +1636,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetDataOutputAssociation(
-            DataOutputAssociation newDataOutputAssociation,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_DataOutputAssociation(),
-                newDataOutputAssociation, msgs);
+    public NotificationChain basicSetDataOutputAssociation(DataOutputAssociation newDataOutputAssociation, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_DataOutputAssociation(), newDataOutputAssociation, msgs);
     }
 
     /**
@@ -1939,11 +1645,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setDataOutputAssociation(
-            DataOutputAssociation newDataOutputAssociation) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_DataOutputAssociation(),
-                newDataOutputAssociation);
+    public void setDataOutputAssociation(DataOutputAssociation newDataOutputAssociation) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_DataOutputAssociation(), newDataOutputAssociation);
     }
 
     /**
@@ -1952,8 +1655,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public DataState getDataState() {
-        return (DataState) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_DataState(), true);
+        return (DataState) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_DataState(), true);
     }
 
     /**
@@ -1961,11 +1663,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetDataState(DataState newDataState,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_DataState(),
-                newDataState, msgs);
+    public NotificationChain basicSetDataState(DataState newDataState, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_DataState(), newDataState, msgs);
     }
 
     /**
@@ -1974,8 +1673,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setDataState(DataState newDataState) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_DataState(), newDataState);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_DataState(), newDataState);
     }
 
     /**
@@ -1984,8 +1682,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public DataStore getDataStore() {
-        return (DataStore) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_DataStore(), true);
+        return (DataStore) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_DataStore(), true);
     }
 
     /**
@@ -1993,11 +1690,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetDataStore(DataStore newDataStore,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_DataStore(),
-                newDataStore, msgs);
+    public NotificationChain basicSetDataStore(DataStore newDataStore, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_DataStore(), newDataStore, msgs);
     }
 
     /**
@@ -2006,8 +1700,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setDataStore(DataStore newDataStore) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_DataStore(), newDataStore);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_DataStore(), newDataStore);
     }
 
     /**
@@ -2016,9 +1709,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public DataStoreReference getDataStoreReference() {
-        return (DataStoreReference) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_DataStoreReference(),
-                true);
+        return (DataStoreReference) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_DataStoreReference(), true);
     }
 
     /**
@@ -2026,11 +1717,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetDataStoreReference(
-            DataStoreReference newDataStoreReference, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_DataStoreReference(),
-                newDataStoreReference, msgs);
+    public NotificationChain basicSetDataStoreReference(DataStoreReference newDataStoreReference, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_DataStoreReference(), newDataStoreReference, msgs);
     }
 
     /**
@@ -2039,8 +1727,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setDataStoreReference(DataStoreReference newDataStoreReference) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_DataStoreReference(), newDataStoreReference);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_DataStoreReference(), newDataStoreReference);
     }
 
     /**
@@ -2049,8 +1736,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Definitions getDefinitions() {
-        return (Definitions) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Definitions(), true);
+        return (Definitions) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Definitions(), true);
     }
 
     /**
@@ -2058,11 +1744,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetDefinitions(Definitions newDefinitions,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Definitions(),
-                newDefinitions, msgs);
+    public NotificationChain basicSetDefinitions(Definitions newDefinitions, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Definitions(), newDefinitions, msgs);
     }
 
     /**
@@ -2071,8 +1754,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setDefinitions(Definitions newDefinitions) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Definitions(), newDefinitions);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Definitions(), newDefinitions);
     }
 
     /**
@@ -2081,8 +1763,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Documentation getDocumentation() {
-        return (Documentation) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Documentation(), true);
+        return (Documentation) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Documentation(), true);
     }
 
     /**
@@ -2090,11 +1771,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetDocumentation(
-            Documentation newDocumentation, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Documentation(),
-                newDocumentation, msgs);
+    public NotificationChain basicSetDocumentation(Documentation newDocumentation, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Documentation(), newDocumentation, msgs);
     }
 
     /**
@@ -2103,8 +1781,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setDocumentation(Documentation newDocumentation) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Documentation(), newDocumentation);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Documentation(), newDocumentation);
     }
 
     /**
@@ -2113,8 +1790,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public EndEvent getEndEvent() {
-        return (EndEvent) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_EndEvent(), true);
+        return (EndEvent) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_EndEvent(), true);
     }
 
     /**
@@ -2122,11 +1798,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetEndEvent(EndEvent newEndEvent,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_EndEvent(), newEndEvent,
-                msgs);
+    public NotificationChain basicSetEndEvent(EndEvent newEndEvent, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_EndEvent(), newEndEvent, msgs);
     }
 
     /**
@@ -2135,8 +1808,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setEndEvent(EndEvent newEndEvent) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_EndEvent(), newEndEvent);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_EndEvent(), newEndEvent);
     }
 
     /**
@@ -2145,8 +1817,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public EndPoint getEndPoint() {
-        return (EndPoint) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_EndPoint(), true);
+        return (EndPoint) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_EndPoint(), true);
     }
 
     /**
@@ -2154,11 +1825,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetEndPoint(EndPoint newEndPoint,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_EndPoint(), newEndPoint,
-                msgs);
+    public NotificationChain basicSetEndPoint(EndPoint newEndPoint, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_EndPoint(), newEndPoint, msgs);
     }
 
     /**
@@ -2167,8 +1835,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setEndPoint(EndPoint newEndPoint) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_EndPoint(), newEndPoint);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_EndPoint(), newEndPoint);
     }
 
     /**
@@ -2177,8 +1844,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public org.eclipse.bpmn.Error getError() {
-        return (org.eclipse.bpmn.Error) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Error(), true);
+        return (org.eclipse.bpmn.Error) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Error(), true);
     }
 
     /**
@@ -2186,10 +1852,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetError(org.eclipse.bpmn.Error newError,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Error(), newError, msgs);
+    public NotificationChain basicSetError(org.eclipse.bpmn.Error newError, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Error(), newError, msgs);
     }
 
     /**
@@ -2198,8 +1862,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setError(org.eclipse.bpmn.Error newError) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Error(), newError);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Error(), newError);
     }
 
     /**
@@ -2208,9 +1871,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ErrorEventDefinition getErrorEventDefinition() {
-        return (ErrorEventDefinition) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ErrorEventDefinition(),
-                true);
+        return (ErrorEventDefinition) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_ErrorEventDefinition(), true);
     }
 
     /**
@@ -2218,11 +1879,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetErrorEventDefinition(
-            ErrorEventDefinition newErrorEventDefinition, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ErrorEventDefinition(),
-                newErrorEventDefinition, msgs);
+    public NotificationChain basicSetErrorEventDefinition(ErrorEventDefinition newErrorEventDefinition, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_ErrorEventDefinition(), newErrorEventDefinition, msgs);
     }
 
     /**
@@ -2230,11 +1888,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setErrorEventDefinition(
-            ErrorEventDefinition newErrorEventDefinition) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_ErrorEventDefinition(),
-                newErrorEventDefinition);
+    public void setErrorEventDefinition(ErrorEventDefinition newErrorEventDefinition) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_ErrorEventDefinition(), newErrorEventDefinition);
     }
 
     /**
@@ -2243,8 +1898,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Escalation getEscalation() {
-        return (Escalation) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Escalation(), true);
+        return (Escalation) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Escalation(), true);
     }
 
     /**
@@ -2252,11 +1906,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetEscalation(Escalation newEscalation,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Escalation(),
-                newEscalation, msgs);
+    public NotificationChain basicSetEscalation(Escalation newEscalation, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Escalation(), newEscalation, msgs);
     }
 
     /**
@@ -2265,8 +1916,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setEscalation(Escalation newEscalation) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Escalation(), newEscalation);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Escalation(), newEscalation);
     }
 
     /**
@@ -2275,9 +1925,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public EscalationEventDefinition getEscalationEventDefinition() {
-        return (EscalationEventDefinition) getMixed().get(
-                BpmnPackage.eINSTANCE
-                        .getDocumentRoot_EscalationEventDefinition(), true);
+        return (EscalationEventDefinition) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_EscalationEventDefinition(), true);
     }
 
     /**
@@ -2285,13 +1933,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetEscalationEventDefinition(
-            EscalationEventDefinition newEscalationEventDefinition,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE
-                        .getDocumentRoot_EscalationEventDefinition(),
-                newEscalationEventDefinition, msgs);
+    public NotificationChain basicSetEscalationEventDefinition(EscalationEventDefinition newEscalationEventDefinition, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_EscalationEventDefinition(), newEscalationEventDefinition,
+                msgs);
     }
 
     /**
@@ -2299,11 +1943,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setEscalationEventDefinition(
-            EscalationEventDefinition newEscalationEventDefinition) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_EscalationEventDefinition(),
-                newEscalationEventDefinition);
+    public void setEscalationEventDefinition(EscalationEventDefinition newEscalationEventDefinition) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_EscalationEventDefinition(), newEscalationEventDefinition);
     }
 
     /**
@@ -2312,8 +1953,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Event getEvent() {
-        return (Event) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Event(), true);
+        return (Event) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Event(), true);
     }
 
     /**
@@ -2321,10 +1961,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetEvent(Event newEvent,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Event(), newEvent, msgs);
+    public NotificationChain basicSetEvent(Event newEvent, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Event(), newEvent, msgs);
     }
 
     /**
@@ -2333,8 +1971,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setEvent(Event newEvent) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Event(), newEvent);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Event(), newEvent);
     }
 
     /**
@@ -2343,9 +1980,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public EventBasedGateway getEventBasedGateway() {
-        return (EventBasedGateway) getMixed()
-                .get(BpmnPackage.eINSTANCE.getDocumentRoot_EventBasedGateway(),
-                        true);
+        return (EventBasedGateway) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_EventBasedGateway(), true);
     }
 
     /**
@@ -2353,11 +1988,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetEventBasedGateway(
-            EventBasedGateway newEventBasedGateway, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_EventBasedGateway(),
-                newEventBasedGateway, msgs);
+    public NotificationChain basicSetEventBasedGateway(EventBasedGateway newEventBasedGateway, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_EventBasedGateway(), newEventBasedGateway, msgs);
     }
 
     /**
@@ -2366,8 +1998,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setEventBasedGateway(EventBasedGateway newEventBasedGateway) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_EventBasedGateway(), newEventBasedGateway);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_EventBasedGateway(), newEventBasedGateway);
     }
 
     /**
@@ -2376,8 +2007,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ExclusiveGateway getExclusiveGateway() {
-        return (ExclusiveGateway) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ExclusiveGateway(), true);
+        return (ExclusiveGateway) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_ExclusiveGateway(), true);
     }
 
     /**
@@ -2385,11 +2015,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetExclusiveGateway(
-            ExclusiveGateway newExclusiveGateway, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ExclusiveGateway(),
-                newExclusiveGateway, msgs);
+    public NotificationChain basicSetExclusiveGateway(ExclusiveGateway newExclusiveGateway, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_ExclusiveGateway(), newExclusiveGateway, msgs);
     }
 
     /**
@@ -2398,8 +2025,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setExclusiveGateway(ExclusiveGateway newExclusiveGateway) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_ExclusiveGateway(), newExclusiveGateway);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_ExclusiveGateway(), newExclusiveGateway);
     }
 
     /**
@@ -2408,8 +2034,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Expression getExpression() {
-        return (Expression) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Expression(), true);
+        return (Expression) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Expression(), true);
     }
 
     /**
@@ -2417,11 +2042,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetExpression(Expression newExpression,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Expression(),
-                newExpression, msgs);
+    public NotificationChain basicSetExpression(Expression newExpression, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Expression(), newExpression, msgs);
     }
 
     /**
@@ -2430,8 +2052,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setExpression(Expression newExpression) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Expression(), newExpression);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Expression(), newExpression);
     }
 
     /**
@@ -2440,8 +2061,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Extension getExtension() {
-        return (Extension) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Extension(), true);
+        return (Extension) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Extension(), true);
     }
 
     /**
@@ -2449,11 +2069,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetExtension(Extension newExtension,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Extension(),
-                newExtension, msgs);
+    public NotificationChain basicSetExtension(Extension newExtension, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Extension(), newExtension, msgs);
     }
 
     /**
@@ -2462,8 +2079,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setExtension(Extension newExtension) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Extension(), newExtension);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Extension(), newExtension);
     }
 
     /**
@@ -2472,8 +2088,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public FlowNode getFlowNode() {
-        return (FlowNode) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_FlowNode(), true);
+        return (FlowNode) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_FlowNode(), true);
     }
 
     /**
@@ -2481,11 +2096,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetFlowNode(FlowNode newFlowNode,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_FlowNode(), newFlowNode,
-                msgs);
+    public NotificationChain basicSetFlowNode(FlowNode newFlowNode, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_FlowNode(), newFlowNode, msgs);
     }
 
     /**
@@ -2494,8 +2106,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setFlowNode(FlowNode newFlowNode) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_FlowNode(), newFlowNode);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_FlowNode(), newFlowNode);
     }
 
     /**
@@ -2504,8 +2115,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public FormalExpression getFormalExpression() {
-        return (FormalExpression) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_FormalExpression(), true);
+        return (FormalExpression) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_FormalExpression(), true);
     }
 
     /**
@@ -2513,11 +2123,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetFormalExpression(
-            FormalExpression newFormalExpression, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_FormalExpression(),
-                newFormalExpression, msgs);
+    public NotificationChain basicSetFormalExpression(FormalExpression newFormalExpression, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_FormalExpression(), newFormalExpression, msgs);
     }
 
     /**
@@ -2526,8 +2133,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setFormalExpression(FormalExpression newFormalExpression) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_FormalExpression(), newFormalExpression);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_FormalExpression(), newFormalExpression);
     }
 
     /**
@@ -2536,8 +2142,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Gateway getGateway() {
-        return (Gateway) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Gateway(), true);
+        return (Gateway) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Gateway(), true);
     }
 
     /**
@@ -2545,11 +2150,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetGateway(Gateway newGateway,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Gateway(), newGateway,
-                msgs);
+    public NotificationChain basicSetGateway(Gateway newGateway, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Gateway(), newGateway, msgs);
     }
 
     /**
@@ -2558,9 +2160,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public GlobalBusinessRuleTask getGlobalBusinessRuleTask() {
-        return (GlobalBusinessRuleTask) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_GlobalBusinessRuleTask(),
-                true);
+        return (GlobalBusinessRuleTask) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_GlobalBusinessRuleTask(), true);
     }
 
     /**
@@ -2568,12 +2168,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetGlobalBusinessRuleTask(
-            GlobalBusinessRuleTask newGlobalBusinessRuleTask,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_GlobalBusinessRuleTask(),
-                newGlobalBusinessRuleTask, msgs);
+    public NotificationChain basicSetGlobalBusinessRuleTask(GlobalBusinessRuleTask newGlobalBusinessRuleTask, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_GlobalBusinessRuleTask(), newGlobalBusinessRuleTask, msgs);
     }
 
     /**
@@ -2581,11 +2177,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setGlobalBusinessRuleTask(
-            GlobalBusinessRuleTask newGlobalBusinessRuleTask) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_GlobalBusinessRuleTask(),
-                newGlobalBusinessRuleTask);
+    public void setGlobalBusinessRuleTask(GlobalBusinessRuleTask newGlobalBusinessRuleTask) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_GlobalBusinessRuleTask(), newGlobalBusinessRuleTask);
     }
 
     /**
@@ -2594,9 +2187,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public GlobalChoreographyTask getGlobalChoreographyTask() {
-        return (GlobalChoreographyTask) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_GlobalChoreographyTask(),
-                true);
+        return (GlobalChoreographyTask) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_GlobalChoreographyTask(), true);
     }
 
     /**
@@ -2604,12 +2195,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetGlobalChoreographyTask(
-            GlobalChoreographyTask newGlobalChoreographyTask,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_GlobalChoreographyTask(),
-                newGlobalChoreographyTask, msgs);
+    public NotificationChain basicSetGlobalChoreographyTask(GlobalChoreographyTask newGlobalChoreographyTask, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_GlobalChoreographyTask(), newGlobalChoreographyTask, msgs);
     }
 
     /**
@@ -2617,11 +2204,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setGlobalChoreographyTask(
-            GlobalChoreographyTask newGlobalChoreographyTask) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_GlobalChoreographyTask(),
-                newGlobalChoreographyTask);
+    public void setGlobalChoreographyTask(GlobalChoreographyTask newGlobalChoreographyTask) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_GlobalChoreographyTask(), newGlobalChoreographyTask);
     }
 
     /**
@@ -2630,9 +2214,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public GlobalCommunication getGlobalCommunication() {
-        return (GlobalCommunication) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_GlobalCommunication(),
-                true);
+        return (GlobalCommunication) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_GlobalCommunication(), true);
     }
 
     /**
@@ -2640,11 +2222,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetGlobalCommunication(
-            GlobalCommunication newGlobalCommunication, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_GlobalCommunication(),
-                newGlobalCommunication, msgs);
+    public NotificationChain basicSetGlobalCommunication(GlobalCommunication newGlobalCommunication, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_GlobalCommunication(), newGlobalCommunication, msgs);
     }
 
     /**
@@ -2652,10 +2231,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setGlobalCommunication(
-            GlobalCommunication newGlobalCommunication) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_GlobalCommunication(), newGlobalCommunication);
+    public void setGlobalCommunication(GlobalCommunication newGlobalCommunication) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_GlobalCommunication(), newGlobalCommunication);
     }
 
     /**
@@ -2664,8 +2241,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public GlobalManualTask getGlobalManualTask() {
-        return (GlobalManualTask) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_GlobalManualTask(), true);
+        return (GlobalManualTask) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_GlobalManualTask(), true);
     }
 
     /**
@@ -2673,11 +2249,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetGlobalManualTask(
-            GlobalManualTask newGlobalManualTask, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_GlobalManualTask(),
-                newGlobalManualTask, msgs);
+    public NotificationChain basicSetGlobalManualTask(GlobalManualTask newGlobalManualTask, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_GlobalManualTask(), newGlobalManualTask, msgs);
     }
 
     /**
@@ -2686,8 +2259,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setGlobalManualTask(GlobalManualTask newGlobalManualTask) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_GlobalManualTask(), newGlobalManualTask);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_GlobalManualTask(), newGlobalManualTask);
     }
 
     /**
@@ -2696,8 +2268,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public GlobalScriptTask getGlobalScriptTask() {
-        return (GlobalScriptTask) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_GlobalScriptTask(), true);
+        return (GlobalScriptTask) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_GlobalScriptTask(), true);
     }
 
     /**
@@ -2705,11 +2276,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetGlobalScriptTask(
-            GlobalScriptTask newGlobalScriptTask, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_GlobalScriptTask(),
-                newGlobalScriptTask, msgs);
+    public NotificationChain basicSetGlobalScriptTask(GlobalScriptTask newGlobalScriptTask, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_GlobalScriptTask(), newGlobalScriptTask, msgs);
     }
 
     /**
@@ -2718,8 +2286,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setGlobalScriptTask(GlobalScriptTask newGlobalScriptTask) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_GlobalScriptTask(), newGlobalScriptTask);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_GlobalScriptTask(), newGlobalScriptTask);
     }
 
     /**
@@ -2728,8 +2295,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public GlobalTask getGlobalTask() {
-        return (GlobalTask) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_GlobalTask(), true);
+        return (GlobalTask) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_GlobalTask(), true);
     }
 
     /**
@@ -2737,11 +2303,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetGlobalTask(GlobalTask newGlobalTask,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_GlobalTask(),
-                newGlobalTask, msgs);
+    public NotificationChain basicSetGlobalTask(GlobalTask newGlobalTask, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_GlobalTask(), newGlobalTask, msgs);
     }
 
     /**
@@ -2750,8 +2313,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setGlobalTask(GlobalTask newGlobalTask) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_GlobalTask(), newGlobalTask);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_GlobalTask(), newGlobalTask);
     }
 
     /**
@@ -2760,8 +2322,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public GlobalUserTask getGlobalUserTask() {
-        return (GlobalUserTask) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_GlobalUserTask(), true);
+        return (GlobalUserTask) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_GlobalUserTask(), true);
     }
 
     /**
@@ -2769,11 +2330,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetGlobalUserTask(
-            GlobalUserTask newGlobalUserTask, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_GlobalUserTask(),
-                newGlobalUserTask, msgs);
+    public NotificationChain basicSetGlobalUserTask(GlobalUserTask newGlobalUserTask, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_GlobalUserTask(), newGlobalUserTask, msgs);
     }
 
     /**
@@ -2782,8 +2340,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setGlobalUserTask(GlobalUserTask newGlobalUserTask) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_GlobalUserTask(), newGlobalUserTask);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_GlobalUserTask(), newGlobalUserTask);
     }
 
     /**
@@ -2792,8 +2349,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Group getGroup() {
-        return (Group) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Group(), true);
+        return (Group) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Group(), true);
     }
 
     /**
@@ -2801,10 +2357,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetGroup(Group newGroup,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Group(), newGroup, msgs);
+    public NotificationChain basicSetGroup(Group newGroup, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Group(), newGroup, msgs);
     }
 
     /**
@@ -2813,8 +2367,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setGroup(Group newGroup) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Group(), newGroup);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Group(), newGroup);
     }
 
     /**
@@ -2823,8 +2376,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public HumanPerformer getHumanPerformer() {
-        return (HumanPerformer) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_HumanPerformer(), true);
+        return (HumanPerformer) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_HumanPerformer(), true);
     }
 
     /**
@@ -2832,11 +2384,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetHumanPerformer(
-            HumanPerformer newHumanPerformer, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_HumanPerformer(),
-                newHumanPerformer, msgs);
+    public NotificationChain basicSetHumanPerformer(HumanPerformer newHumanPerformer, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_HumanPerformer(), newHumanPerformer, msgs);
     }
 
     /**
@@ -2845,8 +2394,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setHumanPerformer(HumanPerformer newHumanPerformer) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_HumanPerformer(), newHumanPerformer);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_HumanPerformer(), newHumanPerformer);
     }
 
     /**
@@ -2855,8 +2403,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Performer getPerformer() {
-        return (Performer) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Performer(), true);
+        return (Performer) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Performer(), true);
     }
 
     /**
@@ -2864,11 +2411,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetPerformer(Performer newPerformer,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Performer(),
-                newPerformer, msgs);
+    public NotificationChain basicSetPerformer(Performer newPerformer, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Performer(), newPerformer, msgs);
     }
 
     /**
@@ -2877,8 +2421,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setPerformer(Performer newPerformer) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Performer(), newPerformer);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Performer(), newPerformer);
     }
 
     /**
@@ -2887,9 +2430,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ImplicitThrowEvent getImplicitThrowEvent() {
-        return (ImplicitThrowEvent) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ImplicitThrowEvent(),
-                true);
+        return (ImplicitThrowEvent) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_ImplicitThrowEvent(), true);
     }
 
     /**
@@ -2897,11 +2438,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetImplicitThrowEvent(
-            ImplicitThrowEvent newImplicitThrowEvent, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ImplicitThrowEvent(),
-                newImplicitThrowEvent, msgs);
+    public NotificationChain basicSetImplicitThrowEvent(ImplicitThrowEvent newImplicitThrowEvent, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_ImplicitThrowEvent(), newImplicitThrowEvent, msgs);
     }
 
     /**
@@ -2910,8 +2448,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setImplicitThrowEvent(ImplicitThrowEvent newImplicitThrowEvent) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_ImplicitThrowEvent(), newImplicitThrowEvent);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_ImplicitThrowEvent(), newImplicitThrowEvent);
     }
 
     /**
@@ -2920,8 +2457,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Import getImport() {
-        return (Import) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Import(), true);
+        return (Import) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Import(), true);
     }
 
     /**
@@ -2929,11 +2465,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetImport(Import newImport,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed())
-                .basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Import(),
-                        newImport, msgs);
+    public NotificationChain basicSetImport(Import newImport, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Import(), newImport, msgs);
     }
 
     /**
@@ -2942,8 +2475,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setImport(Import newImport) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Import(), newImport);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Import(), newImport);
     }
 
     /**
@@ -2952,8 +2484,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public InclusiveGateway getInclusiveGateway() {
-        return (InclusiveGateway) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_InclusiveGateway(), true);
+        return (InclusiveGateway) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_InclusiveGateway(), true);
     }
 
     /**
@@ -2961,11 +2492,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetInclusiveGateway(
-            InclusiveGateway newInclusiveGateway, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_InclusiveGateway(),
-                newInclusiveGateway, msgs);
+    public NotificationChain basicSetInclusiveGateway(InclusiveGateway newInclusiveGateway, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_InclusiveGateway(), newInclusiveGateway, msgs);
     }
 
     /**
@@ -2974,8 +2502,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setInclusiveGateway(InclusiveGateway newInclusiveGateway) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_InclusiveGateway(), newInclusiveGateway);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_InclusiveGateway(), newInclusiveGateway);
     }
 
     /**
@@ -2984,8 +2511,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public InputSet getInputSet() {
-        return (InputSet) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_InputSet(), true);
+        return (InputSet) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_InputSet(), true);
     }
 
     /**
@@ -2993,11 +2519,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetInputSet(InputSet newInputSet,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_InputSet(), newInputSet,
-                msgs);
+    public NotificationChain basicSetInputSet(InputSet newInputSet, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_InputSet(), newInputSet, msgs);
     }
 
     /**
@@ -3006,8 +2529,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setInputSet(InputSet newInputSet) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_InputSet(), newInputSet);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_InputSet(), newInputSet);
     }
 
     /**
@@ -3016,8 +2538,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Interface getInterface() {
-        return (Interface) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Interface(), true);
+        return (Interface) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Interface(), true);
     }
 
     /**
@@ -3025,11 +2546,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetInterface(Interface newInterface,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Interface(),
-                newInterface, msgs);
+    public NotificationChain basicSetInterface(Interface newInterface, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Interface(), newInterface, msgs);
     }
 
     /**
@@ -3038,8 +2556,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setInterface(Interface newInterface) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Interface(), newInterface);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Interface(), newInterface);
     }
 
     /**
@@ -3048,9 +2565,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public IntermediateCatchEvent getIntermediateCatchEvent() {
-        return (IntermediateCatchEvent) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_IntermediateCatchEvent(),
-                true);
+        return (IntermediateCatchEvent) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_IntermediateCatchEvent(), true);
     }
 
     /**
@@ -3058,12 +2573,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetIntermediateCatchEvent(
-            IntermediateCatchEvent newIntermediateCatchEvent,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_IntermediateCatchEvent(),
-                newIntermediateCatchEvent, msgs);
+    public NotificationChain basicSetIntermediateCatchEvent(IntermediateCatchEvent newIntermediateCatchEvent, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_IntermediateCatchEvent(), newIntermediateCatchEvent, msgs);
     }
 
     /**
@@ -3071,11 +2582,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setIntermediateCatchEvent(
-            IntermediateCatchEvent newIntermediateCatchEvent) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_IntermediateCatchEvent(),
-                newIntermediateCatchEvent);
+    public void setIntermediateCatchEvent(IntermediateCatchEvent newIntermediateCatchEvent) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_IntermediateCatchEvent(), newIntermediateCatchEvent);
     }
 
     /**
@@ -3084,9 +2592,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public IntermediateThrowEvent getIntermediateThrowEvent() {
-        return (IntermediateThrowEvent) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_IntermediateThrowEvent(),
-                true);
+        return (IntermediateThrowEvent) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_IntermediateThrowEvent(), true);
     }
 
     /**
@@ -3094,12 +2600,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetIntermediateThrowEvent(
-            IntermediateThrowEvent newIntermediateThrowEvent,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_IntermediateThrowEvent(),
-                newIntermediateThrowEvent, msgs);
+    public NotificationChain basicSetIntermediateThrowEvent(IntermediateThrowEvent newIntermediateThrowEvent, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_IntermediateThrowEvent(), newIntermediateThrowEvent, msgs);
     }
 
     /**
@@ -3107,11 +2609,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setIntermediateThrowEvent(
-            IntermediateThrowEvent newIntermediateThrowEvent) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_IntermediateThrowEvent(),
-                newIntermediateThrowEvent);
+    public void setIntermediateThrowEvent(IntermediateThrowEvent newIntermediateThrowEvent) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_IntermediateThrowEvent(), newIntermediateThrowEvent);
     }
 
     /**
@@ -3120,8 +2619,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public InputOutputBinding getIoBinding() {
-        return (InputOutputBinding) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_IoBinding(), true);
+        return (InputOutputBinding) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_IoBinding(), true);
     }
 
     /**
@@ -3129,11 +2627,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetIoBinding(InputOutputBinding newIoBinding,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_IoBinding(),
-                newIoBinding, msgs);
+    public NotificationChain basicSetIoBinding(InputOutputBinding newIoBinding, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_IoBinding(), newIoBinding, msgs);
     }
 
     /**
@@ -3142,8 +2637,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setIoBinding(InputOutputBinding newIoBinding) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_IoBinding(), newIoBinding);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_IoBinding(), newIoBinding);
     }
 
     /**
@@ -3152,8 +2646,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public InputOutputSpecification getIoSpecification() {
-        return (InputOutputSpecification) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_IoSpecification(), true);
+        return (InputOutputSpecification) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_IoSpecification(), true);
     }
 
     /**
@@ -3161,11 +2654,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetIoSpecification(
-            InputOutputSpecification newIoSpecification, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_IoSpecification(),
-                newIoSpecification, msgs);
+    public NotificationChain basicSetIoSpecification(InputOutputSpecification newIoSpecification, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_IoSpecification(), newIoSpecification, msgs);
     }
 
     /**
@@ -3174,8 +2664,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setIoSpecification(InputOutputSpecification newIoSpecification) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_IoSpecification(), newIoSpecification);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_IoSpecification(), newIoSpecification);
     }
 
     /**
@@ -3184,8 +2673,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ItemDefinition getItemDefinition() {
-        return (ItemDefinition) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ItemDefinition(), true);
+        return (ItemDefinition) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_ItemDefinition(), true);
     }
 
     /**
@@ -3193,11 +2681,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetItemDefinition(
-            ItemDefinition newItemDefinition, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ItemDefinition(),
-                newItemDefinition, msgs);
+    public NotificationChain basicSetItemDefinition(ItemDefinition newItemDefinition, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_ItemDefinition(), newItemDefinition, msgs);
     }
 
     /**
@@ -3206,8 +2691,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setItemDefinition(ItemDefinition newItemDefinition) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_ItemDefinition(), newItemDefinition);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_ItemDefinition(), newItemDefinition);
     }
 
     /**
@@ -3216,8 +2700,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Lane getLane() {
-        return (Lane) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Lane(), true);
+        return (Lane) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Lane(), true);
     }
 
     /**
@@ -3226,8 +2709,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetLane(Lane newLane, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Lane(), newLane, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Lane(), newLane, msgs);
     }
 
     /**
@@ -3236,8 +2718,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setLane(Lane newLane) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Lane(), newLane);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Lane(), newLane);
     }
 
     /**
@@ -3246,8 +2727,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public LaneSet getLaneSet() {
-        return (LaneSet) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_LaneSet(), true);
+        return (LaneSet) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_LaneSet(), true);
     }
 
     /**
@@ -3255,11 +2735,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetLaneSet(LaneSet newLaneSet,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_LaneSet(), newLaneSet,
-                msgs);
+    public NotificationChain basicSetLaneSet(LaneSet newLaneSet, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_LaneSet(), newLaneSet, msgs);
     }
 
     /**
@@ -3268,8 +2745,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setLaneSet(LaneSet newLaneSet) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_LaneSet(), newLaneSet);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_LaneSet(), newLaneSet);
     }
 
     /**
@@ -3278,9 +2754,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public LinkEventDefinition getLinkEventDefinition() {
-        return (LinkEventDefinition) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_LinkEventDefinition(),
-                true);
+        return (LinkEventDefinition) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_LinkEventDefinition(), true);
     }
 
     /**
@@ -3288,11 +2762,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetLinkEventDefinition(
-            LinkEventDefinition newLinkEventDefinition, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_LinkEventDefinition(),
-                newLinkEventDefinition, msgs);
+    public NotificationChain basicSetLinkEventDefinition(LinkEventDefinition newLinkEventDefinition, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_LinkEventDefinition(), newLinkEventDefinition, msgs);
     }
 
     /**
@@ -3300,10 +2771,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setLinkEventDefinition(
-            LinkEventDefinition newLinkEventDefinition) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_LinkEventDefinition(), newLinkEventDefinition);
+    public void setLinkEventDefinition(LinkEventDefinition newLinkEventDefinition) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_LinkEventDefinition(), newLinkEventDefinition);
     }
 
     /**
@@ -3312,9 +2781,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public LoopCharacteristics getLoopCharacteristics() {
-        return (LoopCharacteristics) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_LoopCharacteristics(),
-                true);
+        return (LoopCharacteristics) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_LoopCharacteristics(), true);
     }
 
     /**
@@ -3322,11 +2789,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetLoopCharacteristics(
-            LoopCharacteristics newLoopCharacteristics, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_LoopCharacteristics(),
-                newLoopCharacteristics, msgs);
+    public NotificationChain basicSetLoopCharacteristics(LoopCharacteristics newLoopCharacteristics, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_LoopCharacteristics(), newLoopCharacteristics, msgs);
     }
 
     /**
@@ -3334,10 +2798,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setLoopCharacteristics(
-            LoopCharacteristics newLoopCharacteristics) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_LoopCharacteristics(), newLoopCharacteristics);
+    public void setLoopCharacteristics(LoopCharacteristics newLoopCharacteristics) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_LoopCharacteristics(), newLoopCharacteristics);
     }
 
     /**
@@ -3346,8 +2808,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ManualTask getManualTask() {
-        return (ManualTask) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ManualTask(), true);
+        return (ManualTask) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_ManualTask(), true);
     }
 
     /**
@@ -3355,11 +2816,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetManualTask(ManualTask newManualTask,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ManualTask(),
-                newManualTask, msgs);
+    public NotificationChain basicSetManualTask(ManualTask newManualTask, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_ManualTask(), newManualTask, msgs);
     }
 
     /**
@@ -3368,8 +2826,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setManualTask(ManualTask newManualTask) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_ManualTask(), newManualTask);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_ManualTask(), newManualTask);
     }
 
     /**
@@ -3378,8 +2835,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Message getMessage() {
-        return (Message) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Message(), true);
+        return (Message) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Message(), true);
     }
 
     /**
@@ -3387,11 +2843,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetMessage(Message newMessage,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Message(), newMessage,
-                msgs);
+    public NotificationChain basicSetMessage(Message newMessage, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Message(), newMessage, msgs);
     }
 
     /**
@@ -3400,8 +2853,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setMessage(Message newMessage) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Message(), newMessage);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Message(), newMessage);
     }
 
     /**
@@ -3410,9 +2862,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public MessageEventDefinition getMessageEventDefinition() {
-        return (MessageEventDefinition) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_MessageEventDefinition(),
-                true);
+        return (MessageEventDefinition) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_MessageEventDefinition(), true);
     }
 
     /**
@@ -3420,12 +2870,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetMessageEventDefinition(
-            MessageEventDefinition newMessageEventDefinition,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_MessageEventDefinition(),
-                newMessageEventDefinition, msgs);
+    public NotificationChain basicSetMessageEventDefinition(MessageEventDefinition newMessageEventDefinition, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_MessageEventDefinition(), newMessageEventDefinition, msgs);
     }
 
     /**
@@ -3433,11 +2879,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setMessageEventDefinition(
-            MessageEventDefinition newMessageEventDefinition) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_MessageEventDefinition(),
-                newMessageEventDefinition);
+    public void setMessageEventDefinition(MessageEventDefinition newMessageEventDefinition) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_MessageEventDefinition(), newMessageEventDefinition);
     }
 
     /**
@@ -3446,8 +2889,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public MessageFlow getMessageFlow() {
-        return (MessageFlow) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_MessageFlow(), true);
+        return (MessageFlow) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_MessageFlow(), true);
     }
 
     /**
@@ -3455,11 +2897,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetMessageFlow(MessageFlow newMessageFlow,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_MessageFlow(),
-                newMessageFlow, msgs);
+    public NotificationChain basicSetMessageFlow(MessageFlow newMessageFlow, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_MessageFlow(), newMessageFlow, msgs);
     }
 
     /**
@@ -3468,8 +2907,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setMessageFlow(MessageFlow newMessageFlow) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_MessageFlow(), newMessageFlow);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_MessageFlow(), newMessageFlow);
     }
 
     /**
@@ -3478,9 +2916,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public MessageFlowAssociation getMessageFlowAssociation() {
-        return (MessageFlowAssociation) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_MessageFlowAssociation(),
-                true);
+        return (MessageFlowAssociation) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_MessageFlowAssociation(), true);
     }
 
     /**
@@ -3488,12 +2924,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetMessageFlowAssociation(
-            MessageFlowAssociation newMessageFlowAssociation,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_MessageFlowAssociation(),
-                newMessageFlowAssociation, msgs);
+    public NotificationChain basicSetMessageFlowAssociation(MessageFlowAssociation newMessageFlowAssociation, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_MessageFlowAssociation(), newMessageFlowAssociation, msgs);
     }
 
     /**
@@ -3501,11 +2933,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setMessageFlowAssociation(
-            MessageFlowAssociation newMessageFlowAssociation) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_MessageFlowAssociation(),
-                newMessageFlowAssociation);
+    public void setMessageFlowAssociation(MessageFlowAssociation newMessageFlowAssociation) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_MessageFlowAssociation(), newMessageFlowAssociation);
     }
 
     /**
@@ -3514,8 +2943,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Monitoring getMonitoring() {
-        return (Monitoring) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Monitoring(), true);
+        return (Monitoring) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Monitoring(), true);
     }
 
     /**
@@ -3523,11 +2951,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetMonitoring(Monitoring newMonitoring,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Monitoring(),
-                newMonitoring, msgs);
+    public NotificationChain basicSetMonitoring(Monitoring newMonitoring, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Monitoring(), newMonitoring, msgs);
     }
 
     /**
@@ -3536,8 +2961,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setMonitoring(Monitoring newMonitoring) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Monitoring(), newMonitoring);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Monitoring(), newMonitoring);
     }
 
     /**
@@ -3546,10 +2970,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public MultiInstanceLoopCharacteristics getMultiInstanceLoopCharacteristics() {
-        return (MultiInstanceLoopCharacteristics) getMixed().get(
-                BpmnPackage.eINSTANCE
-                        .getDocumentRoot_MultiInstanceLoopCharacteristics(),
-                true);
+        return (MultiInstanceLoopCharacteristics) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_MultiInstanceLoopCharacteristics(), true);
     }
 
     /**
@@ -3557,12 +2978,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetMultiInstanceLoopCharacteristics(
-            MultiInstanceLoopCharacteristics newMultiInstanceLoopCharacteristics,
+    public NotificationChain basicSetMultiInstanceLoopCharacteristics(MultiInstanceLoopCharacteristics newMultiInstanceLoopCharacteristics,
             NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE
-                        .getDocumentRoot_MultiInstanceLoopCharacteristics(),
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_MultiInstanceLoopCharacteristics(),
                 newMultiInstanceLoopCharacteristics, msgs);
     }
 
@@ -3571,11 +2989,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setMultiInstanceLoopCharacteristics(
-            MultiInstanceLoopCharacteristics newMultiInstanceLoopCharacteristics) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_MultiInstanceLoopCharacteristics(),
-                newMultiInstanceLoopCharacteristics);
+    public void setMultiInstanceLoopCharacteristics(MultiInstanceLoopCharacteristics newMultiInstanceLoopCharacteristics) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_MultiInstanceLoopCharacteristics(), newMultiInstanceLoopCharacteristics);
     }
 
     /**
@@ -3584,8 +2999,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Operation getOperation() {
-        return (Operation) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Operation(), true);
+        return (Operation) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Operation(), true);
     }
 
     /**
@@ -3593,11 +3007,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetOperation(Operation newOperation,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Operation(),
-                newOperation, msgs);
+    public NotificationChain basicSetOperation(Operation newOperation, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Operation(), newOperation, msgs);
     }
 
     /**
@@ -3606,8 +3017,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setOperation(Operation newOperation) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Operation(), newOperation);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Operation(), newOperation);
     }
 
     /**
@@ -3616,8 +3026,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public OutputSet getOutputSet() {
-        return (OutputSet) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_OutputSet(), true);
+        return (OutputSet) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_OutputSet(), true);
     }
 
     /**
@@ -3625,11 +3034,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetOutputSet(OutputSet newOutputSet,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_OutputSet(),
-                newOutputSet, msgs);
+    public NotificationChain basicSetOutputSet(OutputSet newOutputSet, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_OutputSet(), newOutputSet, msgs);
     }
 
     /**
@@ -3638,8 +3044,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setOutputSet(OutputSet newOutputSet) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_OutputSet(), newOutputSet);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_OutputSet(), newOutputSet);
     }
 
     /**
@@ -3648,8 +3053,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ParallelGateway getParallelGateway() {
-        return (ParallelGateway) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ParallelGateway(), true);
+        return (ParallelGateway) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_ParallelGateway(), true);
     }
 
     /**
@@ -3657,11 +3061,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetParallelGateway(
-            ParallelGateway newParallelGateway, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ParallelGateway(),
-                newParallelGateway, msgs);
+    public NotificationChain basicSetParallelGateway(ParallelGateway newParallelGateway, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_ParallelGateway(), newParallelGateway, msgs);
     }
 
     /**
@@ -3670,8 +3071,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setParallelGateway(ParallelGateway newParallelGateway) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_ParallelGateway(), newParallelGateway);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_ParallelGateway(), newParallelGateway);
     }
 
     /**
@@ -3680,8 +3080,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Participant getParticipant() {
-        return (Participant) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Participant(), true);
+        return (Participant) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Participant(), true);
     }
 
     /**
@@ -3689,11 +3088,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetParticipant(Participant newParticipant,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Participant(),
-                newParticipant, msgs);
+    public NotificationChain basicSetParticipant(Participant newParticipant, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Participant(), newParticipant, msgs);
     }
 
     /**
@@ -3702,8 +3098,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setParticipant(Participant newParticipant) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Participant(), newParticipant);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Participant(), newParticipant);
     }
 
     /**
@@ -3712,9 +3107,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ParticipantAssociation getParticipantAssociation() {
-        return (ParticipantAssociation) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ParticipantAssociation(),
-                true);
+        return (ParticipantAssociation) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_ParticipantAssociation(), true);
     }
 
     /**
@@ -3722,12 +3115,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetParticipantAssociation(
-            ParticipantAssociation newParticipantAssociation,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ParticipantAssociation(),
-                newParticipantAssociation, msgs);
+    public NotificationChain basicSetParticipantAssociation(ParticipantAssociation newParticipantAssociation, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_ParticipantAssociation(), newParticipantAssociation, msgs);
     }
 
     /**
@@ -3735,11 +3124,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setParticipantAssociation(
-            ParticipantAssociation newParticipantAssociation) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_ParticipantAssociation(),
-                newParticipantAssociation);
+    public void setParticipantAssociation(ParticipantAssociation newParticipantAssociation) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_ParticipantAssociation(), newParticipantAssociation);
     }
 
     /**
@@ -3748,11 +3134,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ParticipantMultiplicity getParticipantMultiplicity() {
-        return (ParticipantMultiplicity) getMixed()
-                .get(
-                        BpmnPackage.eINSTANCE
-                                .getDocumentRoot_ParticipantMultiplicity(),
-                        true);
+        return (ParticipantMultiplicity) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_ParticipantMultiplicity(), true);
     }
 
     /**
@@ -3760,13 +3142,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetParticipantMultiplicity(
-            ParticipantMultiplicity newParticipantMultiplicity,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed())
-                .basicAdd(BpmnPackage.eINSTANCE
-                        .getDocumentRoot_ParticipantMultiplicity(),
-                        newParticipantMultiplicity, msgs);
+    public NotificationChain basicSetParticipantMultiplicity(ParticipantMultiplicity newParticipantMultiplicity, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_ParticipantMultiplicity(), newParticipantMultiplicity, msgs);
     }
 
     /**
@@ -3774,11 +3151,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setParticipantMultiplicity(
-            ParticipantMultiplicity newParticipantMultiplicity) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_ParticipantMultiplicity(),
-                newParticipantMultiplicity);
+    public void setParticipantMultiplicity(ParticipantMultiplicity newParticipantMultiplicity) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_ParticipantMultiplicity(), newParticipantMultiplicity);
     }
 
     /**
@@ -3787,8 +3161,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public PartnerEntity getPartnerEntity() {
-        return (PartnerEntity) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_PartnerEntity(), true);
+        return (PartnerEntity) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_PartnerEntity(), true);
     }
 
     /**
@@ -3796,11 +3169,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetPartnerEntity(
-            PartnerEntity newPartnerEntity, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_PartnerEntity(),
-                newPartnerEntity, msgs);
+    public NotificationChain basicSetPartnerEntity(PartnerEntity newPartnerEntity, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_PartnerEntity(), newPartnerEntity, msgs);
     }
 
     /**
@@ -3809,8 +3179,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setPartnerEntity(PartnerEntity newPartnerEntity) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_PartnerEntity(), newPartnerEntity);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_PartnerEntity(), newPartnerEntity);
     }
 
     /**
@@ -3819,8 +3188,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public PartnerRole getPartnerRole() {
-        return (PartnerRole) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_PartnerRole(), true);
+        return (PartnerRole) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_PartnerRole(), true);
     }
 
     /**
@@ -3828,11 +3196,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetPartnerRole(PartnerRole newPartnerRole,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_PartnerRole(),
-                newPartnerRole, msgs);
+    public NotificationChain basicSetPartnerRole(PartnerRole newPartnerRole, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_PartnerRole(), newPartnerRole, msgs);
     }
 
     /**
@@ -3841,8 +3206,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setPartnerRole(PartnerRole newPartnerRole) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_PartnerRole(), newPartnerRole);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_PartnerRole(), newPartnerRole);
     }
 
     /**
@@ -3851,8 +3215,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public PotentialOwner getPotentialOwner() {
-        return (PotentialOwner) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_PotentialOwner(), true);
+        return (PotentialOwner) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_PotentialOwner(), true);
     }
 
     /**
@@ -3860,11 +3223,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetPotentialOwner(
-            PotentialOwner newPotentialOwner, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_PotentialOwner(),
-                newPotentialOwner, msgs);
+    public NotificationChain basicSetPotentialOwner(PotentialOwner newPotentialOwner, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_PotentialOwner(), newPotentialOwner, msgs);
     }
 
     /**
@@ -3873,8 +3233,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setPotentialOwner(PotentialOwner newPotentialOwner) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_PotentialOwner(), newPotentialOwner);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_PotentialOwner(), newPotentialOwner);
     }
 
     /**
@@ -3883,8 +3242,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public org.eclipse.bpmn.Process getProcess() {
-        return (org.eclipse.bpmn.Process) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Process(), true);
+        return (org.eclipse.bpmn.Process) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Process(), true);
     }
 
     /**
@@ -3892,11 +3250,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetProcess(
-            org.eclipse.bpmn.Process newProcess, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Process(), newProcess,
-                msgs);
+    public NotificationChain basicSetProcess(org.eclipse.bpmn.Process newProcess, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Process(), newProcess, msgs);
     }
 
     /**
@@ -3905,8 +3260,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setProcess(org.eclipse.bpmn.Process newProcess) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Process(), newProcess);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Process(), newProcess);
     }
 
     /**
@@ -3915,8 +3269,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Property getProperty() {
-        return (Property) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Property(), true);
+        return (Property) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Property(), true);
     }
 
     /**
@@ -3924,11 +3277,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetProperty(Property newProperty,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Property(), newProperty,
-                msgs);
+    public NotificationChain basicSetProperty(Property newProperty, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Property(), newProperty, msgs);
     }
 
     /**
@@ -3937,8 +3287,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setProperty(Property newProperty) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Property(), newProperty);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Property(), newProperty);
     }
 
     /**
@@ -3947,8 +3296,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ReceiveTask getReceiveTask() {
-        return (ReceiveTask) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ReceiveTask(), true);
+        return (ReceiveTask) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_ReceiveTask(), true);
     }
 
     /**
@@ -3956,11 +3304,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetReceiveTask(ReceiveTask newReceiveTask,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ReceiveTask(),
-                newReceiveTask, msgs);
+    public NotificationChain basicSetReceiveTask(ReceiveTask newReceiveTask, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_ReceiveTask(), newReceiveTask, msgs);
     }
 
     /**
@@ -3969,8 +3314,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setReceiveTask(ReceiveTask newReceiveTask) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_ReceiveTask(), newReceiveTask);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_ReceiveTask(), newReceiveTask);
     }
 
     /**
@@ -3979,8 +3323,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Relationship getRelationship() {
-        return (Relationship) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Relationship(), true);
+        return (Relationship) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Relationship(), true);
     }
 
     /**
@@ -3988,11 +3331,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetRelationship(Relationship newRelationship,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Relationship(),
-                newRelationship, msgs);
+    public NotificationChain basicSetRelationship(Relationship newRelationship, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Relationship(), newRelationship, msgs);
     }
 
     /**
@@ -4001,8 +3341,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setRelationship(Relationship newRelationship) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Relationship(), newRelationship);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Relationship(), newRelationship);
     }
 
     /**
@@ -4011,8 +3350,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Rendering getRendering() {
-        return (Rendering) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Rendering(), true);
+        return (Rendering) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Rendering(), true);
     }
 
     /**
@@ -4020,11 +3358,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetRendering(Rendering newRendering,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Rendering(),
-                newRendering, msgs);
+    public NotificationChain basicSetRendering(Rendering newRendering, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Rendering(), newRendering, msgs);
     }
 
     /**
@@ -4033,8 +3368,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setRendering(Rendering newRendering) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Rendering(), newRendering);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Rendering(), newRendering);
     }
 
     /**
@@ -4043,8 +3377,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Resource getResource() {
-        return (Resource) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Resource(), true);
+        return (Resource) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Resource(), true);
     }
 
     /**
@@ -4052,11 +3385,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetResource(Resource newResource,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Resource(), newResource,
-                msgs);
+    public NotificationChain basicSetResource(Resource newResource, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Resource(), newResource, msgs);
     }
 
     /**
@@ -4065,8 +3395,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setResource(Resource newResource) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Resource(), newResource);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Resource(), newResource);
     }
 
     /**
@@ -4075,9 +3404,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ResourceAssignmentExpression getResourceAssignmentExpression() {
-        return (ResourceAssignmentExpression) getMixed().get(
-                BpmnPackage.eINSTANCE
-                        .getDocumentRoot_ResourceAssignmentExpression(), true);
+        return (ResourceAssignmentExpression) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_ResourceAssignmentExpression(), true);
     }
 
     /**
@@ -4085,12 +3412,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetResourceAssignmentExpression(
-            ResourceAssignmentExpression newResourceAssignmentExpression,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE
-                        .getDocumentRoot_ResourceAssignmentExpression(),
+    public NotificationChain basicSetResourceAssignmentExpression(ResourceAssignmentExpression newResourceAssignmentExpression, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_ResourceAssignmentExpression(),
                 newResourceAssignmentExpression, msgs);
     }
 
@@ -4099,11 +3422,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setResourceAssignmentExpression(
-            ResourceAssignmentExpression newResourceAssignmentExpression) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_ResourceAssignmentExpression(),
-                newResourceAssignmentExpression);
+    public void setResourceAssignmentExpression(ResourceAssignmentExpression newResourceAssignmentExpression) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_ResourceAssignmentExpression(), newResourceAssignmentExpression);
     }
 
     /**
@@ -4112,9 +3432,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ResourceParameter getResourceParameter() {
-        return (ResourceParameter) getMixed()
-                .get(BpmnPackage.eINSTANCE.getDocumentRoot_ResourceParameter(),
-                        true);
+        return (ResourceParameter) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_ResourceParameter(), true);
     }
 
     /**
@@ -4122,11 +3440,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetResourceParameter(
-            ResourceParameter newResourceParameter, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ResourceParameter(),
-                newResourceParameter, msgs);
+    public NotificationChain basicSetResourceParameter(ResourceParameter newResourceParameter, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_ResourceParameter(), newResourceParameter, msgs);
     }
 
     /**
@@ -4135,8 +3450,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setResourceParameter(ResourceParameter newResourceParameter) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_ResourceParameter(), newResourceParameter);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_ResourceParameter(), newResourceParameter);
     }
 
     /**
@@ -4145,9 +3459,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ResourceParameterBinding getResourceParameterBinding() {
-        return (ResourceParameterBinding) getMixed().get(
-                BpmnPackage.eINSTANCE
-                        .getDocumentRoot_ResourceParameterBinding(), true);
+        return (ResourceParameterBinding) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_ResourceParameterBinding(), true);
     }
 
     /**
@@ -4155,13 +3467,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetResourceParameterBinding(
-            ResourceParameterBinding newResourceParameterBinding,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE
-                        .getDocumentRoot_ResourceParameterBinding(),
-                newResourceParameterBinding, msgs);
+    public NotificationChain basicSetResourceParameterBinding(ResourceParameterBinding newResourceParameterBinding, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_ResourceParameterBinding(), newResourceParameterBinding, msgs);
     }
 
     /**
@@ -4169,11 +3476,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setResourceParameterBinding(
-            ResourceParameterBinding newResourceParameterBinding) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_ResourceParameterBinding(),
-                newResourceParameterBinding);
+    public void setResourceParameterBinding(ResourceParameterBinding newResourceParameterBinding) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_ResourceParameterBinding(), newResourceParameterBinding);
     }
 
     /**
@@ -4182,8 +3486,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Script getScript() {
-        return (Script) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Script(), true);
+        return (Script) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Script(), true);
     }
 
     /**
@@ -4191,11 +3494,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetScript(Script newScript,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed())
-                .basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Script(),
-                        newScript, msgs);
+    public NotificationChain basicSetScript(Script newScript, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Script(), newScript, msgs);
     }
 
     /**
@@ -4204,8 +3504,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setScript(Script newScript) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Script(), newScript);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Script(), newScript);
     }
 
     /**
@@ -4214,8 +3513,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ScriptTask getScriptTask() {
-        return (ScriptTask) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ScriptTask(), true);
+        return (ScriptTask) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_ScriptTask(), true);
     }
 
     /**
@@ -4223,11 +3521,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetScriptTask(ScriptTask newScriptTask,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ScriptTask(),
-                newScriptTask, msgs);
+    public NotificationChain basicSetScriptTask(ScriptTask newScriptTask, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_ScriptTask(), newScriptTask, msgs);
     }
 
     /**
@@ -4236,8 +3531,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setScriptTask(ScriptTask newScriptTask) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_ScriptTask(), newScriptTask);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_ScriptTask(), newScriptTask);
     }
 
     /**
@@ -4246,8 +3540,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public SendTask getSendTask() {
-        return (SendTask) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_SendTask(), true);
+        return (SendTask) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_SendTask(), true);
     }
 
     /**
@@ -4255,11 +3548,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetSendTask(SendTask newSendTask,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_SendTask(), newSendTask,
-                msgs);
+    public NotificationChain basicSetSendTask(SendTask newSendTask, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_SendTask(), newSendTask, msgs);
     }
 
     /**
@@ -4268,8 +3558,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setSendTask(SendTask newSendTask) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_SendTask(), newSendTask);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_SendTask(), newSendTask);
     }
 
     /**
@@ -4278,8 +3567,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public SequenceFlow getSequenceFlow() {
-        return (SequenceFlow) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_SequenceFlow(), true);
+        return (SequenceFlow) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_SequenceFlow(), true);
     }
 
     /**
@@ -4287,11 +3575,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetSequenceFlow(SequenceFlow newSequenceFlow,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_SequenceFlow(),
-                newSequenceFlow, msgs);
+    public NotificationChain basicSetSequenceFlow(SequenceFlow newSequenceFlow, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_SequenceFlow(), newSequenceFlow, msgs);
     }
 
     /**
@@ -4300,8 +3585,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setSequenceFlow(SequenceFlow newSequenceFlow) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_SequenceFlow(), newSequenceFlow);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_SequenceFlow(), newSequenceFlow);
     }
 
     /**
@@ -4310,8 +3594,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ServiceTask getServiceTask() {
-        return (ServiceTask) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ServiceTask(), true);
+        return (ServiceTask) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_ServiceTask(), true);
     }
 
     /**
@@ -4319,11 +3602,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetServiceTask(ServiceTask newServiceTask,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ServiceTask(),
-                newServiceTask, msgs);
+    public NotificationChain basicSetServiceTask(ServiceTask newServiceTask, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_ServiceTask(), newServiceTask, msgs);
     }
 
     /**
@@ -4332,8 +3612,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setServiceTask(ServiceTask newServiceTask) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_ServiceTask(), newServiceTask);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_ServiceTask(), newServiceTask);
     }
 
     /**
@@ -4342,8 +3621,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Signal getSignal() {
-        return (Signal) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Signal(), true);
+        return (Signal) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Signal(), true);
     }
 
     /**
@@ -4351,11 +3629,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetSignal(Signal newSignal,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed())
-                .basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Signal(),
-                        newSignal, msgs);
+    public NotificationChain basicSetSignal(Signal newSignal, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Signal(), newSignal, msgs);
     }
 
     /**
@@ -4364,8 +3639,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setSignal(Signal newSignal) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Signal(), newSignal);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Signal(), newSignal);
     }
 
     /**
@@ -4374,9 +3648,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public SignalEventDefinition getSignalEventDefinition() {
-        return (SignalEventDefinition) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_SignalEventDefinition(),
-                true);
+        return (SignalEventDefinition) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_SignalEventDefinition(), true);
     }
 
     /**
@@ -4384,12 +3656,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetSignalEventDefinition(
-            SignalEventDefinition newSignalEventDefinition,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_SignalEventDefinition(),
-                newSignalEventDefinition, msgs);
+    public NotificationChain basicSetSignalEventDefinition(SignalEventDefinition newSignalEventDefinition, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_SignalEventDefinition(), newSignalEventDefinition, msgs);
     }
 
     /**
@@ -4397,11 +3665,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setSignalEventDefinition(
-            SignalEventDefinition newSignalEventDefinition) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_SignalEventDefinition(),
-                newSignalEventDefinition);
+    public void setSignalEventDefinition(SignalEventDefinition newSignalEventDefinition) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_SignalEventDefinition(), newSignalEventDefinition);
     }
 
     /**
@@ -4410,9 +3675,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public StandardLoopCharacteristics getStandardLoopCharacteristics() {
-        return (StandardLoopCharacteristics) getMixed().get(
-                BpmnPackage.eINSTANCE
-                        .getDocumentRoot_StandardLoopCharacteristics(), true);
+        return (StandardLoopCharacteristics) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_StandardLoopCharacteristics(), true);
     }
 
     /**
@@ -4420,370 +3683,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetStandardLoopCharacteristics(
-            StandardLoopCharacteristics newStandardLoopCharacteristics,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE
-                        .getDocumentRoot_StandardLoopCharacteristics(),
-                newStandardLoopCharacteristics, msgs);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setStandardLoopCharacteristics(
-            StandardLoopCharacteristics newStandardLoopCharacteristics) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_StandardLoopCharacteristics(),
-                newStandardLoopCharacteristics);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public StartEvent getStartEvent() {
-        return (StartEvent) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_StartEvent(), true);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetStartEvent(StartEvent newStartEvent,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_StartEvent(),
-                newStartEvent, msgs);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setStartEvent(StartEvent newStartEvent) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_StartEvent(), newStartEvent);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public SubConversation getSubConversation() {
-        return (SubConversation) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_SubConversation(), true);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetSubConversation(
-            SubConversation newSubConversation, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_SubConversation(),
-                newSubConversation, msgs);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setSubConversation(SubConversation newSubConversation) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_SubConversation(), newSubConversation);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public SubProcess getSubProcess() {
-        return (SubProcess) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_SubProcess(), true);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetSubProcess(SubProcess newSubProcess,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_SubProcess(),
-                newSubProcess, msgs);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setSubProcess(SubProcess newSubProcess) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_SubProcess(), newSubProcess);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public Task getTask() {
-        return (Task) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Task(), true);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetTask(Task newTask, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Task(), newTask, msgs);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setTask(Task newTask) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Task(), newTask);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public TerminateEventDefinition getTerminateEventDefinition() {
-        return (TerminateEventDefinition) getMixed().get(
-                BpmnPackage.eINSTANCE
-                        .getDocumentRoot_TerminateEventDefinition(), true);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetTerminateEventDefinition(
-            TerminateEventDefinition newTerminateEventDefinition,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE
-                        .getDocumentRoot_TerminateEventDefinition(),
-                newTerminateEventDefinition, msgs);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setTerminateEventDefinition(
-            TerminateEventDefinition newTerminateEventDefinition) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_TerminateEventDefinition(),
-                newTerminateEventDefinition);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public Text getText() {
-        return (Text) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Text(), true);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetText(Text newText, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Text(), newText, msgs);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setText(Text newText) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Text(), newText);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public TextAnnotation getTextAnnotation() {
-        return (TextAnnotation) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_TextAnnotation(), true);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetTextAnnotation(
-            TextAnnotation newTextAnnotation, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_TextAnnotation(),
-                newTextAnnotation, msgs);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setTextAnnotation(TextAnnotation newTextAnnotation) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_TextAnnotation(), newTextAnnotation);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public ThrowEvent getThrowEvent() {
-        return (ThrowEvent) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ThrowEvent(), true);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetThrowEvent(ThrowEvent newThrowEvent,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_ThrowEvent(),
-                newThrowEvent, msgs);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setThrowEvent(ThrowEvent newThrowEvent) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_ThrowEvent(), newThrowEvent);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public TimerEventDefinition getTimerEventDefinition() {
-        return (TimerEventDefinition) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_TimerEventDefinition(),
-                true);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetTimerEventDefinition(
-            TimerEventDefinition newTimerEventDefinition, NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_TimerEventDefinition(),
-                newTimerEventDefinition, msgs);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setTimerEventDefinition(
-            TimerEventDefinition newTimerEventDefinition) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_TimerEventDefinition(),
-                newTimerEventDefinition);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public Transaction getTransaction() {
-        return (Transaction) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Transaction(), true);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetTransaction(Transaction newTransaction,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_Transaction(),
-                newTransaction, msgs);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setTransaction(Transaction newTransaction) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_Transaction(), newTransaction);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public UserTask getUserTask() {
-        return (UserTask) getMixed().get(
-                BpmnPackage.eINSTANCE.getDocumentRoot_UserTask(), true);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetUserTask(UserTask newUserTask,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getMixed()).basicAdd(
-                BpmnPackage.eINSTANCE.getDocumentRoot_UserTask(), newUserTask,
+    public NotificationChain basicSetStandardLoopCharacteristics(StandardLoopCharacteristics newStandardLoopCharacteristics, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_StandardLoopCharacteristics(), newStandardLoopCharacteristics,
                 msgs);
     }
 
@@ -4792,9 +3693,305 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
+    public void setStandardLoopCharacteristics(StandardLoopCharacteristics newStandardLoopCharacteristics) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_StandardLoopCharacteristics(), newStandardLoopCharacteristics);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public StartEvent getStartEvent() {
+        return (StartEvent) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_StartEvent(), true);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetStartEvent(StartEvent newStartEvent, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_StartEvent(), newStartEvent, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setStartEvent(StartEvent newStartEvent) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_StartEvent(), newStartEvent);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public SubConversation getSubConversation() {
+        return (SubConversation) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_SubConversation(), true);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetSubConversation(SubConversation newSubConversation, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_SubConversation(), newSubConversation, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setSubConversation(SubConversation newSubConversation) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_SubConversation(), newSubConversation);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public SubProcess getSubProcess() {
+        return (SubProcess) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_SubProcess(), true);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetSubProcess(SubProcess newSubProcess, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_SubProcess(), newSubProcess, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setSubProcess(SubProcess newSubProcess) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_SubProcess(), newSubProcess);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Task getTask() {
+        return (Task) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Task(), true);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetTask(Task newTask, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Task(), newTask, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setTask(Task newTask) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Task(), newTask);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public TerminateEventDefinition getTerminateEventDefinition() {
+        return (TerminateEventDefinition) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_TerminateEventDefinition(), true);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetTerminateEventDefinition(TerminateEventDefinition newTerminateEventDefinition, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_TerminateEventDefinition(), newTerminateEventDefinition, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setTerminateEventDefinition(TerminateEventDefinition newTerminateEventDefinition) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_TerminateEventDefinition(), newTerminateEventDefinition);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Text getText() {
+        return (Text) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Text(), true);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetText(Text newText, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Text(), newText, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setText(Text newText) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Text(), newText);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public TextAnnotation getTextAnnotation() {
+        return (TextAnnotation) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_TextAnnotation(), true);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetTextAnnotation(TextAnnotation newTextAnnotation, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_TextAnnotation(), newTextAnnotation, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setTextAnnotation(TextAnnotation newTextAnnotation) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_TextAnnotation(), newTextAnnotation);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public ThrowEvent getThrowEvent() {
+        return (ThrowEvent) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_ThrowEvent(), true);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetThrowEvent(ThrowEvent newThrowEvent, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_ThrowEvent(), newThrowEvent, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setThrowEvent(ThrowEvent newThrowEvent) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_ThrowEvent(), newThrowEvent);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public TimerEventDefinition getTimerEventDefinition() {
+        return (TimerEventDefinition) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_TimerEventDefinition(), true);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetTimerEventDefinition(TimerEventDefinition newTimerEventDefinition, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_TimerEventDefinition(), newTimerEventDefinition, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setTimerEventDefinition(TimerEventDefinition newTimerEventDefinition) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_TimerEventDefinition(), newTimerEventDefinition);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Transaction getTransaction() {
+        return (Transaction) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_Transaction(), true);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetTransaction(Transaction newTransaction, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_Transaction(), newTransaction, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setTransaction(Transaction newTransaction) {
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_Transaction(), newTransaction);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public UserTask getUserTask() {
+        return (UserTask) getMixed().get(BpmnPackage.eINSTANCE.getDocumentRoot_UserTask(), true);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetUserTask(UserTask newUserTask, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(BpmnPackage.eINSTANCE.getDocumentRoot_UserTask(), newUserTask, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public void setUserTask(UserTask newUserTask) {
-        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE
-                .getDocumentRoot_UserTask(), newUserTask);
+        ((FeatureMap.Internal) getMixed()).set(BpmnPackage.eINSTANCE.getDocumentRoot_UserTask(), newUserTask);
     }
 
     /**
@@ -4803,17 +4000,14 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.DOCUMENT_ROOT__MIXED:
             return ((InternalEList<?>) getMixed()).basicRemove(otherEnd, msgs);
         case BpmnPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
-            return ((InternalEList<?>) getXMLNSPrefixMap()).basicRemove(
-                    otherEnd, msgs);
+            return ((InternalEList<?>) ((EMap.InternalMapView<String, String>) getXMLNSPrefixMap()).eMap()).basicRemove(otherEnd, msgs);
         case BpmnPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
-            return ((InternalEList<?>) getXSISchemaLocation()).basicRemove(
-                    otherEnd, msgs);
+            return ((InternalEList<?>) ((EMap.InternalMapView<String, String>) getXSISchemaLocation()).eMap()).basicRemove(otherEnd, msgs);
         case BpmnPackage.DOCUMENT_ROOT__ACTIVITY:
             return basicSetActivity(null, msgs);
         case BpmnPackage.DOCUMENT_ROOT__ACTIVITY_RESOURCE:
@@ -5098,14 +4292,14 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
             return ((FeatureMap.Internal) getMixed()).getWrapper();
         case BpmnPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
             if (coreType)
-                return getXMLNSPrefixMap();
+                return ((EMap.InternalMapView<String, String>) getXMLNSPrefixMap()).eMap();
             else
-                return getXMLNSPrefixMap().map();
+                return getXMLNSPrefixMap();
         case BpmnPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
             if (coreType)
-                return getXSISchemaLocation();
+                return ((EMap.InternalMapView<String, String>) getXSISchemaLocation()).eMap();
             else
-                return getXSISchemaLocation().map();
+                return getXSISchemaLocation();
         case BpmnPackage.DOCUMENT_ROOT__ACTIVITY:
             return getActivity();
         case BpmnPackage.DOCUMENT_ROOT__ACTIVITY_RESOURCE:
@@ -5388,10 +4582,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
             ((FeatureMap.Internal) getMixed()).set(newValue);
             return;
         case BpmnPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
-            ((EStructuralFeature.Setting) getXMLNSPrefixMap()).set(newValue);
+            ((EStructuralFeature.Setting) ((EMap.InternalMapView<String, String>) getXMLNSPrefixMap()).eMap()).set(newValue);
             return;
         case BpmnPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
-            ((EStructuralFeature.Setting) getXSISchemaLocation()).set(newValue);
+            ((EStructuralFeature.Setting) ((EMap.InternalMapView<String, String>) getXSISchemaLocation()).eMap()).set(newValue);
             return;
         case BpmnPackage.DOCUMENT_ROOT__ACTIVITY:
             setActivity((Activity) newValue);

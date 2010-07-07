@@ -113,8 +113,7 @@ public class StyleImpl extends EObjectImpl implements Style {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    DIPackage.STYLE__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, DIPackage.STYLE__NAME, oldName, name));
     }
 
     /**
@@ -135,8 +134,7 @@ public class StyleImpl extends EObjectImpl implements Style {
         String oldValue = value;
         value = newValue;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    DIPackage.STYLE__VALUE, oldValue, value));
+            eNotify(new ENotificationImpl(this, Notification.SET, DIPackage.STYLE__VALUE, oldValue, value));
     }
 
     /**
@@ -200,11 +198,9 @@ public class StyleImpl extends EObjectImpl implements Style {
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case DIPackage.STYLE__NAME:
-            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-                    .equals(name);
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         case DIPackage.STYLE__VALUE:
-            return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT
-                    .equals(value);
+            return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
         }
         return super.eIsSet(featureID);
     }

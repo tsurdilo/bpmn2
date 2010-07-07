@@ -1183,8 +1183,7 @@ public interface DIPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__XMLNS_PREFIX_MAP = eINSTANCE
-                .getDocumentRoot_XMLNSPrefixMap();
+        EReference DOCUMENT_ROOT__XMLNS_PREFIX_MAP = eINSTANCE.getDocumentRoot_XMLNSPrefixMap();
 
         /**
          * The meta object literal for the '<em><b>XSI Schema Location</b></em>' map feature.
@@ -1192,8 +1191,7 @@ public interface DIPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__XSI_SCHEMA_LOCATION = eINSTANCE
-                .getDocumentRoot_XSISchemaLocation();
+        EReference DOCUMENT_ROOT__XSI_SCHEMA_LOCATION = eINSTANCE.getDocumentRoot_XSISchemaLocation();
 
         /**
          * The meta object literal for the '<em><b>Bendpoint</b></em>' containment reference feature.
@@ -1201,8 +1199,7 @@ public interface DIPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__BENDPOINT = eINSTANCE
-                .getDocumentRoot_Bendpoint();
+        EReference DOCUMENT_ROOT__BENDPOINT = eINSTANCE.getDocumentRoot_Bendpoint();
 
         /**
          * The meta object literal for the '<em><b>Connector</b></em>' containment reference feature.
@@ -1210,8 +1207,7 @@ public interface DIPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__CONNECTOR = eINSTANCE
-                .getDocumentRoot_Connector();
+        EReference DOCUMENT_ROOT__CONNECTOR = eINSTANCE.getDocumentRoot_Connector();
 
         /**
          * The meta object literal for the '<em><b>View</b></em>' containment reference feature.

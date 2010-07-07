@@ -193,9 +193,7 @@ public class BendpointImpl extends EObjectImpl implements Bendpoint {
         boolean oldSourceXESet = sourceXESet;
         sourceXESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    DIPackage.BENDPOINT__SOURCE_X, oldSourceX, sourceX,
-                    !oldSourceXESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, DIPackage.BENDPOINT__SOURCE_X, oldSourceX, sourceX, !oldSourceXESet));
     }
 
     /**
@@ -209,9 +207,7 @@ public class BendpointImpl extends EObjectImpl implements Bendpoint {
         sourceX = SOURCE_X_EDEFAULT;
         sourceXESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    DIPackage.BENDPOINT__SOURCE_X, oldSourceX,
-                    SOURCE_X_EDEFAULT, oldSourceXESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, DIPackage.BENDPOINT__SOURCE_X, oldSourceX, SOURCE_X_EDEFAULT, oldSourceXESet));
     }
 
     /**
@@ -243,9 +239,7 @@ public class BendpointImpl extends EObjectImpl implements Bendpoint {
         boolean oldSourceYESet = sourceYESet;
         sourceYESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    DIPackage.BENDPOINT__SOURCE_Y, oldSourceY, sourceY,
-                    !oldSourceYESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, DIPackage.BENDPOINT__SOURCE_Y, oldSourceY, sourceY, !oldSourceYESet));
     }
 
     /**
@@ -259,9 +253,7 @@ public class BendpointImpl extends EObjectImpl implements Bendpoint {
         sourceY = SOURCE_Y_EDEFAULT;
         sourceYESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    DIPackage.BENDPOINT__SOURCE_Y, oldSourceY,
-                    SOURCE_Y_EDEFAULT, oldSourceYESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, DIPackage.BENDPOINT__SOURCE_Y, oldSourceY, SOURCE_Y_EDEFAULT, oldSourceYESet));
     }
 
     /**
@@ -293,9 +285,7 @@ public class BendpointImpl extends EObjectImpl implements Bendpoint {
         boolean oldTargetXESet = targetXESet;
         targetXESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    DIPackage.BENDPOINT__TARGET_X, oldTargetX, targetX,
-                    !oldTargetXESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, DIPackage.BENDPOINT__TARGET_X, oldTargetX, targetX, !oldTargetXESet));
     }
 
     /**
@@ -309,9 +299,7 @@ public class BendpointImpl extends EObjectImpl implements Bendpoint {
         targetX = TARGET_X_EDEFAULT;
         targetXESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    DIPackage.BENDPOINT__TARGET_X, oldTargetX,
-                    TARGET_X_EDEFAULT, oldTargetXESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, DIPackage.BENDPOINT__TARGET_X, oldTargetX, TARGET_X_EDEFAULT, oldTargetXESet));
     }
 
     /**
@@ -343,9 +331,7 @@ public class BendpointImpl extends EObjectImpl implements Bendpoint {
         boolean oldTargetYESet = targetYESet;
         targetYESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    DIPackage.BENDPOINT__TARGET_Y, oldTargetY, targetY,
-                    !oldTargetYESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, DIPackage.BENDPOINT__TARGET_Y, oldTargetY, targetY, !oldTargetYESet));
     }
 
     /**
@@ -359,9 +345,7 @@ public class BendpointImpl extends EObjectImpl implements Bendpoint {
         targetY = TARGET_Y_EDEFAULT;
         targetYESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    DIPackage.BENDPOINT__TARGET_Y, oldTargetY,
-                    TARGET_Y_EDEFAULT, oldTargetYESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, DIPackage.BENDPOINT__TARGET_Y, oldTargetY, TARGET_Y_EDEFAULT, oldTargetYESet));
     }
 
     /**

@@ -38,8 +38,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ResourceAssignmentExpressionImpl extends BaseElementImpl implements
-        ResourceAssignmentExpression {
+public class ResourceAssignmentExpressionImpl extends BaseElementImpl implements ResourceAssignmentExpression {
     /**
      * The cached value of the '{@link #getExpressionGroup() <em>Expression Group</em>}' attribute list.
      * <!-- begin-user-doc -->
@@ -76,9 +75,7 @@ public class ResourceAssignmentExpressionImpl extends BaseElementImpl implements
      */
     public FeatureMap getExpressionGroup() {
         if (expressionGroup == null) {
-            expressionGroup = new BasicFeatureMap(
-                    this,
-                    BpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION_GROUP);
+            expressionGroup = new BasicFeatureMap(this, BpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION_GROUP);
         }
         return expressionGroup;
     }
@@ -89,9 +86,7 @@ public class ResourceAssignmentExpressionImpl extends BaseElementImpl implements
      * @generated
      */
     public Expression getExpression() {
-        return (Expression) getExpressionGroup().get(
-                BpmnPackage.eINSTANCE
-                        .getResourceAssignmentExpression_Expression(), true);
+        return (Expression) getExpressionGroup().get(BpmnPackage.eINSTANCE.getResourceAssignmentExpression_Expression(), true);
     }
 
     /**
@@ -99,12 +94,8 @@ public class ResourceAssignmentExpressionImpl extends BaseElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetExpression(Expression newExpression,
-            NotificationChain msgs) {
-        return ((FeatureMap.Internal) getExpressionGroup()).basicAdd(
-                BpmnPackage.eINSTANCE
-                        .getResourceAssignmentExpression_Expression(),
-                newExpression, msgs);
+    public NotificationChain basicSetExpression(Expression newExpression, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getExpressionGroup()).basicAdd(BpmnPackage.eINSTANCE.getResourceAssignmentExpression_Expression(), newExpression, msgs);
     }
 
     /**
@@ -113,8 +104,7 @@ public class ResourceAssignmentExpressionImpl extends BaseElementImpl implements
      * @generated
      */
     public void setExpression(Expression newExpression) {
-        ((FeatureMap.Internal) getExpressionGroup()).set(BpmnPackage.eINSTANCE
-                .getResourceAssignmentExpression_Expression(), newExpression);
+        ((FeatureMap.Internal) getExpressionGroup()).set(BpmnPackage.eINSTANCE.getResourceAssignmentExpression_Expression(), newExpression);
     }
 
     /**
@@ -123,12 +113,10 @@ public class ResourceAssignmentExpressionImpl extends BaseElementImpl implements
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION_GROUP:
-            return ((InternalEList<?>) getExpressionGroup()).basicRemove(
-                    otherEnd, msgs);
+            return ((InternalEList<?>) getExpressionGroup()).basicRemove(otherEnd, msgs);
         case BpmnPackage.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION:
             return basicSetExpression(null, msgs);
         }

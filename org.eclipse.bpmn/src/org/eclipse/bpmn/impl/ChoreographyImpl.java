@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn.Artifact;
 import org.eclipse.bpmn.BpmnPackage;
 import org.eclipse.bpmn.Choreography;
@@ -62,8 +63,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ChoreographyImpl extends CallableElementImpl implements
-        Choreography {
+public class ChoreographyImpl extends CallableElementImpl implements Choreography {
     /**
      * The cached value of the '{@link #getFlowElementGroups() <em>Flow Element Groups</em>}' attribute list.
      * <!-- begin-user-doc -->
@@ -199,8 +199,7 @@ public class ChoreographyImpl extends CallableElementImpl implements
      */
     public FeatureMap getFlowElementGroups() {
         if (flowElementGroups == null) {
-            flowElementGroups = new BasicFeatureMap(this,
-                    BpmnPackage.CHOREOGRAPHY__FLOW_ELEMENT_GROUPS);
+            flowElementGroups = new BasicFeatureMap(this, BpmnPackage.CHOREOGRAPHY__FLOW_ELEMENT_GROUPS);
         }
         return flowElementGroups;
     }
@@ -210,9 +209,8 @@ public class ChoreographyImpl extends CallableElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<FlowElement> getFlowElements() {
-        return getFlowElementGroups().list(
-                BpmnPackage.eINSTANCE.getChoreography_FlowElements());
+    public List<FlowElement> getFlowElements() {
+        return getFlowElementGroups().list(BpmnPackage.eINSTANCE.getChoreography_FlowElements());
     }
 
     /**
@@ -222,8 +220,7 @@ public class ChoreographyImpl extends CallableElementImpl implements
      */
     public FeatureMap getArtifactGroups() {
         if (artifactGroups == null) {
-            artifactGroups = new BasicFeatureMap(this,
-                    BpmnPackage.CHOREOGRAPHY__ARTIFACT_GROUPS);
+            artifactGroups = new BasicFeatureMap(this, BpmnPackage.CHOREOGRAPHY__ARTIFACT_GROUPS);
         }
         return artifactGroups;
     }
@@ -233,9 +230,8 @@ public class ChoreographyImpl extends CallableElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Artifact> getArtifacts() {
-        return getArtifactGroups().list(
-                BpmnPackage.eINSTANCE.getChoreography_Artifacts());
+    public List<Artifact> getArtifacts() {
+        return getArtifactGroups().list(BpmnPackage.eINSTANCE.getChoreography_Artifacts());
     }
 
     /**
@@ -243,11 +239,9 @@ public class ChoreographyImpl extends CallableElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<MessageFlow> getMessageFlows() {
+    public List<MessageFlow> getMessageFlows() {
         if (messageFlows == null) {
-            messageFlows = new EObjectContainmentEList<MessageFlow>(
-                    MessageFlow.class, this,
-                    BpmnPackage.CHOREOGRAPHY__MESSAGE_FLOWS);
+            messageFlows = new EObjectContainmentEList<MessageFlow>(MessageFlow.class, this, BpmnPackage.CHOREOGRAPHY__MESSAGE_FLOWS);
         }
         return messageFlows;
     }
@@ -257,11 +251,9 @@ public class ChoreographyImpl extends CallableElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Participant> getParticipants() {
+    public List<Participant> getParticipants() {
         if (participants == null) {
-            participants = new EObjectContainmentEList<Participant>(
-                    Participant.class, this,
-                    BpmnPackage.CHOREOGRAPHY__PARTICIPANTS);
+            participants = new EObjectContainmentEList<Participant>(Participant.class, this, BpmnPackage.CHOREOGRAPHY__PARTICIPANTS);
         }
         return participants;
     }
@@ -271,11 +263,9 @@ public class ChoreographyImpl extends CallableElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Conversation> getConversations() {
+    public List<Conversation> getConversations() {
         if (conversations == null) {
-            conversations = new EObjectContainmentEList<Conversation>(
-                    Conversation.class, this,
-                    BpmnPackage.CHOREOGRAPHY__CONVERSATIONS);
+            conversations = new EObjectContainmentEList<Conversation>(Conversation.class, this, BpmnPackage.CHOREOGRAPHY__CONVERSATIONS);
         }
         return conversations;
     }
@@ -285,10 +275,9 @@ public class ChoreographyImpl extends CallableElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ConversationAssociation> getConversationAssociations() {
+    public List<ConversationAssociation> getConversationAssociations() {
         if (conversationAssociations == null) {
-            conversationAssociations = new EObjectContainmentEList<ConversationAssociation>(
-                    ConversationAssociation.class, this,
+            conversationAssociations = new EObjectContainmentEList<ConversationAssociation>(ConversationAssociation.class, this,
                     BpmnPackage.CHOREOGRAPHY__CONVERSATION_ASSOCIATIONS);
         }
         return conversationAssociations;
@@ -299,10 +288,9 @@ public class ChoreographyImpl extends CallableElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<MessageFlowAssociation> getMessageFlowAssociations() {
+    public List<MessageFlowAssociation> getMessageFlowAssociations() {
         if (messageFlowAssociations == null) {
-            messageFlowAssociations = new EObjectContainmentEList<MessageFlowAssociation>(
-                    MessageFlowAssociation.class, this,
+            messageFlowAssociations = new EObjectContainmentEList<MessageFlowAssociation>(MessageFlowAssociation.class, this,
                     BpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW_ASSOCIATIONS);
         }
         return messageFlowAssociations;
@@ -313,10 +301,9 @@ public class ChoreographyImpl extends CallableElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ParticipantAssociation> getParticipantAssociations() {
+    public List<ParticipantAssociation> getParticipantAssociations() {
         if (participantAssociations == null) {
-            participantAssociations = new EObjectContainmentEList<ParticipantAssociation>(
-                    ParticipantAssociation.class, this,
+            participantAssociations = new EObjectContainmentEList<ParticipantAssociation>(ParticipantAssociation.class, this,
                     BpmnPackage.CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS);
         }
         return participantAssociations;
@@ -342,9 +329,7 @@ public class ChoreographyImpl extends CallableElementImpl implements
         boolean oldIsClosedESet = isClosedESet;
         isClosedESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.CHOREOGRAPHY__IS_CLOSED, oldIsClosed, isClosed,
-                    !oldIsClosedESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.CHOREOGRAPHY__IS_CLOSED, oldIsClosed, isClosed, !oldIsClosedESet));
     }
 
     /**
@@ -358,9 +343,7 @@ public class ChoreographyImpl extends CallableElementImpl implements
         isClosed = IS_CLOSED_EDEFAULT;
         isClosedESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    BpmnPackage.CHOREOGRAPHY__IS_CLOSED, oldIsClosed,
-                    IS_CLOSED_EDEFAULT, oldIsClosedESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, BpmnPackage.CHOREOGRAPHY__IS_CLOSED, oldIsClosed, IS_CLOSED_EDEFAULT, oldIsClosedESet));
     }
 
     /**
@@ -378,39 +361,28 @@ public class ChoreographyImpl extends CallableElementImpl implements
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.CHOREOGRAPHY__FLOW_ELEMENT_GROUPS:
-            return ((InternalEList<?>) getFlowElementGroups()).basicRemove(
-                    otherEnd, msgs);
+            return ((InternalEList<?>) getFlowElementGroups()).basicRemove(otherEnd, msgs);
         case BpmnPackage.CHOREOGRAPHY__FLOW_ELEMENTS:
-            return ((InternalEList<?>) getFlowElements()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getFlowElements()).basicRemove(otherEnd, msgs);
         case BpmnPackage.CHOREOGRAPHY__ARTIFACT_GROUPS:
-            return ((InternalEList<?>) getArtifactGroups()).basicRemove(
-                    otherEnd, msgs);
+            return ((InternalEList<?>) getArtifactGroups()).basicRemove(otherEnd, msgs);
         case BpmnPackage.CHOREOGRAPHY__ARTIFACTS:
-            return ((InternalEList<?>) getArtifacts()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getArtifacts()).basicRemove(otherEnd, msgs);
         case BpmnPackage.CHOREOGRAPHY__MESSAGE_FLOWS:
-            return ((InternalEList<?>) getMessageFlows()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getMessageFlows()).basicRemove(otherEnd, msgs);
         case BpmnPackage.CHOREOGRAPHY__PARTICIPANTS:
-            return ((InternalEList<?>) getParticipants()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getParticipants()).basicRemove(otherEnd, msgs);
         case BpmnPackage.CHOREOGRAPHY__CONVERSATIONS:
-            return ((InternalEList<?>) getConversations()).basicRemove(
-                    otherEnd, msgs);
+            return ((InternalEList<?>) getConversations()).basicRemove(otherEnd, msgs);
         case BpmnPackage.CHOREOGRAPHY__CONVERSATION_ASSOCIATIONS:
-            return ((InternalEList<?>) getConversationAssociations())
-                    .basicRemove(otherEnd, msgs);
+            return ((InternalEList<?>) getConversationAssociations()).basicRemove(otherEnd, msgs);
         case BpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW_ASSOCIATIONS:
-            return ((InternalEList<?>) getMessageFlowAssociations())
-                    .basicRemove(otherEnd, msgs);
+            return ((InternalEList<?>) getMessageFlowAssociations()).basicRemove(otherEnd, msgs);
         case BpmnPackage.CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS:
-            return ((InternalEList<?>) getParticipantAssociations())
-                    .basicRemove(otherEnd, msgs);
+            return ((InternalEList<?>) getParticipantAssociations()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -467,8 +439,7 @@ public class ChoreographyImpl extends CallableElementImpl implements
             return;
         case BpmnPackage.CHOREOGRAPHY__FLOW_ELEMENTS:
             getFlowElements().clear();
-            getFlowElements().addAll(
-                    (Collection<? extends FlowElement>) newValue);
+            getFlowElements().addAll((Collection<? extends FlowElement>) newValue);
             return;
         case BpmnPackage.CHOREOGRAPHY__ARTIFACT_GROUPS:
             ((FeatureMap.Internal) getArtifactGroups()).set(newValue);
@@ -479,33 +450,27 @@ public class ChoreographyImpl extends CallableElementImpl implements
             return;
         case BpmnPackage.CHOREOGRAPHY__MESSAGE_FLOWS:
             getMessageFlows().clear();
-            getMessageFlows().addAll(
-                    (Collection<? extends MessageFlow>) newValue);
+            getMessageFlows().addAll((Collection<? extends MessageFlow>) newValue);
             return;
         case BpmnPackage.CHOREOGRAPHY__PARTICIPANTS:
             getParticipants().clear();
-            getParticipants().addAll(
-                    (Collection<? extends Participant>) newValue);
+            getParticipants().addAll((Collection<? extends Participant>) newValue);
             return;
         case BpmnPackage.CHOREOGRAPHY__CONVERSATIONS:
             getConversations().clear();
-            getConversations().addAll(
-                    (Collection<? extends Conversation>) newValue);
+            getConversations().addAll((Collection<? extends Conversation>) newValue);
             return;
         case BpmnPackage.CHOREOGRAPHY__CONVERSATION_ASSOCIATIONS:
             getConversationAssociations().clear();
-            getConversationAssociations().addAll(
-                    (Collection<? extends ConversationAssociation>) newValue);
+            getConversationAssociations().addAll((Collection<? extends ConversationAssociation>) newValue);
             return;
         case BpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW_ASSOCIATIONS:
             getMessageFlowAssociations().clear();
-            getMessageFlowAssociations().addAll(
-                    (Collection<? extends MessageFlowAssociation>) newValue);
+            getMessageFlowAssociations().addAll((Collection<? extends MessageFlowAssociation>) newValue);
             return;
         case BpmnPackage.CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS:
             getParticipantAssociations().clear();
-            getParticipantAssociations().addAll(
-                    (Collection<? extends ParticipantAssociation>) newValue);
+            getParticipantAssociations().addAll((Collection<? extends ParticipantAssociation>) newValue);
             return;
         case BpmnPackage.CHOREOGRAPHY__IS_CLOSED:
             setIsClosed((Boolean) newValue);
@@ -582,14 +547,11 @@ public class ChoreographyImpl extends CallableElementImpl implements
         case BpmnPackage.CHOREOGRAPHY__CONVERSATIONS:
             return conversations != null && !conversations.isEmpty();
         case BpmnPackage.CHOREOGRAPHY__CONVERSATION_ASSOCIATIONS:
-            return conversationAssociations != null
-                    && !conversationAssociations.isEmpty();
+            return conversationAssociations != null && !conversationAssociations.isEmpty();
         case BpmnPackage.CHOREOGRAPHY__MESSAGE_FLOW_ASSOCIATIONS:
-            return messageFlowAssociations != null
-                    && !messageFlowAssociations.isEmpty();
+            return messageFlowAssociations != null && !messageFlowAssociations.isEmpty();
         case BpmnPackage.CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS:
-            return participantAssociations != null
-                    && !participantAssociations.isEmpty();
+            return participantAssociations != null && !participantAssociations.isEmpty();
         case BpmnPackage.CHOREOGRAPHY__IS_CLOSED:
             return isSetIsClosed();
         }

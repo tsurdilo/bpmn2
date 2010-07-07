@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.bpmn.BpmnPackage;
@@ -43,8 +44,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  *
  * @generated
  */
-public class ConversationAssociationImpl extends BaseElementImpl implements
-        ConversationAssociation {
+public class ConversationAssociationImpl extends BaseElementImpl implements ConversationAssociation {
     /**
      * The cached value of the '{@link #getMessageFlowRef() <em>Message Flow Ref</em>}' attribute list.
      * <!-- begin-user-doc -->
@@ -119,10 +119,9 @@ public class ConversationAssociationImpl extends BaseElementImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<QName> getMessageFlowRef() {
+    public List<QName> getMessageFlowRef() {
         if (messageFlowRef == null) {
-            messageFlowRef = new EDataTypeEList<QName>(QName.class, this,
-                    BpmnPackage.CONVERSATION_ASSOCIATION__MESSAGE_FLOW_REF);
+            messageFlowRef = new EDataTypeEList<QName>(QName.class, this, BpmnPackage.CONVERSATION_ASSOCIATION__MESSAGE_FLOW_REF);
         }
         return messageFlowRef;
     }
@@ -145,9 +144,7 @@ public class ConversationAssociationImpl extends BaseElementImpl implements
         QName oldConversationRef = conversationRef;
         conversationRef = newConversationRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.CONVERSATION_ASSOCIATION__CONVERSATION_REF,
-                    oldConversationRef, conversationRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.CONVERSATION_ASSOCIATION__CONVERSATION_REF, oldConversationRef, conversationRef));
     }
 
     /**
@@ -168,9 +165,8 @@ public class ConversationAssociationImpl extends BaseElementImpl implements
         QName oldCorrelationKeyRef = correlationKeyRef;
         correlationKeyRef = newCorrelationKeyRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.CONVERSATION_ASSOCIATION__CORRELATION_KEY_REF,
-                    oldCorrelationKeyRef, correlationKeyRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.CONVERSATION_ASSOCIATION__CORRELATION_KEY_REF, oldCorrelationKeyRef,
+                    correlationKeyRef));
     }
 
     /**
@@ -246,11 +242,9 @@ public class ConversationAssociationImpl extends BaseElementImpl implements
         case BpmnPackage.CONVERSATION_ASSOCIATION__MESSAGE_FLOW_REF:
             return messageFlowRef != null && !messageFlowRef.isEmpty();
         case BpmnPackage.CONVERSATION_ASSOCIATION__CONVERSATION_REF:
-            return CONVERSATION_REF_EDEFAULT == null ? conversationRef != null
-                    : !CONVERSATION_REF_EDEFAULT.equals(conversationRef);
+            return CONVERSATION_REF_EDEFAULT == null ? conversationRef != null : !CONVERSATION_REF_EDEFAULT.equals(conversationRef);
         case BpmnPackage.CONVERSATION_ASSOCIATION__CORRELATION_KEY_REF:
-            return CORRELATION_KEY_REF_EDEFAULT == null ? correlationKeyRef != null
-                    : !CORRELATION_KEY_REF_EDEFAULT.equals(correlationKeyRef);
+            return CORRELATION_KEY_REF_EDEFAULT == null ? correlationKeyRef != null : !CORRELATION_KEY_REF_EDEFAULT.equals(correlationKeyRef);
         }
         return super.eIsSet(featureID);
     }

@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -46,7 +47,7 @@ public interface Interface extends RootElement {
      *        extendedMetaData="kind='element' name='operation' namespace='##targetNamespace'"
      * @generated
      */
-    EList<Operation> getOperation();
+    List<Operation> getOperation();
 
     /**
      * Returns the value of the '<em><b>Name</b></em>' attribute.

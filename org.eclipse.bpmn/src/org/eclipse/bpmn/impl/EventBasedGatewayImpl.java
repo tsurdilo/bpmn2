@@ -35,8 +35,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class EventBasedGatewayImpl extends GatewayImpl implements
-        EventBasedGateway {
+public class EventBasedGatewayImpl extends GatewayImpl implements EventBasedGateway {
     /**
      * The default value of the '{@link #getEventGatewayType() <em>Event Gateway Type</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -130,14 +129,11 @@ public class EventBasedGatewayImpl extends GatewayImpl implements
      */
     public void setEventGatewayType(EventBasedGatewayType newEventGatewayType) {
         EventBasedGatewayType oldEventGatewayType = eventGatewayType;
-        eventGatewayType = newEventGatewayType == null ? EVENT_GATEWAY_TYPE_EDEFAULT
-                : newEventGatewayType;
+        eventGatewayType = newEventGatewayType == null ? EVENT_GATEWAY_TYPE_EDEFAULT : newEventGatewayType;
         boolean oldEventGatewayTypeESet = eventGatewayTypeESet;
         eventGatewayTypeESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE,
-                    oldEventGatewayType, eventGatewayType,
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE, oldEventGatewayType, eventGatewayType,
                     !oldEventGatewayTypeESet));
     }
 
@@ -152,10 +148,8 @@ public class EventBasedGatewayImpl extends GatewayImpl implements
         eventGatewayType = EVENT_GATEWAY_TYPE_EDEFAULT;
         eventGatewayTypeESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    BpmnPackage.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE,
-                    oldEventGatewayType, EVENT_GATEWAY_TYPE_EDEFAULT,
-                    oldEventGatewayTypeESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, BpmnPackage.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE, oldEventGatewayType,
+                    EVENT_GATEWAY_TYPE_EDEFAULT, oldEventGatewayTypeESet));
     }
 
     /**
@@ -187,9 +181,8 @@ public class EventBasedGatewayImpl extends GatewayImpl implements
         boolean oldInstantiateESet = instantiateESet;
         instantiateESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.EVENT_BASED_GATEWAY__INSTANTIATE,
-                    oldInstantiate, instantiate, !oldInstantiateESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.EVENT_BASED_GATEWAY__INSTANTIATE, oldInstantiate, instantiate,
+                    !oldInstantiateESet));
     }
 
     /**
@@ -203,9 +196,8 @@ public class EventBasedGatewayImpl extends GatewayImpl implements
         instantiate = INSTANTIATE_EDEFAULT;
         instantiateESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    BpmnPackage.EVENT_BASED_GATEWAY__INSTANTIATE,
-                    oldInstantiate, INSTANTIATE_EDEFAULT, oldInstantiateESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, BpmnPackage.EVENT_BASED_GATEWAY__INSTANTIATE, oldInstantiate, INSTANTIATE_EDEFAULT,
+                    oldInstantiateESet));
     }
 
     /**

@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn.BpmnPackage;
 import org.eclipse.bpmn.Rendering;
 import org.eclipse.bpmn.UserTask;
@@ -109,10 +110,9 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Rendering> getRendering() {
+    public List<Rendering> getRendering() {
         if (rendering == null) {
-            rendering = new EObjectContainmentEList<Rendering>(Rendering.class,
-                    this, BpmnPackage.USER_TASK__RENDERING);
+            rendering = new EObjectContainmentEList<Rendering>(Rendering.class, this, BpmnPackage.USER_TASK__RENDERING);
         }
         return rendering;
     }
@@ -133,14 +133,12 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
      */
     public void setImplementation(UserTaskImplementation newImplementation) {
         UserTaskImplementation oldImplementation = implementation;
-        implementation = newImplementation == null ? IMPLEMENTATION_EDEFAULT
-                : newImplementation;
+        implementation = newImplementation == null ? IMPLEMENTATION_EDEFAULT : newImplementation;
         boolean oldImplementationESet = implementationESet;
         implementationESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.USER_TASK__IMPLEMENTATION, oldImplementation,
-                    implementation, !oldImplementationESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.USER_TASK__IMPLEMENTATION, oldImplementation, implementation,
+                    !oldImplementationESet));
     }
 
     /**
@@ -154,9 +152,8 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
         implementation = IMPLEMENTATION_EDEFAULT;
         implementationESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    BpmnPackage.USER_TASK__IMPLEMENTATION, oldImplementation,
-                    IMPLEMENTATION_EDEFAULT, oldImplementationESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, BpmnPackage.USER_TASK__IMPLEMENTATION, oldImplementation, IMPLEMENTATION_EDEFAULT,
+                    oldImplementationESet));
     }
 
     /**
@@ -174,12 +171,10 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.USER_TASK__RENDERING:
-            return ((InternalEList<?>) getRendering()).basicRemove(otherEnd,
-                    msgs);
+            return ((InternalEList<?>) getRendering()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }

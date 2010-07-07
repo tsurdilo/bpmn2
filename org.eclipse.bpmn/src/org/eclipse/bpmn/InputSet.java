@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -49,7 +50,7 @@ public interface InputSet extends BaseElement {
      *        extendedMetaData="kind='element' name='dataInputRefs' namespace='##targetNamespace'"
      * @generated
      */
-    EList<String> getDataInputRefs();
+    List<String> getDataInputRefs();
 
     /**
      * Returns the value of the '<em><b>Optional Input Refs</b></em>' attribute list.
@@ -66,7 +67,7 @@ public interface InputSet extends BaseElement {
      *        extendedMetaData="kind='element' name='optionalInputRefs' namespace='##targetNamespace'"
      * @generated
      */
-    EList<String> getOptionalInputRefs();
+    List<String> getOptionalInputRefs();
 
     /**
      * Returns the value of the '<em><b>While Executing Input Refs</b></em>' attribute list.
@@ -83,7 +84,7 @@ public interface InputSet extends BaseElement {
      *        extendedMetaData="kind='element' name='whileExecutingInputRefs' namespace='##targetNamespace'"
      * @generated
      */
-    EList<String> getWhileExecutingInputRefs();
+    List<String> getWhileExecutingInputRefs();
 
     /**
      * Returns the value of the '<em><b>Output Set Refs</b></em>' attribute list.
@@ -100,7 +101,7 @@ public interface InputSet extends BaseElement {
      *        extendedMetaData="kind='element' name='outputSetRefs' namespace='##targetNamespace'"
      * @generated
      */
-    EList<String> getOutputSetRefs();
+    List<String> getOutputSetRefs();
 
     /**
      * Returns the value of the '<em><b>Name</b></em>' attribute.

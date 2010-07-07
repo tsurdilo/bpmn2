@@ -83,8 +83,7 @@ public enum AdHocOrdering implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    private static final AdHocOrdering[] VALUES_ARRAY = new AdHocOrdering[] {
-            PARALLEL, SEQUENTIAL, };
+    private static final AdHocOrdering[] VALUES_ARRAY = new AdHocOrdering[] { PARALLEL, SEQUENTIAL, };
 
     /**
      * A public read-only list of all the '<em><b>Ad Hoc Ordering</b></em>' enumerators.
@@ -92,8 +91,7 @@ public enum AdHocOrdering implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final List<AdHocOrdering> VALUES = Collections
-            .unmodifiableList(Arrays.asList(VALUES_ARRAY));
+    public static final List<AdHocOrdering> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
     /**
      * Returns the '<em><b>Ad Hoc Ordering</b></em>' literal with the specified literal value.

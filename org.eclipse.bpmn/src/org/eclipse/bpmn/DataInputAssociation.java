@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.emf.common.util.EList;
@@ -48,7 +49,7 @@ public interface DataInputAssociation extends DataAssociation {
      *        extendedMetaData="kind='element' name='sourceRef' namespace='##targetNamespace'"
      * @generated
      */
-    EList<QName> getSourceRef();
+    List<QName> getSourceRef();
 
     /**
      * Returns the value of the '<em><b>Target Ref</b></em>' attribute.

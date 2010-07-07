@@ -38,8 +38,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ItemDefinitionImpl extends RootElementImpl implements
-        ItemDefinition {
+public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinition {
     /**
      * The default value of the '{@link #isIsCollection() <em>Is Collection</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -157,9 +156,8 @@ public class ItemDefinitionImpl extends RootElementImpl implements
         boolean oldIsCollectionESet = isCollectionESet;
         isCollectionESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.ITEM_DEFINITION__IS_COLLECTION,
-                    oldIsCollection, isCollection, !oldIsCollectionESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.ITEM_DEFINITION__IS_COLLECTION, oldIsCollection, isCollection,
+                    !oldIsCollectionESet));
     }
 
     /**
@@ -173,9 +171,7 @@ public class ItemDefinitionImpl extends RootElementImpl implements
         isCollection = IS_COLLECTION_EDEFAULT;
         isCollectionESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    BpmnPackage.ITEM_DEFINITION__IS_COLLECTION,
-                    oldIsCollection, IS_COLLECTION_EDEFAULT,
+            eNotify(new ENotificationImpl(this, Notification.UNSET, BpmnPackage.ITEM_DEFINITION__IS_COLLECTION, oldIsCollection, IS_COLLECTION_EDEFAULT,
                     oldIsCollectionESet));
     }
 
@@ -208,9 +204,7 @@ public class ItemDefinitionImpl extends RootElementImpl implements
         boolean oldItemKindESet = itemKindESet;
         itemKindESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.ITEM_DEFINITION__ITEM_KIND, oldItemKind,
-                    itemKind, !oldItemKindESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.ITEM_DEFINITION__ITEM_KIND, oldItemKind, itemKind, !oldItemKindESet));
     }
 
     /**
@@ -224,9 +218,7 @@ public class ItemDefinitionImpl extends RootElementImpl implements
         itemKind = ITEM_KIND_EDEFAULT;
         itemKindESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    BpmnPackage.ITEM_DEFINITION__ITEM_KIND, oldItemKind,
-                    ITEM_KIND_EDEFAULT, oldItemKindESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, BpmnPackage.ITEM_DEFINITION__ITEM_KIND, oldItemKind, ITEM_KIND_EDEFAULT, oldItemKindESet));
     }
 
     /**
@@ -256,9 +248,7 @@ public class ItemDefinitionImpl extends RootElementImpl implements
         QName oldStructureRef = structureRef;
         structureRef = newStructureRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.ITEM_DEFINITION__STRUCTURE_REF,
-                    oldStructureRef, structureRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.ITEM_DEFINITION__STRUCTURE_REF, oldStructureRef, structureRef));
     }
 
     /**
@@ -334,8 +324,7 @@ public class ItemDefinitionImpl extends RootElementImpl implements
         case BpmnPackage.ITEM_DEFINITION__ITEM_KIND:
             return isSetItemKind();
         case BpmnPackage.ITEM_DEFINITION__STRUCTURE_REF:
-            return STRUCTURE_REF_EDEFAULT == null ? structureRef != null
-                    : !STRUCTURE_REF_EDEFAULT.equals(structureRef);
+            return STRUCTURE_REF_EDEFAULT == null ? structureRef != null : !STRUCTURE_REF_EDEFAULT.equals(structureRef);
         }
         return super.eIsSet(featureID);
     }

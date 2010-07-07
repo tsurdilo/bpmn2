@@ -93,9 +93,7 @@ public class EscalationImpl extends RootElementImpl implements Escalation {
         QName oldStructureRef = structureRef;
         structureRef = newStructureRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.ESCALATION__STRUCTURE_REF, oldStructureRef,
-                    structureRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.ESCALATION__STRUCTURE_REF, oldStructureRef, structureRef));
     }
 
     /**
@@ -151,8 +149,7 @@ public class EscalationImpl extends RootElementImpl implements Escalation {
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case BpmnPackage.ESCALATION__STRUCTURE_REF:
-            return STRUCTURE_REF_EDEFAULT == null ? structureRef != null
-                    : !STRUCTURE_REF_EDEFAULT.equals(structureRef);
+            return STRUCTURE_REF_EDEFAULT == null ? structureRef != null : !STRUCTURE_REF_EDEFAULT.equals(structureRef);
         }
         return super.eIsSet(featureID);
     }

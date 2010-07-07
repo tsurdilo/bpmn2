@@ -108,8 +108,7 @@ public enum ServiceImplementation implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    private static final ServiceImplementation[] VALUES_ARRAY = new ServiceImplementation[] {
-            WEB_SERVICE, OTHER, UNSPECIFIED, };
+    private static final ServiceImplementation[] VALUES_ARRAY = new ServiceImplementation[] { WEB_SERVICE, OTHER, UNSPECIFIED, };
 
     /**
      * A public read-only list of all the '<em><b>Service Implementation</b></em>' enumerators.
@@ -117,8 +116,7 @@ public enum ServiceImplementation implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final List<ServiceImplementation> VALUES = Collections
-            .unmodifiableList(Arrays.asList(VALUES_ARRAY));
+    public static final List<ServiceImplementation> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
     /**
      * Returns the '<em><b>Service Implementation</b></em>' literal with the specified literal value.

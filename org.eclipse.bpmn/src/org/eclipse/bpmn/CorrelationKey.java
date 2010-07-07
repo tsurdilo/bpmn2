@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.emf.common.util.EList;
@@ -47,6 +48,6 @@ public interface CorrelationKey extends BaseElement {
      *        extendedMetaData="kind='element' name='correlationPropertyRef' namespace='##targetNamespace'"
      * @generated
      */
-    EList<QName> getCorrelationPropertyRef();
+    List<QName> getCorrelationPropertyRef();
 
 } // CorrelationKey

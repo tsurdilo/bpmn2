@@ -87,8 +87,7 @@ public class TextImpl extends EObjectImpl implements Text {
      * @generated
      */
     public FeatureMap getAny() {
-        return (FeatureMap) getMixed().<FeatureMap.Entry> list(
-                BpmnPackage.eINSTANCE.getText_Any());
+        return (FeatureMap) getMixed().<FeatureMap.Entry> list(BpmnPackage.eINSTANCE.getText_Any());
     }
 
     /**
@@ -97,8 +96,7 @@ public class TextImpl extends EObjectImpl implements Text {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd,
-            int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case BpmnPackage.TEXT__MIXED:
             return ((InternalEList<?>) getMixed()).basicRemove(otherEnd, msgs);

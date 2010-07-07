@@ -108,8 +108,7 @@ public enum AssociationDirection implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    private static final AssociationDirection[] VALUES_ARRAY = new AssociationDirection[] {
-            NONE, ONE, BOTH, };
+    private static final AssociationDirection[] VALUES_ARRAY = new AssociationDirection[] { NONE, ONE, BOTH, };
 
     /**
      * A public read-only list of all the '<em><b>Association Direction</b></em>' enumerators.
@@ -117,8 +116,7 @@ public enum AssociationDirection implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final List<AssociationDirection> VALUES = Collections
-            .unmodifiableList(Arrays.asList(VALUES_ARRAY));
+    public static final List<AssociationDirection> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
     /**
      * Returns the '<em><b>Association Direction</b></em>' literal with the specified literal value.

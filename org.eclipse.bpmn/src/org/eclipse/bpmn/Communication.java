@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn;
 
+import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.eclipse.emf.common.util.EList;
@@ -48,7 +49,7 @@ public interface Communication extends ConversationNode {
      *        extendedMetaData="kind='element' name='messageFlowRef' namespace='##targetNamespace'"
      * @generated
      */
-    EList<QName> getMessageFlowRef();
+    List<QName> getMessageFlowRef();
 
     /**
      * Returns the value of the '<em><b>Correlation Key Ref</b></em>' attribute.

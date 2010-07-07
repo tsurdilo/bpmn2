@@ -13,6 +13,7 @@ package org.eclipse.bpmn.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn.BpmnPackage;
 import org.eclipse.bpmn.OutputSet;
 
@@ -128,10 +129,9 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<String> getDataOutputRefs() {
+    public List<String> getDataOutputRefs() {
         if (dataOutputRefs == null) {
-            dataOutputRefs = new EDataTypeEList<String>(String.class, this,
-                    BpmnPackage.OUTPUT_SET__DATA_OUTPUT_REFS);
+            dataOutputRefs = new EDataTypeEList<String>(String.class, this, BpmnPackage.OUTPUT_SET__DATA_OUTPUT_REFS);
         }
         return dataOutputRefs;
     }
@@ -141,10 +141,9 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<String> getOptionalOutputRefs() {
+    public List<String> getOptionalOutputRefs() {
         if (optionalOutputRefs == null) {
-            optionalOutputRefs = new EDataTypeEList<String>(String.class, this,
-                    BpmnPackage.OUTPUT_SET__OPTIONAL_OUTPUT_REFS);
+            optionalOutputRefs = new EDataTypeEList<String>(String.class, this, BpmnPackage.OUTPUT_SET__OPTIONAL_OUTPUT_REFS);
         }
         return optionalOutputRefs;
     }
@@ -154,10 +153,9 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<String> getWhileExecutingOutputRefs() {
+    public List<String> getWhileExecutingOutputRefs() {
         if (whileExecutingOutputRefs == null) {
-            whileExecutingOutputRefs = new EDataTypeEList<String>(String.class,
-                    this, BpmnPackage.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS);
+            whileExecutingOutputRefs = new EDataTypeEList<String>(String.class, this, BpmnPackage.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS);
         }
         return whileExecutingOutputRefs;
     }
@@ -167,10 +165,9 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<String> getInputSetRefs() {
+    public List<String> getInputSetRefs() {
         if (inputSetRefs == null) {
-            inputSetRefs = new EDataTypeEList<String>(String.class, this,
-                    BpmnPackage.OUTPUT_SET__INPUT_SET_REFS);
+            inputSetRefs = new EDataTypeEList<String>(String.class, this, BpmnPackage.OUTPUT_SET__INPUT_SET_REFS);
         }
         return inputSetRefs;
     }
@@ -193,8 +190,7 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.OUTPUT_SET__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.OUTPUT_SET__NAME, oldName, name));
     }
 
     /**
@@ -234,13 +230,11 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
             return;
         case BpmnPackage.OUTPUT_SET__OPTIONAL_OUTPUT_REFS:
             getOptionalOutputRefs().clear();
-            getOptionalOutputRefs().addAll(
-                    (Collection<? extends String>) newValue);
+            getOptionalOutputRefs().addAll((Collection<? extends String>) newValue);
             return;
         case BpmnPackage.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS:
             getWhileExecutingOutputRefs().clear();
-            getWhileExecutingOutputRefs().addAll(
-                    (Collection<? extends String>) newValue);
+            getWhileExecutingOutputRefs().addAll((Collection<? extends String>) newValue);
             return;
         case BpmnPackage.OUTPUT_SET__INPUT_SET_REFS:
             getInputSetRefs().clear();
@@ -293,13 +287,11 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
         case BpmnPackage.OUTPUT_SET__OPTIONAL_OUTPUT_REFS:
             return optionalOutputRefs != null && !optionalOutputRefs.isEmpty();
         case BpmnPackage.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS:
-            return whileExecutingOutputRefs != null
-                    && !whileExecutingOutputRefs.isEmpty();
+            return whileExecutingOutputRefs != null && !whileExecutingOutputRefs.isEmpty();
         case BpmnPackage.OUTPUT_SET__INPUT_SET_REFS:
             return inputSetRefs != null && !inputSetRefs.isEmpty();
         case BpmnPackage.OUTPUT_SET__NAME:
-            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-                    .equals(name);
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }

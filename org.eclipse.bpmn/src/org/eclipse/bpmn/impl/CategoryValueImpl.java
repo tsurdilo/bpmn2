@@ -91,8 +91,7 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
         String oldValue = value;
         value = newValue;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.CATEGORY_VALUE__VALUE, oldValue, value));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.CATEGORY_VALUE__VALUE, oldValue, value));
     }
 
     /**
@@ -148,8 +147,7 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case BpmnPackage.CATEGORY_VALUE__VALUE:
-            return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT
-                    .equals(value);
+            return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
         }
         return super.eIsSet(featureID);
     }

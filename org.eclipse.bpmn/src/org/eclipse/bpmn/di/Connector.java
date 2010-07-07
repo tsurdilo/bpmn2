@@ -11,6 +11,7 @@
  */
 package org.eclipse.bpmn.di;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -47,7 +48,7 @@ public interface Connector extends View {
      *        extendedMetaData="kind='element' name='bendpoint' namespace='##targetNamespace'"
      * @generated
      */
-    EList<Bendpoint> getBendpoint();
+    List<Bendpoint> getBendpoint();
 
     /**
      * Returns the value of the '<em><b>Source</b></em>' attribute.

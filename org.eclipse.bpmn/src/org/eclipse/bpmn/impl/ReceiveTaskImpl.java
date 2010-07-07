@@ -173,14 +173,12 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
      */
     public void setImplementation(ServiceImplementation newImplementation) {
         ServiceImplementation oldImplementation = implementation;
-        implementation = newImplementation == null ? IMPLEMENTATION_EDEFAULT
-                : newImplementation;
+        implementation = newImplementation == null ? IMPLEMENTATION_EDEFAULT : newImplementation;
         boolean oldImplementationESet = implementationESet;
         implementationESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.RECEIVE_TASK__IMPLEMENTATION,
-                    oldImplementation, implementation, !oldImplementationESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.RECEIVE_TASK__IMPLEMENTATION, oldImplementation, implementation,
+                    !oldImplementationESet));
     }
 
     /**
@@ -194,9 +192,7 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
         implementation = IMPLEMENTATION_EDEFAULT;
         implementationESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    BpmnPackage.RECEIVE_TASK__IMPLEMENTATION,
-                    oldImplementation, IMPLEMENTATION_EDEFAULT,
+            eNotify(new ENotificationImpl(this, Notification.UNSET, BpmnPackage.RECEIVE_TASK__IMPLEMENTATION, oldImplementation, IMPLEMENTATION_EDEFAULT,
                     oldImplementationESet));
     }
 
@@ -229,9 +225,7 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
         boolean oldInstantiateESet = instantiateESet;
         instantiateESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.RECEIVE_TASK__INSTANTIATE, oldInstantiate,
-                    instantiate, !oldInstantiateESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.RECEIVE_TASK__INSTANTIATE, oldInstantiate, instantiate, !oldInstantiateESet));
     }
 
     /**
@@ -245,9 +239,8 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
         instantiate = INSTANTIATE_EDEFAULT;
         instantiateESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET,
-                    BpmnPackage.RECEIVE_TASK__INSTANTIATE, oldInstantiate,
-                    INSTANTIATE_EDEFAULT, oldInstantiateESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, BpmnPackage.RECEIVE_TASK__INSTANTIATE, oldInstantiate, INSTANTIATE_EDEFAULT,
+                    oldInstantiateESet));
     }
 
     /**
@@ -277,9 +270,7 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
         QName oldMessageRef = messageRef;
         messageRef = newMessageRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.RECEIVE_TASK__MESSAGE_REF, oldMessageRef,
-                    messageRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.RECEIVE_TASK__MESSAGE_REF, oldMessageRef, messageRef));
     }
 
     /**
@@ -300,9 +291,7 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
         QName oldOperationRef = operationRef;
         operationRef = newOperationRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    BpmnPackage.RECEIVE_TASK__OPERATION_REF, oldOperationRef,
-                    operationRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.RECEIVE_TASK__OPERATION_REF, oldOperationRef, operationRef));
     }
 
     /**
@@ -386,11 +375,9 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
         case BpmnPackage.RECEIVE_TASK__INSTANTIATE:
             return isSetInstantiate();
         case BpmnPackage.RECEIVE_TASK__MESSAGE_REF:
-            return MESSAGE_REF_EDEFAULT == null ? messageRef != null
-                    : !MESSAGE_REF_EDEFAULT.equals(messageRef);
+            return MESSAGE_REF_EDEFAULT == null ? messageRef != null : !MESSAGE_REF_EDEFAULT.equals(messageRef);
         case BpmnPackage.RECEIVE_TASK__OPERATION_REF:
-            return OPERATION_REF_EDEFAULT == null ? operationRef != null
-                    : !OPERATION_REF_EDEFAULT.equals(operationRef);
+            return OPERATION_REF_EDEFAULT == null ? operationRef != null : !OPERATION_REF_EDEFAULT.equals(operationRef);
         }
         return super.eIsSet(featureID);
     }
