@@ -84,24 +84,24 @@ define "bpmn2", :layout => layout do
   compile.options.source = "1.5"
   compile.options.target = "1.5"
   
-  define 'org.eclipse.bpmn'  do
+  define 'org.eclipse.bpmn2'  do
     compile.with project.dependencies
     package(:plugin)
   end
 
-  define 'org.eclipse.bpmn.edit' do
+  define 'org.eclipse.bpmn2.edit' do
     compile.with project.dependencies
     package(:plugin)
   end
 
-  define 'org.eclipse.bpmn.editor'  do
+  define 'org.eclipse.bpmn2.editor'  do
     compile.with dependencies
     package(:plugin)
   end
   
-  define 'org.eclipse.bpmn.feature' do
+  define 'org.eclipse.bpmn2.feature' do
     package(:feature).tap do |f|
-      f.feature_id = "org.eclipse.bpmn.feature"
+      f.feature_id = "org.eclipse.bpmn2.feature"
       f.label = "BPMN2 Project Feature"
       f.provider = "eclipse.org"
       f.copyright = <<-COPYRIGHT
@@ -120,16 +120,16 @@ COPYRIGHT
       f.licenseURL = "license.html"
       # TODO an update site
       #f.update_sites << {:url => "http://download.eclipse.org/stp/updates/", :name => "The Eclipse SOA Tools Platform (STP) Project update site"}
-      f.plugins = [project('org.eclipse.bpmn'), 
-                   project('org.eclipse.bpmn.edit'), 
-                   project('org.eclipse.bpmn.editor')]
+      f.plugins = [project('org.eclipse.bpmn2'), 
+                   project('org.eclipse.bpmn2.edit'), 
+                   project('org.eclipse.bpmn2.editor')]
       f.include(_("epl-v10.html"))
       f.include(_("license.html"))
       f.include(_("eclipse_update_120.jpg"))
     end
     
     # Also do a SDK feature
-    package(:sources).feature_id = "org.eclipse.bpmn.sdk.feature"
+    package(:sources).feature_id = "org.eclipse.bpmn2.sdk.feature"
     package(:sources).label = "BPMN2 Project SDK Feature"
     package(:sources).description = "BPMN2 Ecore metamodel"
     package(:sources).include(_("epl-v10.html"))
@@ -137,13 +137,13 @@ COPYRIGHT
     package(:sources).include(_("eclipse_update_120.jpg"))
   end
   
-  define "org.eclipse.bpmn.site" do
+  define "org.eclipse.bpmn2.site" do
     package(:site).tap do |site|
       category = Buildr4OSGi::Category.new
       category.name = "org.eclipse.mdt" #probably incorrect ?
       category.label = "Modeling BPMN2" #TODO
       category.description = "BPMN 2.0" #TODO
-      category.features<< project("bpmn2:org.eclipse.bpmn.feature")
+      category.features<< project("bpmn2:org.eclipse.bpmn2.feature")
       site.categories << category
     end
     ec = task :eclipse_specific do

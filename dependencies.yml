@@ -4,7 +4,7 @@ bpmn2:
 
   projects: []
 
-bpmn2:org.eclipse.bpmn: 
+bpmn2:org.eclipse.bpmn2: 
   dependencies: 
     - org.eclipse:org.eclipse.ant.core:jar:3.2.200.v20100427
     - org.eclipse:org.eclipse.core.contenttype:jar:3.4.100.v20100412
@@ -27,7 +27,7 @@ bpmn2:org.eclipse.bpmn:
     - org.eclipse:org.eclipse.osgi:jar:3.6.0.v20100422-1745
   projects: []
 
-bpmn2:org.eclipse.bpmn.edit: 
+bpmn2:org.eclipse.bpmn2.edit: 
   dependencies: 
     - org.eclipse:org.eclipse.ant.core:jar:3.2.200.v20100427
     - org.eclipse:org.eclipse.core.contenttype:jar:3.4.100.v20100412
@@ -50,8 +50,8 @@ bpmn2:org.eclipse.bpmn.edit:
     - org.eclipse:org.eclipse.equinox.registry:jar:3.5.0.v20100301
     - org.eclipse:org.eclipse.osgi:jar:3.6.0.v20100422-1745
   projects: 
-    - bpmn2:org.eclipse.bpmn
-bpmn2:org.eclipse.bpmn.editor: 
+    - bpmn2:org.eclipse2.bpmn
+bpmn2:org.eclipse.bpmn2.editor: 
   dependencies: 
     - org.eclipse:org.eclipse.ant.core:jar:3.2.200.v20100427
     - org.eclipse:org.eclipse.core.commands:jar:3.6.0.I20100122-0800
@@ -102,13 +102,13 @@ bpmn2:org.eclipse.bpmn.editor:
     - org.eclipse:org.eclipse.ui.workbench:jar:3.6.0.I20100428-1300
     - org.eclipse:org.eclipse.ui:jar:3.6.0.I20100426-0800
   projects: 
-    - bpmn2:org.eclipse.bpmn.edit
-bpmn2:org.eclipse.bpmn.feature: 
+    - bpmn2:org.eclipse.bpmn2.edit
+bpmn2:org.eclipse.bpmn2.feature: 
   dependencies: []
 
   projects: []
 
-bpmn2:org.eclipse.bpmn.site: 
+bpmn2:org.eclipse.bpmn2.site: 
   dependencies: []
 
   projects: []
