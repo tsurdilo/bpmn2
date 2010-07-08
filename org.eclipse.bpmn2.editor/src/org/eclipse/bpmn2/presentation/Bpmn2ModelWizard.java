@@ -11,6 +11,7 @@
  *    Reiner Hille-Doering (SAP AG) - initial API and implementation and/or initial documentation
  * 
  * </copyright>
+ *
  */
 package org.eclipse.bpmn2.presentation;
 
@@ -18,9 +19,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.MissingResourceException;
 import java.util.StringTokenizer;
 
@@ -46,7 +45,6 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.ExtendedMetaData;
-import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.edit.ui.provider.ExtendedImageRegistry;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.viewers.ISelection;
@@ -120,13 +118,6 @@ public class Bpmn2ModelWizard extends Wizard implements INewWizard {
      */
     protected Bpmn2ModelWizardNewFileCreationPage newFileCreationPage;
 
-    /**
-     * This is the initial object creation page.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected Bpmn2ModelWizardInitialObjectCreationPage initialObjectCreationPage;
 
     /**
      * Remember the selection during initialization for populating the default container.
@@ -194,11 +185,11 @@ public class Bpmn2ModelWizard extends Wizard implements INewWizard {
      * Create a new model.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     protected EObject createInitialModel() {
         EClass eClass = ExtendedMetaData.INSTANCE.getDocumentRoot(bpmn2Package);
-        EStructuralFeature eStructuralFeature = eClass.getEStructuralFeature(initialObjectCreationPage.getInitialObjectName());
+        EStructuralFeature eStructuralFeature = Bpmn2Package.Literals.DOCUMENT_ROOT__DEFINITIONS;
         EObject rootObject = bpmn2Factory.create(eClass);
         rootObject.eSet(eStructuralFeature, EcoreUtil.create((EClass)eStructuralFeature.getEType()));
         return rootObject;
@@ -208,7 +199,7 @@ public class Bpmn2ModelWizard extends Wizard implements INewWizard {
      * Do the work after everything is specified.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public boolean performFinish() {
@@ -244,9 +235,7 @@ public class Bpmn2ModelWizard extends Wizard implements INewWizard {
 
                         // Save the contents of the resource to the file system.
                         //
-                        Map<Object, Object> options = new HashMap<Object, Object>();
-                        options.put(XMLResource.OPTION_ENCODING, initialObjectCreationPage.getEncoding());
-                        resource.save(options);
+                        resource.save(null);
                     } catch (Exception exception) {
                         bpmn2EditorPlugin.INSTANCE.log(exception);
                     } finally {
@@ -589,10 +578,6 @@ public class Bpmn2ModelWizard extends Wizard implements INewWizard {
                 }
             }
         }
-        initialObjectCreationPage = new Bpmn2ModelWizardInitialObjectCreationPage("Whatever2");
-        initialObjectCreationPage.setTitle(bpmn2EditorPlugin.INSTANCE.getString("_UI_Bpmn2ModelWizard_label"));
-        initialObjectCreationPage.setDescription(bpmn2EditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
-        addPage(initialObjectCreationPage);
     }
 
     /**

@@ -5,7 +5,6 @@
  *
  * Copyright (c) 2002-2007 IBM Corporation and others.
  * Copyright (c) 2009      Intalio, Inc.
- * Copyright (c) 2010      SAP AG. 
  * All rights reserved.   This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -14,7 +13,6 @@
  * Contributors:
  *   IBM - Initial API and implementation
  *   Intalio, Antoine Toulme- used .png file extension instead of relying on default gif.
- *   SAP, Reiner Hille-Doering - add getCreateChildImage() method to use the target object's image.
  *
  * </copyright>
  */
@@ -216,24 +214,6 @@ public class <%=genClass.getProviderClassName()%>
 			return overlayImage(object, getResourceLocator().getImage("full/obj16/<%=genClass.getName()%>.gif"));<%=genModel.getNonNLS()%>
 		}
 	}
-
-	/**
-	 * This returns the image of the child object, if available.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-<%if (genModel.useClassOverrideAnnotation()) {%>
-	@Override
-<%}%>
-    public Object getCreateChildImage(Object owner, Object feature, Object child, Collection<?> selection) {
-        IItemLabelProvider imageProvider = (IItemLabelProvider)adapterFactory.adapt(child, IItemLabelProvider.class);
-        if (imageProvider != null) {
-            return imageProvider.getImage(child);
-        }
-
-        return super.getCreateChildImage(owner, feature, child, selection);
-    }
 
 <%}%>
 	/**

@@ -22,7 +22,6 @@ import org.eclipse.bpmn2.Bpmn2Factory;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -299,15 +298,4 @@ public class ProcessItemProvider extends CallableElementItemProvider implements 
         newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.PROCESS__CORRELATION_SUBSCRIPTIONS, Bpmn2Factory.eINSTANCE.createCorrelationSubscription()));
     }
 
-    @Override
-    public Object getCreateChildImage(Object owner, Object feature, Object child, Collection<?> selection) {
-        if (child instanceof EObject) {
-            IItemLabelProvider imageProvider = (IItemLabelProvider)adapterFactory.adapt(child, IItemLabelProvider.class);
-            if (imageProvider != null) {
-                return imageProvider.getImage(child);
-            }
-
-        }
-        return super.getCreateChildImage(owner, feature, child, selection);
-    }
 }

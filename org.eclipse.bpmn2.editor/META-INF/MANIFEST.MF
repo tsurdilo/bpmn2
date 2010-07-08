@@ -8,10 +8,7 @@ Bundle-Activator: org.eclipse.bpmn2.presentation.bpmn2EditorPlugin$Implementatio
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: org.eclipse.bpmn2.di.presentation,
- org.eclipse.bpmn2.presentation,
- org.eclipse.dc.presentation,
- org.eclipse.di.presentation
+Export-Package: org.eclipse.bpmn2.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  org.eclipse.bpmn2.edit;visibility:=reexport,

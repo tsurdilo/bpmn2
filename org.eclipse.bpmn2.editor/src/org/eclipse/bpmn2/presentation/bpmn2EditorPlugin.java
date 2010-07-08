@@ -11,11 +11,14 @@
  *    Reiner Hille-Doering (SAP AG) - initial API and implementation and/or initial documentation
  * 
  * </copyright>
+ *
  */
 package org.eclipse.bpmn2.presentation;
 
 import org.eclipse.emf.common.EMFPlugin;
+
 import org.eclipse.emf.common.ui.EclipseUIPlugin;
+
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**
