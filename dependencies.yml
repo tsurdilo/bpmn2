@@ -50,7 +50,7 @@ bpmn2:org.eclipse.bpmn2.edit:
     - org.eclipse:org.eclipse.equinox.registry:jar:3.5.0.v20100301
     - org.eclipse:org.eclipse.osgi:jar:3.6.0.v20100422-1745
   projects: 
-    - bpmn2:org.eclipse2.bpmn
+    - bpmn2:org.eclipse.bpmn2
 bpmn2:org.eclipse.bpmn2.editor: 
   dependencies: 
     - org.eclipse:org.eclipse.ant.core:jar:3.2.200.v20100427
