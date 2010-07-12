@@ -29,12 +29,12 @@ public class OnlyContainmentTypeInfo implements XMLTypeInfo {
 	 * information for normal references. We anyway never create proxies.
 	 */
 
-	@Override
+	// @Override // for implementing interface methods: only since Java 1.6
 	public boolean shouldSaveType(EClass objectType, EClassifier featureType, EStructuralFeature feature) {
 		return feature instanceof EReference && ((EReference) feature).isContainment();
 	}
 
-	@Override
+	// @Override
 	public boolean shouldSaveType(EClass objectType, EClass featureType, EStructuralFeature feature) {
 		return feature instanceof EReference && ((EReference) feature).isContainment();
 	}
