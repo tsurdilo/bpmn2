@@ -87,6 +87,21 @@ public class CorrelationKeyItemProvider extends BaseElementItemProvider implemen
     }
 
     /**
+     * This returns CorrelationKey.png.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object getImage(Object object) {
+        try {
+            return overlayImage(object, getResourceLocator().getImage("full/obj16/CorrelationKey.png"));
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object, getResourceLocator().getImage("full/obj16/CorrelationKey.gif"));
+        }
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
