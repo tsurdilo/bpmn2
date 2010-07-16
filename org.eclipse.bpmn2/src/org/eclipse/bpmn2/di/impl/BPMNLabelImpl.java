@@ -18,7 +18,7 @@ package org.eclipse.bpmn2.di.impl;
 import org.eclipse.bpmn2.di.BPMNLabel;
 import org.eclipse.bpmn2.di.BPMNLabelStyle;
 import org.eclipse.bpmn2.di.BpmnDiPackage;
-import org.eclipse.di.impl.LabelImpl;
+import org.eclipse.dd.di.impl.LabelImpl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;

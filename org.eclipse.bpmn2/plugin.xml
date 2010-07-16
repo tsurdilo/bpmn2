@@ -46,7 +46,7 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            class="org.eclipse.di.DiPackage"
+            class="org.eclipse.dd.di.DiPackage"
             genModel="model/BPMN20.genmodel"
             uri="http://www.omg.org/spec/DD/20100524/DI-XMI"/>
    </extension>
@@ -54,12 +54,12 @@
    <extension point="org.eclipse.emf.ecore.extension_parser">
       <parser
             type="di"
-            class="org.eclipse.di.util.DiResourceFactoryImpl"/>
+            class="org.eclipse.dd.di.util.DiResourceFactoryImpl"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            class="org.eclipse.dc.DcPackage"
+            class="org.eclipse.dd.dc.DcPackage"
             genModel="model/BPMN20.genmodel"
             uri="http://www.omg.org/spec/DD/20100524/DC-XMI"/>
    </extension>
@@ -67,7 +67,7 @@
    <extension point="org.eclipse.emf.ecore.extension_parser">
       <parser
             type="dc"
-            class="org.eclipse.dc.util.DcResourceFactoryImpl"/>
+            class="org.eclipse.dd.dc.util.DcResourceFactoryImpl"/>
    </extension>
 
 </plugin>

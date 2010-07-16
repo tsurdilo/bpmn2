@@ -16,6 +16,7 @@
 package org.eclipse.bpmn2.di.impl;
 
 import java.util.Map;
+
 import org.eclipse.bpmn2.di.BPMNDiagram;
 import org.eclipse.bpmn2.di.BPMNEdge;
 import org.eclipse.bpmn2.di.BPMNLabel;

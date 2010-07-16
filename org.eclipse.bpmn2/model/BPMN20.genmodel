@@ -815,7 +815,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BPMNDI.ecore#//BPMNShape/participantBandKind"/>
     </genClasses>
   </genPackages>
-  <genPackages prefix="Di" basePackage="org.eclipse" resource="XML" disposableProviderFactory="true"
+  <genPackages prefix="Di" basePackage="org.eclipse.dd" resource="XML" disposableProviderFactory="true"
       multipleEditorPages="false" generateModelWizard="false" ecorePackage="DI.ecore#/">
     <genClasses ecoreClass="DI.ecore#//DocumentRoot">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute DI.ecore#//DocumentRoot/mixed"/>
@@ -877,7 +877,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DI.ecore#//Style/id"/>
     </genClasses>
   </genPackages>
-  <genPackages prefix="Dc" basePackage="org.eclipse" resource="XML" multipleEditorPages="false"
+  <genPackages prefix="Dc" basePackage="org.eclipse.dd" resource="XML" multipleEditorPages="false"
       generateModelWizard="false" ecorePackage="DC.ecore#/">
     <genClasses ecoreClass="DC.ecore#//DocumentRoot">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute DC.ecore#//DocumentRoot/mixed"/>

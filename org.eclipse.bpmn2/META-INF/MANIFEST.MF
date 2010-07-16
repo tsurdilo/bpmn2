@@ -13,12 +13,12 @@ Export-Package: org.eclipse.bpmn2,
  org.eclipse.bpmn2.di.util,
  org.eclipse.bpmn2.impl,
  org.eclipse.bpmn2.util,
- org.eclipse.dc,
- org.eclipse.dc.impl,
- org.eclipse.dc.util,
- org.eclipse.di,
- org.eclipse.di.impl,
- org.eclipse.di.util
+ org.eclipse.dd.dc,
+ org.eclipse.dd.dc.impl,
+ org.eclipse.dd.dc.util,
+ org.eclipse.dd.di,
+ org.eclipse.dd.di.impl,
+ org.eclipse.dd.di.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport

@@ -16,8 +16,8 @@
 package org.eclipse.bpmn2.di;
 
 import org.eclipse.bpmn2.BaseElement;
-import org.eclipse.di.DiagramElement;
-import org.eclipse.di.LabeledEdge;
+import org.eclipse.dd.di.DiagramElement;
+import org.eclipse.dd.di.LabeledEdge;
 
 /**
  * <!-- begin-user-doc -->

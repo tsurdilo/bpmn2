@@ -14,7 +14,6 @@
  */
 package org.eclipse.bpmn2;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->

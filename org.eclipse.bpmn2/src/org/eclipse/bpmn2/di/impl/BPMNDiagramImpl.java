@@ -16,13 +16,13 @@
 package org.eclipse.bpmn2.di.impl;
 
 import java.util.Collection;
-
 import java.util.List;
+
 import org.eclipse.bpmn2.di.BPMNDiagram;
 import org.eclipse.bpmn2.di.BPMNLabelStyle;
 import org.eclipse.bpmn2.di.BPMNPlane;
 import org.eclipse.bpmn2.di.BpmnDiPackage;
-import org.eclipse.di.impl.DiagramImpl;
+import org.eclipse.dd.di.impl.DiagramImpl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;

@@ -15,8 +15,8 @@
  */
 package org.eclipse.bpmn2.di;
 
-import org.eclipse.dc.Font;
-import org.eclipse.di.Style;
+import org.eclipse.dd.dc.Font;
+import org.eclipse.dd.di.Style;
 
 /**
  * <!-- begin-user-doc -->

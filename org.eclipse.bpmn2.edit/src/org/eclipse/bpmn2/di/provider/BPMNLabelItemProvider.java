@@ -21,7 +21,7 @@ import java.util.List;
 import org.eclipse.bpmn2.di.BPMNLabel;
 import org.eclipse.bpmn2.di.BpmnDiPackage;
 import org.eclipse.bpmn2.provider.bpmn2EditPlugin;
-import org.eclipse.di.provider.LabelItemProvider;
+import org.eclipse.dd.di.provider.LabelItemProvider;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;

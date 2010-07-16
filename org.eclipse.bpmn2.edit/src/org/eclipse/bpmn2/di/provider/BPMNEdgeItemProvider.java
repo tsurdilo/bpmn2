@@ -22,7 +22,7 @@ import org.eclipse.bpmn2.di.BPMNEdge;
 import org.eclipse.bpmn2.di.BpmnDiFactory;
 import org.eclipse.bpmn2.di.BpmnDiPackage;
 import org.eclipse.bpmn2.provider.bpmn2EditPlugin;
-import org.eclipse.di.provider.LabeledEdgeItemProvider;
+import org.eclipse.dd.di.provider.LabeledEdgeItemProvider;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;

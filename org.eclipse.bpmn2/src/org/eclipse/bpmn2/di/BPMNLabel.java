@@ -15,7 +15,7 @@
  */
 package org.eclipse.bpmn2.di;
 
-import org.eclipse.di.Label;
+import org.eclipse.dd.di.Label;
 
 /**
  * <!-- begin-user-doc -->

@@ -15,8 +15,8 @@
 package org.eclipse.bpmn2;
 
 import java.util.List;
+
 import org.eclipse.bpmn2.di.BPMNDiagram;
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->

@@ -17,8 +17,8 @@ package org.eclipse.bpmn2.di.impl;
 
 import org.eclipse.bpmn2.di.BPMNLabelStyle;
 import org.eclipse.bpmn2.di.BpmnDiPackage;
-import org.eclipse.dc.Font;
-import org.eclipse.di.impl.StyleImpl;
+import org.eclipse.dd.dc.Font;
+import org.eclipse.dd.di.impl.StyleImpl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;

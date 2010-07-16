@@ -15,8 +15,8 @@
 package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
-
 import java.util.List;
+
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Participant;
 import org.eclipse.bpmn2.PartnerRole;

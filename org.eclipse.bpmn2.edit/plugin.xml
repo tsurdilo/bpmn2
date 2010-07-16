@@ -45,7 +45,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="http://www.omg.org/spec/DD/20100524/DI-XMI"
-            class="org.eclipse.di.provider.DiItemProviderAdapterFactory"
+            class="org.eclipse.dd.di.provider.DiItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -57,7 +57,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="http://www.omg.org/spec/DD/20100524/DC-XMI"
-            class="org.eclipse.dc.provider.DcItemProviderAdapterFactory"
+            class="org.eclipse.dd.dc.provider.DcItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

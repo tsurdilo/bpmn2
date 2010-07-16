@@ -15,7 +15,7 @@
 package org.eclipse.bpmn2;
 
 import java.util.List;
-import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**

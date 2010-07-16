@@ -15,7 +15,6 @@
  */
 package org.eclipse.bpmn2.di.util;
 
-import org.eclipse.bpmn2.di.*;
 import org.eclipse.bpmn2.di.BPMNDiagram;
 import org.eclipse.bpmn2.di.BPMNEdge;
 import org.eclipse.bpmn2.di.BPMNLabel;
@@ -24,16 +23,16 @@ import org.eclipse.bpmn2.di.BPMNPlane;
 import org.eclipse.bpmn2.di.BPMNShape;
 import org.eclipse.bpmn2.di.BpmnDiPackage;
 import org.eclipse.bpmn2.di.DocumentRoot;
-import org.eclipse.di.Diagram;
-import org.eclipse.di.DiagramElement;
-import org.eclipse.di.Edge;
-import org.eclipse.di.Label;
-import org.eclipse.di.LabeledEdge;
-import org.eclipse.di.LabeledShape;
-import org.eclipse.di.Node;
-import org.eclipse.di.Plane;
-import org.eclipse.di.Shape;
-import org.eclipse.di.Style;
+import org.eclipse.dd.di.Diagram;
+import org.eclipse.dd.di.DiagramElement;
+import org.eclipse.dd.di.Edge;
+import org.eclipse.dd.di.Label;
+import org.eclipse.dd.di.LabeledEdge;
+import org.eclipse.dd.di.LabeledShape;
+import org.eclipse.dd.di.Node;
+import org.eclipse.dd.di.Plane;
+import org.eclipse.dd.di.Shape;
+import org.eclipse.dd.di.Style;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
@@ -297,13 +296,13 @@ public class BpmnDiAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.di.Diagram <em>Diagram</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.dd.di.Diagram <em>Diagram</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.di.Diagram
+     * @see org.eclipse.dd.di.Diagram
      * @generated
      */
     public Adapter createDiagramAdapter() {
@@ -311,13 +310,13 @@ public class BpmnDiAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.di.DiagramElement <em>Diagram Element</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.dd.di.DiagramElement <em>Diagram Element</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.di.DiagramElement
+     * @see org.eclipse.dd.di.DiagramElement
      * @generated
      */
     public Adapter createDiagramElementAdapter() {
@@ -325,13 +324,13 @@ public class BpmnDiAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.di.Edge <em>Edge</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.dd.di.Edge <em>Edge</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.di.Edge
+     * @see org.eclipse.dd.di.Edge
      * @generated
      */
     public Adapter createEdgeAdapter() {
@@ -339,13 +338,13 @@ public class BpmnDiAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.di.LabeledEdge <em>Labeled Edge</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.dd.di.LabeledEdge <em>Labeled Edge</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.di.LabeledEdge
+     * @see org.eclipse.dd.di.LabeledEdge
      * @generated
      */
     public Adapter createLabeledEdgeAdapter() {
@@ -353,13 +352,13 @@ public class BpmnDiAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.di.Node <em>Node</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.dd.di.Node <em>Node</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.di.Node
+     * @see org.eclipse.dd.di.Node
      * @generated
      */
     public Adapter createNodeAdapter() {
@@ -367,13 +366,13 @@ public class BpmnDiAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.di.Label <em>Label</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.dd.di.Label <em>Label</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.di.Label
+     * @see org.eclipse.dd.di.Label
      * @generated
      */
     public Adapter createLabelAdapter() {
@@ -381,13 +380,13 @@ public class BpmnDiAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.di.Style <em>Style</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.dd.di.Style <em>Style</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.di.Style
+     * @see org.eclipse.dd.di.Style
      * @generated
      */
     public Adapter createStyleAdapter() {
@@ -395,13 +394,13 @@ public class BpmnDiAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.di.Plane <em>Plane</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.dd.di.Plane <em>Plane</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.di.Plane
+     * @see org.eclipse.dd.di.Plane
      * @generated
      */
     public Adapter createPlaneAdapter() {
@@ -409,13 +408,13 @@ public class BpmnDiAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.di.Shape <em>Shape</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.dd.di.Shape <em>Shape</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.di.Shape
+     * @see org.eclipse.dd.di.Shape
      * @generated
      */
     public Adapter createShapeAdapter() {
@@ -423,13 +422,13 @@ public class BpmnDiAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.di.LabeledShape <em>Labeled Shape</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.dd.di.LabeledShape <em>Labeled Shape</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.di.LabeledShape
+     * @see org.eclipse.dd.di.LabeledShape
      * @generated
      */
     public Adapter createLabeledShapeAdapter() {
