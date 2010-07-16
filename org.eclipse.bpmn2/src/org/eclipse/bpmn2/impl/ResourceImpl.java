@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Resource;
 import org.eclipse.bpmn2.ResourceParameter;
@@ -97,7 +98,7 @@ public class ResourceImpl extends RootElementImpl implements Resource {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ResourceParameter> getResourceParameters() {
+    public List<ResourceParameter> getResourceParameters() {
         if (resourceParameters == null) {
             resourceParameters = new EObjectContainmentEList<ResourceParameter>(ResourceParameter.class, this, Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS);
         }

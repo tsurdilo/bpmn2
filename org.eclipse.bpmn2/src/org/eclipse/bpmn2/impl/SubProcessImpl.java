@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Artifact;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.FlowElement;
@@ -122,7 +123,7 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<LaneSet> getLaneSets() {
+    public List<LaneSet> getLaneSets() {
         if (laneSets == null) {
             laneSets = new EObjectContainmentEList<LaneSet>(LaneSet.class, this, Bpmn2Package.SUB_PROCESS__LANE_SETS);
         }
@@ -134,7 +135,7 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<FlowElement> getFlowElements() {
+    public List<FlowElement> getFlowElements() {
         if (flowElements == null) {
             flowElements = new EObjectContainmentEList<FlowElement>(FlowElement.class, this, Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS);
         }
@@ -146,7 +147,7 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Artifact> getArtifacts() {
+    public List<Artifact> getArtifacts() {
         if (artifacts == null) {
             artifacts = new EObjectContainmentEList<Artifact>(Artifact.class, this, Bpmn2Package.SUB_PROCESS__ARTIFACTS);
         }

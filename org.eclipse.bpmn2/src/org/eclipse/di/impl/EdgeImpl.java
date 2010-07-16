@@ -16,6 +16,7 @@ package org.eclipse.di.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.dc.Point;
 import org.eclipse.di.DiPackage;
 import org.eclipse.di.DiagramElement;
@@ -151,7 +152,7 @@ public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Point> getWaypoint() {
+    public List<Point> getWaypoint() {
         if (waypoint == null) {
             waypoint = new EObjectContainmentEList<Point>(Point.class, this, DiPackage.EDGE__WAYPOINT);
         }

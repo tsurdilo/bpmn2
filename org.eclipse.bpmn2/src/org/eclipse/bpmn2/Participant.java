@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -52,7 +53,7 @@ public interface Participant extends BaseElement, InteractionNode {
      *        extendedMetaData="kind='element' name='interfaceRef' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<Interface> getInterfaceRefs();
+    List<Interface> getInterfaceRefs();
 
     /**
      * Returns the value of the '<em><b>End Point Refs</b></em>' reference list.
@@ -69,7 +70,7 @@ public interface Participant extends BaseElement, InteractionNode {
      *        extendedMetaData="kind='element' name='endPointRef' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<EndPoint> getEndPointRefs();
+    List<EndPoint> getEndPointRefs();
 
     /**
      * Returns the value of the '<em><b>Participant Multiplicity</b></em>' containment reference.

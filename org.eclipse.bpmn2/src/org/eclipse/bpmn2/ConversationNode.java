@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -52,7 +53,7 @@ public interface ConversationNode extends BaseElement, InteractionNode {
      *        extendedMetaData="kind='element' name='participantRef' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<Participant> getParticipantRefs();
+    List<Participant> getParticipantRefs();
 
     /**
      * Returns the value of the '<em><b>Message Flow Refs</b></em>' reference list.
@@ -69,7 +70,7 @@ public interface ConversationNode extends BaseElement, InteractionNode {
      *        extendedMetaData="kind='element' name='messageFlowRef' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<MessageFlow> getMessageFlowRefs();
+    List<MessageFlow> getMessageFlowRefs();
 
     /**
      * Returns the value of the '<em><b>Correlation Keys</b></em>' containment reference list.
@@ -86,7 +87,7 @@ public interface ConversationNode extends BaseElement, InteractionNode {
      *        extendedMetaData="kind='element' name='correlationKey' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<CorrelationKey> getCorrelationKeys();
+    List<CorrelationKey> getCorrelationKeys();
 
     /**
      * Returns the value of the '<em><b>Name</b></em>' attribute.

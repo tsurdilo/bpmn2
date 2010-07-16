@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.CorrelationProperty;
 import org.eclipse.bpmn2.CorrelationPropertyRetrievalExpression;
@@ -109,7 +110,7 @@ public class CorrelationPropertyImpl extends RootElementImpl implements Correlat
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<CorrelationPropertyRetrievalExpression> getCorrelationPropertyRetrievalExpression() {
+    public List<CorrelationPropertyRetrievalExpression> getCorrelationPropertyRetrievalExpression() {
         if (correlationPropertyRetrievalExpression == null) {
             correlationPropertyRetrievalExpression = new EObjectContainmentEList<CorrelationPropertyRetrievalExpression>(CorrelationPropertyRetrievalExpression.class, this, Bpmn2Package.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION);
         }

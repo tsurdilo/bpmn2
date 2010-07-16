@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -51,7 +52,7 @@ public interface DataAssociation extends BaseElement {
      *        extendedMetaData="kind='element' name='sourceRef' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<ItemAwareElement> getSourceRef();
+    List<ItemAwareElement> getSourceRef();
 
     /**
      * Returns the value of the '<em><b>Target Ref</b></em>' reference.
@@ -122,6 +123,6 @@ public interface DataAssociation extends BaseElement {
      *        extendedMetaData="kind='element' name='assignment' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<Assignment> getAssignment();
+    List<Assignment> getAssignment();
 
 } // DataAssociation

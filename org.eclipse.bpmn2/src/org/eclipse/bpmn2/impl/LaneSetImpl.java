@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Lane;
 import org.eclipse.bpmn2.LaneSet;
@@ -97,7 +98,7 @@ public class LaneSetImpl extends BaseElementImpl implements LaneSet {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Lane> getLanes() {
+    public List<Lane> getLanes() {
         if (lanes == null) {
             lanes = new EObjectContainmentEList<Lane>(Lane.class, this, Bpmn2Package.LANE_SET__LANES);
         }

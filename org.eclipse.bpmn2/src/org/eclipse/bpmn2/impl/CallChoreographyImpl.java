@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.CallChoreography;
 import org.eclipse.bpmn2.Choreography;
@@ -88,7 +89,7 @@ public class CallChoreographyImpl extends ChoreographyActivityImpl implements Ca
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ParticipantAssociation> getParticipantAssociations() {
+    public List<ParticipantAssociation> getParticipantAssociations() {
         if (participantAssociations == null) {
             participantAssociations = new EObjectContainmentEList<ParticipantAssociation>(ParticipantAssociation.class, this, Bpmn2Package.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS);
         }

@@ -103,7 +103,7 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
      * <!-- end-user-doc -->
      * @generated
      */
-    public EObject getBody() {
+    public Object getBody() {
         if (body != null && body.eIsProxy()) {
             InternalEObject oldBody = (InternalEObject)body;
             body = eResolveProxy(oldBody);
@@ -120,7 +120,7 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
      * <!-- end-user-doc -->
      * @generated
      */
-    public EObject basicGetBody() {
+    public Object basicGetBody() {
         return body;
     }
 
@@ -129,9 +129,9 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setBody(EObject newBody) {
-        EObject oldBody = body;
-        body = newBody;
+    public void setBody(Object newBody) {
+        Object oldBody = body;
+        body = (EObject)newBody;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.FORMAL_EXPRESSION__BODY, oldBody, body));
     }
@@ -226,7 +226,7 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
             case Bpmn2Package.FORMAL_EXPRESSION__BODY:
-                setBody((EObject)newValue);
+                setBody((Object)newValue);
                 return;
             case Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF:
                 setEvaluatesToTypeRef((ItemDefinition)newValue);
@@ -247,7 +247,7 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
     public void eUnset(int featureID) {
         switch (featureID) {
             case Bpmn2Package.FORMAL_EXPRESSION__BODY:
-                setBody((EObject)null);
+                setBody((Object)null);
                 return;
             case Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF:
                 setEvaluatesToTypeRef((ItemDefinition)null);

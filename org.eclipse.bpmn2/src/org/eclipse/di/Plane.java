@@ -14,6 +14,7 @@
  */
 package org.eclipse.di;
 
+import java.util.List;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.DiagnosticChain;
@@ -52,7 +53,7 @@ public interface Plane extends Node {
      *        extendedMetaData="kind='element' name='DiagramElement' namespace='http://www.omg.org/spec/DD/20100524/DI' group='http://www.omg.org/spec/DD/20100524/DI#DiagramElement'"
      * @generated
      */
-    EList<DiagramElement> getPlaneElement();
+    List<DiagramElement> getPlaneElement();
 
     /**
      * <!-- begin-user-doc -->

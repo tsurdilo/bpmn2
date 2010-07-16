@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Activity;
 import org.eclipse.bpmn2.BoundaryEvent;
 import org.eclipse.bpmn2.Bpmn2Package;
@@ -270,7 +271,7 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<BoundaryEvent> getBoundaryEventRefs() {
+    public List<BoundaryEvent> getBoundaryEventRefs() {
         if (boundaryEventRefs == null) {
             boundaryEventRefs = new EObjectWithInverseResolvingEList<BoundaryEvent>(BoundaryEvent.class, this, Bpmn2Package.ACTIVITY__BOUNDARY_EVENT_REFS, Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF);
         }
@@ -282,7 +283,7 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Property> getProperties() {
+    public List<Property> getProperties() {
         if (properties == null) {
             properties = new EObjectContainmentEList<Property>(Property.class, this, Bpmn2Package.ACTIVITY__PROPERTIES);
         }
@@ -294,7 +295,7 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<DataInputAssociation> getDataInputAssociations() {
+    public List<DataInputAssociation> getDataInputAssociations() {
         if (dataInputAssociations == null) {
             dataInputAssociations = new EObjectContainmentEList<DataInputAssociation>(DataInputAssociation.class, this, Bpmn2Package.ACTIVITY__DATA_INPUT_ASSOCIATIONS);
         }
@@ -306,7 +307,7 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<DataOutputAssociation> getDataOutputAssociations() {
+    public List<DataOutputAssociation> getDataOutputAssociations() {
         if (dataOutputAssociations == null) {
             dataOutputAssociations = new EObjectContainmentEList<DataOutputAssociation>(DataOutputAssociation.class, this, Bpmn2Package.ACTIVITY__DATA_OUTPUT_ASSOCIATIONS);
         }
@@ -318,7 +319,7 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ResourceRole> getResources() {
+    public List<ResourceRole> getResources() {
         if (resources == null) {
             resources = new EObjectContainmentEList<ResourceRole>(ResourceRole.class, this, Bpmn2Package.ACTIVITY__RESOURCES);
         }

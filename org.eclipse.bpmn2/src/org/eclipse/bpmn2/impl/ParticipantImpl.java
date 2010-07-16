@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.ConversationLink;
 import org.eclipse.bpmn2.EndPoint;
@@ -158,7 +159,7 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ConversationLink> getIncomingConversationLinks() {
+    public List<ConversationLink> getIncomingConversationLinks() {
         if (incomingConversationLinks == null) {
             incomingConversationLinks = new EObjectWithInverseEList<ConversationLink>(ConversationLink.class, this, Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS, Bpmn2Package.CONVERSATION_LINK__TARGET_REF);
         }
@@ -170,7 +171,7 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ConversationLink> getOutgoingConversationLinks() {
+    public List<ConversationLink> getOutgoingConversationLinks() {
         if (outgoingConversationLinks == null) {
             outgoingConversationLinks = new EObjectWithInverseResolvingEList<ConversationLink>(ConversationLink.class, this, Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS, Bpmn2Package.CONVERSATION_LINK__SOURCE_REF);
         }
@@ -182,7 +183,7 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Interface> getInterfaceRefs() {
+    public List<Interface> getInterfaceRefs() {
         if (interfaceRefs == null) {
             interfaceRefs = new EObjectResolvingEList<Interface>(Interface.class, this, Bpmn2Package.PARTICIPANT__INTERFACE_REFS);
         }
@@ -194,7 +195,7 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<EndPoint> getEndPointRefs() {
+    public List<EndPoint> getEndPointRefs() {
         if (endPointRefs == null) {
             endPointRefs = new EObjectResolvingEList<EndPoint>(EndPoint.class, this, Bpmn2Package.PARTICIPANT__END_POINT_REFS);
         }

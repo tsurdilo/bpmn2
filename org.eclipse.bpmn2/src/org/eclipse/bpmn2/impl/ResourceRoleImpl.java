@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Resource;
 import org.eclipse.bpmn2.ResourceAssignmentExpression;
@@ -159,7 +160,7 @@ public class ResourceRoleImpl extends BaseElementImpl implements ResourceRole {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ResourceParameterBinding> getResourceParameterBindings() {
+    public List<ResourceParameterBinding> getResourceParameterBindings() {
         if (resourceParameterBindings == null) {
             resourceParameterBindings = new EObjectContainmentEList<ResourceParameterBinding>(ResourceParameterBinding.class, this, Bpmn2Package.RESOURCE_ROLE__RESOURCE_PARAMETER_BINDINGS);
         }

@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -193,7 +194,7 @@ public interface MultiInstanceLoopCharacteristics extends LoopCharacteristics {
      *        extendedMetaData="kind='element' name='complexBehaviorDefinition' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<ComplexBehaviorDefinition> getComplexBehaviorDefinition();
+    List<ComplexBehaviorDefinition> getComplexBehaviorDefinition();
 
     /**
      * Returns the value of the '<em><b>Completion Condition</b></em>' containment reference.

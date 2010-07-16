@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
@@ -77,6 +78,6 @@ public interface ExtensionDefinition extends EObject {
      * @model opposite="extensionDefinition" containment="true" transient="true" derived="true" ordered="false"
      * @generated
      */
-    EList<ExtensionAttributeDefinition> getExtensionAttributeDefinitions();
+    List<ExtensionAttributeDefinition> getExtensionAttributeDefinitions();
 
 } // ExtensionDefinition

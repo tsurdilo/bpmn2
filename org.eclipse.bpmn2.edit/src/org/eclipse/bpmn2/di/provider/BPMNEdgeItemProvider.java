@@ -144,6 +144,21 @@ public class BPMNEdgeItemProvider extends LabeledEdgeItemProvider implements IEd
     }
 
     /**
+     * This returns BPMNEdge.png.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object getImage(Object object) {
+        try {
+            return overlayImage(object, getResourceLocator().getImage("full/obj16/BPMNEdge.png"));
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object, getResourceLocator().getImage("full/obj16/BPMNEdge.gif"));
+        }
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

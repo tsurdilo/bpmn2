@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.GlobalTask;
 import org.eclipse.bpmn2.ResourceRole;
@@ -74,7 +75,7 @@ public class GlobalTaskImpl extends CallableElementImpl implements GlobalTask {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ResourceRole> getResources() {
+    public List<ResourceRole> getResources() {
         if (resources == null) {
             resources = new EObjectContainmentEList<ResourceRole>(ResourceRole.class, this, Bpmn2Package.GLOBAL_TASK__RESOURCES);
         }

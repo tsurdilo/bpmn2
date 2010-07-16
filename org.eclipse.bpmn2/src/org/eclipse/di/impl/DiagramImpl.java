@@ -14,6 +14,7 @@
  */
 package org.eclipse.di.impl;
 
+import java.util.List;
 import org.eclipse.di.DiPackage;
 import org.eclipse.di.Diagram;
 import org.eclipse.di.DiagramElement;
@@ -191,7 +192,7 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Style> getOwnedStyle() {
+    public List<Style> getOwnedStyle() {
         if (ownedStyle == null) {
             ownedStyle = new EObjectResolvingEList<Style>(Style.class, this, DiPackage.DIAGRAM__OWNED_STYLE);
         }

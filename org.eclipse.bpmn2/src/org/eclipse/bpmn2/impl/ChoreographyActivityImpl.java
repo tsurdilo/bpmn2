@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.ChoreographyActivity;
 import org.eclipse.bpmn2.ChoreographyLoopType;
@@ -122,7 +123,7 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements C
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Participant> getParticipantRefs() {
+    public List<Participant> getParticipantRefs() {
         if (participantRefs == null) {
             participantRefs = new EObjectResolvingEList<Participant>(Participant.class, this, Bpmn2Package.CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REFS);
         }
@@ -134,7 +135,7 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements C
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<CorrelationKey> getCorrelationKeys() {
+    public List<CorrelationKey> getCorrelationKeys() {
         if (correlationKeys == null) {
             correlationKeys = new EObjectContainmentEList<CorrelationKey>(CorrelationKey.class, this, Bpmn2Package.CHOREOGRAPHY_ACTIVITY__CORRELATION_KEYS);
         }

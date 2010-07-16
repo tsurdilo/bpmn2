@@ -14,6 +14,7 @@
  */
 package org.eclipse.di;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -48,6 +49,6 @@ public interface LabeledEdge extends Edge {
      * @model transient="true" changeable="false" derived="true" ordered="false"
      * @generated
      */
-    EList<Label> getOwnedLabel();
+    List<Label> getOwnedLabel();
 
 } // LabeledEdge

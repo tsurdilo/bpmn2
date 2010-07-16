@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -53,7 +54,7 @@ public interface ThrowEvent extends Event {
      *        extendedMetaData="kind='element' name='dataInput' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<DataInput> getDataInputs();
+    List<DataInput> getDataInputs();
 
     /**
      * Returns the value of the '<em><b>Data Input Association</b></em>' containment reference list.
@@ -70,7 +71,7 @@ public interface ThrowEvent extends Event {
      *        extendedMetaData="kind='element' name='dataInputAssociation' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<DataInputAssociation> getDataInputAssociation();
+    List<DataInputAssociation> getDataInputAssociation();
 
     /**
      * Returns the value of the '<em><b>Input Set</b></em>' containment reference.
@@ -114,7 +115,7 @@ public interface ThrowEvent extends Event {
      *        extendedMetaData="kind='element' name='eventDefinition' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL' group='http://www.omg.org/spec/BPMN/20100524/MODEL#eventDefinition'"
      * @generated
      */
-    EList<EventDefinition> getEventDefinitions();
+    List<EventDefinition> getEventDefinitions();
 
     /**
      * Returns the value of the '<em><b>Event Definition Refs</b></em>' reference list.
@@ -131,6 +132,6 @@ public interface ThrowEvent extends Event {
      *        extendedMetaData="kind='element' name='eventDefinitionRef' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<EventDefinition> getEventDefinitionRefs();
+    List<EventDefinition> getEventDefinitionRefs();
 
 } // ThrowEvent

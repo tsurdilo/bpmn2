@@ -45,7 +45,7 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl {
         // are not schema compliant
         return true;
     }
-    
+
     /**
      * @generated NOT
      */

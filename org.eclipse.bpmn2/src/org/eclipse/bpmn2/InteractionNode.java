@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
@@ -51,7 +52,7 @@ public interface InteractionNode extends EObject {
      * @model opposite="targetRef" resolveProxies="false" transient="true" derived="true" ordered="false"
      * @generated
      */
-    EList<ConversationLink> getIncomingConversationLinks();
+    List<ConversationLink> getIncomingConversationLinks();
 
     /**
      * Returns the value of the '<em><b>Outgoing Conversation Links</b></em>' reference list.
@@ -69,6 +70,6 @@ public interface InteractionNode extends EObject {
      * @model opposite="sourceRef" transient="true" derived="true" ordered="false"
      * @generated
      */
-    EList<ConversationLink> getOutgoingConversationLinks();
+    List<ConversationLink> getOutgoingConversationLinks();
 
 } // InteractionNode

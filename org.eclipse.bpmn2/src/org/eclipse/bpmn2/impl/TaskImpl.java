@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.ConversationLink;
 import org.eclipse.bpmn2.InteractionNode;
@@ -87,7 +88,7 @@ public class TaskImpl extends ActivityImpl implements Task {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ConversationLink> getIncomingConversationLinks() {
+    public List<ConversationLink> getIncomingConversationLinks() {
         if (incomingConversationLinks == null) {
             incomingConversationLinks = new EObjectWithInverseEList<ConversationLink>(ConversationLink.class, this, Bpmn2Package.TASK__INCOMING_CONVERSATION_LINKS, Bpmn2Package.CONVERSATION_LINK__TARGET_REF);
         }
@@ -99,7 +100,7 @@ public class TaskImpl extends ActivityImpl implements Task {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ConversationLink> getOutgoingConversationLinks() {
+    public List<ConversationLink> getOutgoingConversationLinks() {
         if (outgoingConversationLinks == null) {
             outgoingConversationLinks = new EObjectWithInverseResolvingEList<ConversationLink>(ConversationLink.class, this, Bpmn2Package.TASK__OUTGOING_CONVERSATION_LINKS, Bpmn2Package.CONVERSATION_LINK__SOURCE_REF);
         }

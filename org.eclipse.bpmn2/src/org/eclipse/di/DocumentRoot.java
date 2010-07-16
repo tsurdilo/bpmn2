@@ -14,6 +14,7 @@
  */
 package org.eclipse.di;
 
+import java.util.Map;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.FeatureMap;
@@ -80,7 +81,7 @@ public interface DocumentRoot extends EObject {
      *        extendedMetaData="kind='attribute' name='xmlns:prefix'"
      * @generated
      */
-    EMap<String, String> getXMLNSPrefixMap();
+    Map<String, String> getXMLNSPrefixMap();
 
     /**
      * Returns the value of the '<em><b>XSI Schema Location</b></em>' map.
@@ -98,7 +99,7 @@ public interface DocumentRoot extends EObject {
      *        extendedMetaData="kind='attribute' name='xsi:schemaLocation'"
      * @generated
      */
-    EMap<String, String> getXSISchemaLocation();
+    Map<String, String> getXSISchemaLocation();
 
     /**
      * Returns the value of the '<em><b>Diagram Element</b></em>' containment reference.

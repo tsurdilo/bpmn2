@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.GlobalUserTask;
 import org.eclipse.bpmn2.Rendering;
@@ -97,7 +98,7 @@ public class GlobalUserTaskImpl extends GlobalTaskImpl implements GlobalUserTask
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Rendering> getRenderings() {
+    public List<Rendering> getRenderings() {
         if (renderings == null) {
             renderings = new EObjectContainmentEList<Rendering>(Rendering.class, this, Bpmn2Package.GLOBAL_USER_TASK__RENDERINGS);
         }

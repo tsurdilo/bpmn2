@@ -14,6 +14,7 @@
  */
 package org.eclipse.di.impl;
 
+import java.util.List;
 import org.eclipse.di.DiPackage;
 import org.eclipse.di.Diagram;
 import org.eclipse.di.DiagramElement;
@@ -196,7 +197,7 @@ public abstract class DiagramElementImpl extends EObjectImpl implements DiagramE
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<DiagramElement> getOwnedElement() {
+    public List<DiagramElement> getOwnedElement() {
         if (ownedElement == null) {
             ownedElement = new EObjectWithInverseEList<DiagramElement>(DiagramElement.class, this, DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT, DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT);
         }
@@ -208,7 +209,7 @@ public abstract class DiagramElementImpl extends EObjectImpl implements DiagramE
      * <!-- end-user-doc -->
      * @generated
      */
-    public EObject getModelElement() {
+    public Object getModelElement() {
         if (modelElement != null && modelElement.eIsProxy()) {
             InternalEObject oldModelElement = (InternalEObject)modelElement;
             modelElement = eResolveProxy(oldModelElement);
@@ -225,7 +226,7 @@ public abstract class DiagramElementImpl extends EObjectImpl implements DiagramE
      * <!-- end-user-doc -->
      * @generated
      */
-    public EObject basicGetModelElement() {
+    public Object basicGetModelElement() {
         return modelElement;
     }
 

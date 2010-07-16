@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -48,6 +49,6 @@ public interface GlobalTask extends CallableElement {
      *        extendedMetaData="kind='element' name='resourceRole' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL' group='http://www.omg.org/spec/BPMN/20100524/MODEL#resourceRole'"
      * @generated
      */
-    EList<ResourceRole> getResources();
+    List<ResourceRole> getResources();
 
 } // GlobalTask

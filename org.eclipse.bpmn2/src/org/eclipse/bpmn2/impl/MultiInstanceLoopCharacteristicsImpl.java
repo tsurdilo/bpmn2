@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.ComplexBehaviorDefinition;
 import org.eclipse.bpmn2.DataInput;
@@ -426,7 +427,7 @@ public class MultiInstanceLoopCharacteristicsImpl extends LoopCharacteristicsImp
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ComplexBehaviorDefinition> getComplexBehaviorDefinition() {
+    public List<ComplexBehaviorDefinition> getComplexBehaviorDefinition() {
         if (complexBehaviorDefinition == null) {
             complexBehaviorDefinition = new EObjectContainmentEList<ComplexBehaviorDefinition>(ComplexBehaviorDefinition.class, this, Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION);
         }

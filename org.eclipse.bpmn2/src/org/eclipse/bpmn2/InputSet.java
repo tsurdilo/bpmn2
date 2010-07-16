@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -54,7 +55,7 @@ public interface InputSet extends BaseElement {
      *        extendedMetaData="kind='element' name='dataInputRefs' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<DataInput> getDataInputRefs();
+    List<DataInput> getDataInputRefs();
 
     /**
      * Returns the value of the '<em><b>Optional Input Refs</b></em>' reference list.
@@ -73,7 +74,7 @@ public interface InputSet extends BaseElement {
      *        extendedMetaData="kind='element' name='optionalInputRefs' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<DataInput> getOptionalInputRefs();
+    List<DataInput> getOptionalInputRefs();
 
     /**
      * Returns the value of the '<em><b>While Executing Input Refs</b></em>' reference list.
@@ -92,7 +93,7 @@ public interface InputSet extends BaseElement {
      *        extendedMetaData="kind='element' name='whileExecutingInputRefs' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<DataInput> getWhileExecutingInputRefs();
+    List<DataInput> getWhileExecutingInputRefs();
 
     /**
      * Returns the value of the '<em><b>Output Set Refs</b></em>' reference list.
@@ -111,7 +112,7 @@ public interface InputSet extends BaseElement {
      *        extendedMetaData="kind='element' name='outputSetRefs' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<OutputSet> getOutputSetRefs();
+    List<OutputSet> getOutputSetRefs();
 
     /**
      * Returns the value of the '<em><b>Name</b></em>' attribute.

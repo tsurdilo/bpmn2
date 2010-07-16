@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -87,7 +88,7 @@ public interface Activity extends FlowNode {
      * @model opposite="attachedToRef" transient="true" derived="true" ordered="false"
      * @generated
      */
-    EList<BoundaryEvent> getBoundaryEventRefs();
+    List<BoundaryEvent> getBoundaryEventRefs();
 
     /**
      * Returns the value of the '<em><b>Properties</b></em>' containment reference list.
@@ -104,7 +105,7 @@ public interface Activity extends FlowNode {
      *        extendedMetaData="kind='element' name='property' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<Property> getProperties();
+    List<Property> getProperties();
 
     /**
      * Returns the value of the '<em><b>Data Input Associations</b></em>' containment reference list.
@@ -121,7 +122,7 @@ public interface Activity extends FlowNode {
      *        extendedMetaData="kind='element' name='dataInputAssociation' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<DataInputAssociation> getDataInputAssociations();
+    List<DataInputAssociation> getDataInputAssociations();
 
     /**
      * Returns the value of the '<em><b>Data Output Associations</b></em>' containment reference list.
@@ -138,7 +139,7 @@ public interface Activity extends FlowNode {
      *        extendedMetaData="kind='element' name='dataOutputAssociation' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<DataOutputAssociation> getDataOutputAssociations();
+    List<DataOutputAssociation> getDataOutputAssociations();
 
     /**
      * Returns the value of the '<em><b>Resources</b></em>' containment reference list.
@@ -155,7 +156,7 @@ public interface Activity extends FlowNode {
      *        extendedMetaData="kind='element' name='resourceRole' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL' group='http://www.omg.org/spec/BPMN/20100524/MODEL#resourceRole'"
      * @generated
      */
-    EList<ResourceRole> getResources();
+    List<ResourceRole> getResources();
 
     /**
      * Returns the value of the '<em><b>Loop Characteristics</b></em>' containment reference.

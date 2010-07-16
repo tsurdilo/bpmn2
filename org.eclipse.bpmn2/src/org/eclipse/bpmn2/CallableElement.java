@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -52,7 +53,7 @@ public interface CallableElement extends RootElement {
      *        extendedMetaData="kind='element' name='supportedInterfaceRef' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<Interface> getSupportedInterfaceRefs();
+    List<Interface> getSupportedInterfaceRefs();
 
     /**
      * Returns the value of the '<em><b>Io Specification</b></em>' containment reference.
@@ -96,7 +97,7 @@ public interface CallableElement extends RootElement {
      *        extendedMetaData="kind='element' name='ioBinding' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<InputOutputBinding> getIoBinding();
+    List<InputOutputBinding> getIoBinding();
 
     /**
      * Returns the value of the '<em><b>Name</b></em>' attribute.

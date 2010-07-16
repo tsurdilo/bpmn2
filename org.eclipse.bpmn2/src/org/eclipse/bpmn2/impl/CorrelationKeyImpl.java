@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.CorrelationKey;
 import org.eclipse.bpmn2.CorrelationProperty;
@@ -94,7 +95,7 @@ public class CorrelationKeyImpl extends BaseElementImpl implements CorrelationKe
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<CorrelationProperty> getCorrelationPropertyRef() {
+    public List<CorrelationProperty> getCorrelationPropertyRef() {
         if (correlationPropertyRef == null) {
             correlationPropertyRef = new EObjectResolvingEList<CorrelationProperty>(CorrelationProperty.class, this, Bpmn2Package.CORRELATION_KEY__CORRELATION_PROPERTY_REF);
         }

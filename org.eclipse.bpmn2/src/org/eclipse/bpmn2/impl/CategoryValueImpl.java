@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.CategoryValue;
 import org.eclipse.bpmn2.FlowElement;
@@ -118,7 +119,7 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<FlowElement> getCategorizedFlowElements() {
+    public List<FlowElement> getCategorizedFlowElements() {
         if (categorizedFlowElements == null) {
             categorizedFlowElements = new EObjectWithInverseEList.ManyInverse<FlowElement>(FlowElement.class, this, Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS, Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF);
         }

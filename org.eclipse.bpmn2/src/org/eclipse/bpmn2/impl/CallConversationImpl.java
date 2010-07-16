@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.CallConversation;
 import org.eclipse.bpmn2.Collaboration;
@@ -88,7 +89,7 @@ public class CallConversationImpl extends ConversationNodeImpl implements CallCo
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ParticipantAssociation> getParticipantAssociations() {
+    public List<ParticipantAssociation> getParticipantAssociations() {
         if (participantAssociations == null) {
             participantAssociations = new EObjectContainmentEList<ParticipantAssociation>(ParticipantAssociation.class, this, Bpmn2Package.CALL_CONVERSATION__PARTICIPANT_ASSOCIATIONS);
         }

@@ -14,6 +14,7 @@
  */
 package org.eclipse.di.impl;
 
+import java.util.Map;
 import org.eclipse.di.DiPackage;
 import org.eclipse.di.Diagram;
 import org.eclipse.di.DiagramElement;
@@ -131,11 +132,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EMap<String, String> getXMLNSPrefixMap() {
+    public Map<String, String> getXMLNSPrefixMap() {
         if (xMLNSPrefixMap == null) {
             xMLNSPrefixMap = new EcoreEMap<String, String>(EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY, EStringToStringMapEntryImpl.class, this, DiPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP);
         }
-        return xMLNSPrefixMap;
+        return xMLNSPrefixMap.map();
     }
 
     /**
@@ -143,11 +144,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EMap<String, String> getXSISchemaLocation() {
+    public Map<String, String> getXSISchemaLocation() {
         if (xSISchemaLocation == null) {
             xSISchemaLocation = new EcoreEMap<String, String>(EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY, EStringToStringMapEntryImpl.class, this, DiPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION);
         }
-        return xSISchemaLocation;
+        return xSISchemaLocation.map();
     }
 
     /**
@@ -431,9 +432,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
             case DiPackage.DOCUMENT_ROOT__MIXED:
                 return ((InternalEList<?>)getMixed()).basicRemove(otherEnd, msgs);
             case DiPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
-                return ((InternalEList<?>)getXMLNSPrefixMap()).basicRemove(otherEnd, msgs);
+                return ((InternalEList<?>)((EMap.InternalMapView<String, String>)getXMLNSPrefixMap()).eMap()).basicRemove(otherEnd, msgs);
             case DiPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
-                return ((InternalEList<?>)getXSISchemaLocation()).basicRemove(otherEnd, msgs);
+                return ((InternalEList<?>)((EMap.InternalMapView<String, String>)getXSISchemaLocation()).eMap()).basicRemove(otherEnd, msgs);
             case DiPackage.DOCUMENT_ROOT__DIAGRAM_ELEMENT:
                 return basicSetDiagramElement(null, msgs);
             case DiPackage.DOCUMENT_ROOT__DIAGRAM:
@@ -472,14 +473,14 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
                 return ((FeatureMap.Internal)getMixed()).getWrapper();
             case DiPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
                 if (coreType)
-                    return getXMLNSPrefixMap();
+                    return ((EMap.InternalMapView<String, String>)getXMLNSPrefixMap()).eMap();
                 else
-                    return getXMLNSPrefixMap().map();
+                    return getXMLNSPrefixMap();
             case DiPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
                 if (coreType)
-                    return getXSISchemaLocation();
+                    return ((EMap.InternalMapView<String, String>)getXSISchemaLocation()).eMap();
                 else
-                    return getXSISchemaLocation().map();
+                    return getXSISchemaLocation();
             case DiPackage.DOCUMENT_ROOT__DIAGRAM_ELEMENT:
                 return getDiagramElement();
             case DiPackage.DOCUMENT_ROOT__DIAGRAM:
@@ -516,10 +517,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
                 ((FeatureMap.Internal)getMixed()).set(newValue);
                 return;
             case DiPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
-                ((EStructuralFeature.Setting)getXMLNSPrefixMap()).set(newValue);
+                ((EStructuralFeature.Setting)((EMap.InternalMapView<String, String>)getXMLNSPrefixMap()).eMap()).set(newValue);
                 return;
             case DiPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
-                ((EStructuralFeature.Setting)getXSISchemaLocation()).set(newValue);
+                ((EStructuralFeature.Setting)((EMap.InternalMapView<String, String>)getXSISchemaLocation()).eMap()).set(newValue);
                 return;
             case DiPackage.DOCUMENT_ROOT__DIAGRAM_ELEMENT:
                 setDiagramElement((DiagramElement)newValue);

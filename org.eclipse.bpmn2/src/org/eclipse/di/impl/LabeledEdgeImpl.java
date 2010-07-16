@@ -14,6 +14,7 @@
  */
 package org.eclipse.di.impl;
 
+import java.util.List;
 import org.eclipse.di.DiPackage;
 import org.eclipse.di.Label;
 import org.eclipse.di.LabeledEdge;
@@ -69,7 +70,7 @@ public abstract class LabeledEdgeImpl extends EdgeImpl implements LabeledEdge {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Label> getOwnedLabel() {
+    public List<Label> getOwnedLabel() {
         if (ownedLabel == null) {
             ownedLabel = new EObjectResolvingEList<Label>(Label.class, this, DiPackage.LABELED_EDGE__OWNED_LABEL);
         }

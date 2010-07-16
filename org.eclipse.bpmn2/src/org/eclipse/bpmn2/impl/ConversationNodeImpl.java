@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.ConversationLink;
 import org.eclipse.bpmn2.ConversationNode;
@@ -148,7 +149,7 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements Co
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ConversationLink> getIncomingConversationLinks() {
+    public List<ConversationLink> getIncomingConversationLinks() {
         if (incomingConversationLinks == null) {
             incomingConversationLinks = new EObjectWithInverseEList<ConversationLink>(ConversationLink.class, this, Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS, Bpmn2Package.CONVERSATION_LINK__TARGET_REF);
         }
@@ -160,7 +161,7 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements Co
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ConversationLink> getOutgoingConversationLinks() {
+    public List<ConversationLink> getOutgoingConversationLinks() {
         if (outgoingConversationLinks == null) {
             outgoingConversationLinks = new EObjectWithInverseResolvingEList<ConversationLink>(ConversationLink.class, this, Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS, Bpmn2Package.CONVERSATION_LINK__SOURCE_REF);
         }
@@ -172,7 +173,7 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements Co
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Participant> getParticipantRefs() {
+    public List<Participant> getParticipantRefs() {
         if (participantRefs == null) {
             participantRefs = new EObjectResolvingEList<Participant>(Participant.class, this, Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS);
         }
@@ -184,7 +185,7 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements Co
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<MessageFlow> getMessageFlowRefs() {
+    public List<MessageFlow> getMessageFlowRefs() {
         if (messageFlowRefs == null) {
             messageFlowRefs = new EObjectResolvingEList<MessageFlow>(MessageFlow.class, this, Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS);
         }
@@ -196,7 +197,7 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements Co
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<CorrelationKey> getCorrelationKeys() {
+    public List<CorrelationKey> getCorrelationKeys() {
         if (correlationKeys == null) {
             correlationKeys = new EObjectContainmentEList<CorrelationKey>(CorrelationKey.class, this, Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS);
         }

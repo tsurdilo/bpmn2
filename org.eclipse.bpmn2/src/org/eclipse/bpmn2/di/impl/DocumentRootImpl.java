@@ -15,6 +15,7 @@
  */
 package org.eclipse.bpmn2.di.impl;
 
+import java.util.Map;
 import org.eclipse.bpmn2.di.BPMNDiagram;
 import org.eclipse.bpmn2.di.BPMNEdge;
 import org.eclipse.bpmn2.di.BPMNLabel;
@@ -124,11 +125,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EMap<String, String> getXMLNSPrefixMap() {
+    public Map<String, String> getXMLNSPrefixMap() {
         if (xMLNSPrefixMap == null) {
             xMLNSPrefixMap = new EcoreEMap<String, String>(EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY, EStringToStringMapEntryImpl.class, this, BpmnDiPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP);
         }
-        return xMLNSPrefixMap;
+        return xMLNSPrefixMap.map();
     }
 
     /**
@@ -136,11 +137,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EMap<String, String> getXSISchemaLocation() {
+    public Map<String, String> getXSISchemaLocation() {
         if (xSISchemaLocation == null) {
             xSISchemaLocation = new EcoreEMap<String, String>(EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY, EStringToStringMapEntryImpl.class, this, BpmnDiPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION);
         }
-        return xSISchemaLocation;
+        return xSISchemaLocation.map();
     }
 
     /**
@@ -316,9 +317,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
             case BpmnDiPackage.DOCUMENT_ROOT__MIXED:
                 return ((InternalEList<?>)getMixed()).basicRemove(otherEnd, msgs);
             case BpmnDiPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
-                return ((InternalEList<?>)getXMLNSPrefixMap()).basicRemove(otherEnd, msgs);
+                return ((InternalEList<?>)((EMap.InternalMapView<String, String>)getXMLNSPrefixMap()).eMap()).basicRemove(otherEnd, msgs);
             case BpmnDiPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
-                return ((InternalEList<?>)getXSISchemaLocation()).basicRemove(otherEnd, msgs);
+                return ((InternalEList<?>)((EMap.InternalMapView<String, String>)getXSISchemaLocation()).eMap()).basicRemove(otherEnd, msgs);
             case BpmnDiPackage.DOCUMENT_ROOT__BPMN_DIAGRAM:
                 return basicSetBPMNDiagram(null, msgs);
             case BpmnDiPackage.DOCUMENT_ROOT__BPMN_EDGE:
@@ -349,14 +350,14 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
                 return ((FeatureMap.Internal)getMixed()).getWrapper();
             case BpmnDiPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
                 if (coreType)
-                    return getXMLNSPrefixMap();
+                    return ((EMap.InternalMapView<String, String>)getXMLNSPrefixMap()).eMap();
                 else
-                    return getXMLNSPrefixMap().map();
+                    return getXMLNSPrefixMap();
             case BpmnDiPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
                 if (coreType)
-                    return getXSISchemaLocation();
+                    return ((EMap.InternalMapView<String, String>)getXSISchemaLocation()).eMap();
                 else
-                    return getXSISchemaLocation().map();
+                    return getXSISchemaLocation();
             case BpmnDiPackage.DOCUMENT_ROOT__BPMN_DIAGRAM:
                 return getBPMNDiagram();
             case BpmnDiPackage.DOCUMENT_ROOT__BPMN_EDGE:
@@ -385,10 +386,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
                 ((FeatureMap.Internal)getMixed()).set(newValue);
                 return;
             case BpmnDiPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
-                ((EStructuralFeature.Setting)getXMLNSPrefixMap()).set(newValue);
+                ((EStructuralFeature.Setting)((EMap.InternalMapView<String, String>)getXMLNSPrefixMap()).eMap()).set(newValue);
                 return;
             case BpmnDiPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
-                ((EStructuralFeature.Setting)getXSISchemaLocation()).set(newValue);
+                ((EStructuralFeature.Setting)((EMap.InternalMapView<String, String>)getXSISchemaLocation()).eMap()).set(newValue);
                 return;
             case BpmnDiPackage.DOCUMENT_ROOT__BPMN_DIAGRAM:
                 setBPMNDiagram((BPMNDiagram)newValue);

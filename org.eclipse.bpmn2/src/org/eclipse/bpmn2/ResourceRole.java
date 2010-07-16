@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -78,7 +79,7 @@ public interface ResourceRole extends BaseElement {
      *        extendedMetaData="kind='element' name='resourceParameterBinding' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<ResourceParameterBinding> getResourceParameterBindings();
+    List<ResourceParameterBinding> getResourceParameterBindings();
 
     /**
      * Returns the value of the '<em><b>Resource Assignment Expression</b></em>' containment reference.

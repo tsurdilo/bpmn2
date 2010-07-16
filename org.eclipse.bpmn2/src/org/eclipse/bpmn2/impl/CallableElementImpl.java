@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.CallableElement;
 import org.eclipse.bpmn2.InputOutputBinding;
@@ -122,7 +123,7 @@ public abstract class CallableElementImpl extends RootElementImpl implements Cal
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Interface> getSupportedInterfaceRefs() {
+    public List<Interface> getSupportedInterfaceRefs() {
         if (supportedInterfaceRefs == null) {
             supportedInterfaceRefs = new EObjectResolvingEList<Interface>(Interface.class, this, Bpmn2Package.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS);
         }
@@ -180,7 +181,7 @@ public abstract class CallableElementImpl extends RootElementImpl implements Cal
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<InputOutputBinding> getIoBinding() {
+    public List<InputOutputBinding> getIoBinding() {
         if (ioBinding == null) {
             ioBinding = new EObjectContainmentEList<InputOutputBinding>(InputOutputBinding.class, this, Bpmn2Package.CALLABLE_ELEMENT__IO_BINDING);
         }

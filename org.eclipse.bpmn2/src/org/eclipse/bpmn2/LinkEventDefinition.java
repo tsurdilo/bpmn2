@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -52,7 +53,7 @@ public interface LinkEventDefinition extends EventDefinition {
      *        extendedMetaData="kind='element' name='source' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<LinkEventDefinition> getSource();
+    List<LinkEventDefinition> getSource();
 
     /**
      * Returns the value of the '<em><b>Target</b></em>' reference.

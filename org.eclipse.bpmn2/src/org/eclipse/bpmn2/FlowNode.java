@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -53,7 +54,7 @@ public interface FlowNode extends FlowElement {
      *        extendedMetaData="kind='element' name='incoming' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<SequenceFlow> getIncoming();
+    List<SequenceFlow> getIncoming();
 
     /**
      * Returns the value of the '<em><b>Lanes</b></em>' reference list.
@@ -71,7 +72,7 @@ public interface FlowNode extends FlowElement {
      * @model opposite="flowNodeRefs" transient="true" derived="true" ordered="false"
      * @generated
      */
-    EList<Lane> getLanes();
+    List<Lane> getLanes();
 
     /**
      * Returns the value of the '<em><b>Outgoing</b></em>' reference list.
@@ -90,6 +91,6 @@ public interface FlowNode extends FlowElement {
      *        extendedMetaData="kind='element' name='outgoing' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<SequenceFlow> getOutgoing();
+    List<SequenceFlow> getOutgoing();
 
 } // FlowNode

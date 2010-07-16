@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.ConversationNode;
 import org.eclipse.bpmn2.SubConversation;
@@ -74,7 +75,7 @@ public class SubConversationImpl extends ConversationNodeImpl implements SubConv
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ConversationNode> getConversationNodes() {
+    public List<ConversationNode> getConversationNodes() {
         if (conversationNodes == null) {
             conversationNodes = new EObjectContainmentEList<ConversationNode>(ConversationNode.class, this, Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES);
         }

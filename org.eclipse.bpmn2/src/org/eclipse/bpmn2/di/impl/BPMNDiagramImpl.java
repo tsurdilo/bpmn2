@@ -17,6 +17,7 @@ package org.eclipse.bpmn2.di.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.di.BPMNDiagram;
 import org.eclipse.bpmn2.di.BPMNLabelStyle;
 import org.eclipse.bpmn2.di.BPMNPlane;
@@ -136,7 +137,7 @@ public class BPMNDiagramImpl extends DiagramImpl implements BPMNDiagram {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<BPMNLabelStyle> getLabelStyle() {
+    public List<BPMNLabelStyle> getLabelStyle() {
         if (labelStyle == null) {
             labelStyle = new EObjectContainmentEList<BPMNLabelStyle>(BPMNLabelStyle.class, this, BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE);
         }

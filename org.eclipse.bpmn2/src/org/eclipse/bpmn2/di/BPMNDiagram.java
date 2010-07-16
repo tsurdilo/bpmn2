@@ -15,6 +15,7 @@
  */
 package org.eclipse.bpmn2.di;
 
+import java.util.List;
 import org.eclipse.di.Diagram;
 import org.eclipse.emf.common.util.EList;
 
@@ -78,6 +79,6 @@ public interface BPMNDiagram extends Diagram {
      *        extendedMetaData="kind='element' name='BPMNLabelStyle' namespace='http://www.omg.org/spec/BPMN/20100524/DI'"
      * @generated
      */
-    EList<BPMNLabelStyle> getLabelStyle();
+    List<BPMNLabelStyle> getLabelStyle();
 
 } // BPMNDiagram

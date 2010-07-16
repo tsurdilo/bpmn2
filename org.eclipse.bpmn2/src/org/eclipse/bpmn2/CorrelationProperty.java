@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -50,7 +51,7 @@ public interface CorrelationProperty extends RootElement {
      *        extendedMetaData="kind='element' name='correlationPropertyRetrievalExpression' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<CorrelationPropertyRetrievalExpression> getCorrelationPropertyRetrievalExpression();
+    List<CorrelationPropertyRetrievalExpression> getCorrelationPropertyRetrievalExpression();
 
     /**
      * Returns the value of the '<em><b>Name</b></em>' attribute.

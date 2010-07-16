@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.ChoreographyTask;
 import org.eclipse.bpmn2.MessageFlow;
@@ -71,7 +72,7 @@ public class ChoreographyTaskImpl extends ChoreographyActivityImpl implements Ch
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<MessageFlow> getMessageFlowRef() {
+    public List<MessageFlow> getMessageFlowRef() {
         if (messageFlowRef == null) {
             messageFlowRef = new EObjectResolvingEList<MessageFlow>(MessageFlow.class, this, Bpmn2Package.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF);
         }

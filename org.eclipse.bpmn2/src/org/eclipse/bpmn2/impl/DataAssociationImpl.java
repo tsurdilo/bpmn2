@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Assignment;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.DataAssociation;
@@ -112,7 +113,7 @@ public class DataAssociationImpl extends BaseElementImpl implements DataAssociat
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ItemAwareElement> getSourceRef() {
+    public List<ItemAwareElement> getSourceRef() {
         if (sourceRef == null) {
             sourceRef = new EObjectEList<ItemAwareElement>(ItemAwareElement.class, this, Bpmn2Package.DATA_ASSOCIATION__SOURCE_REF);
         }
@@ -191,7 +192,7 @@ public class DataAssociationImpl extends BaseElementImpl implements DataAssociat
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Assignment> getAssignment() {
+    public List<Assignment> getAssignment() {
         if (assignment == null) {
             assignment = new EObjectContainmentEList<Assignment>(Assignment.class, this, Bpmn2Package.DATA_ASSOCIATION__ASSIGNMENT);
         }

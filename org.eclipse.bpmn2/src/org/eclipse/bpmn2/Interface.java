@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
@@ -51,7 +52,7 @@ public interface Interface extends RootElement {
      *        extendedMetaData="kind='element' name='operation' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<Operation> getOperations();
+    List<Operation> getOperations();
 
     /**
      * Returns the value of the '<em><b>Implementation Ref</b></em>' reference.
@@ -62,13 +63,13 @@ public interface Interface extends RootElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Implementation Ref</em>' reference.
-     * @see #setImplementationRef(EObject)
+     * @see #setImplementationRef(Object)
      * @see org.eclipse.bpmn2.Bpmn2Package#getInterface_ImplementationRef()
      * @model ordered="false"
      *        extendedMetaData="kind='attribute' name='implementationRef'"
      * @generated
      */
-    EObject getImplementationRef();
+    Object getImplementationRef();
 
     /**
      * Sets the value of the '{@link org.eclipse.bpmn2.Interface#getImplementationRef <em>Implementation Ref</em>}' reference.
@@ -78,7 +79,7 @@ public interface Interface extends RootElement {
      * @see #getImplementationRef()
      * @generated
      */
-    void setImplementationRef(EObject value);
+    void setImplementationRef(Object value);
 
     /**
      * Returns the value of the '<em><b>Name</b></em>' attribute.

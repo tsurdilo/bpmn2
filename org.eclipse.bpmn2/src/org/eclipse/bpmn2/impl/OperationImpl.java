@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Message;
 import org.eclipse.bpmn2.Operation;
@@ -205,7 +206,7 @@ public class OperationImpl extends BaseElementImpl implements Operation {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<org.eclipse.bpmn2.Error> getErrorRefs() {
+    public List<org.eclipse.bpmn2.Error> getErrorRefs() {
         if (errorRefs == null) {
             errorRefs = new EObjectResolvingEList<org.eclipse.bpmn2.Error>(org.eclipse.bpmn2.Error.class, this, Bpmn2Package.OPERATION__ERROR_REFS);
         }
@@ -217,7 +218,7 @@ public class OperationImpl extends BaseElementImpl implements Operation {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EObject getImplementationRef() {
+    public Object getImplementationRef() {
         if (implementationRef != null && implementationRef.eIsProxy()) {
             InternalEObject oldImplementationRef = (InternalEObject)implementationRef;
             implementationRef = eResolveProxy(oldImplementationRef);
@@ -234,7 +235,7 @@ public class OperationImpl extends BaseElementImpl implements Operation {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EObject basicGetImplementationRef() {
+    public Object basicGetImplementationRef() {
         return implementationRef;
     }
 
@@ -243,9 +244,9 @@ public class OperationImpl extends BaseElementImpl implements Operation {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setImplementationRef(EObject newImplementationRef) {
-        EObject oldImplementationRef = implementationRef;
-        implementationRef = newImplementationRef;
+    public void setImplementationRef(Object newImplementationRef) {
+        Object oldImplementationRef = implementationRef;
+        implementationRef = (EObject)newImplementationRef;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.OPERATION__IMPLEMENTATION_REF, oldImplementationRef, implementationRef));
     }
@@ -319,7 +320,7 @@ public class OperationImpl extends BaseElementImpl implements Operation {
                 getErrorRefs().addAll((Collection<? extends org.eclipse.bpmn2.Error>)newValue);
                 return;
             case Bpmn2Package.OPERATION__IMPLEMENTATION_REF:
-                setImplementationRef((EObject)newValue);
+                setImplementationRef((Object)newValue);
                 return;
             case Bpmn2Package.OPERATION__NAME:
                 setName((String)newValue);
@@ -346,7 +347,7 @@ public class OperationImpl extends BaseElementImpl implements Operation {
                 getErrorRefs().clear();
                 return;
             case Bpmn2Package.OPERATION__IMPLEMENTATION_REF:
-                setImplementationRef((EObject)null);
+                setImplementationRef((Object)null);
                 return;
             case Bpmn2Package.OPERATION__NAME:
                 setName(NAME_EDEFAULT);

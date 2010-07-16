@@ -44,12 +44,12 @@ public interface FormalExpression extends Expression {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Body</em>' reference.
-     * @see #setBody(EObject)
+     * @see #setBody(Object)
      * @see org.eclipse.bpmn2.Bpmn2Package#getFormalExpression_Body()
      * @model required="true" transient="true" derived="true" ordered="false"
      * @generated
      */
-    EObject getBody();
+    Object getBody();
 
     /**
      * Sets the value of the '{@link org.eclipse.bpmn2.FormalExpression#getBody <em>Body</em>}' reference.
@@ -59,7 +59,7 @@ public interface FormalExpression extends Expression {
      * @see #getBody()
      * @generated
      */
-    void setBody(EObject value);
+    void setBody(Object value);
 
     /**
      * Returns the value of the '<em><b>Evaluates To Type Ref</b></em>' reference.

@@ -14,7 +14,15 @@
  */
 package org.eclipse.bpmn2.util;
 
+import org.eclipse.bpmn2.Bpmn2Factory;
+import org.eclipse.bpmn2.Bpmn2Package;
+import org.eclipse.bpmn2.Definitions;
+import org.eclipse.bpmn2.DocumentRoot;
+import org.eclipse.bpmn2.di.BpmnDiPackage;
+import org.eclipse.dc.DcPackage;
+import org.eclipse.di.DiPackage;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceFactoryImpl;
 import org.eclipse.emf.ecore.util.ExtendedMetaData;
@@ -63,8 +71,47 @@ public class Bpmn2ResourceFactoryImpl extends ResourceFactoryImpl {
         result.getDefaultSaveOptions().put(XMLResource.OPTION_URI_HANDLER, new QNameURIHandler());
 
         result.getDefaultSaveOptions().put(XMLResource.OPTION_ELEMENT_HANDLER, new ElementHandlerImpl(true));
+        
+        result.getDefaultSaveOptions().put(XMLResource.OPTION_ENCODING, "UTF-8");
 
         return result;
     }
+    
+    /*
+     * 
+     * Creates a new BpmnResourceImpl and initializes it.
+     * 
+     * The method creates a DocumentRoot and a Definitions element, as both are
+     * mandatory.
+     */
+
+    public Definitions createAndInitResource(URI uri)
+
+    {
+        // register also the non-XMI namespaces, as they are needed to read XML
+        // files
+
+        registerNonXMINamespace(Bpmn2Package.eINSTANCE);
+        registerNonXMINamespace(BpmnDiPackage.eINSTANCE);
+        registerNonXMINamespace(DiPackage.eINSTANCE);
+        registerNonXMINamespace(DcPackage.eINSTANCE);
+        
+        Resource resource = createResource(uri);
+        Bpmn2Factory factory = Bpmn2Factory.eINSTANCE;
+        Definitions definitions = factory.createDefinitions();
+        DocumentRoot docummentRoot = factory.createDocumentRoot();
+        docummentRoot.setDefinitions(definitions);
+        resource.getContents().add(docummentRoot);
+
+        return definitions;
+    }
+
+    private void registerNonXMINamespace(EPackage pack) {
+
+        String xmiNs = pack.getNsURI();
+        String xmlNs = xmiNs.substring(0, xmiNs.length() - 4);
+        ExtendedMetaData.INSTANCE.putPackage(xmlNs, pack);
+    }
+
 
 } //Bpmn2ResourceFactoryImpl

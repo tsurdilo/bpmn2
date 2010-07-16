@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Interface;
 import org.eclipse.bpmn2.Operation;
@@ -109,7 +110,7 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Operation> getOperations() {
+    public List<Operation> getOperations() {
         if (operations == null) {
             operations = new EObjectContainmentEList<Operation>(Operation.class, this, Bpmn2Package.INTERFACE__OPERATIONS);
         }
@@ -121,7 +122,7 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EObject getImplementationRef() {
+    public Object getImplementationRef() {
         if (implementationRef != null && implementationRef.eIsProxy()) {
             InternalEObject oldImplementationRef = (InternalEObject)implementationRef;
             implementationRef = eResolveProxy(oldImplementationRef);
@@ -138,7 +139,7 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EObject basicGetImplementationRef() {
+    public Object basicGetImplementationRef() {
         return implementationRef;
     }
 
@@ -147,9 +148,9 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setImplementationRef(EObject newImplementationRef) {
-        EObject oldImplementationRef = implementationRef;
-        implementationRef = newImplementationRef;
+    public void setImplementationRef(Object newImplementationRef) {
+        Object oldImplementationRef = implementationRef;
+        implementationRef = (EObject)newImplementationRef;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.INTERFACE__IMPLEMENTATION_REF, oldImplementationRef, implementationRef));
     }
@@ -223,7 +224,7 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
                 getOperations().addAll((Collection<? extends Operation>)newValue);
                 return;
             case Bpmn2Package.INTERFACE__IMPLEMENTATION_REF:
-                setImplementationRef((EObject)newValue);
+                setImplementationRef((Object)newValue);
                 return;
             case Bpmn2Package.INTERFACE__NAME:
                 setName((String)newValue);
@@ -244,7 +245,7 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
                 getOperations().clear();
                 return;
             case Bpmn2Package.INTERFACE__IMPLEMENTATION_REF:
-                setImplementationRef((EObject)null);
+                setImplementationRef((Object)null);
                 return;
             case Bpmn2Package.INTERFACE__NAME:
                 setName(NAME_EDEFAULT);

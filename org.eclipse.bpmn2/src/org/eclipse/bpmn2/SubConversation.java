@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -48,6 +49,6 @@ public interface SubConversation extends ConversationNode {
      *        extendedMetaData="kind='element' name='conversationNode' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL' group='http://www.omg.org/spec/BPMN/20100524/MODEL#conversationNode'"
      * @generated
      */
-    EList<ConversationNode> getConversationNodes();
+    List<ConversationNode> getConversationNodes();
 
 } // SubConversation

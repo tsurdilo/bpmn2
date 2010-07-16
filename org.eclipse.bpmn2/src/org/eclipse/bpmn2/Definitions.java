@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.bpmn2.di.BPMNDiagram;
 import org.eclipse.emf.common.util.EList;
 
@@ -59,7 +60,7 @@ public interface Definitions extends BaseElement {
      *        extendedMetaData="kind='element' name='import' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<Import> getImports();
+    List<Import> getImports();
 
     /**
      * Returns the value of the '<em><b>Extensions</b></em>' containment reference list.
@@ -76,7 +77,7 @@ public interface Definitions extends BaseElement {
      *        extendedMetaData="kind='element' name='extension' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<Extension> getExtensions();
+    List<Extension> getExtensions();
 
     /**
      * Returns the value of the '<em><b>Root Elements</b></em>' containment reference list.
@@ -93,7 +94,7 @@ public interface Definitions extends BaseElement {
      *        extendedMetaData="kind='element' name='rootElement' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL' group='http://www.omg.org/spec/BPMN/20100524/MODEL#rootElement'"
      * @generated
      */
-    EList<RootElement> getRootElements();
+    List<RootElement> getRootElements();
 
     /**
      * Returns the value of the '<em><b>Diagrams</b></em>' containment reference list.
@@ -110,7 +111,7 @@ public interface Definitions extends BaseElement {
      *        extendedMetaData="kind='element' name='BPMNDiagram' namespace='http://www.omg.org/spec/BPMN/20100524/DI'"
      * @generated
      */
-    EList<BPMNDiagram> getDiagrams();
+    List<BPMNDiagram> getDiagrams();
 
     /**
      * Returns the value of the '<em><b>Relationships</b></em>' containment reference list.
@@ -127,7 +128,7 @@ public interface Definitions extends BaseElement {
      *        extendedMetaData="kind='element' name='relationship' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<Relationship> getRelationships();
+    List<Relationship> getRelationships();
 
     /**
      * Returns the value of the '<em><b>Exporter</b></em>' attribute.

@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Artifact;
 import org.eclipse.bpmn2.Auditing;
 import org.eclipse.bpmn2.Bpmn2Package;
@@ -248,7 +249,7 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<LaneSet> getLaneSets() {
+    public List<LaneSet> getLaneSets() {
         if (laneSets == null) {
             laneSets = new EObjectContainmentEList<LaneSet>(LaneSet.class, this, Bpmn2Package.PROCESS__LANE_SETS);
         }
@@ -260,7 +261,7 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<FlowElement> getFlowElements() {
+    public List<FlowElement> getFlowElements() {
         if (flowElements == null) {
             flowElements = new EObjectContainmentEList<FlowElement>(FlowElement.class, this, Bpmn2Package.PROCESS__FLOW_ELEMENTS);
         }
@@ -364,7 +365,7 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Property> getProperties() {
+    public List<Property> getProperties() {
         if (properties == null) {
             properties = new EObjectContainmentEList<Property>(Property.class, this, Bpmn2Package.PROCESS__PROPERTIES);
         }
@@ -376,7 +377,7 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Artifact> getArtifacts() {
+    public List<Artifact> getArtifacts() {
         if (artifacts == null) {
             artifacts = new EObjectContainmentEList<Artifact>(Artifact.class, this, Bpmn2Package.PROCESS__ARTIFACTS);
         }
@@ -388,7 +389,7 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ResourceRole> getResources() {
+    public List<ResourceRole> getResources() {
         if (resources == null) {
             resources = new EObjectContainmentEList<ResourceRole>(ResourceRole.class, this, Bpmn2Package.PROCESS__RESOURCES);
         }
@@ -400,7 +401,7 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<CorrelationSubscription> getCorrelationSubscriptions() {
+    public List<CorrelationSubscription> getCorrelationSubscriptions() {
         if (correlationSubscriptions == null) {
             correlationSubscriptions = new EObjectContainmentEList<CorrelationSubscription>(CorrelationSubscription.class, this, Bpmn2Package.PROCESS__CORRELATION_SUBSCRIPTIONS);
         }
@@ -412,7 +413,7 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<org.eclipse.bpmn2.Process> getSupports() {
+    public List<org.eclipse.bpmn2.Process> getSupports() {
         if (supports == null) {
             supports = new EObjectResolvingEList<org.eclipse.bpmn2.Process>(org.eclipse.bpmn2.Process.class, this, Bpmn2Package.PROCESS__SUPPORTS);
         }

@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.DataInput;
 import org.eclipse.bpmn2.DataOutput;
@@ -110,7 +111,7 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements Inp
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<DataInput> getDataInputs() {
+    public List<DataInput> getDataInputs() {
         if (dataInputs == null) {
             dataInputs = new EObjectContainmentEList<DataInput>(DataInput.class, this, Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS);
         }
@@ -122,7 +123,7 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements Inp
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<DataOutput> getDataOutputs() {
+    public List<DataOutput> getDataOutputs() {
         if (dataOutputs == null) {
             dataOutputs = new EObjectContainmentEList<DataOutput>(DataOutput.class, this, Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS);
         }
@@ -134,7 +135,7 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements Inp
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<InputSet> getInputSets() {
+    public List<InputSet> getInputSets() {
         if (inputSets == null) {
             inputSets = new EObjectContainmentEList<InputSet>(InputSet.class, this, Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS);
         }
@@ -146,7 +147,7 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements Inp
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<OutputSet> getOutputSets() {
+    public List<OutputSet> getOutputSets() {
         if (outputSets == null) {
             outputSets = new EObjectContainmentEList<OutputSet>(OutputSet.class, this, Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS);
         }

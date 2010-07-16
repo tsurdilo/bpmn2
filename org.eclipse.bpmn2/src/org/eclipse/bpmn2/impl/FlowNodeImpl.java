@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.FlowNode;
 import org.eclipse.bpmn2.Lane;
@@ -97,7 +98,7 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<SequenceFlow> getIncoming() {
+    public List<SequenceFlow> getIncoming() {
         if (incoming == null) {
             incoming = new EObjectWithInverseResolvingEList<SequenceFlow>(SequenceFlow.class, this, Bpmn2Package.FLOW_NODE__INCOMING, Bpmn2Package.SEQUENCE_FLOW__TARGET_REF);
         }
@@ -109,7 +110,7 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Lane> getLanes() {
+    public List<Lane> getLanes() {
         if (lanes == null) {
             lanes = new EObjectWithInverseResolvingEList.ManyInverse<Lane>(Lane.class, this, Bpmn2Package.FLOW_NODE__LANES, Bpmn2Package.LANE__FLOW_NODE_REFS);
         }
@@ -121,7 +122,7 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<SequenceFlow> getOutgoing() {
+    public List<SequenceFlow> getOutgoing() {
         if (outgoing == null) {
             outgoing = new EObjectWithInverseResolvingEList<SequenceFlow>(SequenceFlow.class, this, Bpmn2Package.FLOW_NODE__OUTGOING, Bpmn2Package.SEQUENCE_FLOW__SOURCE_REF);
         }

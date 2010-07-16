@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -48,6 +49,6 @@ public interface SubChoreography extends ChoreographyActivity, FlowElementsConta
      *        extendedMetaData="kind='element' name='artifact' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL' group='http://www.omg.org/spec/BPMN/20100524/MODEL#artifact'"
      * @generated
      */
-    EList<Artifact> getArtifacts();
+    List<Artifact> getArtifacts();
 
 } // SubChoreography

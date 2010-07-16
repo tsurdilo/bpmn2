@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -49,7 +50,7 @@ public interface CallConversation extends ConversationNode {
      *        extendedMetaData="kind='element' name='participantAssociation' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<ParticipantAssociation> getParticipantAssociations();
+    List<ParticipantAssociation> getParticipantAssociations();
 
     /**
      * Returns the value of the '<em><b>Called Collaboration Ref</b></em>' reference.

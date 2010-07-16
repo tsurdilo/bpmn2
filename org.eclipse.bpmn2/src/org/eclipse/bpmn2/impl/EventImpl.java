@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.ConversationLink;
 import org.eclipse.bpmn2.Event;
@@ -100,7 +101,7 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ConversationLink> getIncomingConversationLinks() {
+    public List<ConversationLink> getIncomingConversationLinks() {
         if (incomingConversationLinks == null) {
             incomingConversationLinks = new EObjectWithInverseEList<ConversationLink>(ConversationLink.class, this, Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS, Bpmn2Package.CONVERSATION_LINK__TARGET_REF);
         }
@@ -112,7 +113,7 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ConversationLink> getOutgoingConversationLinks() {
+    public List<ConversationLink> getOutgoingConversationLinks() {
         if (outgoingConversationLinks == null) {
             outgoingConversationLinks = new EObjectWithInverseResolvingEList<ConversationLink>(ConversationLink.class, this, Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS, Bpmn2Package.CONVERSATION_LINK__SOURCE_REF);
         }
@@ -124,7 +125,7 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Property> getProperties() {
+    public List<Property> getProperties() {
         if (properties == null) {
             properties = new EObjectContainmentEList<Property>(Property.class, this, Bpmn2Package.EVENT__PROPERTIES);
         }

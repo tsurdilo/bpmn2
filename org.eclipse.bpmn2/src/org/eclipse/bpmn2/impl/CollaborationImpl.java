@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Artifact;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Choreography;
@@ -227,7 +228,7 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Participant> getParticipants() {
+    public List<Participant> getParticipants() {
         if (participants == null) {
             participants = new EObjectContainmentEList<Participant>(Participant.class, this, Bpmn2Package.COLLABORATION__PARTICIPANTS);
         }
@@ -239,7 +240,7 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<MessageFlow> getMessageFlows() {
+    public List<MessageFlow> getMessageFlows() {
         if (messageFlows == null) {
             messageFlows = new EObjectContainmentEList<MessageFlow>(MessageFlow.class, this, Bpmn2Package.COLLABORATION__MESSAGE_FLOWS);
         }
@@ -251,7 +252,7 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Artifact> getArtifacts() {
+    public List<Artifact> getArtifacts() {
         if (artifacts == null) {
             artifacts = new EObjectContainmentEList<Artifact>(Artifact.class, this, Bpmn2Package.COLLABORATION__ARTIFACTS);
         }
@@ -263,7 +264,7 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ConversationNode> getConversations() {
+    public List<ConversationNode> getConversations() {
         if (conversations == null) {
             conversations = new EObjectContainmentEList<ConversationNode>(ConversationNode.class, this, Bpmn2Package.COLLABORATION__CONVERSATIONS);
         }
@@ -321,7 +322,7 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ParticipantAssociation> getParticipantAssociations() {
+    public List<ParticipantAssociation> getParticipantAssociations() {
         if (participantAssociations == null) {
             participantAssociations = new EObjectContainmentEList<ParticipantAssociation>(ParticipantAssociation.class, this, Bpmn2Package.COLLABORATION__PARTICIPANT_ASSOCIATIONS);
         }
@@ -333,7 +334,7 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<MessageFlowAssociation> getMessageFlowAssociations() {
+    public List<MessageFlowAssociation> getMessageFlowAssociations() {
         if (messageFlowAssociations == null) {
             messageFlowAssociations = new EObjectContainmentEList<MessageFlowAssociation>(MessageFlowAssociation.class, this, Bpmn2Package.COLLABORATION__MESSAGE_FLOW_ASSOCIATIONS);
         }
@@ -345,7 +346,7 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<CorrelationKey> getCorrelationKeys() {
+    public List<CorrelationKey> getCorrelationKeys() {
         if (correlationKeys == null) {
             correlationKeys = new EObjectContainmentEList<CorrelationKey>(CorrelationKey.class, this, Bpmn2Package.COLLABORATION__CORRELATION_KEYS);
         }
@@ -357,7 +358,7 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Choreography> getChoreographyRef() {
+    public List<Choreography> getChoreographyRef() {
         if (choreographyRef == null) {
             choreographyRef = new EObjectResolvingEList<Choreography>(Choreography.class, this, Bpmn2Package.COLLABORATION__CHOREOGRAPHY_REF);
         }
@@ -369,7 +370,7 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ConversationLink> getConversationLinks() {
+    public List<ConversationLink> getConversationLinks() {
         if (conversationLinks == null) {
             conversationLinks = new EObjectContainmentEList<ConversationLink>(ConversationLink.class, this, Bpmn2Package.COLLABORATION__CONVERSATION_LINKS);
         }

@@ -14,6 +14,7 @@
  */
 package org.eclipse.di;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
@@ -90,7 +91,7 @@ public interface DiagramElement extends EObject {
      * @model opposite="owningElement" resolveProxies="false" transient="true" changeable="false" derived="true" ordered="false"
      * @generated
      */
-    EList<DiagramElement> getOwnedElement();
+    List<DiagramElement> getOwnedElement();
 
     /**
      * Returns the value of the '<em><b>Model Element</b></em>' reference.
@@ -105,7 +106,7 @@ public interface DiagramElement extends EObject {
      * @model transient="true" changeable="false" derived="true" ordered="false"
      * @generated
      */
-    EObject getModelElement();
+    Object getModelElement();
 
     /**
      * Returns the value of the '<em><b>Style</b></em>' reference.

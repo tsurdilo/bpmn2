@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Participant;
 import org.eclipse.bpmn2.PartnerRole;
@@ -94,7 +95,7 @@ public class PartnerRoleImpl extends RootElementImpl implements PartnerRole {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Participant> getParticipantRef() {
+    public List<Participant> getParticipantRef() {
         if (participantRef == null) {
             participantRef = new EObjectResolvingEList<Participant>(Participant.class, this, Bpmn2Package.PARTNER_ROLE__PARTICIPANT_REF);
         }

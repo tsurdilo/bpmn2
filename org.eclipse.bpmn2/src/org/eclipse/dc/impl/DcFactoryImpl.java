@@ -14,6 +14,7 @@
  */
 package org.eclipse.dc.impl;
 
+import org.eclipse.dc.*;
 import org.eclipse.dc.Bounds;
 import org.eclipse.dc.DcFactory;
 import org.eclipse.dc.DcPackage;

@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.CorrelationKey;
 import org.eclipse.bpmn2.CorrelationPropertyBinding;
@@ -88,7 +89,7 @@ public class CorrelationSubscriptionImpl extends BaseElementImpl implements Corr
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<CorrelationPropertyBinding> getCorrelationPropertyBinding() {
+    public List<CorrelationPropertyBinding> getCorrelationPropertyBinding() {
         if (correlationPropertyBinding == null) {
             correlationPropertyBinding = new EObjectContainmentEList<CorrelationPropertyBinding>(CorrelationPropertyBinding.class, this, Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_PROPERTY_BINDING);
         }

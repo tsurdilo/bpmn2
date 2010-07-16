@@ -14,6 +14,7 @@
  */
 package org.eclipse.di;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
@@ -81,7 +82,7 @@ public interface Diagram extends EObject {
      * @model transient="true" changeable="false" derived="true" ordered="false"
      * @generated
      */
-    EList<Style> getOwnedStyle();
+    List<Style> getOwnedStyle();
 
     /**
      * Returns the value of the '<em><b>Root Element</b></em>' reference.

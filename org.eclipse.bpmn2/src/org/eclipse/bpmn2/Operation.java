@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
@@ -107,7 +108,7 @@ public interface Operation extends BaseElement {
      *        extendedMetaData="kind='element' name='errorRef' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<org.eclipse.bpmn2.Error> getErrorRefs();
+    List<org.eclipse.bpmn2.Error> getErrorRefs();
 
     /**
      * Returns the value of the '<em><b>Implementation Ref</b></em>' reference.
@@ -118,13 +119,13 @@ public interface Operation extends BaseElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Implementation Ref</em>' reference.
-     * @see #setImplementationRef(EObject)
+     * @see #setImplementationRef(Object)
      * @see org.eclipse.bpmn2.Bpmn2Package#getOperation_ImplementationRef()
      * @model ordered="false"
      *        extendedMetaData="kind='attribute' name='implementationRef'"
      * @generated
      */
-    EObject getImplementationRef();
+    Object getImplementationRef();
 
     /**
      * Sets the value of the '{@link org.eclipse.bpmn2.Operation#getImplementationRef <em>Implementation Ref</em>}' reference.
@@ -134,7 +135,7 @@ public interface Operation extends BaseElement {
      * @see #getImplementationRef()
      * @generated
      */
-    void setImplementationRef(EObject value);
+    void setImplementationRef(Object value);
 
     /**
      * Returns the value of the '<em><b>Name</b></em>' attribute.

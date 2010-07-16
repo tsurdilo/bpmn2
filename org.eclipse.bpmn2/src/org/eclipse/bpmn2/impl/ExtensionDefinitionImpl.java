@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.ExtensionAttributeDefinition;
 import org.eclipse.bpmn2.ExtensionDefinition;
@@ -119,7 +120,7 @@ public class ExtensionDefinitionImpl extends EObjectImpl implements ExtensionDef
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ExtensionAttributeDefinition> getExtensionAttributeDefinitions() {
+    public List<ExtensionAttributeDefinition> getExtensionAttributeDefinitions() {
         if (extensionAttributeDefinitions == null) {
             extensionAttributeDefinitions = new EObjectContainmentWithInverseEList<ExtensionAttributeDefinition>(ExtensionAttributeDefinition.class, this, Bpmn2Package.EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS, Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__EXTENSION_DEFINITION);
         }

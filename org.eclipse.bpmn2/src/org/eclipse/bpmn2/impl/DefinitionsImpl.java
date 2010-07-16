@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Definitions;
 import org.eclipse.bpmn2.Extension;
@@ -250,7 +251,7 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Import> getImports() {
+    public List<Import> getImports() {
         if (imports == null) {
             imports = new EObjectContainmentEList<Import>(Import.class, this, Bpmn2Package.DEFINITIONS__IMPORTS);
         }
@@ -262,7 +263,7 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Extension> getExtensions() {
+    public List<Extension> getExtensions() {
         if (extensions == null) {
             extensions = new EObjectContainmentEList<Extension>(Extension.class, this, Bpmn2Package.DEFINITIONS__EXTENSIONS);
         }
@@ -274,7 +275,7 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<RootElement> getRootElements() {
+    public List<RootElement> getRootElements() {
         if (rootElements == null) {
             rootElements = new EObjectContainmentEList<RootElement>(RootElement.class, this, Bpmn2Package.DEFINITIONS__ROOT_ELEMENTS);
         }
@@ -286,7 +287,7 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<BPMNDiagram> getDiagrams() {
+    public List<BPMNDiagram> getDiagrams() {
         if (diagrams == null) {
             diagrams = new EObjectContainmentEList<BPMNDiagram>(BPMNDiagram.class, this, Bpmn2Package.DEFINITIONS__DIAGRAMS);
         }
@@ -298,7 +299,7 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Relationship> getRelationships() {
+    public List<Relationship> getRelationships() {
         if (relationships == null) {
             relationships = new EObjectContainmentEList<Relationship>(Relationship.class, this, Bpmn2Package.DEFINITIONS__RELATIONSHIPS);
         }

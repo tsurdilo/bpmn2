@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -77,6 +78,6 @@ public interface CategoryValue extends BaseElement {
      * @model opposite="categoryValueRef" resolveProxies="false" transient="true" derived="true" ordered="false"
      * @generated
      */
-    EList<FlowElement> getCategorizedFlowElements();
+    List<FlowElement> getCategorizedFlowElements();
 
 } // CategoryValue

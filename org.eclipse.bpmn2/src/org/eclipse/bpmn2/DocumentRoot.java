@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.Map;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.FeatureMap;
@@ -205,7 +206,7 @@ public interface DocumentRoot extends EObject {
      *        extendedMetaData="kind='attribute' name='xmlns:prefix'"
      * @generated
      */
-    EMap<String, String> getXMLNSPrefixMap();
+    Map<String, String> getXMLNSPrefixMap();
 
     /**
      * Returns the value of the '<em><b>XSI Schema Location</b></em>' map.
@@ -223,7 +224,7 @@ public interface DocumentRoot extends EObject {
      *        extendedMetaData="kind='attribute' name='xsi:schemaLocation'"
      * @generated
      */
-    EMap<String, String> getXSISchemaLocation();
+    Map<String, String> getXSISchemaLocation();
 
     /**
      * Returns the value of the '<em><b>Activity</b></em>' containment reference.
@@ -450,13 +451,13 @@ public interface DocumentRoot extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Base Element With Mixed Content</em>' containment reference.
-     * @see #setBaseElementWithMixedContent(EObject)
+     * @see #setBaseElementWithMixedContent(Object)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDocumentRoot_BaseElementWithMixedContent()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='baseElementWithMixedContent' namespace='##targetNamespace'"
      * @generated
      */
-    EObject getBaseElementWithMixedContent();
+    Object getBaseElementWithMixedContent();
 
     /**
      * Sets the value of the '{@link org.eclipse.bpmn2.DocumentRoot#getBaseElementWithMixedContent <em>Base Element With Mixed Content</em>}' containment reference.
@@ -466,7 +467,7 @@ public interface DocumentRoot extends EObject {
      * @see #getBaseElementWithMixedContent()
      * @generated
      */
-    void setBaseElementWithMixedContent(EObject value);
+    void setBaseElementWithMixedContent(Object value);
 
     /**
      * Returns the value of the '<em><b>Boundary Event</b></em>' containment reference.
@@ -1881,13 +1882,13 @@ public interface DocumentRoot extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Extension Elements</em>' containment reference.
-     * @see #setExtensionElements(EObject)
+     * @see #setExtensionElements(Object)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDocumentRoot_ExtensionElements()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='extensionElements' namespace='##targetNamespace'"
      * @generated
      */
-    EObject getExtensionElements();
+    Object getExtensionElements();
 
     /**
      * Sets the value of the '{@link org.eclipse.bpmn2.DocumentRoot#getExtensionElements <em>Extension Elements</em>}' containment reference.
@@ -1897,7 +1898,7 @@ public interface DocumentRoot extends EObject {
      * @see #getExtensionElements()
      * @generated
      */
-    void setExtensionElements(EObject value);
+    void setExtensionElements(Object value);
 
     /**
      * Returns the value of the '<em><b>Flow Node</b></em>' containment reference.
@@ -3328,13 +3329,13 @@ public interface DocumentRoot extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Script</em>' containment reference.
-     * @see #setScript(EObject)
+     * @see #setScript(Object)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDocumentRoot_Script()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='script' namespace='##targetNamespace'"
      * @generated
      */
-    EObject getScript();
+    Object getScript();
 
     /**
      * Sets the value of the '{@link org.eclipse.bpmn2.DocumentRoot#getScript <em>Script</em>}' containment reference.
@@ -3344,7 +3345,7 @@ public interface DocumentRoot extends EObject {
      * @see #getScript()
      * @generated
      */
-    void setScript(EObject value);
+    void setScript(Object value);
 
     /**
      * Returns the value of the '<em><b>Script Task</b></em>' containment reference.
@@ -3706,13 +3707,13 @@ public interface DocumentRoot extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Text</em>' containment reference.
-     * @see #setText(EObject)
+     * @see #setText(Object)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDocumentRoot_Text()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
      *        extendedMetaData="kind='element' name='text' namespace='##targetNamespace'"
      * @generated
      */
-    EObject getText();
+    Object getText();
 
     /**
      * Sets the value of the '{@link org.eclipse.bpmn2.DocumentRoot#getText <em>Text</em>}' containment reference.
@@ -3722,7 +3723,7 @@ public interface DocumentRoot extends EObject {
      * @see #getText()
      * @generated
      */
-    void setText(EObject value);
+    void setText(Object value);
 
     /**
      * Returns the value of the '<em><b>Text Annotation</b></em>' containment reference.

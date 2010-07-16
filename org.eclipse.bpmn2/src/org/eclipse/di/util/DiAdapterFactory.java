@@ -14,6 +14,7 @@
  */
 package org.eclipse.di.util;
 
+import org.eclipse.di.*;
 import org.eclipse.di.DiPackage;
 import org.eclipse.di.Diagram;
 import org.eclipse.di.DiagramElement;

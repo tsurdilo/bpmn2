@@ -15,6 +15,7 @@
 package org.eclipse.di.impl;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 
 import org.eclipse.di.DiPackage;
@@ -81,7 +82,7 @@ public abstract class PlaneImpl extends NodeImpl implements Plane {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<DiagramElement> getPlaneElement() {
+    public List<DiagramElement> getPlaneElement() {
         if (planeElement == null) {
             planeElement = new EObjectContainmentEList<DiagramElement>(DiagramElement.class, this, DiPackage.PLANE__PLANE_ELEMENT);
         }

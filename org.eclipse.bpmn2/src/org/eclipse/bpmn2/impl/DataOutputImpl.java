@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.DataOutput;
 import org.eclipse.bpmn2.OutputSet;
@@ -140,7 +141,7 @@ public class DataOutputImpl extends ItemAwareElementImpl implements DataOutput {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<OutputSet> getOutputSetWithOptional() {
+    public List<OutputSet> getOutputSetWithOptional() {
         if (outputSetWithOptional == null) {
             outputSetWithOptional = new EObjectWithInverseResolvingEList.ManyInverse<OutputSet>(OutputSet.class, this, Bpmn2Package.DATA_OUTPUT__OUTPUT_SET_WITH_OPTIONAL, Bpmn2Package.OUTPUT_SET__OPTIONAL_OUTPUT_REFS);
         }
@@ -152,7 +153,7 @@ public class DataOutputImpl extends ItemAwareElementImpl implements DataOutput {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<OutputSet> getOutputSetWithWhileExecuting() {
+    public List<OutputSet> getOutputSetWithWhileExecuting() {
         if (outputSetWithWhileExecuting == null) {
             outputSetWithWhileExecuting = new EObjectWithInverseResolvingEList.ManyInverse<OutputSet>(OutputSet.class, this, Bpmn2Package.DATA_OUTPUT__OUTPUT_SET_WITH_WHILE_EXECUTING, Bpmn2Package.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS);
         }
@@ -164,7 +165,7 @@ public class DataOutputImpl extends ItemAwareElementImpl implements DataOutput {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<OutputSet> getOutputSetRefs() {
+    public List<OutputSet> getOutputSetRefs() {
         if (outputSetRefs == null) {
             outputSetRefs = new EObjectWithInverseResolvingEList.ManyInverse<OutputSet>(OutputSet.class, this, Bpmn2Package.DATA_OUTPUT__OUTPUT_SET_REFS, Bpmn2Package.OUTPUT_SET__DATA_OUTPUT_REFS);
         }

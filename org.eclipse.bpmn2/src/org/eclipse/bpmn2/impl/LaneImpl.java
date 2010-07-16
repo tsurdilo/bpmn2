@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.BaseElement;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.FlowNode;
@@ -178,7 +179,7 @@ public class LaneImpl extends BaseElementImpl implements Lane {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<FlowNode> getFlowNodeRefs() {
+    public List<FlowNode> getFlowNodeRefs() {
         if (flowNodeRefs == null) {
             flowNodeRefs = new EObjectWithInverseEList.ManyInverse<FlowNode>(FlowNode.class, this, Bpmn2Package.LANE__FLOW_NODE_REFS, Bpmn2Package.FLOW_NODE__LANES);
         }

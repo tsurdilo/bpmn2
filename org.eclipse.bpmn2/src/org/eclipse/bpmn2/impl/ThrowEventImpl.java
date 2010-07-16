@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.DataInput;
 import org.eclipse.bpmn2.DataInputAssociation;
@@ -124,7 +125,7 @@ public abstract class ThrowEventImpl extends EventImpl implements ThrowEvent {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<DataInput> getDataInputs() {
+    public List<DataInput> getDataInputs() {
         if (dataInputs == null) {
             dataInputs = new EObjectContainmentEList<DataInput>(DataInput.class, this, Bpmn2Package.THROW_EVENT__DATA_INPUTS);
         }
@@ -136,7 +137,7 @@ public abstract class ThrowEventImpl extends EventImpl implements ThrowEvent {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<DataInputAssociation> getDataInputAssociation() {
+    public List<DataInputAssociation> getDataInputAssociation() {
         if (dataInputAssociation == null) {
             dataInputAssociation = new EObjectContainmentEList<DataInputAssociation>(DataInputAssociation.class, this, Bpmn2Package.THROW_EVENT__DATA_INPUT_ASSOCIATION);
         }
@@ -194,7 +195,7 @@ public abstract class ThrowEventImpl extends EventImpl implements ThrowEvent {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<EventDefinition> getEventDefinitions() {
+    public List<EventDefinition> getEventDefinitions() {
         if (eventDefinitions == null) {
             eventDefinitions = new EObjectContainmentEList<EventDefinition>(EventDefinition.class, this, Bpmn2Package.THROW_EVENT__EVENT_DEFINITIONS);
         }
@@ -206,7 +207,7 @@ public abstract class ThrowEventImpl extends EventImpl implements ThrowEvent {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<EventDefinition> getEventDefinitionRefs() {
+    public List<EventDefinition> getEventDefinitionRefs() {
         if (eventDefinitionRefs == null) {
             eventDefinitionRefs = new EObjectEList<EventDefinition>(EventDefinition.class, this, Bpmn2Package.THROW_EVENT__EVENT_DEFINITION_REFS);
         }

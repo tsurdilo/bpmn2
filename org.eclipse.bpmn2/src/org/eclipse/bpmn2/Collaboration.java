@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -59,7 +60,7 @@ public interface Collaboration extends RootElement {
      *        extendedMetaData="kind='element' name='participant' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<Participant> getParticipants();
+    List<Participant> getParticipants();
 
     /**
      * Returns the value of the '<em><b>Message Flows</b></em>' containment reference list.
@@ -76,7 +77,7 @@ public interface Collaboration extends RootElement {
      *        extendedMetaData="kind='element' name='messageFlow' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<MessageFlow> getMessageFlows();
+    List<MessageFlow> getMessageFlows();
 
     /**
      * Returns the value of the '<em><b>Artifacts</b></em>' containment reference list.
@@ -93,7 +94,7 @@ public interface Collaboration extends RootElement {
      *        extendedMetaData="kind='element' name='artifact' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL' group='http://www.omg.org/spec/BPMN/20100524/MODEL#artifact'"
      * @generated
      */
-    EList<Artifact> getArtifacts();
+    List<Artifact> getArtifacts();
 
     /**
      * Returns the value of the '<em><b>Conversations</b></em>' containment reference list.
@@ -110,7 +111,7 @@ public interface Collaboration extends RootElement {
      *        extendedMetaData="kind='element' name='conversationNode' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL' group='http://www.omg.org/spec/BPMN/20100524/MODEL#conversationNode'"
      * @generated
      */
-    EList<ConversationNode> getConversations();
+    List<ConversationNode> getConversations();
 
     /**
      * Returns the value of the '<em><b>Conversation Associations</b></em>' containment reference.
@@ -154,7 +155,7 @@ public interface Collaboration extends RootElement {
      *        extendedMetaData="kind='element' name='participantAssociation' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<ParticipantAssociation> getParticipantAssociations();
+    List<ParticipantAssociation> getParticipantAssociations();
 
     /**
      * Returns the value of the '<em><b>Message Flow Associations</b></em>' containment reference list.
@@ -171,7 +172,7 @@ public interface Collaboration extends RootElement {
      *        extendedMetaData="kind='element' name='messageFlowAssociation' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<MessageFlowAssociation> getMessageFlowAssociations();
+    List<MessageFlowAssociation> getMessageFlowAssociations();
 
     /**
      * Returns the value of the '<em><b>Correlation Keys</b></em>' containment reference list.
@@ -188,7 +189,7 @@ public interface Collaboration extends RootElement {
      *        extendedMetaData="kind='element' name='correlationKey' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<CorrelationKey> getCorrelationKeys();
+    List<CorrelationKey> getCorrelationKeys();
 
     /**
      * Returns the value of the '<em><b>Choreography Ref</b></em>' reference list.
@@ -205,7 +206,7 @@ public interface Collaboration extends RootElement {
      *        extendedMetaData="kind='element' name='choreographyRef' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<Choreography> getChoreographyRef();
+    List<Choreography> getChoreographyRef();
 
     /**
      * Returns the value of the '<em><b>Conversation Links</b></em>' containment reference list.
@@ -222,7 +223,7 @@ public interface Collaboration extends RootElement {
      *        extendedMetaData="kind='element' name='conversationLink' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<ConversationLink> getConversationLinks();
+    List<ConversationLink> getConversationLinks();
 
     /**
      * Returns the value of the '<em><b>Is Closed</b></em>' attribute.

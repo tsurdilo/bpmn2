@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.BaseElement;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Documentation;
@@ -123,7 +124,7 @@ public abstract class BaseElementImpl extends EObjectImpl implements BaseElement
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ExtensionAttributeValue> getExtensionValues() {
+    public List<ExtensionAttributeValue> getExtensionValues() {
         if (extensionValues == null) {
             extensionValues = new EObjectContainmentEList<ExtensionAttributeValue>(ExtensionAttributeValue.class, this, Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES);
         }
@@ -135,7 +136,7 @@ public abstract class BaseElementImpl extends EObjectImpl implements BaseElement
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Documentation> getDocumentation() {
+    public List<Documentation> getDocumentation() {
         if (documentation == null) {
             documentation = new EObjectContainmentEList<Documentation>(Documentation.class, this, Bpmn2Package.BASE_ELEMENT__DOCUMENTATION);
         }
@@ -147,7 +148,7 @@ public abstract class BaseElementImpl extends EObjectImpl implements BaseElement
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<ExtensionDefinition> getExtensionDefinitions() {
+    public List<ExtensionDefinition> getExtensionDefinitions() {
         if (extensionDefinitions == null) {
             extensionDefinitions = new EObjectResolvingEList<ExtensionDefinition>(ExtensionDefinition.class, this, Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS);
         }

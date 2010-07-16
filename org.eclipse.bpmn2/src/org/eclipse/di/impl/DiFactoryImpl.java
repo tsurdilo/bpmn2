@@ -14,6 +14,7 @@
  */
 package org.eclipse.di.impl;
 
+import org.eclipse.di.*;
 import org.eclipse.di.DiFactory;
 import org.eclipse.di.DiPackage;
 import org.eclipse.di.DocumentRoot;

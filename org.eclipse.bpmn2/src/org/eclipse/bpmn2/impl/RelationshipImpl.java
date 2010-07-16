@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Relationship;
 import org.eclipse.bpmn2.RelationshipDirection;
@@ -127,7 +128,7 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<EObject> getSources() {
+    public List<EObject> getSources() {
         if (sources == null) {
             sources = new EObjectResolvingEList<EObject>(EObject.class, this, Bpmn2Package.RELATIONSHIP__SOURCES);
         }
@@ -139,7 +140,7 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<EObject> getTargets() {
+    public List<EObject> getTargets() {
         if (targets == null) {
             targets = new EObjectResolvingEList<EObject>(EObject.class, this, Bpmn2Package.RELATIONSHIP__TARGETS);
         }

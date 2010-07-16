@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Auditing;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.CategoryValue;
@@ -213,7 +214,7 @@ public abstract class FlowElementImpl extends BaseElementImpl implements FlowEle
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<CategoryValue> getCategoryValueRef() {
+    public List<CategoryValue> getCategoryValueRef() {
         if (categoryValueRef == null) {
             categoryValueRef = new EObjectWithInverseEList.ManyInverse<CategoryValue>(CategoryValue.class, this, Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF, Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS);
         }

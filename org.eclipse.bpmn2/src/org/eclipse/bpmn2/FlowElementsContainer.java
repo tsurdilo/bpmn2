@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -49,7 +50,7 @@ public interface FlowElementsContainer extends BaseElement {
      *        extendedMetaData="kind='element' name='laneSet' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<LaneSet> getLaneSets();
+    List<LaneSet> getLaneSets();
 
     /**
      * Returns the value of the '<em><b>Flow Elements</b></em>' containment reference list.
@@ -66,6 +67,6 @@ public interface FlowElementsContainer extends BaseElement {
      *        extendedMetaData="kind='element' name='flowElement' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL' group='http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement'"
      * @generated
      */
-    EList<FlowElement> getFlowElements();
+    List<FlowElement> getFlowElements();
 
 } // FlowElementsContainer

@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
@@ -52,7 +53,7 @@ public interface Relationship extends BaseElement {
      *        extendedMetaData="kind='element' name='source' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<EObject> getSources();
+    List<EObject> getSources();
 
     /**
      * Returns the value of the '<em><b>Targets</b></em>' reference list.
@@ -69,7 +70,7 @@ public interface Relationship extends BaseElement {
      *        extendedMetaData="kind='element' name='target' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<EObject> getTargets();
+    List<EObject> getTargets();
 
     /**
      * Returns the value of the '<em><b>Direction</b></em>' attribute.

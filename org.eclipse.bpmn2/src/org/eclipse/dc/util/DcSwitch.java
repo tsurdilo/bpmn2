@@ -16,6 +16,7 @@ package org.eclipse.dc.util;
 
 import java.util.List;
 
+import org.eclipse.dc.*;
 import org.eclipse.dc.Bounds;
 import org.eclipse.dc.DcPackage;
 import org.eclipse.dc.DocumentRoot;

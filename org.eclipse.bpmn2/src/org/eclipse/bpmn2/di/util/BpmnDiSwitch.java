@@ -17,6 +17,7 @@ package org.eclipse.bpmn2.di.util;
 
 import java.util.List;
 
+import org.eclipse.bpmn2.di.*;
 import org.eclipse.bpmn2.di.BPMNDiagram;
 import org.eclipse.bpmn2.di.BPMNEdge;
 import org.eclipse.bpmn2.di.BPMNLabel;

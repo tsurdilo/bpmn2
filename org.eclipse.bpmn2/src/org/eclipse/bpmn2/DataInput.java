@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -53,7 +54,7 @@ public interface DataInput extends ItemAwareElement {
      * @model opposite="optionalInputRefs" transient="true" derived="true" ordered="false"
      * @generated
      */
-    EList<InputSet> getInputSetWithOptional();
+    List<InputSet> getInputSetWithOptional();
 
     /**
      * Returns the value of the '<em><b>Input Set With While Executing</b></em>' reference list.
@@ -71,7 +72,7 @@ public interface DataInput extends ItemAwareElement {
      * @model opposite="whileExecutingInputRefs" transient="true" derived="true" ordered="false"
      * @generated
      */
-    EList<InputSet> getInputSetWithWhileExecuting();
+    List<InputSet> getInputSetWithWhileExecuting();
 
     /**
      * Returns the value of the '<em><b>Input Set Refs</b></em>' reference list.
@@ -89,7 +90,7 @@ public interface DataInput extends ItemAwareElement {
      * @model opposite="dataInputRefs" required="true" transient="true" derived="true" ordered="false"
      * @generated
      */
-    EList<InputSet> getInputSetRefs();
+    List<InputSet> getInputSetRefs();
 
     /**
      * Returns the value of the '<em><b>Is Collection</b></em>' attribute.

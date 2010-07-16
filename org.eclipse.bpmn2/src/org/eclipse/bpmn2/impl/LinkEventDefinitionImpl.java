@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.LinkEventDefinition;
 import org.eclipse.emf.common.notify.Notification;
@@ -107,7 +108,7 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements Link
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<LinkEventDefinition> getSource() {
+    public List<LinkEventDefinition> getSource() {
         if (source == null) {
             source = new EObjectWithInverseResolvingEList<LinkEventDefinition>(LinkEventDefinition.class, this, Bpmn2Package.LINK_EVENT_DEFINITION__SOURCE, Bpmn2Package.LINK_EVENT_DEFINITION__TARGET);
         }

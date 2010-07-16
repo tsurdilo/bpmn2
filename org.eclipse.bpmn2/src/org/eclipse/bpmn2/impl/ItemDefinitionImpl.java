@@ -205,7 +205,7 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
      * <!-- end-user-doc -->
      * @generated
      */
-    public EObject getStructureRef() {
+    public Object getStructureRef() {
         if (structureRef != null && structureRef.eIsProxy()) {
             InternalEObject oldStructureRef = (InternalEObject)structureRef;
             structureRef = eResolveProxy(oldStructureRef);
@@ -222,7 +222,7 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
      * <!-- end-user-doc -->
      * @generated
      */
-    public EObject basicGetStructureRef() {
+    public Object basicGetStructureRef() {
         return structureRef;
     }
 
@@ -231,9 +231,9 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setStructureRef(EObject newStructureRef) {
-        EObject oldStructureRef = structureRef;
-        structureRef = newStructureRef;
+    public void setStructureRef(Object newStructureRef) {
+        Object oldStructureRef = structureRef;
+        structureRef = (EObject)newStructureRef;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF, oldStructureRef, structureRef));
     }
@@ -280,7 +280,7 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
                 setItemKind((ItemKind)newValue);
                 return;
             case Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF:
-                setStructureRef((EObject)newValue);
+                setStructureRef((Object)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -304,7 +304,7 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
                 setItemKind(ITEM_KIND_EDEFAULT);
                 return;
             case Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF:
-                setStructureRef((EObject)null);
+                setStructureRef((Object)null);
                 return;
         }
         super.eUnset(featureID);

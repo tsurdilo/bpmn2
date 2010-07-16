@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -108,7 +109,7 @@ public interface FlowElement extends BaseElement {
      *        extendedMetaData="kind='element' name='categoryValueRef' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<CategoryValue> getCategoryValueRef();
+    List<CategoryValue> getCategoryValueRef();
 
     /**
      * Returns the value of the '<em><b>Name</b></em>' attribute.

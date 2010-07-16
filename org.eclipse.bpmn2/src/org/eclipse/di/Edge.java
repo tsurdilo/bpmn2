@@ -14,6 +14,7 @@
  */
 package org.eclipse.di;
 
+import java.util.List;
 import org.eclipse.dc.Point;
 import org.eclipse.emf.common.util.EList;
 
@@ -82,6 +83,6 @@ public interface Edge extends DiagramElement {
      *        extendedMetaData="kind='element' name='waypoint' namespace='http://www.omg.org/spec/DD/20100524/DI'"
      * @generated
      */
-    EList<Point> getWaypoint();
+    List<Point> getWaypoint();
 
 } // Edge

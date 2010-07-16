@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.CatchEvent;
 import org.eclipse.bpmn2.DataOutput;
@@ -145,7 +146,7 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<DataOutput> getDataOutputs() {
+    public List<DataOutput> getDataOutputs() {
         if (dataOutputs == null) {
             dataOutputs = new EObjectContainmentEList<DataOutput>(DataOutput.class, this, Bpmn2Package.CATCH_EVENT__DATA_OUTPUTS);
         }
@@ -157,7 +158,7 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<DataOutputAssociation> getDataOutputAssociation() {
+    public List<DataOutputAssociation> getDataOutputAssociation() {
         if (dataOutputAssociation == null) {
             dataOutputAssociation = new EObjectContainmentEList<DataOutputAssociation>(DataOutputAssociation.class, this, Bpmn2Package.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION);
         }
@@ -215,7 +216,7 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<EventDefinition> getEventDefinitions() {
+    public List<EventDefinition> getEventDefinitions() {
         if (eventDefinitions == null) {
             eventDefinitions = new EObjectContainmentEList<EventDefinition>(EventDefinition.class, this, Bpmn2Package.CATCH_EVENT__EVENT_DEFINITIONS);
         }
@@ -227,7 +228,7 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<EventDefinition> getEventDefinitionRefs() {
+    public List<EventDefinition> getEventDefinitionRefs() {
         if (eventDefinitionRefs == null) {
             eventDefinitionRefs = new EObjectResolvingEList<EventDefinition>(EventDefinition.class, this, Bpmn2Package.CATCH_EVENT__EVENT_DEFINITION_REFS);
         }

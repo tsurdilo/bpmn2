@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -112,7 +113,7 @@ public interface Process extends CallableElement, FlowElementsContainer {
      *        extendedMetaData="kind='element' name='property' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<Property> getProperties();
+    List<Property> getProperties();
 
     /**
      * Returns the value of the '<em><b>Artifacts</b></em>' containment reference list.
@@ -129,7 +130,7 @@ public interface Process extends CallableElement, FlowElementsContainer {
      *        extendedMetaData="kind='element' name='artifact' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL' group='http://www.omg.org/spec/BPMN/20100524/MODEL#artifact'"
      * @generated
      */
-    EList<Artifact> getArtifacts();
+    List<Artifact> getArtifacts();
 
     /**
      * Returns the value of the '<em><b>Resources</b></em>' containment reference list.
@@ -146,7 +147,7 @@ public interface Process extends CallableElement, FlowElementsContainer {
      *        extendedMetaData="kind='element' name='resourceRole' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL' group='http://www.omg.org/spec/BPMN/20100524/MODEL#resourceRole'"
      * @generated
      */
-    EList<ResourceRole> getResources();
+    List<ResourceRole> getResources();
 
     /**
      * Returns the value of the '<em><b>Correlation Subscriptions</b></em>' containment reference list.
@@ -163,7 +164,7 @@ public interface Process extends CallableElement, FlowElementsContainer {
      *        extendedMetaData="kind='element' name='correlationSubscription' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<CorrelationSubscription> getCorrelationSubscriptions();
+    List<CorrelationSubscription> getCorrelationSubscriptions();
 
     /**
      * Returns the value of the '<em><b>Supports</b></em>' reference list.
@@ -180,7 +181,7 @@ public interface Process extends CallableElement, FlowElementsContainer {
      *        extendedMetaData="kind='element' name='supports' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<Process> getSupports();
+    List<Process> getSupports();
 
     /**
      * Returns the value of the '<em><b>Definitional Collaboration Ref</b></em>' reference.

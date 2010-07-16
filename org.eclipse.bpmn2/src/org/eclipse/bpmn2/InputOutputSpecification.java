@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -51,7 +52,7 @@ public interface InputOutputSpecification extends BaseElement {
      *        extendedMetaData="kind='element' name='dataInput' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<DataInput> getDataInputs();
+    List<DataInput> getDataInputs();
 
     /**
      * Returns the value of the '<em><b>Data Outputs</b></em>' containment reference list.
@@ -68,7 +69,7 @@ public interface InputOutputSpecification extends BaseElement {
      *        extendedMetaData="kind='element' name='dataOutput' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<DataOutput> getDataOutputs();
+    List<DataOutput> getDataOutputs();
 
     /**
      * Returns the value of the '<em><b>Input Sets</b></em>' containment reference list.
@@ -85,7 +86,7 @@ public interface InputOutputSpecification extends BaseElement {
      *        extendedMetaData="kind='element' name='inputSet' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<InputSet> getInputSets();
+    List<InputSet> getInputSets();
 
     /**
      * Returns the value of the '<em><b>Output Sets</b></em>' containment reference list.
@@ -102,6 +103,6 @@ public interface InputOutputSpecification extends BaseElement {
      *        extendedMetaData="kind='element' name='outputSet' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<OutputSet> getOutputSets();
+    List<OutputSet> getOutputSets();
 
 } // InputOutputSpecification

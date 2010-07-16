@@ -14,6 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
@@ -52,7 +53,7 @@ public interface BaseElement extends EObject {
      * @model containment="true" transient="true" derived="true" ordered="false"
      * @generated
      */
-    EList<ExtensionAttributeValue> getExtensionValues();
+    List<ExtensionAttributeValue> getExtensionValues();
 
     /**
      * Returns the value of the '<em><b>Documentation</b></em>' containment reference list.
@@ -69,7 +70,7 @@ public interface BaseElement extends EObject {
      *        extendedMetaData="kind='element' name='documentation' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<Documentation> getDocumentation();
+    List<Documentation> getDocumentation();
 
     /**
      * Returns the value of the '<em><b>Extension Definitions</b></em>' reference list.
@@ -86,7 +87,7 @@ public interface BaseElement extends EObject {
      *        extendedMetaData="kind='element' name='extensionElements' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    EList<ExtensionDefinition> getExtensionDefinitions();
+    List<ExtensionDefinition> getExtensionDefinitions();
 
     /**
      * Returns the value of the '<em><b>Id</b></em>' attribute.

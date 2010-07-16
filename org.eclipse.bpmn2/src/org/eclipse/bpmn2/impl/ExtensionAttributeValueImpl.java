@@ -95,7 +95,7 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
      * <!-- end-user-doc -->
      * @generated
      */
-    public EObject getValueRef() {
+    public Object getValueRef() {
         if (valueRef != null && valueRef.eIsProxy()) {
             InternalEObject oldValueRef = (InternalEObject)valueRef;
             valueRef = eResolveProxy(oldValueRef);
@@ -112,7 +112,7 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
      * <!-- end-user-doc -->
      * @generated
      */
-    public EObject basicGetValueRef() {
+    public Object basicGetValueRef() {
         return valueRef;
     }
 
@@ -121,9 +121,9 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setValueRef(EObject newValueRef) {
-        EObject oldValueRef = valueRef;
-        valueRef = newValueRef;
+    public void setValueRef(Object newValueRef) {
+        Object oldValueRef = valueRef;
+        valueRef = (EObject)newValueRef;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE_REF, oldValueRef, valueRef));
     }
@@ -133,7 +133,7 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
      * <!-- end-user-doc -->
      * @generated
      */
-    public EObject getValue() {
+    public Object getValue() {
         return value;
     }
 
@@ -143,7 +143,7 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
      * @generated
      */
     public NotificationChain basicSetValue(EObject newValue, NotificationChain msgs) {
-        EObject oldValue = value;
+        Object oldValue = value;
         value = newValue;
         if (eNotificationRequired()) {
             ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE, oldValue, newValue);
@@ -160,14 +160,14 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setValue(EObject newValue) {
+    public void setValue(Object newValue) {
         if (newValue != value) {
             NotificationChain msgs = null;
             if (value != null)
                 msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE, null, msgs);
             if (newValue != null)
                 msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE, null, msgs);
-            msgs = basicSetValue(newValue, msgs);
+            msgs = basicSetValue((EObject)newValue, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
@@ -257,10 +257,10 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
             case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE_REF:
-                setValueRef((EObject)newValue);
+                setValueRef((Object)newValue);
                 return;
             case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE:
-                setValue((EObject)newValue);
+                setValue((Object)newValue);
                 return;
             case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION:
                 setExtensionAttributeDefinition((ExtensionAttributeDefinition)newValue);
@@ -278,10 +278,10 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
     public void eUnset(int featureID) {
         switch (featureID) {
             case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE_REF:
-                setValueRef((EObject)null);
+                setValueRef((Object)null);
                 return;
             case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE:
-                setValue((EObject)null);
+                setValue((Object)null);
                 return;
             case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION:
                 setExtensionAttributeDefinition((ExtensionAttributeDefinition)null);

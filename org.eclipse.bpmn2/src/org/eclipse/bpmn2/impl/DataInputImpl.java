@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.DataInput;
 import org.eclipse.bpmn2.InputSet;
@@ -140,7 +141,7 @@ public class DataInputImpl extends ItemAwareElementImpl implements DataInput {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<InputSet> getInputSetWithOptional() {
+    public List<InputSet> getInputSetWithOptional() {
         if (inputSetWithOptional == null) {
             inputSetWithOptional = new EObjectWithInverseResolvingEList.ManyInverse<InputSet>(InputSet.class, this, Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_OPTIONAL, Bpmn2Package.INPUT_SET__OPTIONAL_INPUT_REFS);
         }
@@ -152,7 +153,7 @@ public class DataInputImpl extends ItemAwareElementImpl implements DataInput {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<InputSet> getInputSetWithWhileExecuting() {
+    public List<InputSet> getInputSetWithWhileExecuting() {
         if (inputSetWithWhileExecuting == null) {
             inputSetWithWhileExecuting = new EObjectWithInverseResolvingEList.ManyInverse<InputSet>(InputSet.class, this, Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING, Bpmn2Package.INPUT_SET__WHILE_EXECUTING_INPUT_REFS);
         }
@@ -164,7 +165,7 @@ public class DataInputImpl extends ItemAwareElementImpl implements DataInput {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<InputSet> getInputSetRefs() {
+    public List<InputSet> getInputSetRefs() {
         if (inputSetRefs == null) {
             inputSetRefs = new EObjectWithInverseResolvingEList.ManyInverse<InputSet>(InputSet.class, this, Bpmn2Package.DATA_INPUT__INPUT_SET_REFS, Bpmn2Package.INPUT_SET__DATA_INPUT_REFS);
         }

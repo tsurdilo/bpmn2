@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.DataOutput;
 import org.eclipse.bpmn2.InputSet;
@@ -131,7 +132,7 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<DataOutput> getDataOutputRefs() {
+    public List<DataOutput> getDataOutputRefs() {
         if (dataOutputRefs == null) {
             dataOutputRefs = new EObjectWithInverseEList.ManyInverse<DataOutput>(DataOutput.class, this, Bpmn2Package.OUTPUT_SET__DATA_OUTPUT_REFS, Bpmn2Package.DATA_OUTPUT__OUTPUT_SET_REFS);
         }
@@ -143,7 +144,7 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<DataOutput> getOptionalOutputRefs() {
+    public List<DataOutput> getOptionalOutputRefs() {
         if (optionalOutputRefs == null) {
             optionalOutputRefs = new EObjectWithInverseEList.ManyInverse<DataOutput>(DataOutput.class, this, Bpmn2Package.OUTPUT_SET__OPTIONAL_OUTPUT_REFS, Bpmn2Package.DATA_OUTPUT__OUTPUT_SET_WITH_OPTIONAL);
         }
@@ -155,7 +156,7 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<DataOutput> getWhileExecutingOutputRefs() {
+    public List<DataOutput> getWhileExecutingOutputRefs() {
         if (whileExecutingOutputRefs == null) {
             whileExecutingOutputRefs = new EObjectWithInverseEList.ManyInverse<DataOutput>(DataOutput.class, this, Bpmn2Package.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS, Bpmn2Package.DATA_OUTPUT__OUTPUT_SET_WITH_WHILE_EXECUTING);
         }
@@ -167,7 +168,7 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<InputSet> getInputSetRefs() {
+    public List<InputSet> getInputSetRefs() {
         if (inputSetRefs == null) {
             inputSetRefs = new EObjectWithInverseEList.ManyInverse<InputSet>(InputSet.class, this, Bpmn2Package.OUTPUT_SET__INPUT_SET_REFS, Bpmn2Package.INPUT_SET__OUTPUT_SET_REFS);
         }
