@@ -147,14 +147,17 @@ COPYRIGHT
       category.features<< project("bpmn2:org.eclipse.bpmn2.feature")
       site.categories << category
     end
-    ec = task :eclipse_specific do
-      site = package(:site)
-       site.invoke
-      sign(site.to_s)
-      pack(site.to_s)
-      digest(site.to_s)
+    package(:p2_from_site).with :site => package(:site) 
+    unless ENV['NO_SIGNING']
+      ec = task :eclipse_specific do
+        site = package(:site)
+        site.invoke
+        sign(site.to_s)
+        pack(site.to_s)
+        digest(site.to_s)
+      end
+      ec.enhance [package(:site)]
+      package(:p2_from_site).enhance([ec])
     end
-    ec.enhance [package(:site)]
-    package(:p2_from_site).enhance([ec]).with :site => package(:site) 
   end
 end
