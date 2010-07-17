@@ -86,16 +86,7 @@ public class Bpmn2ResourceFactoryImpl extends ResourceFactoryImpl {
      */
 
     public Definitions createAndInitResource(URI uri)
-
-    {
-        // register also the non-XMI namespaces, as they are needed to read XML
-        // files
-
-        registerNonXMINamespace(Bpmn2Package.eINSTANCE);
-        registerNonXMINamespace(BpmnDiPackage.eINSTANCE);
-        registerNonXMINamespace(DiPackage.eINSTANCE);
-        registerNonXMINamespace(DcPackage.eINSTANCE);
-        
+    {        
         Resource resource = createResource(uri);
         Bpmn2Factory factory = Bpmn2Factory.eINSTANCE;
         Definitions definitions = factory.createDefinitions();
@@ -105,13 +96,4 @@ public class Bpmn2ResourceFactoryImpl extends ResourceFactoryImpl {
 
         return definitions;
     }
-
-    private void registerNonXMINamespace(EPackage pack) {
-
-        String xmiNs = pack.getNsURI();
-        String xmlNs = xmiNs.substring(0, xmiNs.length() - 4);
-        ExtendedMetaData.INSTANCE.putPackage(xmlNs, pack);
-    }
-
-
 } //Bpmn2ResourceFactoryImpl

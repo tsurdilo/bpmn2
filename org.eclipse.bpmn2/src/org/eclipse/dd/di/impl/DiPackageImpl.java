@@ -18,6 +18,7 @@ import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.di.BpmnDiPackage;
 import org.eclipse.bpmn2.di.impl.BpmnDiPackageImpl;
 import org.eclipse.bpmn2.impl.Bpmn2PackageImpl;
+import org.eclipse.bpmn2.util.NamespaceHelper;
 import org.eclipse.dd.dc.DcPackage;
 import org.eclipse.dd.dc.impl.DcPackageImpl;
 import org.eclipse.dd.di.DiFactory;
@@ -155,6 +156,15 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
     private static boolean isInited = false;
 
     /**
+     * @see #initGen()
+     */
+    public static DiPackage init() {
+        DiPackage result = initGen();
+        EPackage.Registry.INSTANCE.put(NamespaceHelper.xmiToXsdNamespaceUri(DiPackage.eNS_URI), result);
+        return result;
+    }
+
+    /**
      * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
      * 
      * <p>This method is used to initialize {@link DiPackage#eINSTANCE} when that field is accessed.
@@ -166,7 +176,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @see #initializePackageContents()
      * @generated
      */
-    public static DiPackage init() {
+    public static DiPackage initGen() {
         if (isInited)
             return (DiPackage)EPackage.Registry.INSTANCE.getEPackage(DiPackage.eNS_URI);
 

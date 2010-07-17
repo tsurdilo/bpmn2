@@ -21,6 +21,7 @@ import org.eclipse.bpmn2.Bpmn2Factory;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.di.BpmnDiPackage;
 import org.eclipse.bpmn2.di.impl.BpmnDiPackageImpl;
+import org.eclipse.bpmn2.util.NamespaceHelper;
 import org.eclipse.dd.dc.DcPackage;
 import org.eclipse.dd.dc.impl.DcPackageImpl;
 import org.eclipse.dd.di.DiPackage;
@@ -1107,6 +1108,15 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
     private static boolean isInited = false;
 
     /**
+     * @see #initGen()
+     */
+    public static Bpmn2Package init() {
+        Bpmn2Package result = initGen();
+        EPackage.Registry.INSTANCE.put(NamespaceHelper.xmiToXsdNamespaceUri(Bpmn2Package.eNS_URI), result);
+        return result;
+    }
+
+    /**
      * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
      * 
      * <p>This method is used to initialize {@link Bpmn2Package#eINSTANCE} when that field is accessed.
@@ -1116,7 +1126,7 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      * @see #eNS_URI
      * @generated
      */
-    public static Bpmn2Package init() {
+    public static Bpmn2Package initGen() {
         if (isInited)
             return (Bpmn2Package)EPackage.Registry.INSTANCE.getEPackage(Bpmn2Package.eNS_URI);
 

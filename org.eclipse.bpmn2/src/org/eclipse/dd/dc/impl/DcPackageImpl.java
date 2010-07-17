@@ -18,6 +18,7 @@ import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.di.BpmnDiPackage;
 import org.eclipse.bpmn2.di.impl.BpmnDiPackageImpl;
 import org.eclipse.bpmn2.impl.Bpmn2PackageImpl;
+import org.eclipse.bpmn2.util.NamespaceHelper;
 import org.eclipse.dd.dc.Bounds;
 import org.eclipse.dd.dc.DcFactory;
 import org.eclipse.dd.dc.DcPackage;
@@ -96,6 +97,15 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
      * @generated
      */
     private static boolean isInited = false;
+    
+    /**
+     * @see #initGen()
+     */
+    public static DcPackage init(){
+        DcPackage result = initGen();
+        EPackage.Registry.INSTANCE.put(NamespaceHelper.xmiToXsdNamespaceUri(DcPackage.eNS_URI), result);
+        return result;
+    }
 
     /**
      * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
@@ -109,7 +119,7 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
      * @see #initializePackageContents()
      * @generated
      */
-    public static DcPackage init() {
+    public static DcPackage initGen() {
         if (isInited)
             return (DcPackage)EPackage.Registry.INSTANCE.getEPackage(DcPackage.eNS_URI);
 

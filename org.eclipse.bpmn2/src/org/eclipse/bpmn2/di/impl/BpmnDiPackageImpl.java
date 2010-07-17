@@ -28,6 +28,7 @@ import org.eclipse.bpmn2.di.DocumentRoot;
 import org.eclipse.bpmn2.di.MessageVisibleKind;
 import org.eclipse.bpmn2.di.ParticipantBandKind;
 import org.eclipse.bpmn2.impl.Bpmn2PackageImpl;
+import org.eclipse.bpmn2.util.NamespaceHelper;
 import org.eclipse.dd.dc.DcPackage;
 import org.eclipse.dd.dc.impl.DcPackageImpl;
 import org.eclipse.dd.di.DiPackage;
@@ -134,6 +135,15 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     private static boolean isInited = false;
+    
+    /**
+     * @see #initGen()
+     */
+    public static BpmnDiPackage init() {
+        BpmnDiPackage result = initGen();
+        EPackage.Registry.INSTANCE.put(NamespaceHelper.xmiToXsdNamespaceUri(BpmnDiPackage.eNS_URI), result);
+        return result;
+    }
 
     /**
      * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
@@ -147,7 +157,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @see #initializePackageContents()
      * @generated
      */
-    public static BpmnDiPackage init() {
+    public static BpmnDiPackage initGen() {
         if (isInited)
             return (BpmnDiPackage)EPackage.Registry.INSTANCE.getEPackage(BpmnDiPackage.eNS_URI);
 
