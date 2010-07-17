@@ -125,7 +125,8 @@ public class ResourceParameterImpl extends BaseElementImpl implements ResourcePa
         boolean oldIsRequired = isRequired;
         isRequired = newIsRequired;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.RESOURCE_PARAMETER__IS_REQUIRED, oldIsRequired, isRequired));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.RESOURCE_PARAMETER__IS_REQUIRED, oldIsRequired, isRequired));
     }
 
     /**
@@ -146,7 +147,8 @@ public class ResourceParameterImpl extends BaseElementImpl implements ResourcePa
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.RESOURCE_PARAMETER__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.RESOURCE_PARAMETER__NAME, oldName, name));
     }
 
     /**
@@ -156,11 +158,12 @@ public class ResourceParameterImpl extends BaseElementImpl implements ResourcePa
      */
     public ItemDefinition getType() {
         if (type != null && type.eIsProxy()) {
-            InternalEObject oldType = (InternalEObject)type;
-            type = (ItemDefinition)eResolveProxy(oldType);
+            InternalEObject oldType = (InternalEObject) type;
+            type = (ItemDefinition) eResolveProxy(oldType);
             if (type != oldType) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.RESOURCE_PARAMETER__TYPE, oldType, type));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.RESOURCE_PARAMETER__TYPE, oldType, type));
             }
         }
         return type;
@@ -184,7 +187,8 @@ public class ResourceParameterImpl extends BaseElementImpl implements ResourcePa
         ItemDefinition oldType = type;
         type = newType;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.RESOURCE_PARAMETER__TYPE, oldType, type));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.RESOURCE_PARAMETER__TYPE, oldType, type));
     }
 
     /**
@@ -195,14 +199,14 @@ public class ResourceParameterImpl extends BaseElementImpl implements ResourcePa
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.RESOURCE_PARAMETER__IS_REQUIRED:
-                return isIsRequired();
-            case Bpmn2Package.RESOURCE_PARAMETER__NAME:
-                return getName();
-            case Bpmn2Package.RESOURCE_PARAMETER__TYPE:
-                if (resolve)
-                    return getType();
-                return basicGetType();
+        case Bpmn2Package.RESOURCE_PARAMETER__IS_REQUIRED:
+            return isIsRequired();
+        case Bpmn2Package.RESOURCE_PARAMETER__NAME:
+            return getName();
+        case Bpmn2Package.RESOURCE_PARAMETER__TYPE:
+            if (resolve)
+                return getType();
+            return basicGetType();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -215,15 +219,15 @@ public class ResourceParameterImpl extends BaseElementImpl implements ResourcePa
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.RESOURCE_PARAMETER__IS_REQUIRED:
-                setIsRequired((Boolean)newValue);
-                return;
-            case Bpmn2Package.RESOURCE_PARAMETER__NAME:
-                setName((String)newValue);
-                return;
-            case Bpmn2Package.RESOURCE_PARAMETER__TYPE:
-                setType((ItemDefinition)newValue);
-                return;
+        case Bpmn2Package.RESOURCE_PARAMETER__IS_REQUIRED:
+            setIsRequired((Boolean) newValue);
+            return;
+        case Bpmn2Package.RESOURCE_PARAMETER__NAME:
+            setName((String) newValue);
+            return;
+        case Bpmn2Package.RESOURCE_PARAMETER__TYPE:
+            setType((ItemDefinition) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -236,15 +240,15 @@ public class ResourceParameterImpl extends BaseElementImpl implements ResourcePa
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.RESOURCE_PARAMETER__IS_REQUIRED:
-                setIsRequired(IS_REQUIRED_EDEFAULT);
-                return;
-            case Bpmn2Package.RESOURCE_PARAMETER__NAME:
-                setName(NAME_EDEFAULT);
-                return;
-            case Bpmn2Package.RESOURCE_PARAMETER__TYPE:
-                setType((ItemDefinition)null);
-                return;
+        case Bpmn2Package.RESOURCE_PARAMETER__IS_REQUIRED:
+            setIsRequired(IS_REQUIRED_EDEFAULT);
+            return;
+        case Bpmn2Package.RESOURCE_PARAMETER__NAME:
+            setName(NAME_EDEFAULT);
+            return;
+        case Bpmn2Package.RESOURCE_PARAMETER__TYPE:
+            setType((ItemDefinition) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -257,12 +261,12 @@ public class ResourceParameterImpl extends BaseElementImpl implements ResourcePa
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.RESOURCE_PARAMETER__IS_REQUIRED:
-                return isRequired != IS_REQUIRED_EDEFAULT;
-            case Bpmn2Package.RESOURCE_PARAMETER__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-            case Bpmn2Package.RESOURCE_PARAMETER__TYPE:
-                return type != null;
+        case Bpmn2Package.RESOURCE_PARAMETER__IS_REQUIRED:
+            return isRequired != IS_REQUIRED_EDEFAULT;
+        case Bpmn2Package.RESOURCE_PARAMETER__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case Bpmn2Package.RESOURCE_PARAMETER__TYPE:
+            return type != null;
         }
         return super.eIsSet(featureID);
     }

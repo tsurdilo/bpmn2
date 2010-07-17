@@ -36,7 +36,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class CompensateEventDefinitionImpl extends EventDefinitionImpl implements CompensateEventDefinition {
+public class CompensateEventDefinitionImpl extends EventDefinitionImpl implements
+        CompensateEventDefinition {
     /**
      * The cached value of the '{@link #getActivityRef() <em>Activity Ref</em>}' reference.
      * <!-- begin-user-doc -->
@@ -93,11 +94,13 @@ public class CompensateEventDefinitionImpl extends EventDefinitionImpl implement
      */
     public Activity getActivityRef() {
         if (activityRef != null && activityRef.eIsProxy()) {
-            InternalEObject oldActivityRef = (InternalEObject)activityRef;
-            activityRef = (Activity)eResolveProxy(oldActivityRef);
+            InternalEObject oldActivityRef = (InternalEObject) activityRef;
+            activityRef = (Activity) eResolveProxy(oldActivityRef);
             if (activityRef != oldActivityRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF, oldActivityRef, activityRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF, oldActivityRef,
+                            activityRef));
             }
         }
         return activityRef;
@@ -121,7 +124,9 @@ public class CompensateEventDefinitionImpl extends EventDefinitionImpl implement
         Activity oldActivityRef = activityRef;
         activityRef = newActivityRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF, oldActivityRef, activityRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF, oldActivityRef,
+                    activityRef));
     }
 
     /**
@@ -142,7 +147,9 @@ public class CompensateEventDefinitionImpl extends EventDefinitionImpl implement
         boolean oldWaitForCompletion = waitForCompletion;
         waitForCompletion = newWaitForCompletion;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION, oldWaitForCompletion, waitForCompletion));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION,
+                    oldWaitForCompletion, waitForCompletion));
     }
 
     /**
@@ -153,12 +160,12 @@ public class CompensateEventDefinitionImpl extends EventDefinitionImpl implement
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
-                if (resolve)
-                    return getActivityRef();
-                return basicGetActivityRef();
-            case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
-                return isWaitForCompletion();
+        case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
+            if (resolve)
+                return getActivityRef();
+            return basicGetActivityRef();
+        case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
+            return isWaitForCompletion();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -171,12 +178,12 @@ public class CompensateEventDefinitionImpl extends EventDefinitionImpl implement
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
-                setActivityRef((Activity)newValue);
-                return;
-            case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
-                setWaitForCompletion((Boolean)newValue);
-                return;
+        case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
+            setActivityRef((Activity) newValue);
+            return;
+        case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
+            setWaitForCompletion((Boolean) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -189,12 +196,12 @@ public class CompensateEventDefinitionImpl extends EventDefinitionImpl implement
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
-                setActivityRef((Activity)null);
-                return;
-            case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
-                setWaitForCompletion(WAIT_FOR_COMPLETION_EDEFAULT);
-                return;
+        case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
+            setActivityRef((Activity) null);
+            return;
+        case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
+            setWaitForCompletion(WAIT_FOR_COMPLETION_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -207,10 +214,10 @@ public class CompensateEventDefinitionImpl extends EventDefinitionImpl implement
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
-                return activityRef != null;
-            case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
-                return waitForCompletion != WAIT_FOR_COMPLETION_EDEFAULT;
+        case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
+            return activityRef != null;
+        case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
+            return waitForCompletion != WAIT_FOR_COMPLETION_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }

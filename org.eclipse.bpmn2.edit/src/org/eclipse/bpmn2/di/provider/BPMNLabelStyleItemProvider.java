@@ -41,7 +41,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class BPMNLabelStyleItemProvider extends StyleItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class BPMNLabelStyleItemProvider extends StyleItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -106,9 +108,11 @@ public class BPMNLabelStyleItemProvider extends StyleItemProvider implements IEd
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/BPMNLabelStyle.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/BPMNLabelStyle.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/BPMNLabelStyle.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/BPMNLabelStyle.gif"));
         }
     }
 
@@ -120,8 +124,9 @@ public class BPMNLabelStyleItemProvider extends StyleItemProvider implements IEd
      */
     @Override
     public String getText(Object object) {
-        String label = ((BPMNLabelStyle)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_BPMNLabelStyle_type") : getString("_UI_BPMNLabelStyle_type") + " " + label;
+        String label = ((BPMNLabelStyle) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_BPMNLabelStyle_type")
+                : getString("_UI_BPMNLabelStyle_type") + " " + label;
     }
 
     /**
@@ -136,9 +141,10 @@ public class BPMNLabelStyleItemProvider extends StyleItemProvider implements IEd
         updateChildren(notification);
 
         switch (notification.getFeatureID(BPMNLabelStyle.class)) {
-            case BpmnDiPackage.BPMN_LABEL_STYLE__FONT:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case BpmnDiPackage.BPMN_LABEL_STYLE__FONT:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -154,7 +160,8 @@ public class BPMNLabelStyleItemProvider extends StyleItemProvider implements IEd
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnDiPackage.Literals.BPMN_LABEL_STYLE__FONT, DcFactory.eINSTANCE.createFont()));
+        newChildDescriptors.add(createChildParameter(BpmnDiPackage.Literals.BPMN_LABEL_STYLE__FONT,
+                DcFactory.eINSTANCE.createFont()));
     }
 
     /**

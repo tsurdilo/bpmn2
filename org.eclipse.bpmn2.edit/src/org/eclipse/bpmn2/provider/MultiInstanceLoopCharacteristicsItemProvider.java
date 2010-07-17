@@ -40,7 +40,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class MultiInstanceLoopCharacteristicsItemProvider extends LoopCharacteristicsItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class MultiInstanceLoopCharacteristicsItemProvider extends LoopCharacteristicsItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -79,7 +81,15 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends LoopCharacteri
      * @generated
      */
     protected void addLoopDataInputRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_MultiInstanceLoopCharacteristics_loopDataInputRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_MultiInstanceLoopCharacteristics_loopDataInputRef_feature", "_UI_MultiInstanceLoopCharacteristics_type"), Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_INPUT_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_MultiInstanceLoopCharacteristics_loopDataInputRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_MultiInstanceLoopCharacteristics_loopDataInputRef_feature",
+                        "_UI_MultiInstanceLoopCharacteristics_type"),
+                Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_INPUT_REF,
+                true, false, true, null, null, null));
     }
 
     /**
@@ -89,7 +99,15 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends LoopCharacteri
      * @generated
      */
     protected void addLoopDataOutputRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_MultiInstanceLoopCharacteristics_loopDataOutputRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_MultiInstanceLoopCharacteristics_loopDataOutputRef_feature", "_UI_MultiInstanceLoopCharacteristics_type"), Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_OUTPUT_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_MultiInstanceLoopCharacteristics_loopDataOutputRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_MultiInstanceLoopCharacteristics_loopDataOutputRef_feature",
+                        "_UI_MultiInstanceLoopCharacteristics_type"),
+                Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_OUTPUT_REF,
+                true, false, true, null, null, null));
     }
 
     /**
@@ -99,7 +117,15 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends LoopCharacteri
      * @generated
      */
     protected void addBehaviorPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_MultiInstanceLoopCharacteristics_behavior_feature"), getString("_UI_PropertyDescriptor_description", "_UI_MultiInstanceLoopCharacteristics_behavior_feature", "_UI_MultiInstanceLoopCharacteristics_type"), Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__BEHAVIOR, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_MultiInstanceLoopCharacteristics_behavior_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_MultiInstanceLoopCharacteristics_behavior_feature",
+                        "_UI_MultiInstanceLoopCharacteristics_type"),
+                Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__BEHAVIOR, true, false,
+                false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -109,7 +135,15 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends LoopCharacteri
      * @generated
      */
     protected void addIsSequentialPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_MultiInstanceLoopCharacteristics_isSequential_feature"), getString("_UI_PropertyDescriptor_description", "_UI_MultiInstanceLoopCharacteristics_isSequential_feature", "_UI_MultiInstanceLoopCharacteristics_type"), Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__IS_SEQUENTIAL, true, false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_MultiInstanceLoopCharacteristics_isSequential_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_MultiInstanceLoopCharacteristics_isSequential_feature",
+                        "_UI_MultiInstanceLoopCharacteristics_type"),
+                Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__IS_SEQUENTIAL, true,
+                false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -119,7 +153,15 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends LoopCharacteri
      * @generated
      */
     protected void addNoneBehaviorEventRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_MultiInstanceLoopCharacteristics_noneBehaviorEventRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_MultiInstanceLoopCharacteristics_noneBehaviorEventRef_feature", "_UI_MultiInstanceLoopCharacteristics_type"), Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__NONE_BEHAVIOR_EVENT_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_MultiInstanceLoopCharacteristics_noneBehaviorEventRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_MultiInstanceLoopCharacteristics_noneBehaviorEventRef_feature",
+                        "_UI_MultiInstanceLoopCharacteristics_type"),
+                Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__NONE_BEHAVIOR_EVENT_REF,
+                true, false, true, null, null, null));
     }
 
     /**
@@ -129,7 +171,15 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends LoopCharacteri
      * @generated
      */
     protected void addOneBehaviorEventRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_MultiInstanceLoopCharacteristics_oneBehaviorEventRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_MultiInstanceLoopCharacteristics_oneBehaviorEventRef_feature", "_UI_MultiInstanceLoopCharacteristics_type"), Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__ONE_BEHAVIOR_EVENT_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_MultiInstanceLoopCharacteristics_oneBehaviorEventRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_MultiInstanceLoopCharacteristics_oneBehaviorEventRef_feature",
+                        "_UI_MultiInstanceLoopCharacteristics_type"),
+                Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__ONE_BEHAVIOR_EVENT_REF,
+                true, false, true, null, null, null));
     }
 
     /**
@@ -144,11 +194,16 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends LoopCharacteri
     public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY);
-            childrenFeatures.add(Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM);
-            childrenFeatures.add(Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM);
-            childrenFeatures.add(Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION);
-            childrenFeatures.add(Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION);
+            childrenFeatures
+                    .add(Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY);
+            childrenFeatures
+                    .add(Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM);
+            childrenFeatures
+                    .add(Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM);
+            childrenFeatures
+                    .add(Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION);
+            childrenFeatures
+                    .add(Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION);
         }
         return childrenFeatures;
     }
@@ -175,9 +230,13 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends LoopCharacteri
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/MultiInstanceLoopCharacteristics.png"));
+            return overlayImage(object,
+                    getResourceLocator()
+                            .getImage("full/obj16/MultiInstanceLoopCharacteristics.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/MultiInstanceLoopCharacteristics.gif"));
+            return overlayImage(object,
+                    getResourceLocator()
+                            .getImage("full/obj16/MultiInstanceLoopCharacteristics.gif"));
         }
     }
 
@@ -189,8 +248,9 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends LoopCharacteri
      */
     @Override
     public String getText(Object object) {
-        String label = ((MultiInstanceLoopCharacteristics)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_MultiInstanceLoopCharacteristics_type") : getString("_UI_MultiInstanceLoopCharacteristics_type") + " " + label;
+        String label = ((MultiInstanceLoopCharacteristics) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_MultiInstanceLoopCharacteristics_type")
+                : getString("_UI_MultiInstanceLoopCharacteristics_type") + " " + label;
     }
 
     /**
@@ -205,17 +265,19 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends LoopCharacteri
         updateChildren(notification);
 
         switch (notification.getFeatureID(MultiInstanceLoopCharacteristics.class)) {
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__BEHAVIOR:
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__IS_SEQUENTIAL:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY:
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM:
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM:
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION:
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__BEHAVIOR:
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__IS_SEQUENTIAL:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY:
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM:
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM:
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION:
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -231,19 +293,34 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends LoopCharacteri
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY, Bpmn2Factory.eINSTANCE.createExpression()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY,
+                Bpmn2Factory.eINSTANCE.createExpression()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY, Bpmn2Factory.eINSTANCE.createFormalExpression()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY,
+                Bpmn2Factory.eINSTANCE.createFormalExpression()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM, Bpmn2Factory.eINSTANCE.createDataInput()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM,
+                Bpmn2Factory.eINSTANCE.createDataInput()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM, Bpmn2Factory.eINSTANCE.createDataOutput()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM,
+                Bpmn2Factory.eINSTANCE.createDataOutput()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION, Bpmn2Factory.eINSTANCE.createComplexBehaviorDefinition()));
+        newChildDescriptors
+                .add(createChildParameter(
+                        Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION,
+                        Bpmn2Factory.eINSTANCE.createComplexBehaviorDefinition()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION, Bpmn2Factory.eINSTANCE.createExpression()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION,
+                Bpmn2Factory.eINSTANCE.createExpression()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION, Bpmn2Factory.eINSTANCE.createFormalExpression()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION,
+                Bpmn2Factory.eINSTANCE.createFormalExpression()));
     }
 
     /**
@@ -253,14 +330,17 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends LoopCharacteri
      * @generated
      */
     @Override
-    public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+    public String getCreateChildText(Object owner, Object feature, Object child,
+            Collection<?> selection) {
         Object childFeature = feature;
         Object childObject = child;
 
-        boolean qualify = childFeature == Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY || childFeature == Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION;
+        boolean qualify = childFeature == Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY
+                || childFeature == Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION;
 
         if (qualify) {
-            return getString("_UI_CreateChild_text2", new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+            return getString("_UI_CreateChild_text2", new Object[] { getTypeText(childObject),
+                    getFeatureText(childFeature), getTypeText(owner) });
         }
         return super.getCreateChildText(owner, feature, child, selection);
     }

@@ -74,11 +74,12 @@ public class BPMNLabelImpl extends LabelImpl implements BPMNLabel {
      */
     public BPMNLabelStyle getLabelStyle() {
         if (labelStyle != null && labelStyle.eIsProxy()) {
-            InternalEObject oldLabelStyle = (InternalEObject)labelStyle;
-            labelStyle = (BPMNLabelStyle)eResolveProxy(oldLabelStyle);
+            InternalEObject oldLabelStyle = (InternalEObject) labelStyle;
+            labelStyle = (BPMNLabelStyle) eResolveProxy(oldLabelStyle);
             if (labelStyle != oldLabelStyle) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, BpmnDiPackage.BPMN_LABEL__LABEL_STYLE, oldLabelStyle, labelStyle));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            BpmnDiPackage.BPMN_LABEL__LABEL_STYLE, oldLabelStyle, labelStyle));
             }
         }
         return labelStyle;
@@ -102,7 +103,8 @@ public class BPMNLabelImpl extends LabelImpl implements BPMNLabel {
         BPMNLabelStyle oldLabelStyle = labelStyle;
         labelStyle = newLabelStyle;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, BpmnDiPackage.BPMN_LABEL__LABEL_STYLE, oldLabelStyle, labelStyle));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnDiPackage.BPMN_LABEL__LABEL_STYLE, oldLabelStyle, labelStyle));
     }
 
     /**
@@ -113,10 +115,10 @@ public class BPMNLabelImpl extends LabelImpl implements BPMNLabel {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case BpmnDiPackage.BPMN_LABEL__LABEL_STYLE:
-                if (resolve)
-                    return getLabelStyle();
-                return basicGetLabelStyle();
+        case BpmnDiPackage.BPMN_LABEL__LABEL_STYLE:
+            if (resolve)
+                return getLabelStyle();
+            return basicGetLabelStyle();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -129,9 +131,9 @@ public class BPMNLabelImpl extends LabelImpl implements BPMNLabel {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case BpmnDiPackage.BPMN_LABEL__LABEL_STYLE:
-                setLabelStyle((BPMNLabelStyle)newValue);
-                return;
+        case BpmnDiPackage.BPMN_LABEL__LABEL_STYLE:
+            setLabelStyle((BPMNLabelStyle) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -144,9 +146,9 @@ public class BPMNLabelImpl extends LabelImpl implements BPMNLabel {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case BpmnDiPackage.BPMN_LABEL__LABEL_STYLE:
-                setLabelStyle((BPMNLabelStyle)null);
-                return;
+        case BpmnDiPackage.BPMN_LABEL__LABEL_STYLE:
+            setLabelStyle((BPMNLabelStyle) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -159,8 +161,8 @@ public class BPMNLabelImpl extends LabelImpl implements BPMNLabel {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case BpmnDiPackage.BPMN_LABEL__LABEL_STYLE:
-                return labelStyle != null;
+        case BpmnDiPackage.BPMN_LABEL__LABEL_STYLE:
+            return labelStyle != null;
         }
         return super.eIsSet(featureID);
     }

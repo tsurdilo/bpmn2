@@ -41,7 +41,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DefinitionsItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class DefinitionsItemProvider extends BaseElementItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -80,7 +82,13 @@ public class DefinitionsItemProvider extends BaseElementItemProvider implements 
      * @generated
      */
     protected void addExporterPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Definitions_exporter_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Definitions_exporter_feature", "_UI_Definitions_type"), Bpmn2Package.Literals.DEFINITIONS__EXPORTER, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Definitions_exporter_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Definitions_exporter_feature",
+                        "_UI_Definitions_type"), Bpmn2Package.Literals.DEFINITIONS__EXPORTER, true,
+                false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -90,7 +98,14 @@ public class DefinitionsItemProvider extends BaseElementItemProvider implements 
      * @generated
      */
     protected void addExporterVersionPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Definitions_exporterVersion_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Definitions_exporterVersion_feature", "_UI_Definitions_type"), Bpmn2Package.Literals.DEFINITIONS__EXPORTER_VERSION, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Definitions_exporterVersion_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_Definitions_exporterVersion_feature", "_UI_Definitions_type"),
+                Bpmn2Package.Literals.DEFINITIONS__EXPORTER_VERSION, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -100,7 +115,14 @@ public class DefinitionsItemProvider extends BaseElementItemProvider implements 
      * @generated
      */
     protected void addExpressionLanguagePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Definitions_expressionLanguage_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Definitions_expressionLanguage_feature", "_UI_Definitions_type"), Bpmn2Package.Literals.DEFINITIONS__EXPRESSION_LANGUAGE, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Definitions_expressionLanguage_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_Definitions_expressionLanguage_feature", "_UI_Definitions_type"),
+                Bpmn2Package.Literals.DEFINITIONS__EXPRESSION_LANGUAGE, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -110,7 +132,13 @@ public class DefinitionsItemProvider extends BaseElementItemProvider implements 
      * @generated
      */
     protected void addNamePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Definitions_name_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Definitions_name_feature", "_UI_Definitions_type"), Bpmn2Package.Literals.DEFINITIONS__NAME, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Definitions_name_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Definitions_name_feature",
+                        "_UI_Definitions_type"), Bpmn2Package.Literals.DEFINITIONS__NAME, true,
+                false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -120,7 +148,14 @@ public class DefinitionsItemProvider extends BaseElementItemProvider implements 
      * @generated
      */
     protected void addTargetNamespacePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Definitions_targetNamespace_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Definitions_targetNamespace_feature", "_UI_Definitions_type"), Bpmn2Package.Literals.DEFINITIONS__TARGET_NAMESPACE, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Definitions_targetNamespace_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_Definitions_targetNamespace_feature", "_UI_Definitions_type"),
+                Bpmn2Package.Literals.DEFINITIONS__TARGET_NAMESPACE, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -130,7 +165,14 @@ public class DefinitionsItemProvider extends BaseElementItemProvider implements 
      * @generated
      */
     protected void addTypeLanguagePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Definitions_typeLanguage_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Definitions_typeLanguage_feature", "_UI_Definitions_type"), Bpmn2Package.Literals.DEFINITIONS__TYPE_LANGUAGE, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Definitions_typeLanguage_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_Definitions_typeLanguage_feature", "_UI_Definitions_type"),
+                Bpmn2Package.Literals.DEFINITIONS__TYPE_LANGUAGE, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -190,8 +232,9 @@ public class DefinitionsItemProvider extends BaseElementItemProvider implements 
      */
     @Override
     public String getText(Object object) {
-        String label = ((Definitions)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_Definitions_type") : getString("_UI_Definitions_type") + " " + label;
+        String label = ((Definitions) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_Definitions_type")
+                : getString("_UI_Definitions_type") + " " + label;
     }
 
     /**
@@ -206,21 +249,23 @@ public class DefinitionsItemProvider extends BaseElementItemProvider implements 
         updateChildren(notification);
 
         switch (notification.getFeatureID(Definitions.class)) {
-            case Bpmn2Package.DEFINITIONS__EXPORTER:
-            case Bpmn2Package.DEFINITIONS__EXPORTER_VERSION:
-            case Bpmn2Package.DEFINITIONS__EXPRESSION_LANGUAGE:
-            case Bpmn2Package.DEFINITIONS__NAME:
-            case Bpmn2Package.DEFINITIONS__TARGET_NAMESPACE:
-            case Bpmn2Package.DEFINITIONS__TYPE_LANGUAGE:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
-            case Bpmn2Package.DEFINITIONS__IMPORTS:
-            case Bpmn2Package.DEFINITIONS__EXTENSIONS:
-            case Bpmn2Package.DEFINITIONS__ROOT_ELEMENTS:
-            case Bpmn2Package.DEFINITIONS__DIAGRAMS:
-            case Bpmn2Package.DEFINITIONS__RELATIONSHIPS:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case Bpmn2Package.DEFINITIONS__EXPORTER:
+        case Bpmn2Package.DEFINITIONS__EXPORTER_VERSION:
+        case Bpmn2Package.DEFINITIONS__EXPRESSION_LANGUAGE:
+        case Bpmn2Package.DEFINITIONS__NAME:
+        case Bpmn2Package.DEFINITIONS__TARGET_NAMESPACE:
+        case Bpmn2Package.DEFINITIONS__TYPE_LANGUAGE:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
+        case Bpmn2Package.DEFINITIONS__IMPORTS:
+        case Bpmn2Package.DEFINITIONS__EXTENSIONS:
+        case Bpmn2Package.DEFINITIONS__ROOT_ELEMENTS:
+        case Bpmn2Package.DEFINITIONS__DIAGRAMS:
+        case Bpmn2Package.DEFINITIONS__RELATIONSHIPS:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -236,77 +281,146 @@ public class DefinitionsItemProvider extends BaseElementItemProvider implements 
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__IMPORTS, Bpmn2Factory.eINSTANCE.createImport()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__IMPORTS,
+                Bpmn2Factory.eINSTANCE.createImport()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__EXTENSIONS, Bpmn2Factory.eINSTANCE.createExtension()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__EXTENSIONS,
+                Bpmn2Factory.eINSTANCE.createExtension()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createCancelEventDefinition()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createCancelEventDefinition()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createCategory()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createCategory()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createCollaboration()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createCollaboration()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createChoreography()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createChoreography()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createCompensateEventDefinition()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createCompensateEventDefinition()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createConditionalEventDefinition()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createConditionalEventDefinition()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createCorrelationProperty()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createCorrelationProperty()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createDataStore()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createDataStore()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createEndPoint()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createEndPoint()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createError()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createError()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createErrorEventDefinition()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createErrorEventDefinition()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createEscalationEventDefinition()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createEscalationEventDefinition()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createGlobalTask()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createGlobalTask()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createGlobalBusinessRuleTask()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createGlobalBusinessRuleTask()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createGlobalChoreographyTask()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createGlobalChoreographyTask()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createGlobalConversation()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createGlobalConversation()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createGlobalManualTask()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createGlobalManualTask()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createGlobalScriptTask()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createGlobalScriptTask()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createGlobalUserTask()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createGlobalUserTask()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createInterface()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createInterface()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createItemDefinition()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createItemDefinition()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createLinkEventDefinition()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createLinkEventDefinition()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createMessage()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createMessage()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createMessageEventDefinition()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createMessageEventDefinition()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createPartnerEntity()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createPartnerEntity()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createPartnerRole()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createPartnerRole()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createProcess()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createProcess()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createResource()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createResource()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createSignal()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createSignal()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createSignalEventDefinition()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createSignalEventDefinition()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createTerminateEventDefinition()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createTerminateEventDefinition()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, Bpmn2Factory.eINSTANCE.createTimerEventDefinition()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createTimerEventDefinition()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__DIAGRAMS, BpmnDiFactory.eINSTANCE.createBPMNDiagram()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__DIAGRAMS,
+                BpmnDiFactory.eINSTANCE.createBPMNDiagram()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__RELATIONSHIPS, Bpmn2Factory.eINSTANCE.createRelationship()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__RELATIONSHIPS,
+                Bpmn2Factory.eINSTANCE.createRelationship()));
     }
 
 }

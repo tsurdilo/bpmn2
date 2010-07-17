@@ -36,7 +36,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EscalationEventDefinitionItemProvider extends EventDefinitionItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class EscalationEventDefinitionItemProvider extends EventDefinitionItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -70,7 +72,15 @@ public class EscalationEventDefinitionItemProvider extends EventDefinitionItemPr
      * @generated
      */
     protected void addEscalationRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_EscalationEventDefinition_escalationRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_EscalationEventDefinition_escalationRef_feature", "_UI_EscalationEventDefinition_type"), Bpmn2Package.Literals.ESCALATION_EVENT_DEFINITION__ESCALATION_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_EscalationEventDefinition_escalationRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_EscalationEventDefinition_escalationRef_feature",
+                        "_UI_EscalationEventDefinition_type"),
+                Bpmn2Package.Literals.ESCALATION_EVENT_DEFINITION__ESCALATION_REF, true, false,
+                true, null, null, null));
     }
 
     /**
@@ -82,9 +92,11 @@ public class EscalationEventDefinitionItemProvider extends EventDefinitionItemPr
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/EscalationEventDefinition.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/EscalationEventDefinition.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/EscalationEventDefinition.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/EscalationEventDefinition.gif"));
         }
     }
 
@@ -96,8 +108,9 @@ public class EscalationEventDefinitionItemProvider extends EventDefinitionItemPr
      */
     @Override
     public String getText(Object object) {
-        String label = ((EscalationEventDefinition)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_EscalationEventDefinition_type") : getString("_UI_EscalationEventDefinition_type") + " " + label;
+        String label = ((EscalationEventDefinition) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_EscalationEventDefinition_type")
+                : getString("_UI_EscalationEventDefinition_type") + " " + label;
     }
 
     /**

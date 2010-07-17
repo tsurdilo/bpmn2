@@ -102,11 +102,12 @@ public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
      */
     public DiagramElement getSource() {
         if (source != null && source.eIsProxy()) {
-            InternalEObject oldSource = (InternalEObject)source;
-            source = (DiagramElement)eResolveProxy(oldSource);
+            InternalEObject oldSource = (InternalEObject) source;
+            source = (DiagramElement) eResolveProxy(oldSource);
             if (source != oldSource) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, DiPackage.EDGE__SOURCE, oldSource, source));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            DiPackage.EDGE__SOURCE, oldSource, source));
             }
         }
         return source;
@@ -128,11 +129,12 @@ public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
      */
     public DiagramElement getTarget() {
         if (target != null && target.eIsProxy()) {
-            InternalEObject oldTarget = (InternalEObject)target;
-            target = (DiagramElement)eResolveProxy(oldTarget);
+            InternalEObject oldTarget = (InternalEObject) target;
+            target = (DiagramElement) eResolveProxy(oldTarget);
             if (target != oldTarget) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, DiPackage.EDGE__TARGET, oldTarget, target));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            DiPackage.EDGE__TARGET, oldTarget, target));
             }
         }
         return target;
@@ -154,7 +156,8 @@ public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
      */
     public List<Point> getWaypoint() {
         if (waypoint == null) {
-            waypoint = new EObjectContainmentEList<Point>(Point.class, this, DiPackage.EDGE__WAYPOINT);
+            waypoint = new EObjectContainmentEList<Point>(Point.class, this,
+                    DiPackage.EDGE__WAYPOINT);
         }
         return waypoint;
     }
@@ -165,10 +168,11 @@ public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case DiPackage.EDGE__WAYPOINT:
-                return ((InternalEList<?>)getWaypoint()).basicRemove(otherEnd, msgs);
+        case DiPackage.EDGE__WAYPOINT:
+            return ((InternalEList<?>) getWaypoint()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -181,16 +185,16 @@ public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case DiPackage.EDGE__SOURCE:
-                if (resolve)
-                    return getSource();
-                return basicGetSource();
-            case DiPackage.EDGE__TARGET:
-                if (resolve)
-                    return getTarget();
-                return basicGetTarget();
-            case DiPackage.EDGE__WAYPOINT:
-                return getWaypoint();
+        case DiPackage.EDGE__SOURCE:
+            if (resolve)
+                return getSource();
+            return basicGetSource();
+        case DiPackage.EDGE__TARGET:
+            if (resolve)
+                return getTarget();
+            return basicGetTarget();
+        case DiPackage.EDGE__WAYPOINT:
+            return getWaypoint();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -204,10 +208,10 @@ public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case DiPackage.EDGE__WAYPOINT:
-                getWaypoint().clear();
-                getWaypoint().addAll((Collection<? extends Point>)newValue);
-                return;
+        case DiPackage.EDGE__WAYPOINT:
+            getWaypoint().clear();
+            getWaypoint().addAll((Collection<? extends Point>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -220,9 +224,9 @@ public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case DiPackage.EDGE__WAYPOINT:
-                getWaypoint().clear();
-                return;
+        case DiPackage.EDGE__WAYPOINT:
+            getWaypoint().clear();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -235,12 +239,12 @@ public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case DiPackage.EDGE__SOURCE:
-                return source != null;
-            case DiPackage.EDGE__TARGET:
-                return target != null;
-            case DiPackage.EDGE__WAYPOINT:
-                return waypoint != null && !waypoint.isEmpty();
+        case DiPackage.EDGE__SOURCE:
+            return source != null;
+        case DiPackage.EDGE__TARGET:
+            return target != null;
+        case DiPackage.EDGE__WAYPOINT:
+            return waypoint != null && !waypoint.isEmpty();
         }
         return super.eIsSet(featureID);
     }

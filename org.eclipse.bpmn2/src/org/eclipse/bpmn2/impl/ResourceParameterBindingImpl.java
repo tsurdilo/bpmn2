@@ -97,7 +97,9 @@ public class ResourceParameterBindingImpl extends EObjectImpl implements Resourc
         Expression oldExpression = expression;
         expression = newExpression;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION, oldExpression, newExpression);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION, oldExpression,
+                    newExpression);
             if (msgs == null)
                 msgs = notification;
             else
@@ -115,14 +117,18 @@ public class ResourceParameterBindingImpl extends EObjectImpl implements Resourc
         if (newExpression != expression) {
             NotificationChain msgs = null;
             if (expression != null)
-                msgs = ((InternalEObject)expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION, null, msgs);
+                msgs = ((InternalEObject) expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION, null, msgs);
             if (newExpression != null)
-                msgs = ((InternalEObject)newExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION, null, msgs);
+                msgs = ((InternalEObject) newExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION, null, msgs);
             msgs = basicSetExpression(newExpression, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION, newExpression, newExpression));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION, newExpression,
+                    newExpression));
     }
 
     /**
@@ -132,11 +138,13 @@ public class ResourceParameterBindingImpl extends EObjectImpl implements Resourc
      */
     public ResourceParameter getParameterRef() {
         if (parameterRef != null && parameterRef.eIsProxy()) {
-            InternalEObject oldParameterRef = (InternalEObject)parameterRef;
-            parameterRef = (ResourceParameter)eResolveProxy(oldParameterRef);
+            InternalEObject oldParameterRef = (InternalEObject) parameterRef;
+            parameterRef = (ResourceParameter) eResolveProxy(oldParameterRef);
             if (parameterRef != oldParameterRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.RESOURCE_PARAMETER_BINDING__PARAMETER_REF, oldParameterRef, parameterRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.RESOURCE_PARAMETER_BINDING__PARAMETER_REF,
+                            oldParameterRef, parameterRef));
             }
         }
         return parameterRef;
@@ -160,7 +168,9 @@ public class ResourceParameterBindingImpl extends EObjectImpl implements Resourc
         ResourceParameter oldParameterRef = parameterRef;
         parameterRef = newParameterRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.RESOURCE_PARAMETER_BINDING__PARAMETER_REF, oldParameterRef, parameterRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.RESOURCE_PARAMETER_BINDING__PARAMETER_REF, oldParameterRef,
+                    parameterRef));
     }
 
     /**
@@ -169,10 +179,11 @@ public class ResourceParameterBindingImpl extends EObjectImpl implements Resourc
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION:
-                return basicSetExpression(null, msgs);
+        case Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION:
+            return basicSetExpression(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -185,12 +196,12 @@ public class ResourceParameterBindingImpl extends EObjectImpl implements Resourc
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION:
-                return getExpression();
-            case Bpmn2Package.RESOURCE_PARAMETER_BINDING__PARAMETER_REF:
-                if (resolve)
-                    return getParameterRef();
-                return basicGetParameterRef();
+        case Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION:
+            return getExpression();
+        case Bpmn2Package.RESOURCE_PARAMETER_BINDING__PARAMETER_REF:
+            if (resolve)
+                return getParameterRef();
+            return basicGetParameterRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -203,12 +214,12 @@ public class ResourceParameterBindingImpl extends EObjectImpl implements Resourc
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION:
-                setExpression((Expression)newValue);
-                return;
-            case Bpmn2Package.RESOURCE_PARAMETER_BINDING__PARAMETER_REF:
-                setParameterRef((ResourceParameter)newValue);
-                return;
+        case Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION:
+            setExpression((Expression) newValue);
+            return;
+        case Bpmn2Package.RESOURCE_PARAMETER_BINDING__PARAMETER_REF:
+            setParameterRef((ResourceParameter) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -221,12 +232,12 @@ public class ResourceParameterBindingImpl extends EObjectImpl implements Resourc
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION:
-                setExpression((Expression)null);
-                return;
-            case Bpmn2Package.RESOURCE_PARAMETER_BINDING__PARAMETER_REF:
-                setParameterRef((ResourceParameter)null);
-                return;
+        case Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION:
+            setExpression((Expression) null);
+            return;
+        case Bpmn2Package.RESOURCE_PARAMETER_BINDING__PARAMETER_REF:
+            setParameterRef((ResourceParameter) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -239,10 +250,10 @@ public class ResourceParameterBindingImpl extends EObjectImpl implements Resourc
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION:
-                return expression != null;
-            case Bpmn2Package.RESOURCE_PARAMETER_BINDING__PARAMETER_REF:
-                return parameterRef != null;
+        case Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION:
+            return expression != null;
+        case Bpmn2Package.RESOURCE_PARAMETER_BINDING__PARAMETER_REF:
+            return parameterRef != null;
         }
         return super.eIsSet(featureID);
     }

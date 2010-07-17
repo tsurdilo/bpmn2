@@ -38,7 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DataStoreItemProvider extends ItemAwareElementItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class DataStoreItemProvider extends ItemAwareElementItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -74,7 +76,13 @@ public class DataStoreItemProvider extends ItemAwareElementItemProvider implemen
      * @generated
      */
     protected void addCapacityPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_DataStore_capacity_feature"), getString("_UI_PropertyDescriptor_description", "_UI_DataStore_capacity_feature", "_UI_DataStore_type"), Bpmn2Package.Literals.DATA_STORE__CAPACITY, true, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_DataStore_capacity_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_DataStore_capacity_feature",
+                        "_UI_DataStore_type"), Bpmn2Package.Literals.DATA_STORE__CAPACITY, true,
+                false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -84,7 +92,14 @@ public class DataStoreItemProvider extends ItemAwareElementItemProvider implemen
      * @generated
      */
     protected void addIsUnlimitedPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_DataStore_isUnlimited_feature"), getString("_UI_PropertyDescriptor_description", "_UI_DataStore_isUnlimited_feature", "_UI_DataStore_type"), Bpmn2Package.Literals.DATA_STORE__IS_UNLIMITED, true, false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_DataStore_isUnlimited_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_DataStore_isUnlimited_feature", "_UI_DataStore_type"),
+                Bpmn2Package.Literals.DATA_STORE__IS_UNLIMITED, true, false, false,
+                ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -94,7 +109,13 @@ public class DataStoreItemProvider extends ItemAwareElementItemProvider implemen
      * @generated
      */
     protected void addNamePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_DataStore_name_feature"), getString("_UI_PropertyDescriptor_description", "_UI_DataStore_name_feature", "_UI_DataStore_type"), Bpmn2Package.Literals.DATA_STORE__NAME, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_DataStore_name_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_DataStore_name_feature",
+                        "_UI_DataStore_type"), Bpmn2Package.Literals.DATA_STORE__NAME, true, false,
+                false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -120,8 +141,9 @@ public class DataStoreItemProvider extends ItemAwareElementItemProvider implemen
      */
     @Override
     public String getText(Object object) {
-        String label = ((DataStore)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_DataStore_type") : getString("_UI_DataStore_type") + " " + label;
+        String label = ((DataStore) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_DataStore_type")
+                : getString("_UI_DataStore_type") + " " + label;
     }
 
     /**
@@ -136,11 +158,12 @@ public class DataStoreItemProvider extends ItemAwareElementItemProvider implemen
         updateChildren(notification);
 
         switch (notification.getFeatureID(DataStore.class)) {
-            case Bpmn2Package.DATA_STORE__CAPACITY:
-            case Bpmn2Package.DATA_STORE__IS_UNLIMITED:
-            case Bpmn2Package.DATA_STORE__NAME:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case Bpmn2Package.DATA_STORE__CAPACITY:
+        case Bpmn2Package.DATA_STORE__IS_UNLIMITED:
+        case Bpmn2Package.DATA_STORE__NAME:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }

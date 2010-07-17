@@ -38,7 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DocumentationItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class DocumentationItemProvider extends BaseElementItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -73,7 +75,13 @@ public class DocumentationItemProvider extends BaseElementItemProvider implement
      * @generated
      */
     protected void addTextPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Documentation_text_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Documentation_text_feature", "_UI_Documentation_type"), Bpmn2Package.Literals.DOCUMENTATION__TEXT, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Documentation_text_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Documentation_text_feature",
+                        "_UI_Documentation_type"), Bpmn2Package.Literals.DOCUMENTATION__TEXT, true,
+                false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -83,7 +91,14 @@ public class DocumentationItemProvider extends BaseElementItemProvider implement
      * @generated
      */
     protected void addTextFormatPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Documentation_textFormat_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Documentation_textFormat_feature", "_UI_Documentation_type"), Bpmn2Package.Literals.DOCUMENTATION__TEXT_FORMAT, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Documentation_textFormat_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_Documentation_textFormat_feature", "_UI_Documentation_type"),
+                Bpmn2Package.Literals.DOCUMENTATION__TEXT_FORMAT, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -95,9 +110,11 @@ public class DocumentationItemProvider extends BaseElementItemProvider implement
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/Documentation.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Documentation.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/Documentation.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Documentation.gif"));
         }
     }
 
@@ -109,8 +126,9 @@ public class DocumentationItemProvider extends BaseElementItemProvider implement
      */
     @Override
     public String getText(Object object) {
-        String label = ((Documentation)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_Documentation_type") : getString("_UI_Documentation_type") + " " + label;
+        String label = ((Documentation) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_Documentation_type")
+                : getString("_UI_Documentation_type") + " " + label;
     }
 
     /**
@@ -125,10 +143,11 @@ public class DocumentationItemProvider extends BaseElementItemProvider implement
         updateChildren(notification);
 
         switch (notification.getFeatureID(Documentation.class)) {
-            case Bpmn2Package.DOCUMENTATION__TEXT:
-            case Bpmn2Package.DOCUMENTATION__TEXT_FORMAT:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case Bpmn2Package.DOCUMENTATION__TEXT:
+        case Bpmn2Package.DOCUMENTATION__TEXT_FORMAT:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }

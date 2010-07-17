@@ -126,7 +126,8 @@ public class EscalationImpl extends EObjectImpl implements Escalation {
         String oldEscalationCode = escalationCode;
         escalationCode = newEscalationCode;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ESCALATION__ESCALATION_CODE, oldEscalationCode, escalationCode));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.ESCALATION__ESCALATION_CODE, oldEscalationCode, escalationCode));
     }
 
     /**
@@ -147,7 +148,8 @@ public class EscalationImpl extends EObjectImpl implements Escalation {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ESCALATION__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ESCALATION__NAME,
+                    oldName, name));
     }
 
     /**
@@ -157,11 +159,12 @@ public class EscalationImpl extends EObjectImpl implements Escalation {
      */
     public ItemDefinition getStructureRef() {
         if (structureRef != null && structureRef.eIsProxy()) {
-            InternalEObject oldStructureRef = (InternalEObject)structureRef;
-            structureRef = (ItemDefinition)eResolveProxy(oldStructureRef);
+            InternalEObject oldStructureRef = (InternalEObject) structureRef;
+            structureRef = (ItemDefinition) eResolveProxy(oldStructureRef);
             if (structureRef != oldStructureRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.ESCALATION__STRUCTURE_REF, oldStructureRef, structureRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.ESCALATION__STRUCTURE_REF, oldStructureRef, structureRef));
             }
         }
         return structureRef;
@@ -185,7 +188,8 @@ public class EscalationImpl extends EObjectImpl implements Escalation {
         ItemDefinition oldStructureRef = structureRef;
         structureRef = newStructureRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ESCALATION__STRUCTURE_REF, oldStructureRef, structureRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.ESCALATION__STRUCTURE_REF, oldStructureRef, structureRef));
     }
 
     /**
@@ -196,14 +200,14 @@ public class EscalationImpl extends EObjectImpl implements Escalation {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.ESCALATION__ESCALATION_CODE:
-                return getEscalationCode();
-            case Bpmn2Package.ESCALATION__NAME:
-                return getName();
-            case Bpmn2Package.ESCALATION__STRUCTURE_REF:
-                if (resolve)
-                    return getStructureRef();
-                return basicGetStructureRef();
+        case Bpmn2Package.ESCALATION__ESCALATION_CODE:
+            return getEscalationCode();
+        case Bpmn2Package.ESCALATION__NAME:
+            return getName();
+        case Bpmn2Package.ESCALATION__STRUCTURE_REF:
+            if (resolve)
+                return getStructureRef();
+            return basicGetStructureRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -216,15 +220,15 @@ public class EscalationImpl extends EObjectImpl implements Escalation {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.ESCALATION__ESCALATION_CODE:
-                setEscalationCode((String)newValue);
-                return;
-            case Bpmn2Package.ESCALATION__NAME:
-                setName((String)newValue);
-                return;
-            case Bpmn2Package.ESCALATION__STRUCTURE_REF:
-                setStructureRef((ItemDefinition)newValue);
-                return;
+        case Bpmn2Package.ESCALATION__ESCALATION_CODE:
+            setEscalationCode((String) newValue);
+            return;
+        case Bpmn2Package.ESCALATION__NAME:
+            setName((String) newValue);
+            return;
+        case Bpmn2Package.ESCALATION__STRUCTURE_REF:
+            setStructureRef((ItemDefinition) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -237,15 +241,15 @@ public class EscalationImpl extends EObjectImpl implements Escalation {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.ESCALATION__ESCALATION_CODE:
-                setEscalationCode(ESCALATION_CODE_EDEFAULT);
-                return;
-            case Bpmn2Package.ESCALATION__NAME:
-                setName(NAME_EDEFAULT);
-                return;
-            case Bpmn2Package.ESCALATION__STRUCTURE_REF:
-                setStructureRef((ItemDefinition)null);
-                return;
+        case Bpmn2Package.ESCALATION__ESCALATION_CODE:
+            setEscalationCode(ESCALATION_CODE_EDEFAULT);
+            return;
+        case Bpmn2Package.ESCALATION__NAME:
+            setName(NAME_EDEFAULT);
+            return;
+        case Bpmn2Package.ESCALATION__STRUCTURE_REF:
+            setStructureRef((ItemDefinition) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -258,12 +262,13 @@ public class EscalationImpl extends EObjectImpl implements Escalation {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.ESCALATION__ESCALATION_CODE:
-                return ESCALATION_CODE_EDEFAULT == null ? escalationCode != null : !ESCALATION_CODE_EDEFAULT.equals(escalationCode);
-            case Bpmn2Package.ESCALATION__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-            case Bpmn2Package.ESCALATION__STRUCTURE_REF:
-                return structureRef != null;
+        case Bpmn2Package.ESCALATION__ESCALATION_CODE:
+            return ESCALATION_CODE_EDEFAULT == null ? escalationCode != null
+                    : !ESCALATION_CODE_EDEFAULT.equals(escalationCode);
+        case Bpmn2Package.ESCALATION__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case Bpmn2Package.ESCALATION__STRUCTURE_REF:
+            return structureRef != null;
         }
         return super.eIsSet(featureID);
     }

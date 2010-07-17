@@ -38,7 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class LinkEventDefinitionItemProvider extends EventDefinitionItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class LinkEventDefinitionItemProvider extends EventDefinitionItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -74,7 +76,14 @@ public class LinkEventDefinitionItemProvider extends EventDefinitionItemProvider
      * @generated
      */
     protected void addSourcePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_LinkEventDefinition_source_feature"), getString("_UI_PropertyDescriptor_description", "_UI_LinkEventDefinition_source_feature", "_UI_LinkEventDefinition_type"), Bpmn2Package.Literals.LINK_EVENT_DEFINITION__SOURCE, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_LinkEventDefinition_source_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_LinkEventDefinition_source_feature", "_UI_LinkEventDefinition_type"),
+                Bpmn2Package.Literals.LINK_EVENT_DEFINITION__SOURCE, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -84,7 +93,14 @@ public class LinkEventDefinitionItemProvider extends EventDefinitionItemProvider
      * @generated
      */
     protected void addTargetPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_LinkEventDefinition_target_feature"), getString("_UI_PropertyDescriptor_description", "_UI_LinkEventDefinition_target_feature", "_UI_LinkEventDefinition_type"), Bpmn2Package.Literals.LINK_EVENT_DEFINITION__TARGET, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_LinkEventDefinition_target_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_LinkEventDefinition_target_feature", "_UI_LinkEventDefinition_type"),
+                Bpmn2Package.Literals.LINK_EVENT_DEFINITION__TARGET, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -94,7 +110,14 @@ public class LinkEventDefinitionItemProvider extends EventDefinitionItemProvider
      * @generated
      */
     protected void addNamePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_LinkEventDefinition_name_feature"), getString("_UI_PropertyDescriptor_description", "_UI_LinkEventDefinition_name_feature", "_UI_LinkEventDefinition_type"), Bpmn2Package.Literals.LINK_EVENT_DEFINITION__NAME, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_LinkEventDefinition_name_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_LinkEventDefinition_name_feature", "_UI_LinkEventDefinition_type"),
+                Bpmn2Package.Literals.LINK_EVENT_DEFINITION__NAME, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -106,9 +129,11 @@ public class LinkEventDefinitionItemProvider extends EventDefinitionItemProvider
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/LinkEventDefinition.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/LinkEventDefinition.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/LinkEventDefinition.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/LinkEventDefinition.gif"));
         }
     }
 
@@ -120,8 +145,9 @@ public class LinkEventDefinitionItemProvider extends EventDefinitionItemProvider
      */
     @Override
     public String getText(Object object) {
-        String label = ((LinkEventDefinition)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_LinkEventDefinition_type") : getString("_UI_LinkEventDefinition_type") + " " + label;
+        String label = ((LinkEventDefinition) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_LinkEventDefinition_type")
+                : getString("_UI_LinkEventDefinition_type") + " " + label;
     }
 
     /**
@@ -136,9 +162,10 @@ public class LinkEventDefinitionItemProvider extends EventDefinitionItemProvider
         updateChildren(notification);
 
         switch (notification.getFeatureID(LinkEventDefinition.class)) {
-            case Bpmn2Package.LINK_EVENT_DEFINITION__NAME:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case Bpmn2Package.LINK_EVENT_DEFINITION__NAME:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }

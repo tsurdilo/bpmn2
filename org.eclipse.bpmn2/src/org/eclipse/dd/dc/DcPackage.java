@@ -597,7 +597,8 @@ public interface DcPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__XSI_SCHEMA_LOCATION = eINSTANCE.getDocumentRoot_XSISchemaLocation();
+        EReference DOCUMENT_ROOT__XSI_SCHEMA_LOCATION = eINSTANCE
+                .getDocumentRoot_XSISchemaLocation();
 
         /**
          * The meta object literal for the '<em><b>Bounds</b></em>' containment reference feature.

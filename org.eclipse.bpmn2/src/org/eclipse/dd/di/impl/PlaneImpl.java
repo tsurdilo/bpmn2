@@ -84,7 +84,8 @@ public abstract class PlaneImpl extends NodeImpl implements Plane {
      */
     public List<DiagramElement> getPlaneElement() {
         if (planeElement == null) {
-            planeElement = new EObjectContainmentEList<DiagramElement>(DiagramElement.class, this, DiPackage.PLANE__PLANE_ELEMENT);
+            planeElement = new EObjectContainmentEList<DiagramElement>(DiagramElement.class, this,
+                    DiPackage.PLANE__PLANE_ELEMENT);
         }
         return planeElement;
     }
@@ -101,7 +102,13 @@ public abstract class PlaneImpl extends NodeImpl implements Plane {
         // Ensure that you remove @generated or mark it @generated NOT
         if (false) {
             if (diagnostics != null) {
-                diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, DiValidator.DIAGNOSTIC_SOURCE, DiValidator.PLANE__PLANE_ELEMENT_TYPE, EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "plane_element_type", EObjectValidator.getObjectLabel(this, context) }), new Object[] { this }));
+                diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR,
+                        DiValidator.DIAGNOSTIC_SOURCE, DiValidator.PLANE__PLANE_ELEMENT_TYPE,
+                        EcorePlugin.INSTANCE.getString(
+                                "_UI_GenericInvariant_diagnostic",
+                                new Object[] { "plane_element_type",
+                                        EObjectValidator.getObjectLabel(this, context) }),
+                        new Object[] { this }));
             }
             return false;
         }
@@ -114,10 +121,11 @@ public abstract class PlaneImpl extends NodeImpl implements Plane {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case DiPackage.PLANE__PLANE_ELEMENT:
-                return ((InternalEList<?>)getPlaneElement()).basicRemove(otherEnd, msgs);
+        case DiPackage.PLANE__PLANE_ELEMENT:
+            return ((InternalEList<?>) getPlaneElement()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -130,8 +138,8 @@ public abstract class PlaneImpl extends NodeImpl implements Plane {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case DiPackage.PLANE__PLANE_ELEMENT:
-                return getPlaneElement();
+        case DiPackage.PLANE__PLANE_ELEMENT:
+            return getPlaneElement();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -145,10 +153,10 @@ public abstract class PlaneImpl extends NodeImpl implements Plane {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case DiPackage.PLANE__PLANE_ELEMENT:
-                getPlaneElement().clear();
-                getPlaneElement().addAll((Collection<? extends DiagramElement>)newValue);
-                return;
+        case DiPackage.PLANE__PLANE_ELEMENT:
+            getPlaneElement().clear();
+            getPlaneElement().addAll((Collection<? extends DiagramElement>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -161,9 +169,9 @@ public abstract class PlaneImpl extends NodeImpl implements Plane {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case DiPackage.PLANE__PLANE_ELEMENT:
-                getPlaneElement().clear();
-                return;
+        case DiPackage.PLANE__PLANE_ELEMENT:
+            getPlaneElement().clear();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -176,8 +184,8 @@ public abstract class PlaneImpl extends NodeImpl implements Plane {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case DiPackage.PLANE__PLANE_ELEMENT:
-                return planeElement != null && !planeElement.isEmpty();
+        case DiPackage.PLANE__PLANE_ELEMENT:
+            return planeElement != null && !planeElement.isEmpty();
         }
         return super.eIsSet(featureID);
     }

@@ -36,7 +36,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TaskItemProvider extends ActivityItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class TaskItemProvider extends ActivityItemProvider implements IEditingDomainItemProvider,
+        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider,
+        IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -71,7 +73,15 @@ public class TaskItemProvider extends ActivityItemProvider implements IEditingDo
      * @generated
      */
     protected void addIncomingConversationLinksPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_InteractionNode_incomingConversationLinks_feature"), getString("_UI_PropertyDescriptor_description", "_UI_InteractionNode_incomingConversationLinks_feature", "_UI_InteractionNode_type"), Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_InteractionNode_incomingConversationLinks_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_InteractionNode_incomingConversationLinks_feature",
+                        "_UI_InteractionNode_type"),
+                Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS, true, false,
+                true, null, null, null));
     }
 
     /**
@@ -81,7 +91,15 @@ public class TaskItemProvider extends ActivityItemProvider implements IEditingDo
      * @generated
      */
     protected void addOutgoingConversationLinksPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_InteractionNode_outgoingConversationLinks_feature"), getString("_UI_PropertyDescriptor_description", "_UI_InteractionNode_outgoingConversationLinks_feature", "_UI_InteractionNode_type"), Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_InteractionNode_outgoingConversationLinks_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_InteractionNode_outgoingConversationLinks_feature",
+                        "_UI_InteractionNode_type"),
+                Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS, true, false,
+                true, null, null, null));
     }
 
     /**
@@ -107,8 +125,9 @@ public class TaskItemProvider extends ActivityItemProvider implements IEditingDo
      */
     @Override
     public String getText(Object object) {
-        String label = ((Task)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_Task_type") : getString("_UI_Task_type") + " " + label;
+        String label = ((Task) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_Task_type")
+                : getString("_UI_Task_type") + " " + label;
     }
 
     /**

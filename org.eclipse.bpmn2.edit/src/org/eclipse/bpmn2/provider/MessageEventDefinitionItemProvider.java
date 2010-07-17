@@ -36,7 +36,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class MessageEventDefinitionItemProvider extends EventDefinitionItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class MessageEventDefinitionItemProvider extends EventDefinitionItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -71,7 +73,15 @@ public class MessageEventDefinitionItemProvider extends EventDefinitionItemProvi
      * @generated
      */
     protected void addOperationRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_MessageEventDefinition_operationRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_MessageEventDefinition_operationRef_feature", "_UI_MessageEventDefinition_type"), Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__OPERATION_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_MessageEventDefinition_operationRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_MessageEventDefinition_operationRef_feature",
+                        "_UI_MessageEventDefinition_type"),
+                Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__OPERATION_REF, true, false, true,
+                null, null, null));
     }
 
     /**
@@ -81,7 +91,15 @@ public class MessageEventDefinitionItemProvider extends EventDefinitionItemProvi
      * @generated
      */
     protected void addMessageRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_MessageEventDefinition_messageRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_MessageEventDefinition_messageRef_feature", "_UI_MessageEventDefinition_type"), Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__MESSAGE_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_MessageEventDefinition_messageRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_MessageEventDefinition_messageRef_feature",
+                        "_UI_MessageEventDefinition_type"),
+                Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__MESSAGE_REF, true, false, true,
+                null, null, null));
     }
 
     /**
@@ -93,9 +111,11 @@ public class MessageEventDefinitionItemProvider extends EventDefinitionItemProvi
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/MessageEventDefinition.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/MessageEventDefinition.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/MessageEventDefinition.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/MessageEventDefinition.gif"));
         }
     }
 
@@ -107,8 +127,9 @@ public class MessageEventDefinitionItemProvider extends EventDefinitionItemProvi
      */
     @Override
     public String getText(Object object) {
-        String label = ((MessageEventDefinition)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_MessageEventDefinition_type") : getString("_UI_MessageEventDefinition_type") + " " + label;
+        String label = ((MessageEventDefinition) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_MessageEventDefinition_type")
+                : getString("_UI_MessageEventDefinition_type") + " " + label;
     }
 
     /**

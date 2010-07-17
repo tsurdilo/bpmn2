@@ -38,7 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TransactionItemProvider extends SubProcessItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class TransactionItemProvider extends SubProcessItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -73,7 +75,13 @@ public class TransactionItemProvider extends SubProcessItemProvider implements I
      * @generated
      */
     protected void addProtocolPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Transaction_protocol_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Transaction_protocol_feature", "_UI_Transaction_type"), Bpmn2Package.Literals.TRANSACTION__PROTOCOL, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Transaction_protocol_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Transaction_protocol_feature",
+                        "_UI_Transaction_type"), Bpmn2Package.Literals.TRANSACTION__PROTOCOL, true,
+                false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -83,7 +91,13 @@ public class TransactionItemProvider extends SubProcessItemProvider implements I
      * @generated
      */
     protected void addMethodPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Transaction_method_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Transaction_method_feature", "_UI_Transaction_type"), Bpmn2Package.Literals.TRANSACTION__METHOD, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Transaction_method_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Transaction_method_feature",
+                        "_UI_Transaction_type"), Bpmn2Package.Literals.TRANSACTION__METHOD, true,
+                false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -109,8 +123,9 @@ public class TransactionItemProvider extends SubProcessItemProvider implements I
      */
     @Override
     public String getText(Object object) {
-        String label = ((Transaction)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_Transaction_type") : getString("_UI_Transaction_type") + " " + label;
+        String label = ((Transaction) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_Transaction_type")
+                : getString("_UI_Transaction_type") + " " + label;
     }
 
     /**
@@ -125,10 +140,11 @@ public class TransactionItemProvider extends SubProcessItemProvider implements I
         updateChildren(notification);
 
         switch (notification.getFeatureID(Transaction.class)) {
-            case Bpmn2Package.TRANSACTION__PROTOCOL:
-            case Bpmn2Package.TRANSACTION__METHOD:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case Bpmn2Package.TRANSACTION__PROTOCOL:
+        case Bpmn2Package.TRANSACTION__METHOD:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }

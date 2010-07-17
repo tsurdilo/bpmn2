@@ -38,7 +38,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements ComplexBehaviorDefinition {
+public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements
+        ComplexBehaviorDefinition {
     /**
      * The cached value of the '{@link #getCondition() <em>Condition</em>}' containment reference.
      * <!-- begin-user-doc -->
@@ -96,7 +97,8 @@ public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements Co
         FormalExpression oldCondition = condition;
         condition = newCondition;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION, oldCondition, newCondition);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION, oldCondition, newCondition);
             if (msgs == null)
                 msgs = notification;
             else
@@ -114,14 +116,17 @@ public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements Co
         if (newCondition != condition) {
             NotificationChain msgs = null;
             if (condition != null)
-                msgs = ((InternalEObject)condition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION, null, msgs);
+                msgs = ((InternalEObject) condition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION, null, msgs);
             if (newCondition != null)
-                msgs = ((InternalEObject)newCondition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION, null, msgs);
+                msgs = ((InternalEObject) newCondition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION, null, msgs);
             msgs = basicSetCondition(newCondition, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION, newCondition, newCondition));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION, newCondition, newCondition));
     }
 
     /**
@@ -142,7 +147,8 @@ public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements Co
         ImplicitThrowEvent oldEvent = event;
         event = newEvent;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT, oldEvent, newEvent);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT, oldEvent, newEvent);
             if (msgs == null)
                 msgs = notification;
             else
@@ -160,14 +166,17 @@ public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements Co
         if (newEvent != event) {
             NotificationChain msgs = null;
             if (event != null)
-                msgs = ((InternalEObject)event).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT, null, msgs);
+                msgs = ((InternalEObject) event).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT, null, msgs);
             if (newEvent != null)
-                msgs = ((InternalEObject)newEvent).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT, null, msgs);
+                msgs = ((InternalEObject) newEvent).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT, null, msgs);
             msgs = basicSetEvent(newEvent, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT, newEvent, newEvent));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT, newEvent, newEvent));
     }
 
     /**
@@ -176,12 +185,13 @@ public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements Co
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION:
-                return basicSetCondition(null, msgs);
-            case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT:
-                return basicSetEvent(null, msgs);
+        case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION:
+            return basicSetCondition(null, msgs);
+        case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT:
+            return basicSetEvent(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -194,10 +204,10 @@ public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements Co
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION:
-                return getCondition();
-            case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT:
-                return getEvent();
+        case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION:
+            return getCondition();
+        case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT:
+            return getEvent();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -210,12 +220,12 @@ public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements Co
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION:
-                setCondition((FormalExpression)newValue);
-                return;
-            case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT:
-                setEvent((ImplicitThrowEvent)newValue);
-                return;
+        case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION:
+            setCondition((FormalExpression) newValue);
+            return;
+        case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT:
+            setEvent((ImplicitThrowEvent) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -228,12 +238,12 @@ public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements Co
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION:
-                setCondition((FormalExpression)null);
-                return;
-            case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT:
-                setEvent((ImplicitThrowEvent)null);
-                return;
+        case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION:
+            setCondition((FormalExpression) null);
+            return;
+        case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT:
+            setEvent((ImplicitThrowEvent) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -246,10 +256,10 @@ public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements Co
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION:
-                return condition != null;
-            case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT:
-                return event != null;
+        case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION:
+            return condition != null;
+        case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT:
+            return event != null;
         }
         return super.eIsSet(featureID);
     }

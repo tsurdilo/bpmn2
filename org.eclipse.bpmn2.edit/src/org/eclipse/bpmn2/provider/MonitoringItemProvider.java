@@ -34,7 +34,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class MonitoringItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class MonitoringItemProvider extends BaseElementItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -83,8 +85,9 @@ public class MonitoringItemProvider extends BaseElementItemProvider implements I
      */
     @Override
     public String getText(Object object) {
-        String label = ((Monitoring)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_Monitoring_type") : getString("_UI_Monitoring_type") + " " + label;
+        String label = ((Monitoring) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_Monitoring_type")
+                : getString("_UI_Monitoring_type") + " " + label;
     }
 
     /**

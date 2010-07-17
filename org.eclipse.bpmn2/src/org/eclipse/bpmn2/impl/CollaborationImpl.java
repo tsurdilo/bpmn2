@@ -230,7 +230,8 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      */
     public List<Participant> getParticipants() {
         if (participants == null) {
-            participants = new EObjectContainmentEList<Participant>(Participant.class, this, Bpmn2Package.COLLABORATION__PARTICIPANTS);
+            participants = new EObjectContainmentEList<Participant>(Participant.class, this,
+                    Bpmn2Package.COLLABORATION__PARTICIPANTS);
         }
         return participants;
     }
@@ -242,7 +243,8 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      */
     public List<MessageFlow> getMessageFlows() {
         if (messageFlows == null) {
-            messageFlows = new EObjectContainmentEList<MessageFlow>(MessageFlow.class, this, Bpmn2Package.COLLABORATION__MESSAGE_FLOWS);
+            messageFlows = new EObjectContainmentEList<MessageFlow>(MessageFlow.class, this,
+                    Bpmn2Package.COLLABORATION__MESSAGE_FLOWS);
         }
         return messageFlows;
     }
@@ -254,7 +256,8 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      */
     public List<Artifact> getArtifacts() {
         if (artifacts == null) {
-            artifacts = new EObjectContainmentEList<Artifact>(Artifact.class, this, Bpmn2Package.COLLABORATION__ARTIFACTS);
+            artifacts = new EObjectContainmentEList<Artifact>(Artifact.class, this,
+                    Bpmn2Package.COLLABORATION__ARTIFACTS);
         }
         return artifacts;
     }
@@ -266,7 +269,8 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      */
     public List<ConversationNode> getConversations() {
         if (conversations == null) {
-            conversations = new EObjectContainmentEList<ConversationNode>(ConversationNode.class, this, Bpmn2Package.COLLABORATION__CONVERSATIONS);
+            conversations = new EObjectContainmentEList<ConversationNode>(ConversationNode.class,
+                    this, Bpmn2Package.COLLABORATION__CONVERSATIONS);
         }
         return conversations;
     }
@@ -285,11 +289,14 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetConversationAssociations(ConversationAssociation newConversationAssociations, NotificationChain msgs) {
+    public NotificationChain basicSetConversationAssociations(
+            ConversationAssociation newConversationAssociations, NotificationChain msgs) {
         ConversationAssociation oldConversationAssociations = conversationAssociations;
         conversationAssociations = newConversationAssociations;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.COLLABORATION__CONVERSATION_ASSOCIATIONS, oldConversationAssociations, newConversationAssociations);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.COLLABORATION__CONVERSATION_ASSOCIATIONS,
+                    oldConversationAssociations, newConversationAssociations);
             if (msgs == null)
                 msgs = notification;
             else
@@ -307,14 +314,20 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
         if (newConversationAssociations != conversationAssociations) {
             NotificationChain msgs = null;
             if (conversationAssociations != null)
-                msgs = ((InternalEObject)conversationAssociations).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.COLLABORATION__CONVERSATION_ASSOCIATIONS, null, msgs);
+                msgs = ((InternalEObject) conversationAssociations)
+                        .eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                                - Bpmn2Package.COLLABORATION__CONVERSATION_ASSOCIATIONS, null, msgs);
             if (newConversationAssociations != null)
-                msgs = ((InternalEObject)newConversationAssociations).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.COLLABORATION__CONVERSATION_ASSOCIATIONS, null, msgs);
+                msgs = ((InternalEObject) newConversationAssociations)
+                        .eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                                - Bpmn2Package.COLLABORATION__CONVERSATION_ASSOCIATIONS, null, msgs);
             msgs = basicSetConversationAssociations(newConversationAssociations, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.COLLABORATION__CONVERSATION_ASSOCIATIONS, newConversationAssociations, newConversationAssociations));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.COLLABORATION__CONVERSATION_ASSOCIATIONS,
+                    newConversationAssociations, newConversationAssociations));
     }
 
     /**
@@ -324,7 +337,9 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      */
     public List<ParticipantAssociation> getParticipantAssociations() {
         if (participantAssociations == null) {
-            participantAssociations = new EObjectContainmentEList<ParticipantAssociation>(ParticipantAssociation.class, this, Bpmn2Package.COLLABORATION__PARTICIPANT_ASSOCIATIONS);
+            participantAssociations = new EObjectContainmentEList<ParticipantAssociation>(
+                    ParticipantAssociation.class, this,
+                    Bpmn2Package.COLLABORATION__PARTICIPANT_ASSOCIATIONS);
         }
         return participantAssociations;
     }
@@ -336,7 +351,9 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      */
     public List<MessageFlowAssociation> getMessageFlowAssociations() {
         if (messageFlowAssociations == null) {
-            messageFlowAssociations = new EObjectContainmentEList<MessageFlowAssociation>(MessageFlowAssociation.class, this, Bpmn2Package.COLLABORATION__MESSAGE_FLOW_ASSOCIATIONS);
+            messageFlowAssociations = new EObjectContainmentEList<MessageFlowAssociation>(
+                    MessageFlowAssociation.class, this,
+                    Bpmn2Package.COLLABORATION__MESSAGE_FLOW_ASSOCIATIONS);
         }
         return messageFlowAssociations;
     }
@@ -348,7 +365,8 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      */
     public List<CorrelationKey> getCorrelationKeys() {
         if (correlationKeys == null) {
-            correlationKeys = new EObjectContainmentEList<CorrelationKey>(CorrelationKey.class, this, Bpmn2Package.COLLABORATION__CORRELATION_KEYS);
+            correlationKeys = new EObjectContainmentEList<CorrelationKey>(CorrelationKey.class,
+                    this, Bpmn2Package.COLLABORATION__CORRELATION_KEYS);
         }
         return correlationKeys;
     }
@@ -360,7 +378,8 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      */
     public List<Choreography> getChoreographyRef() {
         if (choreographyRef == null) {
-            choreographyRef = new EObjectResolvingEList<Choreography>(Choreography.class, this, Bpmn2Package.COLLABORATION__CHOREOGRAPHY_REF);
+            choreographyRef = new EObjectResolvingEList<Choreography>(Choreography.class, this,
+                    Bpmn2Package.COLLABORATION__CHOREOGRAPHY_REF);
         }
         return choreographyRef;
     }
@@ -372,7 +391,8 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      */
     public List<ConversationLink> getConversationLinks() {
         if (conversationLinks == null) {
-            conversationLinks = new EObjectContainmentEList<ConversationLink>(ConversationLink.class, this, Bpmn2Package.COLLABORATION__CONVERSATION_LINKS);
+            conversationLinks = new EObjectContainmentEList<ConversationLink>(
+                    ConversationLink.class, this, Bpmn2Package.COLLABORATION__CONVERSATION_LINKS);
         }
         return conversationLinks;
     }
@@ -395,7 +415,8 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
         boolean oldIsClosed = isClosed;
         isClosed = newIsClosed;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.COLLABORATION__IS_CLOSED, oldIsClosed, isClosed));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.COLLABORATION__IS_CLOSED, oldIsClosed, isClosed));
     }
 
     /**
@@ -416,7 +437,8 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.COLLABORATION__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.COLLABORATION__NAME,
+                    oldName, name));
     }
 
     /**
@@ -425,26 +447,27 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.COLLABORATION__PARTICIPANTS:
-                return ((InternalEList<?>)getParticipants()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.COLLABORATION__MESSAGE_FLOWS:
-                return ((InternalEList<?>)getMessageFlows()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.COLLABORATION__ARTIFACTS:
-                return ((InternalEList<?>)getArtifacts()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.COLLABORATION__CONVERSATIONS:
-                return ((InternalEList<?>)getConversations()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.COLLABORATION__CONVERSATION_ASSOCIATIONS:
-                return basicSetConversationAssociations(null, msgs);
-            case Bpmn2Package.COLLABORATION__PARTICIPANT_ASSOCIATIONS:
-                return ((InternalEList<?>)getParticipantAssociations()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.COLLABORATION__MESSAGE_FLOW_ASSOCIATIONS:
-                return ((InternalEList<?>)getMessageFlowAssociations()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.COLLABORATION__CORRELATION_KEYS:
-                return ((InternalEList<?>)getCorrelationKeys()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.COLLABORATION__CONVERSATION_LINKS:
-                return ((InternalEList<?>)getConversationLinks()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.COLLABORATION__PARTICIPANTS:
+            return ((InternalEList<?>) getParticipants()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.COLLABORATION__MESSAGE_FLOWS:
+            return ((InternalEList<?>) getMessageFlows()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.COLLABORATION__ARTIFACTS:
+            return ((InternalEList<?>) getArtifacts()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.COLLABORATION__CONVERSATIONS:
+            return ((InternalEList<?>) getConversations()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.COLLABORATION__CONVERSATION_ASSOCIATIONS:
+            return basicSetConversationAssociations(null, msgs);
+        case Bpmn2Package.COLLABORATION__PARTICIPANT_ASSOCIATIONS:
+            return ((InternalEList<?>) getParticipantAssociations()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.COLLABORATION__MESSAGE_FLOW_ASSOCIATIONS:
+            return ((InternalEList<?>) getMessageFlowAssociations()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.COLLABORATION__CORRELATION_KEYS:
+            return ((InternalEList<?>) getCorrelationKeys()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.COLLABORATION__CONVERSATION_LINKS:
+            return ((InternalEList<?>) getConversationLinks()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -457,30 +480,30 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.COLLABORATION__PARTICIPANTS:
-                return getParticipants();
-            case Bpmn2Package.COLLABORATION__MESSAGE_FLOWS:
-                return getMessageFlows();
-            case Bpmn2Package.COLLABORATION__ARTIFACTS:
-                return getArtifacts();
-            case Bpmn2Package.COLLABORATION__CONVERSATIONS:
-                return getConversations();
-            case Bpmn2Package.COLLABORATION__CONVERSATION_ASSOCIATIONS:
-                return getConversationAssociations();
-            case Bpmn2Package.COLLABORATION__PARTICIPANT_ASSOCIATIONS:
-                return getParticipantAssociations();
-            case Bpmn2Package.COLLABORATION__MESSAGE_FLOW_ASSOCIATIONS:
-                return getMessageFlowAssociations();
-            case Bpmn2Package.COLLABORATION__CORRELATION_KEYS:
-                return getCorrelationKeys();
-            case Bpmn2Package.COLLABORATION__CHOREOGRAPHY_REF:
-                return getChoreographyRef();
-            case Bpmn2Package.COLLABORATION__CONVERSATION_LINKS:
-                return getConversationLinks();
-            case Bpmn2Package.COLLABORATION__IS_CLOSED:
-                return isIsClosed();
-            case Bpmn2Package.COLLABORATION__NAME:
-                return getName();
+        case Bpmn2Package.COLLABORATION__PARTICIPANTS:
+            return getParticipants();
+        case Bpmn2Package.COLLABORATION__MESSAGE_FLOWS:
+            return getMessageFlows();
+        case Bpmn2Package.COLLABORATION__ARTIFACTS:
+            return getArtifacts();
+        case Bpmn2Package.COLLABORATION__CONVERSATIONS:
+            return getConversations();
+        case Bpmn2Package.COLLABORATION__CONVERSATION_ASSOCIATIONS:
+            return getConversationAssociations();
+        case Bpmn2Package.COLLABORATION__PARTICIPANT_ASSOCIATIONS:
+            return getParticipantAssociations();
+        case Bpmn2Package.COLLABORATION__MESSAGE_FLOW_ASSOCIATIONS:
+            return getMessageFlowAssociations();
+        case Bpmn2Package.COLLABORATION__CORRELATION_KEYS:
+            return getCorrelationKeys();
+        case Bpmn2Package.COLLABORATION__CHOREOGRAPHY_REF:
+            return getChoreographyRef();
+        case Bpmn2Package.COLLABORATION__CONVERSATION_LINKS:
+            return getConversationLinks();
+        case Bpmn2Package.COLLABORATION__IS_CLOSED:
+            return isIsClosed();
+        case Bpmn2Package.COLLABORATION__NAME:
+            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -494,51 +517,53 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.COLLABORATION__PARTICIPANTS:
-                getParticipants().clear();
-                getParticipants().addAll((Collection<? extends Participant>)newValue);
-                return;
-            case Bpmn2Package.COLLABORATION__MESSAGE_FLOWS:
-                getMessageFlows().clear();
-                getMessageFlows().addAll((Collection<? extends MessageFlow>)newValue);
-                return;
-            case Bpmn2Package.COLLABORATION__ARTIFACTS:
-                getArtifacts().clear();
-                getArtifacts().addAll((Collection<? extends Artifact>)newValue);
-                return;
-            case Bpmn2Package.COLLABORATION__CONVERSATIONS:
-                getConversations().clear();
-                getConversations().addAll((Collection<? extends ConversationNode>)newValue);
-                return;
-            case Bpmn2Package.COLLABORATION__CONVERSATION_ASSOCIATIONS:
-                setConversationAssociations((ConversationAssociation)newValue);
-                return;
-            case Bpmn2Package.COLLABORATION__PARTICIPANT_ASSOCIATIONS:
-                getParticipantAssociations().clear();
-                getParticipantAssociations().addAll((Collection<? extends ParticipantAssociation>)newValue);
-                return;
-            case Bpmn2Package.COLLABORATION__MESSAGE_FLOW_ASSOCIATIONS:
-                getMessageFlowAssociations().clear();
-                getMessageFlowAssociations().addAll((Collection<? extends MessageFlowAssociation>)newValue);
-                return;
-            case Bpmn2Package.COLLABORATION__CORRELATION_KEYS:
-                getCorrelationKeys().clear();
-                getCorrelationKeys().addAll((Collection<? extends CorrelationKey>)newValue);
-                return;
-            case Bpmn2Package.COLLABORATION__CHOREOGRAPHY_REF:
-                getChoreographyRef().clear();
-                getChoreographyRef().addAll((Collection<? extends Choreography>)newValue);
-                return;
-            case Bpmn2Package.COLLABORATION__CONVERSATION_LINKS:
-                getConversationLinks().clear();
-                getConversationLinks().addAll((Collection<? extends ConversationLink>)newValue);
-                return;
-            case Bpmn2Package.COLLABORATION__IS_CLOSED:
-                setIsClosed((Boolean)newValue);
-                return;
-            case Bpmn2Package.COLLABORATION__NAME:
-                setName((String)newValue);
-                return;
+        case Bpmn2Package.COLLABORATION__PARTICIPANTS:
+            getParticipants().clear();
+            getParticipants().addAll((Collection<? extends Participant>) newValue);
+            return;
+        case Bpmn2Package.COLLABORATION__MESSAGE_FLOWS:
+            getMessageFlows().clear();
+            getMessageFlows().addAll((Collection<? extends MessageFlow>) newValue);
+            return;
+        case Bpmn2Package.COLLABORATION__ARTIFACTS:
+            getArtifacts().clear();
+            getArtifacts().addAll((Collection<? extends Artifact>) newValue);
+            return;
+        case Bpmn2Package.COLLABORATION__CONVERSATIONS:
+            getConversations().clear();
+            getConversations().addAll((Collection<? extends ConversationNode>) newValue);
+            return;
+        case Bpmn2Package.COLLABORATION__CONVERSATION_ASSOCIATIONS:
+            setConversationAssociations((ConversationAssociation) newValue);
+            return;
+        case Bpmn2Package.COLLABORATION__PARTICIPANT_ASSOCIATIONS:
+            getParticipantAssociations().clear();
+            getParticipantAssociations().addAll(
+                    (Collection<? extends ParticipantAssociation>) newValue);
+            return;
+        case Bpmn2Package.COLLABORATION__MESSAGE_FLOW_ASSOCIATIONS:
+            getMessageFlowAssociations().clear();
+            getMessageFlowAssociations().addAll(
+                    (Collection<? extends MessageFlowAssociation>) newValue);
+            return;
+        case Bpmn2Package.COLLABORATION__CORRELATION_KEYS:
+            getCorrelationKeys().clear();
+            getCorrelationKeys().addAll((Collection<? extends CorrelationKey>) newValue);
+            return;
+        case Bpmn2Package.COLLABORATION__CHOREOGRAPHY_REF:
+            getChoreographyRef().clear();
+            getChoreographyRef().addAll((Collection<? extends Choreography>) newValue);
+            return;
+        case Bpmn2Package.COLLABORATION__CONVERSATION_LINKS:
+            getConversationLinks().clear();
+            getConversationLinks().addAll((Collection<? extends ConversationLink>) newValue);
+            return;
+        case Bpmn2Package.COLLABORATION__IS_CLOSED:
+            setIsClosed((Boolean) newValue);
+            return;
+        case Bpmn2Package.COLLABORATION__NAME:
+            setName((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -551,42 +576,42 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.COLLABORATION__PARTICIPANTS:
-                getParticipants().clear();
-                return;
-            case Bpmn2Package.COLLABORATION__MESSAGE_FLOWS:
-                getMessageFlows().clear();
-                return;
-            case Bpmn2Package.COLLABORATION__ARTIFACTS:
-                getArtifacts().clear();
-                return;
-            case Bpmn2Package.COLLABORATION__CONVERSATIONS:
-                getConversations().clear();
-                return;
-            case Bpmn2Package.COLLABORATION__CONVERSATION_ASSOCIATIONS:
-                setConversationAssociations((ConversationAssociation)null);
-                return;
-            case Bpmn2Package.COLLABORATION__PARTICIPANT_ASSOCIATIONS:
-                getParticipantAssociations().clear();
-                return;
-            case Bpmn2Package.COLLABORATION__MESSAGE_FLOW_ASSOCIATIONS:
-                getMessageFlowAssociations().clear();
-                return;
-            case Bpmn2Package.COLLABORATION__CORRELATION_KEYS:
-                getCorrelationKeys().clear();
-                return;
-            case Bpmn2Package.COLLABORATION__CHOREOGRAPHY_REF:
-                getChoreographyRef().clear();
-                return;
-            case Bpmn2Package.COLLABORATION__CONVERSATION_LINKS:
-                getConversationLinks().clear();
-                return;
-            case Bpmn2Package.COLLABORATION__IS_CLOSED:
-                setIsClosed(IS_CLOSED_EDEFAULT);
-                return;
-            case Bpmn2Package.COLLABORATION__NAME:
-                setName(NAME_EDEFAULT);
-                return;
+        case Bpmn2Package.COLLABORATION__PARTICIPANTS:
+            getParticipants().clear();
+            return;
+        case Bpmn2Package.COLLABORATION__MESSAGE_FLOWS:
+            getMessageFlows().clear();
+            return;
+        case Bpmn2Package.COLLABORATION__ARTIFACTS:
+            getArtifacts().clear();
+            return;
+        case Bpmn2Package.COLLABORATION__CONVERSATIONS:
+            getConversations().clear();
+            return;
+        case Bpmn2Package.COLLABORATION__CONVERSATION_ASSOCIATIONS:
+            setConversationAssociations((ConversationAssociation) null);
+            return;
+        case Bpmn2Package.COLLABORATION__PARTICIPANT_ASSOCIATIONS:
+            getParticipantAssociations().clear();
+            return;
+        case Bpmn2Package.COLLABORATION__MESSAGE_FLOW_ASSOCIATIONS:
+            getMessageFlowAssociations().clear();
+            return;
+        case Bpmn2Package.COLLABORATION__CORRELATION_KEYS:
+            getCorrelationKeys().clear();
+            return;
+        case Bpmn2Package.COLLABORATION__CHOREOGRAPHY_REF:
+            getChoreographyRef().clear();
+            return;
+        case Bpmn2Package.COLLABORATION__CONVERSATION_LINKS:
+            getConversationLinks().clear();
+            return;
+        case Bpmn2Package.COLLABORATION__IS_CLOSED:
+            setIsClosed(IS_CLOSED_EDEFAULT);
+            return;
+        case Bpmn2Package.COLLABORATION__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -599,30 +624,30 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.COLLABORATION__PARTICIPANTS:
-                return participants != null && !participants.isEmpty();
-            case Bpmn2Package.COLLABORATION__MESSAGE_FLOWS:
-                return messageFlows != null && !messageFlows.isEmpty();
-            case Bpmn2Package.COLLABORATION__ARTIFACTS:
-                return artifacts != null && !artifacts.isEmpty();
-            case Bpmn2Package.COLLABORATION__CONVERSATIONS:
-                return conversations != null && !conversations.isEmpty();
-            case Bpmn2Package.COLLABORATION__CONVERSATION_ASSOCIATIONS:
-                return conversationAssociations != null;
-            case Bpmn2Package.COLLABORATION__PARTICIPANT_ASSOCIATIONS:
-                return participantAssociations != null && !participantAssociations.isEmpty();
-            case Bpmn2Package.COLLABORATION__MESSAGE_FLOW_ASSOCIATIONS:
-                return messageFlowAssociations != null && !messageFlowAssociations.isEmpty();
-            case Bpmn2Package.COLLABORATION__CORRELATION_KEYS:
-                return correlationKeys != null && !correlationKeys.isEmpty();
-            case Bpmn2Package.COLLABORATION__CHOREOGRAPHY_REF:
-                return choreographyRef != null && !choreographyRef.isEmpty();
-            case Bpmn2Package.COLLABORATION__CONVERSATION_LINKS:
-                return conversationLinks != null && !conversationLinks.isEmpty();
-            case Bpmn2Package.COLLABORATION__IS_CLOSED:
-                return isClosed != IS_CLOSED_EDEFAULT;
-            case Bpmn2Package.COLLABORATION__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case Bpmn2Package.COLLABORATION__PARTICIPANTS:
+            return participants != null && !participants.isEmpty();
+        case Bpmn2Package.COLLABORATION__MESSAGE_FLOWS:
+            return messageFlows != null && !messageFlows.isEmpty();
+        case Bpmn2Package.COLLABORATION__ARTIFACTS:
+            return artifacts != null && !artifacts.isEmpty();
+        case Bpmn2Package.COLLABORATION__CONVERSATIONS:
+            return conversations != null && !conversations.isEmpty();
+        case Bpmn2Package.COLLABORATION__CONVERSATION_ASSOCIATIONS:
+            return conversationAssociations != null;
+        case Bpmn2Package.COLLABORATION__PARTICIPANT_ASSOCIATIONS:
+            return participantAssociations != null && !participantAssociations.isEmpty();
+        case Bpmn2Package.COLLABORATION__MESSAGE_FLOW_ASSOCIATIONS:
+            return messageFlowAssociations != null && !messageFlowAssociations.isEmpty();
+        case Bpmn2Package.COLLABORATION__CORRELATION_KEYS:
+            return correlationKeys != null && !correlationKeys.isEmpty();
+        case Bpmn2Package.COLLABORATION__CHOREOGRAPHY_REF:
+            return choreographyRef != null && !choreographyRef.isEmpty();
+        case Bpmn2Package.COLLABORATION__CONVERSATION_LINKS:
+            return conversationLinks != null && !conversationLinks.isEmpty();
+        case Bpmn2Package.COLLABORATION__IS_CLOSED:
+            return isClosed != IS_CLOSED_EDEFAULT;
+        case Bpmn2Package.COLLABORATION__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }

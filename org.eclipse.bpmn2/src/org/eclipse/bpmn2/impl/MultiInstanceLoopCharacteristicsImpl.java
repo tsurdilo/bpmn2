@@ -58,7 +58,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class MultiInstanceLoopCharacteristicsImpl extends LoopCharacteristicsImpl implements MultiInstanceLoopCharacteristics {
+public class MultiInstanceLoopCharacteristicsImpl extends LoopCharacteristicsImpl implements
+        MultiInstanceLoopCharacteristics {
     /**
      * The cached value of the '{@link #getLoopCardinality() <em>Loop Cardinality</em>}' containment reference.
      * <!-- begin-user-doc -->
@@ -222,11 +223,14 @@ public class MultiInstanceLoopCharacteristicsImpl extends LoopCharacteristicsImp
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetLoopCardinality(Expression newLoopCardinality, NotificationChain msgs) {
+    public NotificationChain basicSetLoopCardinality(Expression newLoopCardinality,
+            NotificationChain msgs) {
         Expression oldLoopCardinality = loopCardinality;
         loopCardinality = newLoopCardinality;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY, oldLoopCardinality, newLoopCardinality);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY,
+                    oldLoopCardinality, newLoopCardinality);
             if (msgs == null)
                 msgs = notification;
             else
@@ -244,14 +248,26 @@ public class MultiInstanceLoopCharacteristicsImpl extends LoopCharacteristicsImp
         if (newLoopCardinality != loopCardinality) {
             NotificationChain msgs = null;
             if (loopCardinality != null)
-                msgs = ((InternalEObject)loopCardinality).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY, null, msgs);
+                msgs = ((InternalEObject) loopCardinality)
+                        .eInverseRemove(
+                                this,
+                                EOPPOSITE_FEATURE_BASE
+                                        - Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY,
+                                null, msgs);
             if (newLoopCardinality != null)
-                msgs = ((InternalEObject)newLoopCardinality).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY, null, msgs);
+                msgs = ((InternalEObject) newLoopCardinality)
+                        .eInverseAdd(
+                                this,
+                                EOPPOSITE_FEATURE_BASE
+                                        - Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY,
+                                null, msgs);
             msgs = basicSetLoopCardinality(newLoopCardinality, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY, newLoopCardinality, newLoopCardinality));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY,
+                    newLoopCardinality, newLoopCardinality));
     }
 
     /**
@@ -261,11 +277,13 @@ public class MultiInstanceLoopCharacteristicsImpl extends LoopCharacteristicsImp
      */
     public ItemAwareElement getLoopDataInputRef() {
         if (loopDataInputRef != null && loopDataInputRef.eIsProxy()) {
-            InternalEObject oldLoopDataInputRef = (InternalEObject)loopDataInputRef;
-            loopDataInputRef = (ItemAwareElement)eResolveProxy(oldLoopDataInputRef);
+            InternalEObject oldLoopDataInputRef = (InternalEObject) loopDataInputRef;
+            loopDataInputRef = (ItemAwareElement) eResolveProxy(oldLoopDataInputRef);
             if (loopDataInputRef != oldLoopDataInputRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_INPUT_REF, oldLoopDataInputRef, loopDataInputRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_INPUT_REF,
+                            oldLoopDataInputRef, loopDataInputRef));
             }
         }
         return loopDataInputRef;
@@ -289,7 +307,9 @@ public class MultiInstanceLoopCharacteristicsImpl extends LoopCharacteristicsImp
         ItemAwareElement oldLoopDataInputRef = loopDataInputRef;
         loopDataInputRef = newLoopDataInputRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_INPUT_REF, oldLoopDataInputRef, loopDataInputRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_INPUT_REF,
+                    oldLoopDataInputRef, loopDataInputRef));
     }
 
     /**
@@ -299,11 +319,13 @@ public class MultiInstanceLoopCharacteristicsImpl extends LoopCharacteristicsImp
      */
     public ItemAwareElement getLoopDataOutputRef() {
         if (loopDataOutputRef != null && loopDataOutputRef.eIsProxy()) {
-            InternalEObject oldLoopDataOutputRef = (InternalEObject)loopDataOutputRef;
-            loopDataOutputRef = (ItemAwareElement)eResolveProxy(oldLoopDataOutputRef);
+            InternalEObject oldLoopDataOutputRef = (InternalEObject) loopDataOutputRef;
+            loopDataOutputRef = (ItemAwareElement) eResolveProxy(oldLoopDataOutputRef);
             if (loopDataOutputRef != oldLoopDataOutputRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_OUTPUT_REF, oldLoopDataOutputRef, loopDataOutputRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_OUTPUT_REF,
+                            oldLoopDataOutputRef, loopDataOutputRef));
             }
         }
         return loopDataOutputRef;
@@ -327,7 +349,9 @@ public class MultiInstanceLoopCharacteristicsImpl extends LoopCharacteristicsImp
         ItemAwareElement oldLoopDataOutputRef = loopDataOutputRef;
         loopDataOutputRef = newLoopDataOutputRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_OUTPUT_REF, oldLoopDataOutputRef, loopDataOutputRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_OUTPUT_REF,
+                    oldLoopDataOutputRef, loopDataOutputRef));
     }
 
     /**
@@ -344,11 +368,14 @@ public class MultiInstanceLoopCharacteristicsImpl extends LoopCharacteristicsImp
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetInputDataItem(DataInput newInputDataItem, NotificationChain msgs) {
+    public NotificationChain basicSetInputDataItem(DataInput newInputDataItem,
+            NotificationChain msgs) {
         DataInput oldInputDataItem = inputDataItem;
         inputDataItem = newInputDataItem;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM, oldInputDataItem, newInputDataItem);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM,
+                    oldInputDataItem, newInputDataItem);
             if (msgs == null)
                 msgs = notification;
             else
@@ -366,14 +393,26 @@ public class MultiInstanceLoopCharacteristicsImpl extends LoopCharacteristicsImp
         if (newInputDataItem != inputDataItem) {
             NotificationChain msgs = null;
             if (inputDataItem != null)
-                msgs = ((InternalEObject)inputDataItem).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM, null, msgs);
+                msgs = ((InternalEObject) inputDataItem)
+                        .eInverseRemove(
+                                this,
+                                EOPPOSITE_FEATURE_BASE
+                                        - Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM,
+                                null, msgs);
             if (newInputDataItem != null)
-                msgs = ((InternalEObject)newInputDataItem).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM, null, msgs);
+                msgs = ((InternalEObject) newInputDataItem)
+                        .eInverseAdd(
+                                this,
+                                EOPPOSITE_FEATURE_BASE
+                                        - Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM,
+                                null, msgs);
             msgs = basicSetInputDataItem(newInputDataItem, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM, newInputDataItem, newInputDataItem));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM,
+                    newInputDataItem, newInputDataItem));
     }
 
     /**
@@ -390,11 +429,14 @@ public class MultiInstanceLoopCharacteristicsImpl extends LoopCharacteristicsImp
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetOutputDataItem(DataOutput newOutputDataItem, NotificationChain msgs) {
+    public NotificationChain basicSetOutputDataItem(DataOutput newOutputDataItem,
+            NotificationChain msgs) {
         DataOutput oldOutputDataItem = outputDataItem;
         outputDataItem = newOutputDataItem;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM, oldOutputDataItem, newOutputDataItem);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM,
+                    oldOutputDataItem, newOutputDataItem);
             if (msgs == null)
                 msgs = notification;
             else
@@ -412,14 +454,26 @@ public class MultiInstanceLoopCharacteristicsImpl extends LoopCharacteristicsImp
         if (newOutputDataItem != outputDataItem) {
             NotificationChain msgs = null;
             if (outputDataItem != null)
-                msgs = ((InternalEObject)outputDataItem).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM, null, msgs);
+                msgs = ((InternalEObject) outputDataItem)
+                        .eInverseRemove(
+                                this,
+                                EOPPOSITE_FEATURE_BASE
+                                        - Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM,
+                                null, msgs);
             if (newOutputDataItem != null)
-                msgs = ((InternalEObject)newOutputDataItem).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM, null, msgs);
+                msgs = ((InternalEObject) newOutputDataItem)
+                        .eInverseAdd(
+                                this,
+                                EOPPOSITE_FEATURE_BASE
+                                        - Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM,
+                                null, msgs);
             msgs = basicSetOutputDataItem(newOutputDataItem, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM, newOutputDataItem, newOutputDataItem));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM,
+                    newOutputDataItem, newOutputDataItem));
     }
 
     /**
@@ -429,7 +483,9 @@ public class MultiInstanceLoopCharacteristicsImpl extends LoopCharacteristicsImp
      */
     public List<ComplexBehaviorDefinition> getComplexBehaviorDefinition() {
         if (complexBehaviorDefinition == null) {
-            complexBehaviorDefinition = new EObjectContainmentEList<ComplexBehaviorDefinition>(ComplexBehaviorDefinition.class, this, Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION);
+            complexBehaviorDefinition = new EObjectContainmentEList<ComplexBehaviorDefinition>(
+                    ComplexBehaviorDefinition.class, this,
+                    Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION);
         }
         return complexBehaviorDefinition;
     }
@@ -448,11 +504,14 @@ public class MultiInstanceLoopCharacteristicsImpl extends LoopCharacteristicsImp
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetCompletionCondition(Expression newCompletionCondition, NotificationChain msgs) {
+    public NotificationChain basicSetCompletionCondition(Expression newCompletionCondition,
+            NotificationChain msgs) {
         Expression oldCompletionCondition = completionCondition;
         completionCondition = newCompletionCondition;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION, oldCompletionCondition, newCompletionCondition);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION,
+                    oldCompletionCondition, newCompletionCondition);
             if (msgs == null)
                 msgs = notification;
             else
@@ -470,14 +529,26 @@ public class MultiInstanceLoopCharacteristicsImpl extends LoopCharacteristicsImp
         if (newCompletionCondition != completionCondition) {
             NotificationChain msgs = null;
             if (completionCondition != null)
-                msgs = ((InternalEObject)completionCondition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION, null, msgs);
+                msgs = ((InternalEObject) completionCondition)
+                        .eInverseRemove(
+                                this,
+                                EOPPOSITE_FEATURE_BASE
+                                        - Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION,
+                                null, msgs);
             if (newCompletionCondition != null)
-                msgs = ((InternalEObject)newCompletionCondition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION, null, msgs);
+                msgs = ((InternalEObject) newCompletionCondition)
+                        .eInverseAdd(
+                                this,
+                                EOPPOSITE_FEATURE_BASE
+                                        - Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION,
+                                null, msgs);
             msgs = basicSetCompletionCondition(newCompletionCondition, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION, newCompletionCondition, newCompletionCondition));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION,
+                    newCompletionCondition, newCompletionCondition));
     }
 
     /**
@@ -498,7 +569,9 @@ public class MultiInstanceLoopCharacteristicsImpl extends LoopCharacteristicsImp
         MultiInstanceBehavior oldBehavior = behavior;
         behavior = newBehavior == null ? BEHAVIOR_EDEFAULT : newBehavior;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__BEHAVIOR, oldBehavior, behavior));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__BEHAVIOR, oldBehavior,
+                    behavior));
     }
 
     /**
@@ -519,7 +592,9 @@ public class MultiInstanceLoopCharacteristicsImpl extends LoopCharacteristicsImp
         boolean oldIsSequential = isSequential;
         isSequential = newIsSequential;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__IS_SEQUENTIAL, oldIsSequential, isSequential));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__IS_SEQUENTIAL,
+                    oldIsSequential, isSequential));
     }
 
     /**
@@ -529,11 +604,15 @@ public class MultiInstanceLoopCharacteristicsImpl extends LoopCharacteristicsImp
      */
     public EventDefinition getNoneBehaviorEventRef() {
         if (noneBehaviorEventRef != null && noneBehaviorEventRef.eIsProxy()) {
-            InternalEObject oldNoneBehaviorEventRef = (InternalEObject)noneBehaviorEventRef;
-            noneBehaviorEventRef = (EventDefinition)eResolveProxy(oldNoneBehaviorEventRef);
+            InternalEObject oldNoneBehaviorEventRef = (InternalEObject) noneBehaviorEventRef;
+            noneBehaviorEventRef = (EventDefinition) eResolveProxy(oldNoneBehaviorEventRef);
             if (noneBehaviorEventRef != oldNoneBehaviorEventRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__NONE_BEHAVIOR_EVENT_REF, oldNoneBehaviorEventRef, noneBehaviorEventRef));
+                    eNotify(new ENotificationImpl(
+                            this,
+                            Notification.RESOLVE,
+                            Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__NONE_BEHAVIOR_EVENT_REF,
+                            oldNoneBehaviorEventRef, noneBehaviorEventRef));
             }
         }
         return noneBehaviorEventRef;
@@ -557,7 +636,9 @@ public class MultiInstanceLoopCharacteristicsImpl extends LoopCharacteristicsImp
         EventDefinition oldNoneBehaviorEventRef = noneBehaviorEventRef;
         noneBehaviorEventRef = newNoneBehaviorEventRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__NONE_BEHAVIOR_EVENT_REF, oldNoneBehaviorEventRef, noneBehaviorEventRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__NONE_BEHAVIOR_EVENT_REF,
+                    oldNoneBehaviorEventRef, noneBehaviorEventRef));
     }
 
     /**
@@ -567,11 +648,15 @@ public class MultiInstanceLoopCharacteristicsImpl extends LoopCharacteristicsImp
      */
     public EventDefinition getOneBehaviorEventRef() {
         if (oneBehaviorEventRef != null && oneBehaviorEventRef.eIsProxy()) {
-            InternalEObject oldOneBehaviorEventRef = (InternalEObject)oneBehaviorEventRef;
-            oneBehaviorEventRef = (EventDefinition)eResolveProxy(oldOneBehaviorEventRef);
+            InternalEObject oldOneBehaviorEventRef = (InternalEObject) oneBehaviorEventRef;
+            oneBehaviorEventRef = (EventDefinition) eResolveProxy(oldOneBehaviorEventRef);
             if (oneBehaviorEventRef != oldOneBehaviorEventRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__ONE_BEHAVIOR_EVENT_REF, oldOneBehaviorEventRef, oneBehaviorEventRef));
+                    eNotify(new ENotificationImpl(
+                            this,
+                            Notification.RESOLVE,
+                            Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__ONE_BEHAVIOR_EVENT_REF,
+                            oldOneBehaviorEventRef, oneBehaviorEventRef));
             }
         }
         return oneBehaviorEventRef;
@@ -595,7 +680,9 @@ public class MultiInstanceLoopCharacteristicsImpl extends LoopCharacteristicsImp
         EventDefinition oldOneBehaviorEventRef = oneBehaviorEventRef;
         oneBehaviorEventRef = newOneBehaviorEventRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__ONE_BEHAVIOR_EVENT_REF, oldOneBehaviorEventRef, oneBehaviorEventRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__ONE_BEHAVIOR_EVENT_REF,
+                    oldOneBehaviorEventRef, oneBehaviorEventRef));
     }
 
     /**
@@ -604,18 +691,19 @@ public class MultiInstanceLoopCharacteristicsImpl extends LoopCharacteristicsImp
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY:
-                return basicSetLoopCardinality(null, msgs);
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM:
-                return basicSetInputDataItem(null, msgs);
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM:
-                return basicSetOutputDataItem(null, msgs);
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION:
-                return ((InternalEList<?>)getComplexBehaviorDefinition()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION:
-                return basicSetCompletionCondition(null, msgs);
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY:
+            return basicSetLoopCardinality(null, msgs);
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM:
+            return basicSetInputDataItem(null, msgs);
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM:
+            return basicSetOutputDataItem(null, msgs);
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION:
+            return ((InternalEList<?>) getComplexBehaviorDefinition()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION:
+            return basicSetCompletionCondition(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -628,36 +716,36 @@ public class MultiInstanceLoopCharacteristicsImpl extends LoopCharacteristicsImp
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY:
-                return getLoopCardinality();
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_INPUT_REF:
-                if (resolve)
-                    return getLoopDataInputRef();
-                return basicGetLoopDataInputRef();
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_OUTPUT_REF:
-                if (resolve)
-                    return getLoopDataOutputRef();
-                return basicGetLoopDataOutputRef();
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM:
-                return getInputDataItem();
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM:
-                return getOutputDataItem();
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION:
-                return getComplexBehaviorDefinition();
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION:
-                return getCompletionCondition();
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__BEHAVIOR:
-                return getBehavior();
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__IS_SEQUENTIAL:
-                return isIsSequential();
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__NONE_BEHAVIOR_EVENT_REF:
-                if (resolve)
-                    return getNoneBehaviorEventRef();
-                return basicGetNoneBehaviorEventRef();
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__ONE_BEHAVIOR_EVENT_REF:
-                if (resolve)
-                    return getOneBehaviorEventRef();
-                return basicGetOneBehaviorEventRef();
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY:
+            return getLoopCardinality();
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_INPUT_REF:
+            if (resolve)
+                return getLoopDataInputRef();
+            return basicGetLoopDataInputRef();
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_OUTPUT_REF:
+            if (resolve)
+                return getLoopDataOutputRef();
+            return basicGetLoopDataOutputRef();
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM:
+            return getInputDataItem();
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM:
+            return getOutputDataItem();
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION:
+            return getComplexBehaviorDefinition();
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION:
+            return getCompletionCondition();
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__BEHAVIOR:
+            return getBehavior();
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__IS_SEQUENTIAL:
+            return isIsSequential();
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__NONE_BEHAVIOR_EVENT_REF:
+            if (resolve)
+                return getNoneBehaviorEventRef();
+            return basicGetNoneBehaviorEventRef();
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__ONE_BEHAVIOR_EVENT_REF:
+            if (resolve)
+                return getOneBehaviorEventRef();
+            return basicGetOneBehaviorEventRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -671,40 +759,41 @@ public class MultiInstanceLoopCharacteristicsImpl extends LoopCharacteristicsImp
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY:
-                setLoopCardinality((Expression)newValue);
-                return;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_INPUT_REF:
-                setLoopDataInputRef((ItemAwareElement)newValue);
-                return;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_OUTPUT_REF:
-                setLoopDataOutputRef((ItemAwareElement)newValue);
-                return;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM:
-                setInputDataItem((DataInput)newValue);
-                return;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM:
-                setOutputDataItem((DataOutput)newValue);
-                return;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION:
-                getComplexBehaviorDefinition().clear();
-                getComplexBehaviorDefinition().addAll((Collection<? extends ComplexBehaviorDefinition>)newValue);
-                return;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION:
-                setCompletionCondition((Expression)newValue);
-                return;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__BEHAVIOR:
-                setBehavior((MultiInstanceBehavior)newValue);
-                return;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__IS_SEQUENTIAL:
-                setIsSequential((Boolean)newValue);
-                return;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__NONE_BEHAVIOR_EVENT_REF:
-                setNoneBehaviorEventRef((EventDefinition)newValue);
-                return;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__ONE_BEHAVIOR_EVENT_REF:
-                setOneBehaviorEventRef((EventDefinition)newValue);
-                return;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY:
+            setLoopCardinality((Expression) newValue);
+            return;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_INPUT_REF:
+            setLoopDataInputRef((ItemAwareElement) newValue);
+            return;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_OUTPUT_REF:
+            setLoopDataOutputRef((ItemAwareElement) newValue);
+            return;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM:
+            setInputDataItem((DataInput) newValue);
+            return;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM:
+            setOutputDataItem((DataOutput) newValue);
+            return;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION:
+            getComplexBehaviorDefinition().clear();
+            getComplexBehaviorDefinition().addAll(
+                    (Collection<? extends ComplexBehaviorDefinition>) newValue);
+            return;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION:
+            setCompletionCondition((Expression) newValue);
+            return;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__BEHAVIOR:
+            setBehavior((MultiInstanceBehavior) newValue);
+            return;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__IS_SEQUENTIAL:
+            setIsSequential((Boolean) newValue);
+            return;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__NONE_BEHAVIOR_EVENT_REF:
+            setNoneBehaviorEventRef((EventDefinition) newValue);
+            return;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__ONE_BEHAVIOR_EVENT_REF:
+            setOneBehaviorEventRef((EventDefinition) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -717,39 +806,39 @@ public class MultiInstanceLoopCharacteristicsImpl extends LoopCharacteristicsImp
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY:
-                setLoopCardinality((Expression)null);
-                return;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_INPUT_REF:
-                setLoopDataInputRef((ItemAwareElement)null);
-                return;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_OUTPUT_REF:
-                setLoopDataOutputRef((ItemAwareElement)null);
-                return;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM:
-                setInputDataItem((DataInput)null);
-                return;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM:
-                setOutputDataItem((DataOutput)null);
-                return;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION:
-                getComplexBehaviorDefinition().clear();
-                return;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION:
-                setCompletionCondition((Expression)null);
-                return;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__BEHAVIOR:
-                setBehavior(BEHAVIOR_EDEFAULT);
-                return;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__IS_SEQUENTIAL:
-                setIsSequential(IS_SEQUENTIAL_EDEFAULT);
-                return;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__NONE_BEHAVIOR_EVENT_REF:
-                setNoneBehaviorEventRef((EventDefinition)null);
-                return;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__ONE_BEHAVIOR_EVENT_REF:
-                setOneBehaviorEventRef((EventDefinition)null);
-                return;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY:
+            setLoopCardinality((Expression) null);
+            return;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_INPUT_REF:
+            setLoopDataInputRef((ItemAwareElement) null);
+            return;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_OUTPUT_REF:
+            setLoopDataOutputRef((ItemAwareElement) null);
+            return;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM:
+            setInputDataItem((DataInput) null);
+            return;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM:
+            setOutputDataItem((DataOutput) null);
+            return;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION:
+            getComplexBehaviorDefinition().clear();
+            return;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION:
+            setCompletionCondition((Expression) null);
+            return;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__BEHAVIOR:
+            setBehavior(BEHAVIOR_EDEFAULT);
+            return;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__IS_SEQUENTIAL:
+            setIsSequential(IS_SEQUENTIAL_EDEFAULT);
+            return;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__NONE_BEHAVIOR_EVENT_REF:
+            setNoneBehaviorEventRef((EventDefinition) null);
+            return;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__ONE_BEHAVIOR_EVENT_REF:
+            setOneBehaviorEventRef((EventDefinition) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -762,28 +851,28 @@ public class MultiInstanceLoopCharacteristicsImpl extends LoopCharacteristicsImp
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY:
-                return loopCardinality != null;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_INPUT_REF:
-                return loopDataInputRef != null;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_OUTPUT_REF:
-                return loopDataOutputRef != null;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM:
-                return inputDataItem != null;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM:
-                return outputDataItem != null;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION:
-                return complexBehaviorDefinition != null && !complexBehaviorDefinition.isEmpty();
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION:
-                return completionCondition != null;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__BEHAVIOR:
-                return behavior != BEHAVIOR_EDEFAULT;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__IS_SEQUENTIAL:
-                return isSequential != IS_SEQUENTIAL_EDEFAULT;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__NONE_BEHAVIOR_EVENT_REF:
-                return noneBehaviorEventRef != null;
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__ONE_BEHAVIOR_EVENT_REF:
-                return oneBehaviorEventRef != null;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY:
+            return loopCardinality != null;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_INPUT_REF:
+            return loopDataInputRef != null;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_OUTPUT_REF:
+            return loopDataOutputRef != null;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM:
+            return inputDataItem != null;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM:
+            return outputDataItem != null;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION:
+            return complexBehaviorDefinition != null && !complexBehaviorDefinition.isEmpty();
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION:
+            return completionCondition != null;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__BEHAVIOR:
+            return behavior != BEHAVIOR_EDEFAULT;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__IS_SEQUENTIAL:
+            return isSequential != IS_SEQUENTIAL_EDEFAULT;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__NONE_BEHAVIOR_EVENT_REF:
+            return noneBehaviorEventRef != null;
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__ONE_BEHAVIOR_EVENT_REF:
+            return oneBehaviorEventRef != null;
         }
         return super.eIsSet(featureID);
     }

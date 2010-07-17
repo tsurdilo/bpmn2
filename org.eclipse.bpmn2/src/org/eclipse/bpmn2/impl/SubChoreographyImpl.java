@@ -102,7 +102,8 @@ public class SubChoreographyImpl extends ChoreographyActivityImpl implements Sub
      */
     public List<LaneSet> getLaneSets() {
         if (laneSets == null) {
-            laneSets = new EObjectContainmentEList<LaneSet>(LaneSet.class, this, Bpmn2Package.SUB_CHOREOGRAPHY__LANE_SETS);
+            laneSets = new EObjectContainmentEList<LaneSet>(LaneSet.class, this,
+                    Bpmn2Package.SUB_CHOREOGRAPHY__LANE_SETS);
         }
         return laneSets;
     }
@@ -114,7 +115,8 @@ public class SubChoreographyImpl extends ChoreographyActivityImpl implements Sub
      */
     public List<FlowElement> getFlowElements() {
         if (flowElements == null) {
-            flowElements = new EObjectContainmentEList<FlowElement>(FlowElement.class, this, Bpmn2Package.SUB_CHOREOGRAPHY__FLOW_ELEMENTS);
+            flowElements = new EObjectContainmentEList<FlowElement>(FlowElement.class, this,
+                    Bpmn2Package.SUB_CHOREOGRAPHY__FLOW_ELEMENTS);
         }
         return flowElements;
     }
@@ -126,7 +128,8 @@ public class SubChoreographyImpl extends ChoreographyActivityImpl implements Sub
      */
     public List<Artifact> getArtifacts() {
         if (artifacts == null) {
-            artifacts = new EObjectContainmentEList<Artifact>(Artifact.class, this, Bpmn2Package.SUB_CHOREOGRAPHY__ARTIFACTS);
+            artifacts = new EObjectContainmentEList<Artifact>(Artifact.class, this,
+                    Bpmn2Package.SUB_CHOREOGRAPHY__ARTIFACTS);
         }
         return artifacts;
     }
@@ -137,14 +140,15 @@ public class SubChoreographyImpl extends ChoreographyActivityImpl implements Sub
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.SUB_CHOREOGRAPHY__LANE_SETS:
-                return ((InternalEList<?>)getLaneSets()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.SUB_CHOREOGRAPHY__FLOW_ELEMENTS:
-                return ((InternalEList<?>)getFlowElements()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.SUB_CHOREOGRAPHY__ARTIFACTS:
-                return ((InternalEList<?>)getArtifacts()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.SUB_CHOREOGRAPHY__LANE_SETS:
+            return ((InternalEList<?>) getLaneSets()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.SUB_CHOREOGRAPHY__FLOW_ELEMENTS:
+            return ((InternalEList<?>) getFlowElements()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.SUB_CHOREOGRAPHY__ARTIFACTS:
+            return ((InternalEList<?>) getArtifacts()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -157,12 +161,12 @@ public class SubChoreographyImpl extends ChoreographyActivityImpl implements Sub
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.SUB_CHOREOGRAPHY__LANE_SETS:
-                return getLaneSets();
-            case Bpmn2Package.SUB_CHOREOGRAPHY__FLOW_ELEMENTS:
-                return getFlowElements();
-            case Bpmn2Package.SUB_CHOREOGRAPHY__ARTIFACTS:
-                return getArtifacts();
+        case Bpmn2Package.SUB_CHOREOGRAPHY__LANE_SETS:
+            return getLaneSets();
+        case Bpmn2Package.SUB_CHOREOGRAPHY__FLOW_ELEMENTS:
+            return getFlowElements();
+        case Bpmn2Package.SUB_CHOREOGRAPHY__ARTIFACTS:
+            return getArtifacts();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -176,18 +180,18 @@ public class SubChoreographyImpl extends ChoreographyActivityImpl implements Sub
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.SUB_CHOREOGRAPHY__LANE_SETS:
-                getLaneSets().clear();
-                getLaneSets().addAll((Collection<? extends LaneSet>)newValue);
-                return;
-            case Bpmn2Package.SUB_CHOREOGRAPHY__FLOW_ELEMENTS:
-                getFlowElements().clear();
-                getFlowElements().addAll((Collection<? extends FlowElement>)newValue);
-                return;
-            case Bpmn2Package.SUB_CHOREOGRAPHY__ARTIFACTS:
-                getArtifacts().clear();
-                getArtifacts().addAll((Collection<? extends Artifact>)newValue);
-                return;
+        case Bpmn2Package.SUB_CHOREOGRAPHY__LANE_SETS:
+            getLaneSets().clear();
+            getLaneSets().addAll((Collection<? extends LaneSet>) newValue);
+            return;
+        case Bpmn2Package.SUB_CHOREOGRAPHY__FLOW_ELEMENTS:
+            getFlowElements().clear();
+            getFlowElements().addAll((Collection<? extends FlowElement>) newValue);
+            return;
+        case Bpmn2Package.SUB_CHOREOGRAPHY__ARTIFACTS:
+            getArtifacts().clear();
+            getArtifacts().addAll((Collection<? extends Artifact>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -200,15 +204,15 @@ public class SubChoreographyImpl extends ChoreographyActivityImpl implements Sub
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.SUB_CHOREOGRAPHY__LANE_SETS:
-                getLaneSets().clear();
-                return;
-            case Bpmn2Package.SUB_CHOREOGRAPHY__FLOW_ELEMENTS:
-                getFlowElements().clear();
-                return;
-            case Bpmn2Package.SUB_CHOREOGRAPHY__ARTIFACTS:
-                getArtifacts().clear();
-                return;
+        case Bpmn2Package.SUB_CHOREOGRAPHY__LANE_SETS:
+            getLaneSets().clear();
+            return;
+        case Bpmn2Package.SUB_CHOREOGRAPHY__FLOW_ELEMENTS:
+            getFlowElements().clear();
+            return;
+        case Bpmn2Package.SUB_CHOREOGRAPHY__ARTIFACTS:
+            getArtifacts().clear();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -221,12 +225,12 @@ public class SubChoreographyImpl extends ChoreographyActivityImpl implements Sub
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.SUB_CHOREOGRAPHY__LANE_SETS:
-                return laneSets != null && !laneSets.isEmpty();
-            case Bpmn2Package.SUB_CHOREOGRAPHY__FLOW_ELEMENTS:
-                return flowElements != null && !flowElements.isEmpty();
-            case Bpmn2Package.SUB_CHOREOGRAPHY__ARTIFACTS:
-                return artifacts != null && !artifacts.isEmpty();
+        case Bpmn2Package.SUB_CHOREOGRAPHY__LANE_SETS:
+            return laneSets != null && !laneSets.isEmpty();
+        case Bpmn2Package.SUB_CHOREOGRAPHY__FLOW_ELEMENTS:
+            return flowElements != null && !flowElements.isEmpty();
+        case Bpmn2Package.SUB_CHOREOGRAPHY__ARTIFACTS:
+            return artifacts != null && !artifacts.isEmpty();
         }
         return super.eIsSet(featureID);
     }
@@ -240,12 +244,12 @@ public class SubChoreographyImpl extends ChoreographyActivityImpl implements Sub
     public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == FlowElementsContainer.class) {
             switch (derivedFeatureID) {
-                case Bpmn2Package.SUB_CHOREOGRAPHY__LANE_SETS:
-                    return Bpmn2Package.FLOW_ELEMENTS_CONTAINER__LANE_SETS;
-                case Bpmn2Package.SUB_CHOREOGRAPHY__FLOW_ELEMENTS:
-                    return Bpmn2Package.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS;
-                default:
-                    return -1;
+            case Bpmn2Package.SUB_CHOREOGRAPHY__LANE_SETS:
+                return Bpmn2Package.FLOW_ELEMENTS_CONTAINER__LANE_SETS;
+            case Bpmn2Package.SUB_CHOREOGRAPHY__FLOW_ELEMENTS:
+                return Bpmn2Package.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS;
+            default:
+                return -1;
             }
         }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
@@ -260,12 +264,12 @@ public class SubChoreographyImpl extends ChoreographyActivityImpl implements Sub
     public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == FlowElementsContainer.class) {
             switch (baseFeatureID) {
-                case Bpmn2Package.FLOW_ELEMENTS_CONTAINER__LANE_SETS:
-                    return Bpmn2Package.SUB_CHOREOGRAPHY__LANE_SETS;
-                case Bpmn2Package.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS:
-                    return Bpmn2Package.SUB_CHOREOGRAPHY__FLOW_ELEMENTS;
-                default:
-                    return -1;
+            case Bpmn2Package.FLOW_ELEMENTS_CONTAINER__LANE_SETS:
+                return Bpmn2Package.SUB_CHOREOGRAPHY__LANE_SETS;
+            case Bpmn2Package.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS:
+                return Bpmn2Package.SUB_CHOREOGRAPHY__FLOW_ELEMENTS;
+            default:
+                return -1;
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);

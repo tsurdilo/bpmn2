@@ -93,11 +93,12 @@ public class MessageImpl extends RootElementImpl implements Message {
      */
     public ItemDefinition getItemRef() {
         if (itemRef != null && itemRef.eIsProxy()) {
-            InternalEObject oldItemRef = (InternalEObject)itemRef;
-            itemRef = (ItemDefinition)eResolveProxy(oldItemRef);
+            InternalEObject oldItemRef = (InternalEObject) itemRef;
+            itemRef = (ItemDefinition) eResolveProxy(oldItemRef);
             if (itemRef != oldItemRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.MESSAGE__ITEM_REF, oldItemRef, itemRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.MESSAGE__ITEM_REF, oldItemRef, itemRef));
             }
         }
         return itemRef;
@@ -121,7 +122,8 @@ public class MessageImpl extends RootElementImpl implements Message {
         ItemDefinition oldItemRef = itemRef;
         itemRef = newItemRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.MESSAGE__ITEM_REF, oldItemRef, itemRef));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.MESSAGE__ITEM_REF,
+                    oldItemRef, itemRef));
     }
 
     /**
@@ -142,7 +144,8 @@ public class MessageImpl extends RootElementImpl implements Message {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.MESSAGE__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.MESSAGE__NAME,
+                    oldName, name));
     }
 
     /**
@@ -153,12 +156,12 @@ public class MessageImpl extends RootElementImpl implements Message {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.MESSAGE__ITEM_REF:
-                if (resolve)
-                    return getItemRef();
-                return basicGetItemRef();
-            case Bpmn2Package.MESSAGE__NAME:
-                return getName();
+        case Bpmn2Package.MESSAGE__ITEM_REF:
+            if (resolve)
+                return getItemRef();
+            return basicGetItemRef();
+        case Bpmn2Package.MESSAGE__NAME:
+            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -171,12 +174,12 @@ public class MessageImpl extends RootElementImpl implements Message {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.MESSAGE__ITEM_REF:
-                setItemRef((ItemDefinition)newValue);
-                return;
-            case Bpmn2Package.MESSAGE__NAME:
-                setName((String)newValue);
-                return;
+        case Bpmn2Package.MESSAGE__ITEM_REF:
+            setItemRef((ItemDefinition) newValue);
+            return;
+        case Bpmn2Package.MESSAGE__NAME:
+            setName((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -189,12 +192,12 @@ public class MessageImpl extends RootElementImpl implements Message {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.MESSAGE__ITEM_REF:
-                setItemRef((ItemDefinition)null);
-                return;
-            case Bpmn2Package.MESSAGE__NAME:
-                setName(NAME_EDEFAULT);
-                return;
+        case Bpmn2Package.MESSAGE__ITEM_REF:
+            setItemRef((ItemDefinition) null);
+            return;
+        case Bpmn2Package.MESSAGE__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -207,10 +210,10 @@ public class MessageImpl extends RootElementImpl implements Message {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.MESSAGE__ITEM_REF:
-                return itemRef != null;
-            case Bpmn2Package.MESSAGE__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case Bpmn2Package.MESSAGE__ITEM_REF:
+            return itemRef != null;
+        case Bpmn2Package.MESSAGE__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }

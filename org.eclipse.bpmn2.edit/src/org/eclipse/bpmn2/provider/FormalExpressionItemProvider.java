@@ -38,7 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class FormalExpressionItemProvider extends ExpressionItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class FormalExpressionItemProvider extends ExpressionItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -74,7 +76,15 @@ public class FormalExpressionItemProvider extends ExpressionItemProvider impleme
      * @generated
      */
     protected void addBodyPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_FormalExpression_body_feature"), getString("_UI_PropertyDescriptor_description", "_UI_FormalExpression_body_feature", "_UI_FormalExpression_type"), Bpmn2Package.Literals.FORMAL_EXPRESSION__BODY, true, false, true, null, null, null));
+        itemPropertyDescriptors
+                .add(createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                        getResourceLocator(),
+                        getString("_UI_FormalExpression_body_feature"),
+                        getString("_UI_PropertyDescriptor_description",
+                                "_UI_FormalExpression_body_feature", "_UI_FormalExpression_type"),
+                        Bpmn2Package.Literals.FORMAL_EXPRESSION__BODY, true, false, true, null,
+                        null, null));
     }
 
     /**
@@ -84,7 +94,15 @@ public class FormalExpressionItemProvider extends ExpressionItemProvider impleme
      * @generated
      */
     protected void addEvaluatesToTypeRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_FormalExpression_evaluatesToTypeRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_FormalExpression_evaluatesToTypeRef_feature", "_UI_FormalExpression_type"), Bpmn2Package.Literals.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_FormalExpression_evaluatesToTypeRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_FormalExpression_evaluatesToTypeRef_feature",
+                        "_UI_FormalExpression_type"),
+                Bpmn2Package.Literals.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF, true, false, true,
+                null, null, null));
     }
 
     /**
@@ -94,7 +112,14 @@ public class FormalExpressionItemProvider extends ExpressionItemProvider impleme
      * @generated
      */
     protected void addLanguagePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_FormalExpression_language_feature"), getString("_UI_PropertyDescriptor_description", "_UI_FormalExpression_language_feature", "_UI_FormalExpression_type"), Bpmn2Package.Literals.FORMAL_EXPRESSION__LANGUAGE, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_FormalExpression_language_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_FormalExpression_language_feature", "_UI_FormalExpression_type"),
+                Bpmn2Package.Literals.FORMAL_EXPRESSION__LANGUAGE, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -106,9 +131,11 @@ public class FormalExpressionItemProvider extends ExpressionItemProvider impleme
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/FormalExpression.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/FormalExpression.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/FormalExpression.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/FormalExpression.gif"));
         }
     }
 
@@ -120,8 +147,9 @@ public class FormalExpressionItemProvider extends ExpressionItemProvider impleme
      */
     @Override
     public String getText(Object object) {
-        String label = ((FormalExpression)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_FormalExpression_type") : getString("_UI_FormalExpression_type") + " " + label;
+        String label = ((FormalExpression) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_FormalExpression_type")
+                : getString("_UI_FormalExpression_type") + " " + label;
     }
 
     /**
@@ -136,9 +164,10 @@ public class FormalExpressionItemProvider extends ExpressionItemProvider impleme
         updateChildren(notification);
 
         switch (notification.getFeatureID(FormalExpression.class)) {
-            case Bpmn2Package.FORMAL_EXPRESSION__LANGUAGE:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case Bpmn2Package.FORMAL_EXPRESSION__LANGUAGE:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }

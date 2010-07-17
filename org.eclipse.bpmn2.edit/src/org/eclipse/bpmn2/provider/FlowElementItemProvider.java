@@ -40,7 +40,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class FlowElementItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class FlowElementItemProvider extends BaseElementItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -75,7 +77,14 @@ public class FlowElementItemProvider extends BaseElementItemProvider implements 
      * @generated
      */
     protected void addCategoryValueRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_FlowElement_categoryValueRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_FlowElement_categoryValueRef_feature", "_UI_FlowElement_type"), Bpmn2Package.Literals.FLOW_ELEMENT__CATEGORY_VALUE_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_FlowElement_categoryValueRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_FlowElement_categoryValueRef_feature", "_UI_FlowElement_type"),
+                Bpmn2Package.Literals.FLOW_ELEMENT__CATEGORY_VALUE_REF, true, false, true, null,
+                null, null));
     }
 
     /**
@@ -85,7 +94,13 @@ public class FlowElementItemProvider extends BaseElementItemProvider implements 
      * @generated
      */
     protected void addNamePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_FlowElement_name_feature"), getString("_UI_PropertyDescriptor_description", "_UI_FlowElement_name_feature", "_UI_FlowElement_type"), Bpmn2Package.Literals.FLOW_ELEMENT__NAME, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_FlowElement_name_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_FlowElement_name_feature",
+                        "_UI_FlowElement_type"), Bpmn2Package.Literals.FLOW_ELEMENT__NAME, true,
+                false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -127,8 +142,9 @@ public class FlowElementItemProvider extends BaseElementItemProvider implements 
      */
     @Override
     public String getText(Object object) {
-        String label = ((FlowElement)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_FlowElement_type") : getString("_UI_FlowElement_type") + " " + label;
+        String label = ((FlowElement) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_FlowElement_type")
+                : getString("_UI_FlowElement_type") + " " + label;
     }
 
     /**
@@ -143,13 +159,15 @@ public class FlowElementItemProvider extends BaseElementItemProvider implements 
         updateChildren(notification);
 
         switch (notification.getFeatureID(FlowElement.class)) {
-            case Bpmn2Package.FLOW_ELEMENT__NAME:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
-            case Bpmn2Package.FLOW_ELEMENT__AUDITING:
-            case Bpmn2Package.FLOW_ELEMENT__MONITORING:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case Bpmn2Package.FLOW_ELEMENT__NAME:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
+        case Bpmn2Package.FLOW_ELEMENT__AUDITING:
+        case Bpmn2Package.FLOW_ELEMENT__MONITORING:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -165,9 +183,12 @@ public class FlowElementItemProvider extends BaseElementItemProvider implements 
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENT__AUDITING, Bpmn2Factory.eINSTANCE.createAuditing()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENT__AUDITING,
+                Bpmn2Factory.eINSTANCE.createAuditing()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENT__MONITORING, Bpmn2Factory.eINSTANCE.createMonitoring()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.FLOW_ELEMENT__MONITORING,
+                Bpmn2Factory.eINSTANCE.createMonitoring()));
     }
 
 }

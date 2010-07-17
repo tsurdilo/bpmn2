@@ -151,7 +151,10 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements Co
      */
     public List<ConversationLink> getIncomingConversationLinks() {
         if (incomingConversationLinks == null) {
-            incomingConversationLinks = new EObjectWithInverseEList<ConversationLink>(ConversationLink.class, this, Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS, Bpmn2Package.CONVERSATION_LINK__TARGET_REF);
+            incomingConversationLinks = new EObjectWithInverseEList<ConversationLink>(
+                    ConversationLink.class, this,
+                    Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS,
+                    Bpmn2Package.CONVERSATION_LINK__TARGET_REF);
         }
         return incomingConversationLinks;
     }
@@ -163,7 +166,10 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements Co
      */
     public List<ConversationLink> getOutgoingConversationLinks() {
         if (outgoingConversationLinks == null) {
-            outgoingConversationLinks = new EObjectWithInverseResolvingEList<ConversationLink>(ConversationLink.class, this, Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS, Bpmn2Package.CONVERSATION_LINK__SOURCE_REF);
+            outgoingConversationLinks = new EObjectWithInverseResolvingEList<ConversationLink>(
+                    ConversationLink.class, this,
+                    Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS,
+                    Bpmn2Package.CONVERSATION_LINK__SOURCE_REF);
         }
         return outgoingConversationLinks;
     }
@@ -175,7 +181,8 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements Co
      */
     public List<Participant> getParticipantRefs() {
         if (participantRefs == null) {
-            participantRefs = new EObjectResolvingEList<Participant>(Participant.class, this, Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS);
+            participantRefs = new EObjectResolvingEList<Participant>(Participant.class, this,
+                    Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS);
         }
         return participantRefs;
     }
@@ -187,7 +194,8 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements Co
      */
     public List<MessageFlow> getMessageFlowRefs() {
         if (messageFlowRefs == null) {
-            messageFlowRefs = new EObjectResolvingEList<MessageFlow>(MessageFlow.class, this, Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS);
+            messageFlowRefs = new EObjectResolvingEList<MessageFlow>(MessageFlow.class, this,
+                    Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS);
         }
         return messageFlowRefs;
     }
@@ -199,7 +207,8 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements Co
      */
     public List<CorrelationKey> getCorrelationKeys() {
         if (correlationKeys == null) {
-            correlationKeys = new EObjectContainmentEList<CorrelationKey>(CorrelationKey.class, this, Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS);
+            correlationKeys = new EObjectContainmentEList<CorrelationKey>(CorrelationKey.class,
+                    this, Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS);
         }
         return correlationKeys;
     }
@@ -222,7 +231,8 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements Co
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.CONVERSATION_NODE__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.CONVERSATION_NODE__NAME, oldName, name));
     }
 
     /**
@@ -232,12 +242,15 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements Co
      */
     @SuppressWarnings("unchecked")
     @Override
-    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS:
-                return ((InternalEList<InternalEObject>)(InternalEList<?>)getIncomingConversationLinks()).basicAdd(otherEnd, msgs);
-            case Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS:
-                return ((InternalEList<InternalEObject>)(InternalEList<?>)getOutgoingConversationLinks()).basicAdd(otherEnd, msgs);
+        case Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getIncomingConversationLinks())
+                    .basicAdd(otherEnd, msgs);
+        case Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getOutgoingConversationLinks())
+                    .basicAdd(otherEnd, msgs);
         }
         return super.eInverseAdd(otherEnd, featureID, msgs);
     }
@@ -248,14 +261,15 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements Co
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS:
-                return ((InternalEList<?>)getIncomingConversationLinks()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS:
-                return ((InternalEList<?>)getOutgoingConversationLinks()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS:
-                return ((InternalEList<?>)getCorrelationKeys()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS:
+            return ((InternalEList<?>) getIncomingConversationLinks()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS:
+            return ((InternalEList<?>) getOutgoingConversationLinks()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS:
+            return ((InternalEList<?>) getCorrelationKeys()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -268,18 +282,18 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements Co
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS:
-                return getIncomingConversationLinks();
-            case Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS:
-                return getOutgoingConversationLinks();
-            case Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS:
-                return getParticipantRefs();
-            case Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS:
-                return getMessageFlowRefs();
-            case Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS:
-                return getCorrelationKeys();
-            case Bpmn2Package.CONVERSATION_NODE__NAME:
-                return getName();
+        case Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS:
+            return getIncomingConversationLinks();
+        case Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS:
+            return getOutgoingConversationLinks();
+        case Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS:
+            return getParticipantRefs();
+        case Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS:
+            return getMessageFlowRefs();
+        case Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS:
+            return getCorrelationKeys();
+        case Bpmn2Package.CONVERSATION_NODE__NAME:
+            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -293,29 +307,31 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements Co
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS:
-                getIncomingConversationLinks().clear();
-                getIncomingConversationLinks().addAll((Collection<? extends ConversationLink>)newValue);
-                return;
-            case Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS:
-                getOutgoingConversationLinks().clear();
-                getOutgoingConversationLinks().addAll((Collection<? extends ConversationLink>)newValue);
-                return;
-            case Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS:
-                getParticipantRefs().clear();
-                getParticipantRefs().addAll((Collection<? extends Participant>)newValue);
-                return;
-            case Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS:
-                getMessageFlowRefs().clear();
-                getMessageFlowRefs().addAll((Collection<? extends MessageFlow>)newValue);
-                return;
-            case Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS:
-                getCorrelationKeys().clear();
-                getCorrelationKeys().addAll((Collection<? extends CorrelationKey>)newValue);
-                return;
-            case Bpmn2Package.CONVERSATION_NODE__NAME:
-                setName((String)newValue);
-                return;
+        case Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS:
+            getIncomingConversationLinks().clear();
+            getIncomingConversationLinks()
+                    .addAll((Collection<? extends ConversationLink>) newValue);
+            return;
+        case Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS:
+            getOutgoingConversationLinks().clear();
+            getOutgoingConversationLinks()
+                    .addAll((Collection<? extends ConversationLink>) newValue);
+            return;
+        case Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS:
+            getParticipantRefs().clear();
+            getParticipantRefs().addAll((Collection<? extends Participant>) newValue);
+            return;
+        case Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS:
+            getMessageFlowRefs().clear();
+            getMessageFlowRefs().addAll((Collection<? extends MessageFlow>) newValue);
+            return;
+        case Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS:
+            getCorrelationKeys().clear();
+            getCorrelationKeys().addAll((Collection<? extends CorrelationKey>) newValue);
+            return;
+        case Bpmn2Package.CONVERSATION_NODE__NAME:
+            setName((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -328,24 +344,24 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements Co
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS:
-                getIncomingConversationLinks().clear();
-                return;
-            case Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS:
-                getOutgoingConversationLinks().clear();
-                return;
-            case Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS:
-                getParticipantRefs().clear();
-                return;
-            case Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS:
-                getMessageFlowRefs().clear();
-                return;
-            case Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS:
-                getCorrelationKeys().clear();
-                return;
-            case Bpmn2Package.CONVERSATION_NODE__NAME:
-                setName(NAME_EDEFAULT);
-                return;
+        case Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS:
+            getIncomingConversationLinks().clear();
+            return;
+        case Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS:
+            getOutgoingConversationLinks().clear();
+            return;
+        case Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS:
+            getParticipantRefs().clear();
+            return;
+        case Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS:
+            getMessageFlowRefs().clear();
+            return;
+        case Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS:
+            getCorrelationKeys().clear();
+            return;
+        case Bpmn2Package.CONVERSATION_NODE__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -358,18 +374,18 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements Co
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS:
-                return incomingConversationLinks != null && !incomingConversationLinks.isEmpty();
-            case Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS:
-                return outgoingConversationLinks != null && !outgoingConversationLinks.isEmpty();
-            case Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS:
-                return participantRefs != null && !participantRefs.isEmpty();
-            case Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS:
-                return messageFlowRefs != null && !messageFlowRefs.isEmpty();
-            case Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS:
-                return correlationKeys != null && !correlationKeys.isEmpty();
-            case Bpmn2Package.CONVERSATION_NODE__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS:
+            return incomingConversationLinks != null && !incomingConversationLinks.isEmpty();
+        case Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS:
+            return outgoingConversationLinks != null && !outgoingConversationLinks.isEmpty();
+        case Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS:
+            return participantRefs != null && !participantRefs.isEmpty();
+        case Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS:
+            return messageFlowRefs != null && !messageFlowRefs.isEmpty();
+        case Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS:
+            return correlationKeys != null && !correlationKeys.isEmpty();
+        case Bpmn2Package.CONVERSATION_NODE__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }
@@ -383,12 +399,12 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements Co
     public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == InteractionNode.class) {
             switch (derivedFeatureID) {
-                case Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS:
-                    return Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS;
-                case Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS:
-                    return Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS;
-                default:
-                    return -1;
+            case Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS:
+                return Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS;
+            case Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS:
+                return Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS;
+            default:
+                return -1;
             }
         }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
@@ -403,12 +419,12 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements Co
     public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == InteractionNode.class) {
             switch (baseFeatureID) {
-                case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
-                    return Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS;
-                case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
-                    return Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS;
-                default:
-                    return -1;
+            case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
+                return Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS;
+            case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
+                return Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS;
+            default:
+                return -1;
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);

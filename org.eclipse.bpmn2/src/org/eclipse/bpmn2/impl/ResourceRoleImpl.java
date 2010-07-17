@@ -124,11 +124,12 @@ public class ResourceRoleImpl extends BaseElementImpl implements ResourceRole {
      */
     public Resource getResourceRef() {
         if (resourceRef != null && resourceRef.eIsProxy()) {
-            InternalEObject oldResourceRef = (InternalEObject)resourceRef;
-            resourceRef = (Resource)eResolveProxy(oldResourceRef);
+            InternalEObject oldResourceRef = (InternalEObject) resourceRef;
+            resourceRef = (Resource) eResolveProxy(oldResourceRef);
             if (resourceRef != oldResourceRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.RESOURCE_ROLE__RESOURCE_REF, oldResourceRef, resourceRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.RESOURCE_ROLE__RESOURCE_REF, oldResourceRef, resourceRef));
             }
         }
         return resourceRef;
@@ -152,7 +153,8 @@ public class ResourceRoleImpl extends BaseElementImpl implements ResourceRole {
         Resource oldResourceRef = resourceRef;
         resourceRef = newResourceRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.RESOURCE_ROLE__RESOURCE_REF, oldResourceRef, resourceRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.RESOURCE_ROLE__RESOURCE_REF, oldResourceRef, resourceRef));
     }
 
     /**
@@ -162,7 +164,9 @@ public class ResourceRoleImpl extends BaseElementImpl implements ResourceRole {
      */
     public List<ResourceParameterBinding> getResourceParameterBindings() {
         if (resourceParameterBindings == null) {
-            resourceParameterBindings = new EObjectContainmentEList<ResourceParameterBinding>(ResourceParameterBinding.class, this, Bpmn2Package.RESOURCE_ROLE__RESOURCE_PARAMETER_BINDINGS);
+            resourceParameterBindings = new EObjectContainmentEList<ResourceParameterBinding>(
+                    ResourceParameterBinding.class, this,
+                    Bpmn2Package.RESOURCE_ROLE__RESOURCE_PARAMETER_BINDINGS);
         }
         return resourceParameterBindings;
     }
@@ -181,11 +185,14 @@ public class ResourceRoleImpl extends BaseElementImpl implements ResourceRole {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetResourceAssignmentExpression(ResourceAssignmentExpression newResourceAssignmentExpression, NotificationChain msgs) {
+    public NotificationChain basicSetResourceAssignmentExpression(
+            ResourceAssignmentExpression newResourceAssignmentExpression, NotificationChain msgs) {
         ResourceAssignmentExpression oldResourceAssignmentExpression = resourceAssignmentExpression;
         resourceAssignmentExpression = newResourceAssignmentExpression;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.RESOURCE_ROLE__RESOURCE_ASSIGNMENT_EXPRESSION, oldResourceAssignmentExpression, newResourceAssignmentExpression);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.RESOURCE_ROLE__RESOURCE_ASSIGNMENT_EXPRESSION,
+                    oldResourceAssignmentExpression, newResourceAssignmentExpression);
             if (msgs == null)
                 msgs = notification;
             else
@@ -199,18 +206,27 @@ public class ResourceRoleImpl extends BaseElementImpl implements ResourceRole {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setResourceAssignmentExpression(ResourceAssignmentExpression newResourceAssignmentExpression) {
+    public void setResourceAssignmentExpression(
+            ResourceAssignmentExpression newResourceAssignmentExpression) {
         if (newResourceAssignmentExpression != resourceAssignmentExpression) {
             NotificationChain msgs = null;
             if (resourceAssignmentExpression != null)
-                msgs = ((InternalEObject)resourceAssignmentExpression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.RESOURCE_ROLE__RESOURCE_ASSIGNMENT_EXPRESSION, null, msgs);
+                msgs = ((InternalEObject) resourceAssignmentExpression).eInverseRemove(this,
+                        EOPPOSITE_FEATURE_BASE
+                                - Bpmn2Package.RESOURCE_ROLE__RESOURCE_ASSIGNMENT_EXPRESSION, null,
+                        msgs);
             if (newResourceAssignmentExpression != null)
-                msgs = ((InternalEObject)newResourceAssignmentExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.RESOURCE_ROLE__RESOURCE_ASSIGNMENT_EXPRESSION, null, msgs);
+                msgs = ((InternalEObject) newResourceAssignmentExpression).eInverseAdd(this,
+                        EOPPOSITE_FEATURE_BASE
+                                - Bpmn2Package.RESOURCE_ROLE__RESOURCE_ASSIGNMENT_EXPRESSION, null,
+                        msgs);
             msgs = basicSetResourceAssignmentExpression(newResourceAssignmentExpression, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.RESOURCE_ROLE__RESOURCE_ASSIGNMENT_EXPRESSION, newResourceAssignmentExpression, newResourceAssignmentExpression));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.RESOURCE_ROLE__RESOURCE_ASSIGNMENT_EXPRESSION,
+                    newResourceAssignmentExpression, newResourceAssignmentExpression));
     }
 
     /**
@@ -231,7 +247,8 @@ public class ResourceRoleImpl extends BaseElementImpl implements ResourceRole {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.RESOURCE_ROLE__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.RESOURCE_ROLE__NAME,
+                    oldName, name));
     }
 
     /**
@@ -240,12 +257,13 @@ public class ResourceRoleImpl extends BaseElementImpl implements ResourceRole {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.RESOURCE_ROLE__RESOURCE_PARAMETER_BINDINGS:
-                return ((InternalEList<?>)getResourceParameterBindings()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.RESOURCE_ROLE__RESOURCE_ASSIGNMENT_EXPRESSION:
-                return basicSetResourceAssignmentExpression(null, msgs);
+        case Bpmn2Package.RESOURCE_ROLE__RESOURCE_PARAMETER_BINDINGS:
+            return ((InternalEList<?>) getResourceParameterBindings()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.RESOURCE_ROLE__RESOURCE_ASSIGNMENT_EXPRESSION:
+            return basicSetResourceAssignmentExpression(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -258,16 +276,16 @@ public class ResourceRoleImpl extends BaseElementImpl implements ResourceRole {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.RESOURCE_ROLE__RESOURCE_REF:
-                if (resolve)
-                    return getResourceRef();
-                return basicGetResourceRef();
-            case Bpmn2Package.RESOURCE_ROLE__RESOURCE_PARAMETER_BINDINGS:
-                return getResourceParameterBindings();
-            case Bpmn2Package.RESOURCE_ROLE__RESOURCE_ASSIGNMENT_EXPRESSION:
-                return getResourceAssignmentExpression();
-            case Bpmn2Package.RESOURCE_ROLE__NAME:
-                return getName();
+        case Bpmn2Package.RESOURCE_ROLE__RESOURCE_REF:
+            if (resolve)
+                return getResourceRef();
+            return basicGetResourceRef();
+        case Bpmn2Package.RESOURCE_ROLE__RESOURCE_PARAMETER_BINDINGS:
+            return getResourceParameterBindings();
+        case Bpmn2Package.RESOURCE_ROLE__RESOURCE_ASSIGNMENT_EXPRESSION:
+            return getResourceAssignmentExpression();
+        case Bpmn2Package.RESOURCE_ROLE__NAME:
+            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -281,19 +299,20 @@ public class ResourceRoleImpl extends BaseElementImpl implements ResourceRole {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.RESOURCE_ROLE__RESOURCE_REF:
-                setResourceRef((Resource)newValue);
-                return;
-            case Bpmn2Package.RESOURCE_ROLE__RESOURCE_PARAMETER_BINDINGS:
-                getResourceParameterBindings().clear();
-                getResourceParameterBindings().addAll((Collection<? extends ResourceParameterBinding>)newValue);
-                return;
-            case Bpmn2Package.RESOURCE_ROLE__RESOURCE_ASSIGNMENT_EXPRESSION:
-                setResourceAssignmentExpression((ResourceAssignmentExpression)newValue);
-                return;
-            case Bpmn2Package.RESOURCE_ROLE__NAME:
-                setName((String)newValue);
-                return;
+        case Bpmn2Package.RESOURCE_ROLE__RESOURCE_REF:
+            setResourceRef((Resource) newValue);
+            return;
+        case Bpmn2Package.RESOURCE_ROLE__RESOURCE_PARAMETER_BINDINGS:
+            getResourceParameterBindings().clear();
+            getResourceParameterBindings().addAll(
+                    (Collection<? extends ResourceParameterBinding>) newValue);
+            return;
+        case Bpmn2Package.RESOURCE_ROLE__RESOURCE_ASSIGNMENT_EXPRESSION:
+            setResourceAssignmentExpression((ResourceAssignmentExpression) newValue);
+            return;
+        case Bpmn2Package.RESOURCE_ROLE__NAME:
+            setName((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -306,18 +325,18 @@ public class ResourceRoleImpl extends BaseElementImpl implements ResourceRole {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.RESOURCE_ROLE__RESOURCE_REF:
-                setResourceRef((Resource)null);
-                return;
-            case Bpmn2Package.RESOURCE_ROLE__RESOURCE_PARAMETER_BINDINGS:
-                getResourceParameterBindings().clear();
-                return;
-            case Bpmn2Package.RESOURCE_ROLE__RESOURCE_ASSIGNMENT_EXPRESSION:
-                setResourceAssignmentExpression((ResourceAssignmentExpression)null);
-                return;
-            case Bpmn2Package.RESOURCE_ROLE__NAME:
-                setName(NAME_EDEFAULT);
-                return;
+        case Bpmn2Package.RESOURCE_ROLE__RESOURCE_REF:
+            setResourceRef((Resource) null);
+            return;
+        case Bpmn2Package.RESOURCE_ROLE__RESOURCE_PARAMETER_BINDINGS:
+            getResourceParameterBindings().clear();
+            return;
+        case Bpmn2Package.RESOURCE_ROLE__RESOURCE_ASSIGNMENT_EXPRESSION:
+            setResourceAssignmentExpression((ResourceAssignmentExpression) null);
+            return;
+        case Bpmn2Package.RESOURCE_ROLE__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -330,14 +349,14 @@ public class ResourceRoleImpl extends BaseElementImpl implements ResourceRole {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.RESOURCE_ROLE__RESOURCE_REF:
-                return resourceRef != null;
-            case Bpmn2Package.RESOURCE_ROLE__RESOURCE_PARAMETER_BINDINGS:
-                return resourceParameterBindings != null && !resourceParameterBindings.isEmpty();
-            case Bpmn2Package.RESOURCE_ROLE__RESOURCE_ASSIGNMENT_EXPRESSION:
-                return resourceAssignmentExpression != null;
-            case Bpmn2Package.RESOURCE_ROLE__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case Bpmn2Package.RESOURCE_ROLE__RESOURCE_REF:
+            return resourceRef != null;
+        case Bpmn2Package.RESOURCE_ROLE__RESOURCE_PARAMETER_BINDINGS:
+            return resourceParameterBindings != null && !resourceParameterBindings.isEmpty();
+        case Bpmn2Package.RESOURCE_ROLE__RESOURCE_ASSIGNMENT_EXPRESSION:
+            return resourceAssignmentExpression != null;
+        case Bpmn2Package.RESOURCE_ROLE__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }

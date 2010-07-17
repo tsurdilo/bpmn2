@@ -97,7 +97,8 @@ public class PartnerEntityImpl extends RootElementImpl implements PartnerEntity 
      */
     public List<Participant> getParticipantRef() {
         if (participantRef == null) {
-            participantRef = new EObjectResolvingEList<Participant>(Participant.class, this, Bpmn2Package.PARTNER_ENTITY__PARTICIPANT_REF);
+            participantRef = new EObjectResolvingEList<Participant>(Participant.class, this,
+                    Bpmn2Package.PARTNER_ENTITY__PARTICIPANT_REF);
         }
         return participantRef;
     }
@@ -120,7 +121,8 @@ public class PartnerEntityImpl extends RootElementImpl implements PartnerEntity 
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.PARTNER_ENTITY__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.PARTNER_ENTITY__NAME, oldName, name));
     }
 
     /**
@@ -131,10 +133,10 @@ public class PartnerEntityImpl extends RootElementImpl implements PartnerEntity 
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.PARTNER_ENTITY__PARTICIPANT_REF:
-                return getParticipantRef();
-            case Bpmn2Package.PARTNER_ENTITY__NAME:
-                return getName();
+        case Bpmn2Package.PARTNER_ENTITY__PARTICIPANT_REF:
+            return getParticipantRef();
+        case Bpmn2Package.PARTNER_ENTITY__NAME:
+            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -148,13 +150,13 @@ public class PartnerEntityImpl extends RootElementImpl implements PartnerEntity 
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.PARTNER_ENTITY__PARTICIPANT_REF:
-                getParticipantRef().clear();
-                getParticipantRef().addAll((Collection<? extends Participant>)newValue);
-                return;
-            case Bpmn2Package.PARTNER_ENTITY__NAME:
-                setName((String)newValue);
-                return;
+        case Bpmn2Package.PARTNER_ENTITY__PARTICIPANT_REF:
+            getParticipantRef().clear();
+            getParticipantRef().addAll((Collection<? extends Participant>) newValue);
+            return;
+        case Bpmn2Package.PARTNER_ENTITY__NAME:
+            setName((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -167,12 +169,12 @@ public class PartnerEntityImpl extends RootElementImpl implements PartnerEntity 
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.PARTNER_ENTITY__PARTICIPANT_REF:
-                getParticipantRef().clear();
-                return;
-            case Bpmn2Package.PARTNER_ENTITY__NAME:
-                setName(NAME_EDEFAULT);
-                return;
+        case Bpmn2Package.PARTNER_ENTITY__PARTICIPANT_REF:
+            getParticipantRef().clear();
+            return;
+        case Bpmn2Package.PARTNER_ENTITY__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -185,10 +187,10 @@ public class PartnerEntityImpl extends RootElementImpl implements PartnerEntity 
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.PARTNER_ENTITY__PARTICIPANT_REF:
-                return participantRef != null && !participantRef.isEmpty();
-            case Bpmn2Package.PARTNER_ENTITY__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case Bpmn2Package.PARTNER_ENTITY__PARTICIPANT_REF:
+            return participantRef != null && !participantRef.isEmpty();
+        case Bpmn2Package.PARTNER_ENTITY__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }

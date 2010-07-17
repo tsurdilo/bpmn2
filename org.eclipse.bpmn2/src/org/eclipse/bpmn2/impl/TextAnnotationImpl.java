@@ -112,7 +112,8 @@ public class TextAnnotationImpl extends ArtifactImpl implements TextAnnotation {
         String oldText = text;
         text = newText;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.TEXT_ANNOTATION__TEXT, oldText, text));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.TEXT_ANNOTATION__TEXT, oldText, text));
     }
 
     /**
@@ -133,7 +134,8 @@ public class TextAnnotationImpl extends ArtifactImpl implements TextAnnotation {
         String oldTextFormat = textFormat;
         textFormat = newTextFormat;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.TEXT_ANNOTATION__TEXT_FORMAT, oldTextFormat, textFormat));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.TEXT_ANNOTATION__TEXT_FORMAT, oldTextFormat, textFormat));
     }
 
     /**
@@ -144,10 +146,10 @@ public class TextAnnotationImpl extends ArtifactImpl implements TextAnnotation {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.TEXT_ANNOTATION__TEXT:
-                return getText();
-            case Bpmn2Package.TEXT_ANNOTATION__TEXT_FORMAT:
-                return getTextFormat();
+        case Bpmn2Package.TEXT_ANNOTATION__TEXT:
+            return getText();
+        case Bpmn2Package.TEXT_ANNOTATION__TEXT_FORMAT:
+            return getTextFormat();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -160,12 +162,12 @@ public class TextAnnotationImpl extends ArtifactImpl implements TextAnnotation {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.TEXT_ANNOTATION__TEXT:
-                setText((String)newValue);
-                return;
-            case Bpmn2Package.TEXT_ANNOTATION__TEXT_FORMAT:
-                setTextFormat((String)newValue);
-                return;
+        case Bpmn2Package.TEXT_ANNOTATION__TEXT:
+            setText((String) newValue);
+            return;
+        case Bpmn2Package.TEXT_ANNOTATION__TEXT_FORMAT:
+            setTextFormat((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -178,12 +180,12 @@ public class TextAnnotationImpl extends ArtifactImpl implements TextAnnotation {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.TEXT_ANNOTATION__TEXT:
-                setText(TEXT_EDEFAULT);
-                return;
-            case Bpmn2Package.TEXT_ANNOTATION__TEXT_FORMAT:
-                setTextFormat(TEXT_FORMAT_EDEFAULT);
-                return;
+        case Bpmn2Package.TEXT_ANNOTATION__TEXT:
+            setText(TEXT_EDEFAULT);
+            return;
+        case Bpmn2Package.TEXT_ANNOTATION__TEXT_FORMAT:
+            setTextFormat(TEXT_FORMAT_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -196,10 +198,11 @@ public class TextAnnotationImpl extends ArtifactImpl implements TextAnnotation {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.TEXT_ANNOTATION__TEXT:
-                return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
-            case Bpmn2Package.TEXT_ANNOTATION__TEXT_FORMAT:
-                return TEXT_FORMAT_EDEFAULT == null ? textFormat != null : !TEXT_FORMAT_EDEFAULT.equals(textFormat);
+        case Bpmn2Package.TEXT_ANNOTATION__TEXT:
+            return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
+        case Bpmn2Package.TEXT_ANNOTATION__TEXT_FORMAT:
+            return TEXT_FORMAT_EDEFAULT == null ? textFormat != null : !TEXT_FORMAT_EDEFAULT
+                    .equals(textFormat);
         }
         return super.eIsSet(featureID);
     }

@@ -34,7 +34,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class GlobalManualTaskItemProvider extends GlobalTaskItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class GlobalManualTaskItemProvider extends GlobalTaskItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -69,9 +71,11 @@ public class GlobalManualTaskItemProvider extends GlobalTaskItemProvider impleme
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/GlobalManualTask.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/GlobalManualTask.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/GlobalManualTask.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/GlobalManualTask.gif"));
         }
     }
 
@@ -83,8 +87,9 @@ public class GlobalManualTaskItemProvider extends GlobalTaskItemProvider impleme
      */
     @Override
     public String getText(Object object) {
-        String label = ((GlobalManualTask)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_GlobalManualTask_type") : getString("_UI_GlobalManualTask_type") + " " + label;
+        String label = ((GlobalManualTask) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_GlobalManualTask_type")
+                : getString("_UI_GlobalManualTask_type") + " " + label;
     }
 
     /**

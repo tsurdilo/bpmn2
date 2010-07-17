@@ -34,7 +34,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EndEventItemProvider extends ThrowEventItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class EndEventItemProvider extends ThrowEventItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -83,8 +85,9 @@ public class EndEventItemProvider extends ThrowEventItemProvider implements IEdi
      */
     @Override
     public String getText(Object object) {
-        String label = ((EndEvent)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_EndEvent_type") : getString("_UI_EndEvent_type") + " " + label;
+        String label = ((EndEvent) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_EndEvent_type")
+                : getString("_UI_EndEvent_type") + " " + label;
     }
 
     /**

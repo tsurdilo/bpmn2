@@ -39,7 +39,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ComplexGatewayItemProvider extends GatewayItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ComplexGatewayItemProvider extends GatewayItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -73,7 +75,15 @@ public class ComplexGatewayItemProvider extends GatewayItemProvider implements I
      * @generated
      */
     protected void addDefaultPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_ComplexGateway_default_feature"), getString("_UI_PropertyDescriptor_description", "_UI_ComplexGateway_default_feature", "_UI_ComplexGateway_type"), Bpmn2Package.Literals.COMPLEX_GATEWAY__DEFAULT, true, false, true, null, null, null));
+        itemPropertyDescriptors
+                .add(createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                        getResourceLocator(),
+                        getString("_UI_ComplexGateway_default_feature"),
+                        getString("_UI_PropertyDescriptor_description",
+                                "_UI_ComplexGateway_default_feature", "_UI_ComplexGateway_type"),
+                        Bpmn2Package.Literals.COMPLEX_GATEWAY__DEFAULT, true, false, true, null,
+                        null, null));
     }
 
     /**
@@ -115,9 +125,11 @@ public class ComplexGatewayItemProvider extends GatewayItemProvider implements I
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/ComplexGateway.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/ComplexGateway.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/ComplexGateway.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/ComplexGateway.gif"));
         }
     }
 
@@ -129,8 +141,9 @@ public class ComplexGatewayItemProvider extends GatewayItemProvider implements I
      */
     @Override
     public String getText(Object object) {
-        String label = ((ComplexGateway)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_ComplexGateway_type") : getString("_UI_ComplexGateway_type") + " " + label;
+        String label = ((ComplexGateway) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_ComplexGateway_type")
+                : getString("_UI_ComplexGateway_type") + " " + label;
     }
 
     /**
@@ -145,9 +158,10 @@ public class ComplexGatewayItemProvider extends GatewayItemProvider implements I
         updateChildren(notification);
 
         switch (notification.getFeatureID(ComplexGateway.class)) {
-            case Bpmn2Package.COMPLEX_GATEWAY__ACTIVATION_CONDITION:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case Bpmn2Package.COMPLEX_GATEWAY__ACTIVATION_CONDITION:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -163,9 +177,13 @@ public class ComplexGatewayItemProvider extends GatewayItemProvider implements I
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.COMPLEX_GATEWAY__ACTIVATION_CONDITION, Bpmn2Factory.eINSTANCE.createExpression()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.COMPLEX_GATEWAY__ACTIVATION_CONDITION,
+                Bpmn2Factory.eINSTANCE.createExpression()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.COMPLEX_GATEWAY__ACTIVATION_CONDITION, Bpmn2Factory.eINSTANCE.createFormalExpression()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.COMPLEX_GATEWAY__ACTIVATION_CONDITION,
+                Bpmn2Factory.eINSTANCE.createFormalExpression()));
     }
 
 }

@@ -125,7 +125,8 @@ public abstract class CallableElementImpl extends RootElementImpl implements Cal
      */
     public List<Interface> getSupportedInterfaceRefs() {
         if (supportedInterfaceRefs == null) {
-            supportedInterfaceRefs = new EObjectResolvingEList<Interface>(Interface.class, this, Bpmn2Package.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS);
+            supportedInterfaceRefs = new EObjectResolvingEList<Interface>(Interface.class, this,
+                    Bpmn2Package.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS);
         }
         return supportedInterfaceRefs;
     }
@@ -144,11 +145,14 @@ public abstract class CallableElementImpl extends RootElementImpl implements Cal
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetIoSpecification(InputOutputSpecification newIoSpecification, NotificationChain msgs) {
+    public NotificationChain basicSetIoSpecification(InputOutputSpecification newIoSpecification,
+            NotificationChain msgs) {
         InputOutputSpecification oldIoSpecification = ioSpecification;
         ioSpecification = newIoSpecification;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION, oldIoSpecification, newIoSpecification);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION, oldIoSpecification,
+                    newIoSpecification);
             if (msgs == null)
                 msgs = notification;
             else
@@ -166,14 +170,20 @@ public abstract class CallableElementImpl extends RootElementImpl implements Cal
         if (newIoSpecification != ioSpecification) {
             NotificationChain msgs = null;
             if (ioSpecification != null)
-                msgs = ((InternalEObject)ioSpecification).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION, null, msgs);
+                msgs = ((InternalEObject) ioSpecification).eInverseRemove(this,
+                        EOPPOSITE_FEATURE_BASE - Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION,
+                        null, msgs);
             if (newIoSpecification != null)
-                msgs = ((InternalEObject)newIoSpecification).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION, null, msgs);
+                msgs = ((InternalEObject) newIoSpecification).eInverseAdd(this,
+                        EOPPOSITE_FEATURE_BASE - Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION,
+                        null, msgs);
             msgs = basicSetIoSpecification(newIoSpecification, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION, newIoSpecification, newIoSpecification));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION, newIoSpecification,
+                    newIoSpecification));
     }
 
     /**
@@ -183,7 +193,8 @@ public abstract class CallableElementImpl extends RootElementImpl implements Cal
      */
     public List<InputOutputBinding> getIoBinding() {
         if (ioBinding == null) {
-            ioBinding = new EObjectContainmentEList<InputOutputBinding>(InputOutputBinding.class, this, Bpmn2Package.CALLABLE_ELEMENT__IO_BINDING);
+            ioBinding = new EObjectContainmentEList<InputOutputBinding>(InputOutputBinding.class,
+                    this, Bpmn2Package.CALLABLE_ELEMENT__IO_BINDING);
         }
         return ioBinding;
     }
@@ -206,7 +217,8 @@ public abstract class CallableElementImpl extends RootElementImpl implements Cal
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.CALLABLE_ELEMENT__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.CALLABLE_ELEMENT__NAME, oldName, name));
     }
 
     /**
@@ -215,12 +227,13 @@ public abstract class CallableElementImpl extends RootElementImpl implements Cal
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION:
-                return basicSetIoSpecification(null, msgs);
-            case Bpmn2Package.CALLABLE_ELEMENT__IO_BINDING:
-                return ((InternalEList<?>)getIoBinding()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION:
+            return basicSetIoSpecification(null, msgs);
+        case Bpmn2Package.CALLABLE_ELEMENT__IO_BINDING:
+            return ((InternalEList<?>) getIoBinding()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -233,14 +246,14 @@ public abstract class CallableElementImpl extends RootElementImpl implements Cal
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS:
-                return getSupportedInterfaceRefs();
-            case Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION:
-                return getIoSpecification();
-            case Bpmn2Package.CALLABLE_ELEMENT__IO_BINDING:
-                return getIoBinding();
-            case Bpmn2Package.CALLABLE_ELEMENT__NAME:
-                return getName();
+        case Bpmn2Package.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS:
+            return getSupportedInterfaceRefs();
+        case Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION:
+            return getIoSpecification();
+        case Bpmn2Package.CALLABLE_ELEMENT__IO_BINDING:
+            return getIoBinding();
+        case Bpmn2Package.CALLABLE_ELEMENT__NAME:
+            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -254,20 +267,20 @@ public abstract class CallableElementImpl extends RootElementImpl implements Cal
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS:
-                getSupportedInterfaceRefs().clear();
-                getSupportedInterfaceRefs().addAll((Collection<? extends Interface>)newValue);
-                return;
-            case Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION:
-                setIoSpecification((InputOutputSpecification)newValue);
-                return;
-            case Bpmn2Package.CALLABLE_ELEMENT__IO_BINDING:
-                getIoBinding().clear();
-                getIoBinding().addAll((Collection<? extends InputOutputBinding>)newValue);
-                return;
-            case Bpmn2Package.CALLABLE_ELEMENT__NAME:
-                setName((String)newValue);
-                return;
+        case Bpmn2Package.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS:
+            getSupportedInterfaceRefs().clear();
+            getSupportedInterfaceRefs().addAll((Collection<? extends Interface>) newValue);
+            return;
+        case Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION:
+            setIoSpecification((InputOutputSpecification) newValue);
+            return;
+        case Bpmn2Package.CALLABLE_ELEMENT__IO_BINDING:
+            getIoBinding().clear();
+            getIoBinding().addAll((Collection<? extends InputOutputBinding>) newValue);
+            return;
+        case Bpmn2Package.CALLABLE_ELEMENT__NAME:
+            setName((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -280,18 +293,18 @@ public abstract class CallableElementImpl extends RootElementImpl implements Cal
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS:
-                getSupportedInterfaceRefs().clear();
-                return;
-            case Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION:
-                setIoSpecification((InputOutputSpecification)null);
-                return;
-            case Bpmn2Package.CALLABLE_ELEMENT__IO_BINDING:
-                getIoBinding().clear();
-                return;
-            case Bpmn2Package.CALLABLE_ELEMENT__NAME:
-                setName(NAME_EDEFAULT);
-                return;
+        case Bpmn2Package.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS:
+            getSupportedInterfaceRefs().clear();
+            return;
+        case Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION:
+            setIoSpecification((InputOutputSpecification) null);
+            return;
+        case Bpmn2Package.CALLABLE_ELEMENT__IO_BINDING:
+            getIoBinding().clear();
+            return;
+        case Bpmn2Package.CALLABLE_ELEMENT__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -304,14 +317,14 @@ public abstract class CallableElementImpl extends RootElementImpl implements Cal
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS:
-                return supportedInterfaceRefs != null && !supportedInterfaceRefs.isEmpty();
-            case Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION:
-                return ioSpecification != null;
-            case Bpmn2Package.CALLABLE_ELEMENT__IO_BINDING:
-                return ioBinding != null && !ioBinding.isEmpty();
-            case Bpmn2Package.CALLABLE_ELEMENT__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case Bpmn2Package.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS:
+            return supportedInterfaceRefs != null && !supportedInterfaceRefs.isEmpty();
+        case Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION:
+            return ioSpecification != null;
+        case Bpmn2Package.CALLABLE_ELEMENT__IO_BINDING:
+            return ioBinding != null && !ioBinding.isEmpty();
+        case Bpmn2Package.CALLABLE_ELEMENT__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }

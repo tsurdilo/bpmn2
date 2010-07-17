@@ -38,7 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class OutputSetItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class OutputSetItemProvider extends BaseElementItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -76,7 +78,14 @@ public class OutputSetItemProvider extends BaseElementItemProvider implements IE
      * @generated
      */
     protected void addDataOutputRefsPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_OutputSet_dataOutputRefs_feature"), getString("_UI_PropertyDescriptor_description", "_UI_OutputSet_dataOutputRefs_feature", "_UI_OutputSet_type"), Bpmn2Package.Literals.OUTPUT_SET__DATA_OUTPUT_REFS, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_OutputSet_dataOutputRefs_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_OutputSet_dataOutputRefs_feature", "_UI_OutputSet_type"),
+                Bpmn2Package.Literals.OUTPUT_SET__DATA_OUTPUT_REFS, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -86,7 +95,14 @@ public class OutputSetItemProvider extends BaseElementItemProvider implements IE
      * @generated
      */
     protected void addOptionalOutputRefsPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_OutputSet_optionalOutputRefs_feature"), getString("_UI_PropertyDescriptor_description", "_UI_OutputSet_optionalOutputRefs_feature", "_UI_OutputSet_type"), Bpmn2Package.Literals.OUTPUT_SET__OPTIONAL_OUTPUT_REFS, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_OutputSet_optionalOutputRefs_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_OutputSet_optionalOutputRefs_feature", "_UI_OutputSet_type"),
+                Bpmn2Package.Literals.OUTPUT_SET__OPTIONAL_OUTPUT_REFS, true, false, true, null,
+                null, null));
     }
 
     /**
@@ -96,7 +112,14 @@ public class OutputSetItemProvider extends BaseElementItemProvider implements IE
      * @generated
      */
     protected void addWhileExecutingOutputRefsPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_OutputSet_whileExecutingOutputRefs_feature"), getString("_UI_PropertyDescriptor_description", "_UI_OutputSet_whileExecutingOutputRefs_feature", "_UI_OutputSet_type"), Bpmn2Package.Literals.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_OutputSet_whileExecutingOutputRefs_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_OutputSet_whileExecutingOutputRefs_feature", "_UI_OutputSet_type"),
+                Bpmn2Package.Literals.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS, true, false, true,
+                null, null, null));
     }
 
     /**
@@ -106,7 +129,14 @@ public class OutputSetItemProvider extends BaseElementItemProvider implements IE
      * @generated
      */
     protected void addInputSetRefsPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_OutputSet_inputSetRefs_feature"), getString("_UI_PropertyDescriptor_description", "_UI_OutputSet_inputSetRefs_feature", "_UI_OutputSet_type"), Bpmn2Package.Literals.OUTPUT_SET__INPUT_SET_REFS, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_OutputSet_inputSetRefs_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_OutputSet_inputSetRefs_feature", "_UI_OutputSet_type"),
+                Bpmn2Package.Literals.OUTPUT_SET__INPUT_SET_REFS, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -116,7 +146,13 @@ public class OutputSetItemProvider extends BaseElementItemProvider implements IE
      * @generated
      */
     protected void addNamePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_OutputSet_name_feature"), getString("_UI_PropertyDescriptor_description", "_UI_OutputSet_name_feature", "_UI_OutputSet_type"), Bpmn2Package.Literals.OUTPUT_SET__NAME, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_OutputSet_name_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_OutputSet_name_feature",
+                        "_UI_OutputSet_type"), Bpmn2Package.Literals.OUTPUT_SET__NAME, true, false,
+                false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -142,8 +178,9 @@ public class OutputSetItemProvider extends BaseElementItemProvider implements IE
      */
     @Override
     public String getText(Object object) {
-        String label = ((OutputSet)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_OutputSet_type") : getString("_UI_OutputSet_type") + " " + label;
+        String label = ((OutputSet) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_OutputSet_type")
+                : getString("_UI_OutputSet_type") + " " + label;
     }
 
     /**
@@ -158,9 +195,10 @@ public class OutputSetItemProvider extends BaseElementItemProvider implements IE
         updateChildren(notification);
 
         switch (notification.getFeatureID(OutputSet.class)) {
-            case Bpmn2Package.OUTPUT_SET__NAME:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case Bpmn2Package.OUTPUT_SET__NAME:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }

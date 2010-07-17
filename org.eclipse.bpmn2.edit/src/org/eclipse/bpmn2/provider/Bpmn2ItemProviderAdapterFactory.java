@@ -43,7 +43,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
+public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory implements
+        ComposeableAdapterFactory, IChangeNotifier, IDisposable {
     /**
      * This keeps track of the root adapter factory that delegates to this adapter factory.
      * <!-- begin-user-doc -->
@@ -536,7 +537,8 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory impleme
     @Override
     public Adapter createConditionalEventDefinitionAdapter() {
         if (conditionalEventDefinitionItemProvider == null) {
-            conditionalEventDefinitionItemProvider = new ConditionalEventDefinitionItemProvider(this);
+            conditionalEventDefinitionItemProvider = new ConditionalEventDefinitionItemProvider(
+                    this);
         }
 
         return conditionalEventDefinitionItemProvider;
@@ -674,7 +676,8 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory impleme
     @Override
     public Adapter createCorrelationPropertyBindingAdapter() {
         if (correlationPropertyBindingItemProvider == null) {
-            correlationPropertyBindingItemProvider = new CorrelationPropertyBindingItemProvider(this);
+            correlationPropertyBindingItemProvider = new CorrelationPropertyBindingItemProvider(
+                    this);
         }
 
         return correlationPropertyBindingItemProvider;
@@ -697,7 +700,8 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory impleme
     @Override
     public Adapter createCorrelationPropertyRetrievalExpressionAdapter() {
         if (correlationPropertyRetrievalExpressionItemProvider == null) {
-            correlationPropertyRetrievalExpressionItemProvider = new CorrelationPropertyRetrievalExpressionItemProvider(this);
+            correlationPropertyRetrievalExpressionItemProvider = new CorrelationPropertyRetrievalExpressionItemProvider(
+                    this);
         }
 
         return correlationPropertyRetrievalExpressionItemProvider;
@@ -1249,7 +1253,8 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory impleme
     @Override
     public Adapter createExtensionAttributeDefinitionAdapter() {
         if (extensionAttributeDefinitionItemProvider == null) {
-            extensionAttributeDefinitionItemProvider = new ExtensionAttributeDefinitionItemProvider(this);
+            extensionAttributeDefinitionItemProvider = new ExtensionAttributeDefinitionItemProvider(
+                    this);
         }
 
         return extensionAttributeDefinitionItemProvider;
@@ -2008,7 +2013,8 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory impleme
     @Override
     public Adapter createMultiInstanceLoopCharacteristicsAdapter() {
         if (multiInstanceLoopCharacteristicsItemProvider == null) {
-            multiInstanceLoopCharacteristicsItemProvider = new MultiInstanceLoopCharacteristicsItemProvider(this);
+            multiInstanceLoopCharacteristicsItemProvider = new MultiInstanceLoopCharacteristicsItemProvider(
+                    this);
         }
 
         return multiInstanceLoopCharacteristicsItemProvider;
@@ -2399,7 +2405,8 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory impleme
     @Override
     public Adapter createResourceAssignmentExpressionAdapter() {
         if (resourceAssignmentExpressionItemProvider == null) {
-            resourceAssignmentExpressionItemProvider = new ResourceAssignmentExpressionItemProvider(this);
+            resourceAssignmentExpressionItemProvider = new ResourceAssignmentExpressionItemProvider(
+                    this);
         }
 
         return resourceAssignmentExpressionItemProvider;
@@ -2629,7 +2636,8 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory impleme
     @Override
     public Adapter createStandardLoopCharacteristicsAdapter() {
         if (standardLoopCharacteristicsItemProvider == null) {
-            standardLoopCharacteristicsItemProvider = new StandardLoopCharacteristicsItemProvider(this);
+            standardLoopCharacteristicsItemProvider = new StandardLoopCharacteristicsItemProvider(
+                    this);
         }
 
         return standardLoopCharacteristicsItemProvider;
@@ -2915,7 +2923,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory impleme
     public Object adapt(Object object, Object type) {
         if (isFactoryForType(type)) {
             Object adapter = super.adapt(object, type);
-            if (!(type instanceof Class<?>) || (((Class<?>)type).isInstance(adapter))) {
+            if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
                 return adapter;
             }
         }

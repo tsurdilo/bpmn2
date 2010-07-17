@@ -112,7 +112,8 @@ public class GlobalScriptTaskImpl extends GlobalTaskImpl implements GlobalScript
         String oldScript = script;
         script = newScript;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT, oldScript, script));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT, oldScript, script));
     }
 
     /**
@@ -133,7 +134,9 @@ public class GlobalScriptTaskImpl extends GlobalTaskImpl implements GlobalScript
         String oldScriptLanguage = scriptLanguage;
         scriptLanguage = newScriptLanguage;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE, oldScriptLanguage, scriptLanguage));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE, oldScriptLanguage,
+                    scriptLanguage));
     }
 
     /**
@@ -144,10 +147,10 @@ public class GlobalScriptTaskImpl extends GlobalTaskImpl implements GlobalScript
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT:
-                return getScript();
-            case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE:
-                return getScriptLanguage();
+        case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT:
+            return getScript();
+        case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE:
+            return getScriptLanguage();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -160,12 +163,12 @@ public class GlobalScriptTaskImpl extends GlobalTaskImpl implements GlobalScript
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT:
-                setScript((String)newValue);
-                return;
-            case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE:
-                setScriptLanguage((String)newValue);
-                return;
+        case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT:
+            setScript((String) newValue);
+            return;
+        case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE:
+            setScriptLanguage((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -178,12 +181,12 @@ public class GlobalScriptTaskImpl extends GlobalTaskImpl implements GlobalScript
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT:
-                setScript(SCRIPT_EDEFAULT);
-                return;
-            case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE:
-                setScriptLanguage(SCRIPT_LANGUAGE_EDEFAULT);
-                return;
+        case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT:
+            setScript(SCRIPT_EDEFAULT);
+            return;
+        case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE:
+            setScriptLanguage(SCRIPT_LANGUAGE_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -196,10 +199,11 @@ public class GlobalScriptTaskImpl extends GlobalTaskImpl implements GlobalScript
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT:
-                return SCRIPT_EDEFAULT == null ? script != null : !SCRIPT_EDEFAULT.equals(script);
-            case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE:
-                return SCRIPT_LANGUAGE_EDEFAULT == null ? scriptLanguage != null : !SCRIPT_LANGUAGE_EDEFAULT.equals(scriptLanguage);
+        case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT:
+            return SCRIPT_EDEFAULT == null ? script != null : !SCRIPT_EDEFAULT.equals(script);
+        case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE:
+            return SCRIPT_LANGUAGE_EDEFAULT == null ? scriptLanguage != null
+                    : !SCRIPT_LANGUAGE_EDEFAULT.equals(scriptLanguage);
         }
         return super.eIsSet(featureID);
     }

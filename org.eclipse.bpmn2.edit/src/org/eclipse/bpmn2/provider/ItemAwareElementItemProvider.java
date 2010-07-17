@@ -39,7 +39,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ItemAwareElementItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ItemAwareElementItemProvider extends BaseElementItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -73,7 +75,16 @@ public class ItemAwareElementItemProvider extends BaseElementItemProvider implem
      * @generated
      */
     protected void addItemSubjectRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_ItemAwareElement_itemSubjectRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_ItemAwareElement_itemSubjectRef_feature", "_UI_ItemAwareElement_type"), Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors
+                .add(createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                        getResourceLocator(),
+                        getString("_UI_ItemAwareElement_itemSubjectRef_feature"),
+                        getString("_UI_PropertyDescriptor_description",
+                                "_UI_ItemAwareElement_itemSubjectRef_feature",
+                                "_UI_ItemAwareElement_type"),
+                        Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF, true, false,
+                        true, null, null, null));
     }
 
     /**
@@ -115,9 +126,11 @@ public class ItemAwareElementItemProvider extends BaseElementItemProvider implem
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/ItemAwareElement.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/ItemAwareElement.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/ItemAwareElement.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/ItemAwareElement.gif"));
         }
     }
 
@@ -129,8 +142,9 @@ public class ItemAwareElementItemProvider extends BaseElementItemProvider implem
      */
     @Override
     public String getText(Object object) {
-        String label = ((ItemAwareElement)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_ItemAwareElement_type") : getString("_UI_ItemAwareElement_type") + " " + label;
+        String label = ((ItemAwareElement) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_ItemAwareElement_type")
+                : getString("_UI_ItemAwareElement_type") + " " + label;
     }
 
     /**
@@ -145,9 +159,10 @@ public class ItemAwareElementItemProvider extends BaseElementItemProvider implem
         updateChildren(notification);
 
         switch (notification.getFeatureID(ItemAwareElement.class)) {
-            case Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -163,7 +178,9 @@ public class ItemAwareElementItemProvider extends BaseElementItemProvider implem
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__DATA_STATE, Bpmn2Factory.eINSTANCE.createDataState()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__DATA_STATE,
+                Bpmn2Factory.eINSTANCE.createDataState()));
     }
 
 }

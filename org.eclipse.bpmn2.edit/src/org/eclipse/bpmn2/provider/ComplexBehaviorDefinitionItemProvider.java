@@ -38,7 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ComplexBehaviorDefinitionItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ComplexBehaviorDefinitionItemProvider extends BaseElementItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -104,9 +106,11 @@ public class ComplexBehaviorDefinitionItemProvider extends BaseElementItemProvid
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/ComplexBehaviorDefinition.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/ComplexBehaviorDefinition.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/ComplexBehaviorDefinition.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/ComplexBehaviorDefinition.gif"));
         }
     }
 
@@ -118,8 +122,9 @@ public class ComplexBehaviorDefinitionItemProvider extends BaseElementItemProvid
      */
     @Override
     public String getText(Object object) {
-        String label = ((ComplexBehaviorDefinition)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_ComplexBehaviorDefinition_type") : getString("_UI_ComplexBehaviorDefinition_type") + " " + label;
+        String label = ((ComplexBehaviorDefinition) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_ComplexBehaviorDefinition_type")
+                : getString("_UI_ComplexBehaviorDefinition_type") + " " + label;
     }
 
     /**
@@ -134,10 +139,11 @@ public class ComplexBehaviorDefinitionItemProvider extends BaseElementItemProvid
         updateChildren(notification);
 
         switch (notification.getFeatureID(ComplexBehaviorDefinition.class)) {
-            case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION:
-            case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION:
+        case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -153,9 +159,13 @@ public class ComplexBehaviorDefinitionItemProvider extends BaseElementItemProvid
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__CONDITION, Bpmn2Factory.eINSTANCE.createFormalExpression()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__CONDITION,
+                Bpmn2Factory.eINSTANCE.createFormalExpression()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__EVENT, Bpmn2Factory.eINSTANCE.createImplicitThrowEvent()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__EVENT,
+                Bpmn2Factory.eINSTANCE.createImplicitThrowEvent()));
     }
 
 }

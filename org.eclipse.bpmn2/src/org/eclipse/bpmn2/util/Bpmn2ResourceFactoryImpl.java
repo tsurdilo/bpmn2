@@ -60,23 +60,27 @@ public class Bpmn2ResourceFactoryImpl extends ResourceFactoryImpl {
         result.getDefaultSaveOptions().put(XMLResource.OPTION_EXTENDED_META_DATA, extendedMetadata);
         result.getDefaultLoadOptions().put(XMLResource.OPTION_EXTENDED_META_DATA, extendedMetadata);
 
-        result.getDefaultSaveOptions().put(XMLResource.OPTION_SAVE_TYPE_INFORMATION, new OnlyContainmentTypeInfo());
+        result.getDefaultSaveOptions().put(XMLResource.OPTION_SAVE_TYPE_INFORMATION,
+                new OnlyContainmentTypeInfo());
 
-        result.getDefaultLoadOptions().put(XMLResource.OPTION_USE_ENCODED_ATTRIBUTE_STYLE, Boolean.TRUE);
-        result.getDefaultSaveOptions().put(XMLResource.OPTION_USE_ENCODED_ATTRIBUTE_STYLE, Boolean.TRUE);
+        result.getDefaultLoadOptions().put(XMLResource.OPTION_USE_ENCODED_ATTRIBUTE_STYLE,
+                Boolean.TRUE);
+        result.getDefaultSaveOptions().put(XMLResource.OPTION_USE_ENCODED_ATTRIBUTE_STYLE,
+                Boolean.TRUE);
 
         result.getDefaultLoadOptions().put(XMLResource.OPTION_USE_LEXICAL_HANDLER, Boolean.TRUE);
 
         result.getDefaultLoadOptions().put(XMLResource.OPTION_URI_HANDLER, new QNameURIHandler());
         result.getDefaultSaveOptions().put(XMLResource.OPTION_URI_HANDLER, new QNameURIHandler());
 
-        result.getDefaultSaveOptions().put(XMLResource.OPTION_ELEMENT_HANDLER, new ElementHandlerImpl(true));
-        
+        result.getDefaultSaveOptions().put(XMLResource.OPTION_ELEMENT_HANDLER,
+                new ElementHandlerImpl(true));
+
         result.getDefaultSaveOptions().put(XMLResource.OPTION_ENCODING, "UTF-8");
 
         return result;
     }
-    
+
     /*
      * 
      * Creates a new BpmnResourceImpl and initializes it.
@@ -85,8 +89,7 @@ public class Bpmn2ResourceFactoryImpl extends ResourceFactoryImpl {
      * mandatory.
      */
 
-    public Definitions createAndInitResource(URI uri)
-    {        
+    public Definitions createAndInitResource(URI uri) {
         Resource resource = createResource(uri);
         Bpmn2Factory factory = Bpmn2Factory.eINSTANCE;
         Definitions definitions = factory.createDefinitions();

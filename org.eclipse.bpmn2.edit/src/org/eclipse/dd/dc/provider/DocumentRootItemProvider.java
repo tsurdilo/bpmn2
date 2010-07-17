@@ -41,7 +41,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DocumentRootItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class DocumentRootItemProvider extends ItemProviderAdapter implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -108,9 +110,11 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements IEd
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/DocumentRoot.png"));
+            return overlayImage(object, getResourceLocator()
+                    .getImage("full/obj16/DocumentRoot.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/DocumentRoot.gif"));
+            return overlayImage(object, getResourceLocator()
+                    .getImage("full/obj16/DocumentRoot.gif"));
         }
     }
 
@@ -137,11 +141,12 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements IEd
         updateChildren(notification);
 
         switch (notification.getFeatureID(DocumentRoot.class)) {
-            case DcPackage.DOCUMENT_ROOT__BOUNDS:
-            case DcPackage.DOCUMENT_ROOT__FONT:
-            case DcPackage.DOCUMENT_ROOT__POINT:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case DcPackage.DOCUMENT_ROOT__BOUNDS:
+        case DcPackage.DOCUMENT_ROOT__FONT:
+        case DcPackage.DOCUMENT_ROOT__POINT:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -157,11 +162,14 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements IEd
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(DcPackage.Literals.DOCUMENT_ROOT__BOUNDS, DcFactory.eINSTANCE.createBounds()));
+        newChildDescriptors.add(createChildParameter(DcPackage.Literals.DOCUMENT_ROOT__BOUNDS,
+                DcFactory.eINSTANCE.createBounds()));
 
-        newChildDescriptors.add(createChildParameter(DcPackage.Literals.DOCUMENT_ROOT__FONT, DcFactory.eINSTANCE.createFont()));
+        newChildDescriptors.add(createChildParameter(DcPackage.Literals.DOCUMENT_ROOT__FONT,
+                DcFactory.eINSTANCE.createFont()));
 
-        newChildDescriptors.add(createChildParameter(DcPackage.Literals.DOCUMENT_ROOT__POINT, DcFactory.eINSTANCE.createPoint()));
+        newChildDescriptors.add(createChildParameter(DcPackage.Literals.DOCUMENT_ROOT__POINT,
+                DcFactory.eINSTANCE.createPoint()));
     }
 
     /**

@@ -125,7 +125,8 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
      */
     public List<LaneSet> getLaneSets() {
         if (laneSets == null) {
-            laneSets = new EObjectContainmentEList<LaneSet>(LaneSet.class, this, Bpmn2Package.SUB_PROCESS__LANE_SETS);
+            laneSets = new EObjectContainmentEList<LaneSet>(LaneSet.class, this,
+                    Bpmn2Package.SUB_PROCESS__LANE_SETS);
         }
         return laneSets;
     }
@@ -137,7 +138,8 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
      */
     public List<FlowElement> getFlowElements() {
         if (flowElements == null) {
-            flowElements = new EObjectContainmentEList<FlowElement>(FlowElement.class, this, Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS);
+            flowElements = new EObjectContainmentEList<FlowElement>(FlowElement.class, this,
+                    Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS);
         }
         return flowElements;
     }
@@ -149,7 +151,8 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
      */
     public List<Artifact> getArtifacts() {
         if (artifacts == null) {
-            artifacts = new EObjectContainmentEList<Artifact>(Artifact.class, this, Bpmn2Package.SUB_PROCESS__ARTIFACTS);
+            artifacts = new EObjectContainmentEList<Artifact>(Artifact.class, this,
+                    Bpmn2Package.SUB_PROCESS__ARTIFACTS);
         }
         return artifacts;
     }
@@ -172,7 +175,9 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
         boolean oldTriggeredByEvent = triggeredByEvent;
         triggeredByEvent = newTriggeredByEvent;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.SUB_PROCESS__TRIGGERED_BY_EVENT, oldTriggeredByEvent, triggeredByEvent));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.SUB_PROCESS__TRIGGERED_BY_EVENT, oldTriggeredByEvent,
+                    triggeredByEvent));
     }
 
     /**
@@ -181,14 +186,15 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.SUB_PROCESS__LANE_SETS:
-                return ((InternalEList<?>)getLaneSets()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS:
-                return ((InternalEList<?>)getFlowElements()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.SUB_PROCESS__ARTIFACTS:
-                return ((InternalEList<?>)getArtifacts()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.SUB_PROCESS__LANE_SETS:
+            return ((InternalEList<?>) getLaneSets()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS:
+            return ((InternalEList<?>) getFlowElements()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.SUB_PROCESS__ARTIFACTS:
+            return ((InternalEList<?>) getArtifacts()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -201,14 +207,14 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.SUB_PROCESS__LANE_SETS:
-                return getLaneSets();
-            case Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS:
-                return getFlowElements();
-            case Bpmn2Package.SUB_PROCESS__ARTIFACTS:
-                return getArtifacts();
-            case Bpmn2Package.SUB_PROCESS__TRIGGERED_BY_EVENT:
-                return isTriggeredByEvent();
+        case Bpmn2Package.SUB_PROCESS__LANE_SETS:
+            return getLaneSets();
+        case Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS:
+            return getFlowElements();
+        case Bpmn2Package.SUB_PROCESS__ARTIFACTS:
+            return getArtifacts();
+        case Bpmn2Package.SUB_PROCESS__TRIGGERED_BY_EVENT:
+            return isTriggeredByEvent();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -222,21 +228,21 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.SUB_PROCESS__LANE_SETS:
-                getLaneSets().clear();
-                getLaneSets().addAll((Collection<? extends LaneSet>)newValue);
-                return;
-            case Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS:
-                getFlowElements().clear();
-                getFlowElements().addAll((Collection<? extends FlowElement>)newValue);
-                return;
-            case Bpmn2Package.SUB_PROCESS__ARTIFACTS:
-                getArtifacts().clear();
-                getArtifacts().addAll((Collection<? extends Artifact>)newValue);
-                return;
-            case Bpmn2Package.SUB_PROCESS__TRIGGERED_BY_EVENT:
-                setTriggeredByEvent((Boolean)newValue);
-                return;
+        case Bpmn2Package.SUB_PROCESS__LANE_SETS:
+            getLaneSets().clear();
+            getLaneSets().addAll((Collection<? extends LaneSet>) newValue);
+            return;
+        case Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS:
+            getFlowElements().clear();
+            getFlowElements().addAll((Collection<? extends FlowElement>) newValue);
+            return;
+        case Bpmn2Package.SUB_PROCESS__ARTIFACTS:
+            getArtifacts().clear();
+            getArtifacts().addAll((Collection<? extends Artifact>) newValue);
+            return;
+        case Bpmn2Package.SUB_PROCESS__TRIGGERED_BY_EVENT:
+            setTriggeredByEvent((Boolean) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -249,18 +255,18 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.SUB_PROCESS__LANE_SETS:
-                getLaneSets().clear();
-                return;
-            case Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS:
-                getFlowElements().clear();
-                return;
-            case Bpmn2Package.SUB_PROCESS__ARTIFACTS:
-                getArtifacts().clear();
-                return;
-            case Bpmn2Package.SUB_PROCESS__TRIGGERED_BY_EVENT:
-                setTriggeredByEvent(TRIGGERED_BY_EVENT_EDEFAULT);
-                return;
+        case Bpmn2Package.SUB_PROCESS__LANE_SETS:
+            getLaneSets().clear();
+            return;
+        case Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS:
+            getFlowElements().clear();
+            return;
+        case Bpmn2Package.SUB_PROCESS__ARTIFACTS:
+            getArtifacts().clear();
+            return;
+        case Bpmn2Package.SUB_PROCESS__TRIGGERED_BY_EVENT:
+            setTriggeredByEvent(TRIGGERED_BY_EVENT_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -273,14 +279,14 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.SUB_PROCESS__LANE_SETS:
-                return laneSets != null && !laneSets.isEmpty();
-            case Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS:
-                return flowElements != null && !flowElements.isEmpty();
-            case Bpmn2Package.SUB_PROCESS__ARTIFACTS:
-                return artifacts != null && !artifacts.isEmpty();
-            case Bpmn2Package.SUB_PROCESS__TRIGGERED_BY_EVENT:
-                return triggeredByEvent != TRIGGERED_BY_EVENT_EDEFAULT;
+        case Bpmn2Package.SUB_PROCESS__LANE_SETS:
+            return laneSets != null && !laneSets.isEmpty();
+        case Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS:
+            return flowElements != null && !flowElements.isEmpty();
+        case Bpmn2Package.SUB_PROCESS__ARTIFACTS:
+            return artifacts != null && !artifacts.isEmpty();
+        case Bpmn2Package.SUB_PROCESS__TRIGGERED_BY_EVENT:
+            return triggeredByEvent != TRIGGERED_BY_EVENT_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -294,12 +300,12 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
     public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == FlowElementsContainer.class) {
             switch (derivedFeatureID) {
-                case Bpmn2Package.SUB_PROCESS__LANE_SETS:
-                    return Bpmn2Package.FLOW_ELEMENTS_CONTAINER__LANE_SETS;
-                case Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS:
-                    return Bpmn2Package.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS;
-                default:
-                    return -1;
+            case Bpmn2Package.SUB_PROCESS__LANE_SETS:
+                return Bpmn2Package.FLOW_ELEMENTS_CONTAINER__LANE_SETS;
+            case Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS:
+                return Bpmn2Package.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS;
+            default:
+                return -1;
             }
         }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
@@ -314,12 +320,12 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
     public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == FlowElementsContainer.class) {
             switch (baseFeatureID) {
-                case Bpmn2Package.FLOW_ELEMENTS_CONTAINER__LANE_SETS:
-                    return Bpmn2Package.SUB_PROCESS__LANE_SETS;
-                case Bpmn2Package.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS:
-                    return Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS;
-                default:
-                    return -1;
+            case Bpmn2Package.FLOW_ELEMENTS_CONTAINER__LANE_SETS:
+                return Bpmn2Package.SUB_PROCESS__LANE_SETS;
+            case Bpmn2Package.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS:
+                return Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS;
+            default:
+                return -1;
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);

@@ -38,7 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class InputSetItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class InputSetItemProvider extends BaseElementItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -76,7 +78,14 @@ public class InputSetItemProvider extends BaseElementItemProvider implements IEd
      * @generated
      */
     protected void addDataInputRefsPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_InputSet_dataInputRefs_feature"), getString("_UI_PropertyDescriptor_description", "_UI_InputSet_dataInputRefs_feature", "_UI_InputSet_type"), Bpmn2Package.Literals.INPUT_SET__DATA_INPUT_REFS, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_InputSet_dataInputRefs_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_InputSet_dataInputRefs_feature", "_UI_InputSet_type"),
+                Bpmn2Package.Literals.INPUT_SET__DATA_INPUT_REFS, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -86,7 +95,14 @@ public class InputSetItemProvider extends BaseElementItemProvider implements IEd
      * @generated
      */
     protected void addOptionalInputRefsPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_InputSet_optionalInputRefs_feature"), getString("_UI_PropertyDescriptor_description", "_UI_InputSet_optionalInputRefs_feature", "_UI_InputSet_type"), Bpmn2Package.Literals.INPUT_SET__OPTIONAL_INPUT_REFS, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_InputSet_optionalInputRefs_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_InputSet_optionalInputRefs_feature", "_UI_InputSet_type"),
+                Bpmn2Package.Literals.INPUT_SET__OPTIONAL_INPUT_REFS, true, false, true, null,
+                null, null));
     }
 
     /**
@@ -96,7 +112,14 @@ public class InputSetItemProvider extends BaseElementItemProvider implements IEd
      * @generated
      */
     protected void addWhileExecutingInputRefsPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_InputSet_whileExecutingInputRefs_feature"), getString("_UI_PropertyDescriptor_description", "_UI_InputSet_whileExecutingInputRefs_feature", "_UI_InputSet_type"), Bpmn2Package.Literals.INPUT_SET__WHILE_EXECUTING_INPUT_REFS, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_InputSet_whileExecutingInputRefs_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_InputSet_whileExecutingInputRefs_feature", "_UI_InputSet_type"),
+                Bpmn2Package.Literals.INPUT_SET__WHILE_EXECUTING_INPUT_REFS, true, false, true,
+                null, null, null));
     }
 
     /**
@@ -106,7 +129,14 @@ public class InputSetItemProvider extends BaseElementItemProvider implements IEd
      * @generated
      */
     protected void addOutputSetRefsPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_InputSet_outputSetRefs_feature"), getString("_UI_PropertyDescriptor_description", "_UI_InputSet_outputSetRefs_feature", "_UI_InputSet_type"), Bpmn2Package.Literals.INPUT_SET__OUTPUT_SET_REFS, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_InputSet_outputSetRefs_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_InputSet_outputSetRefs_feature", "_UI_InputSet_type"),
+                Bpmn2Package.Literals.INPUT_SET__OUTPUT_SET_REFS, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -116,7 +146,13 @@ public class InputSetItemProvider extends BaseElementItemProvider implements IEd
      * @generated
      */
     protected void addNamePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_InputSet_name_feature"), getString("_UI_PropertyDescriptor_description", "_UI_InputSet_name_feature", "_UI_InputSet_type"), Bpmn2Package.Literals.INPUT_SET__NAME, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_InputSet_name_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_InputSet_name_feature",
+                        "_UI_InputSet_type"), Bpmn2Package.Literals.INPUT_SET__NAME, true, false,
+                false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -142,8 +178,9 @@ public class InputSetItemProvider extends BaseElementItemProvider implements IEd
      */
     @Override
     public String getText(Object object) {
-        String label = ((InputSet)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_InputSet_type") : getString("_UI_InputSet_type") + " " + label;
+        String label = ((InputSet) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_InputSet_type")
+                : getString("_UI_InputSet_type") + " " + label;
     }
 
     /**
@@ -158,9 +195,10 @@ public class InputSetItemProvider extends BaseElementItemProvider implements IEd
         updateChildren(notification);
 
         switch (notification.getFeatureID(InputSet.class)) {
-            case Bpmn2Package.INPUT_SET__NAME:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case Bpmn2Package.INPUT_SET__NAME:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }

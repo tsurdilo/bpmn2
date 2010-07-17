@@ -34,7 +34,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ImplicitThrowEventItemProvider extends ThrowEventItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ImplicitThrowEventItemProvider extends ThrowEventItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -69,9 +71,11 @@ public class ImplicitThrowEventItemProvider extends ThrowEventItemProvider imple
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/ImplicitThrowEvent.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/ImplicitThrowEvent.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/ImplicitThrowEvent.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/ImplicitThrowEvent.gif"));
         }
     }
 
@@ -83,8 +87,9 @@ public class ImplicitThrowEventItemProvider extends ThrowEventItemProvider imple
      */
     @Override
     public String getText(Object object) {
-        String label = ((ImplicitThrowEvent)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_ImplicitThrowEvent_type") : getString("_UI_ImplicitThrowEvent_type") + " " + label;
+        String label = ((ImplicitThrowEvent) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_ImplicitThrowEvent_type")
+                : getString("_UI_ImplicitThrowEvent_type") + " " + label;
     }
 
     /**

@@ -36,7 +36,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class LabeledEdgeItemProvider extends EdgeItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class LabeledEdgeItemProvider extends EdgeItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -70,7 +72,15 @@ public class LabeledEdgeItemProvider extends EdgeItemProvider implements IEditin
      * @generated
      */
     protected void addOwnedLabelPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_LabeledEdge_ownedLabel_feature"), getString("_UI_PropertyDescriptor_description", "_UI_LabeledEdge_ownedLabel_feature", "_UI_LabeledEdge_type"), DiPackage.Literals.LABELED_EDGE__OWNED_LABEL, false, false, false, null, null, null));
+        itemPropertyDescriptors
+                .add(createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                        getResourceLocator(),
+                        getString("_UI_LabeledEdge_ownedLabel_feature"),
+                        getString("_UI_PropertyDescriptor_description",
+                                "_UI_LabeledEdge_ownedLabel_feature", "_UI_LabeledEdge_type"),
+                        DiPackage.Literals.LABELED_EDGE__OWNED_LABEL, false, false, false, null,
+                        null, null));
     }
 
     /**
@@ -96,8 +106,9 @@ public class LabeledEdgeItemProvider extends EdgeItemProvider implements IEditin
      */
     @Override
     public String getText(Object object) {
-        String label = ((LabeledEdge)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_LabeledEdge_type") : getString("_UI_LabeledEdge_type") + " " + label;
+        String label = ((LabeledEdge) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_LabeledEdge_type")
+                : getString("_UI_LabeledEdge_type") + " " + label;
     }
 
     /**

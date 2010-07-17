@@ -97,13 +97,14 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
      * @generated
      */
     private static boolean isInited = false;
-    
+
     /**
      * @see #initGen()
      */
-    public static DcPackage init(){
+    public static DcPackage init() {
         DcPackage result = initGen();
-        EPackage.Registry.INSTANCE.put(NamespaceHelper.xmiToXsdNamespaceUri(DcPackage.eNS_URI), result);
+        EPackage.Registry.INSTANCE.put(NamespaceHelper.xmiToXsdNamespaceUri(DcPackage.eNS_URI),
+                result);
         return result;
     }
 
@@ -121,17 +122,24 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
      */
     public static DcPackage initGen() {
         if (isInited)
-            return (DcPackage)EPackage.Registry.INSTANCE.getEPackage(DcPackage.eNS_URI);
+            return (DcPackage) EPackage.Registry.INSTANCE.getEPackage(DcPackage.eNS_URI);
 
         // Obtain or create and register package
-        DcPackageImpl theDcPackage = (DcPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof DcPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new DcPackageImpl());
+        DcPackageImpl theDcPackage = (DcPackageImpl) (EPackage.Registry.INSTANCE.get(eNS_URI) instanceof DcPackageImpl ? EPackage.Registry.INSTANCE
+                .get(eNS_URI) : new DcPackageImpl());
 
         isInited = true;
 
         // Obtain or create and register interdependencies
-        Bpmn2PackageImpl theBpmn2Package = (Bpmn2PackageImpl)(EPackage.Registry.INSTANCE.getEPackage(Bpmn2Package.eNS_URI) instanceof Bpmn2PackageImpl ? EPackage.Registry.INSTANCE.getEPackage(Bpmn2Package.eNS_URI) : Bpmn2Package.eINSTANCE);
-        BpmnDiPackageImpl theBpmnDiPackage = (BpmnDiPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BpmnDiPackage.eNS_URI) instanceof BpmnDiPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BpmnDiPackage.eNS_URI) : BpmnDiPackage.eINSTANCE);
-        DiPackageImpl theDiPackage = (DiPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DiPackage.eNS_URI) instanceof DiPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DiPackage.eNS_URI) : DiPackage.eINSTANCE);
+        Bpmn2PackageImpl theBpmn2Package = (Bpmn2PackageImpl) (EPackage.Registry.INSTANCE
+                .getEPackage(Bpmn2Package.eNS_URI) instanceof Bpmn2PackageImpl ? EPackage.Registry.INSTANCE
+                .getEPackage(Bpmn2Package.eNS_URI) : Bpmn2Package.eINSTANCE);
+        BpmnDiPackageImpl theBpmnDiPackage = (BpmnDiPackageImpl) (EPackage.Registry.INSTANCE
+                .getEPackage(BpmnDiPackage.eNS_URI) instanceof BpmnDiPackageImpl ? EPackage.Registry.INSTANCE
+                .getEPackage(BpmnDiPackage.eNS_URI) : BpmnDiPackage.eINSTANCE);
+        DiPackageImpl theDiPackage = (DiPackageImpl) (EPackage.Registry.INSTANCE
+                .getEPackage(DiPackage.eNS_URI) instanceof DiPackageImpl ? EPackage.Registry.INSTANCE
+                .getEPackage(DiPackage.eNS_URI) : DiPackage.eINSTANCE);
 
         // Load packages
         theBpmn2Package.loadPackage();
@@ -179,7 +187,7 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
      * @generated
      */
     public EAttribute getDocumentRoot_Mixed() {
-        return (EAttribute)documentRootEClass.getEStructuralFeatures().get(0);
+        return (EAttribute) documentRootEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -188,7 +196,7 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
      * @generated
      */
     public EReference getDocumentRoot_XMLNSPrefixMap() {
-        return (EReference)documentRootEClass.getEStructuralFeatures().get(1);
+        return (EReference) documentRootEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -197,7 +205,7 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
      * @generated
      */
     public EReference getDocumentRoot_XSISchemaLocation() {
-        return (EReference)documentRootEClass.getEStructuralFeatures().get(2);
+        return (EReference) documentRootEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -206,7 +214,7 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
      * @generated
      */
     public EReference getDocumentRoot_Bounds() {
-        return (EReference)documentRootEClass.getEStructuralFeatures().get(3);
+        return (EReference) documentRootEClass.getEStructuralFeatures().get(3);
     }
 
     /**
@@ -215,7 +223,7 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
      * @generated
      */
     public EReference getDocumentRoot_Font() {
-        return (EReference)documentRootEClass.getEStructuralFeatures().get(4);
+        return (EReference) documentRootEClass.getEStructuralFeatures().get(4);
     }
 
     /**
@@ -224,7 +232,7 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
      * @generated
      */
     public EReference getDocumentRoot_Point() {
-        return (EReference)documentRootEClass.getEStructuralFeatures().get(5);
+        return (EReference) documentRootEClass.getEStructuralFeatures().get(5);
     }
 
     /**
@@ -242,7 +250,7 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
      * @generated
      */
     public EAttribute getBounds_Height() {
-        return (EAttribute)boundsEClass.getEStructuralFeatures().get(0);
+        return (EAttribute) boundsEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -251,7 +259,7 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
      * @generated
      */
     public EAttribute getBounds_Width() {
-        return (EAttribute)boundsEClass.getEStructuralFeatures().get(1);
+        return (EAttribute) boundsEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -260,7 +268,7 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
      * @generated
      */
     public EAttribute getBounds_X() {
-        return (EAttribute)boundsEClass.getEStructuralFeatures().get(2);
+        return (EAttribute) boundsEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -269,7 +277,7 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
      * @generated
      */
     public EAttribute getBounds_Y() {
-        return (EAttribute)boundsEClass.getEStructuralFeatures().get(3);
+        return (EAttribute) boundsEClass.getEStructuralFeatures().get(3);
     }
 
     /**
@@ -287,7 +295,7 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
      * @generated
      */
     public EAttribute getFont_IsBold() {
-        return (EAttribute)fontEClass.getEStructuralFeatures().get(0);
+        return (EAttribute) fontEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -296,7 +304,7 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
      * @generated
      */
     public EAttribute getFont_IsItalic() {
-        return (EAttribute)fontEClass.getEStructuralFeatures().get(1);
+        return (EAttribute) fontEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -305,7 +313,7 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
      * @generated
      */
     public EAttribute getFont_IsStrikeThrough() {
-        return (EAttribute)fontEClass.getEStructuralFeatures().get(2);
+        return (EAttribute) fontEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -314,7 +322,7 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
      * @generated
      */
     public EAttribute getFont_IsUnderline() {
-        return (EAttribute)fontEClass.getEStructuralFeatures().get(3);
+        return (EAttribute) fontEClass.getEStructuralFeatures().get(3);
     }
 
     /**
@@ -323,7 +331,7 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
      * @generated
      */
     public EAttribute getFont_Name() {
-        return (EAttribute)fontEClass.getEStructuralFeatures().get(4);
+        return (EAttribute) fontEClass.getEStructuralFeatures().get(4);
     }
 
     /**
@@ -332,7 +340,7 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
      * @generated
      */
     public EAttribute getFont_Size() {
-        return (EAttribute)fontEClass.getEStructuralFeatures().get(5);
+        return (EAttribute) fontEClass.getEStructuralFeatures().get(5);
     }
 
     /**
@@ -350,7 +358,7 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
      * @generated
      */
     public EAttribute getPoint_X() {
-        return (EAttribute)pointEClass.getEStructuralFeatures().get(0);
+        return (EAttribute) pointEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -359,7 +367,7 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
      * @generated
      */
     public EAttribute getPoint_Y() {
-        return (EAttribute)pointEClass.getEStructuralFeatures().get(1);
+        return (EAttribute) pointEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -368,7 +376,7 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
      * @generated
      */
     public DcFactory getDcFactory() {
-        return (DcFactory)getEFactoryInstance();
+        return (DcFactory) getEFactoryInstance();
     }
 
     /**
@@ -449,30 +457,69 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
         // Add supertypes to classes
 
         // Initialize classes and features; add operations and parameters
-        initEClass(documentRootEClass, DocumentRoot.class, "DocumentRoot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getDocumentRoot_Mixed(), ecorePackage.getEFeatureMapEntry(), "mixed", null, 0, -1, null, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_XMLNSPrefixMap(), ecorePackage.getEStringToStringMapEntry(), null, "xMLNSPrefixMap", null, 0, -1, null, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_XSISchemaLocation(), ecorePackage.getEStringToStringMapEntry(), null, "xSISchemaLocation", null, 0, -1, null, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_Bounds(), this.getBounds(), null, "bounds", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_Font(), this.getFont(), null, "font", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_Point(), this.getPoint(), null, "point", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEClass(documentRootEClass, DocumentRoot.class, "DocumentRoot", !IS_ABSTRACT,
+                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getDocumentRoot_Mixed(), ecorePackage.getEFeatureMapEntry(), "mixed", null,
+                0, -1, null, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getDocumentRoot_XMLNSPrefixMap(), ecorePackage.getEStringToStringMapEntry(),
+                null, "xMLNSPrefixMap", null, 0, -1, null, IS_TRANSIENT, !IS_VOLATILE,
+                IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
+                !IS_DERIVED, IS_ORDERED);
+        initEReference(getDocumentRoot_XSISchemaLocation(),
+                ecorePackage.getEStringToStringMapEntry(), null, "xSISchemaLocation", null, 0, -1,
+                null, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getDocumentRoot_Bounds(), this.getBounds(), null, "bounds", null, 0, -2,
+                null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEReference(getDocumentRoot_Font(), this.getFont(), null, "font", null, 0, -2, null,
+                IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEReference(getDocumentRoot_Point(), this.getPoint(), null, "point", null, 0, -2, null,
+                IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-        initEClass(boundsEClass, Bounds.class, "Bounds", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getBounds_Height(), ecorePackage.getEFloat(), "height", null, 1, 1, Bounds.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEAttribute(getBounds_Width(), ecorePackage.getEFloat(), "width", null, 1, 1, Bounds.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEAttribute(getBounds_X(), ecorePackage.getEFloat(), "x", "0", 1, 1, Bounds.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEAttribute(getBounds_Y(), ecorePackage.getEFloat(), "y", "0", 1, 1, Bounds.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEClass(boundsEClass, Bounds.class, "Bounds", !IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getBounds_Height(), ecorePackage.getEFloat(), "height", null, 1, 1,
+                Bounds.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEAttribute(getBounds_Width(), ecorePackage.getEFloat(), "width", null, 1, 1,
+                Bounds.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEAttribute(getBounds_X(), ecorePackage.getEFloat(), "x", "0", 1, 1, Bounds.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+                !IS_DERIVED, !IS_ORDERED);
+        initEAttribute(getBounds_Y(), ecorePackage.getEFloat(), "y", "0", 1, 1, Bounds.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+                !IS_DERIVED, !IS_ORDERED);
 
-        initEClass(fontEClass, Font.class, "Font", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getFont_IsBold(), ecorePackage.getEBoolean(), "isBold", null, 0, 1, Font.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEAttribute(getFont_IsItalic(), ecorePackage.getEBoolean(), "isItalic", null, 0, 1, Font.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEAttribute(getFont_IsStrikeThrough(), ecorePackage.getEBoolean(), "isStrikeThrough", null, 0, 1, Font.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEAttribute(getFont_IsUnderline(), ecorePackage.getEBoolean(), "isUnderline", null, 0, 1, Font.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEAttribute(getFont_Name(), ecorePackage.getEString(), "name", null, 0, 1, Font.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEAttribute(getFont_Size(), ecorePackage.getEFloat(), "size", null, 0, 1, Font.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEClass(fontEClass, Font.class, "Font", !IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getFont_IsBold(), ecorePackage.getEBoolean(), "isBold", null, 0, 1,
+                Font.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEAttribute(getFont_IsItalic(), ecorePackage.getEBoolean(), "isItalic", null, 0, 1,
+                Font.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEAttribute(getFont_IsStrikeThrough(), ecorePackage.getEBoolean(), "isStrikeThrough",
+                null, 0, 1, Font.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+                !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEAttribute(getFont_IsUnderline(), ecorePackage.getEBoolean(), "isUnderline", null, 0,
+                1, Font.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEAttribute(getFont_Name(), ecorePackage.getEString(), "name", null, 0, 1, Font.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+                !IS_DERIVED, !IS_ORDERED);
+        initEAttribute(getFont_Size(), ecorePackage.getEFloat(), "size", null, 0, 1, Font.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+                !IS_DERIVED, !IS_ORDERED);
 
-        EOperation op = addEOperation(fontEClass, ecorePackage.getEBoolean(), "non_negative_size", 0, 1, IS_UNIQUE, IS_ORDERED);
-        addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+        EOperation op = addEOperation(fontEClass, ecorePackage.getEBoolean(), "non_negative_size",
+                0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE,
+                IS_ORDERED);
         EGenericType g1 = createEGenericType(ecorePackage.getEMap());
         EGenericType g2 = createEGenericType(ecorePackage.getEJavaObject());
         g1.getETypeArguments().add(g2);
@@ -480,9 +527,14 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
         g1.getETypeArguments().add(g2);
         addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-        initEClass(pointEClass, Point.class, "Point", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getPoint_X(), ecorePackage.getEFloat(), "x", "0", 1, 1, Point.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEAttribute(getPoint_Y(), ecorePackage.getEFloat(), "y", "0", 1, 1, Point.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEClass(pointEClass, Point.class, "Point", !IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getPoint_X(), ecorePackage.getEFloat(), "x", "0", 1, 1, Point.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+                !IS_DERIVED, !IS_ORDERED);
+        initEAttribute(getPoint_Y(), ecorePackage.getEFloat(), "y", "0", 1, 1, Point.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+                !IS_DERIVED, !IS_ORDERED);
 
         // Create resource
         createResource(eNS_URI);
@@ -501,22 +553,34 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
     protected void createExtendedMetaDataAnnotations() {
         String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";
         addAnnotation(documentRootEClass, source, new String[] { "name", "", "kind", "mixed" });
-        addAnnotation(getDocumentRoot_Mixed(), source, new String[] { "kind", "elementWildcard", "name", ":mixed" });
-        addAnnotation(getDocumentRoot_XMLNSPrefixMap(), source, new String[] { "kind", "attribute", "name", "xmlns:prefix" });
-        addAnnotation(getDocumentRoot_XSISchemaLocation(), source, new String[] { "kind", "attribute", "name", "xsi:schemaLocation" });
-        addAnnotation(getDocumentRoot_Bounds(), source, new String[] { "kind", "element", "name", "Bounds", "namespace", "http://www.omg.org/spec/DD/20100524/DC" });
-        addAnnotation(getDocumentRoot_Font(), source, new String[] { "kind", "element", "name", "Font", "namespace", "http://www.omg.org/spec/DD/20100524/DC" });
-        addAnnotation(getDocumentRoot_Point(), source, new String[] { "kind", "element", "name", "Point", "namespace", "http://www.omg.org/spec/DD/20100524/DC" });
+        addAnnotation(getDocumentRoot_Mixed(), source, new String[] { "kind", "elementWildcard",
+                "name", ":mixed" });
+        addAnnotation(getDocumentRoot_XMLNSPrefixMap(), source, new String[] { "kind", "attribute",
+                "name", "xmlns:prefix" });
+        addAnnotation(getDocumentRoot_XSISchemaLocation(), source, new String[] { "kind",
+                "attribute", "name", "xsi:schemaLocation" });
+        addAnnotation(getDocumentRoot_Bounds(), source, new String[] { "kind", "element", "name",
+                "Bounds", "namespace", "http://www.omg.org/spec/DD/20100524/DC" });
+        addAnnotation(getDocumentRoot_Font(), source, new String[] { "kind", "element", "name",
+                "Font", "namespace", "http://www.omg.org/spec/DD/20100524/DC" });
+        addAnnotation(getDocumentRoot_Point(), source, new String[] { "kind", "element", "name",
+                "Point", "namespace", "http://www.omg.org/spec/DD/20100524/DC" });
         addAnnotation(boundsEClass, source, new String[] { "name", "Bounds", "kind", "empty" });
-        addAnnotation(getBounds_Height(), source, new String[] { "kind", "attribute", "name", "height" });
-        addAnnotation(getBounds_Width(), source, new String[] { "kind", "attribute", "name", "width" });
+        addAnnotation(getBounds_Height(), source, new String[] { "kind", "attribute", "name",
+                "height" });
+        addAnnotation(getBounds_Width(), source, new String[] { "kind", "attribute", "name",
+                "width" });
         addAnnotation(getBounds_X(), source, new String[] { "kind", "attribute", "name", "x" });
         addAnnotation(getBounds_Y(), source, new String[] { "kind", "attribute", "name", "y" });
         addAnnotation(fontEClass, source, new String[] { "name", "Font", "kind", "empty" });
-        addAnnotation(getFont_IsBold(), source, new String[] { "kind", "attribute", "name", "isBold" });
-        addAnnotation(getFont_IsItalic(), source, new String[] { "kind", "attribute", "name", "isItalic" });
-        addAnnotation(getFont_IsStrikeThrough(), source, new String[] { "kind", "attribute", "name", "isStrikeThrough" });
-        addAnnotation(getFont_IsUnderline(), source, new String[] { "kind", "attribute", "name", "isUnderline" });
+        addAnnotation(getFont_IsBold(), source, new String[] { "kind", "attribute", "name",
+                "isBold" });
+        addAnnotation(getFont_IsItalic(), source, new String[] { "kind", "attribute", "name",
+                "isItalic" });
+        addAnnotation(getFont_IsStrikeThrough(), source, new String[] { "kind", "attribute",
+                "name", "isStrikeThrough" });
+        addAnnotation(getFont_IsUnderline(), source, new String[] { "kind", "attribute", "name",
+                "isUnderline" });
         addAnnotation(getFont_Name(), source, new String[] { "kind", "attribute", "name", "name" });
         addAnnotation(getFont_Size(), source, new String[] { "kind", "attribute", "name", "size" });
         addAnnotation(pointEClass, source, new String[] { "name", "Point", "kind", "empty" });

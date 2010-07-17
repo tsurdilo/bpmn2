@@ -74,11 +74,12 @@ public class BPMNPlaneImpl extends PlaneImpl implements BPMNPlane {
      */
     public BaseElement getBpmnElement() {
         if (bpmnElement != null && bpmnElement.eIsProxy()) {
-            InternalEObject oldBpmnElement = (InternalEObject)bpmnElement;
-            bpmnElement = (BaseElement)eResolveProxy(oldBpmnElement);
+            InternalEObject oldBpmnElement = (InternalEObject) bpmnElement;
+            bpmnElement = (BaseElement) eResolveProxy(oldBpmnElement);
             if (bpmnElement != oldBpmnElement) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT, oldBpmnElement, bpmnElement));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT, oldBpmnElement, bpmnElement));
             }
         }
         return bpmnElement;
@@ -102,7 +103,8 @@ public class BPMNPlaneImpl extends PlaneImpl implements BPMNPlane {
         BaseElement oldBpmnElement = bpmnElement;
         bpmnElement = newBpmnElement;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT, oldBpmnElement, bpmnElement));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT, oldBpmnElement, bpmnElement));
     }
 
     /**
@@ -113,10 +115,10 @@ public class BPMNPlaneImpl extends PlaneImpl implements BPMNPlane {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT:
-                if (resolve)
-                    return getBpmnElement();
-                return basicGetBpmnElement();
+        case BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT:
+            if (resolve)
+                return getBpmnElement();
+            return basicGetBpmnElement();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -129,9 +131,9 @@ public class BPMNPlaneImpl extends PlaneImpl implements BPMNPlane {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT:
-                setBpmnElement((BaseElement)newValue);
-                return;
+        case BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT:
+            setBpmnElement((BaseElement) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -144,9 +146,9 @@ public class BPMNPlaneImpl extends PlaneImpl implements BPMNPlane {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT:
-                setBpmnElement((BaseElement)null);
-                return;
+        case BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT:
+            setBpmnElement((BaseElement) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -159,8 +161,8 @@ public class BPMNPlaneImpl extends PlaneImpl implements BPMNPlane {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT:
-                return bpmnElement != null;
+        case BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT:
+            return bpmnElement != null;
         }
         return super.eIsSet(featureID);
     }

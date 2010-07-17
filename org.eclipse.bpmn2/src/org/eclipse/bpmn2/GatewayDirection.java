@@ -136,7 +136,8 @@ public enum GatewayDirection implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    private static final GatewayDirection[] VALUES_ARRAY = new GatewayDirection[] { UNSPECIFIED, CONVERGING, DIVERGING, MIXED, };
+    private static final GatewayDirection[] VALUES_ARRAY = new GatewayDirection[] { UNSPECIFIED,
+            CONVERGING, DIVERGING, MIXED, };
 
     /**
      * A public read-only list of all the '<em><b>Gateway Direction</b></em>' enumerators.
@@ -144,7 +145,8 @@ public enum GatewayDirection implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final List<GatewayDirection> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+    public static final List<GatewayDirection> VALUES = Collections.unmodifiableList(Arrays
+            .asList(VALUES_ARRAY));
 
     /**
      * Returns the '<em><b>Gateway Direction</b></em>' literal with the specified literal value.
@@ -186,14 +188,14 @@ public enum GatewayDirection implements Enumerator {
      */
     public static GatewayDirection get(int value) {
         switch (value) {
-            case UNSPECIFIED_VALUE:
-                return UNSPECIFIED;
-            case CONVERGING_VALUE:
-                return CONVERGING;
-            case DIVERGING_VALUE:
-                return DIVERGING;
-            case MIXED_VALUE:
-                return MIXED;
+        case UNSPECIFIED_VALUE:
+            return UNSPECIFIED;
+        case CONVERGING_VALUE:
+            return CONVERGING;
+        case DIVERGING_VALUE:
+            return DIVERGING;
+        case MIXED_VALUE:
+            return MIXED;
         }
         return null;
     }

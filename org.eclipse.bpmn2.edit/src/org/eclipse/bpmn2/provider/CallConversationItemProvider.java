@@ -39,7 +39,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CallConversationItemProvider extends ConversationNodeItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class CallConversationItemProvider extends ConversationNodeItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -73,7 +75,15 @@ public class CallConversationItemProvider extends ConversationNodeItemProvider i
      * @generated
      */
     protected void addCalledCollaborationRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_CallConversation_calledCollaborationRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_CallConversation_calledCollaborationRef_feature", "_UI_CallConversation_type"), Bpmn2Package.Literals.CALL_CONVERSATION__CALLED_COLLABORATION_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_CallConversation_calledCollaborationRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_CallConversation_calledCollaborationRef_feature",
+                        "_UI_CallConversation_type"),
+                Bpmn2Package.Literals.CALL_CONVERSATION__CALLED_COLLABORATION_REF, true, false,
+                true, null, null, null));
     }
 
     /**
@@ -115,9 +125,11 @@ public class CallConversationItemProvider extends ConversationNodeItemProvider i
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/CallConversation.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/CallConversation.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/CallConversation.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/CallConversation.gif"));
         }
     }
 
@@ -129,8 +141,9 @@ public class CallConversationItemProvider extends ConversationNodeItemProvider i
      */
     @Override
     public String getText(Object object) {
-        String label = ((CallConversation)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_CallConversation_type") : getString("_UI_CallConversation_type") + " " + label;
+        String label = ((CallConversation) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_CallConversation_type")
+                : getString("_UI_CallConversation_type") + " " + label;
     }
 
     /**
@@ -145,9 +158,10 @@ public class CallConversationItemProvider extends ConversationNodeItemProvider i
         updateChildren(notification);
 
         switch (notification.getFeatureID(CallConversation.class)) {
-            case Bpmn2Package.CALL_CONVERSATION__PARTICIPANT_ASSOCIATIONS:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case Bpmn2Package.CALL_CONVERSATION__PARTICIPANT_ASSOCIATIONS:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -163,7 +177,9 @@ public class CallConversationItemProvider extends ConversationNodeItemProvider i
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.CALL_CONVERSATION__PARTICIPANT_ASSOCIATIONS, Bpmn2Factory.eINSTANCE.createParticipantAssociation()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.CALL_CONVERSATION__PARTICIPANT_ASSOCIATIONS,
+                Bpmn2Factory.eINSTANCE.createParticipantAssociation()));
     }
 
 }

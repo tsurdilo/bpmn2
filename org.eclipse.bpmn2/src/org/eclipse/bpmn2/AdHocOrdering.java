@@ -94,7 +94,8 @@ public enum AdHocOrdering implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final List<AdHocOrdering> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+    public static final List<AdHocOrdering> VALUES = Collections.unmodifiableList(Arrays
+            .asList(VALUES_ARRAY));
 
     /**
      * Returns the '<em><b>Ad Hoc Ordering</b></em>' literal with the specified literal value.
@@ -136,10 +137,10 @@ public enum AdHocOrdering implements Enumerator {
      */
     public static AdHocOrdering get(int value) {
         switch (value) {
-            case PARALLEL_VALUE:
-                return PARALLEL;
-            case SEQUENTIAL_VALUE:
-                return SEQUENTIAL;
+        case PARALLEL_VALUE:
+            return PARALLEL;
+        case SEQUENTIAL_VALUE:
+            return SEQUENTIAL;
         }
         return null;
     }

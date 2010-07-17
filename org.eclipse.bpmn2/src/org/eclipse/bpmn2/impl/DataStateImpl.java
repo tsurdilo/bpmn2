@@ -91,7 +91,8 @@ public class DataStateImpl extends BaseElementImpl implements DataState {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.DATA_STATE__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.DATA_STATE__NAME,
+                    oldName, name));
     }
 
     /**
@@ -102,8 +103,8 @@ public class DataStateImpl extends BaseElementImpl implements DataState {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.DATA_STATE__NAME:
-                return getName();
+        case Bpmn2Package.DATA_STATE__NAME:
+            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -116,9 +117,9 @@ public class DataStateImpl extends BaseElementImpl implements DataState {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.DATA_STATE__NAME:
-                setName((String)newValue);
-                return;
+        case Bpmn2Package.DATA_STATE__NAME:
+            setName((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -131,9 +132,9 @@ public class DataStateImpl extends BaseElementImpl implements DataState {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.DATA_STATE__NAME:
-                setName(NAME_EDEFAULT);
-                return;
+        case Bpmn2Package.DATA_STATE__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -146,8 +147,8 @@ public class DataStateImpl extends BaseElementImpl implements DataState {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.DATA_STATE__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case Bpmn2Package.DATA_STATE__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }

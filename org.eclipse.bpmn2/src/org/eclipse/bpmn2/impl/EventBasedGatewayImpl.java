@@ -111,9 +111,12 @@ public class EventBasedGatewayImpl extends GatewayImpl implements EventBasedGate
      */
     public void setEventGatewayType(EventBasedGatewayType newEventGatewayType) {
         EventBasedGatewayType oldEventGatewayType = eventGatewayType;
-        eventGatewayType = newEventGatewayType == null ? EVENT_GATEWAY_TYPE_EDEFAULT : newEventGatewayType;
+        eventGatewayType = newEventGatewayType == null ? EVENT_GATEWAY_TYPE_EDEFAULT
+                : newEventGatewayType;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE, oldEventGatewayType, eventGatewayType));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE, oldEventGatewayType,
+                    eventGatewayType));
     }
 
     /**
@@ -134,7 +137,8 @@ public class EventBasedGatewayImpl extends GatewayImpl implements EventBasedGate
         boolean oldInstantiate = instantiate;
         instantiate = newInstantiate;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.EVENT_BASED_GATEWAY__INSTANTIATE, oldInstantiate, instantiate));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.EVENT_BASED_GATEWAY__INSTANTIATE, oldInstantiate, instantiate));
     }
 
     /**
@@ -145,10 +149,10 @@ public class EventBasedGatewayImpl extends GatewayImpl implements EventBasedGate
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE:
-                return getEventGatewayType();
-            case Bpmn2Package.EVENT_BASED_GATEWAY__INSTANTIATE:
-                return isInstantiate();
+        case Bpmn2Package.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE:
+            return getEventGatewayType();
+        case Bpmn2Package.EVENT_BASED_GATEWAY__INSTANTIATE:
+            return isInstantiate();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -161,12 +165,12 @@ public class EventBasedGatewayImpl extends GatewayImpl implements EventBasedGate
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE:
-                setEventGatewayType((EventBasedGatewayType)newValue);
-                return;
-            case Bpmn2Package.EVENT_BASED_GATEWAY__INSTANTIATE:
-                setInstantiate((Boolean)newValue);
-                return;
+        case Bpmn2Package.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE:
+            setEventGatewayType((EventBasedGatewayType) newValue);
+            return;
+        case Bpmn2Package.EVENT_BASED_GATEWAY__INSTANTIATE:
+            setInstantiate((Boolean) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -179,12 +183,12 @@ public class EventBasedGatewayImpl extends GatewayImpl implements EventBasedGate
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE:
-                setEventGatewayType(EVENT_GATEWAY_TYPE_EDEFAULT);
-                return;
-            case Bpmn2Package.EVENT_BASED_GATEWAY__INSTANTIATE:
-                setInstantiate(INSTANTIATE_EDEFAULT);
-                return;
+        case Bpmn2Package.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE:
+            setEventGatewayType(EVENT_GATEWAY_TYPE_EDEFAULT);
+            return;
+        case Bpmn2Package.EVENT_BASED_GATEWAY__INSTANTIATE:
+            setInstantiate(INSTANTIATE_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -197,10 +201,10 @@ public class EventBasedGatewayImpl extends GatewayImpl implements EventBasedGate
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE:
-                return eventGatewayType != EVENT_GATEWAY_TYPE_EDEFAULT;
-            case Bpmn2Package.EVENT_BASED_GATEWAY__INSTANTIATE:
-                return instantiate != INSTANTIATE_EDEFAULT;
+        case Bpmn2Package.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE:
+            return eventGatewayType != EVENT_GATEWAY_TYPE_EDEFAULT;
+        case Bpmn2Package.EVENT_BASED_GATEWAY__INSTANTIATE:
+            return instantiate != INSTANTIATE_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }

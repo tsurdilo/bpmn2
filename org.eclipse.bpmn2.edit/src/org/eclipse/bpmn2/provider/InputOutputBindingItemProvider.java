@@ -37,7 +37,9 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
  * <!-- end-user-doc -->
  * @generated
  */
-public class InputOutputBindingItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class InputOutputBindingItemProvider extends ItemProviderAdapter implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -73,7 +75,15 @@ public class InputOutputBindingItemProvider extends ItemProviderAdapter implemen
      * @generated
      */
     protected void addInputDataRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_InputOutputBinding_inputDataRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_InputOutputBinding_inputDataRef_feature", "_UI_InputOutputBinding_type"), Bpmn2Package.Literals.INPUT_OUTPUT_BINDING__INPUT_DATA_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_InputOutputBinding_inputDataRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_InputOutputBinding_inputDataRef_feature",
+                        "_UI_InputOutputBinding_type"),
+                Bpmn2Package.Literals.INPUT_OUTPUT_BINDING__INPUT_DATA_REF, true, false, true,
+                null, null, null));
     }
 
     /**
@@ -83,7 +93,15 @@ public class InputOutputBindingItemProvider extends ItemProviderAdapter implemen
      * @generated
      */
     protected void addOperationRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_InputOutputBinding_operationRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_InputOutputBinding_operationRef_feature", "_UI_InputOutputBinding_type"), Bpmn2Package.Literals.INPUT_OUTPUT_BINDING__OPERATION_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_InputOutputBinding_operationRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_InputOutputBinding_operationRef_feature",
+                        "_UI_InputOutputBinding_type"),
+                Bpmn2Package.Literals.INPUT_OUTPUT_BINDING__OPERATION_REF, true, false, true, null,
+                null, null));
     }
 
     /**
@@ -93,7 +111,15 @@ public class InputOutputBindingItemProvider extends ItemProviderAdapter implemen
      * @generated
      */
     protected void addOutputDataRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_InputOutputBinding_outputDataRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_InputOutputBinding_outputDataRef_feature", "_UI_InputOutputBinding_type"), Bpmn2Package.Literals.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_InputOutputBinding_outputDataRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_InputOutputBinding_outputDataRef_feature",
+                        "_UI_InputOutputBinding_type"),
+                Bpmn2Package.Literals.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF, true, false, true,
+                null, null, null));
     }
 
     /**
@@ -105,9 +131,11 @@ public class InputOutputBindingItemProvider extends ItemProviderAdapter implemen
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/InputOutputBinding.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/InputOutputBinding.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/InputOutputBinding.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/InputOutputBinding.gif"));
         }
     }
 

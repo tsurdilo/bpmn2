@@ -135,13 +135,14 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     private static boolean isInited = false;
-    
+
     /**
      * @see #initGen()
      */
     public static BpmnDiPackage init() {
         BpmnDiPackage result = initGen();
-        EPackage.Registry.INSTANCE.put(NamespaceHelper.xmiToXsdNamespaceUri(BpmnDiPackage.eNS_URI), result);
+        EPackage.Registry.INSTANCE.put(NamespaceHelper.xmiToXsdNamespaceUri(BpmnDiPackage.eNS_URI),
+                result);
         return result;
     }
 
@@ -159,17 +160,25 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      */
     public static BpmnDiPackage initGen() {
         if (isInited)
-            return (BpmnDiPackage)EPackage.Registry.INSTANCE.getEPackage(BpmnDiPackage.eNS_URI);
+            return (BpmnDiPackage) EPackage.Registry.INSTANCE.getEPackage(BpmnDiPackage.eNS_URI);
 
         // Obtain or create and register package
-        BpmnDiPackageImpl theBpmnDiPackage = (BpmnDiPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof BpmnDiPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new BpmnDiPackageImpl());
+        BpmnDiPackageImpl theBpmnDiPackage = (BpmnDiPackageImpl) (EPackage.Registry.INSTANCE
+                .get(eNS_URI) instanceof BpmnDiPackageImpl ? EPackage.Registry.INSTANCE
+                .get(eNS_URI) : new BpmnDiPackageImpl());
 
         isInited = true;
 
         // Obtain or create and register interdependencies
-        Bpmn2PackageImpl theBpmn2Package = (Bpmn2PackageImpl)(EPackage.Registry.INSTANCE.getEPackage(Bpmn2Package.eNS_URI) instanceof Bpmn2PackageImpl ? EPackage.Registry.INSTANCE.getEPackage(Bpmn2Package.eNS_URI) : Bpmn2Package.eINSTANCE);
-        DiPackageImpl theDiPackage = (DiPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DiPackage.eNS_URI) instanceof DiPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DiPackage.eNS_URI) : DiPackage.eINSTANCE);
-        DcPackageImpl theDcPackage = (DcPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DcPackage.eNS_URI) instanceof DcPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DcPackage.eNS_URI) : DcPackage.eINSTANCE);
+        Bpmn2PackageImpl theBpmn2Package = (Bpmn2PackageImpl) (EPackage.Registry.INSTANCE
+                .getEPackage(Bpmn2Package.eNS_URI) instanceof Bpmn2PackageImpl ? EPackage.Registry.INSTANCE
+                .getEPackage(Bpmn2Package.eNS_URI) : Bpmn2Package.eINSTANCE);
+        DiPackageImpl theDiPackage = (DiPackageImpl) (EPackage.Registry.INSTANCE
+                .getEPackage(DiPackage.eNS_URI) instanceof DiPackageImpl ? EPackage.Registry.INSTANCE
+                .getEPackage(DiPackage.eNS_URI) : DiPackage.eINSTANCE);
+        DcPackageImpl theDcPackage = (DcPackageImpl) (EPackage.Registry.INSTANCE
+                .getEPackage(DcPackage.eNS_URI) instanceof DcPackageImpl ? EPackage.Registry.INSTANCE
+                .getEPackage(DcPackage.eNS_URI) : DcPackage.eINSTANCE);
 
         // Load packages
         theBpmn2Package.loadPackage();
@@ -210,7 +219,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public EAttribute getDocumentRoot_Mixed() {
-        return (EAttribute)documentRootEClass.getEStructuralFeatures().get(0);
+        return (EAttribute) documentRootEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -219,7 +228,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public EReference getDocumentRoot_XMLNSPrefixMap() {
-        return (EReference)documentRootEClass.getEStructuralFeatures().get(1);
+        return (EReference) documentRootEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -228,7 +237,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public EReference getDocumentRoot_XSISchemaLocation() {
-        return (EReference)documentRootEClass.getEStructuralFeatures().get(2);
+        return (EReference) documentRootEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -237,7 +246,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public EReference getDocumentRoot_BPMNDiagram() {
-        return (EReference)documentRootEClass.getEStructuralFeatures().get(3);
+        return (EReference) documentRootEClass.getEStructuralFeatures().get(3);
     }
 
     /**
@@ -246,7 +255,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public EReference getDocumentRoot_BPMNEdge() {
-        return (EReference)documentRootEClass.getEStructuralFeatures().get(4);
+        return (EReference) documentRootEClass.getEStructuralFeatures().get(4);
     }
 
     /**
@@ -255,7 +264,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public EReference getDocumentRoot_BPMNLabel() {
-        return (EReference)documentRootEClass.getEStructuralFeatures().get(5);
+        return (EReference) documentRootEClass.getEStructuralFeatures().get(5);
     }
 
     /**
@@ -264,7 +273,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public EReference getDocumentRoot_BPMNLabelStyle() {
-        return (EReference)documentRootEClass.getEStructuralFeatures().get(6);
+        return (EReference) documentRootEClass.getEStructuralFeatures().get(6);
     }
 
     /**
@@ -273,7 +282,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public EReference getDocumentRoot_BPMNPlane() {
-        return (EReference)documentRootEClass.getEStructuralFeatures().get(7);
+        return (EReference) documentRootEClass.getEStructuralFeatures().get(7);
     }
 
     /**
@@ -282,7 +291,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public EReference getDocumentRoot_BPMNShape() {
-        return (EReference)documentRootEClass.getEStructuralFeatures().get(8);
+        return (EReference) documentRootEClass.getEStructuralFeatures().get(8);
     }
 
     /**
@@ -300,7 +309,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public EReference getBPMNDiagram_Plane() {
-        return (EReference)bpmnDiagramEClass.getEStructuralFeatures().get(0);
+        return (EReference) bpmnDiagramEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -309,7 +318,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public EReference getBPMNDiagram_LabelStyle() {
-        return (EReference)bpmnDiagramEClass.getEStructuralFeatures().get(1);
+        return (EReference) bpmnDiagramEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -327,7 +336,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public EReference getBPMNEdge_Label() {
-        return (EReference)bpmnEdgeEClass.getEStructuralFeatures().get(0);
+        return (EReference) bpmnEdgeEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -336,7 +345,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public EReference getBPMNEdge_BpmnElement() {
-        return (EReference)bpmnEdgeEClass.getEStructuralFeatures().get(1);
+        return (EReference) bpmnEdgeEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -345,7 +354,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public EAttribute getBPMNEdge_MessageVisibleKind() {
-        return (EAttribute)bpmnEdgeEClass.getEStructuralFeatures().get(2);
+        return (EAttribute) bpmnEdgeEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -354,7 +363,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public EReference getBPMNEdge_SourceElement() {
-        return (EReference)bpmnEdgeEClass.getEStructuralFeatures().get(3);
+        return (EReference) bpmnEdgeEClass.getEStructuralFeatures().get(3);
     }
 
     /**
@@ -363,7 +372,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public EReference getBPMNEdge_TargetElement() {
-        return (EReference)bpmnEdgeEClass.getEStructuralFeatures().get(4);
+        return (EReference) bpmnEdgeEClass.getEStructuralFeatures().get(4);
     }
 
     /**
@@ -381,7 +390,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public EReference getBPMNLabel_LabelStyle() {
-        return (EReference)bpmnLabelEClass.getEStructuralFeatures().get(0);
+        return (EReference) bpmnLabelEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -399,7 +408,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public EReference getBPMNLabelStyle_Font() {
-        return (EReference)bpmnLabelStyleEClass.getEStructuralFeatures().get(0);
+        return (EReference) bpmnLabelStyleEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -417,7 +426,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public EReference getBPMNPlane_BpmnElement() {
-        return (EReference)bpmnPlaneEClass.getEStructuralFeatures().get(0);
+        return (EReference) bpmnPlaneEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -435,7 +444,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public EReference getBPMNShape_Label() {
-        return (EReference)bpmnShapeEClass.getEStructuralFeatures().get(0);
+        return (EReference) bpmnShapeEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -444,7 +453,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public EReference getBPMNShape_BpmnElement() {
-        return (EReference)bpmnShapeEClass.getEStructuralFeatures().get(1);
+        return (EReference) bpmnShapeEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -453,7 +462,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public EReference getBPMNShape_ChoreographyActivityShape() {
-        return (EReference)bpmnShapeEClass.getEStructuralFeatures().get(2);
+        return (EReference) bpmnShapeEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -462,7 +471,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public EAttribute getBPMNShape_IsExpanded() {
-        return (EAttribute)bpmnShapeEClass.getEStructuralFeatures().get(3);
+        return (EAttribute) bpmnShapeEClass.getEStructuralFeatures().get(3);
     }
 
     /**
@@ -471,7 +480,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public EAttribute getBPMNShape_IsHorizontal() {
-        return (EAttribute)bpmnShapeEClass.getEStructuralFeatures().get(4);
+        return (EAttribute) bpmnShapeEClass.getEStructuralFeatures().get(4);
     }
 
     /**
@@ -480,7 +489,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public EAttribute getBPMNShape_IsMarkerVisible() {
-        return (EAttribute)bpmnShapeEClass.getEStructuralFeatures().get(5);
+        return (EAttribute) bpmnShapeEClass.getEStructuralFeatures().get(5);
     }
 
     /**
@@ -489,7 +498,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public EAttribute getBPMNShape_IsMessageVisible() {
-        return (EAttribute)bpmnShapeEClass.getEStructuralFeatures().get(6);
+        return (EAttribute) bpmnShapeEClass.getEStructuralFeatures().get(6);
     }
 
     /**
@@ -498,7 +507,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public EAttribute getBPMNShape_ParticipantBandKind() {
-        return (EAttribute)bpmnShapeEClass.getEStructuralFeatures().get(7);
+        return (EAttribute) bpmnShapeEClass.getEStructuralFeatures().get(7);
     }
 
     /**
@@ -525,7 +534,7 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
      * @generated
      */
     public BpmnDiFactory getBpmnDiFactory() {
-        return (BpmnDiFactory)getEFactoryInstance();
+        return (BpmnDiFactory) getEFactoryInstance();
     }
 
     /**
@@ -619,9 +628,12 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
         setNsURI(eNS_URI);
 
         // Obtain other dependent packages
-        DiPackage theDiPackage = (DiPackage)EPackage.Registry.INSTANCE.getEPackage(DiPackage.eNS_URI);
-        Bpmn2Package theBpmn2Package = (Bpmn2Package)EPackage.Registry.INSTANCE.getEPackage(Bpmn2Package.eNS_URI);
-        DcPackage theDcPackage = (DcPackage)EPackage.Registry.INSTANCE.getEPackage(DcPackage.eNS_URI);
+        DiPackage theDiPackage = (DiPackage) EPackage.Registry.INSTANCE
+                .getEPackage(DiPackage.eNS_URI);
+        Bpmn2Package theBpmn2Package = (Bpmn2Package) EPackage.Registry.INSTANCE
+                .getEPackage(Bpmn2Package.eNS_URI);
+        DcPackage theDcPackage = (DcPackage) EPackage.Registry.INSTANCE
+                .getEPackage(DcPackage.eNS_URI);
 
         // Create type parameters
 
@@ -636,46 +648,118 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
         bpmnShapeEClass.getESuperTypes().add(theDiPackage.getLabeledShape());
 
         // Initialize classes and features; add operations and parameters
-        initEClass(documentRootEClass, DocumentRoot.class, "DocumentRoot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getDocumentRoot_Mixed(), ecorePackage.getEFeatureMapEntry(), "mixed", null, 0, -1, null, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_XMLNSPrefixMap(), ecorePackage.getEStringToStringMapEntry(), null, "xMLNSPrefixMap", null, 0, -1, null, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_XSISchemaLocation(), ecorePackage.getEStringToStringMapEntry(), null, "xSISchemaLocation", null, 0, -1, null, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_BPMNDiagram(), this.getBPMNDiagram(), null, "bPMNDiagram", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_BPMNEdge(), this.getBPMNEdge(), null, "bPMNEdge", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_BPMNLabel(), this.getBPMNLabel(), null, "bPMNLabel", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_BPMNLabelStyle(), this.getBPMNLabelStyle(), null, "bPMNLabelStyle", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_BPMNPlane(), this.getBPMNPlane(), null, "bPMNPlane", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_BPMNShape(), this.getBPMNShape(), null, "bPMNShape", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEClass(documentRootEClass, DocumentRoot.class, "DocumentRoot", !IS_ABSTRACT,
+                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getDocumentRoot_Mixed(), ecorePackage.getEFeatureMapEntry(), "mixed", null,
+                0, -1, null, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getDocumentRoot_XMLNSPrefixMap(), ecorePackage.getEStringToStringMapEntry(),
+                null, "xMLNSPrefixMap", null, 0, -1, null, IS_TRANSIENT, !IS_VOLATILE,
+                IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
+                !IS_DERIVED, IS_ORDERED);
+        initEReference(getDocumentRoot_XSISchemaLocation(),
+                ecorePackage.getEStringToStringMapEntry(), null, "xSISchemaLocation", null, 0, -1,
+                null, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getDocumentRoot_BPMNDiagram(), this.getBPMNDiagram(), null, "bPMNDiagram",
+                null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEReference(getDocumentRoot_BPMNEdge(), this.getBPMNEdge(), null, "bPMNEdge", null, 0,
+                -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEReference(getDocumentRoot_BPMNLabel(), this.getBPMNLabel(), null, "bPMNLabel", null,
+                0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEReference(getDocumentRoot_BPMNLabelStyle(), this.getBPMNLabelStyle(), null,
+                "bPMNLabelStyle", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE,
+                IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED,
+                IS_ORDERED);
+        initEReference(getDocumentRoot_BPMNPlane(), this.getBPMNPlane(), null, "bPMNPlane", null,
+                0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEReference(getDocumentRoot_BPMNShape(), this.getBPMNShape(), null, "bPMNShape", null,
+                0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-        initEClass(bpmnDiagramEClass, BPMNDiagram.class, "BPMNDiagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getBPMNDiagram_Plane(), this.getBPMNPlane(), null, "plane", null, 1, 1, BPMNDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEReference(getBPMNDiagram_LabelStyle(), this.getBPMNLabelStyle(), null, "labelStyle", null, 0, -1, BPMNDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEClass(bpmnDiagramEClass, BPMNDiagram.class, "BPMNDiagram", !IS_ABSTRACT,
+                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getBPMNDiagram_Plane(), this.getBPMNPlane(), null, "plane", null, 1, 1,
+                BPMNDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEReference(getBPMNDiagram_LabelStyle(), this.getBPMNLabelStyle(), null, "labelStyle",
+                null, 0, -1, BPMNDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+                IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+                !IS_ORDERED);
 
-        initEClass(bpmnEdgeEClass, BPMNEdge.class, "BPMNEdge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getBPMNEdge_Label(), this.getBPMNLabel(), null, "label", null, 0, 1, BPMNEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEReference(getBPMNEdge_BpmnElement(), theBpmn2Package.getBaseElement(), null, "bpmnElement", null, 0, 1, BPMNEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEAttribute(getBPMNEdge_MessageVisibleKind(), this.getMessageVisibleKind(), "messageVisibleKind", null, 0, 1, BPMNEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEReference(getBPMNEdge_SourceElement(), theDiPackage.getDiagramElement(), null, "sourceElement", null, 0, 1, BPMNEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEReference(getBPMNEdge_TargetElement(), theDiPackage.getDiagramElement(), null, "targetElement", null, 0, 1, BPMNEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEClass(bpmnEdgeEClass, BPMNEdge.class, "BPMNEdge", !IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getBPMNEdge_Label(), this.getBPMNLabel(), null, "label", null, 0, 1,
+                BPMNEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEReference(getBPMNEdge_BpmnElement(), theBpmn2Package.getBaseElement(), null,
+                "bpmnElement", null, 0, 1, BPMNEdge.class, !IS_TRANSIENT, !IS_VOLATILE,
+                IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
+                !IS_DERIVED, !IS_ORDERED);
+        initEAttribute(getBPMNEdge_MessageVisibleKind(), this.getMessageVisibleKind(),
+                "messageVisibleKind", null, 0, 1, BPMNEdge.class, !IS_TRANSIENT, !IS_VOLATILE,
+                IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEReference(getBPMNEdge_SourceElement(), theDiPackage.getDiagramElement(), null,
+                "sourceElement", null, 0, 1, BPMNEdge.class, !IS_TRANSIENT, !IS_VOLATILE,
+                IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
+                !IS_DERIVED, !IS_ORDERED);
+        initEReference(getBPMNEdge_TargetElement(), theDiPackage.getDiagramElement(), null,
+                "targetElement", null, 0, 1, BPMNEdge.class, !IS_TRANSIENT, !IS_VOLATILE,
+                IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
+                !IS_DERIVED, !IS_ORDERED);
 
-        initEClass(bpmnLabelEClass, BPMNLabel.class, "BPMNLabel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getBPMNLabel_LabelStyle(), this.getBPMNLabelStyle(), null, "labelStyle", null, 0, 1, BPMNLabel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEClass(bpmnLabelEClass, BPMNLabel.class, "BPMNLabel", !IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getBPMNLabel_LabelStyle(), this.getBPMNLabelStyle(), null, "labelStyle",
+                null, 0, 1, BPMNLabel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+                !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+                !IS_ORDERED);
 
-        initEClass(bpmnLabelStyleEClass, BPMNLabelStyle.class, "BPMNLabelStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getBPMNLabelStyle_Font(), theDcPackage.getFont(), null, "font", null, 1, 1, BPMNLabelStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEClass(bpmnLabelStyleEClass, BPMNLabelStyle.class, "BPMNLabelStyle", !IS_ABSTRACT,
+                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getBPMNLabelStyle_Font(), theDcPackage.getFont(), null, "font", null, 1, 1,
+                BPMNLabelStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-        initEClass(bpmnPlaneEClass, BPMNPlane.class, "BPMNPlane", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getBPMNPlane_BpmnElement(), theBpmn2Package.getBaseElement(), null, "bpmnElement", null, 0, 1, BPMNPlane.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEClass(bpmnPlaneEClass, BPMNPlane.class, "BPMNPlane", !IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getBPMNPlane_BpmnElement(), theBpmn2Package.getBaseElement(), null,
+                "bpmnElement", null, 0, 1, BPMNPlane.class, !IS_TRANSIENT, !IS_VOLATILE,
+                IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
+                !IS_DERIVED, !IS_ORDERED);
 
-        initEClass(bpmnShapeEClass, BPMNShape.class, "BPMNShape", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getBPMNShape_Label(), this.getBPMNLabel(), null, "label", null, 0, 1, BPMNShape.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEReference(getBPMNShape_BpmnElement(), theBpmn2Package.getBaseElement(), null, "bpmnElement", null, 0, 1, BPMNShape.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEReference(getBPMNShape_ChoreographyActivityShape(), this.getBPMNShape(), null, "choreographyActivityShape", null, 0, 1, BPMNShape.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEAttribute(getBPMNShape_IsExpanded(), ecorePackage.getEBoolean(), "isExpanded", null, 0, 1, BPMNShape.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEAttribute(getBPMNShape_IsHorizontal(), ecorePackage.getEBoolean(), "isHorizontal", null, 0, 1, BPMNShape.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEAttribute(getBPMNShape_IsMarkerVisible(), ecorePackage.getEBoolean(), "isMarkerVisible", null, 0, 1, BPMNShape.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEAttribute(getBPMNShape_IsMessageVisible(), ecorePackage.getEBoolean(), "isMessageVisible", null, 0, 1, BPMNShape.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEAttribute(getBPMNShape_ParticipantBandKind(), this.getParticipantBandKind(), "participantBandKind", null, 0, 1, BPMNShape.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEClass(bpmnShapeEClass, BPMNShape.class, "BPMNShape", !IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getBPMNShape_Label(), this.getBPMNLabel(), null, "label", null, 0, 1,
+                BPMNShape.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEReference(getBPMNShape_BpmnElement(), theBpmn2Package.getBaseElement(), null,
+                "bpmnElement", null, 0, 1, BPMNShape.class, !IS_TRANSIENT, !IS_VOLATILE,
+                IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
+                !IS_DERIVED, !IS_ORDERED);
+        initEReference(getBPMNShape_ChoreographyActivityShape(), this.getBPMNShape(), null,
+                "choreographyActivityShape", null, 0, 1, BPMNShape.class, !IS_TRANSIENT,
+                !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEAttribute(getBPMNShape_IsExpanded(), ecorePackage.getEBoolean(), "isExpanded", null,
+                0, 1, BPMNShape.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+                !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEAttribute(getBPMNShape_IsHorizontal(), ecorePackage.getEBoolean(), "isHorizontal",
+                null, 0, 1, BPMNShape.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+                !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEAttribute(getBPMNShape_IsMarkerVisible(), ecorePackage.getEBoolean(),
+                "isMarkerVisible", null, 0, 1, BPMNShape.class, !IS_TRANSIENT, !IS_VOLATILE,
+                IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEAttribute(getBPMNShape_IsMessageVisible(), ecorePackage.getEBoolean(),
+                "isMessageVisible", null, 0, 1, BPMNShape.class, !IS_TRANSIENT, !IS_VOLATILE,
+                IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEAttribute(getBPMNShape_ParticipantBandKind(), this.getParticipantBandKind(),
+                "participantBandKind", null, 0, 1, BPMNShape.class, !IS_TRANSIENT, !IS_VOLATILE,
+                IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(messageVisibleKindEEnum, MessageVisibleKind.class, "MessageVisibleKind");
@@ -707,39 +791,74 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
     protected void createExtendedMetaDataAnnotations() {
         String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";
         addAnnotation(documentRootEClass, source, new String[] { "name", "", "kind", "mixed" });
-        addAnnotation(getDocumentRoot_Mixed(), source, new String[] { "kind", "elementWildcard", "name", ":mixed" });
-        addAnnotation(getDocumentRoot_XMLNSPrefixMap(), source, new String[] { "kind", "attribute", "name", "xmlns:prefix" });
-        addAnnotation(getDocumentRoot_XSISchemaLocation(), source, new String[] { "kind", "attribute", "name", "xsi:schemaLocation" });
-        addAnnotation(getDocumentRoot_BPMNDiagram(), source, new String[] { "kind", "element", "name", "BPMNDiagram", "namespace", "http://www.omg.org/spec/BPMN/20100524/DI" });
-        addAnnotation(getDocumentRoot_BPMNEdge(), source, new String[] { "kind", "element", "name", "BPMNEdge", "namespace", "http://www.omg.org/spec/BPMN/20100524/DI", "affiliation", "http://www.omg.org/spec/DD/20100524/DI#DiagramElement" });
-        addAnnotation(getDocumentRoot_BPMNLabel(), source, new String[] { "kind", "element", "name", "BPMNLabel", "namespace", "http://www.omg.org/spec/BPMN/20100524/DI" });
-        addAnnotation(getDocumentRoot_BPMNLabelStyle(), source, new String[] { "kind", "element", "name", "BPMNLabelStyle", "namespace", "http://www.omg.org/spec/BPMN/20100524/DI" });
-        addAnnotation(getDocumentRoot_BPMNPlane(), source, new String[] { "kind", "element", "name", "BPMNPlane", "namespace", "http://www.omg.org/spec/BPMN/20100524/DI" });
-        addAnnotation(getDocumentRoot_BPMNShape(), source, new String[] { "kind", "element", "name", "BPMNShape", "namespace", "http://www.omg.org/spec/BPMN/20100524/DI", "affiliation", "http://www.omg.org/spec/DD/20100524/DI#DiagramElement" });
-        addAnnotation(bpmnDiagramEClass, source, new String[] { "name", "BPMNDiagram", "kind", "elementOnly" });
-        addAnnotation(getBPMNDiagram_Plane(), source, new String[] { "kind", "element", "name", "BPMNPlane", "namespace", "http://www.omg.org/spec/BPMN/20100524/DI" });
-        addAnnotation(getBPMNDiagram_LabelStyle(), source, new String[] { "kind", "element", "name", "BPMNLabelStyle", "namespace", "http://www.omg.org/spec/BPMN/20100524/DI" });
-        addAnnotation(bpmnEdgeEClass, source, new String[] { "name", "BPMNEdge", "kind", "elementOnly" });
-        addAnnotation(getBPMNEdge_Label(), source, new String[] { "kind", "element", "name", "BPMNLabel", "namespace", "http://www.omg.org/spec/BPMN/20100524/DI" });
-        addAnnotation(getBPMNEdge_BpmnElement(), source, new String[] { "kind", "attribute", "name", "bpmnElement" });
-        addAnnotation(getBPMNEdge_MessageVisibleKind(), source, new String[] { "kind", "attribute", "name", "messageVisibleKind" });
-        addAnnotation(getBPMNEdge_SourceElement(), source, new String[] { "kind", "attribute", "name", "sourceElement" });
-        addAnnotation(getBPMNEdge_TargetElement(), source, new String[] { "kind", "attribute", "name", "targetElement" });
-        addAnnotation(bpmnLabelEClass, source, new String[] { "name", "BPMNLabel", "kind", "elementOnly" });
-        addAnnotation(getBPMNLabel_LabelStyle(), source, new String[] { "kind", "attribute", "name", "labelStyle" });
-        addAnnotation(bpmnLabelStyleEClass, source, new String[] { "name", "BPMNLabelStyle", "kind", "elementOnly" });
-        addAnnotation(getBPMNLabelStyle_Font(), source, new String[] { "kind", "element", "name", "Font", "namespace", "http://www.omg.org/spec/DD/20100524/DC" });
-        addAnnotation(bpmnPlaneEClass, source, new String[] { "name", "BPMNPlane", "kind", "elementOnly" });
-        addAnnotation(getBPMNPlane_BpmnElement(), source, new String[] { "kind", "attribute", "name", "bpmnElement" });
-        addAnnotation(bpmnShapeEClass, source, new String[] { "name", "BPMNShape", "kind", "elementOnly" });
-        addAnnotation(getBPMNShape_Label(), source, new String[] { "kind", "element", "name", "BPMNLabel", "namespace", "http://www.omg.org/spec/BPMN/20100524/DI" });
-        addAnnotation(getBPMNShape_BpmnElement(), source, new String[] { "kind", "attribute", "name", "bpmnElement" });
-        addAnnotation(getBPMNShape_ChoreographyActivityShape(), source, new String[] { "kind", "attribute", "name", "choreographyActivityShape" });
-        addAnnotation(getBPMNShape_IsExpanded(), source, new String[] { "kind", "attribute", "name", "isExpanded" });
-        addAnnotation(getBPMNShape_IsHorizontal(), source, new String[] { "kind", "attribute", "name", "isHorizontal" });
-        addAnnotation(getBPMNShape_IsMarkerVisible(), source, new String[] { "kind", "attribute", "name", "isMarkerVisible" });
-        addAnnotation(getBPMNShape_IsMessageVisible(), source, new String[] { "kind", "attribute", "name", "isMessageVisible" });
-        addAnnotation(getBPMNShape_ParticipantBandKind(), source, new String[] { "kind", "attribute", "name", "participantBandKind" });
+        addAnnotation(getDocumentRoot_Mixed(), source, new String[] { "kind", "elementWildcard",
+                "name", ":mixed" });
+        addAnnotation(getDocumentRoot_XMLNSPrefixMap(), source, new String[] { "kind", "attribute",
+                "name", "xmlns:prefix" });
+        addAnnotation(getDocumentRoot_XSISchemaLocation(), source, new String[] { "kind",
+                "attribute", "name", "xsi:schemaLocation" });
+        addAnnotation(getDocumentRoot_BPMNDiagram(), source, new String[] { "kind", "element",
+                "name", "BPMNDiagram", "namespace", "http://www.omg.org/spec/BPMN/20100524/DI" });
+        addAnnotation(getDocumentRoot_BPMNEdge(), source, new String[] { "kind", "element", "name",
+                "BPMNEdge", "namespace", "http://www.omg.org/spec/BPMN/20100524/DI", "affiliation",
+                "http://www.omg.org/spec/DD/20100524/DI#DiagramElement" });
+        addAnnotation(getDocumentRoot_BPMNLabel(), source, new String[] { "kind", "element",
+                "name", "BPMNLabel", "namespace", "http://www.omg.org/spec/BPMN/20100524/DI" });
+        addAnnotation(getDocumentRoot_BPMNLabelStyle(), source, new String[] { "kind", "element",
+                "name", "BPMNLabelStyle", "namespace", "http://www.omg.org/spec/BPMN/20100524/DI" });
+        addAnnotation(getDocumentRoot_BPMNPlane(), source, new String[] { "kind", "element",
+                "name", "BPMNPlane", "namespace", "http://www.omg.org/spec/BPMN/20100524/DI" });
+        addAnnotation(getDocumentRoot_BPMNShape(), source, new String[] { "kind", "element",
+                "name", "BPMNShape", "namespace", "http://www.omg.org/spec/BPMN/20100524/DI",
+                "affiliation", "http://www.omg.org/spec/DD/20100524/DI#DiagramElement" });
+        addAnnotation(bpmnDiagramEClass, source, new String[] { "name", "BPMNDiagram", "kind",
+                "elementOnly" });
+        addAnnotation(getBPMNDiagram_Plane(), source, new String[] { "kind", "element", "name",
+                "BPMNPlane", "namespace", "http://www.omg.org/spec/BPMN/20100524/DI" });
+        addAnnotation(getBPMNDiagram_LabelStyle(), source, new String[] { "kind", "element",
+                "name", "BPMNLabelStyle", "namespace", "http://www.omg.org/spec/BPMN/20100524/DI" });
+        addAnnotation(bpmnEdgeEClass, source, new String[] { "name", "BPMNEdge", "kind",
+                "elementOnly" });
+        addAnnotation(getBPMNEdge_Label(), source, new String[] { "kind", "element", "name",
+                "BPMNLabel", "namespace", "http://www.omg.org/spec/BPMN/20100524/DI" });
+        addAnnotation(getBPMNEdge_BpmnElement(), source, new String[] { "kind", "attribute",
+                "name", "bpmnElement" });
+        addAnnotation(getBPMNEdge_MessageVisibleKind(), source, new String[] { "kind", "attribute",
+                "name", "messageVisibleKind" });
+        addAnnotation(getBPMNEdge_SourceElement(), source, new String[] { "kind", "attribute",
+                "name", "sourceElement" });
+        addAnnotation(getBPMNEdge_TargetElement(), source, new String[] { "kind", "attribute",
+                "name", "targetElement" });
+        addAnnotation(bpmnLabelEClass, source, new String[] { "name", "BPMNLabel", "kind",
+                "elementOnly" });
+        addAnnotation(getBPMNLabel_LabelStyle(), source, new String[] { "kind", "attribute",
+                "name", "labelStyle" });
+        addAnnotation(bpmnLabelStyleEClass, source, new String[] { "name", "BPMNLabelStyle",
+                "kind", "elementOnly" });
+        addAnnotation(getBPMNLabelStyle_Font(), source, new String[] { "kind", "element", "name",
+                "Font", "namespace", "http://www.omg.org/spec/DD/20100524/DC" });
+        addAnnotation(bpmnPlaneEClass, source, new String[] { "name", "BPMNPlane", "kind",
+                "elementOnly" });
+        addAnnotation(getBPMNPlane_BpmnElement(), source, new String[] { "kind", "attribute",
+                "name", "bpmnElement" });
+        addAnnotation(bpmnShapeEClass, source, new String[] { "name", "BPMNShape", "kind",
+                "elementOnly" });
+        addAnnotation(getBPMNShape_Label(), source, new String[] { "kind", "element", "name",
+                "BPMNLabel", "namespace", "http://www.omg.org/spec/BPMN/20100524/DI" });
+        addAnnotation(getBPMNShape_BpmnElement(), source, new String[] { "kind", "attribute",
+                "name", "bpmnElement" });
+        addAnnotation(getBPMNShape_ChoreographyActivityShape(), source, new String[] { "kind",
+                "attribute", "name", "choreographyActivityShape" });
+        addAnnotation(getBPMNShape_IsExpanded(), source, new String[] { "kind", "attribute",
+                "name", "isExpanded" });
+        addAnnotation(getBPMNShape_IsHorizontal(), source, new String[] { "kind", "attribute",
+                "name", "isHorizontal" });
+        addAnnotation(getBPMNShape_IsMarkerVisible(), source, new String[] { "kind", "attribute",
+                "name", "isMarkerVisible" });
+        addAnnotation(getBPMNShape_IsMessageVisible(), source, new String[] { "kind", "attribute",
+                "name", "isMessageVisible" });
+        addAnnotation(getBPMNShape_ParticipantBandKind(), source, new String[] { "kind",
+                "attribute", "name", "participantBandKind" });
     }
 
 } //BpmnDiPackageImpl

@@ -88,7 +88,8 @@ public class DiSwitch<T> {
             return doSwitch(theEClass.getClassifierID(), theEObject);
         } else {
             List<EClass> eSuperTypes = theEClass.getESuperTypes();
-            return eSuperTypes.isEmpty() ? defaultCase(theEObject) : doSwitch(eSuperTypes.get(0), theEObject);
+            return eSuperTypes.isEmpty() ? defaultCase(theEObject) : doSwitch(eSuperTypes.get(0),
+                    theEObject);
         }
     }
 
@@ -101,111 +102,111 @@ public class DiSwitch<T> {
      */
     protected T doSwitch(int classifierID, EObject theEObject) {
         switch (classifierID) {
-            case DiPackage.DOCUMENT_ROOT: {
-                DocumentRoot documentRoot = (DocumentRoot)theEObject;
-                T result = caseDocumentRoot(documentRoot);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case DiPackage.DIAGRAM: {
-                Diagram diagram = (Diagram)theEObject;
-                T result = caseDiagram(diagram);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case DiPackage.DIAGRAM_ELEMENT: {
-                DiagramElement diagramElement = (DiagramElement)theEObject;
-                T result = caseDiagramElement(diagramElement);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case DiPackage.EDGE: {
-                Edge edge = (Edge)theEObject;
-                T result = caseEdge(edge);
-                if (result == null)
-                    result = caseDiagramElement(edge);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case DiPackage.LABEL: {
-                Label label = (Label)theEObject;
-                T result = caseLabel(label);
-                if (result == null)
-                    result = caseNode(label);
-                if (result == null)
-                    result = caseDiagramElement(label);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case DiPackage.LABELED_EDGE: {
-                LabeledEdge labeledEdge = (LabeledEdge)theEObject;
-                T result = caseLabeledEdge(labeledEdge);
-                if (result == null)
-                    result = caseEdge(labeledEdge);
-                if (result == null)
-                    result = caseDiagramElement(labeledEdge);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case DiPackage.LABELED_SHAPE: {
-                LabeledShape labeledShape = (LabeledShape)theEObject;
-                T result = caseLabeledShape(labeledShape);
-                if (result == null)
-                    result = caseShape(labeledShape);
-                if (result == null)
-                    result = caseNode(labeledShape);
-                if (result == null)
-                    result = caseDiagramElement(labeledShape);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case DiPackage.NODE: {
-                Node node = (Node)theEObject;
-                T result = caseNode(node);
-                if (result == null)
-                    result = caseDiagramElement(node);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case DiPackage.PLANE: {
-                Plane plane = (Plane)theEObject;
-                T result = casePlane(plane);
-                if (result == null)
-                    result = caseNode(plane);
-                if (result == null)
-                    result = caseDiagramElement(plane);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case DiPackage.SHAPE: {
-                Shape shape = (Shape)theEObject;
-                T result = caseShape(shape);
-                if (result == null)
-                    result = caseNode(shape);
-                if (result == null)
-                    result = caseDiagramElement(shape);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case DiPackage.STYLE: {
-                Style style = (Style)theEObject;
-                T result = caseStyle(style);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            default:
-                return defaultCase(theEObject);
+        case DiPackage.DOCUMENT_ROOT: {
+            DocumentRoot documentRoot = (DocumentRoot) theEObject;
+            T result = caseDocumentRoot(documentRoot);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case DiPackage.DIAGRAM: {
+            Diagram diagram = (Diagram) theEObject;
+            T result = caseDiagram(diagram);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case DiPackage.DIAGRAM_ELEMENT: {
+            DiagramElement diagramElement = (DiagramElement) theEObject;
+            T result = caseDiagramElement(diagramElement);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case DiPackage.EDGE: {
+            Edge edge = (Edge) theEObject;
+            T result = caseEdge(edge);
+            if (result == null)
+                result = caseDiagramElement(edge);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case DiPackage.LABEL: {
+            Label label = (Label) theEObject;
+            T result = caseLabel(label);
+            if (result == null)
+                result = caseNode(label);
+            if (result == null)
+                result = caseDiagramElement(label);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case DiPackage.LABELED_EDGE: {
+            LabeledEdge labeledEdge = (LabeledEdge) theEObject;
+            T result = caseLabeledEdge(labeledEdge);
+            if (result == null)
+                result = caseEdge(labeledEdge);
+            if (result == null)
+                result = caseDiagramElement(labeledEdge);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case DiPackage.LABELED_SHAPE: {
+            LabeledShape labeledShape = (LabeledShape) theEObject;
+            T result = caseLabeledShape(labeledShape);
+            if (result == null)
+                result = caseShape(labeledShape);
+            if (result == null)
+                result = caseNode(labeledShape);
+            if (result == null)
+                result = caseDiagramElement(labeledShape);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case DiPackage.NODE: {
+            Node node = (Node) theEObject;
+            T result = caseNode(node);
+            if (result == null)
+                result = caseDiagramElement(node);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case DiPackage.PLANE: {
+            Plane plane = (Plane) theEObject;
+            T result = casePlane(plane);
+            if (result == null)
+                result = caseNode(plane);
+            if (result == null)
+                result = caseDiagramElement(plane);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case DiPackage.SHAPE: {
+            Shape shape = (Shape) theEObject;
+            T result = caseShape(shape);
+            if (result == null)
+                result = caseNode(shape);
+            if (result == null)
+                result = caseDiagramElement(shape);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case DiPackage.STYLE: {
+            Style style = (Style) theEObject;
+            T result = caseStyle(style);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        default:
+            return defaultCase(theEObject);
         }
     }
 

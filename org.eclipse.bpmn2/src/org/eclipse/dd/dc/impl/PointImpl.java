@@ -145,10 +145,10 @@ public class PointImpl extends EObjectImpl implements Point {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case DcPackage.POINT__X:
-                return getX();
-            case DcPackage.POINT__Y:
-                return getY();
+        case DcPackage.POINT__X:
+            return getX();
+        case DcPackage.POINT__Y:
+            return getY();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -161,12 +161,12 @@ public class PointImpl extends EObjectImpl implements Point {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case DcPackage.POINT__X:
-                setX((Float)newValue);
-                return;
-            case DcPackage.POINT__Y:
-                setY((Float)newValue);
-                return;
+        case DcPackage.POINT__X:
+            setX((Float) newValue);
+            return;
+        case DcPackage.POINT__Y:
+            setY((Float) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -179,12 +179,12 @@ public class PointImpl extends EObjectImpl implements Point {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case DcPackage.POINT__X:
-                setX(X_EDEFAULT);
-                return;
-            case DcPackage.POINT__Y:
-                setY(Y_EDEFAULT);
-                return;
+        case DcPackage.POINT__X:
+            setX(X_EDEFAULT);
+            return;
+        case DcPackage.POINT__Y:
+            setY(Y_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -197,10 +197,10 @@ public class PointImpl extends EObjectImpl implements Point {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case DcPackage.POINT__X:
-                return x != X_EDEFAULT;
-            case DcPackage.POINT__Y:
-                return y != Y_EDEFAULT;
+        case DcPackage.POINT__X:
+            return x != X_EDEFAULT;
+        case DcPackage.POINT__Y:
+            return y != Y_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }

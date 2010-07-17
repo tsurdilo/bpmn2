@@ -35,7 +35,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class EscalationEventDefinitionImpl extends EventDefinitionImpl implements EscalationEventDefinition {
+public class EscalationEventDefinitionImpl extends EventDefinitionImpl implements
+        EscalationEventDefinition {
     /**
      * The cached value of the '{@link #getEscalationRef() <em>Escalation Ref</em>}' reference.
      * <!-- begin-user-doc -->
@@ -72,11 +73,13 @@ public class EscalationEventDefinitionImpl extends EventDefinitionImpl implement
      */
     public Escalation getEscalationRef() {
         if (escalationRef != null && escalationRef.eIsProxy()) {
-            InternalEObject oldEscalationRef = (InternalEObject)escalationRef;
-            escalationRef = (Escalation)eResolveProxy(oldEscalationRef);
+            InternalEObject oldEscalationRef = (InternalEObject) escalationRef;
+            escalationRef = (Escalation) eResolveProxy(oldEscalationRef);
             if (escalationRef != oldEscalationRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.ESCALATION_EVENT_DEFINITION__ESCALATION_REF, oldEscalationRef, escalationRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.ESCALATION_EVENT_DEFINITION__ESCALATION_REF,
+                            oldEscalationRef, escalationRef));
             }
         }
         return escalationRef;
@@ -100,7 +103,9 @@ public class EscalationEventDefinitionImpl extends EventDefinitionImpl implement
         Escalation oldEscalationRef = escalationRef;
         escalationRef = newEscalationRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ESCALATION_EVENT_DEFINITION__ESCALATION_REF, oldEscalationRef, escalationRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.ESCALATION_EVENT_DEFINITION__ESCALATION_REF, oldEscalationRef,
+                    escalationRef));
     }
 
     /**
@@ -111,10 +116,10 @@ public class EscalationEventDefinitionImpl extends EventDefinitionImpl implement
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.ESCALATION_EVENT_DEFINITION__ESCALATION_REF:
-                if (resolve)
-                    return getEscalationRef();
-                return basicGetEscalationRef();
+        case Bpmn2Package.ESCALATION_EVENT_DEFINITION__ESCALATION_REF:
+            if (resolve)
+                return getEscalationRef();
+            return basicGetEscalationRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -127,9 +132,9 @@ public class EscalationEventDefinitionImpl extends EventDefinitionImpl implement
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.ESCALATION_EVENT_DEFINITION__ESCALATION_REF:
-                setEscalationRef((Escalation)newValue);
-                return;
+        case Bpmn2Package.ESCALATION_EVENT_DEFINITION__ESCALATION_REF:
+            setEscalationRef((Escalation) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -142,9 +147,9 @@ public class EscalationEventDefinitionImpl extends EventDefinitionImpl implement
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.ESCALATION_EVENT_DEFINITION__ESCALATION_REF:
-                setEscalationRef((Escalation)null);
-                return;
+        case Bpmn2Package.ESCALATION_EVENT_DEFINITION__ESCALATION_REF:
+            setEscalationRef((Escalation) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -157,8 +162,8 @@ public class EscalationEventDefinitionImpl extends EventDefinitionImpl implement
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.ESCALATION_EVENT_DEFINITION__ESCALATION_REF:
-                return escalationRef != null;
+        case Bpmn2Package.ESCALATION_EVENT_DEFINITION__ESCALATION_REF:
+            return escalationRef != null;
         }
         return super.eIsSet(featureID);
     }

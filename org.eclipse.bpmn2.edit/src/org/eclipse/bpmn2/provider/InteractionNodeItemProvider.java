@@ -37,7 +37,9 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
  * <!-- end-user-doc -->
  * @generated
  */
-public class InteractionNodeItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class InteractionNodeItemProvider extends ItemProviderAdapter implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -72,7 +74,15 @@ public class InteractionNodeItemProvider extends ItemProviderAdapter implements 
      * @generated
      */
     protected void addIncomingConversationLinksPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_InteractionNode_incomingConversationLinks_feature"), getString("_UI_PropertyDescriptor_description", "_UI_InteractionNode_incomingConversationLinks_feature", "_UI_InteractionNode_type"), Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_InteractionNode_incomingConversationLinks_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_InteractionNode_incomingConversationLinks_feature",
+                        "_UI_InteractionNode_type"),
+                Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS, true, false,
+                true, null, null, null));
     }
 
     /**
@@ -82,7 +92,15 @@ public class InteractionNodeItemProvider extends ItemProviderAdapter implements 
      * @generated
      */
     protected void addOutgoingConversationLinksPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_InteractionNode_outgoingConversationLinks_feature"), getString("_UI_PropertyDescriptor_description", "_UI_InteractionNode_outgoingConversationLinks_feature", "_UI_InteractionNode_type"), Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_InteractionNode_outgoingConversationLinks_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_InteractionNode_outgoingConversationLinks_feature",
+                        "_UI_InteractionNode_type"),
+                Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS, true, false,
+                true, null, null, null));
     }
 
     /**

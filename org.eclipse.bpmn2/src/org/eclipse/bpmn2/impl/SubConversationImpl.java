@@ -77,7 +77,8 @@ public class SubConversationImpl extends ConversationNodeImpl implements SubConv
      */
     public List<ConversationNode> getConversationNodes() {
         if (conversationNodes == null) {
-            conversationNodes = new EObjectContainmentEList<ConversationNode>(ConversationNode.class, this, Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES);
+            conversationNodes = new EObjectContainmentEList<ConversationNode>(
+                    ConversationNode.class, this, Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES);
         }
         return conversationNodes;
     }
@@ -88,10 +89,11 @@ public class SubConversationImpl extends ConversationNodeImpl implements SubConv
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES:
-                return ((InternalEList<?>)getConversationNodes()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES:
+            return ((InternalEList<?>) getConversationNodes()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -104,8 +106,8 @@ public class SubConversationImpl extends ConversationNodeImpl implements SubConv
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES:
-                return getConversationNodes();
+        case Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES:
+            return getConversationNodes();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -119,10 +121,10 @@ public class SubConversationImpl extends ConversationNodeImpl implements SubConv
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES:
-                getConversationNodes().clear();
-                getConversationNodes().addAll((Collection<? extends ConversationNode>)newValue);
-                return;
+        case Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES:
+            getConversationNodes().clear();
+            getConversationNodes().addAll((Collection<? extends ConversationNode>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -135,9 +137,9 @@ public class SubConversationImpl extends ConversationNodeImpl implements SubConv
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES:
-                getConversationNodes().clear();
-                return;
+        case Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES:
+            getConversationNodes().clear();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -150,8 +152,8 @@ public class SubConversationImpl extends ConversationNodeImpl implements SubConv
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES:
-                return conversationNodes != null && !conversationNodes.isEmpty();
+        case Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES:
+            return conversationNodes != null && !conversationNodes.isEmpty();
         }
         return super.eIsSet(featureID);
     }

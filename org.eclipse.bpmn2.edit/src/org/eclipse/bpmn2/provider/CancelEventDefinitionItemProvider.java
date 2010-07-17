@@ -34,7 +34,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CancelEventDefinitionItemProvider extends EventDefinitionItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class CancelEventDefinitionItemProvider extends EventDefinitionItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -69,9 +71,11 @@ public class CancelEventDefinitionItemProvider extends EventDefinitionItemProvid
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/CancelEventDefinition.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/CancelEventDefinition.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/CancelEventDefinition.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/CancelEventDefinition.gif"));
         }
     }
 
@@ -83,8 +87,9 @@ public class CancelEventDefinitionItemProvider extends EventDefinitionItemProvid
      */
     @Override
     public String getText(Object object) {
-        String label = ((CancelEventDefinition)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_CancelEventDefinition_type") : getString("_UI_CancelEventDefinition_type") + " " + label;
+        String label = ((CancelEventDefinition) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_CancelEventDefinition_type")
+                : getString("_UI_CancelEventDefinition_type") + " " + label;
     }
 
     /**

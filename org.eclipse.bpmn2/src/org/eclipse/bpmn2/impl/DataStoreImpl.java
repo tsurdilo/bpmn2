@@ -133,7 +133,8 @@ public class DataStoreImpl extends ItemAwareElementImpl implements DataStore {
         int oldCapacity = capacity;
         capacity = newCapacity;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.DATA_STORE__CAPACITY, oldCapacity, capacity));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.DATA_STORE__CAPACITY, oldCapacity, capacity));
     }
 
     /**
@@ -154,7 +155,8 @@ public class DataStoreImpl extends ItemAwareElementImpl implements DataStore {
         boolean oldIsUnlimited = isUnlimited;
         isUnlimited = newIsUnlimited;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.DATA_STORE__IS_UNLIMITED, oldIsUnlimited, isUnlimited));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.DATA_STORE__IS_UNLIMITED, oldIsUnlimited, isUnlimited));
     }
 
     /**
@@ -175,7 +177,8 @@ public class DataStoreImpl extends ItemAwareElementImpl implements DataStore {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.DATA_STORE__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.DATA_STORE__NAME,
+                    oldName, name));
     }
 
     /**
@@ -186,12 +189,12 @@ public class DataStoreImpl extends ItemAwareElementImpl implements DataStore {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.DATA_STORE__CAPACITY:
-                return getCapacity();
-            case Bpmn2Package.DATA_STORE__IS_UNLIMITED:
-                return isIsUnlimited();
-            case Bpmn2Package.DATA_STORE__NAME:
-                return getName();
+        case Bpmn2Package.DATA_STORE__CAPACITY:
+            return getCapacity();
+        case Bpmn2Package.DATA_STORE__IS_UNLIMITED:
+            return isIsUnlimited();
+        case Bpmn2Package.DATA_STORE__NAME:
+            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -204,15 +207,15 @@ public class DataStoreImpl extends ItemAwareElementImpl implements DataStore {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.DATA_STORE__CAPACITY:
-                setCapacity((Integer)newValue);
-                return;
-            case Bpmn2Package.DATA_STORE__IS_UNLIMITED:
-                setIsUnlimited((Boolean)newValue);
-                return;
-            case Bpmn2Package.DATA_STORE__NAME:
-                setName((String)newValue);
-                return;
+        case Bpmn2Package.DATA_STORE__CAPACITY:
+            setCapacity((Integer) newValue);
+            return;
+        case Bpmn2Package.DATA_STORE__IS_UNLIMITED:
+            setIsUnlimited((Boolean) newValue);
+            return;
+        case Bpmn2Package.DATA_STORE__NAME:
+            setName((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -225,15 +228,15 @@ public class DataStoreImpl extends ItemAwareElementImpl implements DataStore {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.DATA_STORE__CAPACITY:
-                setCapacity(CAPACITY_EDEFAULT);
-                return;
-            case Bpmn2Package.DATA_STORE__IS_UNLIMITED:
-                setIsUnlimited(IS_UNLIMITED_EDEFAULT);
-                return;
-            case Bpmn2Package.DATA_STORE__NAME:
-                setName(NAME_EDEFAULT);
-                return;
+        case Bpmn2Package.DATA_STORE__CAPACITY:
+            setCapacity(CAPACITY_EDEFAULT);
+            return;
+        case Bpmn2Package.DATA_STORE__IS_UNLIMITED:
+            setIsUnlimited(IS_UNLIMITED_EDEFAULT);
+            return;
+        case Bpmn2Package.DATA_STORE__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -246,12 +249,12 @@ public class DataStoreImpl extends ItemAwareElementImpl implements DataStore {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.DATA_STORE__CAPACITY:
-                return capacity != CAPACITY_EDEFAULT;
-            case Bpmn2Package.DATA_STORE__IS_UNLIMITED:
-                return isUnlimited != IS_UNLIMITED_EDEFAULT;
-            case Bpmn2Package.DATA_STORE__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case Bpmn2Package.DATA_STORE__CAPACITY:
+            return capacity != CAPACITY_EDEFAULT;
+        case Bpmn2Package.DATA_STORE__IS_UNLIMITED:
+            return isUnlimited != IS_UNLIMITED_EDEFAULT;
+        case Bpmn2Package.DATA_STORE__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }

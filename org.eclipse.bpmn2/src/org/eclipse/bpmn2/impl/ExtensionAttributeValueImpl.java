@@ -97,11 +97,13 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
      */
     public Object getValueRef() {
         if (valueRef != null && valueRef.eIsProxy()) {
-            InternalEObject oldValueRef = (InternalEObject)valueRef;
+            InternalEObject oldValueRef = (InternalEObject) valueRef;
             valueRef = eResolveProxy(oldValueRef);
             if (valueRef != oldValueRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE_REF, oldValueRef, valueRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE_REF, oldValueRef,
+                            valueRef));
             }
         }
         return valueRef;
@@ -123,9 +125,10 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
      */
     public void setValueRef(Object newValueRef) {
         Object oldValueRef = valueRef;
-        valueRef = (EObject)newValueRef;
+        valueRef = (EObject) newValueRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE_REF, oldValueRef, valueRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE_REF, oldValueRef, valueRef));
     }
 
     /**
@@ -146,7 +149,8 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
         Object oldValue = value;
         value = newValue;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE, oldValue, newValue);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE, oldValue, newValue);
             if (msgs == null)
                 msgs = notification;
             else
@@ -164,14 +168,17 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
         if (newValue != value) {
             NotificationChain msgs = null;
             if (value != null)
-                msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE, null, msgs);
+                msgs = ((InternalEObject) value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE, null, msgs);
             if (newValue != null)
-                msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE, null, msgs);
-            msgs = basicSetValue((EObject)newValue, msgs);
+                msgs = ((InternalEObject) newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE, null, msgs);
+            msgs = basicSetValue((EObject) newValue, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE, newValue, newValue));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE, newValue, newValue));
     }
 
     /**
@@ -181,11 +188,13 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
      */
     public ExtensionAttributeDefinition getExtensionAttributeDefinition() {
         if (extensionAttributeDefinition != null && extensionAttributeDefinition.eIsProxy()) {
-            InternalEObject oldExtensionAttributeDefinition = (InternalEObject)extensionAttributeDefinition;
-            extensionAttributeDefinition = (ExtensionAttributeDefinition)eResolveProxy(oldExtensionAttributeDefinition);
+            InternalEObject oldExtensionAttributeDefinition = (InternalEObject) extensionAttributeDefinition;
+            extensionAttributeDefinition = (ExtensionAttributeDefinition) eResolveProxy(oldExtensionAttributeDefinition);
             if (extensionAttributeDefinition != oldExtensionAttributeDefinition) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION, oldExtensionAttributeDefinition, extensionAttributeDefinition));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION,
+                            oldExtensionAttributeDefinition, extensionAttributeDefinition));
             }
         }
         return extensionAttributeDefinition;
@@ -205,11 +214,14 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setExtensionAttributeDefinition(ExtensionAttributeDefinition newExtensionAttributeDefinition) {
+    public void setExtensionAttributeDefinition(
+            ExtensionAttributeDefinition newExtensionAttributeDefinition) {
         ExtensionAttributeDefinition oldExtensionAttributeDefinition = extensionAttributeDefinition;
         extensionAttributeDefinition = newExtensionAttributeDefinition;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION, oldExtensionAttributeDefinition, extensionAttributeDefinition));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION,
+                    oldExtensionAttributeDefinition, extensionAttributeDefinition));
     }
 
     /**
@@ -218,10 +230,11 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE:
-                return basicSetValue(null, msgs);
+        case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE:
+            return basicSetValue(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -234,16 +247,16 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE_REF:
-                if (resolve)
-                    return getValueRef();
-                return basicGetValueRef();
-            case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE:
-                return getValue();
-            case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION:
-                if (resolve)
-                    return getExtensionAttributeDefinition();
-                return basicGetExtensionAttributeDefinition();
+        case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE_REF:
+            if (resolve)
+                return getValueRef();
+            return basicGetValueRef();
+        case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE:
+            return getValue();
+        case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION:
+            if (resolve)
+                return getExtensionAttributeDefinition();
+            return basicGetExtensionAttributeDefinition();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -256,15 +269,15 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE_REF:
-                setValueRef((Object)newValue);
-                return;
-            case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE:
-                setValue((Object)newValue);
-                return;
-            case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION:
-                setExtensionAttributeDefinition((ExtensionAttributeDefinition)newValue);
-                return;
+        case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE_REF:
+            setValueRef((Object) newValue);
+            return;
+        case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE:
+            setValue((Object) newValue);
+            return;
+        case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION:
+            setExtensionAttributeDefinition((ExtensionAttributeDefinition) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -277,15 +290,15 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE_REF:
-                setValueRef((Object)null);
-                return;
-            case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE:
-                setValue((Object)null);
-                return;
-            case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION:
-                setExtensionAttributeDefinition((ExtensionAttributeDefinition)null);
-                return;
+        case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE_REF:
+            setValueRef((Object) null);
+            return;
+        case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE:
+            setValue((Object) null);
+            return;
+        case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION:
+            setExtensionAttributeDefinition((ExtensionAttributeDefinition) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -298,12 +311,12 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE_REF:
-                return valueRef != null;
-            case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE:
-                return value != null;
-            case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION:
-                return extensionAttributeDefinition != null;
+        case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE_REF:
+            return valueRef != null;
+        case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE:
+            return value != null;
+        case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION:
+            return extensionAttributeDefinition != null;
         }
         return super.eIsSet(featureID);
     }

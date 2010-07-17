@@ -87,7 +87,8 @@ public enum MessageVisibleKind implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    private static final MessageVisibleKind[] VALUES_ARRAY = new MessageVisibleKind[] { INITIATING, NON_INITIATING, };
+    private static final MessageVisibleKind[] VALUES_ARRAY = new MessageVisibleKind[] { INITIATING,
+            NON_INITIATING, };
 
     /**
      * A public read-only list of all the '<em><b>Message Visible Kind</b></em>' enumerators.
@@ -95,7 +96,8 @@ public enum MessageVisibleKind implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final List<MessageVisibleKind> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+    public static final List<MessageVisibleKind> VALUES = Collections.unmodifiableList(Arrays
+            .asList(VALUES_ARRAY));
 
     /**
      * Returns the '<em><b>Message Visible Kind</b></em>' literal with the specified literal value.
@@ -137,10 +139,10 @@ public enum MessageVisibleKind implements Enumerator {
      */
     public static MessageVisibleKind get(int value) {
         switch (value) {
-            case INITIATING_VALUE:
-                return INITIATING;
-            case NON_INITIATING_VALUE:
-                return NON_INITIATING;
+        case INITIATING_VALUE:
+            return INITIATING;
+        case NON_INITIATING_VALUE:
+            return NON_INITIATING;
         }
         return null;
     }

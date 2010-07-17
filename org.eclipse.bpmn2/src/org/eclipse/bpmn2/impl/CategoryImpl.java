@@ -100,7 +100,8 @@ public class CategoryImpl extends RootElementImpl implements Category {
      */
     public List<CategoryValue> getCategoryValue() {
         if (categoryValue == null) {
-            categoryValue = new EObjectContainmentEList<CategoryValue>(CategoryValue.class, this, Bpmn2Package.CATEGORY__CATEGORY_VALUE);
+            categoryValue = new EObjectContainmentEList<CategoryValue>(CategoryValue.class, this,
+                    Bpmn2Package.CATEGORY__CATEGORY_VALUE);
         }
         return categoryValue;
     }
@@ -123,7 +124,8 @@ public class CategoryImpl extends RootElementImpl implements Category {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.CATEGORY__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.CATEGORY__NAME,
+                    oldName, name));
     }
 
     /**
@@ -132,10 +134,11 @@ public class CategoryImpl extends RootElementImpl implements Category {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.CATEGORY__CATEGORY_VALUE:
-                return ((InternalEList<?>)getCategoryValue()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.CATEGORY__CATEGORY_VALUE:
+            return ((InternalEList<?>) getCategoryValue()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -148,10 +151,10 @@ public class CategoryImpl extends RootElementImpl implements Category {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.CATEGORY__CATEGORY_VALUE:
-                return getCategoryValue();
-            case Bpmn2Package.CATEGORY__NAME:
-                return getName();
+        case Bpmn2Package.CATEGORY__CATEGORY_VALUE:
+            return getCategoryValue();
+        case Bpmn2Package.CATEGORY__NAME:
+            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -165,13 +168,13 @@ public class CategoryImpl extends RootElementImpl implements Category {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.CATEGORY__CATEGORY_VALUE:
-                getCategoryValue().clear();
-                getCategoryValue().addAll((Collection<? extends CategoryValue>)newValue);
-                return;
-            case Bpmn2Package.CATEGORY__NAME:
-                setName((String)newValue);
-                return;
+        case Bpmn2Package.CATEGORY__CATEGORY_VALUE:
+            getCategoryValue().clear();
+            getCategoryValue().addAll((Collection<? extends CategoryValue>) newValue);
+            return;
+        case Bpmn2Package.CATEGORY__NAME:
+            setName((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -184,12 +187,12 @@ public class CategoryImpl extends RootElementImpl implements Category {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.CATEGORY__CATEGORY_VALUE:
-                getCategoryValue().clear();
-                return;
-            case Bpmn2Package.CATEGORY__NAME:
-                setName(NAME_EDEFAULT);
-                return;
+        case Bpmn2Package.CATEGORY__CATEGORY_VALUE:
+            getCategoryValue().clear();
+            return;
+        case Bpmn2Package.CATEGORY__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -202,10 +205,10 @@ public class CategoryImpl extends RootElementImpl implements Category {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.CATEGORY__CATEGORY_VALUE:
-                return categoryValue != null && !categoryValue.isEmpty();
-            case Bpmn2Package.CATEGORY__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case Bpmn2Package.CATEGORY__CATEGORY_VALUE:
+            return categoryValue != null && !categoryValue.isEmpty();
+        case Bpmn2Package.CATEGORY__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }

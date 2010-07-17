@@ -81,7 +81,8 @@ public class DcSwitch<T> {
             return doSwitch(theEClass.getClassifierID(), theEObject);
         } else {
             List<EClass> eSuperTypes = theEClass.getESuperTypes();
-            return eSuperTypes.isEmpty() ? defaultCase(theEObject) : doSwitch(eSuperTypes.get(0), theEObject);
+            return eSuperTypes.isEmpty() ? defaultCase(theEObject) : doSwitch(eSuperTypes.get(0),
+                    theEObject);
         }
     }
 
@@ -94,36 +95,36 @@ public class DcSwitch<T> {
      */
     protected T doSwitch(int classifierID, EObject theEObject) {
         switch (classifierID) {
-            case DcPackage.DOCUMENT_ROOT: {
-                DocumentRoot documentRoot = (DocumentRoot)theEObject;
-                T result = caseDocumentRoot(documentRoot);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case DcPackage.BOUNDS: {
-                Bounds bounds = (Bounds)theEObject;
-                T result = caseBounds(bounds);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case DcPackage.FONT: {
-                Font font = (Font)theEObject;
-                T result = caseFont(font);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case DcPackage.POINT: {
-                Point point = (Point)theEObject;
-                T result = casePoint(point);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            default:
-                return defaultCase(theEObject);
+        case DcPackage.DOCUMENT_ROOT: {
+            DocumentRoot documentRoot = (DocumentRoot) theEObject;
+            T result = caseDocumentRoot(documentRoot);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case DcPackage.BOUNDS: {
+            Bounds bounds = (Bounds) theEObject;
+            T result = caseBounds(bounds);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case DcPackage.FONT: {
+            Font font = (Font) theEObject;
+            T result = caseFont(font);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case DcPackage.POINT: {
+            Point point = (Point) theEObject;
+            T result = casePoint(point);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        default:
+            return defaultCase(theEObject);
         }
     }
 

@@ -40,7 +40,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DocumentRootItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class DocumentRootItemProvider extends ItemProviderAdapter implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -106,9 +108,11 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements IEd
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/DocumentRoot.png"));
+            return overlayImage(object, getResourceLocator()
+                    .getImage("full/obj16/DocumentRoot.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/DocumentRoot.gif"));
+            return overlayImage(object, getResourceLocator()
+                    .getImage("full/obj16/DocumentRoot.gif"));
         }
     }
 
@@ -135,10 +139,11 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements IEd
         updateChildren(notification);
 
         switch (notification.getFeatureID(DocumentRoot.class)) {
-            
-            case Bpmn2Package.DOCUMENT_ROOT__DEFINITIONS:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+
+        case Bpmn2Package.DOCUMENT_ROOT__DEFINITIONS:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -154,7 +159,9 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements IEd
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DOCUMENT_ROOT__DEFINITIONS, Bpmn2Factory.eINSTANCE.createDefinitions()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__DEFINITIONS,
+                Bpmn2Factory.eINSTANCE.createDefinitions()));
 
     }
 
@@ -165,14 +172,149 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements IEd
      * @generated
      */
     @Override
-    public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+    public String getCreateChildText(Object owner, Object feature, Object child,
+            Collection<?> selection) {
         Object childFeature = feature;
         Object childObject = child;
 
-        boolean qualify = childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ACTIVITY || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__FLOW_ELEMENT || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__EXTENSION_ELEMENTS || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__FLOW_NODE || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__SCRIPT || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__SUB_PROCESS || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__TEXT || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__AD_HOC_SUB_PROCESS || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__TASK || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__BUSINESS_RULE_TASK || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_ACTIVITY || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__MANUAL_TASK || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__RECEIVE_TASK || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__SCRIPT_TASK || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__SEND_TASK || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__SERVICE_TASK || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__TRANSACTION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__USER_TASK || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__BOUNDARY_EVENT || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CATCH_EVENT || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_CHOREOGRAPHY || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CHOREOGRAPHY_ACTIVITY || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CHOREOGRAPHY_TASK || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__COMPLEX_GATEWAY || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OBJECT || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OBJECT_REFERENCE || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_STORE_REFERENCE || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__END_EVENT || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__THROW_EVENT || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT_BASED_GATEWAY || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__EXCLUSIVE_GATEWAY || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__IMPLICIT_THROW_EVENT || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__INCLUSIVE_GATEWAY || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__INTERMEDIATE_CATCH_EVENT || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__INTERMEDIATE_THROW_EVENT || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__PARALLEL_GATEWAY || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__SEQUENCE_FLOW || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__START_EVENT || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__SUB_CHOREOGRAPHY || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ARTIFACT || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ASSOCIATION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__GROUP || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__TEXT_ANNOTATION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ASSIGNMENT || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__AUDITING || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_CONVERSATION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION_NODE || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CANCEL_EVENT_DEFINITION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT_DEFINITION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ROOT_ELEMENT || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CATEGORY || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CATEGORY_VALUE || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__COLLABORATION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CHOREOGRAPHY || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__COMPENSATE_EVENT_DEFINITION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__COMPLEX_BEHAVIOR_DEFINITION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CONDITIONAL_EVENT_DEFINITION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION_ASSOCIATION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION_LINK || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_KEY || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_PROPERTY || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_PROPERTY_BINDING || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_SUBSCRIPTION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_ASSOCIATION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_INPUT || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_INPUT_ASSOCIATION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OUTPUT || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OUTPUT_ASSOCIATION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_STATE || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_STORE || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__DEFINITIONS || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__DOCUMENTATION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__END_POINT || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ERROR || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ERROR_EVENT_DEFINITION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ESCALATION_EVENT_DEFINITION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__EXPRESSION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__FORMAL_EXPRESSION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CALLABLE_ELEMENT || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_TASK || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_BUSINESS_RULE_TASK || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_CHOREOGRAPHY_TASK || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_CONVERSATION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_MANUAL_TASK || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_SCRIPT_TASK || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_USER_TASK || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_ROLE || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__PERFORMER || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__HUMAN_PERFORMER || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__IO_SPECIFICATION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__INPUT_SET || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__INTERFACE || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ITEM_DEFINITION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__LANE || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__LANE_SET || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__LINK_EVENT_DEFINITION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE_EVENT_DEFINITION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE_FLOW || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE_FLOW_ASSOCIATION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__MONITORING || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__LOOP_CHARACTERISTICS || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__MULTI_INSTANCE_LOOP_CHARACTERISTICS || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__OPERATION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__OUTPUT_SET || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT_ASSOCIATION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__PARTNER_ENTITY || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__PARTNER_ROLE || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__POTENTIAL_OWNER || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__PROCESS || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__PROPERTY || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__RELATIONSHIP || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__RENDERING || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_PARAMETER || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__SIGNAL || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__SIGNAL_EVENT_DEFINITION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__STANDARD_LOOP_CHARACTERISTICS || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__SUB_CONVERSATION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__TERMINATE_EVENT_DEFINITION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__TIMER_EVENT_DEFINITION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ESCALATION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__EXTENSION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__IMPORT || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__IO_BINDING || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT_MULTIPLICITY || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_ASSIGNMENT_EXPRESSION || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_PARAMETER_BINDING;
+        boolean qualify = childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ACTIVITY
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__FLOW_ELEMENT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__EXTENSION_ELEMENTS
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__FLOW_NODE
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__SCRIPT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__SUB_PROCESS
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__TEXT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__AD_HOC_SUB_PROCESS
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__TASK
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__BUSINESS_RULE_TASK
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_ACTIVITY
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__MANUAL_TASK
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__RECEIVE_TASK
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__SCRIPT_TASK
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__SEND_TASK
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__SERVICE_TASK
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__TRANSACTION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__USER_TASK
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__BOUNDARY_EVENT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CATCH_EVENT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_CHOREOGRAPHY
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CHOREOGRAPHY_ACTIVITY
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CHOREOGRAPHY_TASK
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__COMPLEX_GATEWAY
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OBJECT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OBJECT_REFERENCE
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_STORE_REFERENCE
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__END_EVENT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__THROW_EVENT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT_BASED_GATEWAY
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__EXCLUSIVE_GATEWAY
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__IMPLICIT_THROW_EVENT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__INCLUSIVE_GATEWAY
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__INTERMEDIATE_CATCH_EVENT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__INTERMEDIATE_THROW_EVENT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__PARALLEL_GATEWAY
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__SEQUENCE_FLOW
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__START_EVENT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__SUB_CHOREOGRAPHY
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ARTIFACT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ASSOCIATION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__GROUP
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__TEXT_ANNOTATION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ASSIGNMENT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__AUDITING
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_CONVERSATION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION_NODE
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CANCEL_EVENT_DEFINITION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT_DEFINITION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ROOT_ELEMENT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CATEGORY
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CATEGORY_VALUE
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__COLLABORATION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CHOREOGRAPHY
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__COMPENSATE_EVENT_DEFINITION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__COMPLEX_BEHAVIOR_DEFINITION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CONDITIONAL_EVENT_DEFINITION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION_ASSOCIATION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION_LINK
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_KEY
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_PROPERTY
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_PROPERTY_BINDING
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_SUBSCRIPTION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_ASSOCIATION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_INPUT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_INPUT_ASSOCIATION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OUTPUT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OUTPUT_ASSOCIATION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_STATE
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_STORE
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__DEFINITIONS
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__DOCUMENTATION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__END_POINT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ERROR
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ERROR_EVENT_DEFINITION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ESCALATION_EVENT_DEFINITION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__EXPRESSION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__FORMAL_EXPRESSION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CALLABLE_ELEMENT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_TASK
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_BUSINESS_RULE_TASK
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_CHOREOGRAPHY_TASK
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_CONVERSATION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_MANUAL_TASK
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_SCRIPT_TASK
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_USER_TASK
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_ROLE
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__PERFORMER
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__HUMAN_PERFORMER
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__IO_SPECIFICATION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__INPUT_SET
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__INTERFACE
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ITEM_DEFINITION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__LANE
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__LANE_SET
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__LINK_EVENT_DEFINITION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE_EVENT_DEFINITION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE_FLOW
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE_FLOW_ASSOCIATION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__MONITORING
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__LOOP_CHARACTERISTICS
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__MULTI_INSTANCE_LOOP_CHARACTERISTICS
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__OPERATION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__OUTPUT_SET
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT_ASSOCIATION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__PARTNER_ENTITY
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__PARTNER_ROLE
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__POTENTIAL_OWNER
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__PROCESS
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__PROPERTY
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__RELATIONSHIP
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__RENDERING
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_PARAMETER
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__SIGNAL
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__SIGNAL_EVENT_DEFINITION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__STANDARD_LOOP_CHARACTERISTICS
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__SUB_CONVERSATION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__TERMINATE_EVENT_DEFINITION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__TIMER_EVENT_DEFINITION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ESCALATION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__EXTENSION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__IMPORT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__IO_BINDING
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT_MULTIPLICITY
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_ASSIGNMENT_EXPRESSION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_PARAMETER_BINDING;
 
         if (qualify) {
-            return getString("_UI_CreateChild_text2", new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+            return getString("_UI_CreateChild_text2", new Object[] { getTypeText(childObject),
+                    getFeatureText(childFeature), getTypeText(owner) });
         }
         return super.getCreateChildText(owner, feature, child, selection);
     }

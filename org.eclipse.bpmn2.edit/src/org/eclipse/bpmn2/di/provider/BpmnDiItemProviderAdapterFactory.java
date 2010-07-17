@@ -42,7 +42,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class BpmnDiItemProviderAdapterFactory extends BpmnDiAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier {
+public class BpmnDiItemProviderAdapterFactory extends BpmnDiAdapterFactory implements
+        ComposeableAdapterFactory, IChangeNotifier {
     /**
      * This keeps track of the root adapter factory that delegates to this adapter factory.
      * <!-- begin-user-doc -->
@@ -292,7 +293,7 @@ public class BpmnDiItemProviderAdapterFactory extends BpmnDiAdapterFactory imple
     public Object adapt(Object object, Object type) {
         if (isFactoryForType(type)) {
             Object adapter = super.adapt(object, type);
-            if (!(type instanceof Class<?>) || (((Class<?>)type).isInstance(adapter))) {
+            if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
                 return adapter;
             }
         }

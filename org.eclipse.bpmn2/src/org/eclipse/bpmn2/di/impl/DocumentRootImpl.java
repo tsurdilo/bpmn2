@@ -128,7 +128,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      */
     public Map<String, String> getXMLNSPrefixMap() {
         if (xMLNSPrefixMap == null) {
-            xMLNSPrefixMap = new EcoreEMap<String, String>(EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY, EStringToStringMapEntryImpl.class, this, BpmnDiPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP);
+            xMLNSPrefixMap = new EcoreEMap<String, String>(
+                    EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY,
+                    EStringToStringMapEntryImpl.class, this,
+                    BpmnDiPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP);
         }
         return xMLNSPrefixMap.map();
     }
@@ -140,7 +143,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      */
     public Map<String, String> getXSISchemaLocation() {
         if (xSISchemaLocation == null) {
-            xSISchemaLocation = new EcoreEMap<String, String>(EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY, EStringToStringMapEntryImpl.class, this, BpmnDiPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION);
+            xSISchemaLocation = new EcoreEMap<String, String>(
+                    EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY,
+                    EStringToStringMapEntryImpl.class, this,
+                    BpmnDiPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION);
         }
         return xSISchemaLocation.map();
     }
@@ -151,7 +157,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public BPMNDiagram getBPMNDiagram() {
-        return (BPMNDiagram)getMixed().get(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_DIAGRAM, true);
+        return (BPMNDiagram) getMixed().get(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_DIAGRAM,
+                true);
     }
 
     /**
@@ -160,7 +167,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetBPMNDiagram(BPMNDiagram newBPMNDiagram, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_DIAGRAM, newBPMNDiagram, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_DIAGRAM, newBPMNDiagram, msgs);
     }
 
     /**
@@ -169,7 +177,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setBPMNDiagram(BPMNDiagram newBPMNDiagram) {
-        ((FeatureMap.Internal)getMixed()).set(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_DIAGRAM, newBPMNDiagram);
+        ((FeatureMap.Internal) getMixed()).set(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_DIAGRAM,
+                newBPMNDiagram);
     }
 
     /**
@@ -178,7 +187,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public BPMNEdge getBPMNEdge() {
-        return (BPMNEdge)getMixed().get(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_EDGE, true);
+        return (BPMNEdge) getMixed().get(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_EDGE, true);
     }
 
     /**
@@ -187,7 +196,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetBPMNEdge(BPMNEdge newBPMNEdge, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_EDGE, newBPMNEdge, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_EDGE, newBPMNEdge, msgs);
     }
 
     /**
@@ -196,7 +206,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setBPMNEdge(BPMNEdge newBPMNEdge) {
-        ((FeatureMap.Internal)getMixed()).set(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_EDGE, newBPMNEdge);
+        ((FeatureMap.Internal) getMixed()).set(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_EDGE,
+                newBPMNEdge);
     }
 
     /**
@@ -205,7 +216,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public BPMNLabel getBPMNLabel() {
-        return (BPMNLabel)getMixed().get(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_LABEL, true);
+        return (BPMNLabel) getMixed().get(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_LABEL, true);
     }
 
     /**
@@ -214,7 +225,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetBPMNLabel(BPMNLabel newBPMNLabel, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_LABEL, newBPMNLabel, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_LABEL, newBPMNLabel, msgs);
     }
 
     /**
@@ -223,7 +235,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setBPMNLabel(BPMNLabel newBPMNLabel) {
-        ((FeatureMap.Internal)getMixed()).set(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_LABEL, newBPMNLabel);
+        ((FeatureMap.Internal) getMixed()).set(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_LABEL,
+                newBPMNLabel);
     }
 
     /**
@@ -232,7 +245,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public BPMNLabelStyle getBPMNLabelStyle() {
-        return (BPMNLabelStyle)getMixed().get(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_LABEL_STYLE, true);
+        return (BPMNLabelStyle) getMixed().get(
+                BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_LABEL_STYLE, true);
     }
 
     /**
@@ -240,8 +254,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetBPMNLabelStyle(BPMNLabelStyle newBPMNLabelStyle, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_LABEL_STYLE, newBPMNLabelStyle, msgs);
+    public NotificationChain basicSetBPMNLabelStyle(BPMNLabelStyle newBPMNLabelStyle,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_LABEL_STYLE, newBPMNLabelStyle, msgs);
     }
 
     /**
@@ -250,7 +266,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setBPMNLabelStyle(BPMNLabelStyle newBPMNLabelStyle) {
-        ((FeatureMap.Internal)getMixed()).set(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_LABEL_STYLE, newBPMNLabelStyle);
+        ((FeatureMap.Internal) getMixed()).set(
+                BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_LABEL_STYLE, newBPMNLabelStyle);
     }
 
     /**
@@ -259,7 +276,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public BPMNPlane getBPMNPlane() {
-        return (BPMNPlane)getMixed().get(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_PLANE, true);
+        return (BPMNPlane) getMixed().get(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_PLANE, true);
     }
 
     /**
@@ -268,7 +285,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetBPMNPlane(BPMNPlane newBPMNPlane, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_PLANE, newBPMNPlane, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_PLANE, newBPMNPlane, msgs);
     }
 
     /**
@@ -277,7 +295,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setBPMNPlane(BPMNPlane newBPMNPlane) {
-        ((FeatureMap.Internal)getMixed()).set(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_PLANE, newBPMNPlane);
+        ((FeatureMap.Internal) getMixed()).set(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_PLANE,
+                newBPMNPlane);
     }
 
     /**
@@ -286,7 +305,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public BPMNShape getBPMNShape() {
-        return (BPMNShape)getMixed().get(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_SHAPE, true);
+        return (BPMNShape) getMixed().get(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_SHAPE, true);
     }
 
     /**
@@ -295,7 +314,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetBPMNShape(BPMNShape newBPMNShape, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_SHAPE, newBPMNShape, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_SHAPE, newBPMNShape, msgs);
     }
 
     /**
@@ -304,7 +324,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setBPMNShape(BPMNShape newBPMNShape) {
-        ((FeatureMap.Internal)getMixed()).set(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_SHAPE, newBPMNShape);
+        ((FeatureMap.Internal) getMixed()).set(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_SHAPE,
+                newBPMNShape);
     }
 
     /**
@@ -313,26 +334,29 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case BpmnDiPackage.DOCUMENT_ROOT__MIXED:
-                return ((InternalEList<?>)getMixed()).basicRemove(otherEnd, msgs);
-            case BpmnDiPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
-                return ((InternalEList<?>)((EMap.InternalMapView<String, String>)getXMLNSPrefixMap()).eMap()).basicRemove(otherEnd, msgs);
-            case BpmnDiPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
-                return ((InternalEList<?>)((EMap.InternalMapView<String, String>)getXSISchemaLocation()).eMap()).basicRemove(otherEnd, msgs);
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_DIAGRAM:
-                return basicSetBPMNDiagram(null, msgs);
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_EDGE:
-                return basicSetBPMNEdge(null, msgs);
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_LABEL:
-                return basicSetBPMNLabel(null, msgs);
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_LABEL_STYLE:
-                return basicSetBPMNLabelStyle(null, msgs);
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_PLANE:
-                return basicSetBPMNPlane(null, msgs);
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_SHAPE:
-                return basicSetBPMNShape(null, msgs);
+        case BpmnDiPackage.DOCUMENT_ROOT__MIXED:
+            return ((InternalEList<?>) getMixed()).basicRemove(otherEnd, msgs);
+        case BpmnDiPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
+            return ((InternalEList<?>) ((EMap.InternalMapView<String, String>) getXMLNSPrefixMap())
+                    .eMap()).basicRemove(otherEnd, msgs);
+        case BpmnDiPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
+            return ((InternalEList<?>) ((EMap.InternalMapView<String, String>) getXSISchemaLocation())
+                    .eMap()).basicRemove(otherEnd, msgs);
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_DIAGRAM:
+            return basicSetBPMNDiagram(null, msgs);
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_EDGE:
+            return basicSetBPMNEdge(null, msgs);
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_LABEL:
+            return basicSetBPMNLabel(null, msgs);
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_LABEL_STYLE:
+            return basicSetBPMNLabelStyle(null, msgs);
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_PLANE:
+            return basicSetBPMNPlane(null, msgs);
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_SHAPE:
+            return basicSetBPMNShape(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -345,32 +369,32 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case BpmnDiPackage.DOCUMENT_ROOT__MIXED:
-                if (coreType)
-                    return getMixed();
-                return ((FeatureMap.Internal)getMixed()).getWrapper();
-            case BpmnDiPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
-                if (coreType)
-                    return ((EMap.InternalMapView<String, String>)getXMLNSPrefixMap()).eMap();
-                else
-                    return getXMLNSPrefixMap();
-            case BpmnDiPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
-                if (coreType)
-                    return ((EMap.InternalMapView<String, String>)getXSISchemaLocation()).eMap();
-                else
-                    return getXSISchemaLocation();
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_DIAGRAM:
-                return getBPMNDiagram();
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_EDGE:
-                return getBPMNEdge();
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_LABEL:
-                return getBPMNLabel();
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_LABEL_STYLE:
-                return getBPMNLabelStyle();
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_PLANE:
-                return getBPMNPlane();
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_SHAPE:
-                return getBPMNShape();
+        case BpmnDiPackage.DOCUMENT_ROOT__MIXED:
+            if (coreType)
+                return getMixed();
+            return ((FeatureMap.Internal) getMixed()).getWrapper();
+        case BpmnDiPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
+            if (coreType)
+                return ((EMap.InternalMapView<String, String>) getXMLNSPrefixMap()).eMap();
+            else
+                return getXMLNSPrefixMap();
+        case BpmnDiPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
+            if (coreType)
+                return ((EMap.InternalMapView<String, String>) getXSISchemaLocation()).eMap();
+            else
+                return getXSISchemaLocation();
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_DIAGRAM:
+            return getBPMNDiagram();
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_EDGE:
+            return getBPMNEdge();
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_LABEL:
+            return getBPMNLabel();
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_LABEL_STYLE:
+            return getBPMNLabelStyle();
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_PLANE:
+            return getBPMNPlane();
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_SHAPE:
+            return getBPMNShape();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -383,33 +407,35 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case BpmnDiPackage.DOCUMENT_ROOT__MIXED:
-                ((FeatureMap.Internal)getMixed()).set(newValue);
-                return;
-            case BpmnDiPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
-                ((EStructuralFeature.Setting)((EMap.InternalMapView<String, String>)getXMLNSPrefixMap()).eMap()).set(newValue);
-                return;
-            case BpmnDiPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
-                ((EStructuralFeature.Setting)((EMap.InternalMapView<String, String>)getXSISchemaLocation()).eMap()).set(newValue);
-                return;
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_DIAGRAM:
-                setBPMNDiagram((BPMNDiagram)newValue);
-                return;
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_EDGE:
-                setBPMNEdge((BPMNEdge)newValue);
-                return;
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_LABEL:
-                setBPMNLabel((BPMNLabel)newValue);
-                return;
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_LABEL_STYLE:
-                setBPMNLabelStyle((BPMNLabelStyle)newValue);
-                return;
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_PLANE:
-                setBPMNPlane((BPMNPlane)newValue);
-                return;
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_SHAPE:
-                setBPMNShape((BPMNShape)newValue);
-                return;
+        case BpmnDiPackage.DOCUMENT_ROOT__MIXED:
+            ((FeatureMap.Internal) getMixed()).set(newValue);
+            return;
+        case BpmnDiPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
+            ((EStructuralFeature.Setting) ((EMap.InternalMapView<String, String>) getXMLNSPrefixMap())
+                    .eMap()).set(newValue);
+            return;
+        case BpmnDiPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
+            ((EStructuralFeature.Setting) ((EMap.InternalMapView<String, String>) getXSISchemaLocation())
+                    .eMap()).set(newValue);
+            return;
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_DIAGRAM:
+            setBPMNDiagram((BPMNDiagram) newValue);
+            return;
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_EDGE:
+            setBPMNEdge((BPMNEdge) newValue);
+            return;
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_LABEL:
+            setBPMNLabel((BPMNLabel) newValue);
+            return;
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_LABEL_STYLE:
+            setBPMNLabelStyle((BPMNLabelStyle) newValue);
+            return;
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_PLANE:
+            setBPMNPlane((BPMNPlane) newValue);
+            return;
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_SHAPE:
+            setBPMNShape((BPMNShape) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -422,33 +448,33 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case BpmnDiPackage.DOCUMENT_ROOT__MIXED:
-                getMixed().clear();
-                return;
-            case BpmnDiPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
-                getXMLNSPrefixMap().clear();
-                return;
-            case BpmnDiPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
-                getXSISchemaLocation().clear();
-                return;
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_DIAGRAM:
-                setBPMNDiagram((BPMNDiagram)null);
-                return;
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_EDGE:
-                setBPMNEdge((BPMNEdge)null);
-                return;
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_LABEL:
-                setBPMNLabel((BPMNLabel)null);
-                return;
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_LABEL_STYLE:
-                setBPMNLabelStyle((BPMNLabelStyle)null);
-                return;
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_PLANE:
-                setBPMNPlane((BPMNPlane)null);
-                return;
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_SHAPE:
-                setBPMNShape((BPMNShape)null);
-                return;
+        case BpmnDiPackage.DOCUMENT_ROOT__MIXED:
+            getMixed().clear();
+            return;
+        case BpmnDiPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
+            getXMLNSPrefixMap().clear();
+            return;
+        case BpmnDiPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
+            getXSISchemaLocation().clear();
+            return;
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_DIAGRAM:
+            setBPMNDiagram((BPMNDiagram) null);
+            return;
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_EDGE:
+            setBPMNEdge((BPMNEdge) null);
+            return;
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_LABEL:
+            setBPMNLabel((BPMNLabel) null);
+            return;
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_LABEL_STYLE:
+            setBPMNLabelStyle((BPMNLabelStyle) null);
+            return;
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_PLANE:
+            setBPMNPlane((BPMNPlane) null);
+            return;
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_SHAPE:
+            setBPMNShape((BPMNShape) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -461,24 +487,24 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case BpmnDiPackage.DOCUMENT_ROOT__MIXED:
-                return mixed != null && !mixed.isEmpty();
-            case BpmnDiPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
-                return xMLNSPrefixMap != null && !xMLNSPrefixMap.isEmpty();
-            case BpmnDiPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
-                return xSISchemaLocation != null && !xSISchemaLocation.isEmpty();
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_DIAGRAM:
-                return getBPMNDiagram() != null;
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_EDGE:
-                return getBPMNEdge() != null;
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_LABEL:
-                return getBPMNLabel() != null;
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_LABEL_STYLE:
-                return getBPMNLabelStyle() != null;
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_PLANE:
-                return getBPMNPlane() != null;
-            case BpmnDiPackage.DOCUMENT_ROOT__BPMN_SHAPE:
-                return getBPMNShape() != null;
+        case BpmnDiPackage.DOCUMENT_ROOT__MIXED:
+            return mixed != null && !mixed.isEmpty();
+        case BpmnDiPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
+            return xMLNSPrefixMap != null && !xMLNSPrefixMap.isEmpty();
+        case BpmnDiPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
+            return xSISchemaLocation != null && !xSISchemaLocation.isEmpty();
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_DIAGRAM:
+            return getBPMNDiagram() != null;
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_EDGE:
+            return getBPMNEdge() != null;
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_LABEL:
+            return getBPMNLabel() != null;
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_LABEL_STYLE:
+            return getBPMNLabelStyle() != null;
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_PLANE:
+            return getBPMNPlane() != null;
+        case BpmnDiPackage.DOCUMENT_ROOT__BPMN_SHAPE:
+            return getBPMNShape() != null;
         }
         return super.eIsSet(featureID);
     }

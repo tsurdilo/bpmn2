@@ -36,7 +36,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class InclusiveGatewayItemProvider extends GatewayItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class InclusiveGatewayItemProvider extends GatewayItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -70,7 +72,14 @@ public class InclusiveGatewayItemProvider extends GatewayItemProvider implements
      * @generated
      */
     protected void addDefaultPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_InclusiveGateway_default_feature"), getString("_UI_PropertyDescriptor_description", "_UI_InclusiveGateway_default_feature", "_UI_InclusiveGateway_type"), Bpmn2Package.Literals.INCLUSIVE_GATEWAY__DEFAULT, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_InclusiveGateway_default_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_InclusiveGateway_default_feature", "_UI_InclusiveGateway_type"),
+                Bpmn2Package.Literals.INCLUSIVE_GATEWAY__DEFAULT, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -82,9 +91,11 @@ public class InclusiveGatewayItemProvider extends GatewayItemProvider implements
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/InclusiveGateway.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/InclusiveGateway.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/InclusiveGateway.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/InclusiveGateway.gif"));
         }
     }
 
@@ -96,8 +107,9 @@ public class InclusiveGatewayItemProvider extends GatewayItemProvider implements
      */
     @Override
     public String getText(Object object) {
-        String label = ((InclusiveGateway)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_InclusiveGateway_type") : getString("_UI_InclusiveGateway_type") + " " + label;
+        String label = ((InclusiveGateway) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_InclusiveGateway_type")
+                : getString("_UI_InclusiveGateway_type") + " " + label;
     }
 
     /**

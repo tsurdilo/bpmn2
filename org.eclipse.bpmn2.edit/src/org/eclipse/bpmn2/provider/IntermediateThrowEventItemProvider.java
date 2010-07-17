@@ -34,7 +34,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class IntermediateThrowEventItemProvider extends ThrowEventItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class IntermediateThrowEventItemProvider extends ThrowEventItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -69,9 +71,11 @@ public class IntermediateThrowEventItemProvider extends ThrowEventItemProvider i
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/IntermediateThrowEvent.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/IntermediateThrowEvent.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/IntermediateThrowEvent.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/IntermediateThrowEvent.gif"));
         }
     }
 
@@ -83,8 +87,9 @@ public class IntermediateThrowEventItemProvider extends ThrowEventItemProvider i
      */
     @Override
     public String getText(Object object) {
-        String label = ((IntermediateThrowEvent)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_IntermediateThrowEvent_type") : getString("_UI_IntermediateThrowEvent_type") + " " + label;
+        String label = ((IntermediateThrowEvent) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_IntermediateThrowEvent_type")
+                : getString("_UI_IntermediateThrowEvent_type") + " " + label;
     }
 
     /**

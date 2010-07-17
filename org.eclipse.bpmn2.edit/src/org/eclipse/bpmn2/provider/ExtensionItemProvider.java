@@ -42,7 +42,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ExtensionItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ExtensionItemProvider extends ItemProviderAdapter implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -76,7 +78,14 @@ public class ExtensionItemProvider extends ItemProviderAdapter implements IEditi
      * @generated
      */
     protected void addMustUnderstandPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Extension_mustUnderstand_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Extension_mustUnderstand_feature", "_UI_Extension_type"), Bpmn2Package.Literals.EXTENSION__MUST_UNDERSTAND, true, false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Extension_mustUnderstand_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_Extension_mustUnderstand_feature", "_UI_Extension_type"),
+                Bpmn2Package.Literals.EXTENSION__MUST_UNDERSTAND, true, false, false,
+                ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -132,7 +141,7 @@ public class ExtensionItemProvider extends ItemProviderAdapter implements IEditi
      */
     @Override
     public String getText(Object object) {
-        Extension extension = (Extension)object;
+        Extension extension = (Extension) object;
         return getString("_UI_Extension_type") + " " + extension.isMustUnderstand();
     }
 
@@ -148,12 +157,14 @@ public class ExtensionItemProvider extends ItemProviderAdapter implements IEditi
         updateChildren(notification);
 
         switch (notification.getFeatureID(Extension.class)) {
-            case Bpmn2Package.EXTENSION__MUST_UNDERSTAND:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
-            case Bpmn2Package.EXTENSION__DEFINITION:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case Bpmn2Package.EXTENSION__MUST_UNDERSTAND:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
+        case Bpmn2Package.EXTENSION__DEFINITION:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -169,7 +180,8 @@ public class ExtensionItemProvider extends ItemProviderAdapter implements IEditi
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.EXTENSION__DEFINITION, Bpmn2Factory.eINSTANCE.createExtensionDefinition()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.EXTENSION__DEFINITION,
+                Bpmn2Factory.eINSTANCE.createExtensionDefinition()));
     }
 
     /**

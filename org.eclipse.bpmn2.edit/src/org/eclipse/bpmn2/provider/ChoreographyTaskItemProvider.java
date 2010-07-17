@@ -36,7 +36,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ChoreographyTaskItemProvider extends ChoreographyActivityItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ChoreographyTaskItemProvider extends ChoreographyActivityItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -70,7 +72,16 @@ public class ChoreographyTaskItemProvider extends ChoreographyActivityItemProvid
      * @generated
      */
     protected void addMessageFlowRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_ChoreographyTask_messageFlowRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_ChoreographyTask_messageFlowRef_feature", "_UI_ChoreographyTask_type"), Bpmn2Package.Literals.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors
+                .add(createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                        getResourceLocator(),
+                        getString("_UI_ChoreographyTask_messageFlowRef_feature"),
+                        getString("_UI_PropertyDescriptor_description",
+                                "_UI_ChoreographyTask_messageFlowRef_feature",
+                                "_UI_ChoreographyTask_type"),
+                        Bpmn2Package.Literals.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF, true, false,
+                        true, null, null, null));
     }
 
     /**
@@ -82,9 +93,11 @@ public class ChoreographyTaskItemProvider extends ChoreographyActivityItemProvid
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/ChoreographyTask.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/ChoreographyTask.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/ChoreographyTask.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/ChoreographyTask.gif"));
         }
     }
 
@@ -96,8 +109,9 @@ public class ChoreographyTaskItemProvider extends ChoreographyActivityItemProvid
      */
     @Override
     public String getText(Object object) {
-        String label = ((ChoreographyTask)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_ChoreographyTask_type") : getString("_UI_ChoreographyTask_type") + " " + label;
+        String label = ((ChoreographyTask) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_ChoreographyTask_type")
+                : getString("_UI_ChoreographyTask_type") + " " + label;
     }
 
     /**

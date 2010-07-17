@@ -73,7 +73,8 @@ public abstract class LabeledShapeImpl extends ShapeImpl implements LabeledShape
      */
     public List<Label> getOwnedLabel() {
         if (ownedLabel == null) {
-            ownedLabel = new EObjectResolvingEList<Label>(Label.class, this, DiPackage.LABELED_SHAPE__OWNED_LABEL);
+            ownedLabel = new EObjectResolvingEList<Label>(Label.class, this,
+                    DiPackage.LABELED_SHAPE__OWNED_LABEL);
         }
         return ownedLabel;
     }
@@ -86,8 +87,8 @@ public abstract class LabeledShapeImpl extends ShapeImpl implements LabeledShape
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case DiPackage.LABELED_SHAPE__OWNED_LABEL:
-                return getOwnedLabel();
+        case DiPackage.LABELED_SHAPE__OWNED_LABEL:
+            return getOwnedLabel();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -100,8 +101,8 @@ public abstract class LabeledShapeImpl extends ShapeImpl implements LabeledShape
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case DiPackage.LABELED_SHAPE__OWNED_LABEL:
-                return ownedLabel != null && !ownedLabel.isEmpty();
+        case DiPackage.LABELED_SHAPE__OWNED_LABEL:
+            return ownedLabel != null && !ownedLabel.isEmpty();
         }
         return super.eIsSet(featureID);
     }

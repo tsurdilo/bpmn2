@@ -40,7 +40,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class StandardLoopCharacteristicsItemProvider extends LoopCharacteristicsItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class StandardLoopCharacteristicsItemProvider extends LoopCharacteristicsItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -74,7 +76,15 @@ public class StandardLoopCharacteristicsItemProvider extends LoopCharacteristics
      * @generated
      */
     protected void addTestBeforePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_StandardLoopCharacteristics_testBefore_feature"), getString("_UI_PropertyDescriptor_description", "_UI_StandardLoopCharacteristics_testBefore_feature", "_UI_StandardLoopCharacteristics_type"), Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE, true, false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_StandardLoopCharacteristics_testBefore_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_StandardLoopCharacteristics_testBefore_feature",
+                        "_UI_StandardLoopCharacteristics_type"),
+                Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE, true, false,
+                false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -89,7 +99,8 @@ public class StandardLoopCharacteristicsItemProvider extends LoopCharacteristics
     public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION);
+            childrenFeatures
+                    .add(Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION);
             childrenFeatures.add(Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM);
         }
         return childrenFeatures;
@@ -117,9 +128,11 @@ public class StandardLoopCharacteristicsItemProvider extends LoopCharacteristics
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/StandardLoopCharacteristics.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/StandardLoopCharacteristics.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/StandardLoopCharacteristics.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/StandardLoopCharacteristics.gif"));
         }
     }
 
@@ -131,8 +144,9 @@ public class StandardLoopCharacteristicsItemProvider extends LoopCharacteristics
      */
     @Override
     public String getText(Object object) {
-        String label = ((StandardLoopCharacteristics)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_StandardLoopCharacteristics_type") : getString("_UI_StandardLoopCharacteristics_type") + " " + label;
+        String label = ((StandardLoopCharacteristics) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_StandardLoopCharacteristics_type")
+                : getString("_UI_StandardLoopCharacteristics_type") + " " + label;
     }
 
     /**
@@ -147,13 +161,15 @@ public class StandardLoopCharacteristicsItemProvider extends LoopCharacteristics
         updateChildren(notification);
 
         switch (notification.getFeatureID(StandardLoopCharacteristics.class)) {
-            case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
-            case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION:
-            case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
+        case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION:
+        case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -169,13 +185,21 @@ public class StandardLoopCharacteristicsItemProvider extends LoopCharacteristics
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION, Bpmn2Factory.eINSTANCE.createExpression()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION,
+                Bpmn2Factory.eINSTANCE.createExpression()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION, Bpmn2Factory.eINSTANCE.createFormalExpression()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION,
+                Bpmn2Factory.eINSTANCE.createFormalExpression()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM, Bpmn2Factory.eINSTANCE.createExpression()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM,
+                Bpmn2Factory.eINSTANCE.createExpression()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM, Bpmn2Factory.eINSTANCE.createFormalExpression()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM,
+                Bpmn2Factory.eINSTANCE.createFormalExpression()));
     }
 
     /**
@@ -185,14 +209,17 @@ public class StandardLoopCharacteristicsItemProvider extends LoopCharacteristics
      * @generated
      */
     @Override
-    public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+    public String getCreateChildText(Object owner, Object feature, Object child,
+            Collection<?> selection) {
         Object childFeature = feature;
         Object childObject = child;
 
-        boolean qualify = childFeature == Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION || childFeature == Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM;
+        boolean qualify = childFeature == Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION
+                || childFeature == Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM;
 
         if (qualify) {
-            return getString("_UI_CreateChild_text2", new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+            return getString("_UI_CreateChild_text2", new Object[] { getTypeText(childObject),
+                    getFeatureText(childFeature), getTypeText(owner) });
         }
         return super.getCreateChildText(owner, feature, child, selection);
     }

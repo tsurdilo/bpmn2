@@ -34,7 +34,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TerminateEventDefinitionItemProvider extends EventDefinitionItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class TerminateEventDefinitionItemProvider extends EventDefinitionItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -69,9 +71,11 @@ public class TerminateEventDefinitionItemProvider extends EventDefinitionItemPro
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/TerminateEventDefinition.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/TerminateEventDefinition.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/TerminateEventDefinition.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/TerminateEventDefinition.gif"));
         }
     }
 
@@ -83,8 +87,9 @@ public class TerminateEventDefinitionItemProvider extends EventDefinitionItemPro
      */
     @Override
     public String getText(Object object) {
-        String label = ((TerminateEventDefinition)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_TerminateEventDefinition_type") : getString("_UI_TerminateEventDefinition_type") + " " + label;
+        String label = ((TerminateEventDefinition) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_TerminateEventDefinition_type")
+                : getString("_UI_TerminateEventDefinition_type") + " " + label;
     }
 
     /**

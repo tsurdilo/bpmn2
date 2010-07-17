@@ -114,9 +114,12 @@ public class AssociationImpl extends ArtifactImpl implements Association {
      */
     public void setAssociationDirection(AssociationDirection newAssociationDirection) {
         AssociationDirection oldAssociationDirection = associationDirection;
-        associationDirection = newAssociationDirection == null ? ASSOCIATION_DIRECTION_EDEFAULT : newAssociationDirection;
+        associationDirection = newAssociationDirection == null ? ASSOCIATION_DIRECTION_EDEFAULT
+                : newAssociationDirection;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ASSOCIATION__ASSOCIATION_DIRECTION, oldAssociationDirection, associationDirection));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.ASSOCIATION__ASSOCIATION_DIRECTION, oldAssociationDirection,
+                    associationDirection));
     }
 
     /**
@@ -126,11 +129,12 @@ public class AssociationImpl extends ArtifactImpl implements Association {
      */
     public BaseElement getSourceRef() {
         if (sourceRef != null && sourceRef.eIsProxy()) {
-            InternalEObject oldSourceRef = (InternalEObject)sourceRef;
-            sourceRef = (BaseElement)eResolveProxy(oldSourceRef);
+            InternalEObject oldSourceRef = (InternalEObject) sourceRef;
+            sourceRef = (BaseElement) eResolveProxy(oldSourceRef);
             if (sourceRef != oldSourceRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.ASSOCIATION__SOURCE_REF, oldSourceRef, sourceRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.ASSOCIATION__SOURCE_REF, oldSourceRef, sourceRef));
             }
         }
         return sourceRef;
@@ -154,7 +158,8 @@ public class AssociationImpl extends ArtifactImpl implements Association {
         BaseElement oldSourceRef = sourceRef;
         sourceRef = newSourceRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ASSOCIATION__SOURCE_REF, oldSourceRef, sourceRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.ASSOCIATION__SOURCE_REF, oldSourceRef, sourceRef));
     }
 
     /**
@@ -164,11 +169,12 @@ public class AssociationImpl extends ArtifactImpl implements Association {
      */
     public BaseElement getTargetRef() {
         if (targetRef != null && targetRef.eIsProxy()) {
-            InternalEObject oldTargetRef = (InternalEObject)targetRef;
-            targetRef = (BaseElement)eResolveProxy(oldTargetRef);
+            InternalEObject oldTargetRef = (InternalEObject) targetRef;
+            targetRef = (BaseElement) eResolveProxy(oldTargetRef);
             if (targetRef != oldTargetRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.ASSOCIATION__TARGET_REF, oldTargetRef, targetRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.ASSOCIATION__TARGET_REF, oldTargetRef, targetRef));
             }
         }
         return targetRef;
@@ -192,7 +198,8 @@ public class AssociationImpl extends ArtifactImpl implements Association {
         BaseElement oldTargetRef = targetRef;
         targetRef = newTargetRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ASSOCIATION__TARGET_REF, oldTargetRef, targetRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.ASSOCIATION__TARGET_REF, oldTargetRef, targetRef));
     }
 
     /**
@@ -203,16 +210,16 @@ public class AssociationImpl extends ArtifactImpl implements Association {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.ASSOCIATION__ASSOCIATION_DIRECTION:
-                return getAssociationDirection();
-            case Bpmn2Package.ASSOCIATION__SOURCE_REF:
-                if (resolve)
-                    return getSourceRef();
-                return basicGetSourceRef();
-            case Bpmn2Package.ASSOCIATION__TARGET_REF:
-                if (resolve)
-                    return getTargetRef();
-                return basicGetTargetRef();
+        case Bpmn2Package.ASSOCIATION__ASSOCIATION_DIRECTION:
+            return getAssociationDirection();
+        case Bpmn2Package.ASSOCIATION__SOURCE_REF:
+            if (resolve)
+                return getSourceRef();
+            return basicGetSourceRef();
+        case Bpmn2Package.ASSOCIATION__TARGET_REF:
+            if (resolve)
+                return getTargetRef();
+            return basicGetTargetRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -225,15 +232,15 @@ public class AssociationImpl extends ArtifactImpl implements Association {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.ASSOCIATION__ASSOCIATION_DIRECTION:
-                setAssociationDirection((AssociationDirection)newValue);
-                return;
-            case Bpmn2Package.ASSOCIATION__SOURCE_REF:
-                setSourceRef((BaseElement)newValue);
-                return;
-            case Bpmn2Package.ASSOCIATION__TARGET_REF:
-                setTargetRef((BaseElement)newValue);
-                return;
+        case Bpmn2Package.ASSOCIATION__ASSOCIATION_DIRECTION:
+            setAssociationDirection((AssociationDirection) newValue);
+            return;
+        case Bpmn2Package.ASSOCIATION__SOURCE_REF:
+            setSourceRef((BaseElement) newValue);
+            return;
+        case Bpmn2Package.ASSOCIATION__TARGET_REF:
+            setTargetRef((BaseElement) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -246,15 +253,15 @@ public class AssociationImpl extends ArtifactImpl implements Association {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.ASSOCIATION__ASSOCIATION_DIRECTION:
-                setAssociationDirection(ASSOCIATION_DIRECTION_EDEFAULT);
-                return;
-            case Bpmn2Package.ASSOCIATION__SOURCE_REF:
-                setSourceRef((BaseElement)null);
-                return;
-            case Bpmn2Package.ASSOCIATION__TARGET_REF:
-                setTargetRef((BaseElement)null);
-                return;
+        case Bpmn2Package.ASSOCIATION__ASSOCIATION_DIRECTION:
+            setAssociationDirection(ASSOCIATION_DIRECTION_EDEFAULT);
+            return;
+        case Bpmn2Package.ASSOCIATION__SOURCE_REF:
+            setSourceRef((BaseElement) null);
+            return;
+        case Bpmn2Package.ASSOCIATION__TARGET_REF:
+            setTargetRef((BaseElement) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -267,12 +274,12 @@ public class AssociationImpl extends ArtifactImpl implements Association {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.ASSOCIATION__ASSOCIATION_DIRECTION:
-                return associationDirection != ASSOCIATION_DIRECTION_EDEFAULT;
-            case Bpmn2Package.ASSOCIATION__SOURCE_REF:
-                return sourceRef != null;
-            case Bpmn2Package.ASSOCIATION__TARGET_REF:
-                return targetRef != null;
+        case Bpmn2Package.ASSOCIATION__ASSOCIATION_DIRECTION:
+            return associationDirection != ASSOCIATION_DIRECTION_EDEFAULT;
+        case Bpmn2Package.ASSOCIATION__SOURCE_REF:
+            return sourceRef != null;
+        case Bpmn2Package.ASSOCIATION__TARGET_REF:
+            return targetRef != null;
         }
         return super.eIsSet(featureID);
     }

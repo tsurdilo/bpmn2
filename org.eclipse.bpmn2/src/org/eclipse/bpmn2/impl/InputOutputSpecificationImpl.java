@@ -46,7 +46,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class InputOutputSpecificationImpl extends BaseElementImpl implements InputOutputSpecification {
+public class InputOutputSpecificationImpl extends BaseElementImpl implements
+        InputOutputSpecification {
     /**
      * The cached value of the '{@link #getDataInputs() <em>Data Inputs</em>}' containment reference list.
      * <!-- begin-user-doc -->
@@ -113,7 +114,8 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements Inp
      */
     public List<DataInput> getDataInputs() {
         if (dataInputs == null) {
-            dataInputs = new EObjectContainmentEList<DataInput>(DataInput.class, this, Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS);
+            dataInputs = new EObjectContainmentEList<DataInput>(DataInput.class, this,
+                    Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS);
         }
         return dataInputs;
     }
@@ -125,7 +127,8 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements Inp
      */
     public List<DataOutput> getDataOutputs() {
         if (dataOutputs == null) {
-            dataOutputs = new EObjectContainmentEList<DataOutput>(DataOutput.class, this, Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS);
+            dataOutputs = new EObjectContainmentEList<DataOutput>(DataOutput.class, this,
+                    Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS);
         }
         return dataOutputs;
     }
@@ -137,7 +140,8 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements Inp
      */
     public List<InputSet> getInputSets() {
         if (inputSets == null) {
-            inputSets = new EObjectContainmentEList<InputSet>(InputSet.class, this, Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS);
+            inputSets = new EObjectContainmentEList<InputSet>(InputSet.class, this,
+                    Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS);
         }
         return inputSets;
     }
@@ -149,7 +153,8 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements Inp
      */
     public List<OutputSet> getOutputSets() {
         if (outputSets == null) {
-            outputSets = new EObjectContainmentEList<OutputSet>(OutputSet.class, this, Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS);
+            outputSets = new EObjectContainmentEList<OutputSet>(OutputSet.class, this,
+                    Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS);
         }
         return outputSets;
     }
@@ -160,16 +165,17 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements Inp
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS:
-                return ((InternalEList<?>)getDataInputs()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS:
-                return ((InternalEList<?>)getDataOutputs()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS:
-                return ((InternalEList<?>)getInputSets()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS:
-                return ((InternalEList<?>)getOutputSets()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS:
+            return ((InternalEList<?>) getDataInputs()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS:
+            return ((InternalEList<?>) getDataOutputs()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS:
+            return ((InternalEList<?>) getInputSets()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS:
+            return ((InternalEList<?>) getOutputSets()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -182,14 +188,14 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements Inp
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS:
-                return getDataInputs();
-            case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS:
-                return getDataOutputs();
-            case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS:
-                return getInputSets();
-            case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS:
-                return getOutputSets();
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS:
+            return getDataInputs();
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS:
+            return getDataOutputs();
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS:
+            return getInputSets();
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS:
+            return getOutputSets();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -203,22 +209,22 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements Inp
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS:
-                getDataInputs().clear();
-                getDataInputs().addAll((Collection<? extends DataInput>)newValue);
-                return;
-            case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS:
-                getDataOutputs().clear();
-                getDataOutputs().addAll((Collection<? extends DataOutput>)newValue);
-                return;
-            case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS:
-                getInputSets().clear();
-                getInputSets().addAll((Collection<? extends InputSet>)newValue);
-                return;
-            case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS:
-                getOutputSets().clear();
-                getOutputSets().addAll((Collection<? extends OutputSet>)newValue);
-                return;
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS:
+            getDataInputs().clear();
+            getDataInputs().addAll((Collection<? extends DataInput>) newValue);
+            return;
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS:
+            getDataOutputs().clear();
+            getDataOutputs().addAll((Collection<? extends DataOutput>) newValue);
+            return;
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS:
+            getInputSets().clear();
+            getInputSets().addAll((Collection<? extends InputSet>) newValue);
+            return;
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS:
+            getOutputSets().clear();
+            getOutputSets().addAll((Collection<? extends OutputSet>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -231,18 +237,18 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements Inp
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS:
-                getDataInputs().clear();
-                return;
-            case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS:
-                getDataOutputs().clear();
-                return;
-            case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS:
-                getInputSets().clear();
-                return;
-            case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS:
-                getOutputSets().clear();
-                return;
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS:
+            getDataInputs().clear();
+            return;
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS:
+            getDataOutputs().clear();
+            return;
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS:
+            getInputSets().clear();
+            return;
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS:
+            getOutputSets().clear();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -255,14 +261,14 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements Inp
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS:
-                return dataInputs != null && !dataInputs.isEmpty();
-            case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS:
-                return dataOutputs != null && !dataOutputs.isEmpty();
-            case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS:
-                return inputSets != null && !inputSets.isEmpty();
-            case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS:
-                return outputSets != null && !outputSets.isEmpty();
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS:
+            return dataInputs != null && !dataInputs.isEmpty();
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS:
+            return dataOutputs != null && !dataOutputs.isEmpty();
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS:
+            return inputSets != null && !inputSets.isEmpty();
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS:
+            return outputSets != null && !outputSets.isEmpty();
         }
         return super.eIsSet(featureID);
     }

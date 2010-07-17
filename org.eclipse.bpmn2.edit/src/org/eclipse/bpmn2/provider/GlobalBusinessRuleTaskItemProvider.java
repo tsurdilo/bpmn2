@@ -38,7 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class GlobalBusinessRuleTaskItemProvider extends GlobalTaskItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class GlobalBusinessRuleTaskItemProvider extends GlobalTaskItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -72,7 +74,15 @@ public class GlobalBusinessRuleTaskItemProvider extends GlobalTaskItemProvider i
      * @generated
      */
     protected void addImplementationPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_GlobalBusinessRuleTask_implementation_feature"), getString("_UI_PropertyDescriptor_description", "_UI_GlobalBusinessRuleTask_implementation_feature", "_UI_GlobalBusinessRuleTask_type"), Bpmn2Package.Literals.GLOBAL_BUSINESS_RULE_TASK__IMPLEMENTATION, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_GlobalBusinessRuleTask_implementation_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_GlobalBusinessRuleTask_implementation_feature",
+                        "_UI_GlobalBusinessRuleTask_type"),
+                Bpmn2Package.Literals.GLOBAL_BUSINESS_RULE_TASK__IMPLEMENTATION, true, false,
+                false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -84,9 +94,11 @@ public class GlobalBusinessRuleTaskItemProvider extends GlobalTaskItemProvider i
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/GlobalBusinessRuleTask.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/GlobalBusinessRuleTask.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/GlobalBusinessRuleTask.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/GlobalBusinessRuleTask.gif"));
         }
     }
 
@@ -98,8 +110,9 @@ public class GlobalBusinessRuleTaskItemProvider extends GlobalTaskItemProvider i
      */
     @Override
     public String getText(Object object) {
-        String label = ((GlobalBusinessRuleTask)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_GlobalBusinessRuleTask_type") : getString("_UI_GlobalBusinessRuleTask_type") + " " + label;
+        String label = ((GlobalBusinessRuleTask) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_GlobalBusinessRuleTask_type")
+                : getString("_UI_GlobalBusinessRuleTask_type") + " " + label;
     }
 
     /**
@@ -114,9 +127,10 @@ public class GlobalBusinessRuleTaskItemProvider extends GlobalTaskItemProvider i
         updateChildren(notification);
 
         switch (notification.getFeatureID(GlobalBusinessRuleTask.class)) {
-            case Bpmn2Package.GLOBAL_BUSINESS_RULE_TASK__IMPLEMENTATION:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case Bpmn2Package.GLOBAL_BUSINESS_RULE_TASK__IMPLEMENTATION:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }

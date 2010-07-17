@@ -48,7 +48,8 @@ public class BpmnDiFactoryImpl extends EFactoryImpl implements BpmnDiFactory {
      */
     public static BpmnDiFactory init() {
         try {
-            BpmnDiFactory theBpmnDiFactory = (BpmnDiFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.omg.org/spec/BPMN/20100524/DI-XMI");
+            BpmnDiFactory theBpmnDiFactory = (BpmnDiFactory) EPackage.Registry.INSTANCE
+                    .getEFactory("http://www.omg.org/spec/BPMN/20100524/DI-XMI");
             if (theBpmnDiFactory != null) {
                 return theBpmnDiFactory;
             }
@@ -76,22 +77,23 @@ public class BpmnDiFactoryImpl extends EFactoryImpl implements BpmnDiFactory {
     @Override
     public EObject create(EClass eClass) {
         switch (eClass.getClassifierID()) {
-            case BpmnDiPackage.DOCUMENT_ROOT:
-                return createDocumentRoot();
-            case BpmnDiPackage.BPMN_DIAGRAM:
-                return createBPMNDiagram();
-            case BpmnDiPackage.BPMN_EDGE:
-                return createBPMNEdge();
-            case BpmnDiPackage.BPMN_LABEL:
-                return createBPMNLabel();
-            case BpmnDiPackage.BPMN_LABEL_STYLE:
-                return createBPMNLabelStyle();
-            case BpmnDiPackage.BPMN_PLANE:
-                return createBPMNPlane();
-            case BpmnDiPackage.BPMN_SHAPE:
-                return createBPMNShape();
-            default:
-                throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+        case BpmnDiPackage.DOCUMENT_ROOT:
+            return createDocumentRoot();
+        case BpmnDiPackage.BPMN_DIAGRAM:
+            return createBPMNDiagram();
+        case BpmnDiPackage.BPMN_EDGE:
+            return createBPMNEdge();
+        case BpmnDiPackage.BPMN_LABEL:
+            return createBPMNLabel();
+        case BpmnDiPackage.BPMN_LABEL_STYLE:
+            return createBPMNLabelStyle();
+        case BpmnDiPackage.BPMN_PLANE:
+            return createBPMNPlane();
+        case BpmnDiPackage.BPMN_SHAPE:
+            return createBPMNShape();
+        default:
+            throw new IllegalArgumentException("The class '" + eClass.getName()
+                    + "' is not a valid classifier");
         }
     }
 
@@ -103,12 +105,13 @@ public class BpmnDiFactoryImpl extends EFactoryImpl implements BpmnDiFactory {
     @Override
     public Object createFromString(EDataType eDataType, String initialValue) {
         switch (eDataType.getClassifierID()) {
-            case BpmnDiPackage.MESSAGE_VISIBLE_KIND:
-                return createMessageVisibleKindFromString(eDataType, initialValue);
-            case BpmnDiPackage.PARTICIPANT_BAND_KIND:
-                return createParticipantBandKindFromString(eDataType, initialValue);
-            default:
-                throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+        case BpmnDiPackage.MESSAGE_VISIBLE_KIND:
+            return createMessageVisibleKindFromString(eDataType, initialValue);
+        case BpmnDiPackage.PARTICIPANT_BAND_KIND:
+            return createParticipantBandKindFromString(eDataType, initialValue);
+        default:
+            throw new IllegalArgumentException("The datatype '" + eDataType.getName()
+                    + "' is not a valid classifier");
         }
     }
 
@@ -120,12 +123,13 @@ public class BpmnDiFactoryImpl extends EFactoryImpl implements BpmnDiFactory {
     @Override
     public String convertToString(EDataType eDataType, Object instanceValue) {
         switch (eDataType.getClassifierID()) {
-            case BpmnDiPackage.MESSAGE_VISIBLE_KIND:
-                return convertMessageVisibleKindToString(eDataType, instanceValue);
-            case BpmnDiPackage.PARTICIPANT_BAND_KIND:
-                return convertParticipantBandKindToString(eDataType, instanceValue);
-            default:
-                throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+        case BpmnDiPackage.MESSAGE_VISIBLE_KIND:
+            return convertMessageVisibleKindToString(eDataType, instanceValue);
+        case BpmnDiPackage.PARTICIPANT_BAND_KIND:
+            return convertParticipantBandKindToString(eDataType, instanceValue);
+        default:
+            throw new IllegalArgumentException("The datatype '" + eDataType.getName()
+                    + "' is not a valid classifier");
         }
     }
 
@@ -204,10 +208,12 @@ public class BpmnDiFactoryImpl extends EFactoryImpl implements BpmnDiFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public MessageVisibleKind createMessageVisibleKindFromString(EDataType eDataType, String initialValue) {
+    public MessageVisibleKind createMessageVisibleKindFromString(EDataType eDataType,
+            String initialValue) {
         MessageVisibleKind result = MessageVisibleKind.get(initialValue);
         if (result == null)
-            throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+            throw new IllegalArgumentException("The value '" + initialValue
+                    + "' is not a valid enumerator of '" + eDataType.getName() + "'");
         return result;
     }
 
@@ -225,10 +231,12 @@ public class BpmnDiFactoryImpl extends EFactoryImpl implements BpmnDiFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public ParticipantBandKind createParticipantBandKindFromString(EDataType eDataType, String initialValue) {
+    public ParticipantBandKind createParticipantBandKindFromString(EDataType eDataType,
+            String initialValue) {
         ParticipantBandKind result = ParticipantBandKind.get(initialValue);
         if (result == null)
-            throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+            throw new IllegalArgumentException("The value '" + initialValue
+                    + "' is not a valid enumerator of '" + eDataType.getName() + "'");
         return result;
     }
 
@@ -247,7 +255,7 @@ public class BpmnDiFactoryImpl extends EFactoryImpl implements BpmnDiFactory {
      * @generated
      */
     public BpmnDiPackage getBpmnDiPackage() {
-        return (BpmnDiPackage)getEPackage();
+        return (BpmnDiPackage) getEPackage();
     }
 
     /**

@@ -104,7 +104,8 @@ public class ServiceTaskImpl extends TaskImpl implements ServiceTask {
         String oldImplementation = implementation;
         implementation = newImplementation;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.SERVICE_TASK__IMPLEMENTATION, oldImplementation, implementation));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.SERVICE_TASK__IMPLEMENTATION, oldImplementation, implementation));
     }
 
     /**
@@ -114,11 +115,12 @@ public class ServiceTaskImpl extends TaskImpl implements ServiceTask {
      */
     public Operation getOperationRef() {
         if (operationRef != null && operationRef.eIsProxy()) {
-            InternalEObject oldOperationRef = (InternalEObject)operationRef;
-            operationRef = (Operation)eResolveProxy(oldOperationRef);
+            InternalEObject oldOperationRef = (InternalEObject) operationRef;
+            operationRef = (Operation) eResolveProxy(oldOperationRef);
             if (operationRef != oldOperationRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.SERVICE_TASK__OPERATION_REF, oldOperationRef, operationRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.SERVICE_TASK__OPERATION_REF, oldOperationRef, operationRef));
             }
         }
         return operationRef;
@@ -142,7 +144,8 @@ public class ServiceTaskImpl extends TaskImpl implements ServiceTask {
         Operation oldOperationRef = operationRef;
         operationRef = newOperationRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.SERVICE_TASK__OPERATION_REF, oldOperationRef, operationRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.SERVICE_TASK__OPERATION_REF, oldOperationRef, operationRef));
     }
 
     /**
@@ -153,12 +156,12 @@ public class ServiceTaskImpl extends TaskImpl implements ServiceTask {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.SERVICE_TASK__IMPLEMENTATION:
-                return getImplementation();
-            case Bpmn2Package.SERVICE_TASK__OPERATION_REF:
-                if (resolve)
-                    return getOperationRef();
-                return basicGetOperationRef();
+        case Bpmn2Package.SERVICE_TASK__IMPLEMENTATION:
+            return getImplementation();
+        case Bpmn2Package.SERVICE_TASK__OPERATION_REF:
+            if (resolve)
+                return getOperationRef();
+            return basicGetOperationRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -171,12 +174,12 @@ public class ServiceTaskImpl extends TaskImpl implements ServiceTask {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.SERVICE_TASK__IMPLEMENTATION:
-                setImplementation((String)newValue);
-                return;
-            case Bpmn2Package.SERVICE_TASK__OPERATION_REF:
-                setOperationRef((Operation)newValue);
-                return;
+        case Bpmn2Package.SERVICE_TASK__IMPLEMENTATION:
+            setImplementation((String) newValue);
+            return;
+        case Bpmn2Package.SERVICE_TASK__OPERATION_REF:
+            setOperationRef((Operation) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -189,12 +192,12 @@ public class ServiceTaskImpl extends TaskImpl implements ServiceTask {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.SERVICE_TASK__IMPLEMENTATION:
-                setImplementation(IMPLEMENTATION_EDEFAULT);
-                return;
-            case Bpmn2Package.SERVICE_TASK__OPERATION_REF:
-                setOperationRef((Operation)null);
-                return;
+        case Bpmn2Package.SERVICE_TASK__IMPLEMENTATION:
+            setImplementation(IMPLEMENTATION_EDEFAULT);
+            return;
+        case Bpmn2Package.SERVICE_TASK__OPERATION_REF:
+            setOperationRef((Operation) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -207,10 +210,11 @@ public class ServiceTaskImpl extends TaskImpl implements ServiceTask {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.SERVICE_TASK__IMPLEMENTATION:
-                return IMPLEMENTATION_EDEFAULT == null ? implementation != null : !IMPLEMENTATION_EDEFAULT.equals(implementation);
-            case Bpmn2Package.SERVICE_TASK__OPERATION_REF:
-                return operationRef != null;
+        case Bpmn2Package.SERVICE_TASK__IMPLEMENTATION:
+            return IMPLEMENTATION_EDEFAULT == null ? implementation != null
+                    : !IMPLEMENTATION_EDEFAULT.equals(implementation);
+        case Bpmn2Package.SERVICE_TASK__OPERATION_REF:
+            return operationRef != null;
         }
         return super.eIsSet(featureID);
     }

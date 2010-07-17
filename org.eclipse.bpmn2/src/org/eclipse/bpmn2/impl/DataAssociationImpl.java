@@ -115,7 +115,8 @@ public class DataAssociationImpl extends BaseElementImpl implements DataAssociat
      */
     public List<ItemAwareElement> getSourceRef() {
         if (sourceRef == null) {
-            sourceRef = new EObjectEList<ItemAwareElement>(ItemAwareElement.class, this, Bpmn2Package.DATA_ASSOCIATION__SOURCE_REF);
+            sourceRef = new EObjectEList<ItemAwareElement>(ItemAwareElement.class, this,
+                    Bpmn2Package.DATA_ASSOCIATION__SOURCE_REF);
         }
         return sourceRef;
     }
@@ -138,7 +139,8 @@ public class DataAssociationImpl extends BaseElementImpl implements DataAssociat
         ItemAwareElement oldTargetRef = targetRef;
         targetRef = newTargetRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.DATA_ASSOCIATION__TARGET_REF, oldTargetRef, targetRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.DATA_ASSOCIATION__TARGET_REF, oldTargetRef, targetRef));
     }
 
     /**
@@ -155,11 +157,14 @@ public class DataAssociationImpl extends BaseElementImpl implements DataAssociat
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetTransformation(FormalExpression newTransformation, NotificationChain msgs) {
+    public NotificationChain basicSetTransformation(FormalExpression newTransformation,
+            NotificationChain msgs) {
         FormalExpression oldTransformation = transformation;
         transformation = newTransformation;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION, oldTransformation, newTransformation);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION, oldTransformation,
+                    newTransformation);
             if (msgs == null)
                 msgs = notification;
             else
@@ -177,14 +182,20 @@ public class DataAssociationImpl extends BaseElementImpl implements DataAssociat
         if (newTransformation != transformation) {
             NotificationChain msgs = null;
             if (transformation != null)
-                msgs = ((InternalEObject)transformation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION, null, msgs);
+                msgs = ((InternalEObject) transformation).eInverseRemove(this,
+                        EOPPOSITE_FEATURE_BASE - Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION,
+                        null, msgs);
             if (newTransformation != null)
-                msgs = ((InternalEObject)newTransformation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION, null, msgs);
+                msgs = ((InternalEObject) newTransformation).eInverseAdd(this,
+                        EOPPOSITE_FEATURE_BASE - Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION,
+                        null, msgs);
             msgs = basicSetTransformation(newTransformation, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION, newTransformation, newTransformation));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION, newTransformation,
+                    newTransformation));
     }
 
     /**
@@ -194,7 +205,8 @@ public class DataAssociationImpl extends BaseElementImpl implements DataAssociat
      */
     public List<Assignment> getAssignment() {
         if (assignment == null) {
-            assignment = new EObjectContainmentEList<Assignment>(Assignment.class, this, Bpmn2Package.DATA_ASSOCIATION__ASSIGNMENT);
+            assignment = new EObjectContainmentEList<Assignment>(Assignment.class, this,
+                    Bpmn2Package.DATA_ASSOCIATION__ASSIGNMENT);
         }
         return assignment;
     }
@@ -205,12 +217,13 @@ public class DataAssociationImpl extends BaseElementImpl implements DataAssociat
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION:
-                return basicSetTransformation(null, msgs);
-            case Bpmn2Package.DATA_ASSOCIATION__ASSIGNMENT:
-                return ((InternalEList<?>)getAssignment()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION:
+            return basicSetTransformation(null, msgs);
+        case Bpmn2Package.DATA_ASSOCIATION__ASSIGNMENT:
+            return ((InternalEList<?>) getAssignment()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -223,14 +236,14 @@ public class DataAssociationImpl extends BaseElementImpl implements DataAssociat
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.DATA_ASSOCIATION__SOURCE_REF:
-                return getSourceRef();
-            case Bpmn2Package.DATA_ASSOCIATION__TARGET_REF:
-                return getTargetRef();
-            case Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION:
-                return getTransformation();
-            case Bpmn2Package.DATA_ASSOCIATION__ASSIGNMENT:
-                return getAssignment();
+        case Bpmn2Package.DATA_ASSOCIATION__SOURCE_REF:
+            return getSourceRef();
+        case Bpmn2Package.DATA_ASSOCIATION__TARGET_REF:
+            return getTargetRef();
+        case Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION:
+            return getTransformation();
+        case Bpmn2Package.DATA_ASSOCIATION__ASSIGNMENT:
+            return getAssignment();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -244,20 +257,20 @@ public class DataAssociationImpl extends BaseElementImpl implements DataAssociat
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.DATA_ASSOCIATION__SOURCE_REF:
-                getSourceRef().clear();
-                getSourceRef().addAll((Collection<? extends ItemAwareElement>)newValue);
-                return;
-            case Bpmn2Package.DATA_ASSOCIATION__TARGET_REF:
-                setTargetRef((ItemAwareElement)newValue);
-                return;
-            case Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION:
-                setTransformation((FormalExpression)newValue);
-                return;
-            case Bpmn2Package.DATA_ASSOCIATION__ASSIGNMENT:
-                getAssignment().clear();
-                getAssignment().addAll((Collection<? extends Assignment>)newValue);
-                return;
+        case Bpmn2Package.DATA_ASSOCIATION__SOURCE_REF:
+            getSourceRef().clear();
+            getSourceRef().addAll((Collection<? extends ItemAwareElement>) newValue);
+            return;
+        case Bpmn2Package.DATA_ASSOCIATION__TARGET_REF:
+            setTargetRef((ItemAwareElement) newValue);
+            return;
+        case Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION:
+            setTransformation((FormalExpression) newValue);
+            return;
+        case Bpmn2Package.DATA_ASSOCIATION__ASSIGNMENT:
+            getAssignment().clear();
+            getAssignment().addAll((Collection<? extends Assignment>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -270,18 +283,18 @@ public class DataAssociationImpl extends BaseElementImpl implements DataAssociat
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.DATA_ASSOCIATION__SOURCE_REF:
-                getSourceRef().clear();
-                return;
-            case Bpmn2Package.DATA_ASSOCIATION__TARGET_REF:
-                setTargetRef((ItemAwareElement)null);
-                return;
-            case Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION:
-                setTransformation((FormalExpression)null);
-                return;
-            case Bpmn2Package.DATA_ASSOCIATION__ASSIGNMENT:
-                getAssignment().clear();
-                return;
+        case Bpmn2Package.DATA_ASSOCIATION__SOURCE_REF:
+            getSourceRef().clear();
+            return;
+        case Bpmn2Package.DATA_ASSOCIATION__TARGET_REF:
+            setTargetRef((ItemAwareElement) null);
+            return;
+        case Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION:
+            setTransformation((FormalExpression) null);
+            return;
+        case Bpmn2Package.DATA_ASSOCIATION__ASSIGNMENT:
+            getAssignment().clear();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -294,14 +307,14 @@ public class DataAssociationImpl extends BaseElementImpl implements DataAssociat
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.DATA_ASSOCIATION__SOURCE_REF:
-                return sourceRef != null && !sourceRef.isEmpty();
-            case Bpmn2Package.DATA_ASSOCIATION__TARGET_REF:
-                return targetRef != null;
-            case Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION:
-                return transformation != null;
-            case Bpmn2Package.DATA_ASSOCIATION__ASSIGNMENT:
-                return assignment != null && !assignment.isEmpty();
+        case Bpmn2Package.DATA_ASSOCIATION__SOURCE_REF:
+            return sourceRef != null && !sourceRef.isEmpty();
+        case Bpmn2Package.DATA_ASSOCIATION__TARGET_REF:
+            return targetRef != null;
+        case Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION:
+            return transformation != null;
+        case Bpmn2Package.DATA_ASSOCIATION__ASSIGNMENT:
+            return assignment != null && !assignment.isEmpty();
         }
         return super.eIsSet(featureID);
     }

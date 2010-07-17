@@ -40,7 +40,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class LaneItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class LaneItemProvider extends BaseElementItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -76,7 +78,13 @@ public class LaneItemProvider extends BaseElementItemProvider implements IEditin
      * @generated
      */
     protected void addFlowNodeRefsPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Lane_flowNodeRefs_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Lane_flowNodeRefs_feature", "_UI_Lane_type"), Bpmn2Package.Literals.LANE__FLOW_NODE_REFS, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Lane_flowNodeRefs_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Lane_flowNodeRefs_feature",
+                        "_UI_Lane_type"), Bpmn2Package.Literals.LANE__FLOW_NODE_REFS, true, false,
+                true, null, null, null));
     }
 
     /**
@@ -86,7 +94,13 @@ public class LaneItemProvider extends BaseElementItemProvider implements IEditin
      * @generated
      */
     protected void addNamePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Lane_name_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Lane_name_feature", "_UI_Lane_type"), Bpmn2Package.Literals.LANE__NAME, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Lane_name_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Lane_name_feature",
+                        "_UI_Lane_type"), Bpmn2Package.Literals.LANE__NAME, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -96,7 +110,14 @@ public class LaneItemProvider extends BaseElementItemProvider implements IEditin
      * @generated
      */
     protected void addPartitionElementRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Lane_partitionElementRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Lane_partitionElementRef_feature", "_UI_Lane_type"), Bpmn2Package.Literals.LANE__PARTITION_ELEMENT_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Lane_partitionElementRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_Lane_partitionElementRef_feature", "_UI_Lane_type"),
+                Bpmn2Package.Literals.LANE__PARTITION_ELEMENT_REF, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -153,8 +174,9 @@ public class LaneItemProvider extends BaseElementItemProvider implements IEditin
      */
     @Override
     public String getText(Object object) {
-        String label = ((Lane)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_Lane_type") : getString("_UI_Lane_type") + " " + label;
+        String label = ((Lane) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_Lane_type")
+                : getString("_UI_Lane_type") + " " + label;
     }
 
     /**
@@ -169,13 +191,15 @@ public class LaneItemProvider extends BaseElementItemProvider implements IEditin
         updateChildren(notification);
 
         switch (notification.getFeatureID(Lane.class)) {
-            case Bpmn2Package.LANE__NAME:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
-            case Bpmn2Package.LANE__PARTITION_ELEMENT:
-            case Bpmn2Package.LANE__CHILD_LANE_SET:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case Bpmn2Package.LANE__NAME:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
+        case Bpmn2Package.LANE__PARTITION_ELEMENT:
+        case Bpmn2Package.LANE__CHILD_LANE_SET:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -191,227 +215,338 @@ public class LaneItemProvider extends BaseElementItemProvider implements IEditin
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createSubProcess()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createSubProcess()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createAdHocSubProcess()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createAdHocSubProcess()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createAssignment()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createAssignment()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createAssociation()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createAssociation()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createAuditing()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createAuditing()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createBoundaryEvent()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createBoundaryEvent()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createTask()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createTask()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createBusinessRuleTask()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createBusinessRuleTask()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createCallActivity()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createCallActivity()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createCallChoreography()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createCallChoreography()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createCallConversation()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createCallConversation()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createCancelEventDefinition()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createCancelEventDefinition()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createCategory()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createCategory()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createCategoryValue()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createCategoryValue()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createCollaboration()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createCollaboration()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createChoreography()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createChoreography()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createChoreographyTask()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createChoreographyTask()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createCompensateEventDefinition()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createCompensateEventDefinition()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createComplexBehaviorDefinition()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createComplexBehaviorDefinition()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createComplexGateway()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createComplexGateway()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createConditionalEventDefinition()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createConditionalEventDefinition()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createConversation()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createConversation()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createConversationAssociation()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createConversationAssociation()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createConversationLink()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createConversationLink()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createCorrelationKey()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createCorrelationKey()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createCorrelationProperty()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createCorrelationProperty()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createCorrelationPropertyBinding()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createCorrelationPropertyBinding()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createCorrelationPropertyRetrievalExpression()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createCorrelationPropertyRetrievalExpression()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createCorrelationSubscription()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createCorrelationSubscription()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createDataAssociation()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createDataAssociation()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createItemAwareElement()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createItemAwareElement()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createDataInput()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createDataInput()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createDataInputAssociation()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createDataInputAssociation()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createDataObject()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createDataObject()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createDataObjectReference()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createDataObjectReference()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createDataOutput()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createDataOutput()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createDataOutputAssociation()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createDataOutputAssociation()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createDataState()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createDataState()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createDataStore()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createDataStore()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createDataStoreReference()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createDataStoreReference()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createDefinitions()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createDefinitions()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createDocumentation()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createDocumentation()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createEndEvent()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createEndEvent()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createEndPoint()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createEndPoint()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createError()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createError()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createErrorEventDefinition()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createErrorEventDefinition()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createEscalationEventDefinition()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createEscalationEventDefinition()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createEventBasedGateway()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createEventBasedGateway()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createExclusiveGateway()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createExclusiveGateway()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createExpression()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createExpression()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createFormalExpression()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createFormalExpression()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createGlobalTask()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createGlobalTask()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createGlobalBusinessRuleTask()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createGlobalBusinessRuleTask()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createGlobalChoreographyTask()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createGlobalChoreographyTask()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createGlobalConversation()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createGlobalConversation()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createGlobalManualTask()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createGlobalManualTask()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createGlobalScriptTask()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createGlobalScriptTask()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createGlobalUserTask()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createGlobalUserTask()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createGroup()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createGroup()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createResourceRole()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createResourceRole()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createPerformer()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createPerformer()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createHumanPerformer()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createHumanPerformer()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createImplicitThrowEvent()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createImplicitThrowEvent()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createInclusiveGateway()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createInclusiveGateway()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createInputOutputSpecification()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createInputOutputSpecification()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createInputSet()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createInputSet()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createInterface()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createInterface()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createIntermediateCatchEvent()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createIntermediateCatchEvent()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createIntermediateThrowEvent()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createIntermediateThrowEvent()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createItemDefinition()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createItemDefinition()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createLane()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createLane()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createLaneSet()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createLaneSet()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createLinkEventDefinition()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createLinkEventDefinition()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createManualTask()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createManualTask()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createMessage()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createMessage()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createMessageEventDefinition()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createMessageEventDefinition()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createMessageFlow()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createMessageFlow()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createMessageFlowAssociation()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createMessageFlowAssociation()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createMonitoring()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createMonitoring()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createMultiInstanceLoopCharacteristics()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createMultiInstanceLoopCharacteristics()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createOperation()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createOperation()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createOutputSet()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createOutputSet()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createParallelGateway()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createParallelGateway()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createParticipant()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createParticipant()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createParticipantAssociation()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createParticipantAssociation()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createPartnerEntity()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createPartnerEntity()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createPartnerRole()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createPartnerRole()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createPotentialOwner()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createPotentialOwner()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createProcess()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createProcess()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createProperty()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createProperty()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createReceiveTask()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createReceiveTask()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createRelationship()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createRelationship()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createRendering()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createRendering()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createResource()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createResource()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createResourceParameter()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createResourceParameter()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createScriptTask()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createScriptTask()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createSendTask()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createSendTask()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createSequenceFlow()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createSequenceFlow()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createServiceTask()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createServiceTask()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createSignal()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createSignal()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createSignalEventDefinition()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createSignalEventDefinition()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createStandardLoopCharacteristics()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createStandardLoopCharacteristics()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createStartEvent()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createStartEvent()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createSubChoreography()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createSubChoreography()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createSubConversation()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createSubConversation()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createTerminateEventDefinition()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createTerminateEventDefinition()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createTextAnnotation()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createTextAnnotation()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createTimerEventDefinition()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createTimerEventDefinition()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createTransaction()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createTransaction()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, Bpmn2Factory.eINSTANCE.createUserTask()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createUserTask()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__CHILD_LANE_SET, Bpmn2Factory.eINSTANCE.createLaneSet()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__CHILD_LANE_SET,
+                Bpmn2Factory.eINSTANCE.createLaneSet()));
     }
 
     /**
@@ -421,14 +556,18 @@ public class LaneItemProvider extends BaseElementItemProvider implements IEditin
      * @generated
      */
     @Override
-    public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+    public String getCreateChildText(Object owner, Object feature, Object child,
+            Collection<?> selection) {
         Object childFeature = feature;
         Object childObject = child;
 
-        boolean qualify = childFeature == Bpmn2Package.Literals.BASE_ELEMENT__DOCUMENTATION || childFeature == Bpmn2Package.Literals.LANE__PARTITION_ELEMENT || childFeature == Bpmn2Package.Literals.LANE__CHILD_LANE_SET;
+        boolean qualify = childFeature == Bpmn2Package.Literals.BASE_ELEMENT__DOCUMENTATION
+                || childFeature == Bpmn2Package.Literals.LANE__PARTITION_ELEMENT
+                || childFeature == Bpmn2Package.Literals.LANE__CHILD_LANE_SET;
 
         if (qualify) {
-            return getString("_UI_CreateChild_text2", new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+            return getString("_UI_CreateChild_text2", new Object[] { getTypeText(childObject),
+                    getFeatureText(childFeature), getTypeText(owner) });
         }
         return super.getCreateChildText(owner, feature, child, selection);
     }

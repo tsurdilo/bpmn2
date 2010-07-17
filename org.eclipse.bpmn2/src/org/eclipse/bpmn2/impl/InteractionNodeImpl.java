@@ -90,7 +90,10 @@ public abstract class InteractionNodeImpl extends EObjectImpl implements Interac
      */
     public List<ConversationLink> getIncomingConversationLinks() {
         if (incomingConversationLinks == null) {
-            incomingConversationLinks = new EObjectWithInverseEList<ConversationLink>(ConversationLink.class, this, Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS, Bpmn2Package.CONVERSATION_LINK__TARGET_REF);
+            incomingConversationLinks = new EObjectWithInverseEList<ConversationLink>(
+                    ConversationLink.class, this,
+                    Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS,
+                    Bpmn2Package.CONVERSATION_LINK__TARGET_REF);
         }
         return incomingConversationLinks;
     }
@@ -102,7 +105,10 @@ public abstract class InteractionNodeImpl extends EObjectImpl implements Interac
      */
     public List<ConversationLink> getOutgoingConversationLinks() {
         if (outgoingConversationLinks == null) {
-            outgoingConversationLinks = new EObjectWithInverseResolvingEList<ConversationLink>(ConversationLink.class, this, Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS, Bpmn2Package.CONVERSATION_LINK__SOURCE_REF);
+            outgoingConversationLinks = new EObjectWithInverseResolvingEList<ConversationLink>(
+                    ConversationLink.class, this,
+                    Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS,
+                    Bpmn2Package.CONVERSATION_LINK__SOURCE_REF);
         }
         return outgoingConversationLinks;
     }
@@ -114,12 +120,15 @@ public abstract class InteractionNodeImpl extends EObjectImpl implements Interac
      */
     @SuppressWarnings("unchecked")
     @Override
-    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
-                return ((InternalEList<InternalEObject>)(InternalEList<?>)getIncomingConversationLinks()).basicAdd(otherEnd, msgs);
-            case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
-                return ((InternalEList<InternalEObject>)(InternalEList<?>)getOutgoingConversationLinks()).basicAdd(otherEnd, msgs);
+        case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getIncomingConversationLinks())
+                    .basicAdd(otherEnd, msgs);
+        case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getOutgoingConversationLinks())
+                    .basicAdd(otherEnd, msgs);
         }
         return super.eInverseAdd(otherEnd, featureID, msgs);
     }
@@ -130,12 +139,13 @@ public abstract class InteractionNodeImpl extends EObjectImpl implements Interac
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
-                return ((InternalEList<?>)getIncomingConversationLinks()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
-                return ((InternalEList<?>)getOutgoingConversationLinks()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
+            return ((InternalEList<?>) getIncomingConversationLinks()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
+            return ((InternalEList<?>) getOutgoingConversationLinks()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -148,10 +158,10 @@ public abstract class InteractionNodeImpl extends EObjectImpl implements Interac
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
-                return getIncomingConversationLinks();
-            case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
-                return getOutgoingConversationLinks();
+        case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
+            return getIncomingConversationLinks();
+        case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
+            return getOutgoingConversationLinks();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -165,14 +175,16 @@ public abstract class InteractionNodeImpl extends EObjectImpl implements Interac
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
-                getIncomingConversationLinks().clear();
-                getIncomingConversationLinks().addAll((Collection<? extends ConversationLink>)newValue);
-                return;
-            case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
-                getOutgoingConversationLinks().clear();
-                getOutgoingConversationLinks().addAll((Collection<? extends ConversationLink>)newValue);
-                return;
+        case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
+            getIncomingConversationLinks().clear();
+            getIncomingConversationLinks()
+                    .addAll((Collection<? extends ConversationLink>) newValue);
+            return;
+        case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
+            getOutgoingConversationLinks().clear();
+            getOutgoingConversationLinks()
+                    .addAll((Collection<? extends ConversationLink>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -185,12 +197,12 @@ public abstract class InteractionNodeImpl extends EObjectImpl implements Interac
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
-                getIncomingConversationLinks().clear();
-                return;
-            case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
-                getOutgoingConversationLinks().clear();
-                return;
+        case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
+            getIncomingConversationLinks().clear();
+            return;
+        case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
+            getOutgoingConversationLinks().clear();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -203,10 +215,10 @@ public abstract class InteractionNodeImpl extends EObjectImpl implements Interac
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
-                return incomingConversationLinks != null && !incomingConversationLinks.isEmpty();
-            case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
-                return outgoingConversationLinks != null && !outgoingConversationLinks.isEmpty();
+        case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
+            return incomingConversationLinks != null && !incomingConversationLinks.isEmpty();
+        case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
+            return outgoingConversationLinks != null && !outgoingConversationLinks.isEmpty();
         }
         return super.eIsSet(featureID);
     }

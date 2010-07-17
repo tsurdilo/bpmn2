@@ -39,7 +39,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DataStoreReferenceItemProvider extends FlowElementItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class DataStoreReferenceItemProvider extends FlowElementItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -74,7 +76,16 @@ public class DataStoreReferenceItemProvider extends FlowElementItemProvider impl
      * @generated
      */
     protected void addItemSubjectRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_ItemAwareElement_itemSubjectRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_ItemAwareElement_itemSubjectRef_feature", "_UI_ItemAwareElement_type"), Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors
+                .add(createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                        getResourceLocator(),
+                        getString("_UI_ItemAwareElement_itemSubjectRef_feature"),
+                        getString("_UI_PropertyDescriptor_description",
+                                "_UI_ItemAwareElement_itemSubjectRef_feature",
+                                "_UI_ItemAwareElement_type"),
+                        Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF, true, false,
+                        true, null, null, null));
     }
 
     /**
@@ -84,7 +95,15 @@ public class DataStoreReferenceItemProvider extends FlowElementItemProvider impl
      * @generated
      */
     protected void addDataStoreRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_DataStoreReference_dataStoreRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_DataStoreReference_dataStoreRef_feature", "_UI_DataStoreReference_type"), Bpmn2Package.Literals.DATA_STORE_REFERENCE__DATA_STORE_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_DataStoreReference_dataStoreRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_DataStoreReference_dataStoreRef_feature",
+                        "_UI_DataStoreReference_type"),
+                Bpmn2Package.Literals.DATA_STORE_REFERENCE__DATA_STORE_REF, true, false, true,
+                null, null, null));
     }
 
     /**
@@ -126,9 +145,11 @@ public class DataStoreReferenceItemProvider extends FlowElementItemProvider impl
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/DataStoreReference.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/DataStoreReference.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/DataStoreReference.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/DataStoreReference.gif"));
         }
     }
 
@@ -140,8 +161,9 @@ public class DataStoreReferenceItemProvider extends FlowElementItemProvider impl
      */
     @Override
     public String getText(Object object) {
-        String label = ((DataStoreReference)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_DataStoreReference_type") : getString("_UI_DataStoreReference_type") + " " + label;
+        String label = ((DataStoreReference) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_DataStoreReference_type")
+                : getString("_UI_DataStoreReference_type") + " " + label;
     }
 
     /**
@@ -156,9 +178,10 @@ public class DataStoreReferenceItemProvider extends FlowElementItemProvider impl
         updateChildren(notification);
 
         switch (notification.getFeatureID(DataStoreReference.class)) {
-            case Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -174,7 +197,9 @@ public class DataStoreReferenceItemProvider extends FlowElementItemProvider impl
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__DATA_STATE, Bpmn2Factory.eINSTANCE.createDataState()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__DATA_STATE,
+                Bpmn2Factory.eINSTANCE.createDataState()));
     }
 
 }

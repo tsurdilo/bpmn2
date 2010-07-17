@@ -234,11 +234,13 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetIoSpecification(InputOutputSpecification newIoSpecification, NotificationChain msgs) {
+    public NotificationChain basicSetIoSpecification(InputOutputSpecification newIoSpecification,
+            NotificationChain msgs) {
         InputOutputSpecification oldIoSpecification = ioSpecification;
         ioSpecification = newIoSpecification;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.ACTIVITY__IO_SPECIFICATION, oldIoSpecification, newIoSpecification);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.ACTIVITY__IO_SPECIFICATION, oldIoSpecification, newIoSpecification);
             if (msgs == null)
                 msgs = notification;
             else
@@ -256,14 +258,19 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
         if (newIoSpecification != ioSpecification) {
             NotificationChain msgs = null;
             if (ioSpecification != null)
-                msgs = ((InternalEObject)ioSpecification).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.ACTIVITY__IO_SPECIFICATION, null, msgs);
+                msgs = ((InternalEObject) ioSpecification).eInverseRemove(this,
+                        EOPPOSITE_FEATURE_BASE - Bpmn2Package.ACTIVITY__IO_SPECIFICATION, null,
+                        msgs);
             if (newIoSpecification != null)
-                msgs = ((InternalEObject)newIoSpecification).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.ACTIVITY__IO_SPECIFICATION, null, msgs);
+                msgs = ((InternalEObject) newIoSpecification).eInverseAdd(this,
+                        EOPPOSITE_FEATURE_BASE - Bpmn2Package.ACTIVITY__IO_SPECIFICATION, null,
+                        msgs);
             msgs = basicSetIoSpecification(newIoSpecification, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ACTIVITY__IO_SPECIFICATION, newIoSpecification, newIoSpecification));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.ACTIVITY__IO_SPECIFICATION, newIoSpecification, newIoSpecification));
     }
 
     /**
@@ -273,7 +280,9 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
      */
     public List<BoundaryEvent> getBoundaryEventRefs() {
         if (boundaryEventRefs == null) {
-            boundaryEventRefs = new EObjectWithInverseResolvingEList<BoundaryEvent>(BoundaryEvent.class, this, Bpmn2Package.ACTIVITY__BOUNDARY_EVENT_REFS, Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF);
+            boundaryEventRefs = new EObjectWithInverseResolvingEList<BoundaryEvent>(
+                    BoundaryEvent.class, this, Bpmn2Package.ACTIVITY__BOUNDARY_EVENT_REFS,
+                    Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF);
         }
         return boundaryEventRefs;
     }
@@ -285,7 +294,8 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
      */
     public List<Property> getProperties() {
         if (properties == null) {
-            properties = new EObjectContainmentEList<Property>(Property.class, this, Bpmn2Package.ACTIVITY__PROPERTIES);
+            properties = new EObjectContainmentEList<Property>(Property.class, this,
+                    Bpmn2Package.ACTIVITY__PROPERTIES);
         }
         return properties;
     }
@@ -297,7 +307,9 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
      */
     public List<DataInputAssociation> getDataInputAssociations() {
         if (dataInputAssociations == null) {
-            dataInputAssociations = new EObjectContainmentEList<DataInputAssociation>(DataInputAssociation.class, this, Bpmn2Package.ACTIVITY__DATA_INPUT_ASSOCIATIONS);
+            dataInputAssociations = new EObjectContainmentEList<DataInputAssociation>(
+                    DataInputAssociation.class, this,
+                    Bpmn2Package.ACTIVITY__DATA_INPUT_ASSOCIATIONS);
         }
         return dataInputAssociations;
     }
@@ -309,7 +321,9 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
      */
     public List<DataOutputAssociation> getDataOutputAssociations() {
         if (dataOutputAssociations == null) {
-            dataOutputAssociations = new EObjectContainmentEList<DataOutputAssociation>(DataOutputAssociation.class, this, Bpmn2Package.ACTIVITY__DATA_OUTPUT_ASSOCIATIONS);
+            dataOutputAssociations = new EObjectContainmentEList<DataOutputAssociation>(
+                    DataOutputAssociation.class, this,
+                    Bpmn2Package.ACTIVITY__DATA_OUTPUT_ASSOCIATIONS);
         }
         return dataOutputAssociations;
     }
@@ -321,7 +335,8 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
      */
     public List<ResourceRole> getResources() {
         if (resources == null) {
-            resources = new EObjectContainmentEList<ResourceRole>(ResourceRole.class, this, Bpmn2Package.ACTIVITY__RESOURCES);
+            resources = new EObjectContainmentEList<ResourceRole>(ResourceRole.class, this,
+                    Bpmn2Package.ACTIVITY__RESOURCES);
         }
         return resources;
     }
@@ -340,11 +355,14 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetLoopCharacteristics(LoopCharacteristics newLoopCharacteristics, NotificationChain msgs) {
+    public NotificationChain basicSetLoopCharacteristics(
+            LoopCharacteristics newLoopCharacteristics, NotificationChain msgs) {
         LoopCharacteristics oldLoopCharacteristics = loopCharacteristics;
         loopCharacteristics = newLoopCharacteristics;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.ACTIVITY__LOOP_CHARACTERISTICS, oldLoopCharacteristics, newLoopCharacteristics);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.ACTIVITY__LOOP_CHARACTERISTICS, oldLoopCharacteristics,
+                    newLoopCharacteristics);
             if (msgs == null)
                 msgs = notification;
             else
@@ -362,14 +380,20 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
         if (newLoopCharacteristics != loopCharacteristics) {
             NotificationChain msgs = null;
             if (loopCharacteristics != null)
-                msgs = ((InternalEObject)loopCharacteristics).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.ACTIVITY__LOOP_CHARACTERISTICS, null, msgs);
+                msgs = ((InternalEObject) loopCharacteristics).eInverseRemove(this,
+                        EOPPOSITE_FEATURE_BASE - Bpmn2Package.ACTIVITY__LOOP_CHARACTERISTICS, null,
+                        msgs);
             if (newLoopCharacteristics != null)
-                msgs = ((InternalEObject)newLoopCharacteristics).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.ACTIVITY__LOOP_CHARACTERISTICS, null, msgs);
+                msgs = ((InternalEObject) newLoopCharacteristics).eInverseAdd(this,
+                        EOPPOSITE_FEATURE_BASE - Bpmn2Package.ACTIVITY__LOOP_CHARACTERISTICS, null,
+                        msgs);
             msgs = basicSetLoopCharacteristics(newLoopCharacteristics, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ACTIVITY__LOOP_CHARACTERISTICS, newLoopCharacteristics, newLoopCharacteristics));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.ACTIVITY__LOOP_CHARACTERISTICS, newLoopCharacteristics,
+                    newLoopCharacteristics));
     }
 
     /**
@@ -390,7 +414,9 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
         int oldCompletionQuantity = completionQuantity;
         completionQuantity = newCompletionQuantity;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ACTIVITY__COMPLETION_QUANTITY, oldCompletionQuantity, completionQuantity));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.ACTIVITY__COMPLETION_QUANTITY, oldCompletionQuantity,
+                    completionQuantity));
     }
 
     /**
@@ -411,7 +437,8 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
         SequenceFlow oldDefault = default_;
         default_ = newDefault;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ACTIVITY__DEFAULT, oldDefault, default_));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ACTIVITY__DEFAULT,
+                    oldDefault, default_));
     }
 
     /**
@@ -432,7 +459,9 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
         boolean oldIsForCompensation = isForCompensation;
         isForCompensation = newIsForCompensation;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ACTIVITY__IS_FOR_COMPENSATION, oldIsForCompensation, isForCompensation));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.ACTIVITY__IS_FOR_COMPENSATION, oldIsForCompensation,
+                    isForCompensation));
     }
 
     /**
@@ -453,7 +482,8 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
         int oldStartQuantity = startQuantity;
         startQuantity = newStartQuantity;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ACTIVITY__START_QUANTITY, oldStartQuantity, startQuantity));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.ACTIVITY__START_QUANTITY, oldStartQuantity, startQuantity));
     }
 
     /**
@@ -463,10 +493,12 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
      */
     @SuppressWarnings("unchecked")
     @Override
-    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.ACTIVITY__BOUNDARY_EVENT_REFS:
-                return ((InternalEList<InternalEObject>)(InternalEList<?>)getBoundaryEventRefs()).basicAdd(otherEnd, msgs);
+        case Bpmn2Package.ACTIVITY__BOUNDARY_EVENT_REFS:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getBoundaryEventRefs())
+                    .basicAdd(otherEnd, msgs);
         }
         return super.eInverseAdd(otherEnd, featureID, msgs);
     }
@@ -477,22 +509,23 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.ACTIVITY__IO_SPECIFICATION:
-                return basicSetIoSpecification(null, msgs);
-            case Bpmn2Package.ACTIVITY__BOUNDARY_EVENT_REFS:
-                return ((InternalEList<?>)getBoundaryEventRefs()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.ACTIVITY__PROPERTIES:
-                return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.ACTIVITY__DATA_INPUT_ASSOCIATIONS:
-                return ((InternalEList<?>)getDataInputAssociations()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.ACTIVITY__DATA_OUTPUT_ASSOCIATIONS:
-                return ((InternalEList<?>)getDataOutputAssociations()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.ACTIVITY__RESOURCES:
-                return ((InternalEList<?>)getResources()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.ACTIVITY__LOOP_CHARACTERISTICS:
-                return basicSetLoopCharacteristics(null, msgs);
+        case Bpmn2Package.ACTIVITY__IO_SPECIFICATION:
+            return basicSetIoSpecification(null, msgs);
+        case Bpmn2Package.ACTIVITY__BOUNDARY_EVENT_REFS:
+            return ((InternalEList<?>) getBoundaryEventRefs()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.ACTIVITY__PROPERTIES:
+            return ((InternalEList<?>) getProperties()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.ACTIVITY__DATA_INPUT_ASSOCIATIONS:
+            return ((InternalEList<?>) getDataInputAssociations()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.ACTIVITY__DATA_OUTPUT_ASSOCIATIONS:
+            return ((InternalEList<?>) getDataOutputAssociations()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.ACTIVITY__RESOURCES:
+            return ((InternalEList<?>) getResources()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.ACTIVITY__LOOP_CHARACTERISTICS:
+            return basicSetLoopCharacteristics(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -505,28 +538,28 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.ACTIVITY__IO_SPECIFICATION:
-                return getIoSpecification();
-            case Bpmn2Package.ACTIVITY__BOUNDARY_EVENT_REFS:
-                return getBoundaryEventRefs();
-            case Bpmn2Package.ACTIVITY__PROPERTIES:
-                return getProperties();
-            case Bpmn2Package.ACTIVITY__DATA_INPUT_ASSOCIATIONS:
-                return getDataInputAssociations();
-            case Bpmn2Package.ACTIVITY__DATA_OUTPUT_ASSOCIATIONS:
-                return getDataOutputAssociations();
-            case Bpmn2Package.ACTIVITY__RESOURCES:
-                return getResources();
-            case Bpmn2Package.ACTIVITY__LOOP_CHARACTERISTICS:
-                return getLoopCharacteristics();
-            case Bpmn2Package.ACTIVITY__COMPLETION_QUANTITY:
-                return getCompletionQuantity();
-            case Bpmn2Package.ACTIVITY__DEFAULT:
-                return getDefault();
-            case Bpmn2Package.ACTIVITY__IS_FOR_COMPENSATION:
-                return isIsForCompensation();
-            case Bpmn2Package.ACTIVITY__START_QUANTITY:
-                return getStartQuantity();
+        case Bpmn2Package.ACTIVITY__IO_SPECIFICATION:
+            return getIoSpecification();
+        case Bpmn2Package.ACTIVITY__BOUNDARY_EVENT_REFS:
+            return getBoundaryEventRefs();
+        case Bpmn2Package.ACTIVITY__PROPERTIES:
+            return getProperties();
+        case Bpmn2Package.ACTIVITY__DATA_INPUT_ASSOCIATIONS:
+            return getDataInputAssociations();
+        case Bpmn2Package.ACTIVITY__DATA_OUTPUT_ASSOCIATIONS:
+            return getDataOutputAssociations();
+        case Bpmn2Package.ACTIVITY__RESOURCES:
+            return getResources();
+        case Bpmn2Package.ACTIVITY__LOOP_CHARACTERISTICS:
+            return getLoopCharacteristics();
+        case Bpmn2Package.ACTIVITY__COMPLETION_QUANTITY:
+            return getCompletionQuantity();
+        case Bpmn2Package.ACTIVITY__DEFAULT:
+            return getDefault();
+        case Bpmn2Package.ACTIVITY__IS_FOR_COMPENSATION:
+            return isIsForCompensation();
+        case Bpmn2Package.ACTIVITY__START_QUANTITY:
+            return getStartQuantity();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -540,44 +573,46 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.ACTIVITY__IO_SPECIFICATION:
-                setIoSpecification((InputOutputSpecification)newValue);
-                return;
-            case Bpmn2Package.ACTIVITY__BOUNDARY_EVENT_REFS:
-                getBoundaryEventRefs().clear();
-                getBoundaryEventRefs().addAll((Collection<? extends BoundaryEvent>)newValue);
-                return;
-            case Bpmn2Package.ACTIVITY__PROPERTIES:
-                getProperties().clear();
-                getProperties().addAll((Collection<? extends Property>)newValue);
-                return;
-            case Bpmn2Package.ACTIVITY__DATA_INPUT_ASSOCIATIONS:
-                getDataInputAssociations().clear();
-                getDataInputAssociations().addAll((Collection<? extends DataInputAssociation>)newValue);
-                return;
-            case Bpmn2Package.ACTIVITY__DATA_OUTPUT_ASSOCIATIONS:
-                getDataOutputAssociations().clear();
-                getDataOutputAssociations().addAll((Collection<? extends DataOutputAssociation>)newValue);
-                return;
-            case Bpmn2Package.ACTIVITY__RESOURCES:
-                getResources().clear();
-                getResources().addAll((Collection<? extends ResourceRole>)newValue);
-                return;
-            case Bpmn2Package.ACTIVITY__LOOP_CHARACTERISTICS:
-                setLoopCharacteristics((LoopCharacteristics)newValue);
-                return;
-            case Bpmn2Package.ACTIVITY__COMPLETION_QUANTITY:
-                setCompletionQuantity((Integer)newValue);
-                return;
-            case Bpmn2Package.ACTIVITY__DEFAULT:
-                setDefault((SequenceFlow)newValue);
-                return;
-            case Bpmn2Package.ACTIVITY__IS_FOR_COMPENSATION:
-                setIsForCompensation((Boolean)newValue);
-                return;
-            case Bpmn2Package.ACTIVITY__START_QUANTITY:
-                setStartQuantity((Integer)newValue);
-                return;
+        case Bpmn2Package.ACTIVITY__IO_SPECIFICATION:
+            setIoSpecification((InputOutputSpecification) newValue);
+            return;
+        case Bpmn2Package.ACTIVITY__BOUNDARY_EVENT_REFS:
+            getBoundaryEventRefs().clear();
+            getBoundaryEventRefs().addAll((Collection<? extends BoundaryEvent>) newValue);
+            return;
+        case Bpmn2Package.ACTIVITY__PROPERTIES:
+            getProperties().clear();
+            getProperties().addAll((Collection<? extends Property>) newValue);
+            return;
+        case Bpmn2Package.ACTIVITY__DATA_INPUT_ASSOCIATIONS:
+            getDataInputAssociations().clear();
+            getDataInputAssociations()
+                    .addAll((Collection<? extends DataInputAssociation>) newValue);
+            return;
+        case Bpmn2Package.ACTIVITY__DATA_OUTPUT_ASSOCIATIONS:
+            getDataOutputAssociations().clear();
+            getDataOutputAssociations().addAll(
+                    (Collection<? extends DataOutputAssociation>) newValue);
+            return;
+        case Bpmn2Package.ACTIVITY__RESOURCES:
+            getResources().clear();
+            getResources().addAll((Collection<? extends ResourceRole>) newValue);
+            return;
+        case Bpmn2Package.ACTIVITY__LOOP_CHARACTERISTICS:
+            setLoopCharacteristics((LoopCharacteristics) newValue);
+            return;
+        case Bpmn2Package.ACTIVITY__COMPLETION_QUANTITY:
+            setCompletionQuantity((Integer) newValue);
+            return;
+        case Bpmn2Package.ACTIVITY__DEFAULT:
+            setDefault((SequenceFlow) newValue);
+            return;
+        case Bpmn2Package.ACTIVITY__IS_FOR_COMPENSATION:
+            setIsForCompensation((Boolean) newValue);
+            return;
+        case Bpmn2Package.ACTIVITY__START_QUANTITY:
+            setStartQuantity((Integer) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -590,39 +625,39 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.ACTIVITY__IO_SPECIFICATION:
-                setIoSpecification((InputOutputSpecification)null);
-                return;
-            case Bpmn2Package.ACTIVITY__BOUNDARY_EVENT_REFS:
-                getBoundaryEventRefs().clear();
-                return;
-            case Bpmn2Package.ACTIVITY__PROPERTIES:
-                getProperties().clear();
-                return;
-            case Bpmn2Package.ACTIVITY__DATA_INPUT_ASSOCIATIONS:
-                getDataInputAssociations().clear();
-                return;
-            case Bpmn2Package.ACTIVITY__DATA_OUTPUT_ASSOCIATIONS:
-                getDataOutputAssociations().clear();
-                return;
-            case Bpmn2Package.ACTIVITY__RESOURCES:
-                getResources().clear();
-                return;
-            case Bpmn2Package.ACTIVITY__LOOP_CHARACTERISTICS:
-                setLoopCharacteristics((LoopCharacteristics)null);
-                return;
-            case Bpmn2Package.ACTIVITY__COMPLETION_QUANTITY:
-                setCompletionQuantity(COMPLETION_QUANTITY_EDEFAULT);
-                return;
-            case Bpmn2Package.ACTIVITY__DEFAULT:
-                setDefault((SequenceFlow)null);
-                return;
-            case Bpmn2Package.ACTIVITY__IS_FOR_COMPENSATION:
-                setIsForCompensation(IS_FOR_COMPENSATION_EDEFAULT);
-                return;
-            case Bpmn2Package.ACTIVITY__START_QUANTITY:
-                setStartQuantity(START_QUANTITY_EDEFAULT);
-                return;
+        case Bpmn2Package.ACTIVITY__IO_SPECIFICATION:
+            setIoSpecification((InputOutputSpecification) null);
+            return;
+        case Bpmn2Package.ACTIVITY__BOUNDARY_EVENT_REFS:
+            getBoundaryEventRefs().clear();
+            return;
+        case Bpmn2Package.ACTIVITY__PROPERTIES:
+            getProperties().clear();
+            return;
+        case Bpmn2Package.ACTIVITY__DATA_INPUT_ASSOCIATIONS:
+            getDataInputAssociations().clear();
+            return;
+        case Bpmn2Package.ACTIVITY__DATA_OUTPUT_ASSOCIATIONS:
+            getDataOutputAssociations().clear();
+            return;
+        case Bpmn2Package.ACTIVITY__RESOURCES:
+            getResources().clear();
+            return;
+        case Bpmn2Package.ACTIVITY__LOOP_CHARACTERISTICS:
+            setLoopCharacteristics((LoopCharacteristics) null);
+            return;
+        case Bpmn2Package.ACTIVITY__COMPLETION_QUANTITY:
+            setCompletionQuantity(COMPLETION_QUANTITY_EDEFAULT);
+            return;
+        case Bpmn2Package.ACTIVITY__DEFAULT:
+            setDefault((SequenceFlow) null);
+            return;
+        case Bpmn2Package.ACTIVITY__IS_FOR_COMPENSATION:
+            setIsForCompensation(IS_FOR_COMPENSATION_EDEFAULT);
+            return;
+        case Bpmn2Package.ACTIVITY__START_QUANTITY:
+            setStartQuantity(START_QUANTITY_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -635,28 +670,28 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.ACTIVITY__IO_SPECIFICATION:
-                return ioSpecification != null;
-            case Bpmn2Package.ACTIVITY__BOUNDARY_EVENT_REFS:
-                return boundaryEventRefs != null && !boundaryEventRefs.isEmpty();
-            case Bpmn2Package.ACTIVITY__PROPERTIES:
-                return properties != null && !properties.isEmpty();
-            case Bpmn2Package.ACTIVITY__DATA_INPUT_ASSOCIATIONS:
-                return dataInputAssociations != null && !dataInputAssociations.isEmpty();
-            case Bpmn2Package.ACTIVITY__DATA_OUTPUT_ASSOCIATIONS:
-                return dataOutputAssociations != null && !dataOutputAssociations.isEmpty();
-            case Bpmn2Package.ACTIVITY__RESOURCES:
-                return resources != null && !resources.isEmpty();
-            case Bpmn2Package.ACTIVITY__LOOP_CHARACTERISTICS:
-                return loopCharacteristics != null;
-            case Bpmn2Package.ACTIVITY__COMPLETION_QUANTITY:
-                return completionQuantity != COMPLETION_QUANTITY_EDEFAULT;
-            case Bpmn2Package.ACTIVITY__DEFAULT:
-                return default_ != null;
-            case Bpmn2Package.ACTIVITY__IS_FOR_COMPENSATION:
-                return isForCompensation != IS_FOR_COMPENSATION_EDEFAULT;
-            case Bpmn2Package.ACTIVITY__START_QUANTITY:
-                return startQuantity != START_QUANTITY_EDEFAULT;
+        case Bpmn2Package.ACTIVITY__IO_SPECIFICATION:
+            return ioSpecification != null;
+        case Bpmn2Package.ACTIVITY__BOUNDARY_EVENT_REFS:
+            return boundaryEventRefs != null && !boundaryEventRefs.isEmpty();
+        case Bpmn2Package.ACTIVITY__PROPERTIES:
+            return properties != null && !properties.isEmpty();
+        case Bpmn2Package.ACTIVITY__DATA_INPUT_ASSOCIATIONS:
+            return dataInputAssociations != null && !dataInputAssociations.isEmpty();
+        case Bpmn2Package.ACTIVITY__DATA_OUTPUT_ASSOCIATIONS:
+            return dataOutputAssociations != null && !dataOutputAssociations.isEmpty();
+        case Bpmn2Package.ACTIVITY__RESOURCES:
+            return resources != null && !resources.isEmpty();
+        case Bpmn2Package.ACTIVITY__LOOP_CHARACTERISTICS:
+            return loopCharacteristics != null;
+        case Bpmn2Package.ACTIVITY__COMPLETION_QUANTITY:
+            return completionQuantity != COMPLETION_QUANTITY_EDEFAULT;
+        case Bpmn2Package.ACTIVITY__DEFAULT:
+            return default_ != null;
+        case Bpmn2Package.ACTIVITY__IS_FOR_COMPENSATION:
+            return isForCompensation != IS_FOR_COMPENSATION_EDEFAULT;
+        case Bpmn2Package.ACTIVITY__START_QUANTITY:
+            return startQuantity != START_QUANTITY_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }

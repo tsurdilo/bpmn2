@@ -121,7 +121,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      */
     public Map<String, String> getXMLNSPrefixMap() {
         if (xMLNSPrefixMap == null) {
-            xMLNSPrefixMap = new EcoreEMap<String, String>(EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY, EStringToStringMapEntryImpl.class, this, DcPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP);
+            xMLNSPrefixMap = new EcoreEMap<String, String>(
+                    EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY,
+                    EStringToStringMapEntryImpl.class, this,
+                    DcPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP);
         }
         return xMLNSPrefixMap.map();
     }
@@ -133,7 +136,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      */
     public Map<String, String> getXSISchemaLocation() {
         if (xSISchemaLocation == null) {
-            xSISchemaLocation = new EcoreEMap<String, String>(EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY, EStringToStringMapEntryImpl.class, this, DcPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION);
+            xSISchemaLocation = new EcoreEMap<String, String>(
+                    EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY,
+                    EStringToStringMapEntryImpl.class, this,
+                    DcPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION);
         }
         return xSISchemaLocation.map();
     }
@@ -144,7 +150,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Bounds getBounds() {
-        return (Bounds)getMixed().get(DcPackage.Literals.DOCUMENT_ROOT__BOUNDS, true);
+        return (Bounds) getMixed().get(DcPackage.Literals.DOCUMENT_ROOT__BOUNDS, true);
     }
 
     /**
@@ -153,7 +159,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetBounds(Bounds newBounds, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(DcPackage.Literals.DOCUMENT_ROOT__BOUNDS, newBounds, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                DcPackage.Literals.DOCUMENT_ROOT__BOUNDS, newBounds, msgs);
     }
 
     /**
@@ -162,7 +169,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setBounds(Bounds newBounds) {
-        ((FeatureMap.Internal)getMixed()).set(DcPackage.Literals.DOCUMENT_ROOT__BOUNDS, newBounds);
+        ((FeatureMap.Internal) getMixed()).set(DcPackage.Literals.DOCUMENT_ROOT__BOUNDS, newBounds);
     }
 
     /**
@@ -171,7 +178,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Font getFont() {
-        return (Font)getMixed().get(DcPackage.Literals.DOCUMENT_ROOT__FONT, true);
+        return (Font) getMixed().get(DcPackage.Literals.DOCUMENT_ROOT__FONT, true);
     }
 
     /**
@@ -180,7 +187,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetFont(Font newFont, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(DcPackage.Literals.DOCUMENT_ROOT__FONT, newFont, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(DcPackage.Literals.DOCUMENT_ROOT__FONT,
+                newFont, msgs);
     }
 
     /**
@@ -189,7 +197,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setFont(Font newFont) {
-        ((FeatureMap.Internal)getMixed()).set(DcPackage.Literals.DOCUMENT_ROOT__FONT, newFont);
+        ((FeatureMap.Internal) getMixed()).set(DcPackage.Literals.DOCUMENT_ROOT__FONT, newFont);
     }
 
     /**
@@ -198,7 +206,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Point getPoint() {
-        return (Point)getMixed().get(DcPackage.Literals.DOCUMENT_ROOT__POINT, true);
+        return (Point) getMixed().get(DcPackage.Literals.DOCUMENT_ROOT__POINT, true);
     }
 
     /**
@@ -207,7 +215,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetPoint(Point newPoint, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(DcPackage.Literals.DOCUMENT_ROOT__POINT, newPoint, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(DcPackage.Literals.DOCUMENT_ROOT__POINT,
+                newPoint, msgs);
     }
 
     /**
@@ -216,7 +225,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setPoint(Point newPoint) {
-        ((FeatureMap.Internal)getMixed()).set(DcPackage.Literals.DOCUMENT_ROOT__POINT, newPoint);
+        ((FeatureMap.Internal) getMixed()).set(DcPackage.Literals.DOCUMENT_ROOT__POINT, newPoint);
     }
 
     /**
@@ -225,20 +234,23 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case DcPackage.DOCUMENT_ROOT__MIXED:
-                return ((InternalEList<?>)getMixed()).basicRemove(otherEnd, msgs);
-            case DcPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
-                return ((InternalEList<?>)((EMap.InternalMapView<String, String>)getXMLNSPrefixMap()).eMap()).basicRemove(otherEnd, msgs);
-            case DcPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
-                return ((InternalEList<?>)((EMap.InternalMapView<String, String>)getXSISchemaLocation()).eMap()).basicRemove(otherEnd, msgs);
-            case DcPackage.DOCUMENT_ROOT__BOUNDS:
-                return basicSetBounds(null, msgs);
-            case DcPackage.DOCUMENT_ROOT__FONT:
-                return basicSetFont(null, msgs);
-            case DcPackage.DOCUMENT_ROOT__POINT:
-                return basicSetPoint(null, msgs);
+        case DcPackage.DOCUMENT_ROOT__MIXED:
+            return ((InternalEList<?>) getMixed()).basicRemove(otherEnd, msgs);
+        case DcPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
+            return ((InternalEList<?>) ((EMap.InternalMapView<String, String>) getXMLNSPrefixMap())
+                    .eMap()).basicRemove(otherEnd, msgs);
+        case DcPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
+            return ((InternalEList<?>) ((EMap.InternalMapView<String, String>) getXSISchemaLocation())
+                    .eMap()).basicRemove(otherEnd, msgs);
+        case DcPackage.DOCUMENT_ROOT__BOUNDS:
+            return basicSetBounds(null, msgs);
+        case DcPackage.DOCUMENT_ROOT__FONT:
+            return basicSetFont(null, msgs);
+        case DcPackage.DOCUMENT_ROOT__POINT:
+            return basicSetPoint(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -251,26 +263,26 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case DcPackage.DOCUMENT_ROOT__MIXED:
-                if (coreType)
-                    return getMixed();
-                return ((FeatureMap.Internal)getMixed()).getWrapper();
-            case DcPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
-                if (coreType)
-                    return ((EMap.InternalMapView<String, String>)getXMLNSPrefixMap()).eMap();
-                else
-                    return getXMLNSPrefixMap();
-            case DcPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
-                if (coreType)
-                    return ((EMap.InternalMapView<String, String>)getXSISchemaLocation()).eMap();
-                else
-                    return getXSISchemaLocation();
-            case DcPackage.DOCUMENT_ROOT__BOUNDS:
-                return getBounds();
-            case DcPackage.DOCUMENT_ROOT__FONT:
-                return getFont();
-            case DcPackage.DOCUMENT_ROOT__POINT:
-                return getPoint();
+        case DcPackage.DOCUMENT_ROOT__MIXED:
+            if (coreType)
+                return getMixed();
+            return ((FeatureMap.Internal) getMixed()).getWrapper();
+        case DcPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
+            if (coreType)
+                return ((EMap.InternalMapView<String, String>) getXMLNSPrefixMap()).eMap();
+            else
+                return getXMLNSPrefixMap();
+        case DcPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
+            if (coreType)
+                return ((EMap.InternalMapView<String, String>) getXSISchemaLocation()).eMap();
+            else
+                return getXSISchemaLocation();
+        case DcPackage.DOCUMENT_ROOT__BOUNDS:
+            return getBounds();
+        case DcPackage.DOCUMENT_ROOT__FONT:
+            return getFont();
+        case DcPackage.DOCUMENT_ROOT__POINT:
+            return getPoint();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -283,24 +295,26 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case DcPackage.DOCUMENT_ROOT__MIXED:
-                ((FeatureMap.Internal)getMixed()).set(newValue);
-                return;
-            case DcPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
-                ((EStructuralFeature.Setting)((EMap.InternalMapView<String, String>)getXMLNSPrefixMap()).eMap()).set(newValue);
-                return;
-            case DcPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
-                ((EStructuralFeature.Setting)((EMap.InternalMapView<String, String>)getXSISchemaLocation()).eMap()).set(newValue);
-                return;
-            case DcPackage.DOCUMENT_ROOT__BOUNDS:
-                setBounds((Bounds)newValue);
-                return;
-            case DcPackage.DOCUMENT_ROOT__FONT:
-                setFont((Font)newValue);
-                return;
-            case DcPackage.DOCUMENT_ROOT__POINT:
-                setPoint((Point)newValue);
-                return;
+        case DcPackage.DOCUMENT_ROOT__MIXED:
+            ((FeatureMap.Internal) getMixed()).set(newValue);
+            return;
+        case DcPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
+            ((EStructuralFeature.Setting) ((EMap.InternalMapView<String, String>) getXMLNSPrefixMap())
+                    .eMap()).set(newValue);
+            return;
+        case DcPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
+            ((EStructuralFeature.Setting) ((EMap.InternalMapView<String, String>) getXSISchemaLocation())
+                    .eMap()).set(newValue);
+            return;
+        case DcPackage.DOCUMENT_ROOT__BOUNDS:
+            setBounds((Bounds) newValue);
+            return;
+        case DcPackage.DOCUMENT_ROOT__FONT:
+            setFont((Font) newValue);
+            return;
+        case DcPackage.DOCUMENT_ROOT__POINT:
+            setPoint((Point) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -313,24 +327,24 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case DcPackage.DOCUMENT_ROOT__MIXED:
-                getMixed().clear();
-                return;
-            case DcPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
-                getXMLNSPrefixMap().clear();
-                return;
-            case DcPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
-                getXSISchemaLocation().clear();
-                return;
-            case DcPackage.DOCUMENT_ROOT__BOUNDS:
-                setBounds((Bounds)null);
-                return;
-            case DcPackage.DOCUMENT_ROOT__FONT:
-                setFont((Font)null);
-                return;
-            case DcPackage.DOCUMENT_ROOT__POINT:
-                setPoint((Point)null);
-                return;
+        case DcPackage.DOCUMENT_ROOT__MIXED:
+            getMixed().clear();
+            return;
+        case DcPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
+            getXMLNSPrefixMap().clear();
+            return;
+        case DcPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
+            getXSISchemaLocation().clear();
+            return;
+        case DcPackage.DOCUMENT_ROOT__BOUNDS:
+            setBounds((Bounds) null);
+            return;
+        case DcPackage.DOCUMENT_ROOT__FONT:
+            setFont((Font) null);
+            return;
+        case DcPackage.DOCUMENT_ROOT__POINT:
+            setPoint((Point) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -343,18 +357,18 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case DcPackage.DOCUMENT_ROOT__MIXED:
-                return mixed != null && !mixed.isEmpty();
-            case DcPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
-                return xMLNSPrefixMap != null && !xMLNSPrefixMap.isEmpty();
-            case DcPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
-                return xSISchemaLocation != null && !xSISchemaLocation.isEmpty();
-            case DcPackage.DOCUMENT_ROOT__BOUNDS:
-                return getBounds() != null;
-            case DcPackage.DOCUMENT_ROOT__FONT:
-                return getFont() != null;
-            case DcPackage.DOCUMENT_ROOT__POINT:
-                return getPoint() != null;
+        case DcPackage.DOCUMENT_ROOT__MIXED:
+            return mixed != null && !mixed.isEmpty();
+        case DcPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
+            return xMLNSPrefixMap != null && !xMLNSPrefixMap.isEmpty();
+        case DcPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
+            return xSISchemaLocation != null && !xSISchemaLocation.isEmpty();
+        case DcPackage.DOCUMENT_ROOT__BOUNDS:
+            return getBounds() != null;
+        case DcPackage.DOCUMENT_ROOT__FONT:
+            return getFont() != null;
+        case DcPackage.DOCUMENT_ROOT__POINT:
+            return getPoint() != null;
         }
         return super.eIsSet(featureID);
     }

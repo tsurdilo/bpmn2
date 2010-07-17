@@ -95,7 +95,8 @@ public class AssignmentImpl extends BaseElementImpl implements Assignment {
         Expression oldFrom = from;
         from = newFrom;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.ASSIGNMENT__FROM, oldFrom, newFrom);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.ASSIGNMENT__FROM, oldFrom, newFrom);
             if (msgs == null)
                 msgs = notification;
             else
@@ -113,14 +114,17 @@ public class AssignmentImpl extends BaseElementImpl implements Assignment {
         if (newFrom != from) {
             NotificationChain msgs = null;
             if (from != null)
-                msgs = ((InternalEObject)from).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.ASSIGNMENT__FROM, null, msgs);
+                msgs = ((InternalEObject) from).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.ASSIGNMENT__FROM, null, msgs);
             if (newFrom != null)
-                msgs = ((InternalEObject)newFrom).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.ASSIGNMENT__FROM, null, msgs);
+                msgs = ((InternalEObject) newFrom).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.ASSIGNMENT__FROM, null, msgs);
             msgs = basicSetFrom(newFrom, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ASSIGNMENT__FROM, newFrom, newFrom));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ASSIGNMENT__FROM,
+                    newFrom, newFrom));
     }
 
     /**
@@ -141,7 +145,8 @@ public class AssignmentImpl extends BaseElementImpl implements Assignment {
         Expression oldTo = to;
         to = newTo;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.ASSIGNMENT__TO, oldTo, newTo);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.ASSIGNMENT__TO, oldTo, newTo);
             if (msgs == null)
                 msgs = notification;
             else
@@ -159,14 +164,17 @@ public class AssignmentImpl extends BaseElementImpl implements Assignment {
         if (newTo != to) {
             NotificationChain msgs = null;
             if (to != null)
-                msgs = ((InternalEObject)to).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.ASSIGNMENT__TO, null, msgs);
+                msgs = ((InternalEObject) to).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.ASSIGNMENT__TO, null, msgs);
             if (newTo != null)
-                msgs = ((InternalEObject)newTo).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.ASSIGNMENT__TO, null, msgs);
+                msgs = ((InternalEObject) newTo).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.ASSIGNMENT__TO, null, msgs);
             msgs = basicSetTo(newTo, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ASSIGNMENT__TO, newTo, newTo));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ASSIGNMENT__TO,
+                    newTo, newTo));
     }
 
     /**
@@ -175,12 +183,13 @@ public class AssignmentImpl extends BaseElementImpl implements Assignment {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.ASSIGNMENT__FROM:
-                return basicSetFrom(null, msgs);
-            case Bpmn2Package.ASSIGNMENT__TO:
-                return basicSetTo(null, msgs);
+        case Bpmn2Package.ASSIGNMENT__FROM:
+            return basicSetFrom(null, msgs);
+        case Bpmn2Package.ASSIGNMENT__TO:
+            return basicSetTo(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -193,10 +202,10 @@ public class AssignmentImpl extends BaseElementImpl implements Assignment {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.ASSIGNMENT__FROM:
-                return getFrom();
-            case Bpmn2Package.ASSIGNMENT__TO:
-                return getTo();
+        case Bpmn2Package.ASSIGNMENT__FROM:
+            return getFrom();
+        case Bpmn2Package.ASSIGNMENT__TO:
+            return getTo();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -209,12 +218,12 @@ public class AssignmentImpl extends BaseElementImpl implements Assignment {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.ASSIGNMENT__FROM:
-                setFrom((Expression)newValue);
-                return;
-            case Bpmn2Package.ASSIGNMENT__TO:
-                setTo((Expression)newValue);
-                return;
+        case Bpmn2Package.ASSIGNMENT__FROM:
+            setFrom((Expression) newValue);
+            return;
+        case Bpmn2Package.ASSIGNMENT__TO:
+            setTo((Expression) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -227,12 +236,12 @@ public class AssignmentImpl extends BaseElementImpl implements Assignment {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.ASSIGNMENT__FROM:
-                setFrom((Expression)null);
-                return;
-            case Bpmn2Package.ASSIGNMENT__TO:
-                setTo((Expression)null);
-                return;
+        case Bpmn2Package.ASSIGNMENT__FROM:
+            setFrom((Expression) null);
+            return;
+        case Bpmn2Package.ASSIGNMENT__TO:
+            setTo((Expression) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -245,10 +254,10 @@ public class AssignmentImpl extends BaseElementImpl implements Assignment {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.ASSIGNMENT__FROM:
-                return from != null;
-            case Bpmn2Package.ASSIGNMENT__TO:
-                return to != null;
+        case Bpmn2Package.ASSIGNMENT__FROM:
+            return from != null;
+        case Bpmn2Package.ASSIGNMENT__TO:
+            return to != null;
         }
         return super.eIsSet(featureID);
     }

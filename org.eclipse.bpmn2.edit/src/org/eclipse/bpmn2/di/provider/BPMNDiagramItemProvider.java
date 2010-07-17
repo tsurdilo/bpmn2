@@ -41,7 +41,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class BPMNDiagramItemProvider extends DiagramItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class BPMNDiagramItemProvider extends DiagramItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -121,8 +123,9 @@ public class BPMNDiagramItemProvider extends DiagramItemProvider implements IEdi
      */
     @Override
     public String getText(Object object) {
-        String label = ((BPMNDiagram)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_BPMNDiagram_type") : getString("_UI_BPMNDiagram_type") + " " + label;
+        String label = ((BPMNDiagram) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_BPMNDiagram_type")
+                : getString("_UI_BPMNDiagram_type") + " " + label;
     }
 
     /**
@@ -137,10 +140,11 @@ public class BPMNDiagramItemProvider extends DiagramItemProvider implements IEdi
         updateChildren(notification);
 
         switch (notification.getFeatureID(BPMNDiagram.class)) {
-            case BpmnDiPackage.BPMN_DIAGRAM__PLANE:
-            case BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case BpmnDiPackage.BPMN_DIAGRAM__PLANE:
+        case BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -156,9 +160,12 @@ public class BPMNDiagramItemProvider extends DiagramItemProvider implements IEdi
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnDiPackage.Literals.BPMN_DIAGRAM__PLANE, BpmnDiFactory.eINSTANCE.createBPMNPlane()));
+        newChildDescriptors.add(createChildParameter(BpmnDiPackage.Literals.BPMN_DIAGRAM__PLANE,
+                BpmnDiFactory.eINSTANCE.createBPMNPlane()));
 
-        newChildDescriptors.add(createChildParameter(BpmnDiPackage.Literals.BPMN_DIAGRAM__LABEL_STYLE, BpmnDiFactory.eINSTANCE.createBPMNLabelStyle()));
+        newChildDescriptors.add(createChildParameter(
+                BpmnDiPackage.Literals.BPMN_DIAGRAM__LABEL_STYLE,
+                BpmnDiFactory.eINSTANCE.createBPMNLabelStyle()));
     }
 
     /**

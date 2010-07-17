@@ -138,7 +138,8 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
         boolean oldIsCollection = isCollection;
         isCollection = newIsCollection;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ITEM_DEFINITION__IS_COLLECTION, oldIsCollection, isCollection));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.ITEM_DEFINITION__IS_COLLECTION, oldIsCollection, isCollection));
     }
 
     /**
@@ -148,11 +149,12 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
      */
     public Import getImport() {
         if (import_ != null && import_.eIsProxy()) {
-            InternalEObject oldImport = (InternalEObject)import_;
-            import_ = (Import)eResolveProxy(oldImport);
+            InternalEObject oldImport = (InternalEObject) import_;
+            import_ = (Import) eResolveProxy(oldImport);
             if (import_ != oldImport) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.ITEM_DEFINITION__IMPORT, oldImport, import_));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.ITEM_DEFINITION__IMPORT, oldImport, import_));
             }
         }
         return import_;
@@ -176,7 +178,8 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
         Import oldImport = import_;
         import_ = newImport;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ITEM_DEFINITION__IMPORT, oldImport, import_));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.ITEM_DEFINITION__IMPORT, oldImport, import_));
     }
 
     /**
@@ -197,7 +200,8 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
         ItemKind oldItemKind = itemKind;
         itemKind = newItemKind == null ? ITEM_KIND_EDEFAULT : newItemKind;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ITEM_DEFINITION__ITEM_KIND, oldItemKind, itemKind));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.ITEM_DEFINITION__ITEM_KIND, oldItemKind, itemKind));
     }
 
     /**
@@ -207,11 +211,13 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
      */
     public Object getStructureRef() {
         if (structureRef != null && structureRef.eIsProxy()) {
-            InternalEObject oldStructureRef = (InternalEObject)structureRef;
+            InternalEObject oldStructureRef = (InternalEObject) structureRef;
             structureRef = eResolveProxy(oldStructureRef);
             if (structureRef != oldStructureRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF, oldStructureRef, structureRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF, oldStructureRef,
+                            structureRef));
             }
         }
         return structureRef;
@@ -233,9 +239,10 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
      */
     public void setStructureRef(Object newStructureRef) {
         Object oldStructureRef = structureRef;
-        structureRef = (EObject)newStructureRef;
+        structureRef = (EObject) newStructureRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF, oldStructureRef, structureRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF, oldStructureRef, structureRef));
     }
 
     /**
@@ -246,18 +253,18 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.ITEM_DEFINITION__IS_COLLECTION:
-                return isIsCollection();
-            case Bpmn2Package.ITEM_DEFINITION__IMPORT:
-                if (resolve)
-                    return getImport();
-                return basicGetImport();
-            case Bpmn2Package.ITEM_DEFINITION__ITEM_KIND:
-                return getItemKind();
-            case Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF:
-                if (resolve)
-                    return getStructureRef();
-                return basicGetStructureRef();
+        case Bpmn2Package.ITEM_DEFINITION__IS_COLLECTION:
+            return isIsCollection();
+        case Bpmn2Package.ITEM_DEFINITION__IMPORT:
+            if (resolve)
+                return getImport();
+            return basicGetImport();
+        case Bpmn2Package.ITEM_DEFINITION__ITEM_KIND:
+            return getItemKind();
+        case Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF:
+            if (resolve)
+                return getStructureRef();
+            return basicGetStructureRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -270,18 +277,18 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.ITEM_DEFINITION__IS_COLLECTION:
-                setIsCollection((Boolean)newValue);
-                return;
-            case Bpmn2Package.ITEM_DEFINITION__IMPORT:
-                setImport((Import)newValue);
-                return;
-            case Bpmn2Package.ITEM_DEFINITION__ITEM_KIND:
-                setItemKind((ItemKind)newValue);
-                return;
-            case Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF:
-                setStructureRef((Object)newValue);
-                return;
+        case Bpmn2Package.ITEM_DEFINITION__IS_COLLECTION:
+            setIsCollection((Boolean) newValue);
+            return;
+        case Bpmn2Package.ITEM_DEFINITION__IMPORT:
+            setImport((Import) newValue);
+            return;
+        case Bpmn2Package.ITEM_DEFINITION__ITEM_KIND:
+            setItemKind((ItemKind) newValue);
+            return;
+        case Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF:
+            setStructureRef((Object) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -294,18 +301,18 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.ITEM_DEFINITION__IS_COLLECTION:
-                setIsCollection(IS_COLLECTION_EDEFAULT);
-                return;
-            case Bpmn2Package.ITEM_DEFINITION__IMPORT:
-                setImport((Import)null);
-                return;
-            case Bpmn2Package.ITEM_DEFINITION__ITEM_KIND:
-                setItemKind(ITEM_KIND_EDEFAULT);
-                return;
-            case Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF:
-                setStructureRef((Object)null);
-                return;
+        case Bpmn2Package.ITEM_DEFINITION__IS_COLLECTION:
+            setIsCollection(IS_COLLECTION_EDEFAULT);
+            return;
+        case Bpmn2Package.ITEM_DEFINITION__IMPORT:
+            setImport((Import) null);
+            return;
+        case Bpmn2Package.ITEM_DEFINITION__ITEM_KIND:
+            setItemKind(ITEM_KIND_EDEFAULT);
+            return;
+        case Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF:
+            setStructureRef((Object) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -318,14 +325,14 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.ITEM_DEFINITION__IS_COLLECTION:
-                return isCollection != IS_COLLECTION_EDEFAULT;
-            case Bpmn2Package.ITEM_DEFINITION__IMPORT:
-                return import_ != null;
-            case Bpmn2Package.ITEM_DEFINITION__ITEM_KIND:
-                return itemKind != ITEM_KIND_EDEFAULT;
-            case Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF:
-                return structureRef != null;
+        case Bpmn2Package.ITEM_DEFINITION__IS_COLLECTION:
+            return isCollection != IS_COLLECTION_EDEFAULT;
+        case Bpmn2Package.ITEM_DEFINITION__IMPORT:
+            return import_ != null;
+        case Bpmn2Package.ITEM_DEFINITION__ITEM_KIND:
+            return itemKind != ITEM_KIND_EDEFAULT;
+        case Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF:
+            return structureRef != null;
         }
         return super.eIsSet(featureID);
     }

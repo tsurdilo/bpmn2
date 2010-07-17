@@ -38,7 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EventBasedGatewayItemProvider extends GatewayItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class EventBasedGatewayItemProvider extends GatewayItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -73,7 +75,15 @@ public class EventBasedGatewayItemProvider extends GatewayItemProvider implement
      * @generated
      */
     protected void addEventGatewayTypePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_EventBasedGateway_eventGatewayType_feature"), getString("_UI_PropertyDescriptor_description", "_UI_EventBasedGateway_eventGatewayType_feature", "_UI_EventBasedGateway_type"), Bpmn2Package.Literals.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_EventBasedGateway_eventGatewayType_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_EventBasedGateway_eventGatewayType_feature",
+                        "_UI_EventBasedGateway_type"),
+                Bpmn2Package.Literals.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -83,7 +93,14 @@ public class EventBasedGatewayItemProvider extends GatewayItemProvider implement
      * @generated
      */
     protected void addInstantiatePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_EventBasedGateway_instantiate_feature"), getString("_UI_PropertyDescriptor_description", "_UI_EventBasedGateway_instantiate_feature", "_UI_EventBasedGateway_type"), Bpmn2Package.Literals.EVENT_BASED_GATEWAY__INSTANTIATE, true, false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_EventBasedGateway_instantiate_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_EventBasedGateway_instantiate_feature", "_UI_EventBasedGateway_type"),
+                Bpmn2Package.Literals.EVENT_BASED_GATEWAY__INSTANTIATE, true, false, false,
+                ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -95,9 +112,11 @@ public class EventBasedGatewayItemProvider extends GatewayItemProvider implement
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/EventBasedGateway.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/EventBasedGateway.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/EventBasedGateway.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/EventBasedGateway.gif"));
         }
     }
 
@@ -109,8 +128,9 @@ public class EventBasedGatewayItemProvider extends GatewayItemProvider implement
      */
     @Override
     public String getText(Object object) {
-        String label = ((EventBasedGateway)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_EventBasedGateway_type") : getString("_UI_EventBasedGateway_type") + " " + label;
+        String label = ((EventBasedGateway) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_EventBasedGateway_type")
+                : getString("_UI_EventBasedGateway_type") + " " + label;
     }
 
     /**
@@ -125,10 +145,11 @@ public class EventBasedGatewayItemProvider extends GatewayItemProvider implement
         updateChildren(notification);
 
         switch (notification.getFeatureID(EventBasedGateway.class)) {
-            case Bpmn2Package.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE:
-            case Bpmn2Package.EVENT_BASED_GATEWAY__INSTANTIATE:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case Bpmn2Package.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE:
+        case Bpmn2Package.EVENT_BASED_GATEWAY__INSTANTIATE:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }

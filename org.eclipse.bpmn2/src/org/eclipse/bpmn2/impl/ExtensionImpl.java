@@ -102,11 +102,13 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetDefinition(ExtensionDefinition newDefinition, NotificationChain msgs) {
+    public NotificationChain basicSetDefinition(ExtensionDefinition newDefinition,
+            NotificationChain msgs) {
         ExtensionDefinition oldDefinition = definition;
         definition = newDefinition;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.EXTENSION__DEFINITION, oldDefinition, newDefinition);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.EXTENSION__DEFINITION, oldDefinition, newDefinition);
             if (msgs == null)
                 msgs = notification;
             else
@@ -124,14 +126,17 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
         if (newDefinition != definition) {
             NotificationChain msgs = null;
             if (definition != null)
-                msgs = ((InternalEObject)definition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.EXTENSION__DEFINITION, null, msgs);
+                msgs = ((InternalEObject) definition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.EXTENSION__DEFINITION, null, msgs);
             if (newDefinition != null)
-                msgs = ((InternalEObject)newDefinition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.EXTENSION__DEFINITION, null, msgs);
+                msgs = ((InternalEObject) newDefinition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.EXTENSION__DEFINITION, null, msgs);
             msgs = basicSetDefinition(newDefinition, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.EXTENSION__DEFINITION, newDefinition, newDefinition));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.EXTENSION__DEFINITION, newDefinition, newDefinition));
     }
 
     /**
@@ -152,7 +157,8 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
         boolean oldMustUnderstand = mustUnderstand;
         mustUnderstand = newMustUnderstand;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.EXTENSION__MUST_UNDERSTAND, oldMustUnderstand, mustUnderstand));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.EXTENSION__MUST_UNDERSTAND, oldMustUnderstand, mustUnderstand));
     }
 
     /**
@@ -161,10 +167,11 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.EXTENSION__DEFINITION:
-                return basicSetDefinition(null, msgs);
+        case Bpmn2Package.EXTENSION__DEFINITION:
+            return basicSetDefinition(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -177,10 +184,10 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.EXTENSION__DEFINITION:
-                return getDefinition();
-            case Bpmn2Package.EXTENSION__MUST_UNDERSTAND:
-                return isMustUnderstand();
+        case Bpmn2Package.EXTENSION__DEFINITION:
+            return getDefinition();
+        case Bpmn2Package.EXTENSION__MUST_UNDERSTAND:
+            return isMustUnderstand();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -193,12 +200,12 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.EXTENSION__DEFINITION:
-                setDefinition((ExtensionDefinition)newValue);
-                return;
-            case Bpmn2Package.EXTENSION__MUST_UNDERSTAND:
-                setMustUnderstand((Boolean)newValue);
-                return;
+        case Bpmn2Package.EXTENSION__DEFINITION:
+            setDefinition((ExtensionDefinition) newValue);
+            return;
+        case Bpmn2Package.EXTENSION__MUST_UNDERSTAND:
+            setMustUnderstand((Boolean) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -211,12 +218,12 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.EXTENSION__DEFINITION:
-                setDefinition((ExtensionDefinition)null);
-                return;
-            case Bpmn2Package.EXTENSION__MUST_UNDERSTAND:
-                setMustUnderstand(MUST_UNDERSTAND_EDEFAULT);
-                return;
+        case Bpmn2Package.EXTENSION__DEFINITION:
+            setDefinition((ExtensionDefinition) null);
+            return;
+        case Bpmn2Package.EXTENSION__MUST_UNDERSTAND:
+            setMustUnderstand(MUST_UNDERSTAND_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -229,10 +236,10 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.EXTENSION__DEFINITION:
-                return definition != null;
-            case Bpmn2Package.EXTENSION__MUST_UNDERSTAND:
-                return mustUnderstand != MUST_UNDERSTAND_EDEFAULT;
+        case Bpmn2Package.EXTENSION__DEFINITION:
+            return definition != null;
+        case Bpmn2Package.EXTENSION__MUST_UNDERSTAND:
+            return mustUnderstand != MUST_UNDERSTAND_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }

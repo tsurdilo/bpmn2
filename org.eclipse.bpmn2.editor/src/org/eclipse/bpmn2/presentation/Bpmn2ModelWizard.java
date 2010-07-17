@@ -84,7 +84,9 @@ public class Bpmn2ModelWizard extends Wizard implements INewWizard {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final List<String> FILE_EXTENSIONS = Collections.unmodifiableList(Arrays.asList(bpmn2EditorPlugin.INSTANCE.getString("_UI_Bpmn2EditorFilenameExtensions").split("\\s*,\\s*")));
+    public static final List<String> FILE_EXTENSIONS = Collections.unmodifiableList(Arrays
+            .asList(bpmn2EditorPlugin.INSTANCE.getString("_UI_Bpmn2EditorFilenameExtensions")
+                    .split("\\s*,\\s*")));
 
     /**
      * A formatted list of supported file extensions, suitable for display.
@@ -92,7 +94,8 @@ public class Bpmn2ModelWizard extends Wizard implements INewWizard {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final String FORMATTED_FILE_EXTENSIONS = bpmn2EditorPlugin.INSTANCE.getString("_UI_Bpmn2EditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
+    public static final String FORMATTED_FILE_EXTENSIONS = bpmn2EditorPlugin.INSTANCE.getString(
+            "_UI_Bpmn2EditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
 
     /**
      * This caches an instance of the model package.
@@ -117,7 +120,6 @@ public class Bpmn2ModelWizard extends Wizard implements INewWizard {
      * @generated
      */
     protected Bpmn2ModelWizardNewFileCreationPage newFileCreationPage;
-
 
     /**
      * Remember the selection during initialization for populating the default container.
@@ -153,7 +155,8 @@ public class Bpmn2ModelWizard extends Wizard implements INewWizard {
         this.workbench = workbench;
         this.selection = selection;
         setWindowTitle(bpmn2EditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
-        setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(bpmn2EditorPlugin.INSTANCE.getImage("full/wizban/NewBpmn2")));
+        setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE
+                .getImageDescriptor(bpmn2EditorPlugin.INSTANCE.getImage("full/wizban/NewBpmn2")));
     }
 
     /**
@@ -165,11 +168,12 @@ public class Bpmn2ModelWizard extends Wizard implements INewWizard {
     protected Collection<String> getInitialObjectNames() {
         if (initialObjectNames == null) {
             initialObjectNames = new ArrayList<String>();
-            for (EStructuralFeature eStructuralFeature : ExtendedMetaData.INSTANCE.getAllElements(ExtendedMetaData.INSTANCE.getDocumentRoot(bpmn2Package))) {
+            for (EStructuralFeature eStructuralFeature : ExtendedMetaData.INSTANCE
+                    .getAllElements(ExtendedMetaData.INSTANCE.getDocumentRoot(bpmn2Package))) {
                 if (eStructuralFeature.isChangeable()) {
                     EClassifier eClassifier = eStructuralFeature.getEType();
                     if (eClassifier instanceof EClass) {
-                        EClass eClass = (EClass)eClassifier;
+                        EClass eClass = (EClass) eClassifier;
                         if (!eClass.isAbstract()) {
                             initialObjectNames.add(eStructuralFeature.getName());
                         }
@@ -191,7 +195,8 @@ public class Bpmn2ModelWizard extends Wizard implements INewWizard {
         EClass eClass = ExtendedMetaData.INSTANCE.getDocumentRoot(bpmn2Package);
         EStructuralFeature eStructuralFeature = Bpmn2Package.Literals.DOCUMENT_ROOT__DEFINITIONS;
         EObject rootObject = bpmn2Factory.create(eClass);
-        rootObject.eSet(eStructuralFeature, EcoreUtil.create((EClass)eStructuralFeature.getEType()));
+        rootObject.eSet(eStructuralFeature,
+                EcoreUtil.create((EClass) eStructuralFeature.getEType()));
         return rootObject;
     }
 
@@ -220,7 +225,8 @@ public class Bpmn2ModelWizard extends Wizard implements INewWizard {
 
                         // Get the URI of the model file.
                         //
-                        URI fileURI = URI.createPlatformResourceURI(modelFile.getFullPath().toString(), true);
+                        URI fileURI = URI.createPlatformResourceURI(modelFile.getFullPath()
+                                .toString(), true);
 
                         // Create a resource for this file.
                         //
@@ -255,7 +261,7 @@ public class Bpmn2ModelWizard extends Wizard implements INewWizard {
                 final ISelection targetSelection = new StructuredSelection(modelFile);
                 getShell().getDisplay().asyncExec(new Runnable() {
                     public void run() {
-                        ((ISetSelectionTarget)activePart).selectReveal(targetSelection);
+                        ((ISetSelectionTarget) activePart).selectReveal(targetSelection);
                     }
                 });
             }
@@ -263,9 +269,12 @@ public class Bpmn2ModelWizard extends Wizard implements INewWizard {
             // Open an editor on the new file.
             //
             try {
-                page.openEditor(new FileEditorInput(modelFile), workbench.getEditorRegistry().getDefaultEditor(modelFile.getFullPath().toString()).getId());
+                page.openEditor(new FileEditorInput(modelFile), workbench.getEditorRegistry()
+                        .getDefaultEditor(modelFile.getFullPath().toString()).getId());
             } catch (PartInitException exception) {
-                MessageDialog.openError(workbenchWindow.getShell(), bpmn2EditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"), exception.getMessage());
+                MessageDialog.openError(workbenchWindow.getShell(),
+                        bpmn2EditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"),
+                        exception.getMessage());
                 return false;
             }
 
@@ -304,8 +313,10 @@ public class Bpmn2ModelWizard extends Wizard implements INewWizard {
             if (super.validatePage()) {
                 String extension = new Path(getFileName()).getFileExtension();
                 if (extension == null || !FILE_EXTENSIONS.contains(extension)) {
-                    String key = FILE_EXTENSIONS.size() > 1 ? "_WARN_FilenameExtensions" : "_WARN_FilenameExtension";
-                    setErrorMessage(bpmn2EditorPlugin.INSTANCE.getString(key, new Object[] { FORMATTED_FILE_EXTENSIONS }));
+                    String key = FILE_EXTENSIONS.size() > 1 ? "_WARN_FilenameExtensions"
+                            : "_WARN_FilenameExtension";
+                    setErrorMessage(bpmn2EditorPlugin.INSTANCE.getString(key,
+                            new Object[] { FORMATTED_FILE_EXTENSIONS }));
                     return false;
                 }
                 return true;
@@ -319,7 +330,8 @@ public class Bpmn2ModelWizard extends Wizard implements INewWizard {
          * @generated
          */
         public IFile getModelFile() {
-            return ResourcesPlugin.getWorkspace().getRoot().getFile(getContainerFullPath().append(getFileName()));
+            return ResourcesPlugin.getWorkspace().getRoot()
+                    .getFile(getContainerFullPath().append(getFileName()));
         }
     }
 
@@ -451,7 +463,8 @@ public class Bpmn2ModelWizard extends Wizard implements INewWizard {
          * @generated
          */
         protected boolean validatePage() {
-            return getInitialObjectName() != null && getEncodings().contains(encodingField.getText());
+            return getInitialObjectName() != null
+                    && getEncodings().contains(encodingField.getText());
         }
 
         /**
@@ -506,7 +519,8 @@ public class Bpmn2ModelWizard extends Wizard implements INewWizard {
          */
         protected String getLabel(String featureName) {
             try {
-                return bpmn2EditPlugin.INSTANCE.getString("_UI_DocumentRoot_" + featureName + "_feature");
+                return bpmn2EditPlugin.INSTANCE.getString("_UI_DocumentRoot_" + featureName
+                        + "_feature");
             } catch (MissingResourceException mre) {
                 bpmn2EditorPlugin.INSTANCE.log(mre);
             }
@@ -521,7 +535,9 @@ public class Bpmn2ModelWizard extends Wizard implements INewWizard {
         protected Collection<String> getEncodings() {
             if (encodings == null) {
                 encodings = new ArrayList<String>();
-                for (StringTokenizer stringTokenizer = new StringTokenizer(bpmn2EditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer.hasMoreTokens();) {
+                for (StringTokenizer stringTokenizer = new StringTokenizer(
+                        bpmn2EditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer
+                        .hasMoreTokens();) {
                     encodings.add(stringTokenizer.nextToken());
                 }
             }
@@ -540,9 +556,12 @@ public class Bpmn2ModelWizard extends Wizard implements INewWizard {
         // Create a page, set the title, and the initial model file name.
         //
         newFileCreationPage = new Bpmn2ModelWizardNewFileCreationPage("Whatever", selection);
-        newFileCreationPage.setTitle(bpmn2EditorPlugin.INSTANCE.getString("_UI_Bpmn2ModelWizard_label"));
-        newFileCreationPage.setDescription(bpmn2EditorPlugin.INSTANCE.getString("_UI_Bpmn2ModelWizard_description"));
-        newFileCreationPage.setFileName(bpmn2EditorPlugin.INSTANCE.getString("_UI_Bpmn2EditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
+        newFileCreationPage.setTitle(bpmn2EditorPlugin.INSTANCE
+                .getString("_UI_Bpmn2ModelWizard_label"));
+        newFileCreationPage.setDescription(bpmn2EditorPlugin.INSTANCE
+                .getString("_UI_Bpmn2ModelWizard_description"));
+        newFileCreationPage.setFileName(bpmn2EditorPlugin.INSTANCE
+                .getString("_UI_Bpmn2EditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
         addPage(newFileCreationPage);
 
         // Try and get the resource selection to determine a current directory for the file dialog.
@@ -554,7 +573,7 @@ public class Bpmn2ModelWizard extends Wizard implements INewWizard {
             if (selectedElement instanceof IResource) {
                 // Get the resource parent, if its a file.
                 //
-                IResource selectedResource = (IResource)selectedElement;
+                IResource selectedResource = (IResource) selectedElement;
                 if (selectedResource.getType() == IResource.FILE) {
                     selectedResource = selectedResource.getParent();
                 }
@@ -568,11 +587,14 @@ public class Bpmn2ModelWizard extends Wizard implements INewWizard {
 
                     // Make up a unique new name here.
                     //
-                    String defaultModelBaseFilename = bpmn2EditorPlugin.INSTANCE.getString("_UI_Bpmn2EditorFilenameDefaultBase");
+                    String defaultModelBaseFilename = bpmn2EditorPlugin.INSTANCE
+                            .getString("_UI_Bpmn2EditorFilenameDefaultBase");
                     String defaultModelFilenameExtension = FILE_EXTENSIONS.get(0);
-                    String modelFilename = defaultModelBaseFilename + "." + defaultModelFilenameExtension;
-                    for (int i = 1; ((IContainer)selectedResource).findMember(modelFilename) != null; ++i) {
-                        modelFilename = defaultModelBaseFilename + i + "." + defaultModelFilenameExtension;
+                    String modelFilename = defaultModelBaseFilename + "."
+                            + defaultModelFilenameExtension;
+                    for (int i = 1; ((IContainer) selectedResource).findMember(modelFilename) != null; ++i) {
+                        modelFilename = defaultModelBaseFilename + i + "."
+                                + defaultModelFilenameExtension;
                     }
                     newFileCreationPage.setFileName(modelFilename);
                 }

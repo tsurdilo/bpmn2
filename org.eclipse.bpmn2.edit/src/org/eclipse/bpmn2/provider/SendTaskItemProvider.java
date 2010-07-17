@@ -38,7 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SendTaskItemProvider extends TaskItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class SendTaskItemProvider extends TaskItemProvider implements IEditingDomainItemProvider,
+        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider,
+        IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -74,7 +76,14 @@ public class SendTaskItemProvider extends TaskItemProvider implements IEditingDo
      * @generated
      */
     protected void addImplementationPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_SendTask_implementation_feature"), getString("_UI_PropertyDescriptor_description", "_UI_SendTask_implementation_feature", "_UI_SendTask_type"), Bpmn2Package.Literals.SEND_TASK__IMPLEMENTATION, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_SendTask_implementation_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_SendTask_implementation_feature", "_UI_SendTask_type"),
+                Bpmn2Package.Literals.SEND_TASK__IMPLEMENTATION, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -84,7 +93,13 @@ public class SendTaskItemProvider extends TaskItemProvider implements IEditingDo
      * @generated
      */
     protected void addMessageRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_SendTask_messageRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_SendTask_messageRef_feature", "_UI_SendTask_type"), Bpmn2Package.Literals.SEND_TASK__MESSAGE_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_SendTask_messageRef_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_SendTask_messageRef_feature",
+                        "_UI_SendTask_type"), Bpmn2Package.Literals.SEND_TASK__MESSAGE_REF, true,
+                false, true, null, null, null));
     }
 
     /**
@@ -94,7 +109,15 @@ public class SendTaskItemProvider extends TaskItemProvider implements IEditingDo
      * @generated
      */
     protected void addOperationRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_SendTask_operationRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_SendTask_operationRef_feature", "_UI_SendTask_type"), Bpmn2Package.Literals.SEND_TASK__OPERATION_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors
+                .add(createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                        getResourceLocator(),
+                        getString("_UI_SendTask_operationRef_feature"),
+                        getString("_UI_PropertyDescriptor_description",
+                                "_UI_SendTask_operationRef_feature", "_UI_SendTask_type"),
+                        Bpmn2Package.Literals.SEND_TASK__OPERATION_REF, true, false, true, null,
+                        null, null));
     }
 
     /**
@@ -120,8 +143,9 @@ public class SendTaskItemProvider extends TaskItemProvider implements IEditingDo
      */
     @Override
     public String getText(Object object) {
-        String label = ((SendTask)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_SendTask_type") : getString("_UI_SendTask_type") + " " + label;
+        String label = ((SendTask) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_SendTask_type")
+                : getString("_UI_SendTask_type") + " " + label;
     }
 
     /**
@@ -136,9 +160,10 @@ public class SendTaskItemProvider extends TaskItemProvider implements IEditingDo
         updateChildren(notification);
 
         switch (notification.getFeatureID(SendTask.class)) {
-            case Bpmn2Package.SEND_TASK__IMPLEMENTATION:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case Bpmn2Package.SEND_TASK__IMPLEMENTATION:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }

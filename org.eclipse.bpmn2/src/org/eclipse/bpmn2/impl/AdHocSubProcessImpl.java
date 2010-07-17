@@ -123,11 +123,14 @@ public class AdHocSubProcessImpl extends SubProcessImpl implements AdHocSubProce
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetCompletionCondition(Expression newCompletionCondition, NotificationChain msgs) {
+    public NotificationChain basicSetCompletionCondition(Expression newCompletionCondition,
+            NotificationChain msgs) {
         Expression oldCompletionCondition = completionCondition;
         completionCondition = newCompletionCondition;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION, oldCompletionCondition, newCompletionCondition);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION, oldCompletionCondition,
+                    newCompletionCondition);
             if (msgs == null)
                 msgs = notification;
             else
@@ -145,14 +148,20 @@ public class AdHocSubProcessImpl extends SubProcessImpl implements AdHocSubProce
         if (newCompletionCondition != completionCondition) {
             NotificationChain msgs = null;
             if (completionCondition != null)
-                msgs = ((InternalEObject)completionCondition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION, null, msgs);
+                msgs = ((InternalEObject) completionCondition)
+                        .eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                                - Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION, null, msgs);
             if (newCompletionCondition != null)
-                msgs = ((InternalEObject)newCompletionCondition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION, null, msgs);
+                msgs = ((InternalEObject) newCompletionCondition)
+                        .eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                                - Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION, null, msgs);
             msgs = basicSetCompletionCondition(newCompletionCondition, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION, newCompletionCondition, newCompletionCondition));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION, newCompletionCondition,
+                    newCompletionCondition));
     }
 
     /**
@@ -173,7 +182,9 @@ public class AdHocSubProcessImpl extends SubProcessImpl implements AdHocSubProce
         boolean oldCancelRemainingInstances = cancelRemainingInstances;
         cancelRemainingInstances = newCancelRemainingInstances;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES, oldCancelRemainingInstances, cancelRemainingInstances));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES,
+                    oldCancelRemainingInstances, cancelRemainingInstances));
     }
 
     /**
@@ -194,7 +205,8 @@ public class AdHocSubProcessImpl extends SubProcessImpl implements AdHocSubProce
         AdHocOrdering oldOrdering = ordering;
         ordering = newOrdering == null ? ORDERING_EDEFAULT : newOrdering;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.AD_HOC_SUB_PROCESS__ORDERING, oldOrdering, ordering));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.AD_HOC_SUB_PROCESS__ORDERING, oldOrdering, ordering));
     }
 
     /**
@@ -203,10 +215,11 @@ public class AdHocSubProcessImpl extends SubProcessImpl implements AdHocSubProce
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION:
-                return basicSetCompletionCondition(null, msgs);
+        case Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION:
+            return basicSetCompletionCondition(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -219,12 +232,12 @@ public class AdHocSubProcessImpl extends SubProcessImpl implements AdHocSubProce
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION:
-                return getCompletionCondition();
-            case Bpmn2Package.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES:
-                return isCancelRemainingInstances();
-            case Bpmn2Package.AD_HOC_SUB_PROCESS__ORDERING:
-                return getOrdering();
+        case Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION:
+            return getCompletionCondition();
+        case Bpmn2Package.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES:
+            return isCancelRemainingInstances();
+        case Bpmn2Package.AD_HOC_SUB_PROCESS__ORDERING:
+            return getOrdering();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -237,15 +250,15 @@ public class AdHocSubProcessImpl extends SubProcessImpl implements AdHocSubProce
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION:
-                setCompletionCondition((Expression)newValue);
-                return;
-            case Bpmn2Package.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES:
-                setCancelRemainingInstances((Boolean)newValue);
-                return;
-            case Bpmn2Package.AD_HOC_SUB_PROCESS__ORDERING:
-                setOrdering((AdHocOrdering)newValue);
-                return;
+        case Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION:
+            setCompletionCondition((Expression) newValue);
+            return;
+        case Bpmn2Package.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES:
+            setCancelRemainingInstances((Boolean) newValue);
+            return;
+        case Bpmn2Package.AD_HOC_SUB_PROCESS__ORDERING:
+            setOrdering((AdHocOrdering) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -258,15 +271,15 @@ public class AdHocSubProcessImpl extends SubProcessImpl implements AdHocSubProce
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION:
-                setCompletionCondition((Expression)null);
-                return;
-            case Bpmn2Package.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES:
-                setCancelRemainingInstances(CANCEL_REMAINING_INSTANCES_EDEFAULT);
-                return;
-            case Bpmn2Package.AD_HOC_SUB_PROCESS__ORDERING:
-                setOrdering(ORDERING_EDEFAULT);
-                return;
+        case Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION:
+            setCompletionCondition((Expression) null);
+            return;
+        case Bpmn2Package.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES:
+            setCancelRemainingInstances(CANCEL_REMAINING_INSTANCES_EDEFAULT);
+            return;
+        case Bpmn2Package.AD_HOC_SUB_PROCESS__ORDERING:
+            setOrdering(ORDERING_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -279,12 +292,12 @@ public class AdHocSubProcessImpl extends SubProcessImpl implements AdHocSubProce
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION:
-                return completionCondition != null;
-            case Bpmn2Package.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES:
-                return cancelRemainingInstances != CANCEL_REMAINING_INSTANCES_EDEFAULT;
-            case Bpmn2Package.AD_HOC_SUB_PROCESS__ORDERING:
-                return ordering != ORDERING_EDEFAULT;
+        case Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION:
+            return completionCondition != null;
+        case Bpmn2Package.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES:
+            return cancelRemainingInstances != CANCEL_REMAINING_INSTANCES_EDEFAULT;
+        case Bpmn2Package.AD_HOC_SUB_PROCESS__ORDERING:
+            return ordering != ORDERING_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }

@@ -22,7 +22,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class PartnerRoleItemProvider extends RootElementItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class PartnerRoleItemProvider extends RootElementItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -57,7 +59,14 @@ public class PartnerRoleItemProvider extends RootElementItemProvider implements 
      * @generated
      */
     protected void addParticipantRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_PartnerRole_participantRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_PartnerRole_participantRef_feature", "_UI_PartnerRole_type"), Bpmn2Package.Literals.PARTNER_ROLE__PARTICIPANT_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_PartnerRole_participantRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_PartnerRole_participantRef_feature", "_UI_PartnerRole_type"),
+                Bpmn2Package.Literals.PARTNER_ROLE__PARTICIPANT_REF, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -67,7 +76,13 @@ public class PartnerRoleItemProvider extends RootElementItemProvider implements 
      * @generated
      */
     protected void addNamePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_PartnerRole_name_feature"), getString("_UI_PropertyDescriptor_description", "_UI_PartnerRole_name_feature", "_UI_PartnerRole_type"), Bpmn2Package.Literals.PARTNER_ROLE__NAME, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_PartnerRole_name_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_PartnerRole_name_feature",
+                        "_UI_PartnerRole_type"), Bpmn2Package.Literals.PARTNER_ROLE__NAME, true,
+                false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -93,8 +108,9 @@ public class PartnerRoleItemProvider extends RootElementItemProvider implements 
      */
     @Override
     public String getText(Object object) {
-        String label = ((PartnerRole)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_PartnerRole_type") : getString("_UI_PartnerRole_type") + " " + label;
+        String label = ((PartnerRole) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_PartnerRole_type")
+                : getString("_UI_PartnerRole_type") + " " + label;
     }
 
     /**
@@ -109,9 +125,10 @@ public class PartnerRoleItemProvider extends RootElementItemProvider implements 
         updateChildren(notification);
 
         switch (notification.getFeatureID(PartnerRole.class)) {
-            case Bpmn2Package.PARTNER_ROLE__NAME:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case Bpmn2Package.PARTNER_ROLE__NAME:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }

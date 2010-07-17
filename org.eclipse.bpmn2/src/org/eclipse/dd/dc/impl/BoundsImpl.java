@@ -155,7 +155,8 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
         float oldHeight = height;
         height = newHeight;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, DcPackage.BOUNDS__HEIGHT, oldHeight, height));
+            eNotify(new ENotificationImpl(this, Notification.SET, DcPackage.BOUNDS__HEIGHT,
+                    oldHeight, height));
     }
 
     /**
@@ -176,7 +177,8 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
         float oldWidth = width;
         width = newWidth;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, DcPackage.BOUNDS__WIDTH, oldWidth, width));
+            eNotify(new ENotificationImpl(this, Notification.SET, DcPackage.BOUNDS__WIDTH,
+                    oldWidth, width));
     }
 
     /**
@@ -229,14 +231,14 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case DcPackage.BOUNDS__HEIGHT:
-                return getHeight();
-            case DcPackage.BOUNDS__WIDTH:
-                return getWidth();
-            case DcPackage.BOUNDS__X:
-                return getX();
-            case DcPackage.BOUNDS__Y:
-                return getY();
+        case DcPackage.BOUNDS__HEIGHT:
+            return getHeight();
+        case DcPackage.BOUNDS__WIDTH:
+            return getWidth();
+        case DcPackage.BOUNDS__X:
+            return getX();
+        case DcPackage.BOUNDS__Y:
+            return getY();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -249,18 +251,18 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case DcPackage.BOUNDS__HEIGHT:
-                setHeight((Float)newValue);
-                return;
-            case DcPackage.BOUNDS__WIDTH:
-                setWidth((Float)newValue);
-                return;
-            case DcPackage.BOUNDS__X:
-                setX((Float)newValue);
-                return;
-            case DcPackage.BOUNDS__Y:
-                setY((Float)newValue);
-                return;
+        case DcPackage.BOUNDS__HEIGHT:
+            setHeight((Float) newValue);
+            return;
+        case DcPackage.BOUNDS__WIDTH:
+            setWidth((Float) newValue);
+            return;
+        case DcPackage.BOUNDS__X:
+            setX((Float) newValue);
+            return;
+        case DcPackage.BOUNDS__Y:
+            setY((Float) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -273,18 +275,18 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case DcPackage.BOUNDS__HEIGHT:
-                setHeight(HEIGHT_EDEFAULT);
-                return;
-            case DcPackage.BOUNDS__WIDTH:
-                setWidth(WIDTH_EDEFAULT);
-                return;
-            case DcPackage.BOUNDS__X:
-                setX(X_EDEFAULT);
-                return;
-            case DcPackage.BOUNDS__Y:
-                setY(Y_EDEFAULT);
-                return;
+        case DcPackage.BOUNDS__HEIGHT:
+            setHeight(HEIGHT_EDEFAULT);
+            return;
+        case DcPackage.BOUNDS__WIDTH:
+            setWidth(WIDTH_EDEFAULT);
+            return;
+        case DcPackage.BOUNDS__X:
+            setX(X_EDEFAULT);
+            return;
+        case DcPackage.BOUNDS__Y:
+            setY(Y_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -297,14 +299,14 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case DcPackage.BOUNDS__HEIGHT:
-                return height != HEIGHT_EDEFAULT;
-            case DcPackage.BOUNDS__WIDTH:
-                return width != WIDTH_EDEFAULT;
-            case DcPackage.BOUNDS__X:
-                return x != X_EDEFAULT;
-            case DcPackage.BOUNDS__Y:
-                return y != Y_EDEFAULT;
+        case DcPackage.BOUNDS__HEIGHT:
+            return height != HEIGHT_EDEFAULT;
+        case DcPackage.BOUNDS__WIDTH:
+            return width != WIDTH_EDEFAULT;
+        case DcPackage.BOUNDS__X:
+            return x != X_EDEFAULT;
+        case DcPackage.BOUNDS__Y:
+            return y != Y_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }

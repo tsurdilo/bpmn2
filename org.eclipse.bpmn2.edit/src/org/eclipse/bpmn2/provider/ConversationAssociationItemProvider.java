@@ -36,7 +36,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ConversationAssociationItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ConversationAssociationItemProvider extends BaseElementItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -71,7 +73,15 @@ public class ConversationAssociationItemProvider extends BaseElementItemProvider
      * @generated
      */
     protected void addInnerConversationNodeRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_ConversationAssociation_innerConversationNodeRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_ConversationAssociation_innerConversationNodeRef_feature", "_UI_ConversationAssociation_type"), Bpmn2Package.Literals.CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_ConversationAssociation_innerConversationNodeRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_ConversationAssociation_innerConversationNodeRef_feature",
+                        "_UI_ConversationAssociation_type"),
+                Bpmn2Package.Literals.CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF, true,
+                false, true, null, null, null));
     }
 
     /**
@@ -81,7 +91,15 @@ public class ConversationAssociationItemProvider extends BaseElementItemProvider
      * @generated
      */
     protected void addOuterConversationNodeRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_ConversationAssociation_outerConversationNodeRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_ConversationAssociation_outerConversationNodeRef_feature", "_UI_ConversationAssociation_type"), Bpmn2Package.Literals.CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_ConversationAssociation_outerConversationNodeRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_ConversationAssociation_outerConversationNodeRef_feature",
+                        "_UI_ConversationAssociation_type"),
+                Bpmn2Package.Literals.CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF, true,
+                false, true, null, null, null));
     }
 
     /**
@@ -93,9 +111,11 @@ public class ConversationAssociationItemProvider extends BaseElementItemProvider
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/ConversationAssociation.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/ConversationAssociation.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/ConversationAssociation.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/ConversationAssociation.gif"));
         }
     }
 
@@ -107,8 +127,9 @@ public class ConversationAssociationItemProvider extends BaseElementItemProvider
      */
     @Override
     public String getText(Object object) {
-        String label = ((ConversationAssociation)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_ConversationAssociation_type") : getString("_UI_ConversationAssociation_type") + " " + label;
+        String label = ((ConversationAssociation) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_ConversationAssociation_type")
+                : getString("_UI_ConversationAssociation_type") + " " + label;
     }
 
     /**

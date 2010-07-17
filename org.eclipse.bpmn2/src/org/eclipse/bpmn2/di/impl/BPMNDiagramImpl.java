@@ -104,7 +104,8 @@ public class BPMNDiagramImpl extends DiagramImpl implements BPMNDiagram {
         BPMNPlane oldPlane = plane;
         plane = newPlane;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BpmnDiPackage.BPMN_DIAGRAM__PLANE, oldPlane, newPlane);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    BpmnDiPackage.BPMN_DIAGRAM__PLANE, oldPlane, newPlane);
             if (msgs == null)
                 msgs = notification;
             else
@@ -122,14 +123,17 @@ public class BPMNDiagramImpl extends DiagramImpl implements BPMNDiagram {
         if (newPlane != plane) {
             NotificationChain msgs = null;
             if (plane != null)
-                msgs = ((InternalEObject)plane).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BpmnDiPackage.BPMN_DIAGRAM__PLANE, null, msgs);
+                msgs = ((InternalEObject) plane).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - BpmnDiPackage.BPMN_DIAGRAM__PLANE, null, msgs);
             if (newPlane != null)
-                msgs = ((InternalEObject)newPlane).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BpmnDiPackage.BPMN_DIAGRAM__PLANE, null, msgs);
+                msgs = ((InternalEObject) newPlane).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - BpmnDiPackage.BPMN_DIAGRAM__PLANE, null, msgs);
             msgs = basicSetPlane(newPlane, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, BpmnDiPackage.BPMN_DIAGRAM__PLANE, newPlane, newPlane));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnDiPackage.BPMN_DIAGRAM__PLANE, newPlane, newPlane));
     }
 
     /**
@@ -139,7 +143,8 @@ public class BPMNDiagramImpl extends DiagramImpl implements BPMNDiagram {
      */
     public List<BPMNLabelStyle> getLabelStyle() {
         if (labelStyle == null) {
-            labelStyle = new EObjectContainmentEList<BPMNLabelStyle>(BPMNLabelStyle.class, this, BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE);
+            labelStyle = new EObjectContainmentEList<BPMNLabelStyle>(BPMNLabelStyle.class, this,
+                    BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE);
         }
         return labelStyle;
     }
@@ -150,12 +155,13 @@ public class BPMNDiagramImpl extends DiagramImpl implements BPMNDiagram {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case BpmnDiPackage.BPMN_DIAGRAM__PLANE:
-                return basicSetPlane(null, msgs);
-            case BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE:
-                return ((InternalEList<?>)getLabelStyle()).basicRemove(otherEnd, msgs);
+        case BpmnDiPackage.BPMN_DIAGRAM__PLANE:
+            return basicSetPlane(null, msgs);
+        case BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE:
+            return ((InternalEList<?>) getLabelStyle()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -168,10 +174,10 @@ public class BPMNDiagramImpl extends DiagramImpl implements BPMNDiagram {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case BpmnDiPackage.BPMN_DIAGRAM__PLANE:
-                return getPlane();
-            case BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE:
-                return getLabelStyle();
+        case BpmnDiPackage.BPMN_DIAGRAM__PLANE:
+            return getPlane();
+        case BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE:
+            return getLabelStyle();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -185,13 +191,13 @@ public class BPMNDiagramImpl extends DiagramImpl implements BPMNDiagram {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case BpmnDiPackage.BPMN_DIAGRAM__PLANE:
-                setPlane((BPMNPlane)newValue);
-                return;
-            case BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE:
-                getLabelStyle().clear();
-                getLabelStyle().addAll((Collection<? extends BPMNLabelStyle>)newValue);
-                return;
+        case BpmnDiPackage.BPMN_DIAGRAM__PLANE:
+            setPlane((BPMNPlane) newValue);
+            return;
+        case BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE:
+            getLabelStyle().clear();
+            getLabelStyle().addAll((Collection<? extends BPMNLabelStyle>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -204,12 +210,12 @@ public class BPMNDiagramImpl extends DiagramImpl implements BPMNDiagram {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case BpmnDiPackage.BPMN_DIAGRAM__PLANE:
-                setPlane((BPMNPlane)null);
-                return;
-            case BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE:
-                getLabelStyle().clear();
-                return;
+        case BpmnDiPackage.BPMN_DIAGRAM__PLANE:
+            setPlane((BPMNPlane) null);
+            return;
+        case BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE:
+            getLabelStyle().clear();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -222,10 +228,10 @@ public class BPMNDiagramImpl extends DiagramImpl implements BPMNDiagram {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case BpmnDiPackage.BPMN_DIAGRAM__PLANE:
-                return plane != null;
-            case BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE:
-                return labelStyle != null && !labelStyle.isEmpty();
+        case BpmnDiPackage.BPMN_DIAGRAM__PLANE:
+            return plane != null;
+        case BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE:
+            return labelStyle != null && !labelStyle.isEmpty();
         }
         return super.eIsSet(featureID);
     }

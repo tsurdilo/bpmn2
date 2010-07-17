@@ -38,7 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ConversationLinkItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ConversationLinkItemProvider extends BaseElementItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -74,7 +76,14 @@ public class ConversationLinkItemProvider extends BaseElementItemProvider implem
      * @generated
      */
     protected void addNamePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_ConversationLink_name_feature"), getString("_UI_PropertyDescriptor_description", "_UI_ConversationLink_name_feature", "_UI_ConversationLink_type"), Bpmn2Package.Literals.CONVERSATION_LINK__NAME, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_ConversationLink_name_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_ConversationLink_name_feature", "_UI_ConversationLink_type"),
+                Bpmn2Package.Literals.CONVERSATION_LINK__NAME, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -84,7 +93,14 @@ public class ConversationLinkItemProvider extends BaseElementItemProvider implem
      * @generated
      */
     protected void addSourceRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_ConversationLink_sourceRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_ConversationLink_sourceRef_feature", "_UI_ConversationLink_type"), Bpmn2Package.Literals.CONVERSATION_LINK__SOURCE_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_ConversationLink_sourceRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_ConversationLink_sourceRef_feature", "_UI_ConversationLink_type"),
+                Bpmn2Package.Literals.CONVERSATION_LINK__SOURCE_REF, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -94,7 +110,14 @@ public class ConversationLinkItemProvider extends BaseElementItemProvider implem
      * @generated
      */
     protected void addTargetRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_ConversationLink_targetRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_ConversationLink_targetRef_feature", "_UI_ConversationLink_type"), Bpmn2Package.Literals.CONVERSATION_LINK__TARGET_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_ConversationLink_targetRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_ConversationLink_targetRef_feature", "_UI_ConversationLink_type"),
+                Bpmn2Package.Literals.CONVERSATION_LINK__TARGET_REF, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -106,9 +129,11 @@ public class ConversationLinkItemProvider extends BaseElementItemProvider implem
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/ConversationLink.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/ConversationLink.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/ConversationLink.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/ConversationLink.gif"));
         }
     }
 
@@ -120,8 +145,9 @@ public class ConversationLinkItemProvider extends BaseElementItemProvider implem
      */
     @Override
     public String getText(Object object) {
-        String label = ((ConversationLink)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_ConversationLink_type") : getString("_UI_ConversationLink_type") + " " + label;
+        String label = ((ConversationLink) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_ConversationLink_type")
+                : getString("_UI_ConversationLink_type") + " " + label;
     }
 
     /**
@@ -136,9 +162,10 @@ public class ConversationLinkItemProvider extends BaseElementItemProvider implem
         updateChildren(notification);
 
         switch (notification.getFeatureID(ConversationLink.class)) {
-            case Bpmn2Package.CONVERSATION_LINK__NAME:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case Bpmn2Package.CONVERSATION_LINK__NAME:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }

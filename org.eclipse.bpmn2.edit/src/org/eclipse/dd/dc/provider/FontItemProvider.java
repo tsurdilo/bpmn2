@@ -41,7 +41,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class FontItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class FontItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider,
+        IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -80,7 +82,13 @@ public class FontItemProvider extends ItemProviderAdapter implements IEditingDom
      * @generated
      */
     protected void addIsBoldPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Font_isBold_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Font_isBold_feature", "_UI_Font_type"), DcPackage.Literals.FONT__IS_BOLD, true, false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Font_isBold_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Font_isBold_feature",
+                        "_UI_Font_type"), DcPackage.Literals.FONT__IS_BOLD, true, false, false,
+                ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -90,7 +98,13 @@ public class FontItemProvider extends ItemProviderAdapter implements IEditingDom
      * @generated
      */
     protected void addIsItalicPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Font_isItalic_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Font_isItalic_feature", "_UI_Font_type"), DcPackage.Literals.FONT__IS_ITALIC, true, false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Font_isItalic_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Font_isItalic_feature",
+                        "_UI_Font_type"), DcPackage.Literals.FONT__IS_ITALIC, true, false, false,
+                ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -100,7 +114,13 @@ public class FontItemProvider extends ItemProviderAdapter implements IEditingDom
      * @generated
      */
     protected void addIsStrikeThroughPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Font_isStrikeThrough_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Font_isStrikeThrough_feature", "_UI_Font_type"), DcPackage.Literals.FONT__IS_STRIKE_THROUGH, true, false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Font_isStrikeThrough_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Font_isStrikeThrough_feature",
+                        "_UI_Font_type"), DcPackage.Literals.FONT__IS_STRIKE_THROUGH, true, false,
+                false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -110,7 +130,13 @@ public class FontItemProvider extends ItemProviderAdapter implements IEditingDom
      * @generated
      */
     protected void addIsUnderlinePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Font_isUnderline_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Font_isUnderline_feature", "_UI_Font_type"), DcPackage.Literals.FONT__IS_UNDERLINE, true, false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Font_isUnderline_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Font_isUnderline_feature",
+                        "_UI_Font_type"), DcPackage.Literals.FONT__IS_UNDERLINE, true, false,
+                false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -120,7 +146,13 @@ public class FontItemProvider extends ItemProviderAdapter implements IEditingDom
      * @generated
      */
     protected void addNamePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Font_name_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Font_name_feature", "_UI_Font_type"), DcPackage.Literals.FONT__NAME, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Font_name_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Font_name_feature",
+                        "_UI_Font_type"), DcPackage.Literals.FONT__NAME, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -130,7 +162,13 @@ public class FontItemProvider extends ItemProviderAdapter implements IEditingDom
      * @generated
      */
     protected void addSizePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Font_size_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Font_size_feature", "_UI_Font_type"), DcPackage.Literals.FONT__SIZE, true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Font_size_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Font_size_feature",
+                        "_UI_Font_type"), DcPackage.Literals.FONT__SIZE, true, false, false,
+                ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -156,8 +194,9 @@ public class FontItemProvider extends ItemProviderAdapter implements IEditingDom
      */
     @Override
     public String getText(Object object) {
-        String label = ((Font)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_Font_type") : getString("_UI_Font_type") + " " + label;
+        String label = ((Font) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_Font_type")
+                : getString("_UI_Font_type") + " " + label;
     }
 
     /**
@@ -172,14 +211,15 @@ public class FontItemProvider extends ItemProviderAdapter implements IEditingDom
         updateChildren(notification);
 
         switch (notification.getFeatureID(Font.class)) {
-            case DcPackage.FONT__IS_BOLD:
-            case DcPackage.FONT__IS_ITALIC:
-            case DcPackage.FONT__IS_STRIKE_THROUGH:
-            case DcPackage.FONT__IS_UNDERLINE:
-            case DcPackage.FONT__NAME:
-            case DcPackage.FONT__SIZE:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case DcPackage.FONT__IS_BOLD:
+        case DcPackage.FONT__IS_ITALIC:
+        case DcPackage.FONT__IS_STRIKE_THROUGH:
+        case DcPackage.FONT__IS_UNDERLINE:
+        case DcPackage.FONT__NAME:
+        case DcPackage.FONT__SIZE:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }

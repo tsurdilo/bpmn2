@@ -40,7 +40,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class LaneSetItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class LaneSetItemProvider extends BaseElementItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -74,7 +76,13 @@ public class LaneSetItemProvider extends BaseElementItemProvider implements IEdi
      * @generated
      */
     protected void addNamePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_LaneSet_name_feature"), getString("_UI_PropertyDescriptor_description", "_UI_LaneSet_name_feature", "_UI_LaneSet_type"), Bpmn2Package.Literals.LANE_SET__NAME, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_LaneSet_name_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_LaneSet_name_feature",
+                        "_UI_LaneSet_type"), Bpmn2Package.Literals.LANE_SET__NAME, true, false,
+                false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -130,8 +138,9 @@ public class LaneSetItemProvider extends BaseElementItemProvider implements IEdi
      */
     @Override
     public String getText(Object object) {
-        String label = ((LaneSet)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_LaneSet_type") : getString("_UI_LaneSet_type") + " " + label;
+        String label = ((LaneSet) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_LaneSet_type")
+                : getString("_UI_LaneSet_type") + " " + label;
     }
 
     /**
@@ -146,12 +155,14 @@ public class LaneSetItemProvider extends BaseElementItemProvider implements IEdi
         updateChildren(notification);
 
         switch (notification.getFeatureID(LaneSet.class)) {
-            case Bpmn2Package.LANE_SET__NAME:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
-            case Bpmn2Package.LANE_SET__LANES:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case Bpmn2Package.LANE_SET__NAME:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
+        case Bpmn2Package.LANE_SET__LANES:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -167,7 +178,8 @@ public class LaneSetItemProvider extends BaseElementItemProvider implements IEdi
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE_SET__LANES, Bpmn2Factory.eINSTANCE.createLane()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE_SET__LANES,
+                Bpmn2Factory.eINSTANCE.createLane()));
     }
 
 }

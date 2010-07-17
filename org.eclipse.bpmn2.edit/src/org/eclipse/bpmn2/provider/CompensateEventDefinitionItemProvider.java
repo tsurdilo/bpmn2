@@ -38,7 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CompensateEventDefinitionItemProvider extends EventDefinitionItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class CompensateEventDefinitionItemProvider extends EventDefinitionItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -73,7 +75,15 @@ public class CompensateEventDefinitionItemProvider extends EventDefinitionItemPr
      * @generated
      */
     protected void addActivityRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_CompensateEventDefinition_activityRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_CompensateEventDefinition_activityRef_feature", "_UI_CompensateEventDefinition_type"), Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_CompensateEventDefinition_activityRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_CompensateEventDefinition_activityRef_feature",
+                        "_UI_CompensateEventDefinition_type"),
+                Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF, true, false, true,
+                null, null, null));
     }
 
     /**
@@ -83,7 +93,15 @@ public class CompensateEventDefinitionItemProvider extends EventDefinitionItemPr
      * @generated
      */
     protected void addWaitForCompletionPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_CompensateEventDefinition_waitForCompletion_feature"), getString("_UI_PropertyDescriptor_description", "_UI_CompensateEventDefinition_waitForCompletion_feature", "_UI_CompensateEventDefinition_type"), Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION, true, false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_CompensateEventDefinition_waitForCompletion_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_CompensateEventDefinition_waitForCompletion_feature",
+                        "_UI_CompensateEventDefinition_type"),
+                Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION, true,
+                false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -95,9 +113,11 @@ public class CompensateEventDefinitionItemProvider extends EventDefinitionItemPr
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/CompensateEventDefinition.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/CompensateEventDefinition.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/CompensateEventDefinition.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/CompensateEventDefinition.gif"));
         }
     }
 
@@ -109,8 +129,9 @@ public class CompensateEventDefinitionItemProvider extends EventDefinitionItemPr
      */
     @Override
     public String getText(Object object) {
-        String label = ((CompensateEventDefinition)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_CompensateEventDefinition_type") : getString("_UI_CompensateEventDefinition_type") + " " + label;
+        String label = ((CompensateEventDefinition) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_CompensateEventDefinition_type")
+                : getString("_UI_CompensateEventDefinition_type") + " " + label;
     }
 
     /**
@@ -125,9 +146,10 @@ public class CompensateEventDefinitionItemProvider extends EventDefinitionItemPr
         updateChildren(notification);
 
         switch (notification.getFeatureID(CompensateEventDefinition.class)) {
-            case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }

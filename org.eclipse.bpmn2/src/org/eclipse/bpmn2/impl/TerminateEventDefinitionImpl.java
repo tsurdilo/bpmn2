@@ -27,7 +27,8 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class TerminateEventDefinitionImpl extends EventDefinitionImpl implements TerminateEventDefinition {
+public class TerminateEventDefinitionImpl extends EventDefinitionImpl implements
+        TerminateEventDefinition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

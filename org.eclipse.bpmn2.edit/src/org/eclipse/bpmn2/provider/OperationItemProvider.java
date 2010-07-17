@@ -38,7 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class OperationItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class OperationItemProvider extends BaseElementItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -76,7 +78,14 @@ public class OperationItemProvider extends BaseElementItemProvider implements IE
      * @generated
      */
     protected void addInMessageRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Operation_inMessageRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Operation_inMessageRef_feature", "_UI_Operation_type"), Bpmn2Package.Literals.OPERATION__IN_MESSAGE_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Operation_inMessageRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_Operation_inMessageRef_feature", "_UI_Operation_type"),
+                Bpmn2Package.Literals.OPERATION__IN_MESSAGE_REF, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -86,7 +95,14 @@ public class OperationItemProvider extends BaseElementItemProvider implements IE
      * @generated
      */
     protected void addOutMessageRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Operation_outMessageRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Operation_outMessageRef_feature", "_UI_Operation_type"), Bpmn2Package.Literals.OPERATION__OUT_MESSAGE_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Operation_outMessageRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_Operation_outMessageRef_feature", "_UI_Operation_type"),
+                Bpmn2Package.Literals.OPERATION__OUT_MESSAGE_REF, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -96,7 +112,13 @@ public class OperationItemProvider extends BaseElementItemProvider implements IE
      * @generated
      */
     protected void addErrorRefsPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Operation_errorRefs_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Operation_errorRefs_feature", "_UI_Operation_type"), Bpmn2Package.Literals.OPERATION__ERROR_REFS, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Operation_errorRefs_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Operation_errorRefs_feature",
+                        "_UI_Operation_type"), Bpmn2Package.Literals.OPERATION__ERROR_REFS, true,
+                false, true, null, null, null));
     }
 
     /**
@@ -106,7 +128,14 @@ public class OperationItemProvider extends BaseElementItemProvider implements IE
      * @generated
      */
     protected void addImplementationRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Operation_implementationRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Operation_implementationRef_feature", "_UI_Operation_type"), Bpmn2Package.Literals.OPERATION__IMPLEMENTATION_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Operation_implementationRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_Operation_implementationRef_feature", "_UI_Operation_type"),
+                Bpmn2Package.Literals.OPERATION__IMPLEMENTATION_REF, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -116,7 +145,13 @@ public class OperationItemProvider extends BaseElementItemProvider implements IE
      * @generated
      */
     protected void addNamePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Operation_name_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Operation_name_feature", "_UI_Operation_type"), Bpmn2Package.Literals.OPERATION__NAME, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Operation_name_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Operation_name_feature",
+                        "_UI_Operation_type"), Bpmn2Package.Literals.OPERATION__NAME, true, false,
+                false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -142,8 +177,9 @@ public class OperationItemProvider extends BaseElementItemProvider implements IE
      */
     @Override
     public String getText(Object object) {
-        String label = ((Operation)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_Operation_type") : getString("_UI_Operation_type") + " " + label;
+        String label = ((Operation) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_Operation_type")
+                : getString("_UI_Operation_type") + " " + label;
     }
 
     /**
@@ -158,9 +194,10 @@ public class OperationItemProvider extends BaseElementItemProvider implements IE
         updateChildren(notification);
 
         switch (notification.getFeatureID(Operation.class)) {
-            case Bpmn2Package.OPERATION__NAME:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case Bpmn2Package.OPERATION__NAME:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }

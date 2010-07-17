@@ -77,7 +77,8 @@ public class Bpmn2Switch<T> {
             return doSwitch(theEClass.getClassifierID(), theEObject);
         } else {
             List<EClass> eSuperTypes = theEClass.getESuperTypes();
-            return eSuperTypes.isEmpty() ? defaultCase(theEObject) : doSwitch(eSuperTypes.get(0), theEObject);
+            return eSuperTypes.isEmpty() ? defaultCase(theEObject) : doSwitch(eSuperTypes.get(0),
+                    theEObject);
         }
     }
 
@@ -90,1670 +91,1670 @@ public class Bpmn2Switch<T> {
      */
     protected T doSwitch(int classifierID, EObject theEObject) {
         switch (classifierID) {
-            case Bpmn2Package.DOCUMENT_ROOT: {
-                DocumentRoot documentRoot = (DocumentRoot)theEObject;
-                T result = caseDocumentRoot(documentRoot);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.ACTIVITY: {
-                Activity activity = (Activity)theEObject;
-                T result = caseActivity(activity);
-                if (result == null)
-                    result = caseFlowNode(activity);
-                if (result == null)
-                    result = caseFlowElement(activity);
-                if (result == null)
-                    result = caseBaseElement(activity);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.AD_HOC_SUB_PROCESS: {
-                AdHocSubProcess adHocSubProcess = (AdHocSubProcess)theEObject;
-                T result = caseAdHocSubProcess(adHocSubProcess);
-                if (result == null)
-                    result = caseSubProcess(adHocSubProcess);
-                if (result == null)
-                    result = caseActivity(adHocSubProcess);
-                if (result == null)
-                    result = caseFlowElementsContainer(adHocSubProcess);
-                if (result == null)
-                    result = caseFlowNode(adHocSubProcess);
-                if (result == null)
-                    result = caseFlowElement(adHocSubProcess);
-                if (result == null)
-                    result = caseBaseElement(adHocSubProcess);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.ARTIFACT: {
-                Artifact artifact = (Artifact)theEObject;
-                T result = caseArtifact(artifact);
-                if (result == null)
-                    result = caseBaseElement(artifact);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.ASSIGNMENT: {
-                Assignment assignment = (Assignment)theEObject;
-                T result = caseAssignment(assignment);
-                if (result == null)
-                    result = caseBaseElement(assignment);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.ASSOCIATION: {
-                Association association = (Association)theEObject;
-                T result = caseAssociation(association);
-                if (result == null)
-                    result = caseArtifact(association);
-                if (result == null)
-                    result = caseBaseElement(association);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.AUDITING: {
-                Auditing auditing = (Auditing)theEObject;
-                T result = caseAuditing(auditing);
-                if (result == null)
-                    result = caseBaseElement(auditing);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.BASE_ELEMENT: {
-                BaseElement baseElement = (BaseElement)theEObject;
-                T result = caseBaseElement(baseElement);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.BOUNDARY_EVENT: {
-                BoundaryEvent boundaryEvent = (BoundaryEvent)theEObject;
-                T result = caseBoundaryEvent(boundaryEvent);
-                if (result == null)
-                    result = caseCatchEvent(boundaryEvent);
-                if (result == null)
-                    result = caseEvent(boundaryEvent);
-                if (result == null)
-                    result = caseFlowNode(boundaryEvent);
-                if (result == null)
-                    result = caseInteractionNode(boundaryEvent);
-                if (result == null)
-                    result = caseFlowElement(boundaryEvent);
-                if (result == null)
-                    result = caseBaseElement(boundaryEvent);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.BUSINESS_RULE_TASK: {
-                BusinessRuleTask businessRuleTask = (BusinessRuleTask)theEObject;
-                T result = caseBusinessRuleTask(businessRuleTask);
-                if (result == null)
-                    result = caseTask(businessRuleTask);
-                if (result == null)
-                    result = caseActivity(businessRuleTask);
-                if (result == null)
-                    result = caseInteractionNode(businessRuleTask);
-                if (result == null)
-                    result = caseFlowNode(businessRuleTask);
-                if (result == null)
-                    result = caseFlowElement(businessRuleTask);
-                if (result == null)
-                    result = caseBaseElement(businessRuleTask);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.CALL_ACTIVITY: {
-                CallActivity callActivity = (CallActivity)theEObject;
-                T result = caseCallActivity(callActivity);
-                if (result == null)
-                    result = caseActivity(callActivity);
-                if (result == null)
-                    result = caseFlowNode(callActivity);
-                if (result == null)
-                    result = caseFlowElement(callActivity);
-                if (result == null)
-                    result = caseBaseElement(callActivity);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.CALL_CHOREOGRAPHY: {
-                CallChoreography callChoreography = (CallChoreography)theEObject;
-                T result = caseCallChoreography(callChoreography);
-                if (result == null)
-                    result = caseChoreographyActivity(callChoreography);
-                if (result == null)
-                    result = caseFlowNode(callChoreography);
-                if (result == null)
-                    result = caseFlowElement(callChoreography);
-                if (result == null)
-                    result = caseBaseElement(callChoreography);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.CALL_CONVERSATION: {
-                CallConversation callConversation = (CallConversation)theEObject;
-                T result = caseCallConversation(callConversation);
-                if (result == null)
-                    result = caseConversationNode(callConversation);
-                if (result == null)
-                    result = caseBaseElement(callConversation);
-                if (result == null)
-                    result = caseInteractionNode(callConversation);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.CALLABLE_ELEMENT: {
-                CallableElement callableElement = (CallableElement)theEObject;
-                T result = caseCallableElement(callableElement);
-                if (result == null)
-                    result = caseRootElement(callableElement);
-                if (result == null)
-                    result = caseBaseElement(callableElement);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.CANCEL_EVENT_DEFINITION: {
-                CancelEventDefinition cancelEventDefinition = (CancelEventDefinition)theEObject;
-                T result = caseCancelEventDefinition(cancelEventDefinition);
-                if (result == null)
-                    result = caseEventDefinition(cancelEventDefinition);
-                if (result == null)
-                    result = caseRootElement(cancelEventDefinition);
-                if (result == null)
-                    result = caseBaseElement(cancelEventDefinition);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.CATCH_EVENT: {
-                CatchEvent catchEvent = (CatchEvent)theEObject;
-                T result = caseCatchEvent(catchEvent);
-                if (result == null)
-                    result = caseEvent(catchEvent);
-                if (result == null)
-                    result = caseFlowNode(catchEvent);
-                if (result == null)
-                    result = caseInteractionNode(catchEvent);
-                if (result == null)
-                    result = caseFlowElement(catchEvent);
-                if (result == null)
-                    result = caseBaseElement(catchEvent);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.CATEGORY: {
-                Category category = (Category)theEObject;
-                T result = caseCategory(category);
-                if (result == null)
-                    result = caseRootElement(category);
-                if (result == null)
-                    result = caseBaseElement(category);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.CATEGORY_VALUE: {
-                CategoryValue categoryValue = (CategoryValue)theEObject;
-                T result = caseCategoryValue(categoryValue);
-                if (result == null)
-                    result = caseBaseElement(categoryValue);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.CHOREOGRAPHY: {
-                Choreography choreography = (Choreography)theEObject;
-                T result = caseChoreography(choreography);
-                if (result == null)
-                    result = caseCollaboration(choreography);
-                if (result == null)
-                    result = caseFlowElementsContainer(choreography);
-                if (result == null)
-                    result = caseRootElement(choreography);
-                if (result == null)
-                    result = caseBaseElement(choreography);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.CHOREOGRAPHY_ACTIVITY: {
-                ChoreographyActivity choreographyActivity = (ChoreographyActivity)theEObject;
-                T result = caseChoreographyActivity(choreographyActivity);
-                if (result == null)
-                    result = caseFlowNode(choreographyActivity);
-                if (result == null)
-                    result = caseFlowElement(choreographyActivity);
-                if (result == null)
-                    result = caseBaseElement(choreographyActivity);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.CHOREOGRAPHY_TASK: {
-                ChoreographyTask choreographyTask = (ChoreographyTask)theEObject;
-                T result = caseChoreographyTask(choreographyTask);
-                if (result == null)
-                    result = caseChoreographyActivity(choreographyTask);
-                if (result == null)
-                    result = caseFlowNode(choreographyTask);
-                if (result == null)
-                    result = caseFlowElement(choreographyTask);
-                if (result == null)
-                    result = caseBaseElement(choreographyTask);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.COLLABORATION: {
-                Collaboration collaboration = (Collaboration)theEObject;
-                T result = caseCollaboration(collaboration);
-                if (result == null)
-                    result = caseRootElement(collaboration);
-                if (result == null)
-                    result = caseBaseElement(collaboration);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.COMPENSATE_EVENT_DEFINITION: {
-                CompensateEventDefinition compensateEventDefinition = (CompensateEventDefinition)theEObject;
-                T result = caseCompensateEventDefinition(compensateEventDefinition);
-                if (result == null)
-                    result = caseEventDefinition(compensateEventDefinition);
-                if (result == null)
-                    result = caseRootElement(compensateEventDefinition);
-                if (result == null)
-                    result = caseBaseElement(compensateEventDefinition);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION: {
-                ComplexBehaviorDefinition complexBehaviorDefinition = (ComplexBehaviorDefinition)theEObject;
-                T result = caseComplexBehaviorDefinition(complexBehaviorDefinition);
-                if (result == null)
-                    result = caseBaseElement(complexBehaviorDefinition);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.COMPLEX_GATEWAY: {
-                ComplexGateway complexGateway = (ComplexGateway)theEObject;
-                T result = caseComplexGateway(complexGateway);
-                if (result == null)
-                    result = caseGateway(complexGateway);
-                if (result == null)
-                    result = caseFlowNode(complexGateway);
-                if (result == null)
-                    result = caseFlowElement(complexGateway);
-                if (result == null)
-                    result = caseBaseElement(complexGateway);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.CONDITIONAL_EVENT_DEFINITION: {
-                ConditionalEventDefinition conditionalEventDefinition = (ConditionalEventDefinition)theEObject;
-                T result = caseConditionalEventDefinition(conditionalEventDefinition);
-                if (result == null)
-                    result = caseEventDefinition(conditionalEventDefinition);
-                if (result == null)
-                    result = caseRootElement(conditionalEventDefinition);
-                if (result == null)
-                    result = caseBaseElement(conditionalEventDefinition);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.CONVERSATION: {
-                Conversation conversation = (Conversation)theEObject;
-                T result = caseConversation(conversation);
-                if (result == null)
-                    result = caseConversationNode(conversation);
-                if (result == null)
-                    result = caseBaseElement(conversation);
-                if (result == null)
-                    result = caseInteractionNode(conversation);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.CONVERSATION_ASSOCIATION: {
-                ConversationAssociation conversationAssociation = (ConversationAssociation)theEObject;
-                T result = caseConversationAssociation(conversationAssociation);
-                if (result == null)
-                    result = caseBaseElement(conversationAssociation);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.CONVERSATION_LINK: {
-                ConversationLink conversationLink = (ConversationLink)theEObject;
-                T result = caseConversationLink(conversationLink);
-                if (result == null)
-                    result = caseBaseElement(conversationLink);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.CONVERSATION_NODE: {
-                ConversationNode conversationNode = (ConversationNode)theEObject;
-                T result = caseConversationNode(conversationNode);
-                if (result == null)
-                    result = caseBaseElement(conversationNode);
-                if (result == null)
-                    result = caseInteractionNode(conversationNode);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.CORRELATION_KEY: {
-                CorrelationKey correlationKey = (CorrelationKey)theEObject;
-                T result = caseCorrelationKey(correlationKey);
-                if (result == null)
-                    result = caseBaseElement(correlationKey);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.CORRELATION_PROPERTY: {
-                CorrelationProperty correlationProperty = (CorrelationProperty)theEObject;
-                T result = caseCorrelationProperty(correlationProperty);
-                if (result == null)
-                    result = caseRootElement(correlationProperty);
-                if (result == null)
-                    result = caseBaseElement(correlationProperty);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.CORRELATION_PROPERTY_BINDING: {
-                CorrelationPropertyBinding correlationPropertyBinding = (CorrelationPropertyBinding)theEObject;
-                T result = caseCorrelationPropertyBinding(correlationPropertyBinding);
-                if (result == null)
-                    result = caseBaseElement(correlationPropertyBinding);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION: {
-                CorrelationPropertyRetrievalExpression correlationPropertyRetrievalExpression = (CorrelationPropertyRetrievalExpression)theEObject;
-                T result = caseCorrelationPropertyRetrievalExpression(correlationPropertyRetrievalExpression);
-                if (result == null)
-                    result = caseBaseElement(correlationPropertyRetrievalExpression);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.CORRELATION_SUBSCRIPTION: {
-                CorrelationSubscription correlationSubscription = (CorrelationSubscription)theEObject;
-                T result = caseCorrelationSubscription(correlationSubscription);
-                if (result == null)
-                    result = caseBaseElement(correlationSubscription);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.DATA_ASSOCIATION: {
-                DataAssociation dataAssociation = (DataAssociation)theEObject;
-                T result = caseDataAssociation(dataAssociation);
-                if (result == null)
-                    result = caseBaseElement(dataAssociation);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.DATA_INPUT: {
-                DataInput dataInput = (DataInput)theEObject;
-                T result = caseDataInput(dataInput);
-                if (result == null)
-                    result = caseItemAwareElement(dataInput);
-                if (result == null)
-                    result = caseBaseElement(dataInput);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.DATA_INPUT_ASSOCIATION: {
-                DataInputAssociation dataInputAssociation = (DataInputAssociation)theEObject;
-                T result = caseDataInputAssociation(dataInputAssociation);
-                if (result == null)
-                    result = caseDataAssociation(dataInputAssociation);
-                if (result == null)
-                    result = caseBaseElement(dataInputAssociation);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.DATA_OBJECT: {
-                DataObject dataObject = (DataObject)theEObject;
-                T result = caseDataObject(dataObject);
-                if (result == null)
-                    result = caseFlowElement(dataObject);
-                if (result == null)
-                    result = caseItemAwareElement(dataObject);
-                if (result == null)
-                    result = caseBaseElement(dataObject);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.DATA_OBJECT_REFERENCE: {
-                DataObjectReference dataObjectReference = (DataObjectReference)theEObject;
-                T result = caseDataObjectReference(dataObjectReference);
-                if (result == null)
-                    result = caseFlowElement(dataObjectReference);
-                if (result == null)
-                    result = caseItemAwareElement(dataObjectReference);
-                if (result == null)
-                    result = caseBaseElement(dataObjectReference);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.DATA_OUTPUT: {
-                DataOutput dataOutput = (DataOutput)theEObject;
-                T result = caseDataOutput(dataOutput);
-                if (result == null)
-                    result = caseItemAwareElement(dataOutput);
-                if (result == null)
-                    result = caseBaseElement(dataOutput);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.DATA_OUTPUT_ASSOCIATION: {
-                DataOutputAssociation dataOutputAssociation = (DataOutputAssociation)theEObject;
-                T result = caseDataOutputAssociation(dataOutputAssociation);
-                if (result == null)
-                    result = caseDataAssociation(dataOutputAssociation);
-                if (result == null)
-                    result = caseBaseElement(dataOutputAssociation);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.DATA_STATE: {
-                DataState dataState = (DataState)theEObject;
-                T result = caseDataState(dataState);
-                if (result == null)
-                    result = caseBaseElement(dataState);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.DATA_STORE: {
-                DataStore dataStore = (DataStore)theEObject;
-                T result = caseDataStore(dataStore);
-                if (result == null)
-                    result = caseItemAwareElement(dataStore);
-                if (result == null)
-                    result = caseRootElement(dataStore);
-                if (result == null)
-                    result = caseBaseElement(dataStore);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.DATA_STORE_REFERENCE: {
-                DataStoreReference dataStoreReference = (DataStoreReference)theEObject;
-                T result = caseDataStoreReference(dataStoreReference);
-                if (result == null)
-                    result = caseFlowElement(dataStoreReference);
-                if (result == null)
-                    result = caseItemAwareElement(dataStoreReference);
-                if (result == null)
-                    result = caseBaseElement(dataStoreReference);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.DEFINITIONS: {
-                Definitions definitions = (Definitions)theEObject;
-                T result = caseDefinitions(definitions);
-                if (result == null)
-                    result = caseBaseElement(definitions);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.DOCUMENTATION: {
-                Documentation documentation = (Documentation)theEObject;
-                T result = caseDocumentation(documentation);
-                if (result == null)
-                    result = caseBaseElement(documentation);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.END_EVENT: {
-                EndEvent endEvent = (EndEvent)theEObject;
-                T result = caseEndEvent(endEvent);
-                if (result == null)
-                    result = caseThrowEvent(endEvent);
-                if (result == null)
-                    result = caseEvent(endEvent);
-                if (result == null)
-                    result = caseFlowNode(endEvent);
-                if (result == null)
-                    result = caseInteractionNode(endEvent);
-                if (result == null)
-                    result = caseFlowElement(endEvent);
-                if (result == null)
-                    result = caseBaseElement(endEvent);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.END_POINT: {
-                EndPoint endPoint = (EndPoint)theEObject;
-                T result = caseEndPoint(endPoint);
-                if (result == null)
-                    result = caseRootElement(endPoint);
-                if (result == null)
-                    result = caseBaseElement(endPoint);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.ERROR: {
-                org.eclipse.bpmn2.Error error = (org.eclipse.bpmn2.Error)theEObject;
-                T result = caseError(error);
-                if (result == null)
-                    result = caseRootElement(error);
-                if (result == null)
-                    result = caseBaseElement(error);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.ERROR_EVENT_DEFINITION: {
-                ErrorEventDefinition errorEventDefinition = (ErrorEventDefinition)theEObject;
-                T result = caseErrorEventDefinition(errorEventDefinition);
-                if (result == null)
-                    result = caseEventDefinition(errorEventDefinition);
-                if (result == null)
-                    result = caseRootElement(errorEventDefinition);
-                if (result == null)
-                    result = caseBaseElement(errorEventDefinition);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.ESCALATION: {
-                Escalation escalation = (Escalation)theEObject;
-                T result = caseEscalation(escalation);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.ESCALATION_EVENT_DEFINITION: {
-                EscalationEventDefinition escalationEventDefinition = (EscalationEventDefinition)theEObject;
-                T result = caseEscalationEventDefinition(escalationEventDefinition);
-                if (result == null)
-                    result = caseEventDefinition(escalationEventDefinition);
-                if (result == null)
-                    result = caseRootElement(escalationEventDefinition);
-                if (result == null)
-                    result = caseBaseElement(escalationEventDefinition);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.EVENT: {
-                Event event = (Event)theEObject;
-                T result = caseEvent(event);
-                if (result == null)
-                    result = caseFlowNode(event);
-                if (result == null)
-                    result = caseInteractionNode(event);
-                if (result == null)
-                    result = caseFlowElement(event);
-                if (result == null)
-                    result = caseBaseElement(event);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.EVENT_BASED_GATEWAY: {
-                EventBasedGateway eventBasedGateway = (EventBasedGateway)theEObject;
-                T result = caseEventBasedGateway(eventBasedGateway);
-                if (result == null)
-                    result = caseGateway(eventBasedGateway);
-                if (result == null)
-                    result = caseFlowNode(eventBasedGateway);
-                if (result == null)
-                    result = caseFlowElement(eventBasedGateway);
-                if (result == null)
-                    result = caseBaseElement(eventBasedGateway);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.EVENT_DEFINITION: {
-                EventDefinition eventDefinition = (EventDefinition)theEObject;
-                T result = caseEventDefinition(eventDefinition);
-                if (result == null)
-                    result = caseRootElement(eventDefinition);
-                if (result == null)
-                    result = caseBaseElement(eventDefinition);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.EXCLUSIVE_GATEWAY: {
-                ExclusiveGateway exclusiveGateway = (ExclusiveGateway)theEObject;
-                T result = caseExclusiveGateway(exclusiveGateway);
-                if (result == null)
-                    result = caseGateway(exclusiveGateway);
-                if (result == null)
-                    result = caseFlowNode(exclusiveGateway);
-                if (result == null)
-                    result = caseFlowElement(exclusiveGateway);
-                if (result == null)
-                    result = caseBaseElement(exclusiveGateway);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.EXPRESSION: {
-                Expression expression = (Expression)theEObject;
-                T result = caseExpression(expression);
-                if (result == null)
-                    result = caseBaseElement(expression);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.EXTENSION: {
-                Extension extension = (Extension)theEObject;
-                T result = caseExtension(extension);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION: {
-                ExtensionAttributeDefinition extensionAttributeDefinition = (ExtensionAttributeDefinition)theEObject;
-                T result = caseExtensionAttributeDefinition(extensionAttributeDefinition);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE: {
-                ExtensionAttributeValue extensionAttributeValue = (ExtensionAttributeValue)theEObject;
-                T result = caseExtensionAttributeValue(extensionAttributeValue);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.EXTENSION_DEFINITION: {
-                ExtensionDefinition extensionDefinition = (ExtensionDefinition)theEObject;
-                T result = caseExtensionDefinition(extensionDefinition);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.FLOW_ELEMENT: {
-                FlowElement flowElement = (FlowElement)theEObject;
-                T result = caseFlowElement(flowElement);
-                if (result == null)
-                    result = caseBaseElement(flowElement);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.FLOW_ELEMENTS_CONTAINER: {
-                FlowElementsContainer flowElementsContainer = (FlowElementsContainer)theEObject;
-                T result = caseFlowElementsContainer(flowElementsContainer);
-                if (result == null)
-                    result = caseBaseElement(flowElementsContainer);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.FLOW_NODE: {
-                FlowNode flowNode = (FlowNode)theEObject;
-                T result = caseFlowNode(flowNode);
-                if (result == null)
-                    result = caseFlowElement(flowNode);
-                if (result == null)
-                    result = caseBaseElement(flowNode);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.FORMAL_EXPRESSION: {
-                FormalExpression formalExpression = (FormalExpression)theEObject;
-                T result = caseFormalExpression(formalExpression);
-                if (result == null)
-                    result = caseExpression(formalExpression);
-                if (result == null)
-                    result = caseBaseElement(formalExpression);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.GATEWAY: {
-                Gateway gateway = (Gateway)theEObject;
-                T result = caseGateway(gateway);
-                if (result == null)
-                    result = caseFlowNode(gateway);
-                if (result == null)
-                    result = caseFlowElement(gateway);
-                if (result == null)
-                    result = caseBaseElement(gateway);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.GLOBAL_BUSINESS_RULE_TASK: {
-                GlobalBusinessRuleTask globalBusinessRuleTask = (GlobalBusinessRuleTask)theEObject;
-                T result = caseGlobalBusinessRuleTask(globalBusinessRuleTask);
-                if (result == null)
-                    result = caseGlobalTask(globalBusinessRuleTask);
-                if (result == null)
-                    result = caseCallableElement(globalBusinessRuleTask);
-                if (result == null)
-                    result = caseRootElement(globalBusinessRuleTask);
-                if (result == null)
-                    result = caseBaseElement(globalBusinessRuleTask);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.GLOBAL_CHOREOGRAPHY_TASK: {
-                GlobalChoreographyTask globalChoreographyTask = (GlobalChoreographyTask)theEObject;
-                T result = caseGlobalChoreographyTask(globalChoreographyTask);
-                if (result == null)
-                    result = caseChoreography(globalChoreographyTask);
-                if (result == null)
-                    result = caseCollaboration(globalChoreographyTask);
-                if (result == null)
-                    result = caseFlowElementsContainer(globalChoreographyTask);
-                if (result == null)
-                    result = caseRootElement(globalChoreographyTask);
-                if (result == null)
-                    result = caseBaseElement(globalChoreographyTask);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.GLOBAL_CONVERSATION: {
-                GlobalConversation globalConversation = (GlobalConversation)theEObject;
-                T result = caseGlobalConversation(globalConversation);
-                if (result == null)
-                    result = caseCollaboration(globalConversation);
-                if (result == null)
-                    result = caseRootElement(globalConversation);
-                if (result == null)
-                    result = caseBaseElement(globalConversation);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.GLOBAL_MANUAL_TASK: {
-                GlobalManualTask globalManualTask = (GlobalManualTask)theEObject;
-                T result = caseGlobalManualTask(globalManualTask);
-                if (result == null)
-                    result = caseGlobalTask(globalManualTask);
-                if (result == null)
-                    result = caseCallableElement(globalManualTask);
-                if (result == null)
-                    result = caseRootElement(globalManualTask);
-                if (result == null)
-                    result = caseBaseElement(globalManualTask);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.GLOBAL_SCRIPT_TASK: {
-                GlobalScriptTask globalScriptTask = (GlobalScriptTask)theEObject;
-                T result = caseGlobalScriptTask(globalScriptTask);
-                if (result == null)
-                    result = caseGlobalTask(globalScriptTask);
-                if (result == null)
-                    result = caseCallableElement(globalScriptTask);
-                if (result == null)
-                    result = caseRootElement(globalScriptTask);
-                if (result == null)
-                    result = caseBaseElement(globalScriptTask);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.GLOBAL_TASK: {
-                GlobalTask globalTask = (GlobalTask)theEObject;
-                T result = caseGlobalTask(globalTask);
-                if (result == null)
-                    result = caseCallableElement(globalTask);
-                if (result == null)
-                    result = caseRootElement(globalTask);
-                if (result == null)
-                    result = caseBaseElement(globalTask);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.GLOBAL_USER_TASK: {
-                GlobalUserTask globalUserTask = (GlobalUserTask)theEObject;
-                T result = caseGlobalUserTask(globalUserTask);
-                if (result == null)
-                    result = caseGlobalTask(globalUserTask);
-                if (result == null)
-                    result = caseCallableElement(globalUserTask);
-                if (result == null)
-                    result = caseRootElement(globalUserTask);
-                if (result == null)
-                    result = caseBaseElement(globalUserTask);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.GROUP: {
-                Group group = (Group)theEObject;
-                T result = caseGroup(group);
-                if (result == null)
-                    result = caseArtifact(group);
-                if (result == null)
-                    result = caseBaseElement(group);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.HUMAN_PERFORMER: {
-                HumanPerformer humanPerformer = (HumanPerformer)theEObject;
-                T result = caseHumanPerformer(humanPerformer);
-                if (result == null)
-                    result = casePerformer(humanPerformer);
-                if (result == null)
-                    result = caseResourceRole(humanPerformer);
-                if (result == null)
-                    result = caseBaseElement(humanPerformer);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.IMPLICIT_THROW_EVENT: {
-                ImplicitThrowEvent implicitThrowEvent = (ImplicitThrowEvent)theEObject;
-                T result = caseImplicitThrowEvent(implicitThrowEvent);
-                if (result == null)
-                    result = caseThrowEvent(implicitThrowEvent);
-                if (result == null)
-                    result = caseEvent(implicitThrowEvent);
-                if (result == null)
-                    result = caseFlowNode(implicitThrowEvent);
-                if (result == null)
-                    result = caseInteractionNode(implicitThrowEvent);
-                if (result == null)
-                    result = caseFlowElement(implicitThrowEvent);
-                if (result == null)
-                    result = caseBaseElement(implicitThrowEvent);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.IMPORT: {
-                Import import_ = (Import)theEObject;
-                T result = caseImport(import_);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.INCLUSIVE_GATEWAY: {
-                InclusiveGateway inclusiveGateway = (InclusiveGateway)theEObject;
-                T result = caseInclusiveGateway(inclusiveGateway);
-                if (result == null)
-                    result = caseGateway(inclusiveGateway);
-                if (result == null)
-                    result = caseFlowNode(inclusiveGateway);
-                if (result == null)
-                    result = caseFlowElement(inclusiveGateway);
-                if (result == null)
-                    result = caseBaseElement(inclusiveGateway);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.INPUT_OUTPUT_BINDING: {
-                InputOutputBinding inputOutputBinding = (InputOutputBinding)theEObject;
-                T result = caseInputOutputBinding(inputOutputBinding);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION: {
-                InputOutputSpecification inputOutputSpecification = (InputOutputSpecification)theEObject;
-                T result = caseInputOutputSpecification(inputOutputSpecification);
-                if (result == null)
-                    result = caseBaseElement(inputOutputSpecification);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.INPUT_SET: {
-                InputSet inputSet = (InputSet)theEObject;
-                T result = caseInputSet(inputSet);
-                if (result == null)
-                    result = caseBaseElement(inputSet);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.INTERACTION_NODE: {
-                InteractionNode interactionNode = (InteractionNode)theEObject;
-                T result = caseInteractionNode(interactionNode);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.INTERFACE: {
-                Interface interface_ = (Interface)theEObject;
-                T result = caseInterface(interface_);
-                if (result == null)
-                    result = caseRootElement(interface_);
-                if (result == null)
-                    result = caseBaseElement(interface_);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.INTERMEDIATE_CATCH_EVENT: {
-                IntermediateCatchEvent intermediateCatchEvent = (IntermediateCatchEvent)theEObject;
-                T result = caseIntermediateCatchEvent(intermediateCatchEvent);
-                if (result == null)
-                    result = caseCatchEvent(intermediateCatchEvent);
-                if (result == null)
-                    result = caseEvent(intermediateCatchEvent);
-                if (result == null)
-                    result = caseFlowNode(intermediateCatchEvent);
-                if (result == null)
-                    result = caseInteractionNode(intermediateCatchEvent);
-                if (result == null)
-                    result = caseFlowElement(intermediateCatchEvent);
-                if (result == null)
-                    result = caseBaseElement(intermediateCatchEvent);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.INTERMEDIATE_THROW_EVENT: {
-                IntermediateThrowEvent intermediateThrowEvent = (IntermediateThrowEvent)theEObject;
-                T result = caseIntermediateThrowEvent(intermediateThrowEvent);
-                if (result == null)
-                    result = caseThrowEvent(intermediateThrowEvent);
-                if (result == null)
-                    result = caseEvent(intermediateThrowEvent);
-                if (result == null)
-                    result = caseFlowNode(intermediateThrowEvent);
-                if (result == null)
-                    result = caseInteractionNode(intermediateThrowEvent);
-                if (result == null)
-                    result = caseFlowElement(intermediateThrowEvent);
-                if (result == null)
-                    result = caseBaseElement(intermediateThrowEvent);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.ITEM_AWARE_ELEMENT: {
-                ItemAwareElement itemAwareElement = (ItemAwareElement)theEObject;
-                T result = caseItemAwareElement(itemAwareElement);
-                if (result == null)
-                    result = caseBaseElement(itemAwareElement);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.ITEM_DEFINITION: {
-                ItemDefinition itemDefinition = (ItemDefinition)theEObject;
-                T result = caseItemDefinition(itemDefinition);
-                if (result == null)
-                    result = caseRootElement(itemDefinition);
-                if (result == null)
-                    result = caseBaseElement(itemDefinition);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.LANE: {
-                Lane lane = (Lane)theEObject;
-                T result = caseLane(lane);
-                if (result == null)
-                    result = caseBaseElement(lane);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.LANE_SET: {
-                LaneSet laneSet = (LaneSet)theEObject;
-                T result = caseLaneSet(laneSet);
-                if (result == null)
-                    result = caseBaseElement(laneSet);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.LINK_EVENT_DEFINITION: {
-                LinkEventDefinition linkEventDefinition = (LinkEventDefinition)theEObject;
-                T result = caseLinkEventDefinition(linkEventDefinition);
-                if (result == null)
-                    result = caseEventDefinition(linkEventDefinition);
-                if (result == null)
-                    result = caseRootElement(linkEventDefinition);
-                if (result == null)
-                    result = caseBaseElement(linkEventDefinition);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.LOOP_CHARACTERISTICS: {
-                LoopCharacteristics loopCharacteristics = (LoopCharacteristics)theEObject;
-                T result = caseLoopCharacteristics(loopCharacteristics);
-                if (result == null)
-                    result = caseBaseElement(loopCharacteristics);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.MANUAL_TASK: {
-                ManualTask manualTask = (ManualTask)theEObject;
-                T result = caseManualTask(manualTask);
-                if (result == null)
-                    result = caseTask(manualTask);
-                if (result == null)
-                    result = caseActivity(manualTask);
-                if (result == null)
-                    result = caseInteractionNode(manualTask);
-                if (result == null)
-                    result = caseFlowNode(manualTask);
-                if (result == null)
-                    result = caseFlowElement(manualTask);
-                if (result == null)
-                    result = caseBaseElement(manualTask);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.MESSAGE: {
-                Message message = (Message)theEObject;
-                T result = caseMessage(message);
-                if (result == null)
-                    result = caseRootElement(message);
-                if (result == null)
-                    result = caseBaseElement(message);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.MESSAGE_EVENT_DEFINITION: {
-                MessageEventDefinition messageEventDefinition = (MessageEventDefinition)theEObject;
-                T result = caseMessageEventDefinition(messageEventDefinition);
-                if (result == null)
-                    result = caseEventDefinition(messageEventDefinition);
-                if (result == null)
-                    result = caseRootElement(messageEventDefinition);
-                if (result == null)
-                    result = caseBaseElement(messageEventDefinition);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.MESSAGE_FLOW: {
-                MessageFlow messageFlow = (MessageFlow)theEObject;
-                T result = caseMessageFlow(messageFlow);
-                if (result == null)
-                    result = caseBaseElement(messageFlow);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.MESSAGE_FLOW_ASSOCIATION: {
-                MessageFlowAssociation messageFlowAssociation = (MessageFlowAssociation)theEObject;
-                T result = caseMessageFlowAssociation(messageFlowAssociation);
-                if (result == null)
-                    result = caseBaseElement(messageFlowAssociation);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.MONITORING: {
-                Monitoring monitoring = (Monitoring)theEObject;
-                T result = caseMonitoring(monitoring);
-                if (result == null)
-                    result = caseBaseElement(monitoring);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS: {
-                MultiInstanceLoopCharacteristics multiInstanceLoopCharacteristics = (MultiInstanceLoopCharacteristics)theEObject;
-                T result = caseMultiInstanceLoopCharacteristics(multiInstanceLoopCharacteristics);
-                if (result == null)
-                    result = caseLoopCharacteristics(multiInstanceLoopCharacteristics);
-                if (result == null)
-                    result = caseBaseElement(multiInstanceLoopCharacteristics);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.OPERATION: {
-                Operation operation = (Operation)theEObject;
-                T result = caseOperation(operation);
-                if (result == null)
-                    result = caseBaseElement(operation);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.OUTPUT_SET: {
-                OutputSet outputSet = (OutputSet)theEObject;
-                T result = caseOutputSet(outputSet);
-                if (result == null)
-                    result = caseBaseElement(outputSet);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.PARALLEL_GATEWAY: {
-                ParallelGateway parallelGateway = (ParallelGateway)theEObject;
-                T result = caseParallelGateway(parallelGateway);
-                if (result == null)
-                    result = caseGateway(parallelGateway);
-                if (result == null)
-                    result = caseFlowNode(parallelGateway);
-                if (result == null)
-                    result = caseFlowElement(parallelGateway);
-                if (result == null)
-                    result = caseBaseElement(parallelGateway);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.PARTICIPANT: {
-                Participant participant = (Participant)theEObject;
-                T result = caseParticipant(participant);
-                if (result == null)
-                    result = caseBaseElement(participant);
-                if (result == null)
-                    result = caseInteractionNode(participant);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.PARTICIPANT_ASSOCIATION: {
-                ParticipantAssociation participantAssociation = (ParticipantAssociation)theEObject;
-                T result = caseParticipantAssociation(participantAssociation);
-                if (result == null)
-                    result = caseBaseElement(participantAssociation);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.PARTICIPANT_MULTIPLICITY: {
-                ParticipantMultiplicity participantMultiplicity = (ParticipantMultiplicity)theEObject;
-                T result = caseParticipantMultiplicity(participantMultiplicity);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.PARTNER_ENTITY: {
-                PartnerEntity partnerEntity = (PartnerEntity)theEObject;
-                T result = casePartnerEntity(partnerEntity);
-                if (result == null)
-                    result = caseRootElement(partnerEntity);
-                if (result == null)
-                    result = caseBaseElement(partnerEntity);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.PARTNER_ROLE: {
-                PartnerRole partnerRole = (PartnerRole)theEObject;
-                T result = casePartnerRole(partnerRole);
-                if (result == null)
-                    result = caseRootElement(partnerRole);
-                if (result == null)
-                    result = caseBaseElement(partnerRole);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.PERFORMER: {
-                Performer performer = (Performer)theEObject;
-                T result = casePerformer(performer);
-                if (result == null)
-                    result = caseResourceRole(performer);
-                if (result == null)
-                    result = caseBaseElement(performer);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.POTENTIAL_OWNER: {
-                PotentialOwner potentialOwner = (PotentialOwner)theEObject;
-                T result = casePotentialOwner(potentialOwner);
-                if (result == null)
-                    result = caseHumanPerformer(potentialOwner);
-                if (result == null)
-                    result = casePerformer(potentialOwner);
-                if (result == null)
-                    result = caseResourceRole(potentialOwner);
-                if (result == null)
-                    result = caseBaseElement(potentialOwner);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.PROCESS: {
-                org.eclipse.bpmn2.Process process = (org.eclipse.bpmn2.Process)theEObject;
-                T result = caseProcess(process);
-                if (result == null)
-                    result = caseCallableElement(process);
-                if (result == null)
-                    result = caseFlowElementsContainer(process);
-                if (result == null)
-                    result = caseRootElement(process);
-                if (result == null)
-                    result = caseBaseElement(process);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.PROPERTY: {
-                Property property = (Property)theEObject;
-                T result = caseProperty(property);
-                if (result == null)
-                    result = caseItemAwareElement(property);
-                if (result == null)
-                    result = caseBaseElement(property);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.RECEIVE_TASK: {
-                ReceiveTask receiveTask = (ReceiveTask)theEObject;
-                T result = caseReceiveTask(receiveTask);
-                if (result == null)
-                    result = caseTask(receiveTask);
-                if (result == null)
-                    result = caseActivity(receiveTask);
-                if (result == null)
-                    result = caseInteractionNode(receiveTask);
-                if (result == null)
-                    result = caseFlowNode(receiveTask);
-                if (result == null)
-                    result = caseFlowElement(receiveTask);
-                if (result == null)
-                    result = caseBaseElement(receiveTask);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.RELATIONSHIP: {
-                Relationship relationship = (Relationship)theEObject;
-                T result = caseRelationship(relationship);
-                if (result == null)
-                    result = caseBaseElement(relationship);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.RENDERING: {
-                Rendering rendering = (Rendering)theEObject;
-                T result = caseRendering(rendering);
-                if (result == null)
-                    result = caseBaseElement(rendering);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.RESOURCE: {
-                Resource resource = (Resource)theEObject;
-                T result = caseResource(resource);
-                if (result == null)
-                    result = caseRootElement(resource);
-                if (result == null)
-                    result = caseBaseElement(resource);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION: {
-                ResourceAssignmentExpression resourceAssignmentExpression = (ResourceAssignmentExpression)theEObject;
-                T result = caseResourceAssignmentExpression(resourceAssignmentExpression);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.RESOURCE_PARAMETER: {
-                ResourceParameter resourceParameter = (ResourceParameter)theEObject;
-                T result = caseResourceParameter(resourceParameter);
-                if (result == null)
-                    result = caseBaseElement(resourceParameter);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.RESOURCE_PARAMETER_BINDING: {
-                ResourceParameterBinding resourceParameterBinding = (ResourceParameterBinding)theEObject;
-                T result = caseResourceParameterBinding(resourceParameterBinding);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.RESOURCE_ROLE: {
-                ResourceRole resourceRole = (ResourceRole)theEObject;
-                T result = caseResourceRole(resourceRole);
-                if (result == null)
-                    result = caseBaseElement(resourceRole);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.ROOT_ELEMENT: {
-                RootElement rootElement = (RootElement)theEObject;
-                T result = caseRootElement(rootElement);
-                if (result == null)
-                    result = caseBaseElement(rootElement);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.SCRIPT_TASK: {
-                ScriptTask scriptTask = (ScriptTask)theEObject;
-                T result = caseScriptTask(scriptTask);
-                if (result == null)
-                    result = caseTask(scriptTask);
-                if (result == null)
-                    result = caseActivity(scriptTask);
-                if (result == null)
-                    result = caseInteractionNode(scriptTask);
-                if (result == null)
-                    result = caseFlowNode(scriptTask);
-                if (result == null)
-                    result = caseFlowElement(scriptTask);
-                if (result == null)
-                    result = caseBaseElement(scriptTask);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.SEND_TASK: {
-                SendTask sendTask = (SendTask)theEObject;
-                T result = caseSendTask(sendTask);
-                if (result == null)
-                    result = caseTask(sendTask);
-                if (result == null)
-                    result = caseActivity(sendTask);
-                if (result == null)
-                    result = caseInteractionNode(sendTask);
-                if (result == null)
-                    result = caseFlowNode(sendTask);
-                if (result == null)
-                    result = caseFlowElement(sendTask);
-                if (result == null)
-                    result = caseBaseElement(sendTask);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.SEQUENCE_FLOW: {
-                SequenceFlow sequenceFlow = (SequenceFlow)theEObject;
-                T result = caseSequenceFlow(sequenceFlow);
-                if (result == null)
-                    result = caseFlowElement(sequenceFlow);
-                if (result == null)
-                    result = caseBaseElement(sequenceFlow);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.SERVICE_TASK: {
-                ServiceTask serviceTask = (ServiceTask)theEObject;
-                T result = caseServiceTask(serviceTask);
-                if (result == null)
-                    result = caseTask(serviceTask);
-                if (result == null)
-                    result = caseActivity(serviceTask);
-                if (result == null)
-                    result = caseInteractionNode(serviceTask);
-                if (result == null)
-                    result = caseFlowNode(serviceTask);
-                if (result == null)
-                    result = caseFlowElement(serviceTask);
-                if (result == null)
-                    result = caseBaseElement(serviceTask);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.SIGNAL: {
-                Signal signal = (Signal)theEObject;
-                T result = caseSignal(signal);
-                if (result == null)
-                    result = caseRootElement(signal);
-                if (result == null)
-                    result = caseBaseElement(signal);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.SIGNAL_EVENT_DEFINITION: {
-                SignalEventDefinition signalEventDefinition = (SignalEventDefinition)theEObject;
-                T result = caseSignalEventDefinition(signalEventDefinition);
-                if (result == null)
-                    result = caseEventDefinition(signalEventDefinition);
-                if (result == null)
-                    result = caseRootElement(signalEventDefinition);
-                if (result == null)
-                    result = caseBaseElement(signalEventDefinition);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS: {
-                StandardLoopCharacteristics standardLoopCharacteristics = (StandardLoopCharacteristics)theEObject;
-                T result = caseStandardLoopCharacteristics(standardLoopCharacteristics);
-                if (result == null)
-                    result = caseLoopCharacteristics(standardLoopCharacteristics);
-                if (result == null)
-                    result = caseBaseElement(standardLoopCharacteristics);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.START_EVENT: {
-                StartEvent startEvent = (StartEvent)theEObject;
-                T result = caseStartEvent(startEvent);
-                if (result == null)
-                    result = caseCatchEvent(startEvent);
-                if (result == null)
-                    result = caseEvent(startEvent);
-                if (result == null)
-                    result = caseFlowNode(startEvent);
-                if (result == null)
-                    result = caseInteractionNode(startEvent);
-                if (result == null)
-                    result = caseFlowElement(startEvent);
-                if (result == null)
-                    result = caseBaseElement(startEvent);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.SUB_CHOREOGRAPHY: {
-                SubChoreography subChoreography = (SubChoreography)theEObject;
-                T result = caseSubChoreography(subChoreography);
-                if (result == null)
-                    result = caseChoreographyActivity(subChoreography);
-                if (result == null)
-                    result = caseFlowElementsContainer(subChoreography);
-                if (result == null)
-                    result = caseFlowNode(subChoreography);
-                if (result == null)
-                    result = caseFlowElement(subChoreography);
-                if (result == null)
-                    result = caseBaseElement(subChoreography);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.SUB_CONVERSATION: {
-                SubConversation subConversation = (SubConversation)theEObject;
-                T result = caseSubConversation(subConversation);
-                if (result == null)
-                    result = caseConversationNode(subConversation);
-                if (result == null)
-                    result = caseBaseElement(subConversation);
-                if (result == null)
-                    result = caseInteractionNode(subConversation);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.SUB_PROCESS: {
-                SubProcess subProcess = (SubProcess)theEObject;
-                T result = caseSubProcess(subProcess);
-                if (result == null)
-                    result = caseActivity(subProcess);
-                if (result == null)
-                    result = caseFlowElementsContainer(subProcess);
-                if (result == null)
-                    result = caseFlowNode(subProcess);
-                if (result == null)
-                    result = caseFlowElement(subProcess);
-                if (result == null)
-                    result = caseBaseElement(subProcess);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.TASK: {
-                Task task = (Task)theEObject;
-                T result = caseTask(task);
-                if (result == null)
-                    result = caseActivity(task);
-                if (result == null)
-                    result = caseInteractionNode(task);
-                if (result == null)
-                    result = caseFlowNode(task);
-                if (result == null)
-                    result = caseFlowElement(task);
-                if (result == null)
-                    result = caseBaseElement(task);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.TERMINATE_EVENT_DEFINITION: {
-                TerminateEventDefinition terminateEventDefinition = (TerminateEventDefinition)theEObject;
-                T result = caseTerminateEventDefinition(terminateEventDefinition);
-                if (result == null)
-                    result = caseEventDefinition(terminateEventDefinition);
-                if (result == null)
-                    result = caseRootElement(terminateEventDefinition);
-                if (result == null)
-                    result = caseBaseElement(terminateEventDefinition);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.TEXT_ANNOTATION: {
-                TextAnnotation textAnnotation = (TextAnnotation)theEObject;
-                T result = caseTextAnnotation(textAnnotation);
-                if (result == null)
-                    result = caseArtifact(textAnnotation);
-                if (result == null)
-                    result = caseBaseElement(textAnnotation);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.THROW_EVENT: {
-                ThrowEvent throwEvent = (ThrowEvent)theEObject;
-                T result = caseThrowEvent(throwEvent);
-                if (result == null)
-                    result = caseEvent(throwEvent);
-                if (result == null)
-                    result = caseFlowNode(throwEvent);
-                if (result == null)
-                    result = caseInteractionNode(throwEvent);
-                if (result == null)
-                    result = caseFlowElement(throwEvent);
-                if (result == null)
-                    result = caseBaseElement(throwEvent);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.TIMER_EVENT_DEFINITION: {
-                TimerEventDefinition timerEventDefinition = (TimerEventDefinition)theEObject;
-                T result = caseTimerEventDefinition(timerEventDefinition);
-                if (result == null)
-                    result = caseEventDefinition(timerEventDefinition);
-                if (result == null)
-                    result = caseRootElement(timerEventDefinition);
-                if (result == null)
-                    result = caseBaseElement(timerEventDefinition);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.TRANSACTION: {
-                Transaction transaction = (Transaction)theEObject;
-                T result = caseTransaction(transaction);
-                if (result == null)
-                    result = caseSubProcess(transaction);
-                if (result == null)
-                    result = caseActivity(transaction);
-                if (result == null)
-                    result = caseFlowElementsContainer(transaction);
-                if (result == null)
-                    result = caseFlowNode(transaction);
-                if (result == null)
-                    result = caseFlowElement(transaction);
-                if (result == null)
-                    result = caseBaseElement(transaction);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case Bpmn2Package.USER_TASK: {
-                UserTask userTask = (UserTask)theEObject;
-                T result = caseUserTask(userTask);
-                if (result == null)
-                    result = caseTask(userTask);
-                if (result == null)
-                    result = caseActivity(userTask);
-                if (result == null)
-                    result = caseInteractionNode(userTask);
-                if (result == null)
-                    result = caseFlowNode(userTask);
-                if (result == null)
-                    result = caseFlowElement(userTask);
-                if (result == null)
-                    result = caseBaseElement(userTask);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            default:
-                return defaultCase(theEObject);
+        case Bpmn2Package.DOCUMENT_ROOT: {
+            DocumentRoot documentRoot = (DocumentRoot) theEObject;
+            T result = caseDocumentRoot(documentRoot);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.ACTIVITY: {
+            Activity activity = (Activity) theEObject;
+            T result = caseActivity(activity);
+            if (result == null)
+                result = caseFlowNode(activity);
+            if (result == null)
+                result = caseFlowElement(activity);
+            if (result == null)
+                result = caseBaseElement(activity);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.AD_HOC_SUB_PROCESS: {
+            AdHocSubProcess adHocSubProcess = (AdHocSubProcess) theEObject;
+            T result = caseAdHocSubProcess(adHocSubProcess);
+            if (result == null)
+                result = caseSubProcess(adHocSubProcess);
+            if (result == null)
+                result = caseActivity(adHocSubProcess);
+            if (result == null)
+                result = caseFlowElementsContainer(adHocSubProcess);
+            if (result == null)
+                result = caseFlowNode(adHocSubProcess);
+            if (result == null)
+                result = caseFlowElement(adHocSubProcess);
+            if (result == null)
+                result = caseBaseElement(adHocSubProcess);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.ARTIFACT: {
+            Artifact artifact = (Artifact) theEObject;
+            T result = caseArtifact(artifact);
+            if (result == null)
+                result = caseBaseElement(artifact);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.ASSIGNMENT: {
+            Assignment assignment = (Assignment) theEObject;
+            T result = caseAssignment(assignment);
+            if (result == null)
+                result = caseBaseElement(assignment);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.ASSOCIATION: {
+            Association association = (Association) theEObject;
+            T result = caseAssociation(association);
+            if (result == null)
+                result = caseArtifact(association);
+            if (result == null)
+                result = caseBaseElement(association);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.AUDITING: {
+            Auditing auditing = (Auditing) theEObject;
+            T result = caseAuditing(auditing);
+            if (result == null)
+                result = caseBaseElement(auditing);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.BASE_ELEMENT: {
+            BaseElement baseElement = (BaseElement) theEObject;
+            T result = caseBaseElement(baseElement);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.BOUNDARY_EVENT: {
+            BoundaryEvent boundaryEvent = (BoundaryEvent) theEObject;
+            T result = caseBoundaryEvent(boundaryEvent);
+            if (result == null)
+                result = caseCatchEvent(boundaryEvent);
+            if (result == null)
+                result = caseEvent(boundaryEvent);
+            if (result == null)
+                result = caseFlowNode(boundaryEvent);
+            if (result == null)
+                result = caseInteractionNode(boundaryEvent);
+            if (result == null)
+                result = caseFlowElement(boundaryEvent);
+            if (result == null)
+                result = caseBaseElement(boundaryEvent);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.BUSINESS_RULE_TASK: {
+            BusinessRuleTask businessRuleTask = (BusinessRuleTask) theEObject;
+            T result = caseBusinessRuleTask(businessRuleTask);
+            if (result == null)
+                result = caseTask(businessRuleTask);
+            if (result == null)
+                result = caseActivity(businessRuleTask);
+            if (result == null)
+                result = caseInteractionNode(businessRuleTask);
+            if (result == null)
+                result = caseFlowNode(businessRuleTask);
+            if (result == null)
+                result = caseFlowElement(businessRuleTask);
+            if (result == null)
+                result = caseBaseElement(businessRuleTask);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.CALL_ACTIVITY: {
+            CallActivity callActivity = (CallActivity) theEObject;
+            T result = caseCallActivity(callActivity);
+            if (result == null)
+                result = caseActivity(callActivity);
+            if (result == null)
+                result = caseFlowNode(callActivity);
+            if (result == null)
+                result = caseFlowElement(callActivity);
+            if (result == null)
+                result = caseBaseElement(callActivity);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.CALL_CHOREOGRAPHY: {
+            CallChoreography callChoreography = (CallChoreography) theEObject;
+            T result = caseCallChoreography(callChoreography);
+            if (result == null)
+                result = caseChoreographyActivity(callChoreography);
+            if (result == null)
+                result = caseFlowNode(callChoreography);
+            if (result == null)
+                result = caseFlowElement(callChoreography);
+            if (result == null)
+                result = caseBaseElement(callChoreography);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.CALL_CONVERSATION: {
+            CallConversation callConversation = (CallConversation) theEObject;
+            T result = caseCallConversation(callConversation);
+            if (result == null)
+                result = caseConversationNode(callConversation);
+            if (result == null)
+                result = caseBaseElement(callConversation);
+            if (result == null)
+                result = caseInteractionNode(callConversation);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.CALLABLE_ELEMENT: {
+            CallableElement callableElement = (CallableElement) theEObject;
+            T result = caseCallableElement(callableElement);
+            if (result == null)
+                result = caseRootElement(callableElement);
+            if (result == null)
+                result = caseBaseElement(callableElement);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.CANCEL_EVENT_DEFINITION: {
+            CancelEventDefinition cancelEventDefinition = (CancelEventDefinition) theEObject;
+            T result = caseCancelEventDefinition(cancelEventDefinition);
+            if (result == null)
+                result = caseEventDefinition(cancelEventDefinition);
+            if (result == null)
+                result = caseRootElement(cancelEventDefinition);
+            if (result == null)
+                result = caseBaseElement(cancelEventDefinition);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.CATCH_EVENT: {
+            CatchEvent catchEvent = (CatchEvent) theEObject;
+            T result = caseCatchEvent(catchEvent);
+            if (result == null)
+                result = caseEvent(catchEvent);
+            if (result == null)
+                result = caseFlowNode(catchEvent);
+            if (result == null)
+                result = caseInteractionNode(catchEvent);
+            if (result == null)
+                result = caseFlowElement(catchEvent);
+            if (result == null)
+                result = caseBaseElement(catchEvent);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.CATEGORY: {
+            Category category = (Category) theEObject;
+            T result = caseCategory(category);
+            if (result == null)
+                result = caseRootElement(category);
+            if (result == null)
+                result = caseBaseElement(category);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.CATEGORY_VALUE: {
+            CategoryValue categoryValue = (CategoryValue) theEObject;
+            T result = caseCategoryValue(categoryValue);
+            if (result == null)
+                result = caseBaseElement(categoryValue);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.CHOREOGRAPHY: {
+            Choreography choreography = (Choreography) theEObject;
+            T result = caseChoreography(choreography);
+            if (result == null)
+                result = caseCollaboration(choreography);
+            if (result == null)
+                result = caseFlowElementsContainer(choreography);
+            if (result == null)
+                result = caseRootElement(choreography);
+            if (result == null)
+                result = caseBaseElement(choreography);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.CHOREOGRAPHY_ACTIVITY: {
+            ChoreographyActivity choreographyActivity = (ChoreographyActivity) theEObject;
+            T result = caseChoreographyActivity(choreographyActivity);
+            if (result == null)
+                result = caseFlowNode(choreographyActivity);
+            if (result == null)
+                result = caseFlowElement(choreographyActivity);
+            if (result == null)
+                result = caseBaseElement(choreographyActivity);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.CHOREOGRAPHY_TASK: {
+            ChoreographyTask choreographyTask = (ChoreographyTask) theEObject;
+            T result = caseChoreographyTask(choreographyTask);
+            if (result == null)
+                result = caseChoreographyActivity(choreographyTask);
+            if (result == null)
+                result = caseFlowNode(choreographyTask);
+            if (result == null)
+                result = caseFlowElement(choreographyTask);
+            if (result == null)
+                result = caseBaseElement(choreographyTask);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.COLLABORATION: {
+            Collaboration collaboration = (Collaboration) theEObject;
+            T result = caseCollaboration(collaboration);
+            if (result == null)
+                result = caseRootElement(collaboration);
+            if (result == null)
+                result = caseBaseElement(collaboration);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.COMPENSATE_EVENT_DEFINITION: {
+            CompensateEventDefinition compensateEventDefinition = (CompensateEventDefinition) theEObject;
+            T result = caseCompensateEventDefinition(compensateEventDefinition);
+            if (result == null)
+                result = caseEventDefinition(compensateEventDefinition);
+            if (result == null)
+                result = caseRootElement(compensateEventDefinition);
+            if (result == null)
+                result = caseBaseElement(compensateEventDefinition);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION: {
+            ComplexBehaviorDefinition complexBehaviorDefinition = (ComplexBehaviorDefinition) theEObject;
+            T result = caseComplexBehaviorDefinition(complexBehaviorDefinition);
+            if (result == null)
+                result = caseBaseElement(complexBehaviorDefinition);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.COMPLEX_GATEWAY: {
+            ComplexGateway complexGateway = (ComplexGateway) theEObject;
+            T result = caseComplexGateway(complexGateway);
+            if (result == null)
+                result = caseGateway(complexGateway);
+            if (result == null)
+                result = caseFlowNode(complexGateway);
+            if (result == null)
+                result = caseFlowElement(complexGateway);
+            if (result == null)
+                result = caseBaseElement(complexGateway);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.CONDITIONAL_EVENT_DEFINITION: {
+            ConditionalEventDefinition conditionalEventDefinition = (ConditionalEventDefinition) theEObject;
+            T result = caseConditionalEventDefinition(conditionalEventDefinition);
+            if (result == null)
+                result = caseEventDefinition(conditionalEventDefinition);
+            if (result == null)
+                result = caseRootElement(conditionalEventDefinition);
+            if (result == null)
+                result = caseBaseElement(conditionalEventDefinition);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.CONVERSATION: {
+            Conversation conversation = (Conversation) theEObject;
+            T result = caseConversation(conversation);
+            if (result == null)
+                result = caseConversationNode(conversation);
+            if (result == null)
+                result = caseBaseElement(conversation);
+            if (result == null)
+                result = caseInteractionNode(conversation);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.CONVERSATION_ASSOCIATION: {
+            ConversationAssociation conversationAssociation = (ConversationAssociation) theEObject;
+            T result = caseConversationAssociation(conversationAssociation);
+            if (result == null)
+                result = caseBaseElement(conversationAssociation);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.CONVERSATION_LINK: {
+            ConversationLink conversationLink = (ConversationLink) theEObject;
+            T result = caseConversationLink(conversationLink);
+            if (result == null)
+                result = caseBaseElement(conversationLink);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.CONVERSATION_NODE: {
+            ConversationNode conversationNode = (ConversationNode) theEObject;
+            T result = caseConversationNode(conversationNode);
+            if (result == null)
+                result = caseBaseElement(conversationNode);
+            if (result == null)
+                result = caseInteractionNode(conversationNode);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.CORRELATION_KEY: {
+            CorrelationKey correlationKey = (CorrelationKey) theEObject;
+            T result = caseCorrelationKey(correlationKey);
+            if (result == null)
+                result = caseBaseElement(correlationKey);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.CORRELATION_PROPERTY: {
+            CorrelationProperty correlationProperty = (CorrelationProperty) theEObject;
+            T result = caseCorrelationProperty(correlationProperty);
+            if (result == null)
+                result = caseRootElement(correlationProperty);
+            if (result == null)
+                result = caseBaseElement(correlationProperty);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.CORRELATION_PROPERTY_BINDING: {
+            CorrelationPropertyBinding correlationPropertyBinding = (CorrelationPropertyBinding) theEObject;
+            T result = caseCorrelationPropertyBinding(correlationPropertyBinding);
+            if (result == null)
+                result = caseBaseElement(correlationPropertyBinding);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION: {
+            CorrelationPropertyRetrievalExpression correlationPropertyRetrievalExpression = (CorrelationPropertyRetrievalExpression) theEObject;
+            T result = caseCorrelationPropertyRetrievalExpression(correlationPropertyRetrievalExpression);
+            if (result == null)
+                result = caseBaseElement(correlationPropertyRetrievalExpression);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.CORRELATION_SUBSCRIPTION: {
+            CorrelationSubscription correlationSubscription = (CorrelationSubscription) theEObject;
+            T result = caseCorrelationSubscription(correlationSubscription);
+            if (result == null)
+                result = caseBaseElement(correlationSubscription);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.DATA_ASSOCIATION: {
+            DataAssociation dataAssociation = (DataAssociation) theEObject;
+            T result = caseDataAssociation(dataAssociation);
+            if (result == null)
+                result = caseBaseElement(dataAssociation);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.DATA_INPUT: {
+            DataInput dataInput = (DataInput) theEObject;
+            T result = caseDataInput(dataInput);
+            if (result == null)
+                result = caseItemAwareElement(dataInput);
+            if (result == null)
+                result = caseBaseElement(dataInput);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.DATA_INPUT_ASSOCIATION: {
+            DataInputAssociation dataInputAssociation = (DataInputAssociation) theEObject;
+            T result = caseDataInputAssociation(dataInputAssociation);
+            if (result == null)
+                result = caseDataAssociation(dataInputAssociation);
+            if (result == null)
+                result = caseBaseElement(dataInputAssociation);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.DATA_OBJECT: {
+            DataObject dataObject = (DataObject) theEObject;
+            T result = caseDataObject(dataObject);
+            if (result == null)
+                result = caseFlowElement(dataObject);
+            if (result == null)
+                result = caseItemAwareElement(dataObject);
+            if (result == null)
+                result = caseBaseElement(dataObject);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.DATA_OBJECT_REFERENCE: {
+            DataObjectReference dataObjectReference = (DataObjectReference) theEObject;
+            T result = caseDataObjectReference(dataObjectReference);
+            if (result == null)
+                result = caseFlowElement(dataObjectReference);
+            if (result == null)
+                result = caseItemAwareElement(dataObjectReference);
+            if (result == null)
+                result = caseBaseElement(dataObjectReference);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.DATA_OUTPUT: {
+            DataOutput dataOutput = (DataOutput) theEObject;
+            T result = caseDataOutput(dataOutput);
+            if (result == null)
+                result = caseItemAwareElement(dataOutput);
+            if (result == null)
+                result = caseBaseElement(dataOutput);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.DATA_OUTPUT_ASSOCIATION: {
+            DataOutputAssociation dataOutputAssociation = (DataOutputAssociation) theEObject;
+            T result = caseDataOutputAssociation(dataOutputAssociation);
+            if (result == null)
+                result = caseDataAssociation(dataOutputAssociation);
+            if (result == null)
+                result = caseBaseElement(dataOutputAssociation);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.DATA_STATE: {
+            DataState dataState = (DataState) theEObject;
+            T result = caseDataState(dataState);
+            if (result == null)
+                result = caseBaseElement(dataState);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.DATA_STORE: {
+            DataStore dataStore = (DataStore) theEObject;
+            T result = caseDataStore(dataStore);
+            if (result == null)
+                result = caseItemAwareElement(dataStore);
+            if (result == null)
+                result = caseRootElement(dataStore);
+            if (result == null)
+                result = caseBaseElement(dataStore);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.DATA_STORE_REFERENCE: {
+            DataStoreReference dataStoreReference = (DataStoreReference) theEObject;
+            T result = caseDataStoreReference(dataStoreReference);
+            if (result == null)
+                result = caseFlowElement(dataStoreReference);
+            if (result == null)
+                result = caseItemAwareElement(dataStoreReference);
+            if (result == null)
+                result = caseBaseElement(dataStoreReference);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.DEFINITIONS: {
+            Definitions definitions = (Definitions) theEObject;
+            T result = caseDefinitions(definitions);
+            if (result == null)
+                result = caseBaseElement(definitions);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.DOCUMENTATION: {
+            Documentation documentation = (Documentation) theEObject;
+            T result = caseDocumentation(documentation);
+            if (result == null)
+                result = caseBaseElement(documentation);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.END_EVENT: {
+            EndEvent endEvent = (EndEvent) theEObject;
+            T result = caseEndEvent(endEvent);
+            if (result == null)
+                result = caseThrowEvent(endEvent);
+            if (result == null)
+                result = caseEvent(endEvent);
+            if (result == null)
+                result = caseFlowNode(endEvent);
+            if (result == null)
+                result = caseInteractionNode(endEvent);
+            if (result == null)
+                result = caseFlowElement(endEvent);
+            if (result == null)
+                result = caseBaseElement(endEvent);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.END_POINT: {
+            EndPoint endPoint = (EndPoint) theEObject;
+            T result = caseEndPoint(endPoint);
+            if (result == null)
+                result = caseRootElement(endPoint);
+            if (result == null)
+                result = caseBaseElement(endPoint);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.ERROR: {
+            org.eclipse.bpmn2.Error error = (org.eclipse.bpmn2.Error) theEObject;
+            T result = caseError(error);
+            if (result == null)
+                result = caseRootElement(error);
+            if (result == null)
+                result = caseBaseElement(error);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.ERROR_EVENT_DEFINITION: {
+            ErrorEventDefinition errorEventDefinition = (ErrorEventDefinition) theEObject;
+            T result = caseErrorEventDefinition(errorEventDefinition);
+            if (result == null)
+                result = caseEventDefinition(errorEventDefinition);
+            if (result == null)
+                result = caseRootElement(errorEventDefinition);
+            if (result == null)
+                result = caseBaseElement(errorEventDefinition);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.ESCALATION: {
+            Escalation escalation = (Escalation) theEObject;
+            T result = caseEscalation(escalation);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.ESCALATION_EVENT_DEFINITION: {
+            EscalationEventDefinition escalationEventDefinition = (EscalationEventDefinition) theEObject;
+            T result = caseEscalationEventDefinition(escalationEventDefinition);
+            if (result == null)
+                result = caseEventDefinition(escalationEventDefinition);
+            if (result == null)
+                result = caseRootElement(escalationEventDefinition);
+            if (result == null)
+                result = caseBaseElement(escalationEventDefinition);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.EVENT: {
+            Event event = (Event) theEObject;
+            T result = caseEvent(event);
+            if (result == null)
+                result = caseFlowNode(event);
+            if (result == null)
+                result = caseInteractionNode(event);
+            if (result == null)
+                result = caseFlowElement(event);
+            if (result == null)
+                result = caseBaseElement(event);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.EVENT_BASED_GATEWAY: {
+            EventBasedGateway eventBasedGateway = (EventBasedGateway) theEObject;
+            T result = caseEventBasedGateway(eventBasedGateway);
+            if (result == null)
+                result = caseGateway(eventBasedGateway);
+            if (result == null)
+                result = caseFlowNode(eventBasedGateway);
+            if (result == null)
+                result = caseFlowElement(eventBasedGateway);
+            if (result == null)
+                result = caseBaseElement(eventBasedGateway);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.EVENT_DEFINITION: {
+            EventDefinition eventDefinition = (EventDefinition) theEObject;
+            T result = caseEventDefinition(eventDefinition);
+            if (result == null)
+                result = caseRootElement(eventDefinition);
+            if (result == null)
+                result = caseBaseElement(eventDefinition);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.EXCLUSIVE_GATEWAY: {
+            ExclusiveGateway exclusiveGateway = (ExclusiveGateway) theEObject;
+            T result = caseExclusiveGateway(exclusiveGateway);
+            if (result == null)
+                result = caseGateway(exclusiveGateway);
+            if (result == null)
+                result = caseFlowNode(exclusiveGateway);
+            if (result == null)
+                result = caseFlowElement(exclusiveGateway);
+            if (result == null)
+                result = caseBaseElement(exclusiveGateway);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.EXPRESSION: {
+            Expression expression = (Expression) theEObject;
+            T result = caseExpression(expression);
+            if (result == null)
+                result = caseBaseElement(expression);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.EXTENSION: {
+            Extension extension = (Extension) theEObject;
+            T result = caseExtension(extension);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION: {
+            ExtensionAttributeDefinition extensionAttributeDefinition = (ExtensionAttributeDefinition) theEObject;
+            T result = caseExtensionAttributeDefinition(extensionAttributeDefinition);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE: {
+            ExtensionAttributeValue extensionAttributeValue = (ExtensionAttributeValue) theEObject;
+            T result = caseExtensionAttributeValue(extensionAttributeValue);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.EXTENSION_DEFINITION: {
+            ExtensionDefinition extensionDefinition = (ExtensionDefinition) theEObject;
+            T result = caseExtensionDefinition(extensionDefinition);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.FLOW_ELEMENT: {
+            FlowElement flowElement = (FlowElement) theEObject;
+            T result = caseFlowElement(flowElement);
+            if (result == null)
+                result = caseBaseElement(flowElement);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.FLOW_ELEMENTS_CONTAINER: {
+            FlowElementsContainer flowElementsContainer = (FlowElementsContainer) theEObject;
+            T result = caseFlowElementsContainer(flowElementsContainer);
+            if (result == null)
+                result = caseBaseElement(flowElementsContainer);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.FLOW_NODE: {
+            FlowNode flowNode = (FlowNode) theEObject;
+            T result = caseFlowNode(flowNode);
+            if (result == null)
+                result = caseFlowElement(flowNode);
+            if (result == null)
+                result = caseBaseElement(flowNode);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.FORMAL_EXPRESSION: {
+            FormalExpression formalExpression = (FormalExpression) theEObject;
+            T result = caseFormalExpression(formalExpression);
+            if (result == null)
+                result = caseExpression(formalExpression);
+            if (result == null)
+                result = caseBaseElement(formalExpression);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.GATEWAY: {
+            Gateway gateway = (Gateway) theEObject;
+            T result = caseGateway(gateway);
+            if (result == null)
+                result = caseFlowNode(gateway);
+            if (result == null)
+                result = caseFlowElement(gateway);
+            if (result == null)
+                result = caseBaseElement(gateway);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.GLOBAL_BUSINESS_RULE_TASK: {
+            GlobalBusinessRuleTask globalBusinessRuleTask = (GlobalBusinessRuleTask) theEObject;
+            T result = caseGlobalBusinessRuleTask(globalBusinessRuleTask);
+            if (result == null)
+                result = caseGlobalTask(globalBusinessRuleTask);
+            if (result == null)
+                result = caseCallableElement(globalBusinessRuleTask);
+            if (result == null)
+                result = caseRootElement(globalBusinessRuleTask);
+            if (result == null)
+                result = caseBaseElement(globalBusinessRuleTask);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.GLOBAL_CHOREOGRAPHY_TASK: {
+            GlobalChoreographyTask globalChoreographyTask = (GlobalChoreographyTask) theEObject;
+            T result = caseGlobalChoreographyTask(globalChoreographyTask);
+            if (result == null)
+                result = caseChoreography(globalChoreographyTask);
+            if (result == null)
+                result = caseCollaboration(globalChoreographyTask);
+            if (result == null)
+                result = caseFlowElementsContainer(globalChoreographyTask);
+            if (result == null)
+                result = caseRootElement(globalChoreographyTask);
+            if (result == null)
+                result = caseBaseElement(globalChoreographyTask);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.GLOBAL_CONVERSATION: {
+            GlobalConversation globalConversation = (GlobalConversation) theEObject;
+            T result = caseGlobalConversation(globalConversation);
+            if (result == null)
+                result = caseCollaboration(globalConversation);
+            if (result == null)
+                result = caseRootElement(globalConversation);
+            if (result == null)
+                result = caseBaseElement(globalConversation);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.GLOBAL_MANUAL_TASK: {
+            GlobalManualTask globalManualTask = (GlobalManualTask) theEObject;
+            T result = caseGlobalManualTask(globalManualTask);
+            if (result == null)
+                result = caseGlobalTask(globalManualTask);
+            if (result == null)
+                result = caseCallableElement(globalManualTask);
+            if (result == null)
+                result = caseRootElement(globalManualTask);
+            if (result == null)
+                result = caseBaseElement(globalManualTask);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.GLOBAL_SCRIPT_TASK: {
+            GlobalScriptTask globalScriptTask = (GlobalScriptTask) theEObject;
+            T result = caseGlobalScriptTask(globalScriptTask);
+            if (result == null)
+                result = caseGlobalTask(globalScriptTask);
+            if (result == null)
+                result = caseCallableElement(globalScriptTask);
+            if (result == null)
+                result = caseRootElement(globalScriptTask);
+            if (result == null)
+                result = caseBaseElement(globalScriptTask);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.GLOBAL_TASK: {
+            GlobalTask globalTask = (GlobalTask) theEObject;
+            T result = caseGlobalTask(globalTask);
+            if (result == null)
+                result = caseCallableElement(globalTask);
+            if (result == null)
+                result = caseRootElement(globalTask);
+            if (result == null)
+                result = caseBaseElement(globalTask);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.GLOBAL_USER_TASK: {
+            GlobalUserTask globalUserTask = (GlobalUserTask) theEObject;
+            T result = caseGlobalUserTask(globalUserTask);
+            if (result == null)
+                result = caseGlobalTask(globalUserTask);
+            if (result == null)
+                result = caseCallableElement(globalUserTask);
+            if (result == null)
+                result = caseRootElement(globalUserTask);
+            if (result == null)
+                result = caseBaseElement(globalUserTask);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.GROUP: {
+            Group group = (Group) theEObject;
+            T result = caseGroup(group);
+            if (result == null)
+                result = caseArtifact(group);
+            if (result == null)
+                result = caseBaseElement(group);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.HUMAN_PERFORMER: {
+            HumanPerformer humanPerformer = (HumanPerformer) theEObject;
+            T result = caseHumanPerformer(humanPerformer);
+            if (result == null)
+                result = casePerformer(humanPerformer);
+            if (result == null)
+                result = caseResourceRole(humanPerformer);
+            if (result == null)
+                result = caseBaseElement(humanPerformer);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.IMPLICIT_THROW_EVENT: {
+            ImplicitThrowEvent implicitThrowEvent = (ImplicitThrowEvent) theEObject;
+            T result = caseImplicitThrowEvent(implicitThrowEvent);
+            if (result == null)
+                result = caseThrowEvent(implicitThrowEvent);
+            if (result == null)
+                result = caseEvent(implicitThrowEvent);
+            if (result == null)
+                result = caseFlowNode(implicitThrowEvent);
+            if (result == null)
+                result = caseInteractionNode(implicitThrowEvent);
+            if (result == null)
+                result = caseFlowElement(implicitThrowEvent);
+            if (result == null)
+                result = caseBaseElement(implicitThrowEvent);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.IMPORT: {
+            Import import_ = (Import) theEObject;
+            T result = caseImport(import_);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.INCLUSIVE_GATEWAY: {
+            InclusiveGateway inclusiveGateway = (InclusiveGateway) theEObject;
+            T result = caseInclusiveGateway(inclusiveGateway);
+            if (result == null)
+                result = caseGateway(inclusiveGateway);
+            if (result == null)
+                result = caseFlowNode(inclusiveGateway);
+            if (result == null)
+                result = caseFlowElement(inclusiveGateway);
+            if (result == null)
+                result = caseBaseElement(inclusiveGateway);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.INPUT_OUTPUT_BINDING: {
+            InputOutputBinding inputOutputBinding = (InputOutputBinding) theEObject;
+            T result = caseInputOutputBinding(inputOutputBinding);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION: {
+            InputOutputSpecification inputOutputSpecification = (InputOutputSpecification) theEObject;
+            T result = caseInputOutputSpecification(inputOutputSpecification);
+            if (result == null)
+                result = caseBaseElement(inputOutputSpecification);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.INPUT_SET: {
+            InputSet inputSet = (InputSet) theEObject;
+            T result = caseInputSet(inputSet);
+            if (result == null)
+                result = caseBaseElement(inputSet);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.INTERACTION_NODE: {
+            InteractionNode interactionNode = (InteractionNode) theEObject;
+            T result = caseInteractionNode(interactionNode);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.INTERFACE: {
+            Interface interface_ = (Interface) theEObject;
+            T result = caseInterface(interface_);
+            if (result == null)
+                result = caseRootElement(interface_);
+            if (result == null)
+                result = caseBaseElement(interface_);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.INTERMEDIATE_CATCH_EVENT: {
+            IntermediateCatchEvent intermediateCatchEvent = (IntermediateCatchEvent) theEObject;
+            T result = caseIntermediateCatchEvent(intermediateCatchEvent);
+            if (result == null)
+                result = caseCatchEvent(intermediateCatchEvent);
+            if (result == null)
+                result = caseEvent(intermediateCatchEvent);
+            if (result == null)
+                result = caseFlowNode(intermediateCatchEvent);
+            if (result == null)
+                result = caseInteractionNode(intermediateCatchEvent);
+            if (result == null)
+                result = caseFlowElement(intermediateCatchEvent);
+            if (result == null)
+                result = caseBaseElement(intermediateCatchEvent);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.INTERMEDIATE_THROW_EVENT: {
+            IntermediateThrowEvent intermediateThrowEvent = (IntermediateThrowEvent) theEObject;
+            T result = caseIntermediateThrowEvent(intermediateThrowEvent);
+            if (result == null)
+                result = caseThrowEvent(intermediateThrowEvent);
+            if (result == null)
+                result = caseEvent(intermediateThrowEvent);
+            if (result == null)
+                result = caseFlowNode(intermediateThrowEvent);
+            if (result == null)
+                result = caseInteractionNode(intermediateThrowEvent);
+            if (result == null)
+                result = caseFlowElement(intermediateThrowEvent);
+            if (result == null)
+                result = caseBaseElement(intermediateThrowEvent);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.ITEM_AWARE_ELEMENT: {
+            ItemAwareElement itemAwareElement = (ItemAwareElement) theEObject;
+            T result = caseItemAwareElement(itemAwareElement);
+            if (result == null)
+                result = caseBaseElement(itemAwareElement);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.ITEM_DEFINITION: {
+            ItemDefinition itemDefinition = (ItemDefinition) theEObject;
+            T result = caseItemDefinition(itemDefinition);
+            if (result == null)
+                result = caseRootElement(itemDefinition);
+            if (result == null)
+                result = caseBaseElement(itemDefinition);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.LANE: {
+            Lane lane = (Lane) theEObject;
+            T result = caseLane(lane);
+            if (result == null)
+                result = caseBaseElement(lane);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.LANE_SET: {
+            LaneSet laneSet = (LaneSet) theEObject;
+            T result = caseLaneSet(laneSet);
+            if (result == null)
+                result = caseBaseElement(laneSet);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.LINK_EVENT_DEFINITION: {
+            LinkEventDefinition linkEventDefinition = (LinkEventDefinition) theEObject;
+            T result = caseLinkEventDefinition(linkEventDefinition);
+            if (result == null)
+                result = caseEventDefinition(linkEventDefinition);
+            if (result == null)
+                result = caseRootElement(linkEventDefinition);
+            if (result == null)
+                result = caseBaseElement(linkEventDefinition);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.LOOP_CHARACTERISTICS: {
+            LoopCharacteristics loopCharacteristics = (LoopCharacteristics) theEObject;
+            T result = caseLoopCharacteristics(loopCharacteristics);
+            if (result == null)
+                result = caseBaseElement(loopCharacteristics);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.MANUAL_TASK: {
+            ManualTask manualTask = (ManualTask) theEObject;
+            T result = caseManualTask(manualTask);
+            if (result == null)
+                result = caseTask(manualTask);
+            if (result == null)
+                result = caseActivity(manualTask);
+            if (result == null)
+                result = caseInteractionNode(manualTask);
+            if (result == null)
+                result = caseFlowNode(manualTask);
+            if (result == null)
+                result = caseFlowElement(manualTask);
+            if (result == null)
+                result = caseBaseElement(manualTask);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.MESSAGE: {
+            Message message = (Message) theEObject;
+            T result = caseMessage(message);
+            if (result == null)
+                result = caseRootElement(message);
+            if (result == null)
+                result = caseBaseElement(message);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.MESSAGE_EVENT_DEFINITION: {
+            MessageEventDefinition messageEventDefinition = (MessageEventDefinition) theEObject;
+            T result = caseMessageEventDefinition(messageEventDefinition);
+            if (result == null)
+                result = caseEventDefinition(messageEventDefinition);
+            if (result == null)
+                result = caseRootElement(messageEventDefinition);
+            if (result == null)
+                result = caseBaseElement(messageEventDefinition);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.MESSAGE_FLOW: {
+            MessageFlow messageFlow = (MessageFlow) theEObject;
+            T result = caseMessageFlow(messageFlow);
+            if (result == null)
+                result = caseBaseElement(messageFlow);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.MESSAGE_FLOW_ASSOCIATION: {
+            MessageFlowAssociation messageFlowAssociation = (MessageFlowAssociation) theEObject;
+            T result = caseMessageFlowAssociation(messageFlowAssociation);
+            if (result == null)
+                result = caseBaseElement(messageFlowAssociation);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.MONITORING: {
+            Monitoring monitoring = (Monitoring) theEObject;
+            T result = caseMonitoring(monitoring);
+            if (result == null)
+                result = caseBaseElement(monitoring);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS: {
+            MultiInstanceLoopCharacteristics multiInstanceLoopCharacteristics = (MultiInstanceLoopCharacteristics) theEObject;
+            T result = caseMultiInstanceLoopCharacteristics(multiInstanceLoopCharacteristics);
+            if (result == null)
+                result = caseLoopCharacteristics(multiInstanceLoopCharacteristics);
+            if (result == null)
+                result = caseBaseElement(multiInstanceLoopCharacteristics);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.OPERATION: {
+            Operation operation = (Operation) theEObject;
+            T result = caseOperation(operation);
+            if (result == null)
+                result = caseBaseElement(operation);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.OUTPUT_SET: {
+            OutputSet outputSet = (OutputSet) theEObject;
+            T result = caseOutputSet(outputSet);
+            if (result == null)
+                result = caseBaseElement(outputSet);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.PARALLEL_GATEWAY: {
+            ParallelGateway parallelGateway = (ParallelGateway) theEObject;
+            T result = caseParallelGateway(parallelGateway);
+            if (result == null)
+                result = caseGateway(parallelGateway);
+            if (result == null)
+                result = caseFlowNode(parallelGateway);
+            if (result == null)
+                result = caseFlowElement(parallelGateway);
+            if (result == null)
+                result = caseBaseElement(parallelGateway);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.PARTICIPANT: {
+            Participant participant = (Participant) theEObject;
+            T result = caseParticipant(participant);
+            if (result == null)
+                result = caseBaseElement(participant);
+            if (result == null)
+                result = caseInteractionNode(participant);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.PARTICIPANT_ASSOCIATION: {
+            ParticipantAssociation participantAssociation = (ParticipantAssociation) theEObject;
+            T result = caseParticipantAssociation(participantAssociation);
+            if (result == null)
+                result = caseBaseElement(participantAssociation);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.PARTICIPANT_MULTIPLICITY: {
+            ParticipantMultiplicity participantMultiplicity = (ParticipantMultiplicity) theEObject;
+            T result = caseParticipantMultiplicity(participantMultiplicity);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.PARTNER_ENTITY: {
+            PartnerEntity partnerEntity = (PartnerEntity) theEObject;
+            T result = casePartnerEntity(partnerEntity);
+            if (result == null)
+                result = caseRootElement(partnerEntity);
+            if (result == null)
+                result = caseBaseElement(partnerEntity);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.PARTNER_ROLE: {
+            PartnerRole partnerRole = (PartnerRole) theEObject;
+            T result = casePartnerRole(partnerRole);
+            if (result == null)
+                result = caseRootElement(partnerRole);
+            if (result == null)
+                result = caseBaseElement(partnerRole);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.PERFORMER: {
+            Performer performer = (Performer) theEObject;
+            T result = casePerformer(performer);
+            if (result == null)
+                result = caseResourceRole(performer);
+            if (result == null)
+                result = caseBaseElement(performer);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.POTENTIAL_OWNER: {
+            PotentialOwner potentialOwner = (PotentialOwner) theEObject;
+            T result = casePotentialOwner(potentialOwner);
+            if (result == null)
+                result = caseHumanPerformer(potentialOwner);
+            if (result == null)
+                result = casePerformer(potentialOwner);
+            if (result == null)
+                result = caseResourceRole(potentialOwner);
+            if (result == null)
+                result = caseBaseElement(potentialOwner);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.PROCESS: {
+            org.eclipse.bpmn2.Process process = (org.eclipse.bpmn2.Process) theEObject;
+            T result = caseProcess(process);
+            if (result == null)
+                result = caseCallableElement(process);
+            if (result == null)
+                result = caseFlowElementsContainer(process);
+            if (result == null)
+                result = caseRootElement(process);
+            if (result == null)
+                result = caseBaseElement(process);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.PROPERTY: {
+            Property property = (Property) theEObject;
+            T result = caseProperty(property);
+            if (result == null)
+                result = caseItemAwareElement(property);
+            if (result == null)
+                result = caseBaseElement(property);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.RECEIVE_TASK: {
+            ReceiveTask receiveTask = (ReceiveTask) theEObject;
+            T result = caseReceiveTask(receiveTask);
+            if (result == null)
+                result = caseTask(receiveTask);
+            if (result == null)
+                result = caseActivity(receiveTask);
+            if (result == null)
+                result = caseInteractionNode(receiveTask);
+            if (result == null)
+                result = caseFlowNode(receiveTask);
+            if (result == null)
+                result = caseFlowElement(receiveTask);
+            if (result == null)
+                result = caseBaseElement(receiveTask);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.RELATIONSHIP: {
+            Relationship relationship = (Relationship) theEObject;
+            T result = caseRelationship(relationship);
+            if (result == null)
+                result = caseBaseElement(relationship);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.RENDERING: {
+            Rendering rendering = (Rendering) theEObject;
+            T result = caseRendering(rendering);
+            if (result == null)
+                result = caseBaseElement(rendering);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.RESOURCE: {
+            Resource resource = (Resource) theEObject;
+            T result = caseResource(resource);
+            if (result == null)
+                result = caseRootElement(resource);
+            if (result == null)
+                result = caseBaseElement(resource);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION: {
+            ResourceAssignmentExpression resourceAssignmentExpression = (ResourceAssignmentExpression) theEObject;
+            T result = caseResourceAssignmentExpression(resourceAssignmentExpression);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.RESOURCE_PARAMETER: {
+            ResourceParameter resourceParameter = (ResourceParameter) theEObject;
+            T result = caseResourceParameter(resourceParameter);
+            if (result == null)
+                result = caseBaseElement(resourceParameter);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.RESOURCE_PARAMETER_BINDING: {
+            ResourceParameterBinding resourceParameterBinding = (ResourceParameterBinding) theEObject;
+            T result = caseResourceParameterBinding(resourceParameterBinding);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.RESOURCE_ROLE: {
+            ResourceRole resourceRole = (ResourceRole) theEObject;
+            T result = caseResourceRole(resourceRole);
+            if (result == null)
+                result = caseBaseElement(resourceRole);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.ROOT_ELEMENT: {
+            RootElement rootElement = (RootElement) theEObject;
+            T result = caseRootElement(rootElement);
+            if (result == null)
+                result = caseBaseElement(rootElement);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.SCRIPT_TASK: {
+            ScriptTask scriptTask = (ScriptTask) theEObject;
+            T result = caseScriptTask(scriptTask);
+            if (result == null)
+                result = caseTask(scriptTask);
+            if (result == null)
+                result = caseActivity(scriptTask);
+            if (result == null)
+                result = caseInteractionNode(scriptTask);
+            if (result == null)
+                result = caseFlowNode(scriptTask);
+            if (result == null)
+                result = caseFlowElement(scriptTask);
+            if (result == null)
+                result = caseBaseElement(scriptTask);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.SEND_TASK: {
+            SendTask sendTask = (SendTask) theEObject;
+            T result = caseSendTask(sendTask);
+            if (result == null)
+                result = caseTask(sendTask);
+            if (result == null)
+                result = caseActivity(sendTask);
+            if (result == null)
+                result = caseInteractionNode(sendTask);
+            if (result == null)
+                result = caseFlowNode(sendTask);
+            if (result == null)
+                result = caseFlowElement(sendTask);
+            if (result == null)
+                result = caseBaseElement(sendTask);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.SEQUENCE_FLOW: {
+            SequenceFlow sequenceFlow = (SequenceFlow) theEObject;
+            T result = caseSequenceFlow(sequenceFlow);
+            if (result == null)
+                result = caseFlowElement(sequenceFlow);
+            if (result == null)
+                result = caseBaseElement(sequenceFlow);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.SERVICE_TASK: {
+            ServiceTask serviceTask = (ServiceTask) theEObject;
+            T result = caseServiceTask(serviceTask);
+            if (result == null)
+                result = caseTask(serviceTask);
+            if (result == null)
+                result = caseActivity(serviceTask);
+            if (result == null)
+                result = caseInteractionNode(serviceTask);
+            if (result == null)
+                result = caseFlowNode(serviceTask);
+            if (result == null)
+                result = caseFlowElement(serviceTask);
+            if (result == null)
+                result = caseBaseElement(serviceTask);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.SIGNAL: {
+            Signal signal = (Signal) theEObject;
+            T result = caseSignal(signal);
+            if (result == null)
+                result = caseRootElement(signal);
+            if (result == null)
+                result = caseBaseElement(signal);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.SIGNAL_EVENT_DEFINITION: {
+            SignalEventDefinition signalEventDefinition = (SignalEventDefinition) theEObject;
+            T result = caseSignalEventDefinition(signalEventDefinition);
+            if (result == null)
+                result = caseEventDefinition(signalEventDefinition);
+            if (result == null)
+                result = caseRootElement(signalEventDefinition);
+            if (result == null)
+                result = caseBaseElement(signalEventDefinition);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS: {
+            StandardLoopCharacteristics standardLoopCharacteristics = (StandardLoopCharacteristics) theEObject;
+            T result = caseStandardLoopCharacteristics(standardLoopCharacteristics);
+            if (result == null)
+                result = caseLoopCharacteristics(standardLoopCharacteristics);
+            if (result == null)
+                result = caseBaseElement(standardLoopCharacteristics);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.START_EVENT: {
+            StartEvent startEvent = (StartEvent) theEObject;
+            T result = caseStartEvent(startEvent);
+            if (result == null)
+                result = caseCatchEvent(startEvent);
+            if (result == null)
+                result = caseEvent(startEvent);
+            if (result == null)
+                result = caseFlowNode(startEvent);
+            if (result == null)
+                result = caseInteractionNode(startEvent);
+            if (result == null)
+                result = caseFlowElement(startEvent);
+            if (result == null)
+                result = caseBaseElement(startEvent);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.SUB_CHOREOGRAPHY: {
+            SubChoreography subChoreography = (SubChoreography) theEObject;
+            T result = caseSubChoreography(subChoreography);
+            if (result == null)
+                result = caseChoreographyActivity(subChoreography);
+            if (result == null)
+                result = caseFlowElementsContainer(subChoreography);
+            if (result == null)
+                result = caseFlowNode(subChoreography);
+            if (result == null)
+                result = caseFlowElement(subChoreography);
+            if (result == null)
+                result = caseBaseElement(subChoreography);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.SUB_CONVERSATION: {
+            SubConversation subConversation = (SubConversation) theEObject;
+            T result = caseSubConversation(subConversation);
+            if (result == null)
+                result = caseConversationNode(subConversation);
+            if (result == null)
+                result = caseBaseElement(subConversation);
+            if (result == null)
+                result = caseInteractionNode(subConversation);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.SUB_PROCESS: {
+            SubProcess subProcess = (SubProcess) theEObject;
+            T result = caseSubProcess(subProcess);
+            if (result == null)
+                result = caseActivity(subProcess);
+            if (result == null)
+                result = caseFlowElementsContainer(subProcess);
+            if (result == null)
+                result = caseFlowNode(subProcess);
+            if (result == null)
+                result = caseFlowElement(subProcess);
+            if (result == null)
+                result = caseBaseElement(subProcess);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.TASK: {
+            Task task = (Task) theEObject;
+            T result = caseTask(task);
+            if (result == null)
+                result = caseActivity(task);
+            if (result == null)
+                result = caseInteractionNode(task);
+            if (result == null)
+                result = caseFlowNode(task);
+            if (result == null)
+                result = caseFlowElement(task);
+            if (result == null)
+                result = caseBaseElement(task);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.TERMINATE_EVENT_DEFINITION: {
+            TerminateEventDefinition terminateEventDefinition = (TerminateEventDefinition) theEObject;
+            T result = caseTerminateEventDefinition(terminateEventDefinition);
+            if (result == null)
+                result = caseEventDefinition(terminateEventDefinition);
+            if (result == null)
+                result = caseRootElement(terminateEventDefinition);
+            if (result == null)
+                result = caseBaseElement(terminateEventDefinition);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.TEXT_ANNOTATION: {
+            TextAnnotation textAnnotation = (TextAnnotation) theEObject;
+            T result = caseTextAnnotation(textAnnotation);
+            if (result == null)
+                result = caseArtifact(textAnnotation);
+            if (result == null)
+                result = caseBaseElement(textAnnotation);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.THROW_EVENT: {
+            ThrowEvent throwEvent = (ThrowEvent) theEObject;
+            T result = caseThrowEvent(throwEvent);
+            if (result == null)
+                result = caseEvent(throwEvent);
+            if (result == null)
+                result = caseFlowNode(throwEvent);
+            if (result == null)
+                result = caseInteractionNode(throwEvent);
+            if (result == null)
+                result = caseFlowElement(throwEvent);
+            if (result == null)
+                result = caseBaseElement(throwEvent);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.TIMER_EVENT_DEFINITION: {
+            TimerEventDefinition timerEventDefinition = (TimerEventDefinition) theEObject;
+            T result = caseTimerEventDefinition(timerEventDefinition);
+            if (result == null)
+                result = caseEventDefinition(timerEventDefinition);
+            if (result == null)
+                result = caseRootElement(timerEventDefinition);
+            if (result == null)
+                result = caseBaseElement(timerEventDefinition);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.TRANSACTION: {
+            Transaction transaction = (Transaction) theEObject;
+            T result = caseTransaction(transaction);
+            if (result == null)
+                result = caseSubProcess(transaction);
+            if (result == null)
+                result = caseActivity(transaction);
+            if (result == null)
+                result = caseFlowElementsContainer(transaction);
+            if (result == null)
+                result = caseFlowNode(transaction);
+            if (result == null)
+                result = caseFlowElement(transaction);
+            if (result == null)
+                result = caseBaseElement(transaction);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.USER_TASK: {
+            UserTask userTask = (UserTask) theEObject;
+            T result = caseUserTask(userTask);
+            if (result == null)
+                result = caseTask(userTask);
+            if (result == null)
+                result = caseActivity(userTask);
+            if (result == null)
+                result = caseInteractionNode(userTask);
+            if (result == null)
+                result = caseFlowNode(userTask);
+            if (result == null)
+                result = caseFlowElement(userTask);
+            if (result == null)
+                result = caseBaseElement(userTask);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        default:
+            return defaultCase(theEObject);
         }
     }
 
@@ -2263,7 +2264,8 @@ public class Bpmn2Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseCorrelationPropertyRetrievalExpression(CorrelationPropertyRetrievalExpression object) {
+    public T caseCorrelationPropertyRetrievalExpression(
+            CorrelationPropertyRetrievalExpression object) {
         return null;
     }
 

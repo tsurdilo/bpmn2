@@ -86,7 +86,8 @@ public enum EventBasedGatewayType implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    private static final EventBasedGatewayType[] VALUES_ARRAY = new EventBasedGatewayType[] { PARALLEL, EXCLUSIVE, };
+    private static final EventBasedGatewayType[] VALUES_ARRAY = new EventBasedGatewayType[] {
+            PARALLEL, EXCLUSIVE, };
 
     /**
      * A public read-only list of all the '<em><b>Event Based Gateway Type</b></em>' enumerators.
@@ -94,7 +95,8 @@ public enum EventBasedGatewayType implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final List<EventBasedGatewayType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+    public static final List<EventBasedGatewayType> VALUES = Collections.unmodifiableList(Arrays
+            .asList(VALUES_ARRAY));
 
     /**
      * Returns the '<em><b>Event Based Gateway Type</b></em>' literal with the specified literal value.
@@ -136,10 +138,10 @@ public enum EventBasedGatewayType implements Enumerator {
      */
     public static EventBasedGatewayType get(int value) {
         switch (value) {
-            case PARALLEL_VALUE:
-                return PARALLEL;
-            case EXCLUSIVE_VALUE:
-                return EXCLUSIVE;
+        case PARALLEL_VALUE:
+            return PARALLEL;
+        case EXCLUSIVE_VALUE:
+            return EXCLUSIVE;
         }
         return null;
     }

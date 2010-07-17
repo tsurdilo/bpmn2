@@ -72,11 +72,13 @@ public class GroupImpl extends ArtifactImpl implements Group {
      */
     public CategoryValue getCategoryValueRef() {
         if (categoryValueRef != null && categoryValueRef.eIsProxy()) {
-            InternalEObject oldCategoryValueRef = (InternalEObject)categoryValueRef;
-            categoryValueRef = (CategoryValue)eResolveProxy(oldCategoryValueRef);
+            InternalEObject oldCategoryValueRef = (InternalEObject) categoryValueRef;
+            categoryValueRef = (CategoryValue) eResolveProxy(oldCategoryValueRef);
             if (categoryValueRef != oldCategoryValueRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.GROUP__CATEGORY_VALUE_REF, oldCategoryValueRef, categoryValueRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.GROUP__CATEGORY_VALUE_REF, oldCategoryValueRef,
+                            categoryValueRef));
             }
         }
         return categoryValueRef;
@@ -100,7 +102,8 @@ public class GroupImpl extends ArtifactImpl implements Group {
         CategoryValue oldCategoryValueRef = categoryValueRef;
         categoryValueRef = newCategoryValueRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.GROUP__CATEGORY_VALUE_REF, oldCategoryValueRef, categoryValueRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.GROUP__CATEGORY_VALUE_REF, oldCategoryValueRef, categoryValueRef));
     }
 
     /**
@@ -111,10 +114,10 @@ public class GroupImpl extends ArtifactImpl implements Group {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.GROUP__CATEGORY_VALUE_REF:
-                if (resolve)
-                    return getCategoryValueRef();
-                return basicGetCategoryValueRef();
+        case Bpmn2Package.GROUP__CATEGORY_VALUE_REF:
+            if (resolve)
+                return getCategoryValueRef();
+            return basicGetCategoryValueRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -127,9 +130,9 @@ public class GroupImpl extends ArtifactImpl implements Group {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.GROUP__CATEGORY_VALUE_REF:
-                setCategoryValueRef((CategoryValue)newValue);
-                return;
+        case Bpmn2Package.GROUP__CATEGORY_VALUE_REF:
+            setCategoryValueRef((CategoryValue) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -142,9 +145,9 @@ public class GroupImpl extends ArtifactImpl implements Group {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.GROUP__CATEGORY_VALUE_REF:
-                setCategoryValueRef((CategoryValue)null);
-                return;
+        case Bpmn2Package.GROUP__CATEGORY_VALUE_REF:
+            setCategoryValueRef((CategoryValue) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -157,8 +160,8 @@ public class GroupImpl extends ArtifactImpl implements Group {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.GROUP__CATEGORY_VALUE_REF:
-                return categoryValueRef != null;
+        case Bpmn2Package.GROUP__CATEGORY_VALUE_REF:
+            return categoryValueRef != null;
         }
         return super.eIsSet(featureID);
     }

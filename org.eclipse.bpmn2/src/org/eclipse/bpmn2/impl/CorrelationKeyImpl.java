@@ -97,7 +97,9 @@ public class CorrelationKeyImpl extends BaseElementImpl implements CorrelationKe
      */
     public List<CorrelationProperty> getCorrelationPropertyRef() {
         if (correlationPropertyRef == null) {
-            correlationPropertyRef = new EObjectResolvingEList<CorrelationProperty>(CorrelationProperty.class, this, Bpmn2Package.CORRELATION_KEY__CORRELATION_PROPERTY_REF);
+            correlationPropertyRef = new EObjectResolvingEList<CorrelationProperty>(
+                    CorrelationProperty.class, this,
+                    Bpmn2Package.CORRELATION_KEY__CORRELATION_PROPERTY_REF);
         }
         return correlationPropertyRef;
     }
@@ -120,7 +122,8 @@ public class CorrelationKeyImpl extends BaseElementImpl implements CorrelationKe
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.CORRELATION_KEY__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.CORRELATION_KEY__NAME, oldName, name));
     }
 
     /**
@@ -131,10 +134,10 @@ public class CorrelationKeyImpl extends BaseElementImpl implements CorrelationKe
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.CORRELATION_KEY__CORRELATION_PROPERTY_REF:
-                return getCorrelationPropertyRef();
-            case Bpmn2Package.CORRELATION_KEY__NAME:
-                return getName();
+        case Bpmn2Package.CORRELATION_KEY__CORRELATION_PROPERTY_REF:
+            return getCorrelationPropertyRef();
+        case Bpmn2Package.CORRELATION_KEY__NAME:
+            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -148,13 +151,14 @@ public class CorrelationKeyImpl extends BaseElementImpl implements CorrelationKe
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.CORRELATION_KEY__CORRELATION_PROPERTY_REF:
-                getCorrelationPropertyRef().clear();
-                getCorrelationPropertyRef().addAll((Collection<? extends CorrelationProperty>)newValue);
-                return;
-            case Bpmn2Package.CORRELATION_KEY__NAME:
-                setName((String)newValue);
-                return;
+        case Bpmn2Package.CORRELATION_KEY__CORRELATION_PROPERTY_REF:
+            getCorrelationPropertyRef().clear();
+            getCorrelationPropertyRef()
+                    .addAll((Collection<? extends CorrelationProperty>) newValue);
+            return;
+        case Bpmn2Package.CORRELATION_KEY__NAME:
+            setName((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -167,12 +171,12 @@ public class CorrelationKeyImpl extends BaseElementImpl implements CorrelationKe
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.CORRELATION_KEY__CORRELATION_PROPERTY_REF:
-                getCorrelationPropertyRef().clear();
-                return;
-            case Bpmn2Package.CORRELATION_KEY__NAME:
-                setName(NAME_EDEFAULT);
-                return;
+        case Bpmn2Package.CORRELATION_KEY__CORRELATION_PROPERTY_REF:
+            getCorrelationPropertyRef().clear();
+            return;
+        case Bpmn2Package.CORRELATION_KEY__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -185,10 +189,10 @@ public class CorrelationKeyImpl extends BaseElementImpl implements CorrelationKe
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.CORRELATION_KEY__CORRELATION_PROPERTY_REF:
-                return correlationPropertyRef != null && !correlationPropertyRef.isEmpty();
-            case Bpmn2Package.CORRELATION_KEY__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case Bpmn2Package.CORRELATION_KEY__CORRELATION_PROPERTY_REF:
+            return correlationPropertyRef != null && !correlationPropertyRef.isEmpty();
+        case Bpmn2Package.CORRELATION_KEY__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }

@@ -41,7 +41,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class StyleItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class StyleItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider,
+        IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -75,7 +77,13 @@ public class StyleItemProvider extends ItemProviderAdapter implements IEditingDo
      * @generated
      */
     protected void addIdPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Style_id_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Style_id_feature", "_UI_Style_type"), DiPackage.Literals.STYLE__ID, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Style_id_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Style_id_feature",
+                        "_UI_Style_type"), DiPackage.Literals.STYLE__ID, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -86,8 +94,9 @@ public class StyleItemProvider extends ItemProviderAdapter implements IEditingDo
      */
     @Override
     public String getText(Object object) {
-        String label = ((Style)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_Style_type") : getString("_UI_Style_type") + " " + label;
+        String label = ((Style) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_Style_type")
+                : getString("_UI_Style_type") + " " + label;
     }
 
     /**
@@ -102,9 +111,10 @@ public class StyleItemProvider extends ItemProviderAdapter implements IEditingDo
         updateChildren(notification);
 
         switch (notification.getFeatureID(Style.class)) {
-            case DiPackage.STYLE__ID:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case DiPackage.STYLE__ID:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }

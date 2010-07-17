@@ -36,7 +36,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class LabeledShapeItemProvider extends ShapeItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class LabeledShapeItemProvider extends ShapeItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -70,7 +72,14 @@ public class LabeledShapeItemProvider extends ShapeItemProvider implements IEdit
      * @generated
      */
     protected void addOwnedLabelPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_LabeledShape_ownedLabel_feature"), getString("_UI_PropertyDescriptor_description", "_UI_LabeledShape_ownedLabel_feature", "_UI_LabeledShape_type"), DiPackage.Literals.LABELED_SHAPE__OWNED_LABEL, false, false, false, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_LabeledShape_ownedLabel_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_LabeledShape_ownedLabel_feature", "_UI_LabeledShape_type"),
+                DiPackage.Literals.LABELED_SHAPE__OWNED_LABEL, false, false, false, null, null,
+                null));
     }
 
     /**
@@ -81,8 +90,9 @@ public class LabeledShapeItemProvider extends ShapeItemProvider implements IEdit
      */
     @Override
     public String getText(Object object) {
-        String label = ((LabeledShape)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_LabeledShape_type") : getString("_UI_LabeledShape_type") + " " + label;
+        String label = ((LabeledShape) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_LabeledShape_type")
+                : getString("_UI_LabeledShape_type") + " " + label;
     }
 
     /**

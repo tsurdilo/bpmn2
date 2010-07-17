@@ -36,7 +36,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SignalEventDefinitionItemProvider extends EventDefinitionItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class SignalEventDefinitionItemProvider extends EventDefinitionItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -70,7 +72,15 @@ public class SignalEventDefinitionItemProvider extends EventDefinitionItemProvid
      * @generated
      */
     protected void addSignalRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_SignalEventDefinition_signalRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_SignalEventDefinition_signalRef_feature", "_UI_SignalEventDefinition_type"), Bpmn2Package.Literals.SIGNAL_EVENT_DEFINITION__SIGNAL_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_SignalEventDefinition_signalRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_SignalEventDefinition_signalRef_feature",
+                        "_UI_SignalEventDefinition_type"),
+                Bpmn2Package.Literals.SIGNAL_EVENT_DEFINITION__SIGNAL_REF, true, false, true, null,
+                null, null));
     }
 
     /**
@@ -82,9 +92,11 @@ public class SignalEventDefinitionItemProvider extends EventDefinitionItemProvid
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/SignalEventDefinition.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/SignalEventDefinition.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/SignalEventDefinition.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/SignalEventDefinition.gif"));
         }
     }
 
@@ -96,8 +108,9 @@ public class SignalEventDefinitionItemProvider extends EventDefinitionItemProvid
      */
     @Override
     public String getText(Object object) {
-        String label = ((SignalEventDefinition)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_SignalEventDefinition_type") : getString("_UI_SignalEventDefinition_type") + " " + label;
+        String label = ((SignalEventDefinition) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_SignalEventDefinition_type")
+                : getString("_UI_SignalEventDefinition_type") + " " + label;
     }
 
     /**

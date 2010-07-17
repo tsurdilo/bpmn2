@@ -160,7 +160,8 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      */
     public static DiPackage init() {
         DiPackage result = initGen();
-        EPackage.Registry.INSTANCE.put(NamespaceHelper.xmiToXsdNamespaceUri(DiPackage.eNS_URI), result);
+        EPackage.Registry.INSTANCE.put(NamespaceHelper.xmiToXsdNamespaceUri(DiPackage.eNS_URI),
+                result);
         return result;
     }
 
@@ -178,10 +179,11 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      */
     public static DiPackage initGen() {
         if (isInited)
-            return (DiPackage)EPackage.Registry.INSTANCE.getEPackage(DiPackage.eNS_URI);
+            return (DiPackage) EPackage.Registry.INSTANCE.getEPackage(DiPackage.eNS_URI);
 
         // Obtain or create and register package
-        DiPackageImpl theDiPackage = (DiPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof DiPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new DiPackageImpl());
+        DiPackageImpl theDiPackage = (DiPackageImpl) (EPackage.Registry.INSTANCE.get(eNS_URI) instanceof DiPackageImpl ? EPackage.Registry.INSTANCE
+                .get(eNS_URI) : new DiPackageImpl());
 
         isInited = true;
 
@@ -189,9 +191,15 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
         XMLTypePackage.eINSTANCE.eClass();
 
         // Obtain or create and register interdependencies
-        Bpmn2PackageImpl theBpmn2Package = (Bpmn2PackageImpl)(EPackage.Registry.INSTANCE.getEPackage(Bpmn2Package.eNS_URI) instanceof Bpmn2PackageImpl ? EPackage.Registry.INSTANCE.getEPackage(Bpmn2Package.eNS_URI) : Bpmn2Package.eINSTANCE);
-        BpmnDiPackageImpl theBpmnDiPackage = (BpmnDiPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BpmnDiPackage.eNS_URI) instanceof BpmnDiPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BpmnDiPackage.eNS_URI) : BpmnDiPackage.eINSTANCE);
-        DcPackageImpl theDcPackage = (DcPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DcPackage.eNS_URI) instanceof DcPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DcPackage.eNS_URI) : DcPackage.eINSTANCE);
+        Bpmn2PackageImpl theBpmn2Package = (Bpmn2PackageImpl) (EPackage.Registry.INSTANCE
+                .getEPackage(Bpmn2Package.eNS_URI) instanceof Bpmn2PackageImpl ? EPackage.Registry.INSTANCE
+                .getEPackage(Bpmn2Package.eNS_URI) : Bpmn2Package.eINSTANCE);
+        BpmnDiPackageImpl theBpmnDiPackage = (BpmnDiPackageImpl) (EPackage.Registry.INSTANCE
+                .getEPackage(BpmnDiPackage.eNS_URI) instanceof BpmnDiPackageImpl ? EPackage.Registry.INSTANCE
+                .getEPackage(BpmnDiPackage.eNS_URI) : BpmnDiPackage.eINSTANCE);
+        DcPackageImpl theDcPackage = (DcPackageImpl) (EPackage.Registry.INSTANCE
+                .getEPackage(DcPackage.eNS_URI) instanceof DcPackageImpl ? EPackage.Registry.INSTANCE
+                .getEPackage(DcPackage.eNS_URI) : DcPackage.eINSTANCE);
 
         // Load packages
         theBpmn2Package.loadPackage();
@@ -239,7 +247,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EAttribute getDocumentRoot_Mixed() {
-        return (EAttribute)documentRootEClass.getEStructuralFeatures().get(0);
+        return (EAttribute) documentRootEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -248,7 +256,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EReference getDocumentRoot_XMLNSPrefixMap() {
-        return (EReference)documentRootEClass.getEStructuralFeatures().get(1);
+        return (EReference) documentRootEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -257,7 +265,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EReference getDocumentRoot_XSISchemaLocation() {
-        return (EReference)documentRootEClass.getEStructuralFeatures().get(2);
+        return (EReference) documentRootEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -266,7 +274,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EReference getDocumentRoot_DiagramElement() {
-        return (EReference)documentRootEClass.getEStructuralFeatures().get(3);
+        return (EReference) documentRootEClass.getEStructuralFeatures().get(3);
     }
 
     /**
@@ -275,7 +283,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EReference getDocumentRoot_Diagram() {
-        return (EReference)documentRootEClass.getEStructuralFeatures().get(4);
+        return (EReference) documentRootEClass.getEStructuralFeatures().get(4);
     }
 
     /**
@@ -284,7 +292,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EReference getDocumentRoot_Edge() {
-        return (EReference)documentRootEClass.getEStructuralFeatures().get(5);
+        return (EReference) documentRootEClass.getEStructuralFeatures().get(5);
     }
 
     /**
@@ -293,7 +301,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EReference getDocumentRoot_Label() {
-        return (EReference)documentRootEClass.getEStructuralFeatures().get(6);
+        return (EReference) documentRootEClass.getEStructuralFeatures().get(6);
     }
 
     /**
@@ -302,7 +310,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EReference getDocumentRoot_LabeledEdge() {
-        return (EReference)documentRootEClass.getEStructuralFeatures().get(7);
+        return (EReference) documentRootEClass.getEStructuralFeatures().get(7);
     }
 
     /**
@@ -311,7 +319,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EReference getDocumentRoot_LabeledShape() {
-        return (EReference)documentRootEClass.getEStructuralFeatures().get(8);
+        return (EReference) documentRootEClass.getEStructuralFeatures().get(8);
     }
 
     /**
@@ -320,7 +328,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EReference getDocumentRoot_Node() {
-        return (EReference)documentRootEClass.getEStructuralFeatures().get(9);
+        return (EReference) documentRootEClass.getEStructuralFeatures().get(9);
     }
 
     /**
@@ -329,7 +337,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EReference getDocumentRoot_Plane() {
-        return (EReference)documentRootEClass.getEStructuralFeatures().get(10);
+        return (EReference) documentRootEClass.getEStructuralFeatures().get(10);
     }
 
     /**
@@ -338,7 +346,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EReference getDocumentRoot_Shape() {
-        return (EReference)documentRootEClass.getEStructuralFeatures().get(11);
+        return (EReference) documentRootEClass.getEStructuralFeatures().get(11);
     }
 
     /**
@@ -347,7 +355,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EReference getDocumentRoot_Style() {
-        return (EReference)documentRootEClass.getEStructuralFeatures().get(12);
+        return (EReference) documentRootEClass.getEStructuralFeatures().get(12);
     }
 
     /**
@@ -365,7 +373,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EAttribute getDiagram_Documentation() {
-        return (EAttribute)diagramEClass.getEStructuralFeatures().get(0);
+        return (EAttribute) diagramEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -374,7 +382,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EReference getDiagram_OwnedStyle() {
-        return (EReference)diagramEClass.getEStructuralFeatures().get(1);
+        return (EReference) diagramEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -383,7 +391,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EReference getDiagram_RootElement() {
-        return (EReference)diagramEClass.getEStructuralFeatures().get(2);
+        return (EReference) diagramEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -392,7 +400,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EAttribute getDiagram_Id() {
-        return (EAttribute)diagramEClass.getEStructuralFeatures().get(3);
+        return (EAttribute) diagramEClass.getEStructuralFeatures().get(3);
     }
 
     /**
@@ -401,7 +409,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EAttribute getDiagram_Name() {
-        return (EAttribute)diagramEClass.getEStructuralFeatures().get(4);
+        return (EAttribute) diagramEClass.getEStructuralFeatures().get(4);
     }
 
     /**
@@ -410,7 +418,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EAttribute getDiagram_Resolution() {
-        return (EAttribute)diagramEClass.getEStructuralFeatures().get(5);
+        return (EAttribute) diagramEClass.getEStructuralFeatures().get(5);
     }
 
     /**
@@ -428,7 +436,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EReference getDiagramElement_OwningDiagram() {
-        return (EReference)diagramElementEClass.getEStructuralFeatures().get(0);
+        return (EReference) diagramElementEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -437,7 +445,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EReference getDiagramElement_OwningElement() {
-        return (EReference)diagramElementEClass.getEStructuralFeatures().get(1);
+        return (EReference) diagramElementEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -446,7 +454,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EReference getDiagramElement_OwnedElement() {
-        return (EReference)diagramElementEClass.getEStructuralFeatures().get(2);
+        return (EReference) diagramElementEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -455,7 +463,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EReference getDiagramElement_ModelElement() {
-        return (EReference)diagramElementEClass.getEStructuralFeatures().get(3);
+        return (EReference) diagramElementEClass.getEStructuralFeatures().get(3);
     }
 
     /**
@@ -464,7 +472,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EReference getDiagramElement_Style() {
-        return (EReference)diagramElementEClass.getEStructuralFeatures().get(4);
+        return (EReference) diagramElementEClass.getEStructuralFeatures().get(4);
     }
 
     /**
@@ -473,7 +481,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EAttribute getDiagramElement_Id() {
-        return (EAttribute)diagramElementEClass.getEStructuralFeatures().get(5);
+        return (EAttribute) diagramElementEClass.getEStructuralFeatures().get(5);
     }
 
     /**
@@ -491,7 +499,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EReference getEdge_Source() {
-        return (EReference)edgeEClass.getEStructuralFeatures().get(0);
+        return (EReference) edgeEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -500,7 +508,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EReference getEdge_Target() {
-        return (EReference)edgeEClass.getEStructuralFeatures().get(1);
+        return (EReference) edgeEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -509,7 +517,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EReference getEdge_Waypoint() {
-        return (EReference)edgeEClass.getEStructuralFeatures().get(2);
+        return (EReference) edgeEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -527,7 +535,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EReference getLabel_Bounds() {
-        return (EReference)labelEClass.getEStructuralFeatures().get(0);
+        return (EReference) labelEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -545,7 +553,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EReference getLabeledEdge_OwnedLabel() {
-        return (EReference)labeledEdgeEClass.getEStructuralFeatures().get(0);
+        return (EReference) labeledEdgeEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -563,7 +571,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EReference getLabeledShape_OwnedLabel() {
-        return (EReference)labeledShapeEClass.getEStructuralFeatures().get(0);
+        return (EReference) labeledShapeEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -590,7 +598,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EReference getPlane_PlaneElement() {
-        return (EReference)planeEClass.getEStructuralFeatures().get(0);
+        return (EReference) planeEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -608,7 +616,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EReference getShape_Bounds() {
-        return (EReference)shapeEClass.getEStructuralFeatures().get(0);
+        return (EReference) shapeEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -626,7 +634,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public EAttribute getStyle_Id() {
-        return (EAttribute)styleEClass.getEStructuralFeatures().get(0);
+        return (EAttribute) styleEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -635,7 +643,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * @generated
      */
     public DiFactory getDiFactory() {
-        return (DiFactory)getEFactoryInstance();
+        return (DiFactory) getEFactoryInstance();
     }
 
     /**
@@ -740,8 +748,10 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
         setNsURI(eNS_URI);
 
         // Obtain other dependent packages
-        XMLTypePackage theXMLTypePackage = (XMLTypePackage)EPackage.Registry.INSTANCE.getEPackage(XMLTypePackage.eNS_URI);
-        DcPackage theDcPackage = (DcPackage)EPackage.Registry.INSTANCE.getEPackage(DcPackage.eNS_URI);
+        XMLTypePackage theXMLTypePackage = (XMLTypePackage) EPackage.Registry.INSTANCE
+                .getEPackage(XMLTypePackage.eNS_URI);
+        DcPackage theDcPackage = (DcPackage) EPackage.Registry.INSTANCE
+                .getEPackage(DcPackage.eNS_URI);
 
         // Create type parameters
 
@@ -757,58 +767,142 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
         shapeEClass.getESuperTypes().add(this.getNode());
 
         // Initialize classes and features; add operations and parameters
-        initEClass(documentRootEClass, DocumentRoot.class, "DocumentRoot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getDocumentRoot_Mixed(), ecorePackage.getEFeatureMapEntry(), "mixed", null, 0, -1, null, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_XMLNSPrefixMap(), ecorePackage.getEStringToStringMapEntry(), null, "xMLNSPrefixMap", null, 0, -1, null, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_XSISchemaLocation(), ecorePackage.getEStringToStringMapEntry(), null, "xSISchemaLocation", null, 0, -1, null, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_DiagramElement(), this.getDiagramElement(), null, "diagramElement", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_Diagram(), this.getDiagram(), null, "diagram", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_Edge(), this.getEdge(), null, "edge", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_Label(), this.getLabel(), null, "label", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_LabeledEdge(), this.getLabeledEdge(), null, "labeledEdge", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_LabeledShape(), this.getLabeledShape(), null, "labeledShape", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_Node(), this.getNode(), null, "node", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_Plane(), this.getPlane(), null, "plane", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_Shape(), this.getShape(), null, "shape", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_Style(), this.getStyle(), null, "style", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEClass(documentRootEClass, DocumentRoot.class, "DocumentRoot", !IS_ABSTRACT,
+                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getDocumentRoot_Mixed(), ecorePackage.getEFeatureMapEntry(), "mixed", null,
+                0, -1, null, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getDocumentRoot_XMLNSPrefixMap(), ecorePackage.getEStringToStringMapEntry(),
+                null, "xMLNSPrefixMap", null, 0, -1, null, IS_TRANSIENT, !IS_VOLATILE,
+                IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
+                !IS_DERIVED, IS_ORDERED);
+        initEReference(getDocumentRoot_XSISchemaLocation(),
+                ecorePackage.getEStringToStringMapEntry(), null, "xSISchemaLocation", null, 0, -1,
+                null, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getDocumentRoot_DiagramElement(), this.getDiagramElement(), null,
+                "diagramElement", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE,
+                IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED,
+                IS_ORDERED);
+        initEReference(getDocumentRoot_Diagram(), this.getDiagram(), null, "diagram", null, 0, -2,
+                null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEReference(getDocumentRoot_Edge(), this.getEdge(), null, "edge", null, 0, -2, null,
+                IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEReference(getDocumentRoot_Label(), this.getLabel(), null, "label", null, 0, -2, null,
+                IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEReference(getDocumentRoot_LabeledEdge(), this.getLabeledEdge(), null, "labeledEdge",
+                null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEReference(getDocumentRoot_LabeledShape(), this.getLabeledShape(), null,
+                "labeledShape", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE,
+                IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED,
+                IS_ORDERED);
+        initEReference(getDocumentRoot_Node(), this.getNode(), null, "node", null, 0, -2, null,
+                IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEReference(getDocumentRoot_Plane(), this.getPlane(), null, "plane", null, 0, -2, null,
+                IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEReference(getDocumentRoot_Shape(), this.getShape(), null, "shape", null, 0, -2, null,
+                IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEReference(getDocumentRoot_Style(), this.getStyle(), null, "style", null, 0, -2, null,
+                IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-        initEClass(diagramEClass, Diagram.class, "Diagram", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getDiagram_Documentation(), ecorePackage.getEString(), "documentation", null, 0, 1, Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEReference(getDiagram_OwnedStyle(), this.getStyle(), null, "ownedStyle", null, 0, -1, Diagram.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-        initEReference(getDiagram_RootElement(), this.getDiagramElement(), this.getDiagramElement_OwningDiagram(), "rootElement", null, 1, 1, Diagram.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-        initEAttribute(getDiagram_Id(), theXMLTypePackage.getID(), "id", null, 0, 1, Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getDiagram_Name(), ecorePackage.getEString(), "name", null, 0, 1, Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEAttribute(getDiagram_Resolution(), ecorePackage.getEFloat(), "resolution", null, 0, 1, Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEClass(diagramEClass, Diagram.class, "Diagram", IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getDiagram_Documentation(), ecorePackage.getEString(), "documentation",
+                null, 0, 1, Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+                !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEReference(getDiagram_OwnedStyle(), this.getStyle(), null, "ownedStyle", null, 0, -1,
+                Diagram.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
+                IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+        initEReference(getDiagram_RootElement(), this.getDiagramElement(),
+                this.getDiagramElement_OwningDiagram(), "rootElement", null, 1, 1, Diagram.class,
+                IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+        initEAttribute(getDiagram_Id(), theXMLTypePackage.getID(), "id", null, 0, 1, Diagram.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE,
+                !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getDiagram_Name(), ecorePackage.getEString(), "name", null, 0, 1,
+                Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEAttribute(getDiagram_Resolution(), ecorePackage.getEFloat(), "resolution", null, 0, 1,
+                Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-        initEClass(diagramElementEClass, DiagramElement.class, "DiagramElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getDiagramElement_OwningDiagram(), this.getDiagram(), this.getDiagram_RootElement(), "owningDiagram", null, 0, 1, DiagramElement.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-        initEReference(getDiagramElement_OwningElement(), this.getDiagramElement(), this.getDiagramElement_OwnedElement(), "owningElement", null, 0, 1, DiagramElement.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-        initEReference(getDiagramElement_OwnedElement(), this.getDiagramElement(), this.getDiagramElement_OwningElement(), "ownedElement", null, 0, -1, DiagramElement.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-        initEReference(getDiagramElement_ModelElement(), ecorePackage.getEObject(), null, "modelElement", null, 0, 1, DiagramElement.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-        initEReference(getDiagramElement_Style(), this.getStyle(), null, "style", null, 0, 1, DiagramElement.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-        initEAttribute(getDiagramElement_Id(), theXMLTypePackage.getID(), "id", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(diagramElementEClass, DiagramElement.class, "DiagramElement", IS_ABSTRACT,
+                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getDiagramElement_OwningDiagram(), this.getDiagram(),
+                this.getDiagram_RootElement(), "owningDiagram", null, 0, 1, DiagramElement.class,
+                IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+        initEReference(getDiagramElement_OwningElement(), this.getDiagramElement(),
+                this.getDiagramElement_OwnedElement(), "owningElement", null, 0, 1,
+                DiagramElement.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
+                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+        initEReference(getDiagramElement_OwnedElement(), this.getDiagramElement(),
+                this.getDiagramElement_OwningElement(), "ownedElement", null, 0, -1,
+                DiagramElement.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
+                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+        initEReference(getDiagramElement_ModelElement(), ecorePackage.getEObject(), null,
+                "modelElement", null, 0, 1, DiagramElement.class, IS_TRANSIENT, !IS_VOLATILE,
+                !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
+                IS_DERIVED, !IS_ORDERED);
+        initEReference(getDiagramElement_Style(), this.getStyle(), null, "style", null, 0, 1,
+                DiagramElement.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
+                IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+        initEAttribute(getDiagramElement_Id(), theXMLTypePackage.getID(), "id", null, 0, 1,
+                DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+                IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-        initEClass(edgeEClass, Edge.class, "Edge", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getEdge_Source(), this.getDiagramElement(), null, "source", null, 0, 1, Edge.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-        initEReference(getEdge_Target(), this.getDiagramElement(), null, "target", null, 0, 1, Edge.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-        initEReference(getEdge_Waypoint(), theDcPackage.getPoint(), null, "waypoint", null, 2, -1, Edge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(edgeEClass, Edge.class, "Edge", IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getEdge_Source(), this.getDiagramElement(), null, "source", null, 0, 1,
+                Edge.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
+                IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+        initEReference(getEdge_Target(), this.getDiagramElement(), null, "target", null, 0, 1,
+                Edge.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
+                IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+        initEReference(getEdge_Waypoint(), theDcPackage.getPoint(), null, "waypoint", null, 2, -1,
+                Edge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-        initEClass(labelEClass, Label.class, "Label", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getLabel_Bounds(), theDcPackage.getBounds(), null, "bounds", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEClass(labelEClass, Label.class, "Label", IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getLabel_Bounds(), theDcPackage.getBounds(), null, "bounds", null, 0, 1,
+                Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-        initEClass(labeledEdgeEClass, LabeledEdge.class, "LabeledEdge", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getLabeledEdge_OwnedLabel(), this.getLabel(), null, "ownedLabel", null, 0, -1, LabeledEdge.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+        initEClass(labeledEdgeEClass, LabeledEdge.class, "LabeledEdge", IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getLabeledEdge_OwnedLabel(), this.getLabel(), null, "ownedLabel", null, 0,
+                -1, LabeledEdge.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
+                IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
-        initEClass(labeledShapeEClass, LabeledShape.class, "LabeledShape", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getLabeledShape_OwnedLabel(), this.getLabel(), null, "ownedLabel", null, 0, -1, LabeledShape.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+        initEClass(labeledShapeEClass, LabeledShape.class, "LabeledShape", IS_ABSTRACT,
+                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getLabeledShape_OwnedLabel(), this.getLabel(), null, "ownedLabel", null, 0,
+                -1, LabeledShape.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
+                IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
-        initEClass(nodeEClass, Node.class, "Node", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEClass(nodeEClass, Node.class, "Node", IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
 
-        initEClass(planeEClass, Plane.class, "Plane", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getPlane_PlaneElement(), this.getDiagramElement(), null, "planeElement", null, 0, -1, Plane.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(planeEClass, Plane.class, "Plane", IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getPlane_PlaneElement(), this.getDiagramElement(), null, "planeElement",
+                null, 0, -1, Plane.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-        EOperation op = addEOperation(planeEClass, ecorePackage.getEBoolean(), "plane_element_type", 0, 1, IS_UNIQUE, IS_ORDERED);
-        addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+        EOperation op = addEOperation(planeEClass, ecorePackage.getEBoolean(),
+                "plane_element_type", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE,
+                IS_ORDERED);
         EGenericType g1 = createEGenericType(ecorePackage.getEMap());
         EGenericType g2 = createEGenericType(ecorePackage.getEJavaObject());
         g1.getETypeArguments().add(g2);
@@ -816,11 +910,17 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
         g1.getETypeArguments().add(g2);
         addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-        initEClass(shapeEClass, Shape.class, "Shape", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getShape_Bounds(), theDcPackage.getBounds(), null, "bounds", null, 1, 1, Shape.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEClass(shapeEClass, Shape.class, "Shape", IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getShape_Bounds(), theDcPackage.getBounds(), null, "bounds", null, 1, 1,
+                Shape.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-        initEClass(styleEClass, Style.class, "Style", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getStyle_Id(), theXMLTypePackage.getID(), "id", null, 0, 1, Style.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(styleEClass, Style.class, "Style", IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getStyle_Id(), theXMLTypePackage.getID(), "id", null, 0, 1, Style.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE,
+                !IS_DERIVED, IS_ORDERED);
 
         // Create resource
         createResource(eNS_URI);
@@ -839,37 +939,62 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
     protected void createExtendedMetaDataAnnotations() {
         String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";
         addAnnotation(documentRootEClass, source, new String[] { "name", "", "kind", "mixed" });
-        addAnnotation(getDocumentRoot_Mixed(), source, new String[] { "kind", "elementWildcard", "name", ":mixed" });
-        addAnnotation(getDocumentRoot_XMLNSPrefixMap(), source, new String[] { "kind", "attribute", "name", "xmlns:prefix" });
-        addAnnotation(getDocumentRoot_XSISchemaLocation(), source, new String[] { "kind", "attribute", "name", "xsi:schemaLocation" });
-        addAnnotation(getDocumentRoot_DiagramElement(), source, new String[] { "kind", "element", "name", "DiagramElement", "namespace", "http://www.omg.org/spec/DD/20100524/DI" });
-        addAnnotation(getDocumentRoot_Diagram(), source, new String[] { "kind", "element", "name", "Diagram", "namespace", "http://www.omg.org/spec/DD/20100524/DI" });
-        addAnnotation(getDocumentRoot_Edge(), source, new String[] { "kind", "element", "name", "Edge", "namespace", "http://www.omg.org/spec/DD/20100524/DI" });
-        addAnnotation(getDocumentRoot_Label(), source, new String[] { "kind", "element", "name", "Label", "namespace", "http://www.omg.org/spec/DD/20100524/DI" });
-        addAnnotation(getDocumentRoot_LabeledEdge(), source, new String[] { "kind", "element", "name", "LabeledEdge", "namespace", "http://www.omg.org/spec/DD/20100524/DI" });
-        addAnnotation(getDocumentRoot_LabeledShape(), source, new String[] { "kind", "element", "name", "LabeledShape", "namespace", "http://www.omg.org/spec/DD/20100524/DI" });
-        addAnnotation(getDocumentRoot_Node(), source, new String[] { "kind", "element", "name", "Node", "namespace", "http://www.omg.org/spec/DD/20100524/DI" });
-        addAnnotation(getDocumentRoot_Plane(), source, new String[] { "kind", "element", "name", "Plane", "namespace", "http://www.omg.org/spec/DD/20100524/DI" });
-        addAnnotation(getDocumentRoot_Shape(), source, new String[] { "kind", "element", "name", "Shape", "namespace", "http://www.omg.org/spec/DD/20100524/DI" });
-        addAnnotation(getDocumentRoot_Style(), source, new String[] { "kind", "element", "name", "Style", "namespace", "http://www.omg.org/spec/DD/20100524/DI" });
+        addAnnotation(getDocumentRoot_Mixed(), source, new String[] { "kind", "elementWildcard",
+                "name", ":mixed" });
+        addAnnotation(getDocumentRoot_XMLNSPrefixMap(), source, new String[] { "kind", "attribute",
+                "name", "xmlns:prefix" });
+        addAnnotation(getDocumentRoot_XSISchemaLocation(), source, new String[] { "kind",
+                "attribute", "name", "xsi:schemaLocation" });
+        addAnnotation(getDocumentRoot_DiagramElement(), source, new String[] { "kind", "element",
+                "name", "DiagramElement", "namespace", "http://www.omg.org/spec/DD/20100524/DI" });
+        addAnnotation(getDocumentRoot_Diagram(), source, new String[] { "kind", "element", "name",
+                "Diagram", "namespace", "http://www.omg.org/spec/DD/20100524/DI" });
+        addAnnotation(getDocumentRoot_Edge(), source, new String[] { "kind", "element", "name",
+                "Edge", "namespace", "http://www.omg.org/spec/DD/20100524/DI" });
+        addAnnotation(getDocumentRoot_Label(), source, new String[] { "kind", "element", "name",
+                "Label", "namespace", "http://www.omg.org/spec/DD/20100524/DI" });
+        addAnnotation(getDocumentRoot_LabeledEdge(), source, new String[] { "kind", "element",
+                "name", "LabeledEdge", "namespace", "http://www.omg.org/spec/DD/20100524/DI" });
+        addAnnotation(getDocumentRoot_LabeledShape(), source, new String[] { "kind", "element",
+                "name", "LabeledShape", "namespace", "http://www.omg.org/spec/DD/20100524/DI" });
+        addAnnotation(getDocumentRoot_Node(), source, new String[] { "kind", "element", "name",
+                "Node", "namespace", "http://www.omg.org/spec/DD/20100524/DI" });
+        addAnnotation(getDocumentRoot_Plane(), source, new String[] { "kind", "element", "name",
+                "Plane", "namespace", "http://www.omg.org/spec/DD/20100524/DI" });
+        addAnnotation(getDocumentRoot_Shape(), source, new String[] { "kind", "element", "name",
+                "Shape", "namespace", "http://www.omg.org/spec/DD/20100524/DI" });
+        addAnnotation(getDocumentRoot_Style(), source, new String[] { "kind", "element", "name",
+                "Style", "namespace", "http://www.omg.org/spec/DD/20100524/DI" });
         addAnnotation(diagramEClass, source, new String[] { "name", "Diagram", "kind", "empty" });
-        addAnnotation(getDiagram_Documentation(), source, new String[] { "kind", "attribute", "name", "documentation" });
+        addAnnotation(getDiagram_Documentation(), source, new String[] { "kind", "attribute",
+                "name", "documentation" });
         addAnnotation(getDiagram_Id(), source, new String[] { "kind", "attribute", "name", "id" });
-        addAnnotation(getDiagram_Name(), source, new String[] { "kind", "attribute", "name", "name" });
-        addAnnotation(getDiagram_Resolution(), source, new String[] { "kind", "attribute", "name", "resolution" });
-        addAnnotation(diagramElementEClass, source, new String[] { "name", "DiagramElement", "kind", "elementOnly" });
-        addAnnotation(getDiagramElement_Id(), source, new String[] { "kind", "attribute", "name", "id" });
+        addAnnotation(getDiagram_Name(), source,
+                new String[] { "kind", "attribute", "name", "name" });
+        addAnnotation(getDiagram_Resolution(), source, new String[] { "kind", "attribute", "name",
+                "resolution" });
+        addAnnotation(diagramElementEClass, source, new String[] { "name", "DiagramElement",
+                "kind", "elementOnly" });
+        addAnnotation(getDiagramElement_Id(), source, new String[] { "kind", "attribute", "name",
+                "id" });
         addAnnotation(edgeEClass, source, new String[] { "name", "Edge", "kind", "elementOnly" });
-        addAnnotation(getEdge_Waypoint(), source, new String[] { "kind", "element", "name", "waypoint", "namespace", "http://www.omg.org/spec/DD/20100524/DI" });
+        addAnnotation(getEdge_Waypoint(), source, new String[] { "kind", "element", "name",
+                "waypoint", "namespace", "http://www.omg.org/spec/DD/20100524/DI" });
         addAnnotation(labelEClass, source, new String[] { "name", "Label", "kind", "elementOnly" });
-        addAnnotation(getLabel_Bounds(), source, new String[] { "kind", "element", "name", "Bounds", "namespace", "http://www.omg.org/spec/DD/20100524/DC" });
-        addAnnotation(labeledEdgeEClass, source, new String[] { "name", "LabeledEdge", "kind", "elementOnly" });
-        addAnnotation(labeledShapeEClass, source, new String[] { "name", "LabeledShape", "kind", "elementOnly" });
+        addAnnotation(getLabel_Bounds(), source, new String[] { "kind", "element", "name",
+                "Bounds", "namespace", "http://www.omg.org/spec/DD/20100524/DC" });
+        addAnnotation(labeledEdgeEClass, source, new String[] { "name", "LabeledEdge", "kind",
+                "elementOnly" });
+        addAnnotation(labeledShapeEClass, source, new String[] { "name", "LabeledShape", "kind",
+                "elementOnly" });
         addAnnotation(nodeEClass, source, new String[] { "name", "Node", "kind", "elementOnly" });
         addAnnotation(planeEClass, source, new String[] { "name", "Plane", "kind", "elementOnly" });
-        addAnnotation(getPlane_PlaneElement(), source, new String[] { "kind", "element", "name", "DiagramElement", "namespace", "http://www.omg.org/spec/DD/20100524/DI", "group", "http://www.omg.org/spec/DD/20100524/DI#DiagramElement" });
+        addAnnotation(getPlane_PlaneElement(), source, new String[] { "kind", "element", "name",
+                "DiagramElement", "namespace", "http://www.omg.org/spec/DD/20100524/DI", "group",
+                "http://www.omg.org/spec/DD/20100524/DI#DiagramElement" });
         addAnnotation(shapeEClass, source, new String[] { "name", "Shape", "kind", "elementOnly" });
-        addAnnotation(getShape_Bounds(), source, new String[] { "kind", "element", "name", "Bounds", "namespace", "http://www.omg.org/spec/DD/20100524/DC" });
+        addAnnotation(getShape_Bounds(), source, new String[] { "kind", "element", "name",
+                "Bounds", "namespace", "http://www.omg.org/spec/DD/20100524/DC" });
         addAnnotation(styleEClass, source, new String[] { "name", "Style", "kind", "empty" });
         addAnnotation(getStyle_Id(), source, new String[] { "kind", "attribute", "name", "id" });
     }

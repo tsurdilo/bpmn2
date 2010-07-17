@@ -135,7 +135,8 @@ public abstract class FlowElementImpl extends BaseElementImpl implements FlowEle
         Auditing oldAuditing = auditing;
         auditing = newAuditing;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.FLOW_ELEMENT__AUDITING, oldAuditing, newAuditing);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.FLOW_ELEMENT__AUDITING, oldAuditing, newAuditing);
             if (msgs == null)
                 msgs = notification;
             else
@@ -153,14 +154,17 @@ public abstract class FlowElementImpl extends BaseElementImpl implements FlowEle
         if (newAuditing != auditing) {
             NotificationChain msgs = null;
             if (auditing != null)
-                msgs = ((InternalEObject)auditing).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.FLOW_ELEMENT__AUDITING, null, msgs);
+                msgs = ((InternalEObject) auditing).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.FLOW_ELEMENT__AUDITING, null, msgs);
             if (newAuditing != null)
-                msgs = ((InternalEObject)newAuditing).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.FLOW_ELEMENT__AUDITING, null, msgs);
+                msgs = ((InternalEObject) newAuditing).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.FLOW_ELEMENT__AUDITING, null, msgs);
             msgs = basicSetAuditing(newAuditing, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.FLOW_ELEMENT__AUDITING, newAuditing, newAuditing));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.FLOW_ELEMENT__AUDITING, newAuditing, newAuditing));
     }
 
     /**
@@ -181,7 +185,8 @@ public abstract class FlowElementImpl extends BaseElementImpl implements FlowEle
         Monitoring oldMonitoring = monitoring;
         monitoring = newMonitoring;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.FLOW_ELEMENT__MONITORING, oldMonitoring, newMonitoring);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.FLOW_ELEMENT__MONITORING, oldMonitoring, newMonitoring);
             if (msgs == null)
                 msgs = notification;
             else
@@ -199,14 +204,17 @@ public abstract class FlowElementImpl extends BaseElementImpl implements FlowEle
         if (newMonitoring != monitoring) {
             NotificationChain msgs = null;
             if (monitoring != null)
-                msgs = ((InternalEObject)monitoring).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.FLOW_ELEMENT__MONITORING, null, msgs);
+                msgs = ((InternalEObject) monitoring).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.FLOW_ELEMENT__MONITORING, null, msgs);
             if (newMonitoring != null)
-                msgs = ((InternalEObject)newMonitoring).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.FLOW_ELEMENT__MONITORING, null, msgs);
+                msgs = ((InternalEObject) newMonitoring).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.FLOW_ELEMENT__MONITORING, null, msgs);
             msgs = basicSetMonitoring(newMonitoring, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.FLOW_ELEMENT__MONITORING, newMonitoring, newMonitoring));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.FLOW_ELEMENT__MONITORING, newMonitoring, newMonitoring));
     }
 
     /**
@@ -216,7 +224,9 @@ public abstract class FlowElementImpl extends BaseElementImpl implements FlowEle
      */
     public List<CategoryValue> getCategoryValueRef() {
         if (categoryValueRef == null) {
-            categoryValueRef = new EObjectWithInverseEList.ManyInverse<CategoryValue>(CategoryValue.class, this, Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF, Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS);
+            categoryValueRef = new EObjectWithInverseEList.ManyInverse<CategoryValue>(
+                    CategoryValue.class, this, Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF,
+                    Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS);
         }
         return categoryValueRef;
     }
@@ -239,7 +249,8 @@ public abstract class FlowElementImpl extends BaseElementImpl implements FlowEle
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.FLOW_ELEMENT__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.FLOW_ELEMENT__NAME,
+                    oldName, name));
     }
 
     /**
@@ -249,10 +260,12 @@ public abstract class FlowElementImpl extends BaseElementImpl implements FlowEle
      */
     @SuppressWarnings("unchecked")
     @Override
-    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF:
-                return ((InternalEList<InternalEObject>)(InternalEList<?>)getCategoryValueRef()).basicAdd(otherEnd, msgs);
+        case Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getCategoryValueRef())
+                    .basicAdd(otherEnd, msgs);
         }
         return super.eInverseAdd(otherEnd, featureID, msgs);
     }
@@ -263,14 +276,15 @@ public abstract class FlowElementImpl extends BaseElementImpl implements FlowEle
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.FLOW_ELEMENT__AUDITING:
-                return basicSetAuditing(null, msgs);
-            case Bpmn2Package.FLOW_ELEMENT__MONITORING:
-                return basicSetMonitoring(null, msgs);
-            case Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF:
-                return ((InternalEList<?>)getCategoryValueRef()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.FLOW_ELEMENT__AUDITING:
+            return basicSetAuditing(null, msgs);
+        case Bpmn2Package.FLOW_ELEMENT__MONITORING:
+            return basicSetMonitoring(null, msgs);
+        case Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF:
+            return ((InternalEList<?>) getCategoryValueRef()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -283,14 +297,14 @@ public abstract class FlowElementImpl extends BaseElementImpl implements FlowEle
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.FLOW_ELEMENT__AUDITING:
-                return getAuditing();
-            case Bpmn2Package.FLOW_ELEMENT__MONITORING:
-                return getMonitoring();
-            case Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF:
-                return getCategoryValueRef();
-            case Bpmn2Package.FLOW_ELEMENT__NAME:
-                return getName();
+        case Bpmn2Package.FLOW_ELEMENT__AUDITING:
+            return getAuditing();
+        case Bpmn2Package.FLOW_ELEMENT__MONITORING:
+            return getMonitoring();
+        case Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF:
+            return getCategoryValueRef();
+        case Bpmn2Package.FLOW_ELEMENT__NAME:
+            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -304,19 +318,19 @@ public abstract class FlowElementImpl extends BaseElementImpl implements FlowEle
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.FLOW_ELEMENT__AUDITING:
-                setAuditing((Auditing)newValue);
-                return;
-            case Bpmn2Package.FLOW_ELEMENT__MONITORING:
-                setMonitoring((Monitoring)newValue);
-                return;
-            case Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF:
-                getCategoryValueRef().clear();
-                getCategoryValueRef().addAll((Collection<? extends CategoryValue>)newValue);
-                return;
-            case Bpmn2Package.FLOW_ELEMENT__NAME:
-                setName((String)newValue);
-                return;
+        case Bpmn2Package.FLOW_ELEMENT__AUDITING:
+            setAuditing((Auditing) newValue);
+            return;
+        case Bpmn2Package.FLOW_ELEMENT__MONITORING:
+            setMonitoring((Monitoring) newValue);
+            return;
+        case Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF:
+            getCategoryValueRef().clear();
+            getCategoryValueRef().addAll((Collection<? extends CategoryValue>) newValue);
+            return;
+        case Bpmn2Package.FLOW_ELEMENT__NAME:
+            setName((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -329,18 +343,18 @@ public abstract class FlowElementImpl extends BaseElementImpl implements FlowEle
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.FLOW_ELEMENT__AUDITING:
-                setAuditing((Auditing)null);
-                return;
-            case Bpmn2Package.FLOW_ELEMENT__MONITORING:
-                setMonitoring((Monitoring)null);
-                return;
-            case Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF:
-                getCategoryValueRef().clear();
-                return;
-            case Bpmn2Package.FLOW_ELEMENT__NAME:
-                setName(NAME_EDEFAULT);
-                return;
+        case Bpmn2Package.FLOW_ELEMENT__AUDITING:
+            setAuditing((Auditing) null);
+            return;
+        case Bpmn2Package.FLOW_ELEMENT__MONITORING:
+            setMonitoring((Monitoring) null);
+            return;
+        case Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF:
+            getCategoryValueRef().clear();
+            return;
+        case Bpmn2Package.FLOW_ELEMENT__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -353,14 +367,14 @@ public abstract class FlowElementImpl extends BaseElementImpl implements FlowEle
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.FLOW_ELEMENT__AUDITING:
-                return auditing != null;
-            case Bpmn2Package.FLOW_ELEMENT__MONITORING:
-                return monitoring != null;
-            case Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF:
-                return categoryValueRef != null && !categoryValueRef.isEmpty();
-            case Bpmn2Package.FLOW_ELEMENT__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case Bpmn2Package.FLOW_ELEMENT__AUDITING:
+            return auditing != null;
+        case Bpmn2Package.FLOW_ELEMENT__MONITORING:
+            return monitoring != null;
+        case Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF:
+            return categoryValueRef != null && !categoryValueRef.isEmpty();
+        case Bpmn2Package.FLOW_ELEMENT__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }

@@ -77,7 +77,8 @@ public class GlobalTaskImpl extends CallableElementImpl implements GlobalTask {
      */
     public List<ResourceRole> getResources() {
         if (resources == null) {
-            resources = new EObjectContainmentEList<ResourceRole>(ResourceRole.class, this, Bpmn2Package.GLOBAL_TASK__RESOURCES);
+            resources = new EObjectContainmentEList<ResourceRole>(ResourceRole.class, this,
+                    Bpmn2Package.GLOBAL_TASK__RESOURCES);
         }
         return resources;
     }
@@ -88,10 +89,11 @@ public class GlobalTaskImpl extends CallableElementImpl implements GlobalTask {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.GLOBAL_TASK__RESOURCES:
-                return ((InternalEList<?>)getResources()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.GLOBAL_TASK__RESOURCES:
+            return ((InternalEList<?>) getResources()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -104,8 +106,8 @@ public class GlobalTaskImpl extends CallableElementImpl implements GlobalTask {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.GLOBAL_TASK__RESOURCES:
-                return getResources();
+        case Bpmn2Package.GLOBAL_TASK__RESOURCES:
+            return getResources();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -119,10 +121,10 @@ public class GlobalTaskImpl extends CallableElementImpl implements GlobalTask {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.GLOBAL_TASK__RESOURCES:
-                getResources().clear();
-                getResources().addAll((Collection<? extends ResourceRole>)newValue);
-                return;
+        case Bpmn2Package.GLOBAL_TASK__RESOURCES:
+            getResources().clear();
+            getResources().addAll((Collection<? extends ResourceRole>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -135,9 +137,9 @@ public class GlobalTaskImpl extends CallableElementImpl implements GlobalTask {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.GLOBAL_TASK__RESOURCES:
-                getResources().clear();
-                return;
+        case Bpmn2Package.GLOBAL_TASK__RESOURCES:
+            getResources().clear();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -150,8 +152,8 @@ public class GlobalTaskImpl extends CallableElementImpl implements GlobalTask {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.GLOBAL_TASK__RESOURCES:
-                return resources != null && !resources.isEmpty();
+        case Bpmn2Package.GLOBAL_TASK__RESOURCES:
+            return resources != null && !resources.isEmpty();
         }
         return super.eIsSet(featureID);
     }

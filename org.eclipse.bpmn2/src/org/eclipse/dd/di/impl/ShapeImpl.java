@@ -84,7 +84,8 @@ public abstract class ShapeImpl extends NodeImpl implements Shape {
         Bounds oldBounds = bounds;
         bounds = newBounds;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DiPackage.SHAPE__BOUNDS, oldBounds, newBounds);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    DiPackage.SHAPE__BOUNDS, oldBounds, newBounds);
             if (msgs == null)
                 msgs = notification;
             else
@@ -102,14 +103,17 @@ public abstract class ShapeImpl extends NodeImpl implements Shape {
         if (newBounds != bounds) {
             NotificationChain msgs = null;
             if (bounds != null)
-                msgs = ((InternalEObject)bounds).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DiPackage.SHAPE__BOUNDS, null, msgs);
+                msgs = ((InternalEObject) bounds).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - DiPackage.SHAPE__BOUNDS, null, msgs);
             if (newBounds != null)
-                msgs = ((InternalEObject)newBounds).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DiPackage.SHAPE__BOUNDS, null, msgs);
+                msgs = ((InternalEObject) newBounds).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - DiPackage.SHAPE__BOUNDS, null, msgs);
             msgs = basicSetBounds(newBounds, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, DiPackage.SHAPE__BOUNDS, newBounds, newBounds));
+            eNotify(new ENotificationImpl(this, Notification.SET, DiPackage.SHAPE__BOUNDS,
+                    newBounds, newBounds));
     }
 
     /**
@@ -118,10 +122,11 @@ public abstract class ShapeImpl extends NodeImpl implements Shape {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case DiPackage.SHAPE__BOUNDS:
-                return basicSetBounds(null, msgs);
+        case DiPackage.SHAPE__BOUNDS:
+            return basicSetBounds(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -134,8 +139,8 @@ public abstract class ShapeImpl extends NodeImpl implements Shape {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case DiPackage.SHAPE__BOUNDS:
-                return getBounds();
+        case DiPackage.SHAPE__BOUNDS:
+            return getBounds();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -148,9 +153,9 @@ public abstract class ShapeImpl extends NodeImpl implements Shape {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case DiPackage.SHAPE__BOUNDS:
-                setBounds((Bounds)newValue);
-                return;
+        case DiPackage.SHAPE__BOUNDS:
+            setBounds((Bounds) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -163,9 +168,9 @@ public abstract class ShapeImpl extends NodeImpl implements Shape {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case DiPackage.SHAPE__BOUNDS:
-                setBounds((Bounds)null);
-                return;
+        case DiPackage.SHAPE__BOUNDS:
+            setBounds((Bounds) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -178,8 +183,8 @@ public abstract class ShapeImpl extends NodeImpl implements Shape {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case DiPackage.SHAPE__BOUNDS:
-                return bounds != null;
+        case DiPackage.SHAPE__BOUNDS:
+            return bounds != null;
         }
         return super.eIsSet(featureID);
     }

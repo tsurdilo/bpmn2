@@ -126,7 +126,9 @@ public abstract class BaseElementImpl extends EObjectImpl implements BaseElement
      */
     public List<ExtensionAttributeValue> getExtensionValues() {
         if (extensionValues == null) {
-            extensionValues = new EObjectContainmentEList<ExtensionAttributeValue>(ExtensionAttributeValue.class, this, Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES);
+            extensionValues = new EObjectContainmentEList<ExtensionAttributeValue>(
+                    ExtensionAttributeValue.class, this,
+                    Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES);
         }
         return extensionValues;
     }
@@ -138,7 +140,8 @@ public abstract class BaseElementImpl extends EObjectImpl implements BaseElement
      */
     public List<Documentation> getDocumentation() {
         if (documentation == null) {
-            documentation = new EObjectContainmentEList<Documentation>(Documentation.class, this, Bpmn2Package.BASE_ELEMENT__DOCUMENTATION);
+            documentation = new EObjectContainmentEList<Documentation>(Documentation.class, this,
+                    Bpmn2Package.BASE_ELEMENT__DOCUMENTATION);
         }
         return documentation;
     }
@@ -150,7 +153,9 @@ public abstract class BaseElementImpl extends EObjectImpl implements BaseElement
      */
     public List<ExtensionDefinition> getExtensionDefinitions() {
         if (extensionDefinitions == null) {
-            extensionDefinitions = new EObjectResolvingEList<ExtensionDefinition>(ExtensionDefinition.class, this, Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS);
+            extensionDefinitions = new EObjectResolvingEList<ExtensionDefinition>(
+                    ExtensionDefinition.class, this,
+                    Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS);
         }
         return extensionDefinitions;
     }
@@ -173,7 +178,8 @@ public abstract class BaseElementImpl extends EObjectImpl implements BaseElement
         String oldId = id;
         id = newId;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.BASE_ELEMENT__ID, oldId, id));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.BASE_ELEMENT__ID,
+                    oldId, id));
     }
 
     /**
@@ -182,12 +188,13 @@ public abstract class BaseElementImpl extends EObjectImpl implements BaseElement
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
-                return ((InternalEList<?>)getExtensionValues()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
-                return ((InternalEList<?>)getDocumentation()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
+            return ((InternalEList<?>) getExtensionValues()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
+            return ((InternalEList<?>) getDocumentation()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -200,14 +207,14 @@ public abstract class BaseElementImpl extends EObjectImpl implements BaseElement
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
-                return getExtensionValues();
-            case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
-                return getDocumentation();
-            case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS:
-                return getExtensionDefinitions();
-            case Bpmn2Package.BASE_ELEMENT__ID:
-                return getId();
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
+            return getExtensionValues();
+        case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
+            return getDocumentation();
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS:
+            return getExtensionDefinitions();
+        case Bpmn2Package.BASE_ELEMENT__ID:
+            return getId();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -221,21 +228,21 @@ public abstract class BaseElementImpl extends EObjectImpl implements BaseElement
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
-                getExtensionValues().clear();
-                getExtensionValues().addAll((Collection<? extends ExtensionAttributeValue>)newValue);
-                return;
-            case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
-                getDocumentation().clear();
-                getDocumentation().addAll((Collection<? extends Documentation>)newValue);
-                return;
-            case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS:
-                getExtensionDefinitions().clear();
-                getExtensionDefinitions().addAll((Collection<? extends ExtensionDefinition>)newValue);
-                return;
-            case Bpmn2Package.BASE_ELEMENT__ID:
-                setId((String)newValue);
-                return;
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
+            getExtensionValues().clear();
+            getExtensionValues().addAll((Collection<? extends ExtensionAttributeValue>) newValue);
+            return;
+        case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
+            getDocumentation().clear();
+            getDocumentation().addAll((Collection<? extends Documentation>) newValue);
+            return;
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS:
+            getExtensionDefinitions().clear();
+            getExtensionDefinitions().addAll((Collection<? extends ExtensionDefinition>) newValue);
+            return;
+        case Bpmn2Package.BASE_ELEMENT__ID:
+            setId((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -248,18 +255,18 @@ public abstract class BaseElementImpl extends EObjectImpl implements BaseElement
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
-                getExtensionValues().clear();
-                return;
-            case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
-                getDocumentation().clear();
-                return;
-            case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS:
-                getExtensionDefinitions().clear();
-                return;
-            case Bpmn2Package.BASE_ELEMENT__ID:
-                setId(ID_EDEFAULT);
-                return;
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
+            getExtensionValues().clear();
+            return;
+        case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
+            getDocumentation().clear();
+            return;
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS:
+            getExtensionDefinitions().clear();
+            return;
+        case Bpmn2Package.BASE_ELEMENT__ID:
+            setId(ID_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -272,14 +279,14 @@ public abstract class BaseElementImpl extends EObjectImpl implements BaseElement
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
-                return extensionValues != null && !extensionValues.isEmpty();
-            case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
-                return documentation != null && !documentation.isEmpty();
-            case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS:
-                return extensionDefinitions != null && !extensionDefinitions.isEmpty();
-            case Bpmn2Package.BASE_ELEMENT__ID:
-                return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
+            return extensionValues != null && !extensionValues.isEmpty();
+        case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
+            return documentation != null && !documentation.isEmpty();
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS:
+            return extensionDefinitions != null && !extensionDefinitions.isEmpty();
+        case Bpmn2Package.BASE_ELEMENT__ID:
+            return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
         }
         return super.eIsSet(featureID);
     }

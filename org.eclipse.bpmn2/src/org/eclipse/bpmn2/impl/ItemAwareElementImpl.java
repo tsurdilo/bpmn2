@@ -96,7 +96,8 @@ public class ItemAwareElementImpl extends BaseElementImpl implements ItemAwareEl
         DataState oldDataState = dataState;
         dataState = newDataState;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE, oldDataState, newDataState);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE, oldDataState, newDataState);
             if (msgs == null)
                 msgs = notification;
             else
@@ -114,14 +115,17 @@ public class ItemAwareElementImpl extends BaseElementImpl implements ItemAwareEl
         if (newDataState != dataState) {
             NotificationChain msgs = null;
             if (dataState != null)
-                msgs = ((InternalEObject)dataState).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE, null, msgs);
+                msgs = ((InternalEObject) dataState).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE, null, msgs);
             if (newDataState != null)
-                msgs = ((InternalEObject)newDataState).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE, null, msgs);
+                msgs = ((InternalEObject) newDataState).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE, null, msgs);
             msgs = basicSetDataState(newDataState, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE, newDataState, newDataState));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE, newDataState, newDataState));
     }
 
     /**
@@ -131,11 +135,13 @@ public class ItemAwareElementImpl extends BaseElementImpl implements ItemAwareEl
      */
     public ItemDefinition getItemSubjectRef() {
         if (itemSubjectRef != null && itemSubjectRef.eIsProxy()) {
-            InternalEObject oldItemSubjectRef = (InternalEObject)itemSubjectRef;
-            itemSubjectRef = (ItemDefinition)eResolveProxy(oldItemSubjectRef);
+            InternalEObject oldItemSubjectRef = (InternalEObject) itemSubjectRef;
+            itemSubjectRef = (ItemDefinition) eResolveProxy(oldItemSubjectRef);
             if (itemSubjectRef != oldItemSubjectRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF, oldItemSubjectRef, itemSubjectRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF, oldItemSubjectRef,
+                            itemSubjectRef));
             }
         }
         return itemSubjectRef;
@@ -159,7 +165,9 @@ public class ItemAwareElementImpl extends BaseElementImpl implements ItemAwareEl
         ItemDefinition oldItemSubjectRef = itemSubjectRef;
         itemSubjectRef = newItemSubjectRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF, oldItemSubjectRef, itemSubjectRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF, oldItemSubjectRef,
+                    itemSubjectRef));
     }
 
     /**
@@ -168,10 +176,11 @@ public class ItemAwareElementImpl extends BaseElementImpl implements ItemAwareEl
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE:
-                return basicSetDataState(null, msgs);
+        case Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE:
+            return basicSetDataState(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -184,12 +193,12 @@ public class ItemAwareElementImpl extends BaseElementImpl implements ItemAwareEl
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE:
-                return getDataState();
-            case Bpmn2Package.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF:
-                if (resolve)
-                    return getItemSubjectRef();
-                return basicGetItemSubjectRef();
+        case Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE:
+            return getDataState();
+        case Bpmn2Package.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF:
+            if (resolve)
+                return getItemSubjectRef();
+            return basicGetItemSubjectRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -202,12 +211,12 @@ public class ItemAwareElementImpl extends BaseElementImpl implements ItemAwareEl
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE:
-                setDataState((DataState)newValue);
-                return;
-            case Bpmn2Package.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF:
-                setItemSubjectRef((ItemDefinition)newValue);
-                return;
+        case Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE:
+            setDataState((DataState) newValue);
+            return;
+        case Bpmn2Package.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF:
+            setItemSubjectRef((ItemDefinition) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -220,12 +229,12 @@ public class ItemAwareElementImpl extends BaseElementImpl implements ItemAwareEl
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE:
-                setDataState((DataState)null);
-                return;
-            case Bpmn2Package.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF:
-                setItemSubjectRef((ItemDefinition)null);
-                return;
+        case Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE:
+            setDataState((DataState) null);
+            return;
+        case Bpmn2Package.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF:
+            setItemSubjectRef((ItemDefinition) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -238,10 +247,10 @@ public class ItemAwareElementImpl extends BaseElementImpl implements ItemAwareEl
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE:
-                return dataState != null;
-            case Bpmn2Package.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF:
-                return itemSubjectRef != null;
+        case Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE:
+            return dataState != null;
+        case Bpmn2Package.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF:
+            return itemSubjectRef != null;
         }
         return super.eIsSet(featureID);
     }

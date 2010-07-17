@@ -136,7 +136,8 @@ public enum MultiInstanceBehavior implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    private static final MultiInstanceBehavior[] VALUES_ARRAY = new MultiInstanceBehavior[] { NONE, ONE, ALL, COMPLEX, };
+    private static final MultiInstanceBehavior[] VALUES_ARRAY = new MultiInstanceBehavior[] { NONE,
+            ONE, ALL, COMPLEX, };
 
     /**
      * A public read-only list of all the '<em><b>Multi Instance Behavior</b></em>' enumerators.
@@ -144,7 +145,8 @@ public enum MultiInstanceBehavior implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final List<MultiInstanceBehavior> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+    public static final List<MultiInstanceBehavior> VALUES = Collections.unmodifiableList(Arrays
+            .asList(VALUES_ARRAY));
 
     /**
      * Returns the '<em><b>Multi Instance Behavior</b></em>' literal with the specified literal value.
@@ -186,14 +188,14 @@ public enum MultiInstanceBehavior implements Enumerator {
      */
     public static MultiInstanceBehavior get(int value) {
         switch (value) {
-            case NONE_VALUE:
-                return NONE;
-            case ONE_VALUE:
-                return ONE;
-            case ALL_VALUE:
-                return ALL;
-            case COMPLEX_VALUE:
-                return COMPLEX;
+        case NONE_VALUE:
+            return NONE;
+        case ONE_VALUE:
+            return ONE;
+        case ALL_VALUE:
+            return ALL;
+        case COMPLEX_VALUE:
+            return COMPLEX;
         }
         return null;
     }

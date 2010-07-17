@@ -83,11 +83,13 @@ public class ConversationAssociationImpl extends BaseElementImpl implements Conv
      */
     public ConversationNode getInnerConversationNodeRef() {
         if (innerConversationNodeRef != null && innerConversationNodeRef.eIsProxy()) {
-            InternalEObject oldInnerConversationNodeRef = (InternalEObject)innerConversationNodeRef;
-            innerConversationNodeRef = (ConversationNode)eResolveProxy(oldInnerConversationNodeRef);
+            InternalEObject oldInnerConversationNodeRef = (InternalEObject) innerConversationNodeRef;
+            innerConversationNodeRef = (ConversationNode) eResolveProxy(oldInnerConversationNodeRef);
             if (innerConversationNodeRef != oldInnerConversationNodeRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF, oldInnerConversationNodeRef, innerConversationNodeRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF,
+                            oldInnerConversationNodeRef, innerConversationNodeRef));
             }
         }
         return innerConversationNodeRef;
@@ -111,7 +113,9 @@ public class ConversationAssociationImpl extends BaseElementImpl implements Conv
         ConversationNode oldInnerConversationNodeRef = innerConversationNodeRef;
         innerConversationNodeRef = newInnerConversationNodeRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF, oldInnerConversationNodeRef, innerConversationNodeRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF,
+                    oldInnerConversationNodeRef, innerConversationNodeRef));
     }
 
     /**
@@ -121,11 +125,13 @@ public class ConversationAssociationImpl extends BaseElementImpl implements Conv
      */
     public ConversationNode getOuterConversationNodeRef() {
         if (outerConversationNodeRef != null && outerConversationNodeRef.eIsProxy()) {
-            InternalEObject oldOuterConversationNodeRef = (InternalEObject)outerConversationNodeRef;
-            outerConversationNodeRef = (ConversationNode)eResolveProxy(oldOuterConversationNodeRef);
+            InternalEObject oldOuterConversationNodeRef = (InternalEObject) outerConversationNodeRef;
+            outerConversationNodeRef = (ConversationNode) eResolveProxy(oldOuterConversationNodeRef);
             if (outerConversationNodeRef != oldOuterConversationNodeRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF, oldOuterConversationNodeRef, outerConversationNodeRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF,
+                            oldOuterConversationNodeRef, outerConversationNodeRef));
             }
         }
         return outerConversationNodeRef;
@@ -149,7 +155,9 @@ public class ConversationAssociationImpl extends BaseElementImpl implements Conv
         ConversationNode oldOuterConversationNodeRef = outerConversationNodeRef;
         outerConversationNodeRef = newOuterConversationNodeRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF, oldOuterConversationNodeRef, outerConversationNodeRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF,
+                    oldOuterConversationNodeRef, outerConversationNodeRef));
     }
 
     /**
@@ -160,14 +168,14 @@ public class ConversationAssociationImpl extends BaseElementImpl implements Conv
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF:
-                if (resolve)
-                    return getInnerConversationNodeRef();
-                return basicGetInnerConversationNodeRef();
-            case Bpmn2Package.CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF:
-                if (resolve)
-                    return getOuterConversationNodeRef();
-                return basicGetOuterConversationNodeRef();
+        case Bpmn2Package.CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF:
+            if (resolve)
+                return getInnerConversationNodeRef();
+            return basicGetInnerConversationNodeRef();
+        case Bpmn2Package.CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF:
+            if (resolve)
+                return getOuterConversationNodeRef();
+            return basicGetOuterConversationNodeRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -180,12 +188,12 @@ public class ConversationAssociationImpl extends BaseElementImpl implements Conv
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF:
-                setInnerConversationNodeRef((ConversationNode)newValue);
-                return;
-            case Bpmn2Package.CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF:
-                setOuterConversationNodeRef((ConversationNode)newValue);
-                return;
+        case Bpmn2Package.CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF:
+            setInnerConversationNodeRef((ConversationNode) newValue);
+            return;
+        case Bpmn2Package.CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF:
+            setOuterConversationNodeRef((ConversationNode) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -198,12 +206,12 @@ public class ConversationAssociationImpl extends BaseElementImpl implements Conv
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF:
-                setInnerConversationNodeRef((ConversationNode)null);
-                return;
-            case Bpmn2Package.CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF:
-                setOuterConversationNodeRef((ConversationNode)null);
-                return;
+        case Bpmn2Package.CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF:
+            setInnerConversationNodeRef((ConversationNode) null);
+            return;
+        case Bpmn2Package.CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF:
+            setOuterConversationNodeRef((ConversationNode) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -216,10 +224,10 @@ public class ConversationAssociationImpl extends BaseElementImpl implements Conv
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF:
-                return innerConversationNodeRef != null;
-            case Bpmn2Package.CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF:
-                return outerConversationNodeRef != null;
+        case Bpmn2Package.CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF:
+            return innerConversationNodeRef != null;
+        case Bpmn2Package.CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF:
+            return outerConversationNodeRef != null;
         }
         return super.eIsSet(featureID);
     }

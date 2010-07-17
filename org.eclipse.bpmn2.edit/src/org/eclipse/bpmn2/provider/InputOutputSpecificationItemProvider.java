@@ -38,7 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class InputOutputSpecificationItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class InputOutputSpecificationItemProvider extends BaseElementItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -106,9 +108,11 @@ public class InputOutputSpecificationItemProvider extends BaseElementItemProvide
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/InputOutputSpecification.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/InputOutputSpecification.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/InputOutputSpecification.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/InputOutputSpecification.gif"));
         }
     }
 
@@ -120,8 +124,9 @@ public class InputOutputSpecificationItemProvider extends BaseElementItemProvide
      */
     @Override
     public String getText(Object object) {
-        String label = ((InputOutputSpecification)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_InputOutputSpecification_type") : getString("_UI_InputOutputSpecification_type") + " " + label;
+        String label = ((InputOutputSpecification) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_InputOutputSpecification_type")
+                : getString("_UI_InputOutputSpecification_type") + " " + label;
     }
 
     /**
@@ -136,12 +141,13 @@ public class InputOutputSpecificationItemProvider extends BaseElementItemProvide
         updateChildren(notification);
 
         switch (notification.getFeatureID(InputOutputSpecification.class)) {
-            case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS:
-            case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS:
-            case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS:
-            case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS:
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS:
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS:
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -157,13 +163,21 @@ public class InputOutputSpecificationItemProvider extends BaseElementItemProvide
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS, Bpmn2Factory.eINSTANCE.createDataInput()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS,
+                Bpmn2Factory.eINSTANCE.createDataInput()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS, Bpmn2Factory.eINSTANCE.createDataOutput()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS,
+                Bpmn2Factory.eINSTANCE.createDataOutput()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS, Bpmn2Factory.eINSTANCE.createInputSet()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS,
+                Bpmn2Factory.eINSTANCE.createInputSet()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS, Bpmn2Factory.eINSTANCE.createOutputSet()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS,
+                Bpmn2Factory.eINSTANCE.createOutputSet()));
     }
 
 }

@@ -29,26 +29,27 @@ import org.eclipse.emf.ecore.xmi.impl.URIHandlerImpl;
  */
 public class QNameURIHandler extends URIHandlerImpl {
 
-	/**
-	 * 
-	 */
-	public QNameURIHandler() {}
+    /**
+     * 
+     */
+    public QNameURIHandler() {
+    }
 
-	@Override
-	public URI resolve(URI uri) {
-		// In the local case we receive the pure ID as URI. In EMF this must be an URI with the ID as fragment.
-		return super.resolve(URI.createURI("#" + uri.toString()));
-	}
+    @Override
+    public URI resolve(URI uri) {
+        // In the local case we receive the pure ID as URI. In EMF this must be an URI with the ID as fragment.
+        return super.resolve(URI.createURI("#" + uri.toString()));
+    }
 
-	@Override
-	public URI deresolve(URI uri) {
-		URI deresolved = super.deresolve(uri);
-		String deresolvedString = deresolved.toString();
-		if (deresolvedString.startsWith("#")) // pure fragment
-		{
-			return URI.createURI(deresolvedString.substring(1)); // cut off "#"
-		}
-		return deresolved;
-	}
+    @Override
+    public URI deresolve(URI uri) {
+        URI deresolved = super.deresolve(uri);
+        String deresolvedString = deresolved.toString();
+        if (deresolvedString.startsWith("#")) // pure fragment
+        {
+            return URI.createURI(deresolvedString.substring(1)); // cut off "#"
+        }
+        return deresolved;
+    }
 
 }

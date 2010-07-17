@@ -112,7 +112,8 @@ public class ExtensionDefinitionImpl extends EObjectImpl implements ExtensionDef
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.EXTENSION_DEFINITION__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.EXTENSION_DEFINITION__NAME, oldName, name));
     }
 
     /**
@@ -122,7 +123,10 @@ public class ExtensionDefinitionImpl extends EObjectImpl implements ExtensionDef
      */
     public List<ExtensionAttributeDefinition> getExtensionAttributeDefinitions() {
         if (extensionAttributeDefinitions == null) {
-            extensionAttributeDefinitions = new EObjectContainmentWithInverseEList<ExtensionAttributeDefinition>(ExtensionAttributeDefinition.class, this, Bpmn2Package.EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS, Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__EXTENSION_DEFINITION);
+            extensionAttributeDefinitions = new EObjectContainmentWithInverseEList<ExtensionAttributeDefinition>(
+                    ExtensionAttributeDefinition.class, this,
+                    Bpmn2Package.EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS,
+                    Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__EXTENSION_DEFINITION);
         }
         return extensionAttributeDefinitions;
     }
@@ -134,10 +138,12 @@ public class ExtensionDefinitionImpl extends EObjectImpl implements ExtensionDef
      */
     @SuppressWarnings("unchecked")
     @Override
-    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS:
-                return ((InternalEList<InternalEObject>)(InternalEList<?>)getExtensionAttributeDefinitions()).basicAdd(otherEnd, msgs);
+        case Bpmn2Package.EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getExtensionAttributeDefinitions())
+                    .basicAdd(otherEnd, msgs);
         }
         return super.eInverseAdd(otherEnd, featureID, msgs);
     }
@@ -148,10 +154,12 @@ public class ExtensionDefinitionImpl extends EObjectImpl implements ExtensionDef
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS:
-                return ((InternalEList<?>)getExtensionAttributeDefinitions()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS:
+            return ((InternalEList<?>) getExtensionAttributeDefinitions()).basicRemove(otherEnd,
+                    msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -164,10 +172,10 @@ public class ExtensionDefinitionImpl extends EObjectImpl implements ExtensionDef
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.EXTENSION_DEFINITION__NAME:
-                return getName();
-            case Bpmn2Package.EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS:
-                return getExtensionAttributeDefinitions();
+        case Bpmn2Package.EXTENSION_DEFINITION__NAME:
+            return getName();
+        case Bpmn2Package.EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS:
+            return getExtensionAttributeDefinitions();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -181,13 +189,14 @@ public class ExtensionDefinitionImpl extends EObjectImpl implements ExtensionDef
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.EXTENSION_DEFINITION__NAME:
-                setName((String)newValue);
-                return;
-            case Bpmn2Package.EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS:
-                getExtensionAttributeDefinitions().clear();
-                getExtensionAttributeDefinitions().addAll((Collection<? extends ExtensionAttributeDefinition>)newValue);
-                return;
+        case Bpmn2Package.EXTENSION_DEFINITION__NAME:
+            setName((String) newValue);
+            return;
+        case Bpmn2Package.EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS:
+            getExtensionAttributeDefinitions().clear();
+            getExtensionAttributeDefinitions().addAll(
+                    (Collection<? extends ExtensionAttributeDefinition>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -200,12 +209,12 @@ public class ExtensionDefinitionImpl extends EObjectImpl implements ExtensionDef
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.EXTENSION_DEFINITION__NAME:
-                setName(NAME_EDEFAULT);
-                return;
-            case Bpmn2Package.EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS:
-                getExtensionAttributeDefinitions().clear();
-                return;
+        case Bpmn2Package.EXTENSION_DEFINITION__NAME:
+            setName(NAME_EDEFAULT);
+            return;
+        case Bpmn2Package.EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS:
+            getExtensionAttributeDefinitions().clear();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -218,10 +227,11 @@ public class ExtensionDefinitionImpl extends EObjectImpl implements ExtensionDef
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.EXTENSION_DEFINITION__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-            case Bpmn2Package.EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS:
-                return extensionAttributeDefinitions != null && !extensionAttributeDefinitions.isEmpty();
+        case Bpmn2Package.EXTENSION_DEFINITION__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case Bpmn2Package.EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS:
+            return extensionAttributeDefinitions != null
+                    && !extensionAttributeDefinitions.isEmpty();
         }
         return super.eIsSet(featureID);
     }

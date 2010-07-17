@@ -41,7 +41,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ResourceParameterBindingItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ResourceParameterBindingItemProvider extends ItemProviderAdapter implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -75,7 +77,15 @@ public class ResourceParameterBindingItemProvider extends ItemProviderAdapter im
      * @generated
      */
     protected void addParameterRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_ResourceParameterBinding_parameterRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_ResourceParameterBinding_parameterRef_feature", "_UI_ResourceParameterBinding_type"), Bpmn2Package.Literals.RESOURCE_PARAMETER_BINDING__PARAMETER_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_ResourceParameterBinding_parameterRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_ResourceParameterBinding_parameterRef_feature",
+                        "_UI_ResourceParameterBinding_type"),
+                Bpmn2Package.Literals.RESOURCE_PARAMETER_BINDING__PARAMETER_REF, true, false, true,
+                null, null, null));
     }
 
     /**
@@ -117,9 +127,11 @@ public class ResourceParameterBindingItemProvider extends ItemProviderAdapter im
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/ResourceParameterBinding.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/ResourceParameterBinding.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/ResourceParameterBinding.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/ResourceParameterBinding.gif"));
         }
     }
 
@@ -146,9 +158,10 @@ public class ResourceParameterBindingItemProvider extends ItemProviderAdapter im
         updateChildren(notification);
 
         switch (notification.getFeatureID(ResourceParameterBinding.class)) {
-            case Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -164,9 +177,13 @@ public class ResourceParameterBindingItemProvider extends ItemProviderAdapter im
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.RESOURCE_PARAMETER_BINDING__EXPRESSION, Bpmn2Factory.eINSTANCE.createExpression()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.RESOURCE_PARAMETER_BINDING__EXPRESSION,
+                Bpmn2Factory.eINSTANCE.createExpression()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.RESOURCE_PARAMETER_BINDING__EXPRESSION, Bpmn2Factory.eINSTANCE.createFormalExpression()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.RESOURCE_PARAMETER_BINDING__EXPRESSION,
+                Bpmn2Factory.eINSTANCE.createFormalExpression()));
     }
 
     /**

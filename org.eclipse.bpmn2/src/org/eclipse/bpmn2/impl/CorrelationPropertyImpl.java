@@ -112,7 +112,9 @@ public class CorrelationPropertyImpl extends RootElementImpl implements Correlat
      */
     public List<CorrelationPropertyRetrievalExpression> getCorrelationPropertyRetrievalExpression() {
         if (correlationPropertyRetrievalExpression == null) {
-            correlationPropertyRetrievalExpression = new EObjectContainmentEList<CorrelationPropertyRetrievalExpression>(CorrelationPropertyRetrievalExpression.class, this, Bpmn2Package.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION);
+            correlationPropertyRetrievalExpression = new EObjectContainmentEList<CorrelationPropertyRetrievalExpression>(
+                    CorrelationPropertyRetrievalExpression.class, this,
+                    Bpmn2Package.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION);
         }
         return correlationPropertyRetrievalExpression;
     }
@@ -135,7 +137,8 @@ public class CorrelationPropertyImpl extends RootElementImpl implements Correlat
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.CORRELATION_PROPERTY__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.CORRELATION_PROPERTY__NAME, oldName, name));
     }
 
     /**
@@ -145,11 +148,12 @@ public class CorrelationPropertyImpl extends RootElementImpl implements Correlat
      */
     public ItemDefinition getType() {
         if (type != null && type.eIsProxy()) {
-            InternalEObject oldType = (InternalEObject)type;
-            type = (ItemDefinition)eResolveProxy(oldType);
+            InternalEObject oldType = (InternalEObject) type;
+            type = (ItemDefinition) eResolveProxy(oldType);
             if (type != oldType) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.CORRELATION_PROPERTY__TYPE, oldType, type));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.CORRELATION_PROPERTY__TYPE, oldType, type));
             }
         }
         return type;
@@ -173,7 +177,8 @@ public class CorrelationPropertyImpl extends RootElementImpl implements Correlat
         ItemDefinition oldType = type;
         type = newType;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.CORRELATION_PROPERTY__TYPE, oldType, type));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.CORRELATION_PROPERTY__TYPE, oldType, type));
     }
 
     /**
@@ -182,10 +187,12 @@ public class CorrelationPropertyImpl extends RootElementImpl implements Correlat
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
-                return ((InternalEList<?>)getCorrelationPropertyRetrievalExpression()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
+            return ((InternalEList<?>) getCorrelationPropertyRetrievalExpression()).basicRemove(
+                    otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -198,14 +205,14 @@ public class CorrelationPropertyImpl extends RootElementImpl implements Correlat
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
-                return getCorrelationPropertyRetrievalExpression();
-            case Bpmn2Package.CORRELATION_PROPERTY__NAME:
-                return getName();
-            case Bpmn2Package.CORRELATION_PROPERTY__TYPE:
-                if (resolve)
-                    return getType();
-                return basicGetType();
+        case Bpmn2Package.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
+            return getCorrelationPropertyRetrievalExpression();
+        case Bpmn2Package.CORRELATION_PROPERTY__NAME:
+            return getName();
+        case Bpmn2Package.CORRELATION_PROPERTY__TYPE:
+            if (resolve)
+                return getType();
+            return basicGetType();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -219,16 +226,17 @@ public class CorrelationPropertyImpl extends RootElementImpl implements Correlat
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
-                getCorrelationPropertyRetrievalExpression().clear();
-                getCorrelationPropertyRetrievalExpression().addAll((Collection<? extends CorrelationPropertyRetrievalExpression>)newValue);
-                return;
-            case Bpmn2Package.CORRELATION_PROPERTY__NAME:
-                setName((String)newValue);
-                return;
-            case Bpmn2Package.CORRELATION_PROPERTY__TYPE:
-                setType((ItemDefinition)newValue);
-                return;
+        case Bpmn2Package.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
+            getCorrelationPropertyRetrievalExpression().clear();
+            getCorrelationPropertyRetrievalExpression().addAll(
+                    (Collection<? extends CorrelationPropertyRetrievalExpression>) newValue);
+            return;
+        case Bpmn2Package.CORRELATION_PROPERTY__NAME:
+            setName((String) newValue);
+            return;
+        case Bpmn2Package.CORRELATION_PROPERTY__TYPE:
+            setType((ItemDefinition) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -241,15 +249,15 @@ public class CorrelationPropertyImpl extends RootElementImpl implements Correlat
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
-                getCorrelationPropertyRetrievalExpression().clear();
-                return;
-            case Bpmn2Package.CORRELATION_PROPERTY__NAME:
-                setName(NAME_EDEFAULT);
-                return;
-            case Bpmn2Package.CORRELATION_PROPERTY__TYPE:
-                setType((ItemDefinition)null);
-                return;
+        case Bpmn2Package.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
+            getCorrelationPropertyRetrievalExpression().clear();
+            return;
+        case Bpmn2Package.CORRELATION_PROPERTY__NAME:
+            setName(NAME_EDEFAULT);
+            return;
+        case Bpmn2Package.CORRELATION_PROPERTY__TYPE:
+            setType((ItemDefinition) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -262,12 +270,13 @@ public class CorrelationPropertyImpl extends RootElementImpl implements Correlat
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
-                return correlationPropertyRetrievalExpression != null && !correlationPropertyRetrievalExpression.isEmpty();
-            case Bpmn2Package.CORRELATION_PROPERTY__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-            case Bpmn2Package.CORRELATION_PROPERTY__TYPE:
-                return type != null;
+        case Bpmn2Package.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
+            return correlationPropertyRetrievalExpression != null
+                    && !correlationPropertyRetrievalExpression.isEmpty();
+        case Bpmn2Package.CORRELATION_PROPERTY__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case Bpmn2Package.CORRELATION_PROPERTY__TYPE:
+            return type != null;
         }
         return super.eIsSet(featureID);
     }

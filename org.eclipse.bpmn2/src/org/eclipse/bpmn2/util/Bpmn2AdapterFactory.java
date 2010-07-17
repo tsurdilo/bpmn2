@@ -63,7 +63,7 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
             return true;
         }
         if (object instanceof EObject) {
-            return ((EObject)object).eClass().getEPackage() == modelPackage;
+            return ((EObject) object).eClass().getEPackage() == modelPackage;
         }
         return false;
     }
@@ -241,7 +241,8 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseCorrelationPropertyRetrievalExpression(CorrelationPropertyRetrievalExpression object) {
+        public Adapter caseCorrelationPropertyRetrievalExpression(
+                CorrelationPropertyRetrievalExpression object) {
             return createCorrelationPropertyRetrievalExpressionAdapter();
         }
 
@@ -781,7 +782,7 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
      */
     @Override
     public Adapter createAdapter(Notifier target) {
-        return modelSwitch.doSwitch((EObject)target);
+        return modelSwitch.doSwitch((EObject) target);
     }
 
     /**

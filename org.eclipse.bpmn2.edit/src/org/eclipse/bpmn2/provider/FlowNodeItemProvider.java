@@ -36,7 +36,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class FlowNodeItemProvider extends FlowElementItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class FlowNodeItemProvider extends FlowElementItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -72,7 +74,13 @@ public class FlowNodeItemProvider extends FlowElementItemProvider implements IEd
      * @generated
      */
     protected void addIncomingPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_FlowNode_incoming_feature"), getString("_UI_PropertyDescriptor_description", "_UI_FlowNode_incoming_feature", "_UI_FlowNode_type"), Bpmn2Package.Literals.FLOW_NODE__INCOMING, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_FlowNode_incoming_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_FlowNode_incoming_feature",
+                        "_UI_FlowNode_type"), Bpmn2Package.Literals.FLOW_NODE__INCOMING, true,
+                false, true, null, null, null));
     }
 
     /**
@@ -82,7 +90,13 @@ public class FlowNodeItemProvider extends FlowElementItemProvider implements IEd
      * @generated
      */
     protected void addLanesPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_FlowNode_lanes_feature"), getString("_UI_PropertyDescriptor_description", "_UI_FlowNode_lanes_feature", "_UI_FlowNode_type"), Bpmn2Package.Literals.FLOW_NODE__LANES, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_FlowNode_lanes_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_FlowNode_lanes_feature",
+                        "_UI_FlowNode_type"), Bpmn2Package.Literals.FLOW_NODE__LANES, true, false,
+                true, null, null, null));
     }
 
     /**
@@ -92,7 +106,13 @@ public class FlowNodeItemProvider extends FlowElementItemProvider implements IEd
      * @generated
      */
     protected void addOutgoingPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_FlowNode_outgoing_feature"), getString("_UI_PropertyDescriptor_description", "_UI_FlowNode_outgoing_feature", "_UI_FlowNode_type"), Bpmn2Package.Literals.FLOW_NODE__OUTGOING, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_FlowNode_outgoing_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_FlowNode_outgoing_feature",
+                        "_UI_FlowNode_type"), Bpmn2Package.Literals.FLOW_NODE__OUTGOING, true,
+                false, true, null, null, null));
     }
 
     /**
@@ -103,8 +123,9 @@ public class FlowNodeItemProvider extends FlowElementItemProvider implements IEd
      */
     @Override
     public String getText(Object object) {
-        String label = ((FlowNode)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_FlowNode_type") : getString("_UI_FlowNode_type") + " " + label;
+        String label = ((FlowNode) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_FlowNode_type")
+                : getString("_UI_FlowNode_type") + " " + label;
     }
 
     /**

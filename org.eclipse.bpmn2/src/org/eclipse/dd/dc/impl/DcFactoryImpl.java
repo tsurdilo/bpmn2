@@ -41,7 +41,8 @@ public class DcFactoryImpl extends EFactoryImpl implements DcFactory {
      */
     public static DcFactory init() {
         try {
-            DcFactory theDcFactory = (DcFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.omg.org/spec/DD/20100524/DC-XMI");
+            DcFactory theDcFactory = (DcFactory) EPackage.Registry.INSTANCE
+                    .getEFactory("http://www.omg.org/spec/DD/20100524/DC-XMI");
             if (theDcFactory != null) {
                 return theDcFactory;
             }
@@ -69,16 +70,17 @@ public class DcFactoryImpl extends EFactoryImpl implements DcFactory {
     @Override
     public EObject create(EClass eClass) {
         switch (eClass.getClassifierID()) {
-            case DcPackage.DOCUMENT_ROOT:
-                return createDocumentRoot();
-            case DcPackage.BOUNDS:
-                return createBounds();
-            case DcPackage.FONT:
-                return createFont();
-            case DcPackage.POINT:
-                return createPoint();
-            default:
-                throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+        case DcPackage.DOCUMENT_ROOT:
+            return createDocumentRoot();
+        case DcPackage.BOUNDS:
+            return createBounds();
+        case DcPackage.FONT:
+            return createFont();
+        case DcPackage.POINT:
+            return createPoint();
+        default:
+            throw new IllegalArgumentException("The class '" + eClass.getName()
+                    + "' is not a valid classifier");
         }
     }
 
@@ -128,7 +130,7 @@ public class DcFactoryImpl extends EFactoryImpl implements DcFactory {
      * @generated
      */
     public DcPackage getDcPackage() {
-        return (DcPackage)getEPackage();
+        return (DcPackage) getEPackage();
     }
 
     /**

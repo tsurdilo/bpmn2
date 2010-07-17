@@ -41,7 +41,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DocumentRootItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class DocumentRootItemProvider extends ItemProviderAdapter implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -115,9 +117,11 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements IEd
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/DocumentRoot.png"));
+            return overlayImage(object, getResourceLocator()
+                    .getImage("full/obj16/DocumentRoot.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/DocumentRoot.gif"));
+            return overlayImage(object, getResourceLocator()
+                    .getImage("full/obj16/DocumentRoot.gif"));
         }
     }
 
@@ -144,18 +148,19 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements IEd
         updateChildren(notification);
 
         switch (notification.getFeatureID(DocumentRoot.class)) {
-            case DiPackage.DOCUMENT_ROOT__DIAGRAM_ELEMENT:
-            case DiPackage.DOCUMENT_ROOT__DIAGRAM:
-            case DiPackage.DOCUMENT_ROOT__EDGE:
-            case DiPackage.DOCUMENT_ROOT__LABEL:
-            case DiPackage.DOCUMENT_ROOT__LABELED_EDGE:
-            case DiPackage.DOCUMENT_ROOT__LABELED_SHAPE:
-            case DiPackage.DOCUMENT_ROOT__NODE:
-            case DiPackage.DOCUMENT_ROOT__PLANE:
-            case DiPackage.DOCUMENT_ROOT__SHAPE:
-            case DiPackage.DOCUMENT_ROOT__STYLE:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case DiPackage.DOCUMENT_ROOT__DIAGRAM_ELEMENT:
+        case DiPackage.DOCUMENT_ROOT__DIAGRAM:
+        case DiPackage.DOCUMENT_ROOT__EDGE:
+        case DiPackage.DOCUMENT_ROOT__LABEL:
+        case DiPackage.DOCUMENT_ROOT__LABELED_EDGE:
+        case DiPackage.DOCUMENT_ROOT__LABELED_SHAPE:
+        case DiPackage.DOCUMENT_ROOT__NODE:
+        case DiPackage.DOCUMENT_ROOT__PLANE:
+        case DiPackage.DOCUMENT_ROOT__SHAPE:
+        case DiPackage.DOCUMENT_ROOT__STYLE:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -171,35 +176,56 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements IEd
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(DiPackage.Literals.DOCUMENT_ROOT__DIAGRAM_ELEMENT, BpmnDiFactory.eINSTANCE.createBPMNEdge()));
+        newChildDescriptors.add(createChildParameter(
+                DiPackage.Literals.DOCUMENT_ROOT__DIAGRAM_ELEMENT,
+                BpmnDiFactory.eINSTANCE.createBPMNEdge()));
 
-        newChildDescriptors.add(createChildParameter(DiPackage.Literals.DOCUMENT_ROOT__DIAGRAM_ELEMENT, BpmnDiFactory.eINSTANCE.createBPMNLabel()));
+        newChildDescriptors.add(createChildParameter(
+                DiPackage.Literals.DOCUMENT_ROOT__DIAGRAM_ELEMENT,
+                BpmnDiFactory.eINSTANCE.createBPMNLabel()));
 
-        newChildDescriptors.add(createChildParameter(DiPackage.Literals.DOCUMENT_ROOT__DIAGRAM_ELEMENT, BpmnDiFactory.eINSTANCE.createBPMNPlane()));
+        newChildDescriptors.add(createChildParameter(
+                DiPackage.Literals.DOCUMENT_ROOT__DIAGRAM_ELEMENT,
+                BpmnDiFactory.eINSTANCE.createBPMNPlane()));
 
-        newChildDescriptors.add(createChildParameter(DiPackage.Literals.DOCUMENT_ROOT__DIAGRAM_ELEMENT, BpmnDiFactory.eINSTANCE.createBPMNShape()));
+        newChildDescriptors.add(createChildParameter(
+                DiPackage.Literals.DOCUMENT_ROOT__DIAGRAM_ELEMENT,
+                BpmnDiFactory.eINSTANCE.createBPMNShape()));
 
-        newChildDescriptors.add(createChildParameter(DiPackage.Literals.DOCUMENT_ROOT__DIAGRAM, BpmnDiFactory.eINSTANCE.createBPMNDiagram()));
+        newChildDescriptors.add(createChildParameter(DiPackage.Literals.DOCUMENT_ROOT__DIAGRAM,
+                BpmnDiFactory.eINSTANCE.createBPMNDiagram()));
 
-        newChildDescriptors.add(createChildParameter(DiPackage.Literals.DOCUMENT_ROOT__EDGE, BpmnDiFactory.eINSTANCE.createBPMNEdge()));
+        newChildDescriptors.add(createChildParameter(DiPackage.Literals.DOCUMENT_ROOT__EDGE,
+                BpmnDiFactory.eINSTANCE.createBPMNEdge()));
 
-        newChildDescriptors.add(createChildParameter(DiPackage.Literals.DOCUMENT_ROOT__LABEL, BpmnDiFactory.eINSTANCE.createBPMNLabel()));
+        newChildDescriptors.add(createChildParameter(DiPackage.Literals.DOCUMENT_ROOT__LABEL,
+                BpmnDiFactory.eINSTANCE.createBPMNLabel()));
 
-        newChildDescriptors.add(createChildParameter(DiPackage.Literals.DOCUMENT_ROOT__LABELED_EDGE, BpmnDiFactory.eINSTANCE.createBPMNEdge()));
+        newChildDescriptors.add(createChildParameter(
+                DiPackage.Literals.DOCUMENT_ROOT__LABELED_EDGE,
+                BpmnDiFactory.eINSTANCE.createBPMNEdge()));
 
-        newChildDescriptors.add(createChildParameter(DiPackage.Literals.DOCUMENT_ROOT__LABELED_SHAPE, BpmnDiFactory.eINSTANCE.createBPMNShape()));
+        newChildDescriptors.add(createChildParameter(
+                DiPackage.Literals.DOCUMENT_ROOT__LABELED_SHAPE,
+                BpmnDiFactory.eINSTANCE.createBPMNShape()));
 
-        newChildDescriptors.add(createChildParameter(DiPackage.Literals.DOCUMENT_ROOT__NODE, BpmnDiFactory.eINSTANCE.createBPMNLabel()));
+        newChildDescriptors.add(createChildParameter(DiPackage.Literals.DOCUMENT_ROOT__NODE,
+                BpmnDiFactory.eINSTANCE.createBPMNLabel()));
 
-        newChildDescriptors.add(createChildParameter(DiPackage.Literals.DOCUMENT_ROOT__NODE, BpmnDiFactory.eINSTANCE.createBPMNPlane()));
+        newChildDescriptors.add(createChildParameter(DiPackage.Literals.DOCUMENT_ROOT__NODE,
+                BpmnDiFactory.eINSTANCE.createBPMNPlane()));
 
-        newChildDescriptors.add(createChildParameter(DiPackage.Literals.DOCUMENT_ROOT__NODE, BpmnDiFactory.eINSTANCE.createBPMNShape()));
+        newChildDescriptors.add(createChildParameter(DiPackage.Literals.DOCUMENT_ROOT__NODE,
+                BpmnDiFactory.eINSTANCE.createBPMNShape()));
 
-        newChildDescriptors.add(createChildParameter(DiPackage.Literals.DOCUMENT_ROOT__PLANE, BpmnDiFactory.eINSTANCE.createBPMNPlane()));
+        newChildDescriptors.add(createChildParameter(DiPackage.Literals.DOCUMENT_ROOT__PLANE,
+                BpmnDiFactory.eINSTANCE.createBPMNPlane()));
 
-        newChildDescriptors.add(createChildParameter(DiPackage.Literals.DOCUMENT_ROOT__SHAPE, BpmnDiFactory.eINSTANCE.createBPMNShape()));
+        newChildDescriptors.add(createChildParameter(DiPackage.Literals.DOCUMENT_ROOT__SHAPE,
+                BpmnDiFactory.eINSTANCE.createBPMNShape()));
 
-        newChildDescriptors.add(createChildParameter(DiPackage.Literals.DOCUMENT_ROOT__STYLE, BpmnDiFactory.eINSTANCE.createBPMNLabelStyle()));
+        newChildDescriptors.add(createChildParameter(DiPackage.Literals.DOCUMENT_ROOT__STYLE,
+                BpmnDiFactory.eINSTANCE.createBPMNLabelStyle()));
     }
 
     /**
@@ -209,14 +235,23 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements IEd
      * @generated
      */
     @Override
-    public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+    public String getCreateChildText(Object owner, Object feature, Object child,
+            Collection<?> selection) {
         Object childFeature = feature;
         Object childObject = child;
 
-        boolean qualify = childFeature == DiPackage.Literals.DOCUMENT_ROOT__DIAGRAM_ELEMENT || childFeature == DiPackage.Literals.DOCUMENT_ROOT__EDGE || childFeature == DiPackage.Literals.DOCUMENT_ROOT__LABELED_EDGE || childFeature == DiPackage.Literals.DOCUMENT_ROOT__LABEL || childFeature == DiPackage.Literals.DOCUMENT_ROOT__NODE || childFeature == DiPackage.Literals.DOCUMENT_ROOT__PLANE || childFeature == DiPackage.Literals.DOCUMENT_ROOT__LABELED_SHAPE || childFeature == DiPackage.Literals.DOCUMENT_ROOT__SHAPE;
+        boolean qualify = childFeature == DiPackage.Literals.DOCUMENT_ROOT__DIAGRAM_ELEMENT
+                || childFeature == DiPackage.Literals.DOCUMENT_ROOT__EDGE
+                || childFeature == DiPackage.Literals.DOCUMENT_ROOT__LABELED_EDGE
+                || childFeature == DiPackage.Literals.DOCUMENT_ROOT__LABEL
+                || childFeature == DiPackage.Literals.DOCUMENT_ROOT__NODE
+                || childFeature == DiPackage.Literals.DOCUMENT_ROOT__PLANE
+                || childFeature == DiPackage.Literals.DOCUMENT_ROOT__LABELED_SHAPE
+                || childFeature == DiPackage.Literals.DOCUMENT_ROOT__SHAPE;
 
         if (qualify) {
-            return getString("_UI_CreateChild_text2", new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+            return getString("_UI_CreateChild_text2", new Object[] { getTypeText(childObject),
+                    getFeatureText(childFeature), getTypeText(owner) });
         }
         return super.getCreateChildText(owner, feature, child, selection);
     }

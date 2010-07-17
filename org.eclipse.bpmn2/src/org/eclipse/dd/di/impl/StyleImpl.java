@@ -103,8 +103,8 @@ public abstract class StyleImpl extends EObjectImpl implements Style {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case DiPackage.STYLE__ID:
-                return getId();
+        case DiPackage.STYLE__ID:
+            return getId();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -117,9 +117,9 @@ public abstract class StyleImpl extends EObjectImpl implements Style {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case DiPackage.STYLE__ID:
-                setId((String)newValue);
-                return;
+        case DiPackage.STYLE__ID:
+            setId((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -132,9 +132,9 @@ public abstract class StyleImpl extends EObjectImpl implements Style {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case DiPackage.STYLE__ID:
-                setId(ID_EDEFAULT);
-                return;
+        case DiPackage.STYLE__ID:
+            setId(ID_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -147,8 +147,8 @@ public abstract class StyleImpl extends EObjectImpl implements Style {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case DiPackage.STYLE__ID:
-                return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+        case DiPackage.STYLE__ID:
+            return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
         }
         return super.eIsSet(featureID);
     }

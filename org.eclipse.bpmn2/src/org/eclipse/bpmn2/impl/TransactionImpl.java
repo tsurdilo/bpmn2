@@ -112,7 +112,8 @@ public class TransactionImpl extends SubProcessImpl implements Transaction {
         String oldProtocol = protocol;
         protocol = newProtocol;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.TRANSACTION__PROTOCOL, oldProtocol, protocol));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.TRANSACTION__PROTOCOL, oldProtocol, protocol));
     }
 
     /**
@@ -133,7 +134,8 @@ public class TransactionImpl extends SubProcessImpl implements Transaction {
         String oldMethod = method;
         method = newMethod;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.TRANSACTION__METHOD, oldMethod, method));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.TRANSACTION__METHOD,
+                    oldMethod, method));
     }
 
     /**
@@ -144,10 +146,10 @@ public class TransactionImpl extends SubProcessImpl implements Transaction {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.TRANSACTION__PROTOCOL:
-                return getProtocol();
-            case Bpmn2Package.TRANSACTION__METHOD:
-                return getMethod();
+        case Bpmn2Package.TRANSACTION__PROTOCOL:
+            return getProtocol();
+        case Bpmn2Package.TRANSACTION__METHOD:
+            return getMethod();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -160,12 +162,12 @@ public class TransactionImpl extends SubProcessImpl implements Transaction {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.TRANSACTION__PROTOCOL:
-                setProtocol((String)newValue);
-                return;
-            case Bpmn2Package.TRANSACTION__METHOD:
-                setMethod((String)newValue);
-                return;
+        case Bpmn2Package.TRANSACTION__PROTOCOL:
+            setProtocol((String) newValue);
+            return;
+        case Bpmn2Package.TRANSACTION__METHOD:
+            setMethod((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -178,12 +180,12 @@ public class TransactionImpl extends SubProcessImpl implements Transaction {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.TRANSACTION__PROTOCOL:
-                setProtocol(PROTOCOL_EDEFAULT);
-                return;
-            case Bpmn2Package.TRANSACTION__METHOD:
-                setMethod(METHOD_EDEFAULT);
-                return;
+        case Bpmn2Package.TRANSACTION__PROTOCOL:
+            setProtocol(PROTOCOL_EDEFAULT);
+            return;
+        case Bpmn2Package.TRANSACTION__METHOD:
+            setMethod(METHOD_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -196,10 +198,11 @@ public class TransactionImpl extends SubProcessImpl implements Transaction {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.TRANSACTION__PROTOCOL:
-                return PROTOCOL_EDEFAULT == null ? protocol != null : !PROTOCOL_EDEFAULT.equals(protocol);
-            case Bpmn2Package.TRANSACTION__METHOD:
-                return METHOD_EDEFAULT == null ? method != null : !METHOD_EDEFAULT.equals(method);
+        case Bpmn2Package.TRANSACTION__PROTOCOL:
+            return PROTOCOL_EDEFAULT == null ? protocol != null : !PROTOCOL_EDEFAULT
+                    .equals(protocol);
+        case Bpmn2Package.TRANSACTION__METHOD:
+            return METHOD_EDEFAULT == null ? method != null : !METHOD_EDEFAULT.equals(method);
         }
         return super.eIsSet(featureID);
     }

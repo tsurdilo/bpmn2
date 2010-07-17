@@ -112,7 +112,8 @@ public class ScriptTaskImpl extends TaskImpl implements ScriptTask {
         String oldScript = script;
         script = newScript;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.SCRIPT_TASK__SCRIPT, oldScript, script));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.SCRIPT_TASK__SCRIPT,
+                    oldScript, script));
     }
 
     /**
@@ -133,7 +134,8 @@ public class ScriptTaskImpl extends TaskImpl implements ScriptTask {
         String oldScriptFormat = scriptFormat;
         scriptFormat = newScriptFormat;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.SCRIPT_TASK__SCRIPT_FORMAT, oldScriptFormat, scriptFormat));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.SCRIPT_TASK__SCRIPT_FORMAT, oldScriptFormat, scriptFormat));
     }
 
     /**
@@ -144,10 +146,10 @@ public class ScriptTaskImpl extends TaskImpl implements ScriptTask {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.SCRIPT_TASK__SCRIPT:
-                return getScript();
-            case Bpmn2Package.SCRIPT_TASK__SCRIPT_FORMAT:
-                return getScriptFormat();
+        case Bpmn2Package.SCRIPT_TASK__SCRIPT:
+            return getScript();
+        case Bpmn2Package.SCRIPT_TASK__SCRIPT_FORMAT:
+            return getScriptFormat();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -160,12 +162,12 @@ public class ScriptTaskImpl extends TaskImpl implements ScriptTask {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.SCRIPT_TASK__SCRIPT:
-                setScript((String)newValue);
-                return;
-            case Bpmn2Package.SCRIPT_TASK__SCRIPT_FORMAT:
-                setScriptFormat((String)newValue);
-                return;
+        case Bpmn2Package.SCRIPT_TASK__SCRIPT:
+            setScript((String) newValue);
+            return;
+        case Bpmn2Package.SCRIPT_TASK__SCRIPT_FORMAT:
+            setScriptFormat((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -178,12 +180,12 @@ public class ScriptTaskImpl extends TaskImpl implements ScriptTask {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.SCRIPT_TASK__SCRIPT:
-                setScript(SCRIPT_EDEFAULT);
-                return;
-            case Bpmn2Package.SCRIPT_TASK__SCRIPT_FORMAT:
-                setScriptFormat(SCRIPT_FORMAT_EDEFAULT);
-                return;
+        case Bpmn2Package.SCRIPT_TASK__SCRIPT:
+            setScript(SCRIPT_EDEFAULT);
+            return;
+        case Bpmn2Package.SCRIPT_TASK__SCRIPT_FORMAT:
+            setScriptFormat(SCRIPT_FORMAT_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -196,10 +198,11 @@ public class ScriptTaskImpl extends TaskImpl implements ScriptTask {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.SCRIPT_TASK__SCRIPT:
-                return SCRIPT_EDEFAULT == null ? script != null : !SCRIPT_EDEFAULT.equals(script);
-            case Bpmn2Package.SCRIPT_TASK__SCRIPT_FORMAT:
-                return SCRIPT_FORMAT_EDEFAULT == null ? scriptFormat != null : !SCRIPT_FORMAT_EDEFAULT.equals(scriptFormat);
+        case Bpmn2Package.SCRIPT_TASK__SCRIPT:
+            return SCRIPT_EDEFAULT == null ? script != null : !SCRIPT_EDEFAULT.equals(script);
+        case Bpmn2Package.SCRIPT_TASK__SCRIPT_FORMAT:
+            return SCRIPT_FORMAT_EDEFAULT == null ? scriptFormat != null : !SCRIPT_FORMAT_EDEFAULT
+                    .equals(scriptFormat);
         }
         return super.eIsSet(featureID);
     }

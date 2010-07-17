@@ -91,7 +91,8 @@ public class StartEventImpl extends CatchEventImpl implements StartEvent {
         boolean oldIsInterrupting = isInterrupting;
         isInterrupting = newIsInterrupting;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.START_EVENT__IS_INTERRUPTING, oldIsInterrupting, isInterrupting));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.START_EVENT__IS_INTERRUPTING, oldIsInterrupting, isInterrupting));
     }
 
     /**
@@ -102,8 +103,8 @@ public class StartEventImpl extends CatchEventImpl implements StartEvent {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.START_EVENT__IS_INTERRUPTING:
-                return isIsInterrupting();
+        case Bpmn2Package.START_EVENT__IS_INTERRUPTING:
+            return isIsInterrupting();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -116,9 +117,9 @@ public class StartEventImpl extends CatchEventImpl implements StartEvent {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.START_EVENT__IS_INTERRUPTING:
-                setIsInterrupting((Boolean)newValue);
-                return;
+        case Bpmn2Package.START_EVENT__IS_INTERRUPTING:
+            setIsInterrupting((Boolean) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -131,9 +132,9 @@ public class StartEventImpl extends CatchEventImpl implements StartEvent {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.START_EVENT__IS_INTERRUPTING:
-                setIsInterrupting(IS_INTERRUPTING_EDEFAULT);
-                return;
+        case Bpmn2Package.START_EVENT__IS_INTERRUPTING:
+            setIsInterrupting(IS_INTERRUPTING_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -146,8 +147,8 @@ public class StartEventImpl extends CatchEventImpl implements StartEvent {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.START_EVENT__IS_INTERRUPTING:
-                return isInterrupting != IS_INTERRUPTING_EDEFAULT;
+        case Bpmn2Package.START_EVENT__IS_INTERRUPTING:
+            return isInterrupting != IS_INTERRUPTING_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }

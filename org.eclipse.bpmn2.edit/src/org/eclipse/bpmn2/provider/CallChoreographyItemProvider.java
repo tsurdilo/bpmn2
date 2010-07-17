@@ -39,7 +39,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CallChoreographyItemProvider extends ChoreographyActivityItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class CallChoreographyItemProvider extends ChoreographyActivityItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -73,7 +75,15 @@ public class CallChoreographyItemProvider extends ChoreographyActivityItemProvid
      * @generated
      */
     protected void addCalledChoreographyRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_CallChoreography_calledChoreographyRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_CallChoreography_calledChoreographyRef_feature", "_UI_CallChoreography_type"), Bpmn2Package.Literals.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_CallChoreography_calledChoreographyRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_CallChoreography_calledChoreographyRef_feature",
+                        "_UI_CallChoreography_type"),
+                Bpmn2Package.Literals.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF, true, false,
+                true, null, null, null));
     }
 
     /**
@@ -115,9 +125,11 @@ public class CallChoreographyItemProvider extends ChoreographyActivityItemProvid
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/CallChoreography.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/CallChoreography.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/CallChoreography.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/CallChoreography.gif"));
         }
     }
 
@@ -129,8 +141,9 @@ public class CallChoreographyItemProvider extends ChoreographyActivityItemProvid
      */
     @Override
     public String getText(Object object) {
-        String label = ((CallChoreography)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_CallChoreography_type") : getString("_UI_CallChoreography_type") + " " + label;
+        String label = ((CallChoreography) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_CallChoreography_type")
+                : getString("_UI_CallChoreography_type") + " " + label;
     }
 
     /**
@@ -145,9 +158,10 @@ public class CallChoreographyItemProvider extends ChoreographyActivityItemProvid
         updateChildren(notification);
 
         switch (notification.getFeatureID(CallChoreography.class)) {
-            case Bpmn2Package.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case Bpmn2Package.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -163,7 +177,9 @@ public class CallChoreographyItemProvider extends ChoreographyActivityItemProvid
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS, Bpmn2Factory.eINSTANCE.createParticipantAssociation()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS,
+                Bpmn2Factory.eINSTANCE.createParticipantAssociation()));
     }
 
 }

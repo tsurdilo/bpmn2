@@ -1258,7 +1258,8 @@ public interface BpmnDiPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__XSI_SCHEMA_LOCATION = eINSTANCE.getDocumentRoot_XSISchemaLocation();
+        EReference DOCUMENT_ROOT__XSI_SCHEMA_LOCATION = eINSTANCE
+                .getDocumentRoot_XSISchemaLocation();
 
         /**
          * The meta object literal for the '<em><b>BPMN Diagram</b></em>' containment reference feature.
@@ -1470,7 +1471,8 @@ public interface BpmnDiPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference BPMN_SHAPE__CHOREOGRAPHY_ACTIVITY_SHAPE = eINSTANCE.getBPMNShape_ChoreographyActivityShape();
+        EReference BPMN_SHAPE__CHOREOGRAPHY_ACTIVITY_SHAPE = eINSTANCE
+                .getBPMNShape_ChoreographyActivityShape();
 
         /**
          * The meta object literal for the '<em><b>Is Expanded</b></em>' attribute feature.

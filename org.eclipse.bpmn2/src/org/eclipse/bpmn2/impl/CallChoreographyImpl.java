@@ -91,7 +91,9 @@ public class CallChoreographyImpl extends ChoreographyActivityImpl implements Ca
      */
     public List<ParticipantAssociation> getParticipantAssociations() {
         if (participantAssociations == null) {
-            participantAssociations = new EObjectContainmentEList<ParticipantAssociation>(ParticipantAssociation.class, this, Bpmn2Package.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS);
+            participantAssociations = new EObjectContainmentEList<ParticipantAssociation>(
+                    ParticipantAssociation.class, this,
+                    Bpmn2Package.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS);
         }
         return participantAssociations;
     }
@@ -103,11 +105,13 @@ public class CallChoreographyImpl extends ChoreographyActivityImpl implements Ca
      */
     public Choreography getCalledChoreographyRef() {
         if (calledChoreographyRef != null && calledChoreographyRef.eIsProxy()) {
-            InternalEObject oldCalledChoreographyRef = (InternalEObject)calledChoreographyRef;
-            calledChoreographyRef = (Choreography)eResolveProxy(oldCalledChoreographyRef);
+            InternalEObject oldCalledChoreographyRef = (InternalEObject) calledChoreographyRef;
+            calledChoreographyRef = (Choreography) eResolveProxy(oldCalledChoreographyRef);
             if (calledChoreographyRef != oldCalledChoreographyRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF, oldCalledChoreographyRef, calledChoreographyRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF,
+                            oldCalledChoreographyRef, calledChoreographyRef));
             }
         }
         return calledChoreographyRef;
@@ -131,7 +135,9 @@ public class CallChoreographyImpl extends ChoreographyActivityImpl implements Ca
         Choreography oldCalledChoreographyRef = calledChoreographyRef;
         calledChoreographyRef = newCalledChoreographyRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF, oldCalledChoreographyRef, calledChoreographyRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF,
+                    oldCalledChoreographyRef, calledChoreographyRef));
     }
 
     /**
@@ -140,10 +146,11 @@ public class CallChoreographyImpl extends ChoreographyActivityImpl implements Ca
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS:
-                return ((InternalEList<?>)getParticipantAssociations()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS:
+            return ((InternalEList<?>) getParticipantAssociations()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -156,12 +163,12 @@ public class CallChoreographyImpl extends ChoreographyActivityImpl implements Ca
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS:
-                return getParticipantAssociations();
-            case Bpmn2Package.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF:
-                if (resolve)
-                    return getCalledChoreographyRef();
-                return basicGetCalledChoreographyRef();
+        case Bpmn2Package.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS:
+            return getParticipantAssociations();
+        case Bpmn2Package.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF:
+            if (resolve)
+                return getCalledChoreographyRef();
+            return basicGetCalledChoreographyRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -175,13 +182,14 @@ public class CallChoreographyImpl extends ChoreographyActivityImpl implements Ca
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS:
-                getParticipantAssociations().clear();
-                getParticipantAssociations().addAll((Collection<? extends ParticipantAssociation>)newValue);
-                return;
-            case Bpmn2Package.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF:
-                setCalledChoreographyRef((Choreography)newValue);
-                return;
+        case Bpmn2Package.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS:
+            getParticipantAssociations().clear();
+            getParticipantAssociations().addAll(
+                    (Collection<? extends ParticipantAssociation>) newValue);
+            return;
+        case Bpmn2Package.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF:
+            setCalledChoreographyRef((Choreography) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -194,12 +202,12 @@ public class CallChoreographyImpl extends ChoreographyActivityImpl implements Ca
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS:
-                getParticipantAssociations().clear();
-                return;
-            case Bpmn2Package.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF:
-                setCalledChoreographyRef((Choreography)null);
-                return;
+        case Bpmn2Package.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS:
+            getParticipantAssociations().clear();
+            return;
+        case Bpmn2Package.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF:
+            setCalledChoreographyRef((Choreography) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -212,10 +220,10 @@ public class CallChoreographyImpl extends ChoreographyActivityImpl implements Ca
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS:
-                return participantAssociations != null && !participantAssociations.isEmpty();
-            case Bpmn2Package.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF:
-                return calledChoreographyRef != null;
+        case Bpmn2Package.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS:
+            return participantAssociations != null && !participantAssociations.isEmpty();
+        case Bpmn2Package.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF:
+            return calledChoreographyRef != null;
         }
         return super.eIsSet(featureID);
     }

@@ -130,7 +130,8 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
      */
     public List<EObject> getSources() {
         if (sources == null) {
-            sources = new EObjectResolvingEList<EObject>(EObject.class, this, Bpmn2Package.RELATIONSHIP__SOURCES);
+            sources = new EObjectResolvingEList<EObject>(EObject.class, this,
+                    Bpmn2Package.RELATIONSHIP__SOURCES);
         }
         return sources;
     }
@@ -142,7 +143,8 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
      */
     public List<EObject> getTargets() {
         if (targets == null) {
-            targets = new EObjectResolvingEList<EObject>(EObject.class, this, Bpmn2Package.RELATIONSHIP__TARGETS);
+            targets = new EObjectResolvingEList<EObject>(EObject.class, this,
+                    Bpmn2Package.RELATIONSHIP__TARGETS);
         }
         return targets;
     }
@@ -165,7 +167,8 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
         RelationshipDirection oldDirection = direction;
         direction = newDirection == null ? DIRECTION_EDEFAULT : newDirection;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.RELATIONSHIP__DIRECTION, oldDirection, direction));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.RELATIONSHIP__DIRECTION, oldDirection, direction));
     }
 
     /**
@@ -186,7 +189,8 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
         String oldType = type;
         type = newType;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.RELATIONSHIP__TYPE, oldType, type));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.RELATIONSHIP__TYPE,
+                    oldType, type));
     }
 
     /**
@@ -197,14 +201,14 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.RELATIONSHIP__SOURCES:
-                return getSources();
-            case Bpmn2Package.RELATIONSHIP__TARGETS:
-                return getTargets();
-            case Bpmn2Package.RELATIONSHIP__DIRECTION:
-                return getDirection();
-            case Bpmn2Package.RELATIONSHIP__TYPE:
-                return getType();
+        case Bpmn2Package.RELATIONSHIP__SOURCES:
+            return getSources();
+        case Bpmn2Package.RELATIONSHIP__TARGETS:
+            return getTargets();
+        case Bpmn2Package.RELATIONSHIP__DIRECTION:
+            return getDirection();
+        case Bpmn2Package.RELATIONSHIP__TYPE:
+            return getType();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -218,20 +222,20 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.RELATIONSHIP__SOURCES:
-                getSources().clear();
-                getSources().addAll((Collection<? extends EObject>)newValue);
-                return;
-            case Bpmn2Package.RELATIONSHIP__TARGETS:
-                getTargets().clear();
-                getTargets().addAll((Collection<? extends EObject>)newValue);
-                return;
-            case Bpmn2Package.RELATIONSHIP__DIRECTION:
-                setDirection((RelationshipDirection)newValue);
-                return;
-            case Bpmn2Package.RELATIONSHIP__TYPE:
-                setType((String)newValue);
-                return;
+        case Bpmn2Package.RELATIONSHIP__SOURCES:
+            getSources().clear();
+            getSources().addAll((Collection<? extends EObject>) newValue);
+            return;
+        case Bpmn2Package.RELATIONSHIP__TARGETS:
+            getTargets().clear();
+            getTargets().addAll((Collection<? extends EObject>) newValue);
+            return;
+        case Bpmn2Package.RELATIONSHIP__DIRECTION:
+            setDirection((RelationshipDirection) newValue);
+            return;
+        case Bpmn2Package.RELATIONSHIP__TYPE:
+            setType((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -244,18 +248,18 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.RELATIONSHIP__SOURCES:
-                getSources().clear();
-                return;
-            case Bpmn2Package.RELATIONSHIP__TARGETS:
-                getTargets().clear();
-                return;
-            case Bpmn2Package.RELATIONSHIP__DIRECTION:
-                setDirection(DIRECTION_EDEFAULT);
-                return;
-            case Bpmn2Package.RELATIONSHIP__TYPE:
-                setType(TYPE_EDEFAULT);
-                return;
+        case Bpmn2Package.RELATIONSHIP__SOURCES:
+            getSources().clear();
+            return;
+        case Bpmn2Package.RELATIONSHIP__TARGETS:
+            getTargets().clear();
+            return;
+        case Bpmn2Package.RELATIONSHIP__DIRECTION:
+            setDirection(DIRECTION_EDEFAULT);
+            return;
+        case Bpmn2Package.RELATIONSHIP__TYPE:
+            setType(TYPE_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -268,14 +272,14 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.RELATIONSHIP__SOURCES:
-                return sources != null && !sources.isEmpty();
-            case Bpmn2Package.RELATIONSHIP__TARGETS:
-                return targets != null && !targets.isEmpty();
-            case Bpmn2Package.RELATIONSHIP__DIRECTION:
-                return direction != DIRECTION_EDEFAULT;
-            case Bpmn2Package.RELATIONSHIP__TYPE:
-                return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+        case Bpmn2Package.RELATIONSHIP__SOURCES:
+            return sources != null && !sources.isEmpty();
+        case Bpmn2Package.RELATIONSHIP__TARGETS:
+            return targets != null && !targets.isEmpty();
+        case Bpmn2Package.RELATIONSHIP__DIRECTION:
+            return direction != DIRECTION_EDEFAULT;
+        case Bpmn2Package.RELATIONSHIP__TYPE:
+            return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
         }
         return super.eIsSet(featureID);
     }

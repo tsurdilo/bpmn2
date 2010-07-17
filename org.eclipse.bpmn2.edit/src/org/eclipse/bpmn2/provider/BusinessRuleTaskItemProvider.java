@@ -38,7 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class BusinessRuleTaskItemProvider extends TaskItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class BusinessRuleTaskItemProvider extends TaskItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -72,7 +74,16 @@ public class BusinessRuleTaskItemProvider extends TaskItemProvider implements IE
      * @generated
      */
     protected void addImplementationPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_BusinessRuleTask_implementation_feature"), getString("_UI_PropertyDescriptor_description", "_UI_BusinessRuleTask_implementation_feature", "_UI_BusinessRuleTask_type"), Bpmn2Package.Literals.BUSINESS_RULE_TASK__IMPLEMENTATION, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors
+                .add(createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                        getResourceLocator(),
+                        getString("_UI_BusinessRuleTask_implementation_feature"),
+                        getString("_UI_PropertyDescriptor_description",
+                                "_UI_BusinessRuleTask_implementation_feature",
+                                "_UI_BusinessRuleTask_type"),
+                        Bpmn2Package.Literals.BUSINESS_RULE_TASK__IMPLEMENTATION, true, false,
+                        false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -84,9 +95,11 @@ public class BusinessRuleTaskItemProvider extends TaskItemProvider implements IE
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/BusinessRuleTask.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/BusinessRuleTask.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/BusinessRuleTask.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/BusinessRuleTask.gif"));
         }
     }
 
@@ -98,8 +111,9 @@ public class BusinessRuleTaskItemProvider extends TaskItemProvider implements IE
      */
     @Override
     public String getText(Object object) {
-        String label = ((BusinessRuleTask)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_BusinessRuleTask_type") : getString("_UI_BusinessRuleTask_type") + " " + label;
+        String label = ((BusinessRuleTask) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_BusinessRuleTask_type")
+                : getString("_UI_BusinessRuleTask_type") + " " + label;
     }
 
     /**
@@ -114,9 +128,10 @@ public class BusinessRuleTaskItemProvider extends TaskItemProvider implements IE
         updateChildren(notification);
 
         switch (notification.getFeatureID(BusinessRuleTask.class)) {
-            case Bpmn2Package.BUSINESS_RULE_TASK__IMPLEMENTATION:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case Bpmn2Package.BUSINESS_RULE_TASK__IMPLEMENTATION:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }

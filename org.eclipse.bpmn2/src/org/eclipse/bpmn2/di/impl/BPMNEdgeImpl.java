@@ -143,7 +143,8 @@ public class BPMNEdgeImpl extends LabeledEdgeImpl implements BPMNEdge {
         BPMNLabel oldLabel = label;
         label = newLabel;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BpmnDiPackage.BPMN_EDGE__LABEL, oldLabel, newLabel);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    BpmnDiPackage.BPMN_EDGE__LABEL, oldLabel, newLabel);
             if (msgs == null)
                 msgs = notification;
             else
@@ -161,14 +162,17 @@ public class BPMNEdgeImpl extends LabeledEdgeImpl implements BPMNEdge {
         if (newLabel != label) {
             NotificationChain msgs = null;
             if (label != null)
-                msgs = ((InternalEObject)label).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BpmnDiPackage.BPMN_EDGE__LABEL, null, msgs);
+                msgs = ((InternalEObject) label).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - BpmnDiPackage.BPMN_EDGE__LABEL, null, msgs);
             if (newLabel != null)
-                msgs = ((InternalEObject)newLabel).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BpmnDiPackage.BPMN_EDGE__LABEL, null, msgs);
+                msgs = ((InternalEObject) newLabel).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - BpmnDiPackage.BPMN_EDGE__LABEL, null, msgs);
             msgs = basicSetLabel(newLabel, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, BpmnDiPackage.BPMN_EDGE__LABEL, newLabel, newLabel));
+            eNotify(new ENotificationImpl(this, Notification.SET, BpmnDiPackage.BPMN_EDGE__LABEL,
+                    newLabel, newLabel));
     }
 
     /**
@@ -178,11 +182,12 @@ public class BPMNEdgeImpl extends LabeledEdgeImpl implements BPMNEdge {
      */
     public BaseElement getBpmnElement() {
         if (bpmnElement != null && bpmnElement.eIsProxy()) {
-            InternalEObject oldBpmnElement = (InternalEObject)bpmnElement;
-            bpmnElement = (BaseElement)eResolveProxy(oldBpmnElement);
+            InternalEObject oldBpmnElement = (InternalEObject) bpmnElement;
+            bpmnElement = (BaseElement) eResolveProxy(oldBpmnElement);
             if (bpmnElement != oldBpmnElement) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, BpmnDiPackage.BPMN_EDGE__BPMN_ELEMENT, oldBpmnElement, bpmnElement));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            BpmnDiPackage.BPMN_EDGE__BPMN_ELEMENT, oldBpmnElement, bpmnElement));
             }
         }
         return bpmnElement;
@@ -206,7 +211,8 @@ public class BPMNEdgeImpl extends LabeledEdgeImpl implements BPMNEdge {
         BaseElement oldBpmnElement = bpmnElement;
         bpmnElement = newBpmnElement;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, BpmnDiPackage.BPMN_EDGE__BPMN_ELEMENT, oldBpmnElement, bpmnElement));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnDiPackage.BPMN_EDGE__BPMN_ELEMENT, oldBpmnElement, bpmnElement));
     }
 
     /**
@@ -225,9 +231,12 @@ public class BPMNEdgeImpl extends LabeledEdgeImpl implements BPMNEdge {
      */
     public void setMessageVisibleKind(MessageVisibleKind newMessageVisibleKind) {
         MessageVisibleKind oldMessageVisibleKind = messageVisibleKind;
-        messageVisibleKind = newMessageVisibleKind == null ? MESSAGE_VISIBLE_KIND_EDEFAULT : newMessageVisibleKind;
+        messageVisibleKind = newMessageVisibleKind == null ? MESSAGE_VISIBLE_KIND_EDEFAULT
+                : newMessageVisibleKind;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, BpmnDiPackage.BPMN_EDGE__MESSAGE_VISIBLE_KIND, oldMessageVisibleKind, messageVisibleKind));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnDiPackage.BPMN_EDGE__MESSAGE_VISIBLE_KIND, oldMessageVisibleKind,
+                    messageVisibleKind));
     }
 
     /**
@@ -237,11 +246,13 @@ public class BPMNEdgeImpl extends LabeledEdgeImpl implements BPMNEdge {
      */
     public DiagramElement getSourceElement() {
         if (sourceElement != null && sourceElement.eIsProxy()) {
-            InternalEObject oldSourceElement = (InternalEObject)sourceElement;
-            sourceElement = (DiagramElement)eResolveProxy(oldSourceElement);
+            InternalEObject oldSourceElement = (InternalEObject) sourceElement;
+            sourceElement = (DiagramElement) eResolveProxy(oldSourceElement);
             if (sourceElement != oldSourceElement) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, BpmnDiPackage.BPMN_EDGE__SOURCE_ELEMENT, oldSourceElement, sourceElement));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            BpmnDiPackage.BPMN_EDGE__SOURCE_ELEMENT, oldSourceElement,
+                            sourceElement));
             }
         }
         return sourceElement;
@@ -265,7 +276,8 @@ public class BPMNEdgeImpl extends LabeledEdgeImpl implements BPMNEdge {
         DiagramElement oldSourceElement = sourceElement;
         sourceElement = newSourceElement;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, BpmnDiPackage.BPMN_EDGE__SOURCE_ELEMENT, oldSourceElement, sourceElement));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnDiPackage.BPMN_EDGE__SOURCE_ELEMENT, oldSourceElement, sourceElement));
     }
 
     /**
@@ -275,11 +287,13 @@ public class BPMNEdgeImpl extends LabeledEdgeImpl implements BPMNEdge {
      */
     public DiagramElement getTargetElement() {
         if (targetElement != null && targetElement.eIsProxy()) {
-            InternalEObject oldTargetElement = (InternalEObject)targetElement;
-            targetElement = (DiagramElement)eResolveProxy(oldTargetElement);
+            InternalEObject oldTargetElement = (InternalEObject) targetElement;
+            targetElement = (DiagramElement) eResolveProxy(oldTargetElement);
             if (targetElement != oldTargetElement) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, BpmnDiPackage.BPMN_EDGE__TARGET_ELEMENT, oldTargetElement, targetElement));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            BpmnDiPackage.BPMN_EDGE__TARGET_ELEMENT, oldTargetElement,
+                            targetElement));
             }
         }
         return targetElement;
@@ -303,7 +317,8 @@ public class BPMNEdgeImpl extends LabeledEdgeImpl implements BPMNEdge {
         DiagramElement oldTargetElement = targetElement;
         targetElement = newTargetElement;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, BpmnDiPackage.BPMN_EDGE__TARGET_ELEMENT, oldTargetElement, targetElement));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    BpmnDiPackage.BPMN_EDGE__TARGET_ELEMENT, oldTargetElement, targetElement));
     }
 
     /**
@@ -312,10 +327,11 @@ public class BPMNEdgeImpl extends LabeledEdgeImpl implements BPMNEdge {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case BpmnDiPackage.BPMN_EDGE__LABEL:
-                return basicSetLabel(null, msgs);
+        case BpmnDiPackage.BPMN_EDGE__LABEL:
+            return basicSetLabel(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -328,22 +344,22 @@ public class BPMNEdgeImpl extends LabeledEdgeImpl implements BPMNEdge {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case BpmnDiPackage.BPMN_EDGE__LABEL:
-                return getLabel();
-            case BpmnDiPackage.BPMN_EDGE__BPMN_ELEMENT:
-                if (resolve)
-                    return getBpmnElement();
-                return basicGetBpmnElement();
-            case BpmnDiPackage.BPMN_EDGE__MESSAGE_VISIBLE_KIND:
-                return getMessageVisibleKind();
-            case BpmnDiPackage.BPMN_EDGE__SOURCE_ELEMENT:
-                if (resolve)
-                    return getSourceElement();
-                return basicGetSourceElement();
-            case BpmnDiPackage.BPMN_EDGE__TARGET_ELEMENT:
-                if (resolve)
-                    return getTargetElement();
-                return basicGetTargetElement();
+        case BpmnDiPackage.BPMN_EDGE__LABEL:
+            return getLabel();
+        case BpmnDiPackage.BPMN_EDGE__BPMN_ELEMENT:
+            if (resolve)
+                return getBpmnElement();
+            return basicGetBpmnElement();
+        case BpmnDiPackage.BPMN_EDGE__MESSAGE_VISIBLE_KIND:
+            return getMessageVisibleKind();
+        case BpmnDiPackage.BPMN_EDGE__SOURCE_ELEMENT:
+            if (resolve)
+                return getSourceElement();
+            return basicGetSourceElement();
+        case BpmnDiPackage.BPMN_EDGE__TARGET_ELEMENT:
+            if (resolve)
+                return getTargetElement();
+            return basicGetTargetElement();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -356,21 +372,21 @@ public class BPMNEdgeImpl extends LabeledEdgeImpl implements BPMNEdge {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case BpmnDiPackage.BPMN_EDGE__LABEL:
-                setLabel((BPMNLabel)newValue);
-                return;
-            case BpmnDiPackage.BPMN_EDGE__BPMN_ELEMENT:
-                setBpmnElement((BaseElement)newValue);
-                return;
-            case BpmnDiPackage.BPMN_EDGE__MESSAGE_VISIBLE_KIND:
-                setMessageVisibleKind((MessageVisibleKind)newValue);
-                return;
-            case BpmnDiPackage.BPMN_EDGE__SOURCE_ELEMENT:
-                setSourceElement((DiagramElement)newValue);
-                return;
-            case BpmnDiPackage.BPMN_EDGE__TARGET_ELEMENT:
-                setTargetElement((DiagramElement)newValue);
-                return;
+        case BpmnDiPackage.BPMN_EDGE__LABEL:
+            setLabel((BPMNLabel) newValue);
+            return;
+        case BpmnDiPackage.BPMN_EDGE__BPMN_ELEMENT:
+            setBpmnElement((BaseElement) newValue);
+            return;
+        case BpmnDiPackage.BPMN_EDGE__MESSAGE_VISIBLE_KIND:
+            setMessageVisibleKind((MessageVisibleKind) newValue);
+            return;
+        case BpmnDiPackage.BPMN_EDGE__SOURCE_ELEMENT:
+            setSourceElement((DiagramElement) newValue);
+            return;
+        case BpmnDiPackage.BPMN_EDGE__TARGET_ELEMENT:
+            setTargetElement((DiagramElement) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -383,21 +399,21 @@ public class BPMNEdgeImpl extends LabeledEdgeImpl implements BPMNEdge {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case BpmnDiPackage.BPMN_EDGE__LABEL:
-                setLabel((BPMNLabel)null);
-                return;
-            case BpmnDiPackage.BPMN_EDGE__BPMN_ELEMENT:
-                setBpmnElement((BaseElement)null);
-                return;
-            case BpmnDiPackage.BPMN_EDGE__MESSAGE_VISIBLE_KIND:
-                setMessageVisibleKind(MESSAGE_VISIBLE_KIND_EDEFAULT);
-                return;
-            case BpmnDiPackage.BPMN_EDGE__SOURCE_ELEMENT:
-                setSourceElement((DiagramElement)null);
-                return;
-            case BpmnDiPackage.BPMN_EDGE__TARGET_ELEMENT:
-                setTargetElement((DiagramElement)null);
-                return;
+        case BpmnDiPackage.BPMN_EDGE__LABEL:
+            setLabel((BPMNLabel) null);
+            return;
+        case BpmnDiPackage.BPMN_EDGE__BPMN_ELEMENT:
+            setBpmnElement((BaseElement) null);
+            return;
+        case BpmnDiPackage.BPMN_EDGE__MESSAGE_VISIBLE_KIND:
+            setMessageVisibleKind(MESSAGE_VISIBLE_KIND_EDEFAULT);
+            return;
+        case BpmnDiPackage.BPMN_EDGE__SOURCE_ELEMENT:
+            setSourceElement((DiagramElement) null);
+            return;
+        case BpmnDiPackage.BPMN_EDGE__TARGET_ELEMENT:
+            setTargetElement((DiagramElement) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -410,16 +426,16 @@ public class BPMNEdgeImpl extends LabeledEdgeImpl implements BPMNEdge {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case BpmnDiPackage.BPMN_EDGE__LABEL:
-                return label != null;
-            case BpmnDiPackage.BPMN_EDGE__BPMN_ELEMENT:
-                return bpmnElement != null;
-            case BpmnDiPackage.BPMN_EDGE__MESSAGE_VISIBLE_KIND:
-                return messageVisibleKind != MESSAGE_VISIBLE_KIND_EDEFAULT;
-            case BpmnDiPackage.BPMN_EDGE__SOURCE_ELEMENT:
-                return sourceElement != null;
-            case BpmnDiPackage.BPMN_EDGE__TARGET_ELEMENT:
-                return targetElement != null;
+        case BpmnDiPackage.BPMN_EDGE__LABEL:
+            return label != null;
+        case BpmnDiPackage.BPMN_EDGE__BPMN_ELEMENT:
+            return bpmnElement != null;
+        case BpmnDiPackage.BPMN_EDGE__MESSAGE_VISIBLE_KIND:
+            return messageVisibleKind != MESSAGE_VISIBLE_KIND_EDEFAULT;
+        case BpmnDiPackage.BPMN_EDGE__SOURCE_ELEMENT:
+            return sourceElement != null;
+        case BpmnDiPackage.BPMN_EDGE__TARGET_ELEMENT:
+            return targetElement != null;
         }
         return super.eIsSet(featureID);
     }

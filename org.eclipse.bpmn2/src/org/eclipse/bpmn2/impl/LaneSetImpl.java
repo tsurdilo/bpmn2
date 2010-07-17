@@ -100,7 +100,8 @@ public class LaneSetImpl extends BaseElementImpl implements LaneSet {
      */
     public List<Lane> getLanes() {
         if (lanes == null) {
-            lanes = new EObjectContainmentEList<Lane>(Lane.class, this, Bpmn2Package.LANE_SET__LANES);
+            lanes = new EObjectContainmentEList<Lane>(Lane.class, this,
+                    Bpmn2Package.LANE_SET__LANES);
         }
         return lanes;
     }
@@ -123,7 +124,8 @@ public class LaneSetImpl extends BaseElementImpl implements LaneSet {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.LANE_SET__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.LANE_SET__NAME,
+                    oldName, name));
     }
 
     /**
@@ -132,10 +134,11 @@ public class LaneSetImpl extends BaseElementImpl implements LaneSet {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.LANE_SET__LANES:
-                return ((InternalEList<?>)getLanes()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.LANE_SET__LANES:
+            return ((InternalEList<?>) getLanes()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -148,10 +151,10 @@ public class LaneSetImpl extends BaseElementImpl implements LaneSet {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.LANE_SET__LANES:
-                return getLanes();
-            case Bpmn2Package.LANE_SET__NAME:
-                return getName();
+        case Bpmn2Package.LANE_SET__LANES:
+            return getLanes();
+        case Bpmn2Package.LANE_SET__NAME:
+            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -165,13 +168,13 @@ public class LaneSetImpl extends BaseElementImpl implements LaneSet {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.LANE_SET__LANES:
-                getLanes().clear();
-                getLanes().addAll((Collection<? extends Lane>)newValue);
-                return;
-            case Bpmn2Package.LANE_SET__NAME:
-                setName((String)newValue);
-                return;
+        case Bpmn2Package.LANE_SET__LANES:
+            getLanes().clear();
+            getLanes().addAll((Collection<? extends Lane>) newValue);
+            return;
+        case Bpmn2Package.LANE_SET__NAME:
+            setName((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -184,12 +187,12 @@ public class LaneSetImpl extends BaseElementImpl implements LaneSet {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.LANE_SET__LANES:
-                getLanes().clear();
-                return;
-            case Bpmn2Package.LANE_SET__NAME:
-                setName(NAME_EDEFAULT);
-                return;
+        case Bpmn2Package.LANE_SET__LANES:
+            getLanes().clear();
+            return;
+        case Bpmn2Package.LANE_SET__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -202,10 +205,10 @@ public class LaneSetImpl extends BaseElementImpl implements LaneSet {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.LANE_SET__LANES:
-                return lanes != null && !lanes.isEmpty();
-            case Bpmn2Package.LANE_SET__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case Bpmn2Package.LANE_SET__LANES:
+            return lanes != null && !lanes.isEmpty();
+        case Bpmn2Package.LANE_SET__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }

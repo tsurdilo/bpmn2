@@ -161,7 +161,10 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
      */
     public List<ConversationLink> getIncomingConversationLinks() {
         if (incomingConversationLinks == null) {
-            incomingConversationLinks = new EObjectWithInverseEList<ConversationLink>(ConversationLink.class, this, Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS, Bpmn2Package.CONVERSATION_LINK__TARGET_REF);
+            incomingConversationLinks = new EObjectWithInverseEList<ConversationLink>(
+                    ConversationLink.class, this,
+                    Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS,
+                    Bpmn2Package.CONVERSATION_LINK__TARGET_REF);
         }
         return incomingConversationLinks;
     }
@@ -173,7 +176,10 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
      */
     public List<ConversationLink> getOutgoingConversationLinks() {
         if (outgoingConversationLinks == null) {
-            outgoingConversationLinks = new EObjectWithInverseResolvingEList<ConversationLink>(ConversationLink.class, this, Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS, Bpmn2Package.CONVERSATION_LINK__SOURCE_REF);
+            outgoingConversationLinks = new EObjectWithInverseResolvingEList<ConversationLink>(
+                    ConversationLink.class, this,
+                    Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS,
+                    Bpmn2Package.CONVERSATION_LINK__SOURCE_REF);
         }
         return outgoingConversationLinks;
     }
@@ -185,7 +191,8 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
      */
     public List<Interface> getInterfaceRefs() {
         if (interfaceRefs == null) {
-            interfaceRefs = new EObjectResolvingEList<Interface>(Interface.class, this, Bpmn2Package.PARTICIPANT__INTERFACE_REFS);
+            interfaceRefs = new EObjectResolvingEList<Interface>(Interface.class, this,
+                    Bpmn2Package.PARTICIPANT__INTERFACE_REFS);
         }
         return interfaceRefs;
     }
@@ -197,7 +204,8 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
      */
     public List<EndPoint> getEndPointRefs() {
         if (endPointRefs == null) {
-            endPointRefs = new EObjectResolvingEList<EndPoint>(EndPoint.class, this, Bpmn2Package.PARTICIPANT__END_POINT_REFS);
+            endPointRefs = new EObjectResolvingEList<EndPoint>(EndPoint.class, this,
+                    Bpmn2Package.PARTICIPANT__END_POINT_REFS);
         }
         return endPointRefs;
     }
@@ -216,11 +224,14 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetParticipantMultiplicity(ParticipantMultiplicity newParticipantMultiplicity, NotificationChain msgs) {
+    public NotificationChain basicSetParticipantMultiplicity(
+            ParticipantMultiplicity newParticipantMultiplicity, NotificationChain msgs) {
         ParticipantMultiplicity oldParticipantMultiplicity = participantMultiplicity;
         participantMultiplicity = newParticipantMultiplicity;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY, oldParticipantMultiplicity, newParticipantMultiplicity);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY, oldParticipantMultiplicity,
+                    newParticipantMultiplicity);
             if (msgs == null)
                 msgs = notification;
             else
@@ -238,14 +249,20 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
         if (newParticipantMultiplicity != participantMultiplicity) {
             NotificationChain msgs = null;
             if (participantMultiplicity != null)
-                msgs = ((InternalEObject)participantMultiplicity).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY, null, msgs);
+                msgs = ((InternalEObject) participantMultiplicity)
+                        .eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                                - Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY, null, msgs);
             if (newParticipantMultiplicity != null)
-                msgs = ((InternalEObject)newParticipantMultiplicity).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY, null, msgs);
+                msgs = ((InternalEObject) newParticipantMultiplicity)
+                        .eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                                - Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY, null, msgs);
             msgs = basicSetParticipantMultiplicity(newParticipantMultiplicity, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY, newParticipantMultiplicity, newParticipantMultiplicity));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY, newParticipantMultiplicity,
+                    newParticipantMultiplicity));
     }
 
     /**
@@ -266,7 +283,8 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.PARTICIPANT__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.PARTICIPANT__NAME,
+                    oldName, name));
     }
 
     /**
@@ -276,11 +294,12 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
      */
     public org.eclipse.bpmn2.Process getProcessRef() {
         if (processRef != null && processRef.eIsProxy()) {
-            InternalEObject oldProcessRef = (InternalEObject)processRef;
-            processRef = (org.eclipse.bpmn2.Process)eResolveProxy(oldProcessRef);
+            InternalEObject oldProcessRef = (InternalEObject) processRef;
+            processRef = (org.eclipse.bpmn2.Process) eResolveProxy(oldProcessRef);
             if (processRef != oldProcessRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.PARTICIPANT__PROCESS_REF, oldProcessRef, processRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.PARTICIPANT__PROCESS_REF, oldProcessRef, processRef));
             }
         }
         return processRef;
@@ -304,7 +323,8 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
         org.eclipse.bpmn2.Process oldProcessRef = processRef;
         processRef = newProcessRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.PARTICIPANT__PROCESS_REF, oldProcessRef, processRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.PARTICIPANT__PROCESS_REF, oldProcessRef, processRef));
     }
 
     /**
@@ -314,12 +334,15 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
      */
     @SuppressWarnings("unchecked")
     @Override
-    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS:
-                return ((InternalEList<InternalEObject>)(InternalEList<?>)getIncomingConversationLinks()).basicAdd(otherEnd, msgs);
-            case Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS:
-                return ((InternalEList<InternalEObject>)(InternalEList<?>)getOutgoingConversationLinks()).basicAdd(otherEnd, msgs);
+        case Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getIncomingConversationLinks())
+                    .basicAdd(otherEnd, msgs);
+        case Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getOutgoingConversationLinks())
+                    .basicAdd(otherEnd, msgs);
         }
         return super.eInverseAdd(otherEnd, featureID, msgs);
     }
@@ -330,14 +353,15 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS:
-                return ((InternalEList<?>)getIncomingConversationLinks()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS:
-                return ((InternalEList<?>)getOutgoingConversationLinks()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
-                return basicSetParticipantMultiplicity(null, msgs);
+        case Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS:
+            return ((InternalEList<?>) getIncomingConversationLinks()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS:
+            return ((InternalEList<?>) getOutgoingConversationLinks()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
+            return basicSetParticipantMultiplicity(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -350,22 +374,22 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS:
-                return getIncomingConversationLinks();
-            case Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS:
-                return getOutgoingConversationLinks();
-            case Bpmn2Package.PARTICIPANT__INTERFACE_REFS:
-                return getInterfaceRefs();
-            case Bpmn2Package.PARTICIPANT__END_POINT_REFS:
-                return getEndPointRefs();
-            case Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
-                return getParticipantMultiplicity();
-            case Bpmn2Package.PARTICIPANT__NAME:
-                return getName();
-            case Bpmn2Package.PARTICIPANT__PROCESS_REF:
-                if (resolve)
-                    return getProcessRef();
-                return basicGetProcessRef();
+        case Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS:
+            return getIncomingConversationLinks();
+        case Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS:
+            return getOutgoingConversationLinks();
+        case Bpmn2Package.PARTICIPANT__INTERFACE_REFS:
+            return getInterfaceRefs();
+        case Bpmn2Package.PARTICIPANT__END_POINT_REFS:
+            return getEndPointRefs();
+        case Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
+            return getParticipantMultiplicity();
+        case Bpmn2Package.PARTICIPANT__NAME:
+            return getName();
+        case Bpmn2Package.PARTICIPANT__PROCESS_REF:
+            if (resolve)
+                return getProcessRef();
+            return basicGetProcessRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -379,31 +403,33 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS:
-                getIncomingConversationLinks().clear();
-                getIncomingConversationLinks().addAll((Collection<? extends ConversationLink>)newValue);
-                return;
-            case Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS:
-                getOutgoingConversationLinks().clear();
-                getOutgoingConversationLinks().addAll((Collection<? extends ConversationLink>)newValue);
-                return;
-            case Bpmn2Package.PARTICIPANT__INTERFACE_REFS:
-                getInterfaceRefs().clear();
-                getInterfaceRefs().addAll((Collection<? extends Interface>)newValue);
-                return;
-            case Bpmn2Package.PARTICIPANT__END_POINT_REFS:
-                getEndPointRefs().clear();
-                getEndPointRefs().addAll((Collection<? extends EndPoint>)newValue);
-                return;
-            case Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
-                setParticipantMultiplicity((ParticipantMultiplicity)newValue);
-                return;
-            case Bpmn2Package.PARTICIPANT__NAME:
-                setName((String)newValue);
-                return;
-            case Bpmn2Package.PARTICIPANT__PROCESS_REF:
-                setProcessRef((org.eclipse.bpmn2.Process)newValue);
-                return;
+        case Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS:
+            getIncomingConversationLinks().clear();
+            getIncomingConversationLinks()
+                    .addAll((Collection<? extends ConversationLink>) newValue);
+            return;
+        case Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS:
+            getOutgoingConversationLinks().clear();
+            getOutgoingConversationLinks()
+                    .addAll((Collection<? extends ConversationLink>) newValue);
+            return;
+        case Bpmn2Package.PARTICIPANT__INTERFACE_REFS:
+            getInterfaceRefs().clear();
+            getInterfaceRefs().addAll((Collection<? extends Interface>) newValue);
+            return;
+        case Bpmn2Package.PARTICIPANT__END_POINT_REFS:
+            getEndPointRefs().clear();
+            getEndPointRefs().addAll((Collection<? extends EndPoint>) newValue);
+            return;
+        case Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
+            setParticipantMultiplicity((ParticipantMultiplicity) newValue);
+            return;
+        case Bpmn2Package.PARTICIPANT__NAME:
+            setName((String) newValue);
+            return;
+        case Bpmn2Package.PARTICIPANT__PROCESS_REF:
+            setProcessRef((org.eclipse.bpmn2.Process) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -416,27 +442,27 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS:
-                getIncomingConversationLinks().clear();
-                return;
-            case Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS:
-                getOutgoingConversationLinks().clear();
-                return;
-            case Bpmn2Package.PARTICIPANT__INTERFACE_REFS:
-                getInterfaceRefs().clear();
-                return;
-            case Bpmn2Package.PARTICIPANT__END_POINT_REFS:
-                getEndPointRefs().clear();
-                return;
-            case Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
-                setParticipantMultiplicity((ParticipantMultiplicity)null);
-                return;
-            case Bpmn2Package.PARTICIPANT__NAME:
-                setName(NAME_EDEFAULT);
-                return;
-            case Bpmn2Package.PARTICIPANT__PROCESS_REF:
-                setProcessRef((org.eclipse.bpmn2.Process)null);
-                return;
+        case Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS:
+            getIncomingConversationLinks().clear();
+            return;
+        case Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS:
+            getOutgoingConversationLinks().clear();
+            return;
+        case Bpmn2Package.PARTICIPANT__INTERFACE_REFS:
+            getInterfaceRefs().clear();
+            return;
+        case Bpmn2Package.PARTICIPANT__END_POINT_REFS:
+            getEndPointRefs().clear();
+            return;
+        case Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
+            setParticipantMultiplicity((ParticipantMultiplicity) null);
+            return;
+        case Bpmn2Package.PARTICIPANT__NAME:
+            setName(NAME_EDEFAULT);
+            return;
+        case Bpmn2Package.PARTICIPANT__PROCESS_REF:
+            setProcessRef((org.eclipse.bpmn2.Process) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -449,20 +475,20 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS:
-                return incomingConversationLinks != null && !incomingConversationLinks.isEmpty();
-            case Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS:
-                return outgoingConversationLinks != null && !outgoingConversationLinks.isEmpty();
-            case Bpmn2Package.PARTICIPANT__INTERFACE_REFS:
-                return interfaceRefs != null && !interfaceRefs.isEmpty();
-            case Bpmn2Package.PARTICIPANT__END_POINT_REFS:
-                return endPointRefs != null && !endPointRefs.isEmpty();
-            case Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
-                return participantMultiplicity != null;
-            case Bpmn2Package.PARTICIPANT__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-            case Bpmn2Package.PARTICIPANT__PROCESS_REF:
-                return processRef != null;
+        case Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS:
+            return incomingConversationLinks != null && !incomingConversationLinks.isEmpty();
+        case Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS:
+            return outgoingConversationLinks != null && !outgoingConversationLinks.isEmpty();
+        case Bpmn2Package.PARTICIPANT__INTERFACE_REFS:
+            return interfaceRefs != null && !interfaceRefs.isEmpty();
+        case Bpmn2Package.PARTICIPANT__END_POINT_REFS:
+            return endPointRefs != null && !endPointRefs.isEmpty();
+        case Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
+            return participantMultiplicity != null;
+        case Bpmn2Package.PARTICIPANT__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case Bpmn2Package.PARTICIPANT__PROCESS_REF:
+            return processRef != null;
         }
         return super.eIsSet(featureID);
     }
@@ -476,12 +502,12 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
     public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == InteractionNode.class) {
             switch (derivedFeatureID) {
-                case Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS:
-                    return Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS;
-                case Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS:
-                    return Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS;
-                default:
-                    return -1;
+            case Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS:
+                return Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS;
+            case Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS:
+                return Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS;
+            default:
+                return -1;
             }
         }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
@@ -496,12 +522,12 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
     public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == InteractionNode.class) {
             switch (baseFeatureID) {
-                case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
-                    return Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS;
-                case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
-                    return Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS;
-                default:
-                    return -1;
+            case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
+                return Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS;
+            case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
+                return Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS;
+            default:
+                return -1;
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);

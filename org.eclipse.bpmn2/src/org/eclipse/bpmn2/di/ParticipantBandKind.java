@@ -187,7 +187,9 @@ public enum ParticipantBandKind implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    private static final ParticipantBandKind[] VALUES_ARRAY = new ParticipantBandKind[] { TOP_INITIATING, MIDDLE_INITIATING, BOTTOM_INITIATING, TOP_NON_INITIATING, MIDDLE_NON_INITIATING, BOTTOM_NON_INITIATING, };
+    private static final ParticipantBandKind[] VALUES_ARRAY = new ParticipantBandKind[] {
+            TOP_INITIATING, MIDDLE_INITIATING, BOTTOM_INITIATING, TOP_NON_INITIATING,
+            MIDDLE_NON_INITIATING, BOTTOM_NON_INITIATING, };
 
     /**
      * A public read-only list of all the '<em><b>Participant Band Kind</b></em>' enumerators.
@@ -195,7 +197,8 @@ public enum ParticipantBandKind implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final List<ParticipantBandKind> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+    public static final List<ParticipantBandKind> VALUES = Collections.unmodifiableList(Arrays
+            .asList(VALUES_ARRAY));
 
     /**
      * Returns the '<em><b>Participant Band Kind</b></em>' literal with the specified literal value.
@@ -237,18 +240,18 @@ public enum ParticipantBandKind implements Enumerator {
      */
     public static ParticipantBandKind get(int value) {
         switch (value) {
-            case TOP_INITIATING_VALUE:
-                return TOP_INITIATING;
-            case MIDDLE_INITIATING_VALUE:
-                return MIDDLE_INITIATING;
-            case BOTTOM_INITIATING_VALUE:
-                return BOTTOM_INITIATING;
-            case TOP_NON_INITIATING_VALUE:
-                return TOP_NON_INITIATING;
-            case MIDDLE_NON_INITIATING_VALUE:
-                return MIDDLE_NON_INITIATING;
-            case BOTTOM_NON_INITIATING_VALUE:
-                return BOTTOM_NON_INITIATING;
+        case TOP_INITIATING_VALUE:
+            return TOP_INITIATING;
+        case MIDDLE_INITIATING_VALUE:
+            return MIDDLE_INITIATING;
+        case BOTTOM_INITIATING_VALUE:
+            return BOTTOM_INITIATING;
+        case TOP_NON_INITIATING_VALUE:
+            return TOP_NON_INITIATING;
+        case MIDDLE_NON_INITIATING_VALUE:
+            return MIDDLE_NON_INITIATING;
+        case BOTTOM_NON_INITIATING_VALUE:
+            return BOTTOM_NON_INITIATING;
         }
         return null;
     }

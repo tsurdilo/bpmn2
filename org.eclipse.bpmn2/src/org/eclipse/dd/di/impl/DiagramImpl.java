@@ -185,7 +185,8 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
         String oldDocumentation = documentation;
         documentation = newDocumentation;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, DiPackage.DIAGRAM__DOCUMENTATION, oldDocumentation, documentation));
+            eNotify(new ENotificationImpl(this, Notification.SET, DiPackage.DIAGRAM__DOCUMENTATION,
+                    oldDocumentation, documentation));
     }
 
     /**
@@ -195,7 +196,8 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
      */
     public List<Style> getOwnedStyle() {
         if (ownedStyle == null) {
-            ownedStyle = new EObjectResolvingEList<Style>(Style.class, this, DiPackage.DIAGRAM__OWNED_STYLE);
+            ownedStyle = new EObjectResolvingEList<Style>(Style.class, this,
+                    DiPackage.DIAGRAM__OWNED_STYLE);
         }
         return ownedStyle;
     }
@@ -214,11 +216,13 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetRootElement(DiagramElement newRootElement, NotificationChain msgs) {
+    public NotificationChain basicSetRootElement(DiagramElement newRootElement,
+            NotificationChain msgs) {
         DiagramElement oldRootElement = rootElement;
         rootElement = newRootElement;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DiPackage.DIAGRAM__ROOT_ELEMENT, oldRootElement, newRootElement);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    DiPackage.DIAGRAM__ROOT_ELEMENT, oldRootElement, newRootElement);
             if (msgs == null)
                 msgs = notification;
             else
@@ -266,7 +270,8 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, DiPackage.DIAGRAM__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, DiPackage.DIAGRAM__NAME, oldName,
+                    name));
     }
 
     /**
@@ -287,7 +292,8 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
         float oldResolution = resolution;
         resolution = newResolution;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, DiPackage.DIAGRAM__RESOLUTION, oldResolution, resolution));
+            eNotify(new ENotificationImpl(this, Notification.SET, DiPackage.DIAGRAM__RESOLUTION,
+                    oldResolution, resolution));
     }
 
     /**
@@ -296,12 +302,14 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
      * @generated
      */
     @Override
-    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case DiPackage.DIAGRAM__ROOT_ELEMENT:
-                if (rootElement != null)
-                    msgs = ((InternalEObject)rootElement).eInverseRemove(this, DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM, DiagramElement.class, msgs);
-                return basicSetRootElement((DiagramElement)otherEnd, msgs);
+        case DiPackage.DIAGRAM__ROOT_ELEMENT:
+            if (rootElement != null)
+                msgs = ((InternalEObject) rootElement).eInverseRemove(this,
+                        DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM, DiagramElement.class, msgs);
+            return basicSetRootElement((DiagramElement) otherEnd, msgs);
         }
         return super.eInverseAdd(otherEnd, featureID, msgs);
     }
@@ -312,10 +320,11 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case DiPackage.DIAGRAM__ROOT_ELEMENT:
-                return basicSetRootElement(null, msgs);
+        case DiPackage.DIAGRAM__ROOT_ELEMENT:
+            return basicSetRootElement(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -328,18 +337,18 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case DiPackage.DIAGRAM__DOCUMENTATION:
-                return getDocumentation();
-            case DiPackage.DIAGRAM__OWNED_STYLE:
-                return getOwnedStyle();
-            case DiPackage.DIAGRAM__ROOT_ELEMENT:
-                return getRootElement();
-            case DiPackage.DIAGRAM__ID:
-                return getId();
-            case DiPackage.DIAGRAM__NAME:
-                return getName();
-            case DiPackage.DIAGRAM__RESOLUTION:
-                return getResolution();
+        case DiPackage.DIAGRAM__DOCUMENTATION:
+            return getDocumentation();
+        case DiPackage.DIAGRAM__OWNED_STYLE:
+            return getOwnedStyle();
+        case DiPackage.DIAGRAM__ROOT_ELEMENT:
+            return getRootElement();
+        case DiPackage.DIAGRAM__ID:
+            return getId();
+        case DiPackage.DIAGRAM__NAME:
+            return getName();
+        case DiPackage.DIAGRAM__RESOLUTION:
+            return getResolution();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -352,18 +361,18 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case DiPackage.DIAGRAM__DOCUMENTATION:
-                setDocumentation((String)newValue);
-                return;
-            case DiPackage.DIAGRAM__ID:
-                setId((String)newValue);
-                return;
-            case DiPackage.DIAGRAM__NAME:
-                setName((String)newValue);
-                return;
-            case DiPackage.DIAGRAM__RESOLUTION:
-                setResolution((Float)newValue);
-                return;
+        case DiPackage.DIAGRAM__DOCUMENTATION:
+            setDocumentation((String) newValue);
+            return;
+        case DiPackage.DIAGRAM__ID:
+            setId((String) newValue);
+            return;
+        case DiPackage.DIAGRAM__NAME:
+            setName((String) newValue);
+            return;
+        case DiPackage.DIAGRAM__RESOLUTION:
+            setResolution((Float) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -376,18 +385,18 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case DiPackage.DIAGRAM__DOCUMENTATION:
-                setDocumentation(DOCUMENTATION_EDEFAULT);
-                return;
-            case DiPackage.DIAGRAM__ID:
-                setId(ID_EDEFAULT);
-                return;
-            case DiPackage.DIAGRAM__NAME:
-                setName(NAME_EDEFAULT);
-                return;
-            case DiPackage.DIAGRAM__RESOLUTION:
-                setResolution(RESOLUTION_EDEFAULT);
-                return;
+        case DiPackage.DIAGRAM__DOCUMENTATION:
+            setDocumentation(DOCUMENTATION_EDEFAULT);
+            return;
+        case DiPackage.DIAGRAM__ID:
+            setId(ID_EDEFAULT);
+            return;
+        case DiPackage.DIAGRAM__NAME:
+            setName(NAME_EDEFAULT);
+            return;
+        case DiPackage.DIAGRAM__RESOLUTION:
+            setResolution(RESOLUTION_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -400,18 +409,19 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case DiPackage.DIAGRAM__DOCUMENTATION:
-                return DOCUMENTATION_EDEFAULT == null ? documentation != null : !DOCUMENTATION_EDEFAULT.equals(documentation);
-            case DiPackage.DIAGRAM__OWNED_STYLE:
-                return ownedStyle != null && !ownedStyle.isEmpty();
-            case DiPackage.DIAGRAM__ROOT_ELEMENT:
-                return rootElement != null;
-            case DiPackage.DIAGRAM__ID:
-                return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-            case DiPackage.DIAGRAM__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-            case DiPackage.DIAGRAM__RESOLUTION:
-                return resolution != RESOLUTION_EDEFAULT;
+        case DiPackage.DIAGRAM__DOCUMENTATION:
+            return DOCUMENTATION_EDEFAULT == null ? documentation != null : !DOCUMENTATION_EDEFAULT
+                    .equals(documentation);
+        case DiPackage.DIAGRAM__OWNED_STYLE:
+            return ownedStyle != null && !ownedStyle.isEmpty();
+        case DiPackage.DIAGRAM__ROOT_ELEMENT:
+            return rootElement != null;
+        case DiPackage.DIAGRAM__ID:
+            return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+        case DiPackage.DIAGRAM__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case DiPackage.DIAGRAM__RESOLUTION:
+            return resolution != RESOLUTION_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }

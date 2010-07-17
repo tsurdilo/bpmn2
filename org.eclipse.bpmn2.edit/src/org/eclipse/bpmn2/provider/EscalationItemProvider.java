@@ -40,7 +40,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EscalationItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class EscalationItemProvider extends ItemProviderAdapter implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -76,7 +78,14 @@ public class EscalationItemProvider extends ItemProviderAdapter implements IEdit
      * @generated
      */
     protected void addEscalationCodePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Escalation_escalationCode_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Escalation_escalationCode_feature", "_UI_Escalation_type"), Bpmn2Package.Literals.ESCALATION__ESCALATION_CODE, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Escalation_escalationCode_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_Escalation_escalationCode_feature", "_UI_Escalation_type"),
+                Bpmn2Package.Literals.ESCALATION__ESCALATION_CODE, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -86,7 +95,13 @@ public class EscalationItemProvider extends ItemProviderAdapter implements IEdit
      * @generated
      */
     protected void addNamePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Escalation_name_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Escalation_name_feature", "_UI_Escalation_type"), Bpmn2Package.Literals.ESCALATION__NAME, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Escalation_name_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Escalation_name_feature",
+                        "_UI_Escalation_type"), Bpmn2Package.Literals.ESCALATION__NAME, true,
+                false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -96,7 +111,14 @@ public class EscalationItemProvider extends ItemProviderAdapter implements IEdit
      * @generated
      */
     protected void addStructureRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Escalation_structureRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Escalation_structureRef_feature", "_UI_Escalation_type"), Bpmn2Package.Literals.ESCALATION__STRUCTURE_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Escalation_structureRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_Escalation_structureRef_feature", "_UI_Escalation_type"),
+                Bpmn2Package.Literals.ESCALATION__STRUCTURE_REF, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -122,8 +144,9 @@ public class EscalationItemProvider extends ItemProviderAdapter implements IEdit
      */
     @Override
     public String getText(Object object) {
-        String label = ((Escalation)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_Escalation_type") : getString("_UI_Escalation_type") + " " + label;
+        String label = ((Escalation) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_Escalation_type")
+                : getString("_UI_Escalation_type") + " " + label;
     }
 
     /**
@@ -138,10 +161,11 @@ public class EscalationItemProvider extends ItemProviderAdapter implements IEdit
         updateChildren(notification);
 
         switch (notification.getFeatureID(Escalation.class)) {
-            case Bpmn2Package.ESCALATION__ESCALATION_CODE:
-            case Bpmn2Package.ESCALATION__NAME:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case Bpmn2Package.ESCALATION__ESCALATION_CODE:
+        case Bpmn2Package.ESCALATION__NAME:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }

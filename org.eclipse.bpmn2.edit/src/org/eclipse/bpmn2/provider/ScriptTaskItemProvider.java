@@ -38,7 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ScriptTaskItemProvider extends TaskItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ScriptTaskItemProvider extends TaskItemProvider implements IEditingDomainItemProvider,
+        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider,
+        IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -73,7 +75,13 @@ public class ScriptTaskItemProvider extends TaskItemProvider implements IEditing
      * @generated
      */
     protected void addScriptPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_ScriptTask_script_feature"), getString("_UI_PropertyDescriptor_description", "_UI_ScriptTask_script_feature", "_UI_ScriptTask_type"), Bpmn2Package.Literals.SCRIPT_TASK__SCRIPT, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_ScriptTask_script_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_ScriptTask_script_feature",
+                        "_UI_ScriptTask_type"), Bpmn2Package.Literals.SCRIPT_TASK__SCRIPT, true,
+                false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -83,7 +91,14 @@ public class ScriptTaskItemProvider extends TaskItemProvider implements IEditing
      * @generated
      */
     protected void addScriptFormatPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_ScriptTask_scriptFormat_feature"), getString("_UI_PropertyDescriptor_description", "_UI_ScriptTask_scriptFormat_feature", "_UI_ScriptTask_type"), Bpmn2Package.Literals.SCRIPT_TASK__SCRIPT_FORMAT, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_ScriptTask_scriptFormat_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_ScriptTask_scriptFormat_feature", "_UI_ScriptTask_type"),
+                Bpmn2Package.Literals.SCRIPT_TASK__SCRIPT_FORMAT, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -109,8 +124,9 @@ public class ScriptTaskItemProvider extends TaskItemProvider implements IEditing
      */
     @Override
     public String getText(Object object) {
-        String label = ((ScriptTask)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_ScriptTask_type") : getString("_UI_ScriptTask_type") + " " + label;
+        String label = ((ScriptTask) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_ScriptTask_type")
+                : getString("_UI_ScriptTask_type") + " " + label;
     }
 
     /**
@@ -125,10 +141,11 @@ public class ScriptTaskItemProvider extends TaskItemProvider implements IEditing
         updateChildren(notification);
 
         switch (notification.getFeatureID(ScriptTask.class)) {
-            case Bpmn2Package.SCRIPT_TASK__SCRIPT:
-            case Bpmn2Package.SCRIPT_TASK__SCRIPT_FORMAT:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case Bpmn2Package.SCRIPT_TASK__SCRIPT:
+        case Bpmn2Package.SCRIPT_TASK__SCRIPT_FORMAT:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }

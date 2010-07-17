@@ -100,7 +100,8 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
      */
     public List<SequenceFlow> getIncoming() {
         if (incoming == null) {
-            incoming = new EObjectWithInverseResolvingEList<SequenceFlow>(SequenceFlow.class, this, Bpmn2Package.FLOW_NODE__INCOMING, Bpmn2Package.SEQUENCE_FLOW__TARGET_REF);
+            incoming = new EObjectWithInverseResolvingEList<SequenceFlow>(SequenceFlow.class, this,
+                    Bpmn2Package.FLOW_NODE__INCOMING, Bpmn2Package.SEQUENCE_FLOW__TARGET_REF);
         }
         return incoming;
     }
@@ -112,7 +113,8 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
      */
     public List<Lane> getLanes() {
         if (lanes == null) {
-            lanes = new EObjectWithInverseResolvingEList.ManyInverse<Lane>(Lane.class, this, Bpmn2Package.FLOW_NODE__LANES, Bpmn2Package.LANE__FLOW_NODE_REFS);
+            lanes = new EObjectWithInverseResolvingEList.ManyInverse<Lane>(Lane.class, this,
+                    Bpmn2Package.FLOW_NODE__LANES, Bpmn2Package.LANE__FLOW_NODE_REFS);
         }
         return lanes;
     }
@@ -124,7 +126,8 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
      */
     public List<SequenceFlow> getOutgoing() {
         if (outgoing == null) {
-            outgoing = new EObjectWithInverseResolvingEList<SequenceFlow>(SequenceFlow.class, this, Bpmn2Package.FLOW_NODE__OUTGOING, Bpmn2Package.SEQUENCE_FLOW__SOURCE_REF);
+            outgoing = new EObjectWithInverseResolvingEList<SequenceFlow>(SequenceFlow.class, this,
+                    Bpmn2Package.FLOW_NODE__OUTGOING, Bpmn2Package.SEQUENCE_FLOW__SOURCE_REF);
         }
         return outgoing;
     }
@@ -136,14 +139,18 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
      */
     @SuppressWarnings("unchecked")
     @Override
-    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.FLOW_NODE__INCOMING:
-                return ((InternalEList<InternalEObject>)(InternalEList<?>)getIncoming()).basicAdd(otherEnd, msgs);
-            case Bpmn2Package.FLOW_NODE__LANES:
-                return ((InternalEList<InternalEObject>)(InternalEList<?>)getLanes()).basicAdd(otherEnd, msgs);
-            case Bpmn2Package.FLOW_NODE__OUTGOING:
-                return ((InternalEList<InternalEObject>)(InternalEList<?>)getOutgoing()).basicAdd(otherEnd, msgs);
+        case Bpmn2Package.FLOW_NODE__INCOMING:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getIncoming()).basicAdd(
+                    otherEnd, msgs);
+        case Bpmn2Package.FLOW_NODE__LANES:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getLanes()).basicAdd(
+                    otherEnd, msgs);
+        case Bpmn2Package.FLOW_NODE__OUTGOING:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getOutgoing()).basicAdd(
+                    otherEnd, msgs);
         }
         return super.eInverseAdd(otherEnd, featureID, msgs);
     }
@@ -154,14 +161,15 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.FLOW_NODE__INCOMING:
-                return ((InternalEList<?>)getIncoming()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.FLOW_NODE__LANES:
-                return ((InternalEList<?>)getLanes()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.FLOW_NODE__OUTGOING:
-                return ((InternalEList<?>)getOutgoing()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.FLOW_NODE__INCOMING:
+            return ((InternalEList<?>) getIncoming()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.FLOW_NODE__LANES:
+            return ((InternalEList<?>) getLanes()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.FLOW_NODE__OUTGOING:
+            return ((InternalEList<?>) getOutgoing()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -174,12 +182,12 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.FLOW_NODE__INCOMING:
-                return getIncoming();
-            case Bpmn2Package.FLOW_NODE__LANES:
-                return getLanes();
-            case Bpmn2Package.FLOW_NODE__OUTGOING:
-                return getOutgoing();
+        case Bpmn2Package.FLOW_NODE__INCOMING:
+            return getIncoming();
+        case Bpmn2Package.FLOW_NODE__LANES:
+            return getLanes();
+        case Bpmn2Package.FLOW_NODE__OUTGOING:
+            return getOutgoing();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -193,18 +201,18 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.FLOW_NODE__INCOMING:
-                getIncoming().clear();
-                getIncoming().addAll((Collection<? extends SequenceFlow>)newValue);
-                return;
-            case Bpmn2Package.FLOW_NODE__LANES:
-                getLanes().clear();
-                getLanes().addAll((Collection<? extends Lane>)newValue);
-                return;
-            case Bpmn2Package.FLOW_NODE__OUTGOING:
-                getOutgoing().clear();
-                getOutgoing().addAll((Collection<? extends SequenceFlow>)newValue);
-                return;
+        case Bpmn2Package.FLOW_NODE__INCOMING:
+            getIncoming().clear();
+            getIncoming().addAll((Collection<? extends SequenceFlow>) newValue);
+            return;
+        case Bpmn2Package.FLOW_NODE__LANES:
+            getLanes().clear();
+            getLanes().addAll((Collection<? extends Lane>) newValue);
+            return;
+        case Bpmn2Package.FLOW_NODE__OUTGOING:
+            getOutgoing().clear();
+            getOutgoing().addAll((Collection<? extends SequenceFlow>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -217,15 +225,15 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.FLOW_NODE__INCOMING:
-                getIncoming().clear();
-                return;
-            case Bpmn2Package.FLOW_NODE__LANES:
-                getLanes().clear();
-                return;
-            case Bpmn2Package.FLOW_NODE__OUTGOING:
-                getOutgoing().clear();
-                return;
+        case Bpmn2Package.FLOW_NODE__INCOMING:
+            getIncoming().clear();
+            return;
+        case Bpmn2Package.FLOW_NODE__LANES:
+            getLanes().clear();
+            return;
+        case Bpmn2Package.FLOW_NODE__OUTGOING:
+            getOutgoing().clear();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -238,12 +246,12 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.FLOW_NODE__INCOMING:
-                return incoming != null && !incoming.isEmpty();
-            case Bpmn2Package.FLOW_NODE__LANES:
-                return lanes != null && !lanes.isEmpty();
-            case Bpmn2Package.FLOW_NODE__OUTGOING:
-                return outgoing != null && !outgoing.isEmpty();
+        case Bpmn2Package.FLOW_NODE__INCOMING:
+            return incoming != null && !incoming.isEmpty();
+        case Bpmn2Package.FLOW_NODE__LANES:
+            return lanes != null && !lanes.isEmpty();
+        case Bpmn2Package.FLOW_NODE__OUTGOING:
+            return outgoing != null && !outgoing.isEmpty();
         }
         return super.eIsSet(featureID);
     }

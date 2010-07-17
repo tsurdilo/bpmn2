@@ -39,7 +39,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EventItemProvider extends FlowNodeItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class EventItemProvider extends FlowNodeItemProvider implements IEditingDomainItemProvider,
+        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider,
+        IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -74,7 +76,15 @@ public class EventItemProvider extends FlowNodeItemProvider implements IEditingD
      * @generated
      */
     protected void addIncomingConversationLinksPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_InteractionNode_incomingConversationLinks_feature"), getString("_UI_PropertyDescriptor_description", "_UI_InteractionNode_incomingConversationLinks_feature", "_UI_InteractionNode_type"), Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_InteractionNode_incomingConversationLinks_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_InteractionNode_incomingConversationLinks_feature",
+                        "_UI_InteractionNode_type"),
+                Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS, true, false,
+                true, null, null, null));
     }
 
     /**
@@ -84,7 +94,15 @@ public class EventItemProvider extends FlowNodeItemProvider implements IEditingD
      * @generated
      */
     protected void addOutgoingConversationLinksPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_InteractionNode_outgoingConversationLinks_feature"), getString("_UI_PropertyDescriptor_description", "_UI_InteractionNode_outgoingConversationLinks_feature", "_UI_InteractionNode_type"), Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_InteractionNode_outgoingConversationLinks_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_InteractionNode_outgoingConversationLinks_feature",
+                        "_UI_InteractionNode_type"),
+                Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS, true, false,
+                true, null, null, null));
     }
 
     /**
@@ -125,8 +143,9 @@ public class EventItemProvider extends FlowNodeItemProvider implements IEditingD
      */
     @Override
     public String getText(Object object) {
-        String label = ((Event)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_Event_type") : getString("_UI_Event_type") + " " + label;
+        String label = ((Event) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_Event_type")
+                : getString("_UI_Event_type") + " " + label;
     }
 
     /**
@@ -141,9 +160,10 @@ public class EventItemProvider extends FlowNodeItemProvider implements IEditingD
         updateChildren(notification);
 
         switch (notification.getFeatureID(Event.class)) {
-            case Bpmn2Package.EVENT__PROPERTIES:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case Bpmn2Package.EVENT__PROPERTIES:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -159,7 +179,8 @@ public class EventItemProvider extends FlowNodeItemProvider implements IEditingD
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.EVENT__PROPERTIES, Bpmn2Factory.eINSTANCE.createProperty()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.EVENT__PROPERTIES,
+                Bpmn2Factory.eINSTANCE.createProperty()));
     }
 
 }

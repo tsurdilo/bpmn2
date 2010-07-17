@@ -43,7 +43,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DiItemProviderAdapterFactory extends DiAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
+public class DiItemProviderAdapterFactory extends DiAdapterFactory implements
+        ComposeableAdapterFactory, IChangeNotifier, IDisposable {
     /**
      * This keeps track of the root adapter factory that delegates to this adapter factory.
      * <!-- begin-user-doc -->
@@ -155,7 +156,7 @@ public class DiItemProviderAdapterFactory extends DiAdapterFactory implements Co
     public Object adapt(Object object, Object type) {
         if (isFactoryForType(type)) {
             Object adapter = super.adapt(object, type);
-            if (!(type instanceof Class<?>) || (((Class<?>)type).isInstance(adapter))) {
+            if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
                 return adapter;
             }
         }

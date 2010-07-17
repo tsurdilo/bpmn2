@@ -251,7 +251,8 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
      */
     public List<LaneSet> getLaneSets() {
         if (laneSets == null) {
-            laneSets = new EObjectContainmentEList<LaneSet>(LaneSet.class, this, Bpmn2Package.PROCESS__LANE_SETS);
+            laneSets = new EObjectContainmentEList<LaneSet>(LaneSet.class, this,
+                    Bpmn2Package.PROCESS__LANE_SETS);
         }
         return laneSets;
     }
@@ -263,7 +264,8 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
      */
     public List<FlowElement> getFlowElements() {
         if (flowElements == null) {
-            flowElements = new EObjectContainmentEList<FlowElement>(FlowElement.class, this, Bpmn2Package.PROCESS__FLOW_ELEMENTS);
+            flowElements = new EObjectContainmentEList<FlowElement>(FlowElement.class, this,
+                    Bpmn2Package.PROCESS__FLOW_ELEMENTS);
         }
         return flowElements;
     }
@@ -286,7 +288,8 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
         Auditing oldAuditing = auditing;
         auditing = newAuditing;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.PROCESS__AUDITING, oldAuditing, newAuditing);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.PROCESS__AUDITING, oldAuditing, newAuditing);
             if (msgs == null)
                 msgs = notification;
             else
@@ -304,14 +307,17 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
         if (newAuditing != auditing) {
             NotificationChain msgs = null;
             if (auditing != null)
-                msgs = ((InternalEObject)auditing).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.PROCESS__AUDITING, null, msgs);
+                msgs = ((InternalEObject) auditing).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.PROCESS__AUDITING, null, msgs);
             if (newAuditing != null)
-                msgs = ((InternalEObject)newAuditing).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.PROCESS__AUDITING, null, msgs);
+                msgs = ((InternalEObject) newAuditing).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.PROCESS__AUDITING, null, msgs);
             msgs = basicSetAuditing(newAuditing, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.PROCESS__AUDITING, newAuditing, newAuditing));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.PROCESS__AUDITING,
+                    newAuditing, newAuditing));
     }
 
     /**
@@ -332,7 +338,8 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
         Monitoring oldMonitoring = monitoring;
         monitoring = newMonitoring;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.PROCESS__MONITORING, oldMonitoring, newMonitoring);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.PROCESS__MONITORING, oldMonitoring, newMonitoring);
             if (msgs == null)
                 msgs = notification;
             else
@@ -350,14 +357,17 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
         if (newMonitoring != monitoring) {
             NotificationChain msgs = null;
             if (monitoring != null)
-                msgs = ((InternalEObject)monitoring).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.PROCESS__MONITORING, null, msgs);
+                msgs = ((InternalEObject) monitoring).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.PROCESS__MONITORING, null, msgs);
             if (newMonitoring != null)
-                msgs = ((InternalEObject)newMonitoring).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.PROCESS__MONITORING, null, msgs);
+                msgs = ((InternalEObject) newMonitoring).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.PROCESS__MONITORING, null, msgs);
             msgs = basicSetMonitoring(newMonitoring, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.PROCESS__MONITORING, newMonitoring, newMonitoring));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.PROCESS__MONITORING,
+                    newMonitoring, newMonitoring));
     }
 
     /**
@@ -367,7 +377,8 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
      */
     public List<Property> getProperties() {
         if (properties == null) {
-            properties = new EObjectContainmentEList<Property>(Property.class, this, Bpmn2Package.PROCESS__PROPERTIES);
+            properties = new EObjectContainmentEList<Property>(Property.class, this,
+                    Bpmn2Package.PROCESS__PROPERTIES);
         }
         return properties;
     }
@@ -379,7 +390,8 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
      */
     public List<Artifact> getArtifacts() {
         if (artifacts == null) {
-            artifacts = new EObjectContainmentEList<Artifact>(Artifact.class, this, Bpmn2Package.PROCESS__ARTIFACTS);
+            artifacts = new EObjectContainmentEList<Artifact>(Artifact.class, this,
+                    Bpmn2Package.PROCESS__ARTIFACTS);
         }
         return artifacts;
     }
@@ -391,7 +403,8 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
      */
     public List<ResourceRole> getResources() {
         if (resources == null) {
-            resources = new EObjectContainmentEList<ResourceRole>(ResourceRole.class, this, Bpmn2Package.PROCESS__RESOURCES);
+            resources = new EObjectContainmentEList<ResourceRole>(ResourceRole.class, this,
+                    Bpmn2Package.PROCESS__RESOURCES);
         }
         return resources;
     }
@@ -403,7 +416,9 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
      */
     public List<CorrelationSubscription> getCorrelationSubscriptions() {
         if (correlationSubscriptions == null) {
-            correlationSubscriptions = new EObjectContainmentEList<CorrelationSubscription>(CorrelationSubscription.class, this, Bpmn2Package.PROCESS__CORRELATION_SUBSCRIPTIONS);
+            correlationSubscriptions = new EObjectContainmentEList<CorrelationSubscription>(
+                    CorrelationSubscription.class, this,
+                    Bpmn2Package.PROCESS__CORRELATION_SUBSCRIPTIONS);
         }
         return correlationSubscriptions;
     }
@@ -415,7 +430,8 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
      */
     public List<org.eclipse.bpmn2.Process> getSupports() {
         if (supports == null) {
-            supports = new EObjectResolvingEList<org.eclipse.bpmn2.Process>(org.eclipse.bpmn2.Process.class, this, Bpmn2Package.PROCESS__SUPPORTS);
+            supports = new EObjectResolvingEList<org.eclipse.bpmn2.Process>(
+                    org.eclipse.bpmn2.Process.class, this, Bpmn2Package.PROCESS__SUPPORTS);
         }
         return supports;
     }
@@ -427,11 +443,13 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
      */
     public Collaboration getDefinitionalCollaborationRef() {
         if (definitionalCollaborationRef != null && definitionalCollaborationRef.eIsProxy()) {
-            InternalEObject oldDefinitionalCollaborationRef = (InternalEObject)definitionalCollaborationRef;
-            definitionalCollaborationRef = (Collaboration)eResolveProxy(oldDefinitionalCollaborationRef);
+            InternalEObject oldDefinitionalCollaborationRef = (InternalEObject) definitionalCollaborationRef;
+            definitionalCollaborationRef = (Collaboration) eResolveProxy(oldDefinitionalCollaborationRef);
             if (definitionalCollaborationRef != oldDefinitionalCollaborationRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.PROCESS__DEFINITIONAL_COLLABORATION_REF, oldDefinitionalCollaborationRef, definitionalCollaborationRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.PROCESS__DEFINITIONAL_COLLABORATION_REF,
+                            oldDefinitionalCollaborationRef, definitionalCollaborationRef));
             }
         }
         return definitionalCollaborationRef;
@@ -455,7 +473,9 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
         Collaboration oldDefinitionalCollaborationRef = definitionalCollaborationRef;
         definitionalCollaborationRef = newDefinitionalCollaborationRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.PROCESS__DEFINITIONAL_COLLABORATION_REF, oldDefinitionalCollaborationRef, definitionalCollaborationRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.PROCESS__DEFINITIONAL_COLLABORATION_REF,
+                    oldDefinitionalCollaborationRef, definitionalCollaborationRef));
     }
 
     /**
@@ -476,7 +496,8 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
         boolean oldIsClosed = isClosed;
         isClosed = newIsClosed;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.PROCESS__IS_CLOSED, oldIsClosed, isClosed));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.PROCESS__IS_CLOSED,
+                    oldIsClosed, isClosed));
     }
 
     /**
@@ -497,7 +518,8 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
         boolean oldIsExecutable = isExecutable;
         isExecutable = newIsExecutable;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.PROCESS__IS_EXECUTABLE, oldIsExecutable, isExecutable));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.PROCESS__IS_EXECUTABLE, oldIsExecutable, isExecutable));
     }
 
     /**
@@ -518,7 +540,8 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
         ProcessType oldProcessType = processType;
         processType = newProcessType == null ? PROCESS_TYPE_EDEFAULT : newProcessType;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.PROCESS__PROCESS_TYPE, oldProcessType, processType));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.PROCESS__PROCESS_TYPE, oldProcessType, processType));
     }
 
     /**
@@ -527,24 +550,25 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.PROCESS__LANE_SETS:
-                return ((InternalEList<?>)getLaneSets()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.PROCESS__FLOW_ELEMENTS:
-                return ((InternalEList<?>)getFlowElements()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.PROCESS__AUDITING:
-                return basicSetAuditing(null, msgs);
-            case Bpmn2Package.PROCESS__MONITORING:
-                return basicSetMonitoring(null, msgs);
-            case Bpmn2Package.PROCESS__PROPERTIES:
-                return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.PROCESS__ARTIFACTS:
-                return ((InternalEList<?>)getArtifacts()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.PROCESS__RESOURCES:
-                return ((InternalEList<?>)getResources()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.PROCESS__CORRELATION_SUBSCRIPTIONS:
-                return ((InternalEList<?>)getCorrelationSubscriptions()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.PROCESS__LANE_SETS:
+            return ((InternalEList<?>) getLaneSets()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.PROCESS__FLOW_ELEMENTS:
+            return ((InternalEList<?>) getFlowElements()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.PROCESS__AUDITING:
+            return basicSetAuditing(null, msgs);
+        case Bpmn2Package.PROCESS__MONITORING:
+            return basicSetMonitoring(null, msgs);
+        case Bpmn2Package.PROCESS__PROPERTIES:
+            return ((InternalEList<?>) getProperties()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.PROCESS__ARTIFACTS:
+            return ((InternalEList<?>) getArtifacts()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.PROCESS__RESOURCES:
+            return ((InternalEList<?>) getResources()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.PROCESS__CORRELATION_SUBSCRIPTIONS:
+            return ((InternalEList<?>) getCorrelationSubscriptions()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -557,34 +581,34 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.PROCESS__LANE_SETS:
-                return getLaneSets();
-            case Bpmn2Package.PROCESS__FLOW_ELEMENTS:
-                return getFlowElements();
-            case Bpmn2Package.PROCESS__AUDITING:
-                return getAuditing();
-            case Bpmn2Package.PROCESS__MONITORING:
-                return getMonitoring();
-            case Bpmn2Package.PROCESS__PROPERTIES:
-                return getProperties();
-            case Bpmn2Package.PROCESS__ARTIFACTS:
-                return getArtifacts();
-            case Bpmn2Package.PROCESS__RESOURCES:
-                return getResources();
-            case Bpmn2Package.PROCESS__CORRELATION_SUBSCRIPTIONS:
-                return getCorrelationSubscriptions();
-            case Bpmn2Package.PROCESS__SUPPORTS:
-                return getSupports();
-            case Bpmn2Package.PROCESS__DEFINITIONAL_COLLABORATION_REF:
-                if (resolve)
-                    return getDefinitionalCollaborationRef();
-                return basicGetDefinitionalCollaborationRef();
-            case Bpmn2Package.PROCESS__IS_CLOSED:
-                return isIsClosed();
-            case Bpmn2Package.PROCESS__IS_EXECUTABLE:
-                return isIsExecutable();
-            case Bpmn2Package.PROCESS__PROCESS_TYPE:
-                return getProcessType();
+        case Bpmn2Package.PROCESS__LANE_SETS:
+            return getLaneSets();
+        case Bpmn2Package.PROCESS__FLOW_ELEMENTS:
+            return getFlowElements();
+        case Bpmn2Package.PROCESS__AUDITING:
+            return getAuditing();
+        case Bpmn2Package.PROCESS__MONITORING:
+            return getMonitoring();
+        case Bpmn2Package.PROCESS__PROPERTIES:
+            return getProperties();
+        case Bpmn2Package.PROCESS__ARTIFACTS:
+            return getArtifacts();
+        case Bpmn2Package.PROCESS__RESOURCES:
+            return getResources();
+        case Bpmn2Package.PROCESS__CORRELATION_SUBSCRIPTIONS:
+            return getCorrelationSubscriptions();
+        case Bpmn2Package.PROCESS__SUPPORTS:
+            return getSupports();
+        case Bpmn2Package.PROCESS__DEFINITIONAL_COLLABORATION_REF:
+            if (resolve)
+                return getDefinitionalCollaborationRef();
+            return basicGetDefinitionalCollaborationRef();
+        case Bpmn2Package.PROCESS__IS_CLOSED:
+            return isIsClosed();
+        case Bpmn2Package.PROCESS__IS_EXECUTABLE:
+            return isIsExecutable();
+        case Bpmn2Package.PROCESS__PROCESS_TYPE:
+            return getProcessType();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -598,52 +622,53 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.PROCESS__LANE_SETS:
-                getLaneSets().clear();
-                getLaneSets().addAll((Collection<? extends LaneSet>)newValue);
-                return;
-            case Bpmn2Package.PROCESS__FLOW_ELEMENTS:
-                getFlowElements().clear();
-                getFlowElements().addAll((Collection<? extends FlowElement>)newValue);
-                return;
-            case Bpmn2Package.PROCESS__AUDITING:
-                setAuditing((Auditing)newValue);
-                return;
-            case Bpmn2Package.PROCESS__MONITORING:
-                setMonitoring((Monitoring)newValue);
-                return;
-            case Bpmn2Package.PROCESS__PROPERTIES:
-                getProperties().clear();
-                getProperties().addAll((Collection<? extends Property>)newValue);
-                return;
-            case Bpmn2Package.PROCESS__ARTIFACTS:
-                getArtifacts().clear();
-                getArtifacts().addAll((Collection<? extends Artifact>)newValue);
-                return;
-            case Bpmn2Package.PROCESS__RESOURCES:
-                getResources().clear();
-                getResources().addAll((Collection<? extends ResourceRole>)newValue);
-                return;
-            case Bpmn2Package.PROCESS__CORRELATION_SUBSCRIPTIONS:
-                getCorrelationSubscriptions().clear();
-                getCorrelationSubscriptions().addAll((Collection<? extends CorrelationSubscription>)newValue);
-                return;
-            case Bpmn2Package.PROCESS__SUPPORTS:
-                getSupports().clear();
-                getSupports().addAll((Collection<? extends org.eclipse.bpmn2.Process>)newValue);
-                return;
-            case Bpmn2Package.PROCESS__DEFINITIONAL_COLLABORATION_REF:
-                setDefinitionalCollaborationRef((Collaboration)newValue);
-                return;
-            case Bpmn2Package.PROCESS__IS_CLOSED:
-                setIsClosed((Boolean)newValue);
-                return;
-            case Bpmn2Package.PROCESS__IS_EXECUTABLE:
-                setIsExecutable((Boolean)newValue);
-                return;
-            case Bpmn2Package.PROCESS__PROCESS_TYPE:
-                setProcessType((ProcessType)newValue);
-                return;
+        case Bpmn2Package.PROCESS__LANE_SETS:
+            getLaneSets().clear();
+            getLaneSets().addAll((Collection<? extends LaneSet>) newValue);
+            return;
+        case Bpmn2Package.PROCESS__FLOW_ELEMENTS:
+            getFlowElements().clear();
+            getFlowElements().addAll((Collection<? extends FlowElement>) newValue);
+            return;
+        case Bpmn2Package.PROCESS__AUDITING:
+            setAuditing((Auditing) newValue);
+            return;
+        case Bpmn2Package.PROCESS__MONITORING:
+            setMonitoring((Monitoring) newValue);
+            return;
+        case Bpmn2Package.PROCESS__PROPERTIES:
+            getProperties().clear();
+            getProperties().addAll((Collection<? extends Property>) newValue);
+            return;
+        case Bpmn2Package.PROCESS__ARTIFACTS:
+            getArtifacts().clear();
+            getArtifacts().addAll((Collection<? extends Artifact>) newValue);
+            return;
+        case Bpmn2Package.PROCESS__RESOURCES:
+            getResources().clear();
+            getResources().addAll((Collection<? extends ResourceRole>) newValue);
+            return;
+        case Bpmn2Package.PROCESS__CORRELATION_SUBSCRIPTIONS:
+            getCorrelationSubscriptions().clear();
+            getCorrelationSubscriptions().addAll(
+                    (Collection<? extends CorrelationSubscription>) newValue);
+            return;
+        case Bpmn2Package.PROCESS__SUPPORTS:
+            getSupports().clear();
+            getSupports().addAll((Collection<? extends org.eclipse.bpmn2.Process>) newValue);
+            return;
+        case Bpmn2Package.PROCESS__DEFINITIONAL_COLLABORATION_REF:
+            setDefinitionalCollaborationRef((Collaboration) newValue);
+            return;
+        case Bpmn2Package.PROCESS__IS_CLOSED:
+            setIsClosed((Boolean) newValue);
+            return;
+        case Bpmn2Package.PROCESS__IS_EXECUTABLE:
+            setIsExecutable((Boolean) newValue);
+            return;
+        case Bpmn2Package.PROCESS__PROCESS_TYPE:
+            setProcessType((ProcessType) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -656,45 +681,45 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.PROCESS__LANE_SETS:
-                getLaneSets().clear();
-                return;
-            case Bpmn2Package.PROCESS__FLOW_ELEMENTS:
-                getFlowElements().clear();
-                return;
-            case Bpmn2Package.PROCESS__AUDITING:
-                setAuditing((Auditing)null);
-                return;
-            case Bpmn2Package.PROCESS__MONITORING:
-                setMonitoring((Monitoring)null);
-                return;
-            case Bpmn2Package.PROCESS__PROPERTIES:
-                getProperties().clear();
-                return;
-            case Bpmn2Package.PROCESS__ARTIFACTS:
-                getArtifacts().clear();
-                return;
-            case Bpmn2Package.PROCESS__RESOURCES:
-                getResources().clear();
-                return;
-            case Bpmn2Package.PROCESS__CORRELATION_SUBSCRIPTIONS:
-                getCorrelationSubscriptions().clear();
-                return;
-            case Bpmn2Package.PROCESS__SUPPORTS:
-                getSupports().clear();
-                return;
-            case Bpmn2Package.PROCESS__DEFINITIONAL_COLLABORATION_REF:
-                setDefinitionalCollaborationRef((Collaboration)null);
-                return;
-            case Bpmn2Package.PROCESS__IS_CLOSED:
-                setIsClosed(IS_CLOSED_EDEFAULT);
-                return;
-            case Bpmn2Package.PROCESS__IS_EXECUTABLE:
-                setIsExecutable(IS_EXECUTABLE_EDEFAULT);
-                return;
-            case Bpmn2Package.PROCESS__PROCESS_TYPE:
-                setProcessType(PROCESS_TYPE_EDEFAULT);
-                return;
+        case Bpmn2Package.PROCESS__LANE_SETS:
+            getLaneSets().clear();
+            return;
+        case Bpmn2Package.PROCESS__FLOW_ELEMENTS:
+            getFlowElements().clear();
+            return;
+        case Bpmn2Package.PROCESS__AUDITING:
+            setAuditing((Auditing) null);
+            return;
+        case Bpmn2Package.PROCESS__MONITORING:
+            setMonitoring((Monitoring) null);
+            return;
+        case Bpmn2Package.PROCESS__PROPERTIES:
+            getProperties().clear();
+            return;
+        case Bpmn2Package.PROCESS__ARTIFACTS:
+            getArtifacts().clear();
+            return;
+        case Bpmn2Package.PROCESS__RESOURCES:
+            getResources().clear();
+            return;
+        case Bpmn2Package.PROCESS__CORRELATION_SUBSCRIPTIONS:
+            getCorrelationSubscriptions().clear();
+            return;
+        case Bpmn2Package.PROCESS__SUPPORTS:
+            getSupports().clear();
+            return;
+        case Bpmn2Package.PROCESS__DEFINITIONAL_COLLABORATION_REF:
+            setDefinitionalCollaborationRef((Collaboration) null);
+            return;
+        case Bpmn2Package.PROCESS__IS_CLOSED:
+            setIsClosed(IS_CLOSED_EDEFAULT);
+            return;
+        case Bpmn2Package.PROCESS__IS_EXECUTABLE:
+            setIsExecutable(IS_EXECUTABLE_EDEFAULT);
+            return;
+        case Bpmn2Package.PROCESS__PROCESS_TYPE:
+            setProcessType(PROCESS_TYPE_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -707,32 +732,32 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.PROCESS__LANE_SETS:
-                return laneSets != null && !laneSets.isEmpty();
-            case Bpmn2Package.PROCESS__FLOW_ELEMENTS:
-                return flowElements != null && !flowElements.isEmpty();
-            case Bpmn2Package.PROCESS__AUDITING:
-                return auditing != null;
-            case Bpmn2Package.PROCESS__MONITORING:
-                return monitoring != null;
-            case Bpmn2Package.PROCESS__PROPERTIES:
-                return properties != null && !properties.isEmpty();
-            case Bpmn2Package.PROCESS__ARTIFACTS:
-                return artifacts != null && !artifacts.isEmpty();
-            case Bpmn2Package.PROCESS__RESOURCES:
-                return resources != null && !resources.isEmpty();
-            case Bpmn2Package.PROCESS__CORRELATION_SUBSCRIPTIONS:
-                return correlationSubscriptions != null && !correlationSubscriptions.isEmpty();
-            case Bpmn2Package.PROCESS__SUPPORTS:
-                return supports != null && !supports.isEmpty();
-            case Bpmn2Package.PROCESS__DEFINITIONAL_COLLABORATION_REF:
-                return definitionalCollaborationRef != null;
-            case Bpmn2Package.PROCESS__IS_CLOSED:
-                return isClosed != IS_CLOSED_EDEFAULT;
-            case Bpmn2Package.PROCESS__IS_EXECUTABLE:
-                return isExecutable != IS_EXECUTABLE_EDEFAULT;
-            case Bpmn2Package.PROCESS__PROCESS_TYPE:
-                return processType != PROCESS_TYPE_EDEFAULT;
+        case Bpmn2Package.PROCESS__LANE_SETS:
+            return laneSets != null && !laneSets.isEmpty();
+        case Bpmn2Package.PROCESS__FLOW_ELEMENTS:
+            return flowElements != null && !flowElements.isEmpty();
+        case Bpmn2Package.PROCESS__AUDITING:
+            return auditing != null;
+        case Bpmn2Package.PROCESS__MONITORING:
+            return monitoring != null;
+        case Bpmn2Package.PROCESS__PROPERTIES:
+            return properties != null && !properties.isEmpty();
+        case Bpmn2Package.PROCESS__ARTIFACTS:
+            return artifacts != null && !artifacts.isEmpty();
+        case Bpmn2Package.PROCESS__RESOURCES:
+            return resources != null && !resources.isEmpty();
+        case Bpmn2Package.PROCESS__CORRELATION_SUBSCRIPTIONS:
+            return correlationSubscriptions != null && !correlationSubscriptions.isEmpty();
+        case Bpmn2Package.PROCESS__SUPPORTS:
+            return supports != null && !supports.isEmpty();
+        case Bpmn2Package.PROCESS__DEFINITIONAL_COLLABORATION_REF:
+            return definitionalCollaborationRef != null;
+        case Bpmn2Package.PROCESS__IS_CLOSED:
+            return isClosed != IS_CLOSED_EDEFAULT;
+        case Bpmn2Package.PROCESS__IS_EXECUTABLE:
+            return isExecutable != IS_EXECUTABLE_EDEFAULT;
+        case Bpmn2Package.PROCESS__PROCESS_TYPE:
+            return processType != PROCESS_TYPE_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -746,12 +771,12 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
     public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == FlowElementsContainer.class) {
             switch (derivedFeatureID) {
-                case Bpmn2Package.PROCESS__LANE_SETS:
-                    return Bpmn2Package.FLOW_ELEMENTS_CONTAINER__LANE_SETS;
-                case Bpmn2Package.PROCESS__FLOW_ELEMENTS:
-                    return Bpmn2Package.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS;
-                default:
-                    return -1;
+            case Bpmn2Package.PROCESS__LANE_SETS:
+                return Bpmn2Package.FLOW_ELEMENTS_CONTAINER__LANE_SETS;
+            case Bpmn2Package.PROCESS__FLOW_ELEMENTS:
+                return Bpmn2Package.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS;
+            default:
+                return -1;
             }
         }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
@@ -766,12 +791,12 @@ public class ProcessImpl extends CallableElementImpl implements org.eclipse.bpmn
     public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == FlowElementsContainer.class) {
             switch (baseFeatureID) {
-                case Bpmn2Package.FLOW_ELEMENTS_CONTAINER__LANE_SETS:
-                    return Bpmn2Package.PROCESS__LANE_SETS;
-                case Bpmn2Package.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS:
-                    return Bpmn2Package.PROCESS__FLOW_ELEMENTS;
-                default:
-                    return -1;
+            case Bpmn2Package.FLOW_ELEMENTS_CONTAINER__LANE_SETS:
+                return Bpmn2Package.PROCESS__LANE_SETS;
+            case Bpmn2Package.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS:
+                return Bpmn2Package.PROCESS__FLOW_ELEMENTS;
+            default:
+                return -1;
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);

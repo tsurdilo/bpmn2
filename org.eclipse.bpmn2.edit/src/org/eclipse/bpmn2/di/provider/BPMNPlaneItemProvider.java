@@ -39,7 +39,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class BPMNPlaneItemProvider extends PlaneItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class BPMNPlaneItemProvider extends PlaneItemProvider implements IEditingDomainItemProvider,
+        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider,
+        IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -73,7 +75,14 @@ public class BPMNPlaneItemProvider extends PlaneItemProvider implements IEditing
      * @generated
      */
     protected void addBpmnElementPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_BPMNPlane_bpmnElement_feature"), getString("_UI_PropertyDescriptor_description", "_UI_BPMNPlane_bpmnElement_feature", "_UI_BPMNPlane_type"), BpmnDiPackage.Literals.BPMN_PLANE__BPMN_ELEMENT, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_BPMNPlane_bpmnElement_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_BPMNPlane_bpmnElement_feature", "_UI_BPMNPlane_type"),
+                BpmnDiPackage.Literals.BPMN_PLANE__BPMN_ELEMENT, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -99,8 +108,9 @@ public class BPMNPlaneItemProvider extends PlaneItemProvider implements IEditing
      */
     @Override
     public String getText(Object object) {
-        String label = ((BPMNPlane)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_BPMNPlane_type") : getString("_UI_BPMNPlane_type") + " " + label;
+        String label = ((BPMNPlane) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_BPMNPlane_type")
+                : getString("_UI_BPMNPlane_type") + " " + label;
     }
 
     /**

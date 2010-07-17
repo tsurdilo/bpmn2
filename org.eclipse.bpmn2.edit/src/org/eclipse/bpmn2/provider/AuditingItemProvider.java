@@ -34,7 +34,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AuditingItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class AuditingItemProvider extends BaseElementItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -83,8 +85,9 @@ public class AuditingItemProvider extends BaseElementItemProvider implements IEd
      */
     @Override
     public String getText(Object object) {
-        String label = ((Auditing)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_Auditing_type") : getString("_UI_Auditing_type") + " " + label;
+        String label = ((Auditing) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_Auditing_type")
+                : getString("_UI_Auditing_type") + " " + label;
     }
 
     /**

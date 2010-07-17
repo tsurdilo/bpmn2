@@ -38,7 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class GlobalTaskItemProvider extends CallableElementItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class GlobalTaskItemProvider extends CallableElementItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -117,8 +119,9 @@ public class GlobalTaskItemProvider extends CallableElementItemProvider implemen
      */
     @Override
     public String getText(Object object) {
-        String label = ((GlobalTask)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_GlobalTask_type") : getString("_UI_GlobalTask_type") + " " + label;
+        String label = ((GlobalTask) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_GlobalTask_type")
+                : getString("_UI_GlobalTask_type") + " " + label;
     }
 
     /**
@@ -133,9 +136,10 @@ public class GlobalTaskItemProvider extends CallableElementItemProvider implemen
         updateChildren(notification);
 
         switch (notification.getFeatureID(GlobalTask.class)) {
-            case Bpmn2Package.GLOBAL_TASK__RESOURCES:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case Bpmn2Package.GLOBAL_TASK__RESOURCES:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -151,13 +155,17 @@ public class GlobalTaskItemProvider extends CallableElementItemProvider implemen
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.GLOBAL_TASK__RESOURCES, Bpmn2Factory.eINSTANCE.createResourceRole()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.GLOBAL_TASK__RESOURCES,
+                Bpmn2Factory.eINSTANCE.createResourceRole()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.GLOBAL_TASK__RESOURCES, Bpmn2Factory.eINSTANCE.createPerformer()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.GLOBAL_TASK__RESOURCES,
+                Bpmn2Factory.eINSTANCE.createPerformer()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.GLOBAL_TASK__RESOURCES, Bpmn2Factory.eINSTANCE.createHumanPerformer()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.GLOBAL_TASK__RESOURCES,
+                Bpmn2Factory.eINSTANCE.createHumanPerformer()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.GLOBAL_TASK__RESOURCES, Bpmn2Factory.eINSTANCE.createPotentialOwner()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.GLOBAL_TASK__RESOURCES,
+                Bpmn2Factory.eINSTANCE.createPotentialOwner()));
     }
 
 }

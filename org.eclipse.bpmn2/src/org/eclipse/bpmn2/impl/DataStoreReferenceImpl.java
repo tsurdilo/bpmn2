@@ -109,7 +109,8 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements DataStore
         DataState oldDataState = dataState;
         dataState = newDataState;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE, oldDataState, newDataState);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE, oldDataState, newDataState);
             if (msgs == null)
                 msgs = notification;
             else
@@ -127,14 +128,17 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements DataStore
         if (newDataState != dataState) {
             NotificationChain msgs = null;
             if (dataState != null)
-                msgs = ((InternalEObject)dataState).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE, null, msgs);
+                msgs = ((InternalEObject) dataState).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE, null, msgs);
             if (newDataState != null)
-                msgs = ((InternalEObject)newDataState).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE, null, msgs);
+                msgs = ((InternalEObject) newDataState).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE, null, msgs);
             msgs = basicSetDataState(newDataState, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE, newDataState, newDataState));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE, newDataState, newDataState));
     }
 
     /**
@@ -144,11 +148,13 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements DataStore
      */
     public ItemDefinition getItemSubjectRef() {
         if (itemSubjectRef != null && itemSubjectRef.eIsProxy()) {
-            InternalEObject oldItemSubjectRef = (InternalEObject)itemSubjectRef;
-            itemSubjectRef = (ItemDefinition)eResolveProxy(oldItemSubjectRef);
+            InternalEObject oldItemSubjectRef = (InternalEObject) itemSubjectRef;
+            itemSubjectRef = (ItemDefinition) eResolveProxy(oldItemSubjectRef);
             if (itemSubjectRef != oldItemSubjectRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.DATA_STORE_REFERENCE__ITEM_SUBJECT_REF, oldItemSubjectRef, itemSubjectRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.DATA_STORE_REFERENCE__ITEM_SUBJECT_REF, oldItemSubjectRef,
+                            itemSubjectRef));
             }
         }
         return itemSubjectRef;
@@ -172,7 +178,9 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements DataStore
         ItemDefinition oldItemSubjectRef = itemSubjectRef;
         itemSubjectRef = newItemSubjectRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.DATA_STORE_REFERENCE__ITEM_SUBJECT_REF, oldItemSubjectRef, itemSubjectRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.DATA_STORE_REFERENCE__ITEM_SUBJECT_REF, oldItemSubjectRef,
+                    itemSubjectRef));
     }
 
     /**
@@ -182,11 +190,13 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements DataStore
      */
     public DataStore getDataStoreRef() {
         if (dataStoreRef != null && dataStoreRef.eIsProxy()) {
-            InternalEObject oldDataStoreRef = (InternalEObject)dataStoreRef;
-            dataStoreRef = (DataStore)eResolveProxy(oldDataStoreRef);
+            InternalEObject oldDataStoreRef = (InternalEObject) dataStoreRef;
+            dataStoreRef = (DataStore) eResolveProxy(oldDataStoreRef);
             if (dataStoreRef != oldDataStoreRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.DATA_STORE_REFERENCE__DATA_STORE_REF, oldDataStoreRef, dataStoreRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.DATA_STORE_REFERENCE__DATA_STORE_REF, oldDataStoreRef,
+                            dataStoreRef));
             }
         }
         return dataStoreRef;
@@ -210,7 +220,9 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements DataStore
         DataStore oldDataStoreRef = dataStoreRef;
         dataStoreRef = newDataStoreRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.DATA_STORE_REFERENCE__DATA_STORE_REF, oldDataStoreRef, dataStoreRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.DATA_STORE_REFERENCE__DATA_STORE_REF, oldDataStoreRef,
+                    dataStoreRef));
     }
 
     /**
@@ -219,10 +231,11 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements DataStore
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE:
-                return basicSetDataState(null, msgs);
+        case Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE:
+            return basicSetDataState(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -235,16 +248,16 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements DataStore
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE:
-                return getDataState();
-            case Bpmn2Package.DATA_STORE_REFERENCE__ITEM_SUBJECT_REF:
-                if (resolve)
-                    return getItemSubjectRef();
-                return basicGetItemSubjectRef();
-            case Bpmn2Package.DATA_STORE_REFERENCE__DATA_STORE_REF:
-                if (resolve)
-                    return getDataStoreRef();
-                return basicGetDataStoreRef();
+        case Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE:
+            return getDataState();
+        case Bpmn2Package.DATA_STORE_REFERENCE__ITEM_SUBJECT_REF:
+            if (resolve)
+                return getItemSubjectRef();
+            return basicGetItemSubjectRef();
+        case Bpmn2Package.DATA_STORE_REFERENCE__DATA_STORE_REF:
+            if (resolve)
+                return getDataStoreRef();
+            return basicGetDataStoreRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -257,15 +270,15 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements DataStore
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE:
-                setDataState((DataState)newValue);
-                return;
-            case Bpmn2Package.DATA_STORE_REFERENCE__ITEM_SUBJECT_REF:
-                setItemSubjectRef((ItemDefinition)newValue);
-                return;
-            case Bpmn2Package.DATA_STORE_REFERENCE__DATA_STORE_REF:
-                setDataStoreRef((DataStore)newValue);
-                return;
+        case Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE:
+            setDataState((DataState) newValue);
+            return;
+        case Bpmn2Package.DATA_STORE_REFERENCE__ITEM_SUBJECT_REF:
+            setItemSubjectRef((ItemDefinition) newValue);
+            return;
+        case Bpmn2Package.DATA_STORE_REFERENCE__DATA_STORE_REF:
+            setDataStoreRef((DataStore) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -278,15 +291,15 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements DataStore
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE:
-                setDataState((DataState)null);
-                return;
-            case Bpmn2Package.DATA_STORE_REFERENCE__ITEM_SUBJECT_REF:
-                setItemSubjectRef((ItemDefinition)null);
-                return;
-            case Bpmn2Package.DATA_STORE_REFERENCE__DATA_STORE_REF:
-                setDataStoreRef((DataStore)null);
-                return;
+        case Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE:
+            setDataState((DataState) null);
+            return;
+        case Bpmn2Package.DATA_STORE_REFERENCE__ITEM_SUBJECT_REF:
+            setItemSubjectRef((ItemDefinition) null);
+            return;
+        case Bpmn2Package.DATA_STORE_REFERENCE__DATA_STORE_REF:
+            setDataStoreRef((DataStore) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -299,12 +312,12 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements DataStore
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE:
-                return dataState != null;
-            case Bpmn2Package.DATA_STORE_REFERENCE__ITEM_SUBJECT_REF:
-                return itemSubjectRef != null;
-            case Bpmn2Package.DATA_STORE_REFERENCE__DATA_STORE_REF:
-                return dataStoreRef != null;
+        case Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE:
+            return dataState != null;
+        case Bpmn2Package.DATA_STORE_REFERENCE__ITEM_SUBJECT_REF:
+            return itemSubjectRef != null;
+        case Bpmn2Package.DATA_STORE_REFERENCE__DATA_STORE_REF:
+            return dataStoreRef != null;
         }
         return super.eIsSet(featureID);
     }
@@ -318,12 +331,12 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements DataStore
     public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == ItemAwareElement.class) {
             switch (derivedFeatureID) {
-                case Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE:
-                    return Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE;
-                case Bpmn2Package.DATA_STORE_REFERENCE__ITEM_SUBJECT_REF:
-                    return Bpmn2Package.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF;
-                default:
-                    return -1;
+            case Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE:
+                return Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE;
+            case Bpmn2Package.DATA_STORE_REFERENCE__ITEM_SUBJECT_REF:
+                return Bpmn2Package.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF;
+            default:
+                return -1;
             }
         }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
@@ -338,12 +351,12 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements DataStore
     public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == ItemAwareElement.class) {
             switch (baseFeatureID) {
-                case Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE:
-                    return Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE;
-                case Bpmn2Package.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF:
-                    return Bpmn2Package.DATA_STORE_REFERENCE__ITEM_SUBJECT_REF;
-                default:
-                    return -1;
+            case Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE:
+                return Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE;
+            case Bpmn2Package.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF:
+                return Bpmn2Package.DATA_STORE_REFERENCE__ITEM_SUBJECT_REF;
+            default:
+                return -1;
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);

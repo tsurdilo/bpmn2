@@ -105,7 +105,9 @@ public class BoundaryEventImpl extends CatchEventImpl implements BoundaryEvent {
         Activity oldAttachedToRef = attachedToRef;
         attachedToRef = newAttachedToRef;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF, oldAttachedToRef, newAttachedToRef);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF, oldAttachedToRef,
+                    newAttachedToRef);
             if (msgs == null)
                 msgs = notification;
             else
@@ -123,14 +125,18 @@ public class BoundaryEventImpl extends CatchEventImpl implements BoundaryEvent {
         if (newAttachedToRef != attachedToRef) {
             NotificationChain msgs = null;
             if (attachedToRef != null)
-                msgs = ((InternalEObject)attachedToRef).eInverseRemove(this, Bpmn2Package.ACTIVITY__BOUNDARY_EVENT_REFS, Activity.class, msgs);
+                msgs = ((InternalEObject) attachedToRef).eInverseRemove(this,
+                        Bpmn2Package.ACTIVITY__BOUNDARY_EVENT_REFS, Activity.class, msgs);
             if (newAttachedToRef != null)
-                msgs = ((InternalEObject)newAttachedToRef).eInverseAdd(this, Bpmn2Package.ACTIVITY__BOUNDARY_EVENT_REFS, Activity.class, msgs);
+                msgs = ((InternalEObject) newAttachedToRef).eInverseAdd(this,
+                        Bpmn2Package.ACTIVITY__BOUNDARY_EVENT_REFS, Activity.class, msgs);
             msgs = basicSetAttachedToRef(newAttachedToRef, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF, newAttachedToRef, newAttachedToRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF, newAttachedToRef,
+                    newAttachedToRef));
     }
 
     /**
@@ -151,7 +157,8 @@ public class BoundaryEventImpl extends CatchEventImpl implements BoundaryEvent {
         boolean oldCancelActivity = cancelActivity;
         cancelActivity = newCancelActivity;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.BOUNDARY_EVENT__CANCEL_ACTIVITY, oldCancelActivity, cancelActivity));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.BOUNDARY_EVENT__CANCEL_ACTIVITY, oldCancelActivity, cancelActivity));
     }
 
     /**
@@ -160,12 +167,14 @@ public class BoundaryEventImpl extends CatchEventImpl implements BoundaryEvent {
      * @generated
      */
     @Override
-    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF:
-                if (attachedToRef != null)
-                    msgs = ((InternalEObject)attachedToRef).eInverseRemove(this, Bpmn2Package.ACTIVITY__BOUNDARY_EVENT_REFS, Activity.class, msgs);
-                return basicSetAttachedToRef((Activity)otherEnd, msgs);
+        case Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF:
+            if (attachedToRef != null)
+                msgs = ((InternalEObject) attachedToRef).eInverseRemove(this,
+                        Bpmn2Package.ACTIVITY__BOUNDARY_EVENT_REFS, Activity.class, msgs);
+            return basicSetAttachedToRef((Activity) otherEnd, msgs);
         }
         return super.eInverseAdd(otherEnd, featureID, msgs);
     }
@@ -176,10 +185,11 @@ public class BoundaryEventImpl extends CatchEventImpl implements BoundaryEvent {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF:
-                return basicSetAttachedToRef(null, msgs);
+        case Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF:
+            return basicSetAttachedToRef(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -192,10 +202,10 @@ public class BoundaryEventImpl extends CatchEventImpl implements BoundaryEvent {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF:
-                return getAttachedToRef();
-            case Bpmn2Package.BOUNDARY_EVENT__CANCEL_ACTIVITY:
-                return isCancelActivity();
+        case Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF:
+            return getAttachedToRef();
+        case Bpmn2Package.BOUNDARY_EVENT__CANCEL_ACTIVITY:
+            return isCancelActivity();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -208,12 +218,12 @@ public class BoundaryEventImpl extends CatchEventImpl implements BoundaryEvent {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF:
-                setAttachedToRef((Activity)newValue);
-                return;
-            case Bpmn2Package.BOUNDARY_EVENT__CANCEL_ACTIVITY:
-                setCancelActivity((Boolean)newValue);
-                return;
+        case Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF:
+            setAttachedToRef((Activity) newValue);
+            return;
+        case Bpmn2Package.BOUNDARY_EVENT__CANCEL_ACTIVITY:
+            setCancelActivity((Boolean) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -226,12 +236,12 @@ public class BoundaryEventImpl extends CatchEventImpl implements BoundaryEvent {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF:
-                setAttachedToRef((Activity)null);
-                return;
-            case Bpmn2Package.BOUNDARY_EVENT__CANCEL_ACTIVITY:
-                setCancelActivity(CANCEL_ACTIVITY_EDEFAULT);
-                return;
+        case Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF:
+            setAttachedToRef((Activity) null);
+            return;
+        case Bpmn2Package.BOUNDARY_EVENT__CANCEL_ACTIVITY:
+            setCancelActivity(CANCEL_ACTIVITY_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -244,10 +254,10 @@ public class BoundaryEventImpl extends CatchEventImpl implements BoundaryEvent {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF:
-                return attachedToRef != null;
-            case Bpmn2Package.BOUNDARY_EVENT__CANCEL_ACTIVITY:
-                return cancelActivity != CANCEL_ACTIVITY_EDEFAULT;
+        case Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF:
+            return attachedToRef != null;
+        case Bpmn2Package.BOUNDARY_EVENT__CANCEL_ACTIVITY:
+            return cancelActivity != CANCEL_ACTIVITY_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }

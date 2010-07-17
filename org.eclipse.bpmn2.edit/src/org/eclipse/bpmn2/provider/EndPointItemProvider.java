@@ -34,7 +34,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EndPointItemProvider extends RootElementItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class EndPointItemProvider extends RootElementItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -83,8 +85,9 @@ public class EndPointItemProvider extends RootElementItemProvider implements IEd
      */
     @Override
     public String getText(Object object) {
-        String label = ((EndPoint)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_EndPoint_type") : getString("_UI_EndPoint_type") + " " + label;
+        String label = ((EndPoint) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_EndPoint_type")
+                : getString("_UI_EndPoint_type") + " " + label;
     }
 
     /**

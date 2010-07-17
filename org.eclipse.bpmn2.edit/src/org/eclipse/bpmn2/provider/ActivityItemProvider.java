@@ -40,7 +40,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ActivityItemProvider extends FlowNodeItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ActivityItemProvider extends FlowNodeItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -78,7 +80,14 @@ public class ActivityItemProvider extends FlowNodeItemProvider implements IEditi
      * @generated
      */
     protected void addBoundaryEventRefsPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Activity_boundaryEventRefs_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Activity_boundaryEventRefs_feature", "_UI_Activity_type"), Bpmn2Package.Literals.ACTIVITY__BOUNDARY_EVENT_REFS, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Activity_boundaryEventRefs_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_Activity_boundaryEventRefs_feature", "_UI_Activity_type"),
+                Bpmn2Package.Literals.ACTIVITY__BOUNDARY_EVENT_REFS, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -88,7 +97,14 @@ public class ActivityItemProvider extends FlowNodeItemProvider implements IEditi
      * @generated
      */
     protected void addCompletionQuantityPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Activity_completionQuantity_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Activity_completionQuantity_feature", "_UI_Activity_type"), Bpmn2Package.Literals.ACTIVITY__COMPLETION_QUANTITY, true, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Activity_completionQuantity_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_Activity_completionQuantity_feature", "_UI_Activity_type"),
+                Bpmn2Package.Literals.ACTIVITY__COMPLETION_QUANTITY, true, false, false,
+                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -98,7 +114,13 @@ public class ActivityItemProvider extends FlowNodeItemProvider implements IEditi
      * @generated
      */
     protected void addDefaultPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Activity_default_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Activity_default_feature", "_UI_Activity_type"), Bpmn2Package.Literals.ACTIVITY__DEFAULT, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Activity_default_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Activity_default_feature",
+                        "_UI_Activity_type"), Bpmn2Package.Literals.ACTIVITY__DEFAULT, true, false,
+                true, null, null, null));
     }
 
     /**
@@ -108,7 +130,14 @@ public class ActivityItemProvider extends FlowNodeItemProvider implements IEditi
      * @generated
      */
     protected void addIsForCompensationPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Activity_isForCompensation_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Activity_isForCompensation_feature", "_UI_Activity_type"), Bpmn2Package.Literals.ACTIVITY__IS_FOR_COMPENSATION, true, false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Activity_isForCompensation_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_Activity_isForCompensation_feature", "_UI_Activity_type"),
+                Bpmn2Package.Literals.ACTIVITY__IS_FOR_COMPENSATION, true, false, false,
+                ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -118,7 +147,14 @@ public class ActivityItemProvider extends FlowNodeItemProvider implements IEditi
      * @generated
      */
     protected void addStartQuantityPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Activity_startQuantity_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Activity_startQuantity_feature", "_UI_Activity_type"), Bpmn2Package.Literals.ACTIVITY__START_QUANTITY, true, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Activity_startQuantity_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_Activity_startQuantity_feature", "_UI_Activity_type"),
+                Bpmn2Package.Literals.ACTIVITY__START_QUANTITY, true, false, false,
+                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -164,8 +200,9 @@ public class ActivityItemProvider extends FlowNodeItemProvider implements IEditi
      */
     @Override
     public String getText(Object object) {
-        String label = ((Activity)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_Activity_type") : getString("_UI_Activity_type") + " " + label;
+        String label = ((Activity) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_Activity_type")
+                : getString("_UI_Activity_type") + " " + label;
     }
 
     /**
@@ -180,19 +217,21 @@ public class ActivityItemProvider extends FlowNodeItemProvider implements IEditi
         updateChildren(notification);
 
         switch (notification.getFeatureID(Activity.class)) {
-            case Bpmn2Package.ACTIVITY__COMPLETION_QUANTITY:
-            case Bpmn2Package.ACTIVITY__IS_FOR_COMPENSATION:
-            case Bpmn2Package.ACTIVITY__START_QUANTITY:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
-            case Bpmn2Package.ACTIVITY__IO_SPECIFICATION:
-            case Bpmn2Package.ACTIVITY__PROPERTIES:
-            case Bpmn2Package.ACTIVITY__DATA_INPUT_ASSOCIATIONS:
-            case Bpmn2Package.ACTIVITY__DATA_OUTPUT_ASSOCIATIONS:
-            case Bpmn2Package.ACTIVITY__RESOURCES:
-            case Bpmn2Package.ACTIVITY__LOOP_CHARACTERISTICS:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case Bpmn2Package.ACTIVITY__COMPLETION_QUANTITY:
+        case Bpmn2Package.ACTIVITY__IS_FOR_COMPENSATION:
+        case Bpmn2Package.ACTIVITY__START_QUANTITY:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
+        case Bpmn2Package.ACTIVITY__IO_SPECIFICATION:
+        case Bpmn2Package.ACTIVITY__PROPERTIES:
+        case Bpmn2Package.ACTIVITY__DATA_INPUT_ASSOCIATIONS:
+        case Bpmn2Package.ACTIVITY__DATA_OUTPUT_ASSOCIATIONS:
+        case Bpmn2Package.ACTIVITY__RESOURCES:
+        case Bpmn2Package.ACTIVITY__LOOP_CHARACTERISTICS:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -208,25 +247,40 @@ public class ActivityItemProvider extends FlowNodeItemProvider implements IEditi
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__IO_SPECIFICATION, Bpmn2Factory.eINSTANCE.createInputOutputSpecification()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.ACTIVITY__IO_SPECIFICATION,
+                Bpmn2Factory.eINSTANCE.createInputOutputSpecification()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__PROPERTIES, Bpmn2Factory.eINSTANCE.createProperty()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__PROPERTIES,
+                Bpmn2Factory.eINSTANCE.createProperty()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__DATA_INPUT_ASSOCIATIONS, Bpmn2Factory.eINSTANCE.createDataInputAssociation()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.ACTIVITY__DATA_INPUT_ASSOCIATIONS,
+                Bpmn2Factory.eINSTANCE.createDataInputAssociation()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__DATA_OUTPUT_ASSOCIATIONS, Bpmn2Factory.eINSTANCE.createDataOutputAssociation()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.ACTIVITY__DATA_OUTPUT_ASSOCIATIONS,
+                Bpmn2Factory.eINSTANCE.createDataOutputAssociation()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__RESOURCES, Bpmn2Factory.eINSTANCE.createResourceRole()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__RESOURCES,
+                Bpmn2Factory.eINSTANCE.createResourceRole()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__RESOURCES, Bpmn2Factory.eINSTANCE.createPerformer()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__RESOURCES,
+                Bpmn2Factory.eINSTANCE.createPerformer()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__RESOURCES, Bpmn2Factory.eINSTANCE.createHumanPerformer()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__RESOURCES,
+                Bpmn2Factory.eINSTANCE.createHumanPerformer()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__RESOURCES, Bpmn2Factory.eINSTANCE.createPotentialOwner()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__RESOURCES,
+                Bpmn2Factory.eINSTANCE.createPotentialOwner()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__LOOP_CHARACTERISTICS, Bpmn2Factory.eINSTANCE.createMultiInstanceLoopCharacteristics()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.ACTIVITY__LOOP_CHARACTERISTICS,
+                Bpmn2Factory.eINSTANCE.createMultiInstanceLoopCharacteristics()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__LOOP_CHARACTERISTICS, Bpmn2Factory.eINSTANCE.createStandardLoopCharacteristics()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.ACTIVITY__LOOP_CHARACTERISTICS,
+                Bpmn2Factory.eINSTANCE.createStandardLoopCharacteristics()));
     }
 
 }

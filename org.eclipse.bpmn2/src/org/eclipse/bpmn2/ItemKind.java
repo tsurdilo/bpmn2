@@ -94,7 +94,8 @@ public enum ItemKind implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final List<ItemKind> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+    public static final List<ItemKind> VALUES = Collections.unmodifiableList(Arrays
+            .asList(VALUES_ARRAY));
 
     /**
      * Returns the '<em><b>Item Kind</b></em>' literal with the specified literal value.
@@ -136,10 +137,10 @@ public enum ItemKind implements Enumerator {
      */
     public static ItemKind get(int value) {
         switch (value) {
-            case PHYSICAL_VALUE:
-                return PHYSICAL;
-            case INFORMATION_VALUE:
-                return INFORMATION;
+        case PHYSICAL_VALUE:
+            return PHYSICAL;
+        case INFORMATION_VALUE:
+            return INFORMATION;
         }
         return null;
     }

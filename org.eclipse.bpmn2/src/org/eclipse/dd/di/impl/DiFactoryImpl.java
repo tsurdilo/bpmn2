@@ -38,7 +38,8 @@ public class DiFactoryImpl extends EFactoryImpl implements DiFactory {
      */
     public static DiFactory init() {
         try {
-            DiFactory theDiFactory = (DiFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.omg.org/spec/DD/20100524/DI-XMI");
+            DiFactory theDiFactory = (DiFactory) EPackage.Registry.INSTANCE
+                    .getEFactory("http://www.omg.org/spec/DD/20100524/DI-XMI");
             if (theDiFactory != null) {
                 return theDiFactory;
             }
@@ -66,10 +67,11 @@ public class DiFactoryImpl extends EFactoryImpl implements DiFactory {
     @Override
     public EObject create(EClass eClass) {
         switch (eClass.getClassifierID()) {
-            case DiPackage.DOCUMENT_ROOT:
-                return createDocumentRoot();
-            default:
-                throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+        case DiPackage.DOCUMENT_ROOT:
+            return createDocumentRoot();
+        default:
+            throw new IllegalArgumentException("The class '" + eClass.getName()
+                    + "' is not a valid classifier");
         }
     }
 
@@ -89,7 +91,7 @@ public class DiFactoryImpl extends EFactoryImpl implements DiFactory {
      * @generated
      */
     public DiPackage getDiPackage() {
-        return (DiPackage)getEPackage();
+        return (DiPackage) getEPackage();
     }
 
     /**

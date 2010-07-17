@@ -43,7 +43,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class BPMNEdgeItemProvider extends LabeledEdgeItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class BPMNEdgeItemProvider extends LabeledEdgeItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -80,7 +82,13 @@ public class BPMNEdgeItemProvider extends LabeledEdgeItemProvider implements IEd
      * @generated
      */
     protected void addBpmnElementPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_BPMNEdge_bpmnElement_feature"), getString("_UI_PropertyDescriptor_description", "_UI_BPMNEdge_bpmnElement_feature", "_UI_BPMNEdge_type"), BpmnDiPackage.Literals.BPMN_EDGE__BPMN_ELEMENT, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_BPMNEdge_bpmnElement_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_BPMNEdge_bpmnElement_feature",
+                        "_UI_BPMNEdge_type"), BpmnDiPackage.Literals.BPMN_EDGE__BPMN_ELEMENT, true,
+                false, true, null, null, null));
     }
 
     /**
@@ -90,7 +98,14 @@ public class BPMNEdgeItemProvider extends LabeledEdgeItemProvider implements IEd
      * @generated
      */
     protected void addMessageVisibleKindPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_BPMNEdge_messageVisibleKind_feature"), getString("_UI_PropertyDescriptor_description", "_UI_BPMNEdge_messageVisibleKind_feature", "_UI_BPMNEdge_type"), BpmnDiPackage.Literals.BPMN_EDGE__MESSAGE_VISIBLE_KIND, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_BPMNEdge_messageVisibleKind_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_BPMNEdge_messageVisibleKind_feature", "_UI_BPMNEdge_type"),
+                BpmnDiPackage.Literals.BPMN_EDGE__MESSAGE_VISIBLE_KIND, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -100,7 +115,14 @@ public class BPMNEdgeItemProvider extends LabeledEdgeItemProvider implements IEd
      * @generated
      */
     protected void addSourceElementPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_BPMNEdge_sourceElement_feature"), getString("_UI_PropertyDescriptor_description", "_UI_BPMNEdge_sourceElement_feature", "_UI_BPMNEdge_type"), BpmnDiPackage.Literals.BPMN_EDGE__SOURCE_ELEMENT, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_BPMNEdge_sourceElement_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_BPMNEdge_sourceElement_feature", "_UI_BPMNEdge_type"),
+                BpmnDiPackage.Literals.BPMN_EDGE__SOURCE_ELEMENT, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -110,7 +132,14 @@ public class BPMNEdgeItemProvider extends LabeledEdgeItemProvider implements IEd
      * @generated
      */
     protected void addTargetElementPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_BPMNEdge_targetElement_feature"), getString("_UI_PropertyDescriptor_description", "_UI_BPMNEdge_targetElement_feature", "_UI_BPMNEdge_type"), BpmnDiPackage.Literals.BPMN_EDGE__TARGET_ELEMENT, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_BPMNEdge_targetElement_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_BPMNEdge_targetElement_feature", "_UI_BPMNEdge_type"),
+                BpmnDiPackage.Literals.BPMN_EDGE__TARGET_ELEMENT, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -166,8 +195,9 @@ public class BPMNEdgeItemProvider extends LabeledEdgeItemProvider implements IEd
      */
     @Override
     public String getText(Object object) {
-        String label = ((BPMNEdge)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_BPMNEdge_type") : getString("_UI_BPMNEdge_type") + " " + label;
+        String label = ((BPMNEdge) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_BPMNEdge_type")
+                : getString("_UI_BPMNEdge_type") + " " + label;
     }
 
     /**
@@ -182,12 +212,14 @@ public class BPMNEdgeItemProvider extends LabeledEdgeItemProvider implements IEd
         updateChildren(notification);
 
         switch (notification.getFeatureID(BPMNEdge.class)) {
-            case BpmnDiPackage.BPMN_EDGE__MESSAGE_VISIBLE_KIND:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
-            case BpmnDiPackage.BPMN_EDGE__LABEL:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case BpmnDiPackage.BPMN_EDGE__MESSAGE_VISIBLE_KIND:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
+        case BpmnDiPackage.BPMN_EDGE__LABEL:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -203,7 +235,8 @@ public class BPMNEdgeItemProvider extends LabeledEdgeItemProvider implements IEd
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(BpmnDiPackage.Literals.BPMN_EDGE__LABEL, BpmnDiFactory.eINSTANCE.createBPMNLabel()));
+        newChildDescriptors.add(createChildParameter(BpmnDiPackage.Literals.BPMN_EDGE__LABEL,
+                BpmnDiFactory.eINSTANCE.createBPMNLabel()));
     }
 
     /**

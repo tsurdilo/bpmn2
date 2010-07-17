@@ -34,7 +34,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ConversationItemProvider extends ConversationNodeItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ConversationItemProvider extends ConversationNodeItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -69,9 +71,11 @@ public class ConversationItemProvider extends ConversationNodeItemProvider imple
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/Conversation.png"));
+            return overlayImage(object, getResourceLocator()
+                    .getImage("full/obj16/Conversation.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/Conversation.gif"));
+            return overlayImage(object, getResourceLocator()
+                    .getImage("full/obj16/Conversation.gif"));
         }
     }
 
@@ -83,8 +87,9 @@ public class ConversationItemProvider extends ConversationNodeItemProvider imple
      */
     @Override
     public String getText(Object object) {
-        String label = ((Conversation)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_Conversation_type") : getString("_UI_Conversation_type") + " " + label;
+        String label = ((Conversation) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_Conversation_type")
+                : getString("_UI_Conversation_type") + " " + label;
     }
 
     /**

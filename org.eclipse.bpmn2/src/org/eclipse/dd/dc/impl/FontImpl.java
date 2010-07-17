@@ -205,7 +205,8 @@ public class FontImpl extends EObjectImpl implements Font {
         boolean oldIsBold = isBold;
         isBold = newIsBold;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, DcPackage.FONT__IS_BOLD, oldIsBold, isBold));
+            eNotify(new ENotificationImpl(this, Notification.SET, DcPackage.FONT__IS_BOLD,
+                    oldIsBold, isBold));
     }
 
     /**
@@ -226,7 +227,8 @@ public class FontImpl extends EObjectImpl implements Font {
         boolean oldIsItalic = isItalic;
         isItalic = newIsItalic;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, DcPackage.FONT__IS_ITALIC, oldIsItalic, isItalic));
+            eNotify(new ENotificationImpl(this, Notification.SET, DcPackage.FONT__IS_ITALIC,
+                    oldIsItalic, isItalic));
     }
 
     /**
@@ -247,7 +249,8 @@ public class FontImpl extends EObjectImpl implements Font {
         boolean oldIsStrikeThrough = isStrikeThrough;
         isStrikeThrough = newIsStrikeThrough;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, DcPackage.FONT__IS_STRIKE_THROUGH, oldIsStrikeThrough, isStrikeThrough));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    DcPackage.FONT__IS_STRIKE_THROUGH, oldIsStrikeThrough, isStrikeThrough));
     }
 
     /**
@@ -268,7 +271,8 @@ public class FontImpl extends EObjectImpl implements Font {
         boolean oldIsUnderline = isUnderline;
         isUnderline = newIsUnderline;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, DcPackage.FONT__IS_UNDERLINE, oldIsUnderline, isUnderline));
+            eNotify(new ENotificationImpl(this, Notification.SET, DcPackage.FONT__IS_UNDERLINE,
+                    oldIsUnderline, isUnderline));
     }
 
     /**
@@ -289,7 +293,8 @@ public class FontImpl extends EObjectImpl implements Font {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, DcPackage.FONT__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, DcPackage.FONT__NAME, oldName,
+                    name));
     }
 
     /**
@@ -310,7 +315,8 @@ public class FontImpl extends EObjectImpl implements Font {
         float oldSize = size;
         size = newSize;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, DcPackage.FONT__SIZE, oldSize, size));
+            eNotify(new ENotificationImpl(this, Notification.SET, DcPackage.FONT__SIZE, oldSize,
+                    size));
     }
 
     /**
@@ -325,7 +331,13 @@ public class FontImpl extends EObjectImpl implements Font {
         // Ensure that you remove @generated or mark it @generated NOT
         if (false) {
             if (diagnostics != null) {
-                diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, DcValidator.DIAGNOSTIC_SOURCE, DcValidator.FONT__NON_NEGATIVE_SIZE, EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "non_negative_size", EObjectValidator.getObjectLabel(this, context) }), new Object[] { this }));
+                diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR,
+                        DcValidator.DIAGNOSTIC_SOURCE, DcValidator.FONT__NON_NEGATIVE_SIZE,
+                        EcorePlugin.INSTANCE.getString(
+                                "_UI_GenericInvariant_diagnostic",
+                                new Object[] { "non_negative_size",
+                                        EObjectValidator.getObjectLabel(this, context) }),
+                        new Object[] { this }));
             }
             return false;
         }
@@ -340,18 +352,18 @@ public class FontImpl extends EObjectImpl implements Font {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case DcPackage.FONT__IS_BOLD:
-                return isIsBold();
-            case DcPackage.FONT__IS_ITALIC:
-                return isIsItalic();
-            case DcPackage.FONT__IS_STRIKE_THROUGH:
-                return isIsStrikeThrough();
-            case DcPackage.FONT__IS_UNDERLINE:
-                return isIsUnderline();
-            case DcPackage.FONT__NAME:
-                return getName();
-            case DcPackage.FONT__SIZE:
-                return getSize();
+        case DcPackage.FONT__IS_BOLD:
+            return isIsBold();
+        case DcPackage.FONT__IS_ITALIC:
+            return isIsItalic();
+        case DcPackage.FONT__IS_STRIKE_THROUGH:
+            return isIsStrikeThrough();
+        case DcPackage.FONT__IS_UNDERLINE:
+            return isIsUnderline();
+        case DcPackage.FONT__NAME:
+            return getName();
+        case DcPackage.FONT__SIZE:
+            return getSize();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -364,24 +376,24 @@ public class FontImpl extends EObjectImpl implements Font {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case DcPackage.FONT__IS_BOLD:
-                setIsBold((Boolean)newValue);
-                return;
-            case DcPackage.FONT__IS_ITALIC:
-                setIsItalic((Boolean)newValue);
-                return;
-            case DcPackage.FONT__IS_STRIKE_THROUGH:
-                setIsStrikeThrough((Boolean)newValue);
-                return;
-            case DcPackage.FONT__IS_UNDERLINE:
-                setIsUnderline((Boolean)newValue);
-                return;
-            case DcPackage.FONT__NAME:
-                setName((String)newValue);
-                return;
-            case DcPackage.FONT__SIZE:
-                setSize((Float)newValue);
-                return;
+        case DcPackage.FONT__IS_BOLD:
+            setIsBold((Boolean) newValue);
+            return;
+        case DcPackage.FONT__IS_ITALIC:
+            setIsItalic((Boolean) newValue);
+            return;
+        case DcPackage.FONT__IS_STRIKE_THROUGH:
+            setIsStrikeThrough((Boolean) newValue);
+            return;
+        case DcPackage.FONT__IS_UNDERLINE:
+            setIsUnderline((Boolean) newValue);
+            return;
+        case DcPackage.FONT__NAME:
+            setName((String) newValue);
+            return;
+        case DcPackage.FONT__SIZE:
+            setSize((Float) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -394,24 +406,24 @@ public class FontImpl extends EObjectImpl implements Font {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case DcPackage.FONT__IS_BOLD:
-                setIsBold(IS_BOLD_EDEFAULT);
-                return;
-            case DcPackage.FONT__IS_ITALIC:
-                setIsItalic(IS_ITALIC_EDEFAULT);
-                return;
-            case DcPackage.FONT__IS_STRIKE_THROUGH:
-                setIsStrikeThrough(IS_STRIKE_THROUGH_EDEFAULT);
-                return;
-            case DcPackage.FONT__IS_UNDERLINE:
-                setIsUnderline(IS_UNDERLINE_EDEFAULT);
-                return;
-            case DcPackage.FONT__NAME:
-                setName(NAME_EDEFAULT);
-                return;
-            case DcPackage.FONT__SIZE:
-                setSize(SIZE_EDEFAULT);
-                return;
+        case DcPackage.FONT__IS_BOLD:
+            setIsBold(IS_BOLD_EDEFAULT);
+            return;
+        case DcPackage.FONT__IS_ITALIC:
+            setIsItalic(IS_ITALIC_EDEFAULT);
+            return;
+        case DcPackage.FONT__IS_STRIKE_THROUGH:
+            setIsStrikeThrough(IS_STRIKE_THROUGH_EDEFAULT);
+            return;
+        case DcPackage.FONT__IS_UNDERLINE:
+            setIsUnderline(IS_UNDERLINE_EDEFAULT);
+            return;
+        case DcPackage.FONT__NAME:
+            setName(NAME_EDEFAULT);
+            return;
+        case DcPackage.FONT__SIZE:
+            setSize(SIZE_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -424,18 +436,18 @@ public class FontImpl extends EObjectImpl implements Font {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case DcPackage.FONT__IS_BOLD:
-                return isBold != IS_BOLD_EDEFAULT;
-            case DcPackage.FONT__IS_ITALIC:
-                return isItalic != IS_ITALIC_EDEFAULT;
-            case DcPackage.FONT__IS_STRIKE_THROUGH:
-                return isStrikeThrough != IS_STRIKE_THROUGH_EDEFAULT;
-            case DcPackage.FONT__IS_UNDERLINE:
-                return isUnderline != IS_UNDERLINE_EDEFAULT;
-            case DcPackage.FONT__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-            case DcPackage.FONT__SIZE:
-                return size != SIZE_EDEFAULT;
+        case DcPackage.FONT__IS_BOLD:
+            return isBold != IS_BOLD_EDEFAULT;
+        case DcPackage.FONT__IS_ITALIC:
+            return isItalic != IS_ITALIC_EDEFAULT;
+        case DcPackage.FONT__IS_STRIKE_THROUGH:
+            return isStrikeThrough != IS_STRIKE_THROUGH_EDEFAULT;
+        case DcPackage.FONT__IS_UNDERLINE:
+            return isUnderline != IS_UNDERLINE_EDEFAULT;
+        case DcPackage.FONT__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case DcPackage.FONT__SIZE:
+            return size != SIZE_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }

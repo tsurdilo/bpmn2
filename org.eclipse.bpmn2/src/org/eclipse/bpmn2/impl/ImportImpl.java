@@ -134,7 +134,8 @@ public class ImportImpl extends EObjectImpl implements Import {
         String oldImportType = importType;
         importType = newImportType;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.IMPORT__IMPORT_TYPE, oldImportType, importType));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.IMPORT__IMPORT_TYPE,
+                    oldImportType, importType));
     }
 
     /**
@@ -155,7 +156,8 @@ public class ImportImpl extends EObjectImpl implements Import {
         String oldLocation = location;
         location = newLocation;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.IMPORT__LOCATION, oldLocation, location));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.IMPORT__LOCATION,
+                    oldLocation, location));
     }
 
     /**
@@ -176,7 +178,8 @@ public class ImportImpl extends EObjectImpl implements Import {
         String oldNamespace = namespace;
         namespace = newNamespace;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.IMPORT__NAMESPACE, oldNamespace, namespace));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.IMPORT__NAMESPACE,
+                    oldNamespace, namespace));
     }
 
     /**
@@ -187,12 +190,12 @@ public class ImportImpl extends EObjectImpl implements Import {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.IMPORT__IMPORT_TYPE:
-                return getImportType();
-            case Bpmn2Package.IMPORT__LOCATION:
-                return getLocation();
-            case Bpmn2Package.IMPORT__NAMESPACE:
-                return getNamespace();
+        case Bpmn2Package.IMPORT__IMPORT_TYPE:
+            return getImportType();
+        case Bpmn2Package.IMPORT__LOCATION:
+            return getLocation();
+        case Bpmn2Package.IMPORT__NAMESPACE:
+            return getNamespace();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -205,15 +208,15 @@ public class ImportImpl extends EObjectImpl implements Import {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.IMPORT__IMPORT_TYPE:
-                setImportType((String)newValue);
-                return;
-            case Bpmn2Package.IMPORT__LOCATION:
-                setLocation((String)newValue);
-                return;
-            case Bpmn2Package.IMPORT__NAMESPACE:
-                setNamespace((String)newValue);
-                return;
+        case Bpmn2Package.IMPORT__IMPORT_TYPE:
+            setImportType((String) newValue);
+            return;
+        case Bpmn2Package.IMPORT__LOCATION:
+            setLocation((String) newValue);
+            return;
+        case Bpmn2Package.IMPORT__NAMESPACE:
+            setNamespace((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -226,15 +229,15 @@ public class ImportImpl extends EObjectImpl implements Import {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.IMPORT__IMPORT_TYPE:
-                setImportType(IMPORT_TYPE_EDEFAULT);
-                return;
-            case Bpmn2Package.IMPORT__LOCATION:
-                setLocation(LOCATION_EDEFAULT);
-                return;
-            case Bpmn2Package.IMPORT__NAMESPACE:
-                setNamespace(NAMESPACE_EDEFAULT);
-                return;
+        case Bpmn2Package.IMPORT__IMPORT_TYPE:
+            setImportType(IMPORT_TYPE_EDEFAULT);
+            return;
+        case Bpmn2Package.IMPORT__LOCATION:
+            setLocation(LOCATION_EDEFAULT);
+            return;
+        case Bpmn2Package.IMPORT__NAMESPACE:
+            setNamespace(NAMESPACE_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -247,12 +250,15 @@ public class ImportImpl extends EObjectImpl implements Import {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.IMPORT__IMPORT_TYPE:
-                return IMPORT_TYPE_EDEFAULT == null ? importType != null : !IMPORT_TYPE_EDEFAULT.equals(importType);
-            case Bpmn2Package.IMPORT__LOCATION:
-                return LOCATION_EDEFAULT == null ? location != null : !LOCATION_EDEFAULT.equals(location);
-            case Bpmn2Package.IMPORT__NAMESPACE:
-                return NAMESPACE_EDEFAULT == null ? namespace != null : !NAMESPACE_EDEFAULT.equals(namespace);
+        case Bpmn2Package.IMPORT__IMPORT_TYPE:
+            return IMPORT_TYPE_EDEFAULT == null ? importType != null : !IMPORT_TYPE_EDEFAULT
+                    .equals(importType);
+        case Bpmn2Package.IMPORT__LOCATION:
+            return LOCATION_EDEFAULT == null ? location != null : !LOCATION_EDEFAULT
+                    .equals(location);
+        case Bpmn2Package.IMPORT__NAMESPACE:
+            return NAMESPACE_EDEFAULT == null ? namespace != null : !NAMESPACE_EDEFAULT
+                    .equals(namespace);
         }
         return super.eIsSet(featureID);
     }

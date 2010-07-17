@@ -40,7 +40,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ParticipantMultiplicityItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ParticipantMultiplicityItemProvider extends ItemProviderAdapter implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -75,7 +77,15 @@ public class ParticipantMultiplicityItemProvider extends ItemProviderAdapter imp
      * @generated
      */
     protected void addMaximumPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_ParticipantMultiplicity_maximum_feature"), getString("_UI_PropertyDescriptor_description", "_UI_ParticipantMultiplicity_maximum_feature", "_UI_ParticipantMultiplicity_type"), Bpmn2Package.Literals.PARTICIPANT_MULTIPLICITY__MAXIMUM, true, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_ParticipantMultiplicity_maximum_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_ParticipantMultiplicity_maximum_feature",
+                        "_UI_ParticipantMultiplicity_type"),
+                Bpmn2Package.Literals.PARTICIPANT_MULTIPLICITY__MAXIMUM, true, false, false,
+                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -85,7 +95,15 @@ public class ParticipantMultiplicityItemProvider extends ItemProviderAdapter imp
      * @generated
      */
     protected void addMinimumPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_ParticipantMultiplicity_minimum_feature"), getString("_UI_PropertyDescriptor_description", "_UI_ParticipantMultiplicity_minimum_feature", "_UI_ParticipantMultiplicity_type"), Bpmn2Package.Literals.PARTICIPANT_MULTIPLICITY__MINIMUM, true, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_ParticipantMultiplicity_minimum_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_ParticipantMultiplicity_minimum_feature",
+                        "_UI_ParticipantMultiplicity_type"),
+                Bpmn2Package.Literals.PARTICIPANT_MULTIPLICITY__MINIMUM, true, false, false,
+                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -97,9 +115,11 @@ public class ParticipantMultiplicityItemProvider extends ItemProviderAdapter imp
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/ParticipantMultiplicity.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/ParticipantMultiplicity.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/ParticipantMultiplicity.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/ParticipantMultiplicity.gif"));
         }
     }
 
@@ -111,8 +131,9 @@ public class ParticipantMultiplicityItemProvider extends ItemProviderAdapter imp
      */
     @Override
     public String getText(Object object) {
-        ParticipantMultiplicity participantMultiplicity = (ParticipantMultiplicity)object;
-        return getString("_UI_ParticipantMultiplicity_type") + " " + participantMultiplicity.getMaximum();
+        ParticipantMultiplicity participantMultiplicity = (ParticipantMultiplicity) object;
+        return getString("_UI_ParticipantMultiplicity_type") + " "
+                + participantMultiplicity.getMaximum();
     }
 
     /**
@@ -127,10 +148,11 @@ public class ParticipantMultiplicityItemProvider extends ItemProviderAdapter imp
         updateChildren(notification);
 
         switch (notification.getFeatureID(ParticipantMultiplicity.class)) {
-            case Bpmn2Package.PARTICIPANT_MULTIPLICITY__MAXIMUM:
-            case Bpmn2Package.PARTICIPANT_MULTIPLICITY__MINIMUM:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case Bpmn2Package.PARTICIPANT_MULTIPLICITY__MAXIMUM:
+        case Bpmn2Package.PARTICIPANT_MULTIPLICITY__MINIMUM:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }

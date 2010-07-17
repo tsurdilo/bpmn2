@@ -41,7 +41,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class BoundsItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class BoundsItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider,
+        IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -78,7 +80,13 @@ public class BoundsItemProvider extends ItemProviderAdapter implements IEditingD
      * @generated
      */
     protected void addHeightPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Bounds_height_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Bounds_height_feature", "_UI_Bounds_type"), DcPackage.Literals.BOUNDS__HEIGHT, true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Bounds_height_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Bounds_height_feature",
+                        "_UI_Bounds_type"), DcPackage.Literals.BOUNDS__HEIGHT, true, false, false,
+                ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -88,7 +96,13 @@ public class BoundsItemProvider extends ItemProviderAdapter implements IEditingD
      * @generated
      */
     protected void addWidthPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Bounds_width_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Bounds_width_feature", "_UI_Bounds_type"), DcPackage.Literals.BOUNDS__WIDTH, true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Bounds_width_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Bounds_width_feature",
+                        "_UI_Bounds_type"), DcPackage.Literals.BOUNDS__WIDTH, true, false, false,
+                ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -98,7 +112,13 @@ public class BoundsItemProvider extends ItemProviderAdapter implements IEditingD
      * @generated
      */
     protected void addXPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Bounds_x_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Bounds_x_feature", "_UI_Bounds_type"), DcPackage.Literals.BOUNDS__X, true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Bounds_x_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Bounds_x_feature",
+                        "_UI_Bounds_type"), DcPackage.Literals.BOUNDS__X, true, false, false,
+                ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -108,7 +128,13 @@ public class BoundsItemProvider extends ItemProviderAdapter implements IEditingD
      * @generated
      */
     protected void addYPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Bounds_y_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Bounds_y_feature", "_UI_Bounds_type"), DcPackage.Literals.BOUNDS__Y, true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Bounds_y_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Bounds_y_feature",
+                        "_UI_Bounds_type"), DcPackage.Literals.BOUNDS__Y, true, false, false,
+                ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -134,7 +160,7 @@ public class BoundsItemProvider extends ItemProviderAdapter implements IEditingD
      */
     @Override
     public String getText(Object object) {
-        Bounds bounds = (Bounds)object;
+        Bounds bounds = (Bounds) object;
         return getString("_UI_Bounds_type") + " " + bounds.getHeight();
     }
 
@@ -150,12 +176,13 @@ public class BoundsItemProvider extends ItemProviderAdapter implements IEditingD
         updateChildren(notification);
 
         switch (notification.getFeatureID(Bounds.class)) {
-            case DcPackage.BOUNDS__HEIGHT:
-            case DcPackage.BOUNDS__WIDTH:
-            case DcPackage.BOUNDS__X:
-            case DcPackage.BOUNDS__Y:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case DcPackage.BOUNDS__HEIGHT:
+        case DcPackage.BOUNDS__WIDTH:
+        case DcPackage.BOUNDS__X:
+        case DcPackage.BOUNDS__Y:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }

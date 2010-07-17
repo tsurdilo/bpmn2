@@ -72,11 +72,13 @@ public class GlobalChoreographyTaskImpl extends ChoreographyImpl implements Glob
      */
     public Participant getInitiatingParticipantRef() {
         if (initiatingParticipantRef != null && initiatingParticipantRef.eIsProxy()) {
-            InternalEObject oldInitiatingParticipantRef = (InternalEObject)initiatingParticipantRef;
-            initiatingParticipantRef = (Participant)eResolveProxy(oldInitiatingParticipantRef);
+            InternalEObject oldInitiatingParticipantRef = (InternalEObject) initiatingParticipantRef;
+            initiatingParticipantRef = (Participant) eResolveProxy(oldInitiatingParticipantRef);
             if (initiatingParticipantRef != oldInitiatingParticipantRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF, oldInitiatingParticipantRef, initiatingParticipantRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF,
+                            oldInitiatingParticipantRef, initiatingParticipantRef));
             }
         }
         return initiatingParticipantRef;
@@ -100,7 +102,9 @@ public class GlobalChoreographyTaskImpl extends ChoreographyImpl implements Glob
         Participant oldInitiatingParticipantRef = initiatingParticipantRef;
         initiatingParticipantRef = newInitiatingParticipantRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF, oldInitiatingParticipantRef, initiatingParticipantRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF,
+                    oldInitiatingParticipantRef, initiatingParticipantRef));
     }
 
     /**
@@ -111,10 +115,10 @@ public class GlobalChoreographyTaskImpl extends ChoreographyImpl implements Glob
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF:
-                if (resolve)
-                    return getInitiatingParticipantRef();
-                return basicGetInitiatingParticipantRef();
+        case Bpmn2Package.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF:
+            if (resolve)
+                return getInitiatingParticipantRef();
+            return basicGetInitiatingParticipantRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -127,9 +131,9 @@ public class GlobalChoreographyTaskImpl extends ChoreographyImpl implements Glob
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF:
-                setInitiatingParticipantRef((Participant)newValue);
-                return;
+        case Bpmn2Package.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF:
+            setInitiatingParticipantRef((Participant) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -142,9 +146,9 @@ public class GlobalChoreographyTaskImpl extends ChoreographyImpl implements Glob
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF:
-                setInitiatingParticipantRef((Participant)null);
-                return;
+        case Bpmn2Package.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF:
+            setInitiatingParticipantRef((Participant) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -157,8 +161,8 @@ public class GlobalChoreographyTaskImpl extends ChoreographyImpl implements Glob
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF:
-                return initiatingParticipantRef != null;
+        case Bpmn2Package.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF:
+            return initiatingParticipantRef != null;
         }
         return super.eIsSet(featureID);
     }

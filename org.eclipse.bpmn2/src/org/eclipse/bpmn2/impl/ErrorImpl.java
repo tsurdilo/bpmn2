@@ -124,7 +124,8 @@ public class ErrorImpl extends RootElementImpl implements org.eclipse.bpmn2.Erro
         String oldErrorCode = errorCode;
         errorCode = newErrorCode;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ERROR__ERROR_CODE, oldErrorCode, errorCode));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ERROR__ERROR_CODE,
+                    oldErrorCode, errorCode));
     }
 
     /**
@@ -145,7 +146,8 @@ public class ErrorImpl extends RootElementImpl implements org.eclipse.bpmn2.Erro
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ERROR__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ERROR__NAME,
+                    oldName, name));
     }
 
     /**
@@ -155,11 +157,12 @@ public class ErrorImpl extends RootElementImpl implements org.eclipse.bpmn2.Erro
      */
     public ItemDefinition getStructureRef() {
         if (structureRef != null && structureRef.eIsProxy()) {
-            InternalEObject oldStructureRef = (InternalEObject)structureRef;
-            structureRef = (ItemDefinition)eResolveProxy(oldStructureRef);
+            InternalEObject oldStructureRef = (InternalEObject) structureRef;
+            structureRef = (ItemDefinition) eResolveProxy(oldStructureRef);
             if (structureRef != oldStructureRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.ERROR__STRUCTURE_REF, oldStructureRef, structureRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.ERROR__STRUCTURE_REF, oldStructureRef, structureRef));
             }
         }
         return structureRef;
@@ -183,7 +186,8 @@ public class ErrorImpl extends RootElementImpl implements org.eclipse.bpmn2.Erro
         ItemDefinition oldStructureRef = structureRef;
         structureRef = newStructureRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ERROR__STRUCTURE_REF, oldStructureRef, structureRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.ERROR__STRUCTURE_REF, oldStructureRef, structureRef));
     }
 
     /**
@@ -194,14 +198,14 @@ public class ErrorImpl extends RootElementImpl implements org.eclipse.bpmn2.Erro
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.ERROR__ERROR_CODE:
-                return getErrorCode();
-            case Bpmn2Package.ERROR__NAME:
-                return getName();
-            case Bpmn2Package.ERROR__STRUCTURE_REF:
-                if (resolve)
-                    return getStructureRef();
-                return basicGetStructureRef();
+        case Bpmn2Package.ERROR__ERROR_CODE:
+            return getErrorCode();
+        case Bpmn2Package.ERROR__NAME:
+            return getName();
+        case Bpmn2Package.ERROR__STRUCTURE_REF:
+            if (resolve)
+                return getStructureRef();
+            return basicGetStructureRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -214,15 +218,15 @@ public class ErrorImpl extends RootElementImpl implements org.eclipse.bpmn2.Erro
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.ERROR__ERROR_CODE:
-                setErrorCode((String)newValue);
-                return;
-            case Bpmn2Package.ERROR__NAME:
-                setName((String)newValue);
-                return;
-            case Bpmn2Package.ERROR__STRUCTURE_REF:
-                setStructureRef((ItemDefinition)newValue);
-                return;
+        case Bpmn2Package.ERROR__ERROR_CODE:
+            setErrorCode((String) newValue);
+            return;
+        case Bpmn2Package.ERROR__NAME:
+            setName((String) newValue);
+            return;
+        case Bpmn2Package.ERROR__STRUCTURE_REF:
+            setStructureRef((ItemDefinition) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -235,15 +239,15 @@ public class ErrorImpl extends RootElementImpl implements org.eclipse.bpmn2.Erro
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.ERROR__ERROR_CODE:
-                setErrorCode(ERROR_CODE_EDEFAULT);
-                return;
-            case Bpmn2Package.ERROR__NAME:
-                setName(NAME_EDEFAULT);
-                return;
-            case Bpmn2Package.ERROR__STRUCTURE_REF:
-                setStructureRef((ItemDefinition)null);
-                return;
+        case Bpmn2Package.ERROR__ERROR_CODE:
+            setErrorCode(ERROR_CODE_EDEFAULT);
+            return;
+        case Bpmn2Package.ERROR__NAME:
+            setName(NAME_EDEFAULT);
+            return;
+        case Bpmn2Package.ERROR__STRUCTURE_REF:
+            setStructureRef((ItemDefinition) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -256,12 +260,13 @@ public class ErrorImpl extends RootElementImpl implements org.eclipse.bpmn2.Erro
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.ERROR__ERROR_CODE:
-                return ERROR_CODE_EDEFAULT == null ? errorCode != null : !ERROR_CODE_EDEFAULT.equals(errorCode);
-            case Bpmn2Package.ERROR__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-            case Bpmn2Package.ERROR__STRUCTURE_REF:
-                return structureRef != null;
+        case Bpmn2Package.ERROR__ERROR_CODE:
+            return ERROR_CODE_EDEFAULT == null ? errorCode != null : !ERROR_CODE_EDEFAULT
+                    .equals(errorCode);
+        case Bpmn2Package.ERROR__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case Bpmn2Package.ERROR__STRUCTURE_REF:
+            return structureRef != null;
         }
         return super.eIsSet(featureID);
     }

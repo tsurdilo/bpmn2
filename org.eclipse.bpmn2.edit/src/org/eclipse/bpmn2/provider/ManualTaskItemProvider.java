@@ -34,7 +34,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ManualTaskItemProvider extends TaskItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ManualTaskItemProvider extends TaskItemProvider implements IEditingDomainItemProvider,
+        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider,
+        IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -83,8 +85,9 @@ public class ManualTaskItemProvider extends TaskItemProvider implements IEditing
      */
     @Override
     public String getText(Object object) {
-        String label = ((ManualTask)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_ManualTask_type") : getString("_UI_ManualTask_type") + " " + label;
+        String label = ((ManualTask) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_ManualTask_type")
+                : getString("_UI_ManualTask_type") + " " + label;
     }
 
     /**

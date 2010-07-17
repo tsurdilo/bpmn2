@@ -108,7 +108,9 @@ public class InputOutputBindingImpl extends EObjectImpl implements InputOutputBi
         InputSet oldInputDataRef = inputDataRef;
         inputDataRef = newInputDataRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.INPUT_OUTPUT_BINDING__INPUT_DATA_REF, oldInputDataRef, inputDataRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.INPUT_OUTPUT_BINDING__INPUT_DATA_REF, oldInputDataRef,
+                    inputDataRef));
     }
 
     /**
@@ -118,11 +120,13 @@ public class InputOutputBindingImpl extends EObjectImpl implements InputOutputBi
      */
     public Operation getOperationRef() {
         if (operationRef != null && operationRef.eIsProxy()) {
-            InternalEObject oldOperationRef = (InternalEObject)operationRef;
-            operationRef = (Operation)eResolveProxy(oldOperationRef);
+            InternalEObject oldOperationRef = (InternalEObject) operationRef;
+            operationRef = (Operation) eResolveProxy(oldOperationRef);
             if (operationRef != oldOperationRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.INPUT_OUTPUT_BINDING__OPERATION_REF, oldOperationRef, operationRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.INPUT_OUTPUT_BINDING__OPERATION_REF, oldOperationRef,
+                            operationRef));
             }
         }
         return operationRef;
@@ -146,7 +150,8 @@ public class InputOutputBindingImpl extends EObjectImpl implements InputOutputBi
         Operation oldOperationRef = operationRef;
         operationRef = newOperationRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.INPUT_OUTPUT_BINDING__OPERATION_REF, oldOperationRef, operationRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.INPUT_OUTPUT_BINDING__OPERATION_REF, oldOperationRef, operationRef));
     }
 
     /**
@@ -167,7 +172,9 @@ public class InputOutputBindingImpl extends EObjectImpl implements InputOutputBi
         OutputSet oldOutputDataRef = outputDataRef;
         outputDataRef = newOutputDataRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF, oldOutputDataRef, outputDataRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF, oldOutputDataRef,
+                    outputDataRef));
     }
 
     /**
@@ -178,14 +185,14 @@ public class InputOutputBindingImpl extends EObjectImpl implements InputOutputBi
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.INPUT_OUTPUT_BINDING__INPUT_DATA_REF:
-                return getInputDataRef();
-            case Bpmn2Package.INPUT_OUTPUT_BINDING__OPERATION_REF:
-                if (resolve)
-                    return getOperationRef();
-                return basicGetOperationRef();
-            case Bpmn2Package.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF:
-                return getOutputDataRef();
+        case Bpmn2Package.INPUT_OUTPUT_BINDING__INPUT_DATA_REF:
+            return getInputDataRef();
+        case Bpmn2Package.INPUT_OUTPUT_BINDING__OPERATION_REF:
+            if (resolve)
+                return getOperationRef();
+            return basicGetOperationRef();
+        case Bpmn2Package.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF:
+            return getOutputDataRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -198,15 +205,15 @@ public class InputOutputBindingImpl extends EObjectImpl implements InputOutputBi
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.INPUT_OUTPUT_BINDING__INPUT_DATA_REF:
-                setInputDataRef((InputSet)newValue);
-                return;
-            case Bpmn2Package.INPUT_OUTPUT_BINDING__OPERATION_REF:
-                setOperationRef((Operation)newValue);
-                return;
-            case Bpmn2Package.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF:
-                setOutputDataRef((OutputSet)newValue);
-                return;
+        case Bpmn2Package.INPUT_OUTPUT_BINDING__INPUT_DATA_REF:
+            setInputDataRef((InputSet) newValue);
+            return;
+        case Bpmn2Package.INPUT_OUTPUT_BINDING__OPERATION_REF:
+            setOperationRef((Operation) newValue);
+            return;
+        case Bpmn2Package.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF:
+            setOutputDataRef((OutputSet) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -219,15 +226,15 @@ public class InputOutputBindingImpl extends EObjectImpl implements InputOutputBi
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.INPUT_OUTPUT_BINDING__INPUT_DATA_REF:
-                setInputDataRef((InputSet)null);
-                return;
-            case Bpmn2Package.INPUT_OUTPUT_BINDING__OPERATION_REF:
-                setOperationRef((Operation)null);
-                return;
-            case Bpmn2Package.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF:
-                setOutputDataRef((OutputSet)null);
-                return;
+        case Bpmn2Package.INPUT_OUTPUT_BINDING__INPUT_DATA_REF:
+            setInputDataRef((InputSet) null);
+            return;
+        case Bpmn2Package.INPUT_OUTPUT_BINDING__OPERATION_REF:
+            setOperationRef((Operation) null);
+            return;
+        case Bpmn2Package.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF:
+            setOutputDataRef((OutputSet) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -240,12 +247,12 @@ public class InputOutputBindingImpl extends EObjectImpl implements InputOutputBi
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.INPUT_OUTPUT_BINDING__INPUT_DATA_REF:
-                return inputDataRef != null;
-            case Bpmn2Package.INPUT_OUTPUT_BINDING__OPERATION_REF:
-                return operationRef != null;
-            case Bpmn2Package.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF:
-                return outputDataRef != null;
+        case Bpmn2Package.INPUT_OUTPUT_BINDING__INPUT_DATA_REF:
+            return inputDataRef != null;
+        case Bpmn2Package.INPUT_OUTPUT_BINDING__OPERATION_REF:
+            return operationRef != null;
+        case Bpmn2Package.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF:
+            return outputDataRef != null;
         }
         return super.eIsSet(featureID);
     }

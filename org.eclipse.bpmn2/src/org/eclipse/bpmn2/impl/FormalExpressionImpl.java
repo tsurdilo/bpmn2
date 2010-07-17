@@ -105,11 +105,12 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
      */
     public Object getBody() {
         if (body != null && body.eIsProxy()) {
-            InternalEObject oldBody = (InternalEObject)body;
+            InternalEObject oldBody = (InternalEObject) body;
             body = eResolveProxy(oldBody);
             if (body != oldBody) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.FORMAL_EXPRESSION__BODY, oldBody, body));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.FORMAL_EXPRESSION__BODY, oldBody, body));
             }
         }
         return body;
@@ -131,9 +132,10 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
      */
     public void setBody(Object newBody) {
         Object oldBody = body;
-        body = (EObject)newBody;
+        body = (EObject) newBody;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.FORMAL_EXPRESSION__BODY, oldBody, body));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.FORMAL_EXPRESSION__BODY, oldBody, body));
     }
 
     /**
@@ -143,11 +145,13 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
      */
     public ItemDefinition getEvaluatesToTypeRef() {
         if (evaluatesToTypeRef != null && evaluatesToTypeRef.eIsProxy()) {
-            InternalEObject oldEvaluatesToTypeRef = (InternalEObject)evaluatesToTypeRef;
-            evaluatesToTypeRef = (ItemDefinition)eResolveProxy(oldEvaluatesToTypeRef);
+            InternalEObject oldEvaluatesToTypeRef = (InternalEObject) evaluatesToTypeRef;
+            evaluatesToTypeRef = (ItemDefinition) eResolveProxy(oldEvaluatesToTypeRef);
             if (evaluatesToTypeRef != oldEvaluatesToTypeRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF, oldEvaluatesToTypeRef, evaluatesToTypeRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF,
+                            oldEvaluatesToTypeRef, evaluatesToTypeRef));
             }
         }
         return evaluatesToTypeRef;
@@ -171,7 +175,9 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
         ItemDefinition oldEvaluatesToTypeRef = evaluatesToTypeRef;
         evaluatesToTypeRef = newEvaluatesToTypeRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF, oldEvaluatesToTypeRef, evaluatesToTypeRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF, oldEvaluatesToTypeRef,
+                    evaluatesToTypeRef));
     }
 
     /**
@@ -192,7 +198,8 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
         String oldLanguage = language;
         language = newLanguage;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.FORMAL_EXPRESSION__LANGUAGE, oldLanguage, language));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.FORMAL_EXPRESSION__LANGUAGE, oldLanguage, language));
     }
 
     /**
@@ -203,16 +210,16 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.FORMAL_EXPRESSION__BODY:
-                if (resolve)
-                    return getBody();
-                return basicGetBody();
-            case Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF:
-                if (resolve)
-                    return getEvaluatesToTypeRef();
-                return basicGetEvaluatesToTypeRef();
-            case Bpmn2Package.FORMAL_EXPRESSION__LANGUAGE:
-                return getLanguage();
+        case Bpmn2Package.FORMAL_EXPRESSION__BODY:
+            if (resolve)
+                return getBody();
+            return basicGetBody();
+        case Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF:
+            if (resolve)
+                return getEvaluatesToTypeRef();
+            return basicGetEvaluatesToTypeRef();
+        case Bpmn2Package.FORMAL_EXPRESSION__LANGUAGE:
+            return getLanguage();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -225,15 +232,15 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.FORMAL_EXPRESSION__BODY:
-                setBody((Object)newValue);
-                return;
-            case Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF:
-                setEvaluatesToTypeRef((ItemDefinition)newValue);
-                return;
-            case Bpmn2Package.FORMAL_EXPRESSION__LANGUAGE:
-                setLanguage((String)newValue);
-                return;
+        case Bpmn2Package.FORMAL_EXPRESSION__BODY:
+            setBody((Object) newValue);
+            return;
+        case Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF:
+            setEvaluatesToTypeRef((ItemDefinition) newValue);
+            return;
+        case Bpmn2Package.FORMAL_EXPRESSION__LANGUAGE:
+            setLanguage((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -246,15 +253,15 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.FORMAL_EXPRESSION__BODY:
-                setBody((Object)null);
-                return;
-            case Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF:
-                setEvaluatesToTypeRef((ItemDefinition)null);
-                return;
-            case Bpmn2Package.FORMAL_EXPRESSION__LANGUAGE:
-                setLanguage(LANGUAGE_EDEFAULT);
-                return;
+        case Bpmn2Package.FORMAL_EXPRESSION__BODY:
+            setBody((Object) null);
+            return;
+        case Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF:
+            setEvaluatesToTypeRef((ItemDefinition) null);
+            return;
+        case Bpmn2Package.FORMAL_EXPRESSION__LANGUAGE:
+            setLanguage(LANGUAGE_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -267,12 +274,13 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.FORMAL_EXPRESSION__BODY:
-                return body != null;
-            case Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF:
-                return evaluatesToTypeRef != null;
-            case Bpmn2Package.FORMAL_EXPRESSION__LANGUAGE:
-                return LANGUAGE_EDEFAULT == null ? language != null : !LANGUAGE_EDEFAULT.equals(language);
+        case Bpmn2Package.FORMAL_EXPRESSION__BODY:
+            return body != null;
+        case Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF:
+            return evaluatesToTypeRef != null;
+        case Bpmn2Package.FORMAL_EXPRESSION__LANGUAGE:
+            return LANGUAGE_EDEFAULT == null ? language != null : !LANGUAGE_EDEFAULT
+                    .equals(language);
         }
         return super.eIsSet(featureID);
     }

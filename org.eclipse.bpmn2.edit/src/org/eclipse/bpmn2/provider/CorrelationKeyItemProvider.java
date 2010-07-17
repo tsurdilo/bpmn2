@@ -38,7 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CorrelationKeyItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class CorrelationKeyItemProvider extends BaseElementItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -73,7 +75,15 @@ public class CorrelationKeyItemProvider extends BaseElementItemProvider implemen
      * @generated
      */
     protected void addCorrelationPropertyRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_CorrelationKey_correlationPropertyRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_CorrelationKey_correlationPropertyRef_feature", "_UI_CorrelationKey_type"), Bpmn2Package.Literals.CORRELATION_KEY__CORRELATION_PROPERTY_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_CorrelationKey_correlationPropertyRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_CorrelationKey_correlationPropertyRef_feature",
+                        "_UI_CorrelationKey_type"),
+                Bpmn2Package.Literals.CORRELATION_KEY__CORRELATION_PROPERTY_REF, true, false, true,
+                null, null, null));
     }
 
     /**
@@ -83,7 +93,13 @@ public class CorrelationKeyItemProvider extends BaseElementItemProvider implemen
      * @generated
      */
     protected void addNamePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_CorrelationKey_name_feature"), getString("_UI_PropertyDescriptor_description", "_UI_CorrelationKey_name_feature", "_UI_CorrelationKey_type"), Bpmn2Package.Literals.CORRELATION_KEY__NAME, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_CorrelationKey_name_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_CorrelationKey_name_feature",
+                        "_UI_CorrelationKey_type"), Bpmn2Package.Literals.CORRELATION_KEY__NAME,
+                true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -95,9 +111,11 @@ public class CorrelationKeyItemProvider extends BaseElementItemProvider implemen
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/CorrelationKey.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/CorrelationKey.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/CorrelationKey.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/CorrelationKey.gif"));
         }
     }
 
@@ -109,8 +127,9 @@ public class CorrelationKeyItemProvider extends BaseElementItemProvider implemen
      */
     @Override
     public String getText(Object object) {
-        String label = ((CorrelationKey)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_CorrelationKey_type") : getString("_UI_CorrelationKey_type") + " " + label;
+        String label = ((CorrelationKey) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_CorrelationKey_type")
+                : getString("_UI_CorrelationKey_type") + " " + label;
     }
 
     /**
@@ -125,9 +144,10 @@ public class CorrelationKeyItemProvider extends BaseElementItemProvider implemen
         updateChildren(notification);
 
         switch (notification.getFeatureID(CorrelationKey.class)) {
-            case Bpmn2Package.CORRELATION_KEY__NAME:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case Bpmn2Package.CORRELATION_KEY__NAME:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }

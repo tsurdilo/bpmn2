@@ -100,7 +100,8 @@ public class ResourceImpl extends RootElementImpl implements Resource {
      */
     public List<ResourceParameter> getResourceParameters() {
         if (resourceParameters == null) {
-            resourceParameters = new EObjectContainmentEList<ResourceParameter>(ResourceParameter.class, this, Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS);
+            resourceParameters = new EObjectContainmentEList<ResourceParameter>(
+                    ResourceParameter.class, this, Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS);
         }
         return resourceParameters;
     }
@@ -123,7 +124,8 @@ public class ResourceImpl extends RootElementImpl implements Resource {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.RESOURCE__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.RESOURCE__NAME,
+                    oldName, name));
     }
 
     /**
@@ -132,10 +134,11 @@ public class ResourceImpl extends RootElementImpl implements Resource {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS:
-                return ((InternalEList<?>)getResourceParameters()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS:
+            return ((InternalEList<?>) getResourceParameters()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -148,10 +151,10 @@ public class ResourceImpl extends RootElementImpl implements Resource {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS:
-                return getResourceParameters();
-            case Bpmn2Package.RESOURCE__NAME:
-                return getName();
+        case Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS:
+            return getResourceParameters();
+        case Bpmn2Package.RESOURCE__NAME:
+            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -165,13 +168,13 @@ public class ResourceImpl extends RootElementImpl implements Resource {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS:
-                getResourceParameters().clear();
-                getResourceParameters().addAll((Collection<? extends ResourceParameter>)newValue);
-                return;
-            case Bpmn2Package.RESOURCE__NAME:
-                setName((String)newValue);
-                return;
+        case Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS:
+            getResourceParameters().clear();
+            getResourceParameters().addAll((Collection<? extends ResourceParameter>) newValue);
+            return;
+        case Bpmn2Package.RESOURCE__NAME:
+            setName((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -184,12 +187,12 @@ public class ResourceImpl extends RootElementImpl implements Resource {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS:
-                getResourceParameters().clear();
-                return;
-            case Bpmn2Package.RESOURCE__NAME:
-                setName(NAME_EDEFAULT);
-                return;
+        case Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS:
+            getResourceParameters().clear();
+            return;
+        case Bpmn2Package.RESOURCE__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -202,10 +205,10 @@ public class ResourceImpl extends RootElementImpl implements Resource {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS:
-                return resourceParameters != null && !resourceParameters.isEmpty();
-            case Bpmn2Package.RESOURCE__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS:
+            return resourceParameters != null && !resourceParameters.isEmpty();
+        case Bpmn2Package.RESOURCE__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }

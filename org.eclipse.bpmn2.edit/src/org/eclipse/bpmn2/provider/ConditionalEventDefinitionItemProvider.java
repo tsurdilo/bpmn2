@@ -38,7 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ConditionalEventDefinitionItemProvider extends EventDefinitionItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ConditionalEventDefinitionItemProvider extends EventDefinitionItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -103,9 +105,11 @@ public class ConditionalEventDefinitionItemProvider extends EventDefinitionItemP
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/ConditionalEventDefinition.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/ConditionalEventDefinition.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/ConditionalEventDefinition.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/ConditionalEventDefinition.gif"));
         }
     }
 
@@ -117,8 +121,9 @@ public class ConditionalEventDefinitionItemProvider extends EventDefinitionItemP
      */
     @Override
     public String getText(Object object) {
-        String label = ((ConditionalEventDefinition)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_ConditionalEventDefinition_type") : getString("_UI_ConditionalEventDefinition_type") + " " + label;
+        String label = ((ConditionalEventDefinition) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_ConditionalEventDefinition_type")
+                : getString("_UI_ConditionalEventDefinition_type") + " " + label;
     }
 
     /**
@@ -133,9 +138,10 @@ public class ConditionalEventDefinitionItemProvider extends EventDefinitionItemP
         updateChildren(notification);
 
         switch (notification.getFeatureID(ConditionalEventDefinition.class)) {
-            case Bpmn2Package.CONDITIONAL_EVENT_DEFINITION__CONDITION:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case Bpmn2Package.CONDITIONAL_EVENT_DEFINITION__CONDITION:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -151,9 +157,13 @@ public class ConditionalEventDefinitionItemProvider extends EventDefinitionItemP
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.CONDITIONAL_EVENT_DEFINITION__CONDITION, Bpmn2Factory.eINSTANCE.createExpression()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.CONDITIONAL_EVENT_DEFINITION__CONDITION,
+                Bpmn2Factory.eINSTANCE.createExpression()));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.CONDITIONAL_EVENT_DEFINITION__CONDITION, Bpmn2Factory.eINSTANCE.createFormalExpression()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.CONDITIONAL_EVENT_DEFINITION__CONDITION,
+                Bpmn2Factory.eINSTANCE.createFormalExpression()));
     }
 
 }

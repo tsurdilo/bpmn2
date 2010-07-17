@@ -111,7 +111,8 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
         String oldValue = value;
         value = newValue;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.CATEGORY_VALUE__VALUE, oldValue, value));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.CATEGORY_VALUE__VALUE, oldValue, value));
     }
 
     /**
@@ -121,7 +122,10 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
      */
     public List<FlowElement> getCategorizedFlowElements() {
         if (categorizedFlowElements == null) {
-            categorizedFlowElements = new EObjectWithInverseEList.ManyInverse<FlowElement>(FlowElement.class, this, Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS, Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF);
+            categorizedFlowElements = new EObjectWithInverseEList.ManyInverse<FlowElement>(
+                    FlowElement.class, this,
+                    Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS,
+                    Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF);
         }
         return categorizedFlowElements;
     }
@@ -133,10 +137,12 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
      */
     @SuppressWarnings("unchecked")
     @Override
-    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS:
-                return ((InternalEList<InternalEObject>)(InternalEList<?>)getCategorizedFlowElements()).basicAdd(otherEnd, msgs);
+        case Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getCategorizedFlowElements())
+                    .basicAdd(otherEnd, msgs);
         }
         return super.eInverseAdd(otherEnd, featureID, msgs);
     }
@@ -147,10 +153,11 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS:
-                return ((InternalEList<?>)getCategorizedFlowElements()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS:
+            return ((InternalEList<?>) getCategorizedFlowElements()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -163,10 +170,10 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.CATEGORY_VALUE__VALUE:
-                return getValue();
-            case Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS:
-                return getCategorizedFlowElements();
+        case Bpmn2Package.CATEGORY_VALUE__VALUE:
+            return getValue();
+        case Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS:
+            return getCategorizedFlowElements();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -180,13 +187,13 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.CATEGORY_VALUE__VALUE:
-                setValue((String)newValue);
-                return;
-            case Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS:
-                getCategorizedFlowElements().clear();
-                getCategorizedFlowElements().addAll((Collection<? extends FlowElement>)newValue);
-                return;
+        case Bpmn2Package.CATEGORY_VALUE__VALUE:
+            setValue((String) newValue);
+            return;
+        case Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS:
+            getCategorizedFlowElements().clear();
+            getCategorizedFlowElements().addAll((Collection<? extends FlowElement>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -199,12 +206,12 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.CATEGORY_VALUE__VALUE:
-                setValue(VALUE_EDEFAULT);
-                return;
-            case Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS:
-                getCategorizedFlowElements().clear();
-                return;
+        case Bpmn2Package.CATEGORY_VALUE__VALUE:
+            setValue(VALUE_EDEFAULT);
+            return;
+        case Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS:
+            getCategorizedFlowElements().clear();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -217,10 +224,10 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.CATEGORY_VALUE__VALUE:
-                return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-            case Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS:
-                return categorizedFlowElements != null && !categorizedFlowElements.isEmpty();
+        case Bpmn2Package.CATEGORY_VALUE__VALUE:
+            return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+        case Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS:
+            return categorizedFlowElements != null && !categorizedFlowElements.isEmpty();
         }
         return super.eIsSet(featureID);
     }

@@ -95,7 +95,8 @@ public class BpmnDiSwitch<T> {
             return doSwitch(theEClass.getClassifierID(), theEObject);
         } else {
             List<EClass> eSuperTypes = theEClass.getESuperTypes();
-            return eSuperTypes.isEmpty() ? defaultCase(theEObject) : doSwitch(eSuperTypes.get(0), theEObject);
+            return eSuperTypes.isEmpty() ? defaultCase(theEObject) : doSwitch(eSuperTypes.get(0),
+                    theEObject);
         }
     }
 
@@ -108,87 +109,87 @@ public class BpmnDiSwitch<T> {
      */
     protected T doSwitch(int classifierID, EObject theEObject) {
         switch (classifierID) {
-            case BpmnDiPackage.DOCUMENT_ROOT: {
-                DocumentRoot documentRoot = (DocumentRoot)theEObject;
-                T result = caseDocumentRoot(documentRoot);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case BpmnDiPackage.BPMN_DIAGRAM: {
-                BPMNDiagram bpmnDiagram = (BPMNDiagram)theEObject;
-                T result = caseBPMNDiagram(bpmnDiagram);
-                if (result == null)
-                    result = caseDiagram(bpmnDiagram);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case BpmnDiPackage.BPMN_EDGE: {
-                BPMNEdge bpmnEdge = (BPMNEdge)theEObject;
-                T result = caseBPMNEdge(bpmnEdge);
-                if (result == null)
-                    result = caseLabeledEdge(bpmnEdge);
-                if (result == null)
-                    result = caseEdge(bpmnEdge);
-                if (result == null)
-                    result = caseDiagramElement(bpmnEdge);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case BpmnDiPackage.BPMN_LABEL: {
-                BPMNLabel bpmnLabel = (BPMNLabel)theEObject;
-                T result = caseBPMNLabel(bpmnLabel);
-                if (result == null)
-                    result = caseLabel(bpmnLabel);
-                if (result == null)
-                    result = caseNode(bpmnLabel);
-                if (result == null)
-                    result = caseDiagramElement(bpmnLabel);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case BpmnDiPackage.BPMN_LABEL_STYLE: {
-                BPMNLabelStyle bpmnLabelStyle = (BPMNLabelStyle)theEObject;
-                T result = caseBPMNLabelStyle(bpmnLabelStyle);
-                if (result == null)
-                    result = caseStyle(bpmnLabelStyle);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case BpmnDiPackage.BPMN_PLANE: {
-                BPMNPlane bpmnPlane = (BPMNPlane)theEObject;
-                T result = caseBPMNPlane(bpmnPlane);
-                if (result == null)
-                    result = casePlane(bpmnPlane);
-                if (result == null)
-                    result = caseNode(bpmnPlane);
-                if (result == null)
-                    result = caseDiagramElement(bpmnPlane);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            case BpmnDiPackage.BPMN_SHAPE: {
-                BPMNShape bpmnShape = (BPMNShape)theEObject;
-                T result = caseBPMNShape(bpmnShape);
-                if (result == null)
-                    result = caseLabeledShape(bpmnShape);
-                if (result == null)
-                    result = caseShape(bpmnShape);
-                if (result == null)
-                    result = caseNode(bpmnShape);
-                if (result == null)
-                    result = caseDiagramElement(bpmnShape);
-                if (result == null)
-                    result = defaultCase(theEObject);
-                return result;
-            }
-            default:
-                return defaultCase(theEObject);
+        case BpmnDiPackage.DOCUMENT_ROOT: {
+            DocumentRoot documentRoot = (DocumentRoot) theEObject;
+            T result = caseDocumentRoot(documentRoot);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case BpmnDiPackage.BPMN_DIAGRAM: {
+            BPMNDiagram bpmnDiagram = (BPMNDiagram) theEObject;
+            T result = caseBPMNDiagram(bpmnDiagram);
+            if (result == null)
+                result = caseDiagram(bpmnDiagram);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case BpmnDiPackage.BPMN_EDGE: {
+            BPMNEdge bpmnEdge = (BPMNEdge) theEObject;
+            T result = caseBPMNEdge(bpmnEdge);
+            if (result == null)
+                result = caseLabeledEdge(bpmnEdge);
+            if (result == null)
+                result = caseEdge(bpmnEdge);
+            if (result == null)
+                result = caseDiagramElement(bpmnEdge);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case BpmnDiPackage.BPMN_LABEL: {
+            BPMNLabel bpmnLabel = (BPMNLabel) theEObject;
+            T result = caseBPMNLabel(bpmnLabel);
+            if (result == null)
+                result = caseLabel(bpmnLabel);
+            if (result == null)
+                result = caseNode(bpmnLabel);
+            if (result == null)
+                result = caseDiagramElement(bpmnLabel);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case BpmnDiPackage.BPMN_LABEL_STYLE: {
+            BPMNLabelStyle bpmnLabelStyle = (BPMNLabelStyle) theEObject;
+            T result = caseBPMNLabelStyle(bpmnLabelStyle);
+            if (result == null)
+                result = caseStyle(bpmnLabelStyle);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case BpmnDiPackage.BPMN_PLANE: {
+            BPMNPlane bpmnPlane = (BPMNPlane) theEObject;
+            T result = caseBPMNPlane(bpmnPlane);
+            if (result == null)
+                result = casePlane(bpmnPlane);
+            if (result == null)
+                result = caseNode(bpmnPlane);
+            if (result == null)
+                result = caseDiagramElement(bpmnPlane);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case BpmnDiPackage.BPMN_SHAPE: {
+            BPMNShape bpmnShape = (BPMNShape) theEObject;
+            T result = caseBPMNShape(bpmnShape);
+            if (result == null)
+                result = caseLabeledShape(bpmnShape);
+            if (result == null)
+                result = caseShape(bpmnShape);
+            if (result == null)
+                result = caseNode(bpmnShape);
+            if (result == null)
+                result = caseDiagramElement(bpmnShape);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        default:
+            return defaultCase(theEObject);
         }
     }
 

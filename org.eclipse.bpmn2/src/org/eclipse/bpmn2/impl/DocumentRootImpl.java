@@ -250,7 +250,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      */
     public Map<String, String> getXMLNSPrefixMap() {
         if (xMLNSPrefixMap == null) {
-            xMLNSPrefixMap = new EcoreEMap<String, String>(EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY, EStringToStringMapEntryImpl.class, this, Bpmn2Package.DOCUMENT_ROOT__XMLNS_PREFIX_MAP);
+            xMLNSPrefixMap = new EcoreEMap<String, String>(
+                    EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY,
+                    EStringToStringMapEntryImpl.class, this,
+                    Bpmn2Package.DOCUMENT_ROOT__XMLNS_PREFIX_MAP);
         }
         return xMLNSPrefixMap.map();
     }
@@ -262,7 +265,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      */
     public Map<String, String> getXSISchemaLocation() {
         if (xSISchemaLocation == null) {
-            xSISchemaLocation = new EcoreEMap<String, String>(EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY, EStringToStringMapEntryImpl.class, this, Bpmn2Package.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION);
+            xSISchemaLocation = new EcoreEMap<String, String>(
+                    EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY,
+                    EStringToStringMapEntryImpl.class, this,
+                    Bpmn2Package.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION);
         }
         return xSISchemaLocation.map();
     }
@@ -273,7 +279,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Activity getActivity() {
-        return (Activity)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__ACTIVITY, true);
+        return (Activity) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__ACTIVITY, true);
     }
 
     /**
@@ -282,7 +288,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetActivity(Activity newActivity, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__ACTIVITY, newActivity, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__ACTIVITY, newActivity, msgs);
     }
 
     /**
@@ -291,7 +298,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setActivity(Activity newActivity) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__ACTIVITY, newActivity);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__ACTIVITY,
+                newActivity);
     }
 
     /**
@@ -300,7 +308,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public AdHocSubProcess getAdHocSubProcess() {
-        return (AdHocSubProcess)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__AD_HOC_SUB_PROCESS, true);
+        return (AdHocSubProcess) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__AD_HOC_SUB_PROCESS, true);
     }
 
     /**
@@ -308,8 +317,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetAdHocSubProcess(AdHocSubProcess newAdHocSubProcess, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__AD_HOC_SUB_PROCESS, newAdHocSubProcess, msgs);
+    public NotificationChain basicSetAdHocSubProcess(AdHocSubProcess newAdHocSubProcess,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__AD_HOC_SUB_PROCESS, newAdHocSubProcess, msgs);
     }
 
     /**
@@ -318,7 +329,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setAdHocSubProcess(AdHocSubProcess newAdHocSubProcess) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__AD_HOC_SUB_PROCESS, newAdHocSubProcess);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__AD_HOC_SUB_PROCESS, newAdHocSubProcess);
     }
 
     /**
@@ -327,7 +339,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public FlowElement getFlowElement() {
-        return (FlowElement)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__FLOW_ELEMENT, true);
+        return (FlowElement) getMixed()
+                .get(Bpmn2Package.Literals.DOCUMENT_ROOT__FLOW_ELEMENT, true);
     }
 
     /**
@@ -336,7 +349,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetFlowElement(FlowElement newFlowElement, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__FLOW_ELEMENT, newFlowElement, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__FLOW_ELEMENT, newFlowElement, msgs);
     }
 
     /**
@@ -345,7 +359,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setFlowElement(FlowElement newFlowElement) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__FLOW_ELEMENT, newFlowElement);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__FLOW_ELEMENT,
+                newFlowElement);
     }
 
     /**
@@ -354,7 +369,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Artifact getArtifact() {
-        return (Artifact)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__ARTIFACT, true);
+        return (Artifact) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__ARTIFACT, true);
     }
 
     /**
@@ -363,7 +378,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetArtifact(Artifact newArtifact, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__ARTIFACT, newArtifact, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__ARTIFACT, newArtifact, msgs);
     }
 
     /**
@@ -372,7 +388,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setArtifact(Artifact newArtifact) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__ARTIFACT, newArtifact);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__ARTIFACT,
+                newArtifact);
     }
 
     /**
@@ -381,7 +398,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Assignment getAssignment() {
-        return (Assignment)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__ASSIGNMENT, true);
+        return (Assignment) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__ASSIGNMENT, true);
     }
 
     /**
@@ -390,7 +407,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetAssignment(Assignment newAssignment, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__ASSIGNMENT, newAssignment, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__ASSIGNMENT, newAssignment, msgs);
     }
 
     /**
@@ -399,7 +417,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setAssignment(Assignment newAssignment) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__ASSIGNMENT, newAssignment);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__ASSIGNMENT,
+                newAssignment);
     }
 
     /**
@@ -408,7 +427,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Association getAssociation() {
-        return (Association)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__ASSOCIATION, true);
+        return (Association) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__ASSOCIATION, true);
     }
 
     /**
@@ -417,7 +436,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetAssociation(Association newAssociation, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__ASSOCIATION, newAssociation, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__ASSOCIATION, newAssociation, msgs);
     }
 
     /**
@@ -426,7 +446,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setAssociation(Association newAssociation) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__ASSOCIATION, newAssociation);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__ASSOCIATION,
+                newAssociation);
     }
 
     /**
@@ -435,7 +456,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Auditing getAuditing() {
-        return (Auditing)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__AUDITING, true);
+        return (Auditing) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__AUDITING, true);
     }
 
     /**
@@ -444,7 +465,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetAuditing(Auditing newAuditing, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__AUDITING, newAuditing, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__AUDITING, newAuditing, msgs);
     }
 
     /**
@@ -453,7 +475,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setAuditing(Auditing newAuditing) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__AUDITING, newAuditing);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__AUDITING,
+                newAuditing);
     }
 
     /**
@@ -462,7 +485,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public BaseElement getBaseElement() {
-        return (BaseElement)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT, true);
+        return (BaseElement) getMixed()
+                .get(Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT, true);
     }
 
     /**
@@ -471,7 +495,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetBaseElement(BaseElement newBaseElement, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT, newBaseElement, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT, newBaseElement, msgs);
     }
 
     /**
@@ -480,7 +505,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setBaseElement(BaseElement newBaseElement) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT, newBaseElement);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT,
+                newBaseElement);
     }
 
     /**
@@ -489,7 +515,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Object getBaseElementWithMixedContent() {
-        return (Object)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT, true);
+        return (Object) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT, true);
     }
 
     /**
@@ -497,8 +524,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetBaseElementWithMixedContent(EObject newBaseElementWithMixedContent, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT, newBaseElementWithMixedContent, msgs);
+    public NotificationChain basicSetBaseElementWithMixedContent(
+            EObject newBaseElementWithMixedContent, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT,
+                newBaseElementWithMixedContent, msgs);
     }
 
     /**
@@ -507,7 +537,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setBaseElementWithMixedContent(Object newBaseElementWithMixedContent) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT, newBaseElementWithMixedContent);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT,
+                newBaseElementWithMixedContent);
     }
 
     /**
@@ -516,7 +548,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public BoundaryEvent getBoundaryEvent() {
-        return (BoundaryEvent)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__BOUNDARY_EVENT, true);
+        return (BoundaryEvent) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__BOUNDARY_EVENT,
+                true);
     }
 
     /**
@@ -524,8 +557,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetBoundaryEvent(BoundaryEvent newBoundaryEvent, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__BOUNDARY_EVENT, newBoundaryEvent, msgs);
+    public NotificationChain basicSetBoundaryEvent(BoundaryEvent newBoundaryEvent,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__BOUNDARY_EVENT, newBoundaryEvent, msgs);
     }
 
     /**
@@ -534,7 +569,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setBoundaryEvent(BoundaryEvent newBoundaryEvent) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__BOUNDARY_EVENT, newBoundaryEvent);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__BOUNDARY_EVENT,
+                newBoundaryEvent);
     }
 
     /**
@@ -543,7 +579,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public BusinessRuleTask getBusinessRuleTask() {
-        return (BusinessRuleTask)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__BUSINESS_RULE_TASK, true);
+        return (BusinessRuleTask) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__BUSINESS_RULE_TASK, true);
     }
 
     /**
@@ -551,8 +588,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetBusinessRuleTask(BusinessRuleTask newBusinessRuleTask, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__BUSINESS_RULE_TASK, newBusinessRuleTask, msgs);
+    public NotificationChain basicSetBusinessRuleTask(BusinessRuleTask newBusinessRuleTask,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__BUSINESS_RULE_TASK, newBusinessRuleTask, msgs);
     }
 
     /**
@@ -561,7 +600,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setBusinessRuleTask(BusinessRuleTask newBusinessRuleTask) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__BUSINESS_RULE_TASK, newBusinessRuleTask);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__BUSINESS_RULE_TASK, newBusinessRuleTask);
     }
 
     /**
@@ -570,7 +610,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public CallableElement getCallableElement() {
-        return (CallableElement)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__CALLABLE_ELEMENT, true);
+        return (CallableElement) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CALLABLE_ELEMENT, true);
     }
 
     /**
@@ -578,8 +619,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetCallableElement(CallableElement newCallableElement, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__CALLABLE_ELEMENT, newCallableElement, msgs);
+    public NotificationChain basicSetCallableElement(CallableElement newCallableElement,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CALLABLE_ELEMENT, newCallableElement, msgs);
     }
 
     /**
@@ -588,7 +631,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setCallableElement(CallableElement newCallableElement) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__CALLABLE_ELEMENT, newCallableElement);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CALLABLE_ELEMENT, newCallableElement);
     }
 
     /**
@@ -597,7 +641,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public CallActivity getCallActivity() {
-        return (CallActivity)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_ACTIVITY, true);
+        return (CallActivity) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_ACTIVITY,
+                true);
     }
 
     /**
@@ -605,8 +650,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetCallActivity(CallActivity newCallActivity, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_ACTIVITY, newCallActivity, msgs);
+    public NotificationChain basicSetCallActivity(CallActivity newCallActivity,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_ACTIVITY, newCallActivity, msgs);
     }
 
     /**
@@ -615,7 +662,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setCallActivity(CallActivity newCallActivity) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_ACTIVITY, newCallActivity);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_ACTIVITY,
+                newCallActivity);
     }
 
     /**
@@ -624,7 +672,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public CallChoreography getCallChoreography() {
-        return (CallChoreography)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_CHOREOGRAPHY, true);
+        return (CallChoreography) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_CHOREOGRAPHY, true);
     }
 
     /**
@@ -632,8 +681,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetCallChoreography(CallChoreography newCallChoreography, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_CHOREOGRAPHY, newCallChoreography, msgs);
+    public NotificationChain basicSetCallChoreography(CallChoreography newCallChoreography,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_CHOREOGRAPHY, newCallChoreography, msgs);
     }
 
     /**
@@ -642,7 +693,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setCallChoreography(CallChoreography newCallChoreography) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_CHOREOGRAPHY, newCallChoreography);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_CHOREOGRAPHY, newCallChoreography);
     }
 
     /**
@@ -651,7 +703,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public CallConversation getCallConversation() {
-        return (CallConversation)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_CONVERSATION, true);
+        return (CallConversation) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_CONVERSATION, true);
     }
 
     /**
@@ -659,8 +712,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetCallConversation(CallConversation newCallConversation, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_CONVERSATION, newCallConversation, msgs);
+    public NotificationChain basicSetCallConversation(CallConversation newCallConversation,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_CONVERSATION, newCallConversation, msgs);
     }
 
     /**
@@ -669,7 +724,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setCallConversation(CallConversation newCallConversation) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_CONVERSATION, newCallConversation);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_CONVERSATION, newCallConversation);
     }
 
     /**
@@ -678,7 +734,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ConversationNode getConversationNode() {
-        return (ConversationNode)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION_NODE, true);
+        return (ConversationNode) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION_NODE, true);
     }
 
     /**
@@ -686,8 +743,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetConversationNode(ConversationNode newConversationNode, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION_NODE, newConversationNode, msgs);
+    public NotificationChain basicSetConversationNode(ConversationNode newConversationNode,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION_NODE, newConversationNode, msgs);
     }
 
     /**
@@ -696,7 +755,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setConversationNode(ConversationNode newConversationNode) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION_NODE, newConversationNode);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION_NODE, newConversationNode);
     }
 
     /**
@@ -705,7 +765,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public CancelEventDefinition getCancelEventDefinition() {
-        return (CancelEventDefinition)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__CANCEL_EVENT_DEFINITION, true);
+        return (CancelEventDefinition) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CANCEL_EVENT_DEFINITION, true);
     }
 
     /**
@@ -713,8 +774,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetCancelEventDefinition(CancelEventDefinition newCancelEventDefinition, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__CANCEL_EVENT_DEFINITION, newCancelEventDefinition, msgs);
+    public NotificationChain basicSetCancelEventDefinition(
+            CancelEventDefinition newCancelEventDefinition, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CANCEL_EVENT_DEFINITION,
+                newCancelEventDefinition, msgs);
     }
 
     /**
@@ -723,7 +787,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setCancelEventDefinition(CancelEventDefinition newCancelEventDefinition) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__CANCEL_EVENT_DEFINITION, newCancelEventDefinition);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CANCEL_EVENT_DEFINITION,
+                newCancelEventDefinition);
     }
 
     /**
@@ -732,7 +798,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public EventDefinition getEventDefinition() {
-        return (EventDefinition)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT_DEFINITION, true);
+        return (EventDefinition) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT_DEFINITION, true);
     }
 
     /**
@@ -740,8 +807,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetEventDefinition(EventDefinition newEventDefinition, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT_DEFINITION, newEventDefinition, msgs);
+    public NotificationChain basicSetEventDefinition(EventDefinition newEventDefinition,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT_DEFINITION, newEventDefinition, msgs);
     }
 
     /**
@@ -750,7 +819,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setEventDefinition(EventDefinition newEventDefinition) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT_DEFINITION, newEventDefinition);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT_DEFINITION, newEventDefinition);
     }
 
     /**
@@ -759,7 +829,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public RootElement getRootElement() {
-        return (RootElement)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__ROOT_ELEMENT, true);
+        return (RootElement) getMixed()
+                .get(Bpmn2Package.Literals.DOCUMENT_ROOT__ROOT_ELEMENT, true);
     }
 
     /**
@@ -768,7 +839,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetRootElement(RootElement newRootElement, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__ROOT_ELEMENT, newRootElement, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__ROOT_ELEMENT, newRootElement, msgs);
     }
 
     /**
@@ -777,7 +849,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setRootElement(RootElement newRootElement) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__ROOT_ELEMENT, newRootElement);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__ROOT_ELEMENT,
+                newRootElement);
     }
 
     /**
@@ -786,7 +859,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public CatchEvent getCatchEvent() {
-        return (CatchEvent)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__CATCH_EVENT, true);
+        return (CatchEvent) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__CATCH_EVENT, true);
     }
 
     /**
@@ -795,7 +868,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetCatchEvent(CatchEvent newCatchEvent, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__CATCH_EVENT, newCatchEvent, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CATCH_EVENT, newCatchEvent, msgs);
     }
 
     /**
@@ -804,7 +878,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setCatchEvent(CatchEvent newCatchEvent) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__CATCH_EVENT, newCatchEvent);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__CATCH_EVENT,
+                newCatchEvent);
     }
 
     /**
@@ -813,7 +888,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Category getCategory() {
-        return (Category)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__CATEGORY, true);
+        return (Category) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__CATEGORY, true);
     }
 
     /**
@@ -822,7 +897,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetCategory(Category newCategory, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__CATEGORY, newCategory, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CATEGORY, newCategory, msgs);
     }
 
     /**
@@ -831,7 +907,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setCategory(Category newCategory) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__CATEGORY, newCategory);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__CATEGORY,
+                newCategory);
     }
 
     /**
@@ -840,7 +917,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public CategoryValue getCategoryValue() {
-        return (CategoryValue)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__CATEGORY_VALUE, true);
+        return (CategoryValue) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__CATEGORY_VALUE,
+                true);
     }
 
     /**
@@ -848,8 +926,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetCategoryValue(CategoryValue newCategoryValue, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__CATEGORY_VALUE, newCategoryValue, msgs);
+    public NotificationChain basicSetCategoryValue(CategoryValue newCategoryValue,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CATEGORY_VALUE, newCategoryValue, msgs);
     }
 
     /**
@@ -858,7 +938,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setCategoryValue(CategoryValue newCategoryValue) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__CATEGORY_VALUE, newCategoryValue);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__CATEGORY_VALUE,
+                newCategoryValue);
     }
 
     /**
@@ -867,7 +948,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Choreography getChoreography() {
-        return (Choreography)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__CHOREOGRAPHY, true);
+        return (Choreography) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__CHOREOGRAPHY,
+                true);
     }
 
     /**
@@ -875,8 +957,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetChoreography(Choreography newChoreography, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__CHOREOGRAPHY, newChoreography, msgs);
+    public NotificationChain basicSetChoreography(Choreography newChoreography,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CHOREOGRAPHY, newChoreography, msgs);
     }
 
     /**
@@ -885,7 +969,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setChoreography(Choreography newChoreography) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__CHOREOGRAPHY, newChoreography);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__CHOREOGRAPHY,
+                newChoreography);
     }
 
     /**
@@ -894,7 +979,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Collaboration getCollaboration() {
-        return (Collaboration)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__COLLABORATION, true);
+        return (Collaboration) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__COLLABORATION,
+                true);
     }
 
     /**
@@ -902,8 +988,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetCollaboration(Collaboration newCollaboration, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__COLLABORATION, newCollaboration, msgs);
+    public NotificationChain basicSetCollaboration(Collaboration newCollaboration,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__COLLABORATION, newCollaboration, msgs);
     }
 
     /**
@@ -912,7 +1000,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setCollaboration(Collaboration newCollaboration) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__COLLABORATION, newCollaboration);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__COLLABORATION,
+                newCollaboration);
     }
 
     /**
@@ -921,7 +1010,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ChoreographyActivity getChoreographyActivity() {
-        return (ChoreographyActivity)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__CHOREOGRAPHY_ACTIVITY, true);
+        return (ChoreographyActivity) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CHOREOGRAPHY_ACTIVITY, true);
     }
 
     /**
@@ -929,8 +1019,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetChoreographyActivity(ChoreographyActivity newChoreographyActivity, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__CHOREOGRAPHY_ACTIVITY, newChoreographyActivity, msgs);
+    public NotificationChain basicSetChoreographyActivity(
+            ChoreographyActivity newChoreographyActivity, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CHOREOGRAPHY_ACTIVITY,
+                newChoreographyActivity, msgs);
     }
 
     /**
@@ -939,7 +1032,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setChoreographyActivity(ChoreographyActivity newChoreographyActivity) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__CHOREOGRAPHY_ACTIVITY, newChoreographyActivity);
+        ((FeatureMap.Internal) getMixed())
+                .set(Bpmn2Package.Literals.DOCUMENT_ROOT__CHOREOGRAPHY_ACTIVITY,
+                        newChoreographyActivity);
     }
 
     /**
@@ -948,7 +1043,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ChoreographyTask getChoreographyTask() {
-        return (ChoreographyTask)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__CHOREOGRAPHY_TASK, true);
+        return (ChoreographyTask) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CHOREOGRAPHY_TASK, true);
     }
 
     /**
@@ -956,8 +1052,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetChoreographyTask(ChoreographyTask newChoreographyTask, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__CHOREOGRAPHY_TASK, newChoreographyTask, msgs);
+    public NotificationChain basicSetChoreographyTask(ChoreographyTask newChoreographyTask,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CHOREOGRAPHY_TASK, newChoreographyTask, msgs);
     }
 
     /**
@@ -966,7 +1064,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setChoreographyTask(ChoreographyTask newChoreographyTask) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__CHOREOGRAPHY_TASK, newChoreographyTask);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CHOREOGRAPHY_TASK, newChoreographyTask);
     }
 
     /**
@@ -975,7 +1074,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public CompensateEventDefinition getCompensateEventDefinition() {
-        return (CompensateEventDefinition)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__COMPENSATE_EVENT_DEFINITION, true);
+        return (CompensateEventDefinition) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__COMPENSATE_EVENT_DEFINITION, true);
     }
 
     /**
@@ -983,8 +1083,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetCompensateEventDefinition(CompensateEventDefinition newCompensateEventDefinition, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__COMPENSATE_EVENT_DEFINITION, newCompensateEventDefinition, msgs);
+    public NotificationChain basicSetCompensateEventDefinition(
+            CompensateEventDefinition newCompensateEventDefinition, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__COMPENSATE_EVENT_DEFINITION,
+                newCompensateEventDefinition, msgs);
     }
 
     /**
@@ -993,7 +1096,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setCompensateEventDefinition(CompensateEventDefinition newCompensateEventDefinition) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__COMPENSATE_EVENT_DEFINITION, newCompensateEventDefinition);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__COMPENSATE_EVENT_DEFINITION,
+                newCompensateEventDefinition);
     }
 
     /**
@@ -1002,7 +1107,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ComplexBehaviorDefinition getComplexBehaviorDefinition() {
-        return (ComplexBehaviorDefinition)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__COMPLEX_BEHAVIOR_DEFINITION, true);
+        return (ComplexBehaviorDefinition) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__COMPLEX_BEHAVIOR_DEFINITION, true);
     }
 
     /**
@@ -1010,8 +1116,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetComplexBehaviorDefinition(ComplexBehaviorDefinition newComplexBehaviorDefinition, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__COMPLEX_BEHAVIOR_DEFINITION, newComplexBehaviorDefinition, msgs);
+    public NotificationChain basicSetComplexBehaviorDefinition(
+            ComplexBehaviorDefinition newComplexBehaviorDefinition, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__COMPLEX_BEHAVIOR_DEFINITION,
+                newComplexBehaviorDefinition, msgs);
     }
 
     /**
@@ -1020,7 +1129,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setComplexBehaviorDefinition(ComplexBehaviorDefinition newComplexBehaviorDefinition) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__COMPLEX_BEHAVIOR_DEFINITION, newComplexBehaviorDefinition);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__COMPLEX_BEHAVIOR_DEFINITION,
+                newComplexBehaviorDefinition);
     }
 
     /**
@@ -1029,7 +1140,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ComplexGateway getComplexGateway() {
-        return (ComplexGateway)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__COMPLEX_GATEWAY, true);
+        return (ComplexGateway) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__COMPLEX_GATEWAY, true);
     }
 
     /**
@@ -1037,8 +1149,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetComplexGateway(ComplexGateway newComplexGateway, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__COMPLEX_GATEWAY, newComplexGateway, msgs);
+    public NotificationChain basicSetComplexGateway(ComplexGateway newComplexGateway,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__COMPLEX_GATEWAY, newComplexGateway, msgs);
     }
 
     /**
@@ -1047,7 +1161,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setComplexGateway(ComplexGateway newComplexGateway) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__COMPLEX_GATEWAY, newComplexGateway);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__COMPLEX_GATEWAY, newComplexGateway);
     }
 
     /**
@@ -1056,7 +1171,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ConditionalEventDefinition getConditionalEventDefinition() {
-        return (ConditionalEventDefinition)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__CONDITIONAL_EVENT_DEFINITION, true);
+        return (ConditionalEventDefinition) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CONDITIONAL_EVENT_DEFINITION, true);
     }
 
     /**
@@ -1064,8 +1180,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetConditionalEventDefinition(ConditionalEventDefinition newConditionalEventDefinition, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__CONDITIONAL_EVENT_DEFINITION, newConditionalEventDefinition, msgs);
+    public NotificationChain basicSetConditionalEventDefinition(
+            ConditionalEventDefinition newConditionalEventDefinition, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CONDITIONAL_EVENT_DEFINITION,
+                newConditionalEventDefinition, msgs);
     }
 
     /**
@@ -1073,8 +1192,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setConditionalEventDefinition(ConditionalEventDefinition newConditionalEventDefinition) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__CONDITIONAL_EVENT_DEFINITION, newConditionalEventDefinition);
+    public void setConditionalEventDefinition(
+            ConditionalEventDefinition newConditionalEventDefinition) {
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CONDITIONAL_EVENT_DEFINITION,
+                newConditionalEventDefinition);
     }
 
     /**
@@ -1083,7 +1205,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Conversation getConversation() {
-        return (Conversation)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION, true);
+        return (Conversation) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION,
+                true);
     }
 
     /**
@@ -1091,8 +1214,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetConversation(Conversation newConversation, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION, newConversation, msgs);
+    public NotificationChain basicSetConversation(Conversation newConversation,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION, newConversation, msgs);
     }
 
     /**
@@ -1101,7 +1226,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setConversation(Conversation newConversation) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION, newConversation);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION,
+                newConversation);
     }
 
     /**
@@ -1110,7 +1236,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ConversationAssociation getConversationAssociation() {
-        return (ConversationAssociation)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION_ASSOCIATION, true);
+        return (ConversationAssociation) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION_ASSOCIATION, true);
     }
 
     /**
@@ -1118,8 +1245,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetConversationAssociation(ConversationAssociation newConversationAssociation, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION_ASSOCIATION, newConversationAssociation, msgs);
+    public NotificationChain basicSetConversationAssociation(
+            ConversationAssociation newConversationAssociation, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION_ASSOCIATION,
+                newConversationAssociation, msgs);
     }
 
     /**
@@ -1128,7 +1258,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setConversationAssociation(ConversationAssociation newConversationAssociation) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION_ASSOCIATION, newConversationAssociation);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION_ASSOCIATION,
+                newConversationAssociation);
     }
 
     /**
@@ -1137,7 +1269,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ConversationLink getConversationLink() {
-        return (ConversationLink)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION_LINK, true);
+        return (ConversationLink) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION_LINK, true);
     }
 
     /**
@@ -1145,8 +1278,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetConversationLink(ConversationLink newConversationLink, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION_LINK, newConversationLink, msgs);
+    public NotificationChain basicSetConversationLink(ConversationLink newConversationLink,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION_LINK, newConversationLink, msgs);
     }
 
     /**
@@ -1155,7 +1290,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setConversationLink(ConversationLink newConversationLink) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION_LINK, newConversationLink);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION_LINK, newConversationLink);
     }
 
     /**
@@ -1164,7 +1300,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public CorrelationKey getCorrelationKey() {
-        return (CorrelationKey)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_KEY, true);
+        return (CorrelationKey) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_KEY, true);
     }
 
     /**
@@ -1172,8 +1309,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetCorrelationKey(CorrelationKey newCorrelationKey, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_KEY, newCorrelationKey, msgs);
+    public NotificationChain basicSetCorrelationKey(CorrelationKey newCorrelationKey,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_KEY, newCorrelationKey, msgs);
     }
 
     /**
@@ -1182,7 +1321,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setCorrelationKey(CorrelationKey newCorrelationKey) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_KEY, newCorrelationKey);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_KEY, newCorrelationKey);
     }
 
     /**
@@ -1191,7 +1331,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public CorrelationProperty getCorrelationProperty() {
-        return (CorrelationProperty)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_PROPERTY, true);
+        return (CorrelationProperty) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_PROPERTY, true);
     }
 
     /**
@@ -1199,8 +1340,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetCorrelationProperty(CorrelationProperty newCorrelationProperty, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_PROPERTY, newCorrelationProperty, msgs);
+    public NotificationChain basicSetCorrelationProperty(
+            CorrelationProperty newCorrelationProperty, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_PROPERTY, newCorrelationProperty,
+                msgs);
     }
 
     /**
@@ -1209,7 +1353,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setCorrelationProperty(CorrelationProperty newCorrelationProperty) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_PROPERTY, newCorrelationProperty);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_PROPERTY, newCorrelationProperty);
     }
 
     /**
@@ -1218,7 +1363,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public CorrelationPropertyBinding getCorrelationPropertyBinding() {
-        return (CorrelationPropertyBinding)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_PROPERTY_BINDING, true);
+        return (CorrelationPropertyBinding) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_PROPERTY_BINDING, true);
     }
 
     /**
@@ -1226,8 +1372,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetCorrelationPropertyBinding(CorrelationPropertyBinding newCorrelationPropertyBinding, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_PROPERTY_BINDING, newCorrelationPropertyBinding, msgs);
+    public NotificationChain basicSetCorrelationPropertyBinding(
+            CorrelationPropertyBinding newCorrelationPropertyBinding, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_PROPERTY_BINDING,
+                newCorrelationPropertyBinding, msgs);
     }
 
     /**
@@ -1235,8 +1384,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setCorrelationPropertyBinding(CorrelationPropertyBinding newCorrelationPropertyBinding) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_PROPERTY_BINDING, newCorrelationPropertyBinding);
+    public void setCorrelationPropertyBinding(
+            CorrelationPropertyBinding newCorrelationPropertyBinding) {
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_PROPERTY_BINDING,
+                newCorrelationPropertyBinding);
     }
 
     /**
@@ -1245,7 +1397,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public CorrelationPropertyRetrievalExpression getCorrelationPropertyRetrievalExpression() {
-        return (CorrelationPropertyRetrievalExpression)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION, true);
+        return (CorrelationPropertyRetrievalExpression) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION,
+                true);
     }
 
     /**
@@ -1253,8 +1407,12 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetCorrelationPropertyRetrievalExpression(CorrelationPropertyRetrievalExpression newCorrelationPropertyRetrievalExpression, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION, newCorrelationPropertyRetrievalExpression, msgs);
+    public NotificationChain basicSetCorrelationPropertyRetrievalExpression(
+            CorrelationPropertyRetrievalExpression newCorrelationPropertyRetrievalExpression,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION,
+                newCorrelationPropertyRetrievalExpression, msgs);
     }
 
     /**
@@ -1262,8 +1420,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setCorrelationPropertyRetrievalExpression(CorrelationPropertyRetrievalExpression newCorrelationPropertyRetrievalExpression) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION, newCorrelationPropertyRetrievalExpression);
+    public void setCorrelationPropertyRetrievalExpression(
+            CorrelationPropertyRetrievalExpression newCorrelationPropertyRetrievalExpression) {
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION,
+                newCorrelationPropertyRetrievalExpression);
     }
 
     /**
@@ -1272,7 +1433,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public CorrelationSubscription getCorrelationSubscription() {
-        return (CorrelationSubscription)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_SUBSCRIPTION, true);
+        return (CorrelationSubscription) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_SUBSCRIPTION, true);
     }
 
     /**
@@ -1280,8 +1442,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetCorrelationSubscription(CorrelationSubscription newCorrelationSubscription, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_SUBSCRIPTION, newCorrelationSubscription, msgs);
+    public NotificationChain basicSetCorrelationSubscription(
+            CorrelationSubscription newCorrelationSubscription, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_SUBSCRIPTION,
+                newCorrelationSubscription, msgs);
     }
 
     /**
@@ -1290,7 +1455,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setCorrelationSubscription(CorrelationSubscription newCorrelationSubscription) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_SUBSCRIPTION, newCorrelationSubscription);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__CORRELATION_SUBSCRIPTION,
+                newCorrelationSubscription);
     }
 
     /**
@@ -1299,7 +1466,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public DataAssociation getDataAssociation() {
-        return (DataAssociation)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_ASSOCIATION, true);
+        return (DataAssociation) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_ASSOCIATION, true);
     }
 
     /**
@@ -1307,8 +1475,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetDataAssociation(DataAssociation newDataAssociation, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_ASSOCIATION, newDataAssociation, msgs);
+    public NotificationChain basicSetDataAssociation(DataAssociation newDataAssociation,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_ASSOCIATION, newDataAssociation, msgs);
     }
 
     /**
@@ -1317,7 +1487,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setDataAssociation(DataAssociation newDataAssociation) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_ASSOCIATION, newDataAssociation);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_ASSOCIATION, newDataAssociation);
     }
 
     /**
@@ -1326,7 +1497,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public DataInput getDataInput() {
-        return (DataInput)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_INPUT, true);
+        return (DataInput) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_INPUT, true);
     }
 
     /**
@@ -1335,7 +1506,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetDataInput(DataInput newDataInput, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_INPUT, newDataInput, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_INPUT, newDataInput, msgs);
     }
 
     /**
@@ -1344,7 +1516,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setDataInput(DataInput newDataInput) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_INPUT, newDataInput);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_INPUT,
+                newDataInput);
     }
 
     /**
@@ -1353,7 +1526,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public DataInputAssociation getDataInputAssociation() {
-        return (DataInputAssociation)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_INPUT_ASSOCIATION, true);
+        return (DataInputAssociation) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_INPUT_ASSOCIATION, true);
     }
 
     /**
@@ -1361,8 +1535,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetDataInputAssociation(DataInputAssociation newDataInputAssociation, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_INPUT_ASSOCIATION, newDataInputAssociation, msgs);
+    public NotificationChain basicSetDataInputAssociation(
+            DataInputAssociation newDataInputAssociation, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_INPUT_ASSOCIATION,
+                newDataInputAssociation, msgs);
     }
 
     /**
@@ -1371,7 +1548,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setDataInputAssociation(DataInputAssociation newDataInputAssociation) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_INPUT_ASSOCIATION, newDataInputAssociation);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_INPUT_ASSOCIATION,
+                newDataInputAssociation);
     }
 
     /**
@@ -1380,7 +1559,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public DataObject getDataObject() {
-        return (DataObject)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OBJECT, true);
+        return (DataObject) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OBJECT, true);
     }
 
     /**
@@ -1389,7 +1568,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetDataObject(DataObject newDataObject, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OBJECT, newDataObject, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OBJECT, newDataObject, msgs);
     }
 
     /**
@@ -1398,7 +1578,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setDataObject(DataObject newDataObject) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OBJECT, newDataObject);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OBJECT,
+                newDataObject);
     }
 
     /**
@@ -1407,7 +1588,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public DataObjectReference getDataObjectReference() {
-        return (DataObjectReference)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OBJECT_REFERENCE, true);
+        return (DataObjectReference) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OBJECT_REFERENCE, true);
     }
 
     /**
@@ -1415,8 +1597,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetDataObjectReference(DataObjectReference newDataObjectReference, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OBJECT_REFERENCE, newDataObjectReference, msgs);
+    public NotificationChain basicSetDataObjectReference(
+            DataObjectReference newDataObjectReference, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OBJECT_REFERENCE, newDataObjectReference,
+                msgs);
     }
 
     /**
@@ -1425,7 +1610,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setDataObjectReference(DataObjectReference newDataObjectReference) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OBJECT_REFERENCE, newDataObjectReference);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OBJECT_REFERENCE, newDataObjectReference);
     }
 
     /**
@@ -1434,7 +1620,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public DataOutput getDataOutput() {
-        return (DataOutput)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OUTPUT, true);
+        return (DataOutput) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OUTPUT, true);
     }
 
     /**
@@ -1443,7 +1629,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetDataOutput(DataOutput newDataOutput, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OUTPUT, newDataOutput, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OUTPUT, newDataOutput, msgs);
     }
 
     /**
@@ -1452,7 +1639,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setDataOutput(DataOutput newDataOutput) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OUTPUT, newDataOutput);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OUTPUT,
+                newDataOutput);
     }
 
     /**
@@ -1461,7 +1649,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public DataOutputAssociation getDataOutputAssociation() {
-        return (DataOutputAssociation)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OUTPUT_ASSOCIATION, true);
+        return (DataOutputAssociation) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OUTPUT_ASSOCIATION, true);
     }
 
     /**
@@ -1469,8 +1658,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetDataOutputAssociation(DataOutputAssociation newDataOutputAssociation, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OUTPUT_ASSOCIATION, newDataOutputAssociation, msgs);
+    public NotificationChain basicSetDataOutputAssociation(
+            DataOutputAssociation newDataOutputAssociation, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OUTPUT_ASSOCIATION,
+                newDataOutputAssociation, msgs);
     }
 
     /**
@@ -1479,7 +1671,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setDataOutputAssociation(DataOutputAssociation newDataOutputAssociation) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OUTPUT_ASSOCIATION, newDataOutputAssociation);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_OUTPUT_ASSOCIATION,
+                newDataOutputAssociation);
     }
 
     /**
@@ -1488,7 +1682,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public DataState getDataState() {
-        return (DataState)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_STATE, true);
+        return (DataState) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_STATE, true);
     }
 
     /**
@@ -1497,7 +1691,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetDataState(DataState newDataState, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_STATE, newDataState, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_STATE, newDataState, msgs);
     }
 
     /**
@@ -1506,7 +1701,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setDataState(DataState newDataState) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_STATE, newDataState);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_STATE,
+                newDataState);
     }
 
     /**
@@ -1515,7 +1711,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public DataStore getDataStore() {
-        return (DataStore)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_STORE, true);
+        return (DataStore) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_STORE, true);
     }
 
     /**
@@ -1524,7 +1720,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetDataStore(DataStore newDataStore, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_STORE, newDataStore, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_STORE, newDataStore, msgs);
     }
 
     /**
@@ -1533,7 +1730,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setDataStore(DataStore newDataStore) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_STORE, newDataStore);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_STORE,
+                newDataStore);
     }
 
     /**
@@ -1542,7 +1740,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public DataStoreReference getDataStoreReference() {
-        return (DataStoreReference)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_STORE_REFERENCE, true);
+        return (DataStoreReference) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_STORE_REFERENCE, true);
     }
 
     /**
@@ -1550,8 +1749,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetDataStoreReference(DataStoreReference newDataStoreReference, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_STORE_REFERENCE, newDataStoreReference, msgs);
+    public NotificationChain basicSetDataStoreReference(DataStoreReference newDataStoreReference,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_STORE_REFERENCE, newDataStoreReference,
+                msgs);
     }
 
     /**
@@ -1560,7 +1762,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setDataStoreReference(DataStoreReference newDataStoreReference) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_STORE_REFERENCE, newDataStoreReference);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__DATA_STORE_REFERENCE, newDataStoreReference);
     }
 
     /**
@@ -1569,7 +1772,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Definitions getDefinitions() {
-        return (Definitions)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__DEFINITIONS, true);
+        return (Definitions) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__DEFINITIONS, true);
     }
 
     /**
@@ -1578,7 +1781,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetDefinitions(Definitions newDefinitions, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__DEFINITIONS, newDefinitions, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__DEFINITIONS, newDefinitions, msgs);
     }
 
     /**
@@ -1587,7 +1791,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setDefinitions(Definitions newDefinitions) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__DEFINITIONS, newDefinitions);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__DEFINITIONS,
+                newDefinitions);
     }
 
     /**
@@ -1596,7 +1801,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Documentation getDocumentation() {
-        return (Documentation)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__DOCUMENTATION, true);
+        return (Documentation) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__DOCUMENTATION,
+                true);
     }
 
     /**
@@ -1604,8 +1810,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetDocumentation(Documentation newDocumentation, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__DOCUMENTATION, newDocumentation, msgs);
+    public NotificationChain basicSetDocumentation(Documentation newDocumentation,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__DOCUMENTATION, newDocumentation, msgs);
     }
 
     /**
@@ -1614,7 +1822,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setDocumentation(Documentation newDocumentation) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__DOCUMENTATION, newDocumentation);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__DOCUMENTATION,
+                newDocumentation);
     }
 
     /**
@@ -1623,7 +1832,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public EndEvent getEndEvent() {
-        return (EndEvent)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__END_EVENT, true);
+        return (EndEvent) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__END_EVENT, true);
     }
 
     /**
@@ -1632,7 +1841,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetEndEvent(EndEvent newEndEvent, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__END_EVENT, newEndEvent, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__END_EVENT, newEndEvent, msgs);
     }
 
     /**
@@ -1641,7 +1851,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setEndEvent(EndEvent newEndEvent) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__END_EVENT, newEndEvent);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__END_EVENT,
+                newEndEvent);
     }
 
     /**
@@ -1650,7 +1861,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public EndPoint getEndPoint() {
-        return (EndPoint)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__END_POINT, true);
+        return (EndPoint) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__END_POINT, true);
     }
 
     /**
@@ -1659,7 +1870,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetEndPoint(EndPoint newEndPoint, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__END_POINT, newEndPoint, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__END_POINT, newEndPoint, msgs);
     }
 
     /**
@@ -1668,7 +1880,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setEndPoint(EndPoint newEndPoint) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__END_POINT, newEndPoint);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__END_POINT,
+                newEndPoint);
     }
 
     /**
@@ -1677,7 +1890,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public org.eclipse.bpmn2.Error getError() {
-        return (org.eclipse.bpmn2.Error)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__ERROR, true);
+        return (org.eclipse.bpmn2.Error) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__ERROR,
+                true);
     }
 
     /**
@@ -1686,7 +1900,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetError(org.eclipse.bpmn2.Error newError, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__ERROR, newError, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__ERROR, newError, msgs);
     }
 
     /**
@@ -1695,7 +1910,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setError(org.eclipse.bpmn2.Error newError) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__ERROR, newError);
+        ((FeatureMap.Internal) getMixed())
+                .set(Bpmn2Package.Literals.DOCUMENT_ROOT__ERROR, newError);
     }
 
     /**
@@ -1704,7 +1920,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ErrorEventDefinition getErrorEventDefinition() {
-        return (ErrorEventDefinition)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__ERROR_EVENT_DEFINITION, true);
+        return (ErrorEventDefinition) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__ERROR_EVENT_DEFINITION, true);
     }
 
     /**
@@ -1712,8 +1929,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetErrorEventDefinition(ErrorEventDefinition newErrorEventDefinition, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__ERROR_EVENT_DEFINITION, newErrorEventDefinition, msgs);
+    public NotificationChain basicSetErrorEventDefinition(
+            ErrorEventDefinition newErrorEventDefinition, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__ERROR_EVENT_DEFINITION,
+                newErrorEventDefinition, msgs);
     }
 
     /**
@@ -1722,7 +1942,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setErrorEventDefinition(ErrorEventDefinition newErrorEventDefinition) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__ERROR_EVENT_DEFINITION, newErrorEventDefinition);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__ERROR_EVENT_DEFINITION,
+                newErrorEventDefinition);
     }
 
     /**
@@ -1731,7 +1953,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Escalation getEscalation() {
-        return (Escalation)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__ESCALATION, true);
+        return (Escalation) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__ESCALATION, true);
     }
 
     /**
@@ -1740,7 +1962,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetEscalation(Escalation newEscalation, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__ESCALATION, newEscalation, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__ESCALATION, newEscalation, msgs);
     }
 
     /**
@@ -1749,7 +1972,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setEscalation(Escalation newEscalation) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__ESCALATION, newEscalation);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__ESCALATION,
+                newEscalation);
     }
 
     /**
@@ -1758,7 +1982,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public EscalationEventDefinition getEscalationEventDefinition() {
-        return (EscalationEventDefinition)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__ESCALATION_EVENT_DEFINITION, true);
+        return (EscalationEventDefinition) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__ESCALATION_EVENT_DEFINITION, true);
     }
 
     /**
@@ -1766,8 +1991,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetEscalationEventDefinition(EscalationEventDefinition newEscalationEventDefinition, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__ESCALATION_EVENT_DEFINITION, newEscalationEventDefinition, msgs);
+    public NotificationChain basicSetEscalationEventDefinition(
+            EscalationEventDefinition newEscalationEventDefinition, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__ESCALATION_EVENT_DEFINITION,
+                newEscalationEventDefinition, msgs);
     }
 
     /**
@@ -1776,7 +2004,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setEscalationEventDefinition(EscalationEventDefinition newEscalationEventDefinition) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__ESCALATION_EVENT_DEFINITION, newEscalationEventDefinition);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__ESCALATION_EVENT_DEFINITION,
+                newEscalationEventDefinition);
     }
 
     /**
@@ -1785,7 +2015,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Event getEvent() {
-        return (Event)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT, true);
+        return (Event) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT, true);
     }
 
     /**
@@ -1794,7 +2024,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetEvent(Event newEvent, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT, newEvent, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT, newEvent, msgs);
     }
 
     /**
@@ -1803,7 +2034,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setEvent(Event newEvent) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT, newEvent);
+        ((FeatureMap.Internal) getMixed())
+                .set(Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT, newEvent);
     }
 
     /**
@@ -1812,7 +2044,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public EventBasedGateway getEventBasedGateway() {
-        return (EventBasedGateway)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT_BASED_GATEWAY, true);
+        return (EventBasedGateway) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT_BASED_GATEWAY, true);
     }
 
     /**
@@ -1820,8 +2053,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetEventBasedGateway(EventBasedGateway newEventBasedGateway, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT_BASED_GATEWAY, newEventBasedGateway, msgs);
+    public NotificationChain basicSetEventBasedGateway(EventBasedGateway newEventBasedGateway,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT_BASED_GATEWAY, newEventBasedGateway,
+                msgs);
     }
 
     /**
@@ -1830,7 +2066,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setEventBasedGateway(EventBasedGateway newEventBasedGateway) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT_BASED_GATEWAY, newEventBasedGateway);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT_BASED_GATEWAY, newEventBasedGateway);
     }
 
     /**
@@ -1839,7 +2076,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ExclusiveGateway getExclusiveGateway() {
-        return (ExclusiveGateway)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__EXCLUSIVE_GATEWAY, true);
+        return (ExclusiveGateway) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__EXCLUSIVE_GATEWAY, true);
     }
 
     /**
@@ -1847,8 +2085,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetExclusiveGateway(ExclusiveGateway newExclusiveGateway, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__EXCLUSIVE_GATEWAY, newExclusiveGateway, msgs);
+    public NotificationChain basicSetExclusiveGateway(ExclusiveGateway newExclusiveGateway,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__EXCLUSIVE_GATEWAY, newExclusiveGateway, msgs);
     }
 
     /**
@@ -1857,7 +2097,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setExclusiveGateway(ExclusiveGateway newExclusiveGateway) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__EXCLUSIVE_GATEWAY, newExclusiveGateway);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__EXCLUSIVE_GATEWAY, newExclusiveGateway);
     }
 
     /**
@@ -1866,7 +2107,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Expression getExpression() {
-        return (Expression)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__EXPRESSION, true);
+        return (Expression) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__EXPRESSION, true);
     }
 
     /**
@@ -1875,7 +2116,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetExpression(Expression newExpression, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__EXPRESSION, newExpression, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__EXPRESSION, newExpression, msgs);
     }
 
     /**
@@ -1884,7 +2126,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setExpression(Expression newExpression) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__EXPRESSION, newExpression);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__EXPRESSION,
+                newExpression);
     }
 
     /**
@@ -1893,7 +2136,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Extension getExtension() {
-        return (Extension)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__EXTENSION, true);
+        return (Extension) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__EXTENSION, true);
     }
 
     /**
@@ -1902,7 +2145,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetExtension(Extension newExtension, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__EXTENSION, newExtension, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__EXTENSION, newExtension, msgs);
     }
 
     /**
@@ -1911,7 +2155,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setExtension(Extension newExtension) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__EXTENSION, newExtension);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__EXTENSION,
+                newExtension);
     }
 
     /**
@@ -1920,7 +2165,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Object getExtensionElements() {
-        return (Object)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__EXTENSION_ELEMENTS, true);
+        return (Object) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__EXTENSION_ELEMENTS,
+                true);
     }
 
     /**
@@ -1928,8 +2174,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetExtensionElements(EObject newExtensionElements, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__EXTENSION_ELEMENTS, newExtensionElements, msgs);
+    public NotificationChain basicSetExtensionElements(EObject newExtensionElements,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed())
+                .basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__EXTENSION_ELEMENTS,
+                        newExtensionElements, msgs);
     }
 
     /**
@@ -1938,7 +2187,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setExtensionElements(Object newExtensionElements) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__EXTENSION_ELEMENTS, newExtensionElements);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__EXTENSION_ELEMENTS, newExtensionElements);
     }
 
     /**
@@ -1947,7 +2197,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public FlowNode getFlowNode() {
-        return (FlowNode)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__FLOW_NODE, true);
+        return (FlowNode) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__FLOW_NODE, true);
     }
 
     /**
@@ -1956,7 +2206,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetFlowNode(FlowNode newFlowNode, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__FLOW_NODE, newFlowNode, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__FLOW_NODE, newFlowNode, msgs);
     }
 
     /**
@@ -1965,7 +2216,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setFlowNode(FlowNode newFlowNode) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__FLOW_NODE, newFlowNode);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__FLOW_NODE,
+                newFlowNode);
     }
 
     /**
@@ -1974,7 +2226,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public FormalExpression getFormalExpression() {
-        return (FormalExpression)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__FORMAL_EXPRESSION, true);
+        return (FormalExpression) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__FORMAL_EXPRESSION, true);
     }
 
     /**
@@ -1982,8 +2235,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetFormalExpression(FormalExpression newFormalExpression, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__FORMAL_EXPRESSION, newFormalExpression, msgs);
+    public NotificationChain basicSetFormalExpression(FormalExpression newFormalExpression,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__FORMAL_EXPRESSION, newFormalExpression, msgs);
     }
 
     /**
@@ -1992,7 +2247,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setFormalExpression(FormalExpression newFormalExpression) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__FORMAL_EXPRESSION, newFormalExpression);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__FORMAL_EXPRESSION, newFormalExpression);
     }
 
     /**
@@ -2001,7 +2257,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Gateway getGateway() {
-        return (Gateway)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__GATEWAY, true);
+        return (Gateway) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__GATEWAY, true);
     }
 
     /**
@@ -2010,7 +2266,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetGateway(Gateway newGateway, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__GATEWAY, newGateway, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__GATEWAY, newGateway, msgs);
     }
 
     /**
@@ -2019,7 +2276,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public GlobalBusinessRuleTask getGlobalBusinessRuleTask() {
-        return (GlobalBusinessRuleTask)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_BUSINESS_RULE_TASK, true);
+        return (GlobalBusinessRuleTask) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_BUSINESS_RULE_TASK, true);
     }
 
     /**
@@ -2027,8 +2285,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetGlobalBusinessRuleTask(GlobalBusinessRuleTask newGlobalBusinessRuleTask, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_BUSINESS_RULE_TASK, newGlobalBusinessRuleTask, msgs);
+    public NotificationChain basicSetGlobalBusinessRuleTask(
+            GlobalBusinessRuleTask newGlobalBusinessRuleTask, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_BUSINESS_RULE_TASK,
+                newGlobalBusinessRuleTask, msgs);
     }
 
     /**
@@ -2037,7 +2298,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setGlobalBusinessRuleTask(GlobalBusinessRuleTask newGlobalBusinessRuleTask) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_BUSINESS_RULE_TASK, newGlobalBusinessRuleTask);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_BUSINESS_RULE_TASK,
+                newGlobalBusinessRuleTask);
     }
 
     /**
@@ -2046,7 +2309,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public GlobalChoreographyTask getGlobalChoreographyTask() {
-        return (GlobalChoreographyTask)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_CHOREOGRAPHY_TASK, true);
+        return (GlobalChoreographyTask) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_CHOREOGRAPHY_TASK, true);
     }
 
     /**
@@ -2054,8 +2318,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetGlobalChoreographyTask(GlobalChoreographyTask newGlobalChoreographyTask, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_CHOREOGRAPHY_TASK, newGlobalChoreographyTask, msgs);
+    public NotificationChain basicSetGlobalChoreographyTask(
+            GlobalChoreographyTask newGlobalChoreographyTask, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_CHOREOGRAPHY_TASK,
+                newGlobalChoreographyTask, msgs);
     }
 
     /**
@@ -2064,7 +2331,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setGlobalChoreographyTask(GlobalChoreographyTask newGlobalChoreographyTask) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_CHOREOGRAPHY_TASK, newGlobalChoreographyTask);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_CHOREOGRAPHY_TASK,
+                newGlobalChoreographyTask);
     }
 
     /**
@@ -2073,7 +2342,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public GlobalConversation getGlobalConversation() {
-        return (GlobalConversation)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_CONVERSATION, true);
+        return (GlobalConversation) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_CONVERSATION, true);
     }
 
     /**
@@ -2081,8 +2351,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetGlobalConversation(GlobalConversation newGlobalConversation, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_CONVERSATION, newGlobalConversation, msgs);
+    public NotificationChain basicSetGlobalConversation(GlobalConversation newGlobalConversation,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_CONVERSATION, newGlobalConversation,
+                msgs);
     }
 
     /**
@@ -2091,7 +2364,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setGlobalConversation(GlobalConversation newGlobalConversation) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_CONVERSATION, newGlobalConversation);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_CONVERSATION, newGlobalConversation);
     }
 
     /**
@@ -2100,7 +2374,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public GlobalManualTask getGlobalManualTask() {
-        return (GlobalManualTask)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_MANUAL_TASK, true);
+        return (GlobalManualTask) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_MANUAL_TASK, true);
     }
 
     /**
@@ -2108,8 +2383,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetGlobalManualTask(GlobalManualTask newGlobalManualTask, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_MANUAL_TASK, newGlobalManualTask, msgs);
+    public NotificationChain basicSetGlobalManualTask(GlobalManualTask newGlobalManualTask,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_MANUAL_TASK, newGlobalManualTask, msgs);
     }
 
     /**
@@ -2118,7 +2395,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setGlobalManualTask(GlobalManualTask newGlobalManualTask) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_MANUAL_TASK, newGlobalManualTask);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_MANUAL_TASK, newGlobalManualTask);
     }
 
     /**
@@ -2127,7 +2405,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public GlobalScriptTask getGlobalScriptTask() {
-        return (GlobalScriptTask)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_SCRIPT_TASK, true);
+        return (GlobalScriptTask) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_SCRIPT_TASK, true);
     }
 
     /**
@@ -2135,8 +2414,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetGlobalScriptTask(GlobalScriptTask newGlobalScriptTask, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_SCRIPT_TASK, newGlobalScriptTask, msgs);
+    public NotificationChain basicSetGlobalScriptTask(GlobalScriptTask newGlobalScriptTask,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_SCRIPT_TASK, newGlobalScriptTask, msgs);
     }
 
     /**
@@ -2145,7 +2426,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setGlobalScriptTask(GlobalScriptTask newGlobalScriptTask) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_SCRIPT_TASK, newGlobalScriptTask);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_SCRIPT_TASK, newGlobalScriptTask);
     }
 
     /**
@@ -2154,7 +2436,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public GlobalTask getGlobalTask() {
-        return (GlobalTask)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_TASK, true);
+        return (GlobalTask) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_TASK, true);
     }
 
     /**
@@ -2163,7 +2445,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetGlobalTask(GlobalTask newGlobalTask, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_TASK, newGlobalTask, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_TASK, newGlobalTask, msgs);
     }
 
     /**
@@ -2172,7 +2455,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setGlobalTask(GlobalTask newGlobalTask) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_TASK, newGlobalTask);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_TASK,
+                newGlobalTask);
     }
 
     /**
@@ -2181,7 +2465,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public GlobalUserTask getGlobalUserTask() {
-        return (GlobalUserTask)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_USER_TASK, true);
+        return (GlobalUserTask) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_USER_TASK, true);
     }
 
     /**
@@ -2189,8 +2474,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetGlobalUserTask(GlobalUserTask newGlobalUserTask, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_USER_TASK, newGlobalUserTask, msgs);
+    public NotificationChain basicSetGlobalUserTask(GlobalUserTask newGlobalUserTask,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_USER_TASK, newGlobalUserTask, msgs);
     }
 
     /**
@@ -2199,7 +2486,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setGlobalUserTask(GlobalUserTask newGlobalUserTask) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_USER_TASK, newGlobalUserTask);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_USER_TASK, newGlobalUserTask);
     }
 
     /**
@@ -2208,7 +2496,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Group getGroup() {
-        return (Group)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__GROUP, true);
+        return (Group) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__GROUP, true);
     }
 
     /**
@@ -2217,7 +2505,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetGroup(Group newGroup, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__GROUP, newGroup, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__GROUP, newGroup, msgs);
     }
 
     /**
@@ -2226,7 +2515,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setGroup(Group newGroup) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__GROUP, newGroup);
+        ((FeatureMap.Internal) getMixed())
+                .set(Bpmn2Package.Literals.DOCUMENT_ROOT__GROUP, newGroup);
     }
 
     /**
@@ -2235,7 +2525,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public HumanPerformer getHumanPerformer() {
-        return (HumanPerformer)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__HUMAN_PERFORMER, true);
+        return (HumanPerformer) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__HUMAN_PERFORMER, true);
     }
 
     /**
@@ -2243,8 +2534,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetHumanPerformer(HumanPerformer newHumanPerformer, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__HUMAN_PERFORMER, newHumanPerformer, msgs);
+    public NotificationChain basicSetHumanPerformer(HumanPerformer newHumanPerformer,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__HUMAN_PERFORMER, newHumanPerformer, msgs);
     }
 
     /**
@@ -2253,7 +2546,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setHumanPerformer(HumanPerformer newHumanPerformer) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__HUMAN_PERFORMER, newHumanPerformer);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__HUMAN_PERFORMER, newHumanPerformer);
     }
 
     /**
@@ -2262,7 +2556,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Performer getPerformer() {
-        return (Performer)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__PERFORMER, true);
+        return (Performer) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__PERFORMER, true);
     }
 
     /**
@@ -2271,7 +2565,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetPerformer(Performer newPerformer, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__PERFORMER, newPerformer, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__PERFORMER, newPerformer, msgs);
     }
 
     /**
@@ -2280,7 +2575,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setPerformer(Performer newPerformer) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__PERFORMER, newPerformer);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__PERFORMER,
+                newPerformer);
     }
 
     /**
@@ -2289,7 +2585,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ResourceRole getResourceRole() {
-        return (ResourceRole)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_ROLE, true);
+        return (ResourceRole) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_ROLE,
+                true);
     }
 
     /**
@@ -2297,8 +2594,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetResourceRole(ResourceRole newResourceRole, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_ROLE, newResourceRole, msgs);
+    public NotificationChain basicSetResourceRole(ResourceRole newResourceRole,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_ROLE, newResourceRole, msgs);
     }
 
     /**
@@ -2307,7 +2606,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setResourceRole(ResourceRole newResourceRole) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_ROLE, newResourceRole);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_ROLE,
+                newResourceRole);
     }
 
     /**
@@ -2316,7 +2616,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ImplicitThrowEvent getImplicitThrowEvent() {
-        return (ImplicitThrowEvent)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__IMPLICIT_THROW_EVENT, true);
+        return (ImplicitThrowEvent) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__IMPLICIT_THROW_EVENT, true);
     }
 
     /**
@@ -2324,8 +2625,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetImplicitThrowEvent(ImplicitThrowEvent newImplicitThrowEvent, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__IMPLICIT_THROW_EVENT, newImplicitThrowEvent, msgs);
+    public NotificationChain basicSetImplicitThrowEvent(ImplicitThrowEvent newImplicitThrowEvent,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__IMPLICIT_THROW_EVENT, newImplicitThrowEvent,
+                msgs);
     }
 
     /**
@@ -2334,7 +2638,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setImplicitThrowEvent(ImplicitThrowEvent newImplicitThrowEvent) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__IMPLICIT_THROW_EVENT, newImplicitThrowEvent);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__IMPLICIT_THROW_EVENT, newImplicitThrowEvent);
     }
 
     /**
@@ -2343,7 +2648,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Import getImport() {
-        return (Import)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__IMPORT, true);
+        return (Import) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__IMPORT, true);
     }
 
     /**
@@ -2352,7 +2657,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetImport(Import newImport, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__IMPORT, newImport, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__IMPORT, newImport, msgs);
     }
 
     /**
@@ -2361,7 +2667,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setImport(Import newImport) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__IMPORT, newImport);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__IMPORT,
+                newImport);
     }
 
     /**
@@ -2370,7 +2677,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public InclusiveGateway getInclusiveGateway() {
-        return (InclusiveGateway)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__INCLUSIVE_GATEWAY, true);
+        return (InclusiveGateway) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__INCLUSIVE_GATEWAY, true);
     }
 
     /**
@@ -2378,8 +2686,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetInclusiveGateway(InclusiveGateway newInclusiveGateway, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__INCLUSIVE_GATEWAY, newInclusiveGateway, msgs);
+    public NotificationChain basicSetInclusiveGateway(InclusiveGateway newInclusiveGateway,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__INCLUSIVE_GATEWAY, newInclusiveGateway, msgs);
     }
 
     /**
@@ -2388,7 +2698,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setInclusiveGateway(InclusiveGateway newInclusiveGateway) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__INCLUSIVE_GATEWAY, newInclusiveGateway);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__INCLUSIVE_GATEWAY, newInclusiveGateway);
     }
 
     /**
@@ -2397,7 +2708,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public InputSet getInputSet() {
-        return (InputSet)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__INPUT_SET, true);
+        return (InputSet) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__INPUT_SET, true);
     }
 
     /**
@@ -2406,7 +2717,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetInputSet(InputSet newInputSet, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__INPUT_SET, newInputSet, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__INPUT_SET, newInputSet, msgs);
     }
 
     /**
@@ -2415,7 +2727,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setInputSet(InputSet newInputSet) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__INPUT_SET, newInputSet);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__INPUT_SET,
+                newInputSet);
     }
 
     /**
@@ -2424,7 +2737,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Interface getInterface() {
-        return (Interface)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__INTERFACE, true);
+        return (Interface) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__INTERFACE, true);
     }
 
     /**
@@ -2433,7 +2746,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetInterface(Interface newInterface, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__INTERFACE, newInterface, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__INTERFACE, newInterface, msgs);
     }
 
     /**
@@ -2442,7 +2756,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setInterface(Interface newInterface) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__INTERFACE, newInterface);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__INTERFACE,
+                newInterface);
     }
 
     /**
@@ -2451,7 +2766,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public IntermediateCatchEvent getIntermediateCatchEvent() {
-        return (IntermediateCatchEvent)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__INTERMEDIATE_CATCH_EVENT, true);
+        return (IntermediateCatchEvent) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__INTERMEDIATE_CATCH_EVENT, true);
     }
 
     /**
@@ -2459,8 +2775,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetIntermediateCatchEvent(IntermediateCatchEvent newIntermediateCatchEvent, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__INTERMEDIATE_CATCH_EVENT, newIntermediateCatchEvent, msgs);
+    public NotificationChain basicSetIntermediateCatchEvent(
+            IntermediateCatchEvent newIntermediateCatchEvent, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__INTERMEDIATE_CATCH_EVENT,
+                newIntermediateCatchEvent, msgs);
     }
 
     /**
@@ -2469,7 +2788,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setIntermediateCatchEvent(IntermediateCatchEvent newIntermediateCatchEvent) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__INTERMEDIATE_CATCH_EVENT, newIntermediateCatchEvent);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__INTERMEDIATE_CATCH_EVENT,
+                newIntermediateCatchEvent);
     }
 
     /**
@@ -2478,7 +2799,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public IntermediateThrowEvent getIntermediateThrowEvent() {
-        return (IntermediateThrowEvent)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__INTERMEDIATE_THROW_EVENT, true);
+        return (IntermediateThrowEvent) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__INTERMEDIATE_THROW_EVENT, true);
     }
 
     /**
@@ -2486,8 +2808,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetIntermediateThrowEvent(IntermediateThrowEvent newIntermediateThrowEvent, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__INTERMEDIATE_THROW_EVENT, newIntermediateThrowEvent, msgs);
+    public NotificationChain basicSetIntermediateThrowEvent(
+            IntermediateThrowEvent newIntermediateThrowEvent, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__INTERMEDIATE_THROW_EVENT,
+                newIntermediateThrowEvent, msgs);
     }
 
     /**
@@ -2496,7 +2821,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setIntermediateThrowEvent(IntermediateThrowEvent newIntermediateThrowEvent) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__INTERMEDIATE_THROW_EVENT, newIntermediateThrowEvent);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__INTERMEDIATE_THROW_EVENT,
+                newIntermediateThrowEvent);
     }
 
     /**
@@ -2505,7 +2832,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public InputOutputBinding getIoBinding() {
-        return (InputOutputBinding)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__IO_BINDING, true);
+        return (InputOutputBinding) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__IO_BINDING,
+                true);
     }
 
     /**
@@ -2513,8 +2841,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetIoBinding(InputOutputBinding newIoBinding, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__IO_BINDING, newIoBinding, msgs);
+    public NotificationChain basicSetIoBinding(InputOutputBinding newIoBinding,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__IO_BINDING, newIoBinding, msgs);
     }
 
     /**
@@ -2523,7 +2853,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setIoBinding(InputOutputBinding newIoBinding) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__IO_BINDING, newIoBinding);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__IO_BINDING,
+                newIoBinding);
     }
 
     /**
@@ -2532,7 +2863,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public InputOutputSpecification getIoSpecification() {
-        return (InputOutputSpecification)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__IO_SPECIFICATION, true);
+        return (InputOutputSpecification) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__IO_SPECIFICATION, true);
     }
 
     /**
@@ -2540,8 +2872,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetIoSpecification(InputOutputSpecification newIoSpecification, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__IO_SPECIFICATION, newIoSpecification, msgs);
+    public NotificationChain basicSetIoSpecification(InputOutputSpecification newIoSpecification,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__IO_SPECIFICATION, newIoSpecification, msgs);
     }
 
     /**
@@ -2550,7 +2884,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setIoSpecification(InputOutputSpecification newIoSpecification) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__IO_SPECIFICATION, newIoSpecification);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__IO_SPECIFICATION, newIoSpecification);
     }
 
     /**
@@ -2559,7 +2894,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ItemDefinition getItemDefinition() {
-        return (ItemDefinition)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__ITEM_DEFINITION, true);
+        return (ItemDefinition) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__ITEM_DEFINITION, true);
     }
 
     /**
@@ -2567,8 +2903,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetItemDefinition(ItemDefinition newItemDefinition, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__ITEM_DEFINITION, newItemDefinition, msgs);
+    public NotificationChain basicSetItemDefinition(ItemDefinition newItemDefinition,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__ITEM_DEFINITION, newItemDefinition, msgs);
     }
 
     /**
@@ -2577,7 +2915,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setItemDefinition(ItemDefinition newItemDefinition) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__ITEM_DEFINITION, newItemDefinition);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__ITEM_DEFINITION, newItemDefinition);
     }
 
     /**
@@ -2586,7 +2925,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Lane getLane() {
-        return (Lane)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__LANE, true);
+        return (Lane) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__LANE, true);
     }
 
     /**
@@ -2595,7 +2934,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetLane(Lane newLane, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__LANE, newLane, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__LANE, newLane, msgs);
     }
 
     /**
@@ -2604,7 +2944,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setLane(Lane newLane) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__LANE, newLane);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__LANE, newLane);
     }
 
     /**
@@ -2613,7 +2953,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public LaneSet getLaneSet() {
-        return (LaneSet)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__LANE_SET, true);
+        return (LaneSet) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__LANE_SET, true);
     }
 
     /**
@@ -2622,7 +2962,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetLaneSet(LaneSet newLaneSet, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__LANE_SET, newLaneSet, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__LANE_SET, newLaneSet, msgs);
     }
 
     /**
@@ -2631,7 +2972,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setLaneSet(LaneSet newLaneSet) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__LANE_SET, newLaneSet);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__LANE_SET,
+                newLaneSet);
     }
 
     /**
@@ -2640,7 +2982,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public LinkEventDefinition getLinkEventDefinition() {
-        return (LinkEventDefinition)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__LINK_EVENT_DEFINITION, true);
+        return (LinkEventDefinition) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__LINK_EVENT_DEFINITION, true);
     }
 
     /**
@@ -2648,8 +2991,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetLinkEventDefinition(LinkEventDefinition newLinkEventDefinition, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__LINK_EVENT_DEFINITION, newLinkEventDefinition, msgs);
+    public NotificationChain basicSetLinkEventDefinition(
+            LinkEventDefinition newLinkEventDefinition, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__LINK_EVENT_DEFINITION, newLinkEventDefinition,
+                msgs);
     }
 
     /**
@@ -2658,7 +3004,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setLinkEventDefinition(LinkEventDefinition newLinkEventDefinition) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__LINK_EVENT_DEFINITION, newLinkEventDefinition);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__LINK_EVENT_DEFINITION, newLinkEventDefinition);
     }
 
     /**
@@ -2667,7 +3014,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public LoopCharacteristics getLoopCharacteristics() {
-        return (LoopCharacteristics)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__LOOP_CHARACTERISTICS, true);
+        return (LoopCharacteristics) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__LOOP_CHARACTERISTICS, true);
     }
 
     /**
@@ -2675,8 +3023,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetLoopCharacteristics(LoopCharacteristics newLoopCharacteristics, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__LOOP_CHARACTERISTICS, newLoopCharacteristics, msgs);
+    public NotificationChain basicSetLoopCharacteristics(
+            LoopCharacteristics newLoopCharacteristics, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__LOOP_CHARACTERISTICS, newLoopCharacteristics,
+                msgs);
     }
 
     /**
@@ -2685,7 +3036,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setLoopCharacteristics(LoopCharacteristics newLoopCharacteristics) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__LOOP_CHARACTERISTICS, newLoopCharacteristics);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__LOOP_CHARACTERISTICS, newLoopCharacteristics);
     }
 
     /**
@@ -2694,7 +3046,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ManualTask getManualTask() {
-        return (ManualTask)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__MANUAL_TASK, true);
+        return (ManualTask) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__MANUAL_TASK, true);
     }
 
     /**
@@ -2703,7 +3055,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetManualTask(ManualTask newManualTask, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__MANUAL_TASK, newManualTask, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__MANUAL_TASK, newManualTask, msgs);
     }
 
     /**
@@ -2712,7 +3065,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setManualTask(ManualTask newManualTask) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__MANUAL_TASK, newManualTask);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__MANUAL_TASK,
+                newManualTask);
     }
 
     /**
@@ -2721,7 +3075,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Message getMessage() {
-        return (Message)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE, true);
+        return (Message) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE, true);
     }
 
     /**
@@ -2730,7 +3084,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetMessage(Message newMessage, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE, newMessage, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE, newMessage, msgs);
     }
 
     /**
@@ -2739,7 +3094,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setMessage(Message newMessage) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE, newMessage);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE,
+                newMessage);
     }
 
     /**
@@ -2748,7 +3104,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public MessageEventDefinition getMessageEventDefinition() {
-        return (MessageEventDefinition)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE_EVENT_DEFINITION, true);
+        return (MessageEventDefinition) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE_EVENT_DEFINITION, true);
     }
 
     /**
@@ -2756,8 +3113,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetMessageEventDefinition(MessageEventDefinition newMessageEventDefinition, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE_EVENT_DEFINITION, newMessageEventDefinition, msgs);
+    public NotificationChain basicSetMessageEventDefinition(
+            MessageEventDefinition newMessageEventDefinition, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE_EVENT_DEFINITION,
+                newMessageEventDefinition, msgs);
     }
 
     /**
@@ -2766,7 +3126,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setMessageEventDefinition(MessageEventDefinition newMessageEventDefinition) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE_EVENT_DEFINITION, newMessageEventDefinition);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE_EVENT_DEFINITION,
+                newMessageEventDefinition);
     }
 
     /**
@@ -2775,7 +3137,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public MessageFlow getMessageFlow() {
-        return (MessageFlow)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE_FLOW, true);
+        return (MessageFlow) getMixed()
+                .get(Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE_FLOW, true);
     }
 
     /**
@@ -2784,7 +3147,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetMessageFlow(MessageFlow newMessageFlow, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE_FLOW, newMessageFlow, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE_FLOW, newMessageFlow, msgs);
     }
 
     /**
@@ -2793,7 +3157,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setMessageFlow(MessageFlow newMessageFlow) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE_FLOW, newMessageFlow);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE_FLOW,
+                newMessageFlow);
     }
 
     /**
@@ -2802,7 +3167,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public MessageFlowAssociation getMessageFlowAssociation() {
-        return (MessageFlowAssociation)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE_FLOW_ASSOCIATION, true);
+        return (MessageFlowAssociation) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE_FLOW_ASSOCIATION, true);
     }
 
     /**
@@ -2810,8 +3176,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetMessageFlowAssociation(MessageFlowAssociation newMessageFlowAssociation, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE_FLOW_ASSOCIATION, newMessageFlowAssociation, msgs);
+    public NotificationChain basicSetMessageFlowAssociation(
+            MessageFlowAssociation newMessageFlowAssociation, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE_FLOW_ASSOCIATION,
+                newMessageFlowAssociation, msgs);
     }
 
     /**
@@ -2820,7 +3189,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setMessageFlowAssociation(MessageFlowAssociation newMessageFlowAssociation) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE_FLOW_ASSOCIATION, newMessageFlowAssociation);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__MESSAGE_FLOW_ASSOCIATION,
+                newMessageFlowAssociation);
     }
 
     /**
@@ -2829,7 +3200,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Monitoring getMonitoring() {
-        return (Monitoring)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__MONITORING, true);
+        return (Monitoring) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__MONITORING, true);
     }
 
     /**
@@ -2838,7 +3209,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetMonitoring(Monitoring newMonitoring, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__MONITORING, newMonitoring, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__MONITORING, newMonitoring, msgs);
     }
 
     /**
@@ -2847,7 +3219,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setMonitoring(Monitoring newMonitoring) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__MONITORING, newMonitoring);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__MONITORING,
+                newMonitoring);
     }
 
     /**
@@ -2856,7 +3229,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public MultiInstanceLoopCharacteristics getMultiInstanceLoopCharacteristics() {
-        return (MultiInstanceLoopCharacteristics)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__MULTI_INSTANCE_LOOP_CHARACTERISTICS, true);
+        return (MultiInstanceLoopCharacteristics) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__MULTI_INSTANCE_LOOP_CHARACTERISTICS, true);
     }
 
     /**
@@ -2864,8 +3238,12 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetMultiInstanceLoopCharacteristics(MultiInstanceLoopCharacteristics newMultiInstanceLoopCharacteristics, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__MULTI_INSTANCE_LOOP_CHARACTERISTICS, newMultiInstanceLoopCharacteristics, msgs);
+    public NotificationChain basicSetMultiInstanceLoopCharacteristics(
+            MultiInstanceLoopCharacteristics newMultiInstanceLoopCharacteristics,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__MULTI_INSTANCE_LOOP_CHARACTERISTICS,
+                newMultiInstanceLoopCharacteristics, msgs);
     }
 
     /**
@@ -2873,8 +3251,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setMultiInstanceLoopCharacteristics(MultiInstanceLoopCharacteristics newMultiInstanceLoopCharacteristics) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__MULTI_INSTANCE_LOOP_CHARACTERISTICS, newMultiInstanceLoopCharacteristics);
+    public void setMultiInstanceLoopCharacteristics(
+            MultiInstanceLoopCharacteristics newMultiInstanceLoopCharacteristics) {
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__MULTI_INSTANCE_LOOP_CHARACTERISTICS,
+                newMultiInstanceLoopCharacteristics);
     }
 
     /**
@@ -2883,7 +3264,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Operation getOperation() {
-        return (Operation)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__OPERATION, true);
+        return (Operation) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__OPERATION, true);
     }
 
     /**
@@ -2892,7 +3273,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetOperation(Operation newOperation, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__OPERATION, newOperation, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__OPERATION, newOperation, msgs);
     }
 
     /**
@@ -2901,7 +3283,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setOperation(Operation newOperation) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__OPERATION, newOperation);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__OPERATION,
+                newOperation);
     }
 
     /**
@@ -2910,7 +3293,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public OutputSet getOutputSet() {
-        return (OutputSet)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__OUTPUT_SET, true);
+        return (OutputSet) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__OUTPUT_SET, true);
     }
 
     /**
@@ -2919,7 +3302,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetOutputSet(OutputSet newOutputSet, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__OUTPUT_SET, newOutputSet, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__OUTPUT_SET, newOutputSet, msgs);
     }
 
     /**
@@ -2928,7 +3312,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setOutputSet(OutputSet newOutputSet) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__OUTPUT_SET, newOutputSet);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__OUTPUT_SET,
+                newOutputSet);
     }
 
     /**
@@ -2937,7 +3322,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ParallelGateway getParallelGateway() {
-        return (ParallelGateway)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__PARALLEL_GATEWAY, true);
+        return (ParallelGateway) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__PARALLEL_GATEWAY, true);
     }
 
     /**
@@ -2945,8 +3331,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetParallelGateway(ParallelGateway newParallelGateway, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__PARALLEL_GATEWAY, newParallelGateway, msgs);
+    public NotificationChain basicSetParallelGateway(ParallelGateway newParallelGateway,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__PARALLEL_GATEWAY, newParallelGateway, msgs);
     }
 
     /**
@@ -2955,7 +3343,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setParallelGateway(ParallelGateway newParallelGateway) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__PARALLEL_GATEWAY, newParallelGateway);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__PARALLEL_GATEWAY, newParallelGateway);
     }
 
     /**
@@ -2964,7 +3353,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Participant getParticipant() {
-        return (Participant)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT, true);
+        return (Participant) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT, true);
     }
 
     /**
@@ -2973,7 +3362,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetParticipant(Participant newParticipant, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT, newParticipant, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT, newParticipant, msgs);
     }
 
     /**
@@ -2982,7 +3372,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setParticipant(Participant newParticipant) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT, newParticipant);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT,
+                newParticipant);
     }
 
     /**
@@ -2991,7 +3382,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ParticipantAssociation getParticipantAssociation() {
-        return (ParticipantAssociation)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT_ASSOCIATION, true);
+        return (ParticipantAssociation) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT_ASSOCIATION, true);
     }
 
     /**
@@ -2999,8 +3391,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetParticipantAssociation(ParticipantAssociation newParticipantAssociation, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT_ASSOCIATION, newParticipantAssociation, msgs);
+    public NotificationChain basicSetParticipantAssociation(
+            ParticipantAssociation newParticipantAssociation, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT_ASSOCIATION,
+                newParticipantAssociation, msgs);
     }
 
     /**
@@ -3009,7 +3404,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setParticipantAssociation(ParticipantAssociation newParticipantAssociation) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT_ASSOCIATION, newParticipantAssociation);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT_ASSOCIATION,
+                newParticipantAssociation);
     }
 
     /**
@@ -3018,7 +3415,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ParticipantMultiplicity getParticipantMultiplicity() {
-        return (ParticipantMultiplicity)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT_MULTIPLICITY, true);
+        return (ParticipantMultiplicity) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT_MULTIPLICITY, true);
     }
 
     /**
@@ -3026,8 +3424,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetParticipantMultiplicity(ParticipantMultiplicity newParticipantMultiplicity, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT_MULTIPLICITY, newParticipantMultiplicity, msgs);
+    public NotificationChain basicSetParticipantMultiplicity(
+            ParticipantMultiplicity newParticipantMultiplicity, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT_MULTIPLICITY,
+                newParticipantMultiplicity, msgs);
     }
 
     /**
@@ -3036,7 +3437,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setParticipantMultiplicity(ParticipantMultiplicity newParticipantMultiplicity) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT_MULTIPLICITY, newParticipantMultiplicity);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT_MULTIPLICITY,
+                newParticipantMultiplicity);
     }
 
     /**
@@ -3045,7 +3448,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public PartnerEntity getPartnerEntity() {
-        return (PartnerEntity)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__PARTNER_ENTITY, true);
+        return (PartnerEntity) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__PARTNER_ENTITY,
+                true);
     }
 
     /**
@@ -3053,8 +3457,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetPartnerEntity(PartnerEntity newPartnerEntity, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__PARTNER_ENTITY, newPartnerEntity, msgs);
+    public NotificationChain basicSetPartnerEntity(PartnerEntity newPartnerEntity,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__PARTNER_ENTITY, newPartnerEntity, msgs);
     }
 
     /**
@@ -3063,7 +3469,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setPartnerEntity(PartnerEntity newPartnerEntity) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__PARTNER_ENTITY, newPartnerEntity);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__PARTNER_ENTITY,
+                newPartnerEntity);
     }
 
     /**
@@ -3072,7 +3479,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public PartnerRole getPartnerRole() {
-        return (PartnerRole)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__PARTNER_ROLE, true);
+        return (PartnerRole) getMixed()
+                .get(Bpmn2Package.Literals.DOCUMENT_ROOT__PARTNER_ROLE, true);
     }
 
     /**
@@ -3081,7 +3489,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetPartnerRole(PartnerRole newPartnerRole, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__PARTNER_ROLE, newPartnerRole, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__PARTNER_ROLE, newPartnerRole, msgs);
     }
 
     /**
@@ -3090,7 +3499,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setPartnerRole(PartnerRole newPartnerRole) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__PARTNER_ROLE, newPartnerRole);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__PARTNER_ROLE,
+                newPartnerRole);
     }
 
     /**
@@ -3099,7 +3509,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public PotentialOwner getPotentialOwner() {
-        return (PotentialOwner)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__POTENTIAL_OWNER, true);
+        return (PotentialOwner) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__POTENTIAL_OWNER, true);
     }
 
     /**
@@ -3107,8 +3518,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetPotentialOwner(PotentialOwner newPotentialOwner, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__POTENTIAL_OWNER, newPotentialOwner, msgs);
+    public NotificationChain basicSetPotentialOwner(PotentialOwner newPotentialOwner,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__POTENTIAL_OWNER, newPotentialOwner, msgs);
     }
 
     /**
@@ -3117,7 +3530,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setPotentialOwner(PotentialOwner newPotentialOwner) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__POTENTIAL_OWNER, newPotentialOwner);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__POTENTIAL_OWNER, newPotentialOwner);
     }
 
     /**
@@ -3126,7 +3540,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public org.eclipse.bpmn2.Process getProcess() {
-        return (org.eclipse.bpmn2.Process)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__PROCESS, true);
+        return (org.eclipse.bpmn2.Process) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__PROCESS, true);
     }
 
     /**
@@ -3134,8 +3549,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetProcess(org.eclipse.bpmn2.Process newProcess, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__PROCESS, newProcess, msgs);
+    public NotificationChain basicSetProcess(org.eclipse.bpmn2.Process newProcess,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__PROCESS, newProcess, msgs);
     }
 
     /**
@@ -3144,7 +3561,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setProcess(org.eclipse.bpmn2.Process newProcess) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__PROCESS, newProcess);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__PROCESS,
+                newProcess);
     }
 
     /**
@@ -3153,7 +3571,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Property getProperty() {
-        return (Property)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__PROPERTY, true);
+        return (Property) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__PROPERTY, true);
     }
 
     /**
@@ -3162,7 +3580,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetProperty(Property newProperty, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__PROPERTY, newProperty, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__PROPERTY, newProperty, msgs);
     }
 
     /**
@@ -3171,7 +3590,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setProperty(Property newProperty) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__PROPERTY, newProperty);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__PROPERTY,
+                newProperty);
     }
 
     /**
@@ -3180,7 +3600,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ReceiveTask getReceiveTask() {
-        return (ReceiveTask)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__RECEIVE_TASK, true);
+        return (ReceiveTask) getMixed()
+                .get(Bpmn2Package.Literals.DOCUMENT_ROOT__RECEIVE_TASK, true);
     }
 
     /**
@@ -3189,7 +3610,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetReceiveTask(ReceiveTask newReceiveTask, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__RECEIVE_TASK, newReceiveTask, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__RECEIVE_TASK, newReceiveTask, msgs);
     }
 
     /**
@@ -3198,7 +3620,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setReceiveTask(ReceiveTask newReceiveTask) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__RECEIVE_TASK, newReceiveTask);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__RECEIVE_TASK,
+                newReceiveTask);
     }
 
     /**
@@ -3207,7 +3630,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Relationship getRelationship() {
-        return (Relationship)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__RELATIONSHIP, true);
+        return (Relationship) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__RELATIONSHIP,
+                true);
     }
 
     /**
@@ -3215,8 +3639,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetRelationship(Relationship newRelationship, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__RELATIONSHIP, newRelationship, msgs);
+    public NotificationChain basicSetRelationship(Relationship newRelationship,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__RELATIONSHIP, newRelationship, msgs);
     }
 
     /**
@@ -3225,7 +3651,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setRelationship(Relationship newRelationship) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__RELATIONSHIP, newRelationship);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__RELATIONSHIP,
+                newRelationship);
     }
 
     /**
@@ -3234,7 +3661,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Rendering getRendering() {
-        return (Rendering)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__RENDERING, true);
+        return (Rendering) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__RENDERING, true);
     }
 
     /**
@@ -3243,7 +3670,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetRendering(Rendering newRendering, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__RENDERING, newRendering, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__RENDERING, newRendering, msgs);
     }
 
     /**
@@ -3252,7 +3680,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setRendering(Rendering newRendering) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__RENDERING, newRendering);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__RENDERING,
+                newRendering);
     }
 
     /**
@@ -3261,7 +3690,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Resource getResource() {
-        return (Resource)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE, true);
+        return (Resource) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE, true);
     }
 
     /**
@@ -3270,7 +3699,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetResource(Resource newResource, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE, newResource, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE, newResource, msgs);
     }
 
     /**
@@ -3279,7 +3709,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setResource(Resource newResource) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE, newResource);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE,
+                newResource);
     }
 
     /**
@@ -3288,7 +3719,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ResourceAssignmentExpression getResourceAssignmentExpression() {
-        return (ResourceAssignmentExpression)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_ASSIGNMENT_EXPRESSION, true);
+        return (ResourceAssignmentExpression) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_ASSIGNMENT_EXPRESSION, true);
     }
 
     /**
@@ -3296,8 +3728,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetResourceAssignmentExpression(ResourceAssignmentExpression newResourceAssignmentExpression, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_ASSIGNMENT_EXPRESSION, newResourceAssignmentExpression, msgs);
+    public NotificationChain basicSetResourceAssignmentExpression(
+            ResourceAssignmentExpression newResourceAssignmentExpression, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_ASSIGNMENT_EXPRESSION,
+                newResourceAssignmentExpression, msgs);
     }
 
     /**
@@ -3305,8 +3740,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setResourceAssignmentExpression(ResourceAssignmentExpression newResourceAssignmentExpression) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_ASSIGNMENT_EXPRESSION, newResourceAssignmentExpression);
+    public void setResourceAssignmentExpression(
+            ResourceAssignmentExpression newResourceAssignmentExpression) {
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_ASSIGNMENT_EXPRESSION,
+                newResourceAssignmentExpression);
     }
 
     /**
@@ -3315,7 +3753,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ResourceParameter getResourceParameter() {
-        return (ResourceParameter)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_PARAMETER, true);
+        return (ResourceParameter) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_PARAMETER, true);
     }
 
     /**
@@ -3323,8 +3762,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetResourceParameter(ResourceParameter newResourceParameter, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_PARAMETER, newResourceParameter, msgs);
+    public NotificationChain basicSetResourceParameter(ResourceParameter newResourceParameter,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed())
+                .basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_PARAMETER,
+                        newResourceParameter, msgs);
     }
 
     /**
@@ -3333,7 +3775,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setResourceParameter(ResourceParameter newResourceParameter) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_PARAMETER, newResourceParameter);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_PARAMETER, newResourceParameter);
     }
 
     /**
@@ -3342,7 +3785,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ResourceParameterBinding getResourceParameterBinding() {
-        return (ResourceParameterBinding)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_PARAMETER_BINDING, true);
+        return (ResourceParameterBinding) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_PARAMETER_BINDING, true);
     }
 
     /**
@@ -3350,8 +3794,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetResourceParameterBinding(ResourceParameterBinding newResourceParameterBinding, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_PARAMETER_BINDING, newResourceParameterBinding, msgs);
+    public NotificationChain basicSetResourceParameterBinding(
+            ResourceParameterBinding newResourceParameterBinding, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_PARAMETER_BINDING,
+                newResourceParameterBinding, msgs);
     }
 
     /**
@@ -3360,7 +3807,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setResourceParameterBinding(ResourceParameterBinding newResourceParameterBinding) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_PARAMETER_BINDING, newResourceParameterBinding);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_PARAMETER_BINDING,
+                newResourceParameterBinding);
     }
 
     /**
@@ -3369,7 +3818,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Object getScript() {
-        return (Object)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__SCRIPT, true);
+        return (Object) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__SCRIPT, true);
     }
 
     /**
@@ -3378,7 +3827,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetScript(EObject newScript, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__SCRIPT, newScript, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__SCRIPT, newScript, msgs);
     }
 
     /**
@@ -3387,7 +3837,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setScript(Object newScript) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__SCRIPT, newScript);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__SCRIPT,
+                newScript);
     }
 
     /**
@@ -3396,7 +3847,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ScriptTask getScriptTask() {
-        return (ScriptTask)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__SCRIPT_TASK, true);
+        return (ScriptTask) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__SCRIPT_TASK, true);
     }
 
     /**
@@ -3405,7 +3856,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetScriptTask(ScriptTask newScriptTask, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__SCRIPT_TASK, newScriptTask, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__SCRIPT_TASK, newScriptTask, msgs);
     }
 
     /**
@@ -3414,7 +3866,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setScriptTask(ScriptTask newScriptTask) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__SCRIPT_TASK, newScriptTask);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__SCRIPT_TASK,
+                newScriptTask);
     }
 
     /**
@@ -3423,7 +3876,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public SendTask getSendTask() {
-        return (SendTask)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__SEND_TASK, true);
+        return (SendTask) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__SEND_TASK, true);
     }
 
     /**
@@ -3432,7 +3885,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetSendTask(SendTask newSendTask, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__SEND_TASK, newSendTask, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__SEND_TASK, newSendTask, msgs);
     }
 
     /**
@@ -3441,7 +3895,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setSendTask(SendTask newSendTask) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__SEND_TASK, newSendTask);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__SEND_TASK,
+                newSendTask);
     }
 
     /**
@@ -3450,7 +3905,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public SequenceFlow getSequenceFlow() {
-        return (SequenceFlow)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__SEQUENCE_FLOW, true);
+        return (SequenceFlow) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__SEQUENCE_FLOW,
+                true);
     }
 
     /**
@@ -3458,8 +3914,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetSequenceFlow(SequenceFlow newSequenceFlow, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__SEQUENCE_FLOW, newSequenceFlow, msgs);
+    public NotificationChain basicSetSequenceFlow(SequenceFlow newSequenceFlow,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__SEQUENCE_FLOW, newSequenceFlow, msgs);
     }
 
     /**
@@ -3468,7 +3926,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setSequenceFlow(SequenceFlow newSequenceFlow) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__SEQUENCE_FLOW, newSequenceFlow);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__SEQUENCE_FLOW,
+                newSequenceFlow);
     }
 
     /**
@@ -3477,7 +3936,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ServiceTask getServiceTask() {
-        return (ServiceTask)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__SERVICE_TASK, true);
+        return (ServiceTask) getMixed()
+                .get(Bpmn2Package.Literals.DOCUMENT_ROOT__SERVICE_TASK, true);
     }
 
     /**
@@ -3486,7 +3946,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetServiceTask(ServiceTask newServiceTask, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__SERVICE_TASK, newServiceTask, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__SERVICE_TASK, newServiceTask, msgs);
     }
 
     /**
@@ -3495,7 +3956,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setServiceTask(ServiceTask newServiceTask) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__SERVICE_TASK, newServiceTask);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__SERVICE_TASK,
+                newServiceTask);
     }
 
     /**
@@ -3504,7 +3966,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Signal getSignal() {
-        return (Signal)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__SIGNAL, true);
+        return (Signal) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__SIGNAL, true);
     }
 
     /**
@@ -3513,7 +3975,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetSignal(Signal newSignal, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__SIGNAL, newSignal, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__SIGNAL, newSignal, msgs);
     }
 
     /**
@@ -3522,7 +3985,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setSignal(Signal newSignal) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__SIGNAL, newSignal);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__SIGNAL,
+                newSignal);
     }
 
     /**
@@ -3531,7 +3995,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public SignalEventDefinition getSignalEventDefinition() {
-        return (SignalEventDefinition)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__SIGNAL_EVENT_DEFINITION, true);
+        return (SignalEventDefinition) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__SIGNAL_EVENT_DEFINITION, true);
     }
 
     /**
@@ -3539,8 +4004,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetSignalEventDefinition(SignalEventDefinition newSignalEventDefinition, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__SIGNAL_EVENT_DEFINITION, newSignalEventDefinition, msgs);
+    public NotificationChain basicSetSignalEventDefinition(
+            SignalEventDefinition newSignalEventDefinition, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__SIGNAL_EVENT_DEFINITION,
+                newSignalEventDefinition, msgs);
     }
 
     /**
@@ -3549,7 +4017,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setSignalEventDefinition(SignalEventDefinition newSignalEventDefinition) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__SIGNAL_EVENT_DEFINITION, newSignalEventDefinition);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__SIGNAL_EVENT_DEFINITION,
+                newSignalEventDefinition);
     }
 
     /**
@@ -3558,7 +4028,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public StandardLoopCharacteristics getStandardLoopCharacteristics() {
-        return (StandardLoopCharacteristics)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__STANDARD_LOOP_CHARACTERISTICS, true);
+        return (StandardLoopCharacteristics) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__STANDARD_LOOP_CHARACTERISTICS, true);
     }
 
     /**
@@ -3566,8 +4037,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetStandardLoopCharacteristics(StandardLoopCharacteristics newStandardLoopCharacteristics, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__STANDARD_LOOP_CHARACTERISTICS, newStandardLoopCharacteristics, msgs);
+    public NotificationChain basicSetStandardLoopCharacteristics(
+            StandardLoopCharacteristics newStandardLoopCharacteristics, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__STANDARD_LOOP_CHARACTERISTICS,
+                newStandardLoopCharacteristics, msgs);
     }
 
     /**
@@ -3575,8 +4049,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setStandardLoopCharacteristics(StandardLoopCharacteristics newStandardLoopCharacteristics) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__STANDARD_LOOP_CHARACTERISTICS, newStandardLoopCharacteristics);
+    public void setStandardLoopCharacteristics(
+            StandardLoopCharacteristics newStandardLoopCharacteristics) {
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__STANDARD_LOOP_CHARACTERISTICS,
+                newStandardLoopCharacteristics);
     }
 
     /**
@@ -3585,7 +4062,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public StartEvent getStartEvent() {
-        return (StartEvent)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__START_EVENT, true);
+        return (StartEvent) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__START_EVENT, true);
     }
 
     /**
@@ -3594,7 +4071,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetStartEvent(StartEvent newStartEvent, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__START_EVENT, newStartEvent, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__START_EVENT, newStartEvent, msgs);
     }
 
     /**
@@ -3603,7 +4081,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setStartEvent(StartEvent newStartEvent) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__START_EVENT, newStartEvent);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__START_EVENT,
+                newStartEvent);
     }
 
     /**
@@ -3612,7 +4091,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public SubChoreography getSubChoreography() {
-        return (SubChoreography)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__SUB_CHOREOGRAPHY, true);
+        return (SubChoreography) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__SUB_CHOREOGRAPHY, true);
     }
 
     /**
@@ -3620,8 +4100,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetSubChoreography(SubChoreography newSubChoreography, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__SUB_CHOREOGRAPHY, newSubChoreography, msgs);
+    public NotificationChain basicSetSubChoreography(SubChoreography newSubChoreography,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__SUB_CHOREOGRAPHY, newSubChoreography, msgs);
     }
 
     /**
@@ -3630,7 +4112,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setSubChoreography(SubChoreography newSubChoreography) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__SUB_CHOREOGRAPHY, newSubChoreography);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__SUB_CHOREOGRAPHY, newSubChoreography);
     }
 
     /**
@@ -3639,7 +4122,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public SubConversation getSubConversation() {
-        return (SubConversation)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__SUB_CONVERSATION, true);
+        return (SubConversation) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__SUB_CONVERSATION, true);
     }
 
     /**
@@ -3647,8 +4131,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetSubConversation(SubConversation newSubConversation, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__SUB_CONVERSATION, newSubConversation, msgs);
+    public NotificationChain basicSetSubConversation(SubConversation newSubConversation,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__SUB_CONVERSATION, newSubConversation, msgs);
     }
 
     /**
@@ -3657,7 +4143,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setSubConversation(SubConversation newSubConversation) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__SUB_CONVERSATION, newSubConversation);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__SUB_CONVERSATION, newSubConversation);
     }
 
     /**
@@ -3666,7 +4153,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public SubProcess getSubProcess() {
-        return (SubProcess)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__SUB_PROCESS, true);
+        return (SubProcess) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__SUB_PROCESS, true);
     }
 
     /**
@@ -3675,7 +4162,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetSubProcess(SubProcess newSubProcess, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__SUB_PROCESS, newSubProcess, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__SUB_PROCESS, newSubProcess, msgs);
     }
 
     /**
@@ -3684,7 +4172,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setSubProcess(SubProcess newSubProcess) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__SUB_PROCESS, newSubProcess);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__SUB_PROCESS,
+                newSubProcess);
     }
 
     /**
@@ -3693,7 +4182,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Task getTask() {
-        return (Task)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__TASK, true);
+        return (Task) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__TASK, true);
     }
 
     /**
@@ -3702,7 +4191,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetTask(Task newTask, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__TASK, newTask, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__TASK, newTask, msgs);
     }
 
     /**
@@ -3711,7 +4201,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setTask(Task newTask) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__TASK, newTask);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__TASK, newTask);
     }
 
     /**
@@ -3720,7 +4210,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public TerminateEventDefinition getTerminateEventDefinition() {
-        return (TerminateEventDefinition)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__TERMINATE_EVENT_DEFINITION, true);
+        return (TerminateEventDefinition) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__TERMINATE_EVENT_DEFINITION, true);
     }
 
     /**
@@ -3728,8 +4219,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetTerminateEventDefinition(TerminateEventDefinition newTerminateEventDefinition, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__TERMINATE_EVENT_DEFINITION, newTerminateEventDefinition, msgs);
+    public NotificationChain basicSetTerminateEventDefinition(
+            TerminateEventDefinition newTerminateEventDefinition, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__TERMINATE_EVENT_DEFINITION,
+                newTerminateEventDefinition, msgs);
     }
 
     /**
@@ -3738,7 +4232,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setTerminateEventDefinition(TerminateEventDefinition newTerminateEventDefinition) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__TERMINATE_EVENT_DEFINITION, newTerminateEventDefinition);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__TERMINATE_EVENT_DEFINITION,
+                newTerminateEventDefinition);
     }
 
     /**
@@ -3747,7 +4243,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Object getText() {
-        return (Object)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__TEXT, true);
+        return (Object) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__TEXT, true);
     }
 
     /**
@@ -3756,7 +4252,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetText(EObject newText, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__TEXT, newText, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__TEXT, newText, msgs);
     }
 
     /**
@@ -3765,7 +4262,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setText(Object newText) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__TEXT, newText);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__TEXT, newText);
     }
 
     /**
@@ -3774,7 +4271,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public TextAnnotation getTextAnnotation() {
-        return (TextAnnotation)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__TEXT_ANNOTATION, true);
+        return (TextAnnotation) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__TEXT_ANNOTATION, true);
     }
 
     /**
@@ -3782,8 +4280,10 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetTextAnnotation(TextAnnotation newTextAnnotation, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__TEXT_ANNOTATION, newTextAnnotation, msgs);
+    public NotificationChain basicSetTextAnnotation(TextAnnotation newTextAnnotation,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__TEXT_ANNOTATION, newTextAnnotation, msgs);
     }
 
     /**
@@ -3792,7 +4292,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setTextAnnotation(TextAnnotation newTextAnnotation) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__TEXT_ANNOTATION, newTextAnnotation);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__TEXT_ANNOTATION, newTextAnnotation);
     }
 
     /**
@@ -3801,7 +4302,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public ThrowEvent getThrowEvent() {
-        return (ThrowEvent)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__THROW_EVENT, true);
+        return (ThrowEvent) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__THROW_EVENT, true);
     }
 
     /**
@@ -3810,7 +4311,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetThrowEvent(ThrowEvent newThrowEvent, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__THROW_EVENT, newThrowEvent, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__THROW_EVENT, newThrowEvent, msgs);
     }
 
     /**
@@ -3819,7 +4321,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setThrowEvent(ThrowEvent newThrowEvent) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__THROW_EVENT, newThrowEvent);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__THROW_EVENT,
+                newThrowEvent);
     }
 
     /**
@@ -3828,7 +4331,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public TimerEventDefinition getTimerEventDefinition() {
-        return (TimerEventDefinition)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__TIMER_EVENT_DEFINITION, true);
+        return (TimerEventDefinition) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__TIMER_EVENT_DEFINITION, true);
     }
 
     /**
@@ -3836,8 +4340,11 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetTimerEventDefinition(TimerEventDefinition newTimerEventDefinition, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__TIMER_EVENT_DEFINITION, newTimerEventDefinition, msgs);
+    public NotificationChain basicSetTimerEventDefinition(
+            TimerEventDefinition newTimerEventDefinition, NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__TIMER_EVENT_DEFINITION,
+                newTimerEventDefinition, msgs);
     }
 
     /**
@@ -3846,7 +4353,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setTimerEventDefinition(TimerEventDefinition newTimerEventDefinition) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__TIMER_EVENT_DEFINITION, newTimerEventDefinition);
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__TIMER_EVENT_DEFINITION,
+                newTimerEventDefinition);
     }
 
     /**
@@ -3855,7 +4364,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public Transaction getTransaction() {
-        return (Transaction)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__TRANSACTION, true);
+        return (Transaction) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__TRANSACTION, true);
     }
 
     /**
@@ -3864,7 +4373,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetTransaction(Transaction newTransaction, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__TRANSACTION, newTransaction, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__TRANSACTION, newTransaction, msgs);
     }
 
     /**
@@ -3873,7 +4383,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setTransaction(Transaction newTransaction) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__TRANSACTION, newTransaction);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__TRANSACTION,
+                newTransaction);
     }
 
     /**
@@ -3882,7 +4393,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public UserTask getUserTask() {
-        return (UserTask)getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__USER_TASK, true);
+        return (UserTask) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__USER_TASK, true);
     }
 
     /**
@@ -3891,7 +4402,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetUserTask(UserTask newUserTask, NotificationChain msgs) {
-        return ((FeatureMap.Internal)getMixed()).basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__USER_TASK, newUserTask, msgs);
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__USER_TASK, newUserTask, msgs);
     }
 
     /**
@@ -3900,7 +4412,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public void setUserTask(UserTask newUserTask) {
-        ((FeatureMap.Internal)getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__USER_TASK, newUserTask);
+        ((FeatureMap.Internal) getMixed()).set(Bpmn2Package.Literals.DOCUMENT_ROOT__USER_TASK,
+                newUserTask);
     }
 
     /**
@@ -3909,284 +4422,287 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.DOCUMENT_ROOT__MIXED:
-                return ((InternalEList<?>)getMixed()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
-                return ((InternalEList<?>)((EMap.InternalMapView<String, String>)getXMLNSPrefixMap()).eMap()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
-                return ((InternalEList<?>)((EMap.InternalMapView<String, String>)getXSISchemaLocation()).eMap()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__ACTIVITY:
-                return basicSetActivity(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__AD_HOC_SUB_PROCESS:
-                return basicSetAdHocSubProcess(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__FLOW_ELEMENT:
-                return basicSetFlowElement(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__ARTIFACT:
-                return basicSetArtifact(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__ASSIGNMENT:
-                return basicSetAssignment(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__ASSOCIATION:
-                return basicSetAssociation(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__AUDITING:
-                return basicSetAuditing(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__BASE_ELEMENT:
-                return basicSetBaseElement(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT:
-                return basicSetBaseElementWithMixedContent(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__BOUNDARY_EVENT:
-                return basicSetBoundaryEvent(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__BUSINESS_RULE_TASK:
-                return basicSetBusinessRuleTask(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__CALLABLE_ELEMENT:
-                return basicSetCallableElement(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__CALL_ACTIVITY:
-                return basicSetCallActivity(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__CALL_CHOREOGRAPHY:
-                return basicSetCallChoreography(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__CALL_CONVERSATION:
-                return basicSetCallConversation(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_NODE:
-                return basicSetConversationNode(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__CANCEL_EVENT_DEFINITION:
-                return basicSetCancelEventDefinition(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__EVENT_DEFINITION:
-                return basicSetEventDefinition(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__ROOT_ELEMENT:
-                return basicSetRootElement(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__CATCH_EVENT:
-                return basicSetCatchEvent(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__CATEGORY:
-                return basicSetCategory(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__CATEGORY_VALUE:
-                return basicSetCategoryValue(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY:
-                return basicSetChoreography(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__COLLABORATION:
-                return basicSetCollaboration(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY_ACTIVITY:
-                return basicSetChoreographyActivity(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY_TASK:
-                return basicSetChoreographyTask(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__COMPENSATE_EVENT_DEFINITION:
-                return basicSetCompensateEventDefinition(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__COMPLEX_BEHAVIOR_DEFINITION:
-                return basicSetComplexBehaviorDefinition(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__COMPLEX_GATEWAY:
-                return basicSetComplexGateway(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__CONDITIONAL_EVENT_DEFINITION:
-                return basicSetConditionalEventDefinition(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION:
-                return basicSetConversation(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_ASSOCIATION:
-                return basicSetConversationAssociation(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_LINK:
-                return basicSetConversationLink(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_KEY:
-                return basicSetCorrelationKey(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY:
-                return basicSetCorrelationProperty(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY_BINDING:
-                return basicSetCorrelationPropertyBinding(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
-                return basicSetCorrelationPropertyRetrievalExpression(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_SUBSCRIPTION:
-                return basicSetCorrelationSubscription(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_ASSOCIATION:
-                return basicSetDataAssociation(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_INPUT:
-                return basicSetDataInput(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_INPUT_ASSOCIATION:
-                return basicSetDataInputAssociation(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_OBJECT:
-                return basicSetDataObject(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_OBJECT_REFERENCE:
-                return basicSetDataObjectReference(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_OUTPUT:
-                return basicSetDataOutput(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_OUTPUT_ASSOCIATION:
-                return basicSetDataOutputAssociation(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_STATE:
-                return basicSetDataState(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_STORE:
-                return basicSetDataStore(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_STORE_REFERENCE:
-                return basicSetDataStoreReference(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__DEFINITIONS:
-                return basicSetDefinitions(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__DOCUMENTATION:
-                return basicSetDocumentation(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__END_EVENT:
-                return basicSetEndEvent(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__END_POINT:
-                return basicSetEndPoint(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__ERROR:
-                return basicSetError(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__ERROR_EVENT_DEFINITION:
-                return basicSetErrorEventDefinition(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__ESCALATION:
-                return basicSetEscalation(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__ESCALATION_EVENT_DEFINITION:
-                return basicSetEscalationEventDefinition(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__EVENT:
-                return basicSetEvent(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__EVENT_BASED_GATEWAY:
-                return basicSetEventBasedGateway(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__EXCLUSIVE_GATEWAY:
-                return basicSetExclusiveGateway(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__EXPRESSION:
-                return basicSetExpression(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__EXTENSION:
-                return basicSetExtension(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__EXTENSION_ELEMENTS:
-                return basicSetExtensionElements(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__FLOW_NODE:
-                return basicSetFlowNode(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__FORMAL_EXPRESSION:
-                return basicSetFormalExpression(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__GATEWAY:
-                return basicSetGateway(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_BUSINESS_RULE_TASK:
-                return basicSetGlobalBusinessRuleTask(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_CHOREOGRAPHY_TASK:
-                return basicSetGlobalChoreographyTask(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_CONVERSATION:
-                return basicSetGlobalConversation(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_MANUAL_TASK:
-                return basicSetGlobalManualTask(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_SCRIPT_TASK:
-                return basicSetGlobalScriptTask(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_TASK:
-                return basicSetGlobalTask(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_USER_TASK:
-                return basicSetGlobalUserTask(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__GROUP:
-                return basicSetGroup(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__HUMAN_PERFORMER:
-                return basicSetHumanPerformer(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__PERFORMER:
-                return basicSetPerformer(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_ROLE:
-                return basicSetResourceRole(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__IMPLICIT_THROW_EVENT:
-                return basicSetImplicitThrowEvent(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__IMPORT:
-                return basicSetImport(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__INCLUSIVE_GATEWAY:
-                return basicSetInclusiveGateway(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__INPUT_SET:
-                return basicSetInputSet(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__INTERFACE:
-                return basicSetInterface(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__INTERMEDIATE_CATCH_EVENT:
-                return basicSetIntermediateCatchEvent(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__INTERMEDIATE_THROW_EVENT:
-                return basicSetIntermediateThrowEvent(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__IO_BINDING:
-                return basicSetIoBinding(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__IO_SPECIFICATION:
-                return basicSetIoSpecification(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__ITEM_DEFINITION:
-                return basicSetItemDefinition(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__LANE:
-                return basicSetLane(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__LANE_SET:
-                return basicSetLaneSet(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__LINK_EVENT_DEFINITION:
-                return basicSetLinkEventDefinition(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__LOOP_CHARACTERISTICS:
-                return basicSetLoopCharacteristics(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__MANUAL_TASK:
-                return basicSetManualTask(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__MESSAGE:
-                return basicSetMessage(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_EVENT_DEFINITION:
-                return basicSetMessageEventDefinition(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_FLOW:
-                return basicSetMessageFlow(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_FLOW_ASSOCIATION:
-                return basicSetMessageFlowAssociation(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__MONITORING:
-                return basicSetMonitoring(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__MULTI_INSTANCE_LOOP_CHARACTERISTICS:
-                return basicSetMultiInstanceLoopCharacteristics(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__OPERATION:
-                return basicSetOperation(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__OUTPUT_SET:
-                return basicSetOutputSet(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__PARALLEL_GATEWAY:
-                return basicSetParallelGateway(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT:
-                return basicSetParticipant(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT_ASSOCIATION:
-                return basicSetParticipantAssociation(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT_MULTIPLICITY:
-                return basicSetParticipantMultiplicity(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__PARTNER_ENTITY:
-                return basicSetPartnerEntity(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__PARTNER_ROLE:
-                return basicSetPartnerRole(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__POTENTIAL_OWNER:
-                return basicSetPotentialOwner(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__PROCESS:
-                return basicSetProcess(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__PROPERTY:
-                return basicSetProperty(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__RECEIVE_TASK:
-                return basicSetReceiveTask(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__RELATIONSHIP:
-                return basicSetRelationship(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__RENDERING:
-                return basicSetRendering(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__RESOURCE:
-                return basicSetResource(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_ASSIGNMENT_EXPRESSION:
-                return basicSetResourceAssignmentExpression(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_PARAMETER:
-                return basicSetResourceParameter(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_PARAMETER_BINDING:
-                return basicSetResourceParameterBinding(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__SCRIPT:
-                return basicSetScript(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__SCRIPT_TASK:
-                return basicSetScriptTask(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__SEND_TASK:
-                return basicSetSendTask(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__SEQUENCE_FLOW:
-                return basicSetSequenceFlow(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__SERVICE_TASK:
-                return basicSetServiceTask(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__SIGNAL:
-                return basicSetSignal(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__SIGNAL_EVENT_DEFINITION:
-                return basicSetSignalEventDefinition(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__STANDARD_LOOP_CHARACTERISTICS:
-                return basicSetStandardLoopCharacteristics(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__START_EVENT:
-                return basicSetStartEvent(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__SUB_CHOREOGRAPHY:
-                return basicSetSubChoreography(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__SUB_CONVERSATION:
-                return basicSetSubConversation(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__SUB_PROCESS:
-                return basicSetSubProcess(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__TASK:
-                return basicSetTask(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__TERMINATE_EVENT_DEFINITION:
-                return basicSetTerminateEventDefinition(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__TEXT:
-                return basicSetText(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__TEXT_ANNOTATION:
-                return basicSetTextAnnotation(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__THROW_EVENT:
-                return basicSetThrowEvent(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__TIMER_EVENT_DEFINITION:
-                return basicSetTimerEventDefinition(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__TRANSACTION:
-                return basicSetTransaction(null, msgs);
-            case Bpmn2Package.DOCUMENT_ROOT__USER_TASK:
-                return basicSetUserTask(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__MIXED:
+            return ((InternalEList<?>) getMixed()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
+            return ((InternalEList<?>) ((EMap.InternalMapView<String, String>) getXMLNSPrefixMap())
+                    .eMap()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
+            return ((InternalEList<?>) ((EMap.InternalMapView<String, String>) getXSISchemaLocation())
+                    .eMap()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__ACTIVITY:
+            return basicSetActivity(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__AD_HOC_SUB_PROCESS:
+            return basicSetAdHocSubProcess(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__FLOW_ELEMENT:
+            return basicSetFlowElement(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__ARTIFACT:
+            return basicSetArtifact(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__ASSIGNMENT:
+            return basicSetAssignment(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__ASSOCIATION:
+            return basicSetAssociation(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__AUDITING:
+            return basicSetAuditing(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__BASE_ELEMENT:
+            return basicSetBaseElement(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT:
+            return basicSetBaseElementWithMixedContent(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__BOUNDARY_EVENT:
+            return basicSetBoundaryEvent(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__BUSINESS_RULE_TASK:
+            return basicSetBusinessRuleTask(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__CALLABLE_ELEMENT:
+            return basicSetCallableElement(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__CALL_ACTIVITY:
+            return basicSetCallActivity(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__CALL_CHOREOGRAPHY:
+            return basicSetCallChoreography(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__CALL_CONVERSATION:
+            return basicSetCallConversation(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_NODE:
+            return basicSetConversationNode(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__CANCEL_EVENT_DEFINITION:
+            return basicSetCancelEventDefinition(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__EVENT_DEFINITION:
+            return basicSetEventDefinition(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__ROOT_ELEMENT:
+            return basicSetRootElement(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__CATCH_EVENT:
+            return basicSetCatchEvent(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__CATEGORY:
+            return basicSetCategory(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__CATEGORY_VALUE:
+            return basicSetCategoryValue(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY:
+            return basicSetChoreography(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__COLLABORATION:
+            return basicSetCollaboration(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY_ACTIVITY:
+            return basicSetChoreographyActivity(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY_TASK:
+            return basicSetChoreographyTask(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__COMPENSATE_EVENT_DEFINITION:
+            return basicSetCompensateEventDefinition(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__COMPLEX_BEHAVIOR_DEFINITION:
+            return basicSetComplexBehaviorDefinition(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__COMPLEX_GATEWAY:
+            return basicSetComplexGateway(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__CONDITIONAL_EVENT_DEFINITION:
+            return basicSetConditionalEventDefinition(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION:
+            return basicSetConversation(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_ASSOCIATION:
+            return basicSetConversationAssociation(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_LINK:
+            return basicSetConversationLink(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_KEY:
+            return basicSetCorrelationKey(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY:
+            return basicSetCorrelationProperty(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY_BINDING:
+            return basicSetCorrelationPropertyBinding(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
+            return basicSetCorrelationPropertyRetrievalExpression(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_SUBSCRIPTION:
+            return basicSetCorrelationSubscription(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_ASSOCIATION:
+            return basicSetDataAssociation(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_INPUT:
+            return basicSetDataInput(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_INPUT_ASSOCIATION:
+            return basicSetDataInputAssociation(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_OBJECT:
+            return basicSetDataObject(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_OBJECT_REFERENCE:
+            return basicSetDataObjectReference(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_OUTPUT:
+            return basicSetDataOutput(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_OUTPUT_ASSOCIATION:
+            return basicSetDataOutputAssociation(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_STATE:
+            return basicSetDataState(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_STORE:
+            return basicSetDataStore(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_STORE_REFERENCE:
+            return basicSetDataStoreReference(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__DEFINITIONS:
+            return basicSetDefinitions(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__DOCUMENTATION:
+            return basicSetDocumentation(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__END_EVENT:
+            return basicSetEndEvent(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__END_POINT:
+            return basicSetEndPoint(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__ERROR:
+            return basicSetError(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__ERROR_EVENT_DEFINITION:
+            return basicSetErrorEventDefinition(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__ESCALATION:
+            return basicSetEscalation(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__ESCALATION_EVENT_DEFINITION:
+            return basicSetEscalationEventDefinition(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__EVENT:
+            return basicSetEvent(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__EVENT_BASED_GATEWAY:
+            return basicSetEventBasedGateway(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__EXCLUSIVE_GATEWAY:
+            return basicSetExclusiveGateway(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__EXPRESSION:
+            return basicSetExpression(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__EXTENSION:
+            return basicSetExtension(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__EXTENSION_ELEMENTS:
+            return basicSetExtensionElements(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__FLOW_NODE:
+            return basicSetFlowNode(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__FORMAL_EXPRESSION:
+            return basicSetFormalExpression(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__GATEWAY:
+            return basicSetGateway(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_BUSINESS_RULE_TASK:
+            return basicSetGlobalBusinessRuleTask(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_CHOREOGRAPHY_TASK:
+            return basicSetGlobalChoreographyTask(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_CONVERSATION:
+            return basicSetGlobalConversation(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_MANUAL_TASK:
+            return basicSetGlobalManualTask(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_SCRIPT_TASK:
+            return basicSetGlobalScriptTask(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_TASK:
+            return basicSetGlobalTask(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_USER_TASK:
+            return basicSetGlobalUserTask(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__GROUP:
+            return basicSetGroup(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__HUMAN_PERFORMER:
+            return basicSetHumanPerformer(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__PERFORMER:
+            return basicSetPerformer(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_ROLE:
+            return basicSetResourceRole(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__IMPLICIT_THROW_EVENT:
+            return basicSetImplicitThrowEvent(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__IMPORT:
+            return basicSetImport(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__INCLUSIVE_GATEWAY:
+            return basicSetInclusiveGateway(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__INPUT_SET:
+            return basicSetInputSet(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__INTERFACE:
+            return basicSetInterface(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__INTERMEDIATE_CATCH_EVENT:
+            return basicSetIntermediateCatchEvent(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__INTERMEDIATE_THROW_EVENT:
+            return basicSetIntermediateThrowEvent(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__IO_BINDING:
+            return basicSetIoBinding(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__IO_SPECIFICATION:
+            return basicSetIoSpecification(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__ITEM_DEFINITION:
+            return basicSetItemDefinition(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__LANE:
+            return basicSetLane(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__LANE_SET:
+            return basicSetLaneSet(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__LINK_EVENT_DEFINITION:
+            return basicSetLinkEventDefinition(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__LOOP_CHARACTERISTICS:
+            return basicSetLoopCharacteristics(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__MANUAL_TASK:
+            return basicSetManualTask(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__MESSAGE:
+            return basicSetMessage(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_EVENT_DEFINITION:
+            return basicSetMessageEventDefinition(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_FLOW:
+            return basicSetMessageFlow(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_FLOW_ASSOCIATION:
+            return basicSetMessageFlowAssociation(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__MONITORING:
+            return basicSetMonitoring(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__MULTI_INSTANCE_LOOP_CHARACTERISTICS:
+            return basicSetMultiInstanceLoopCharacteristics(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__OPERATION:
+            return basicSetOperation(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__OUTPUT_SET:
+            return basicSetOutputSet(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__PARALLEL_GATEWAY:
+            return basicSetParallelGateway(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT:
+            return basicSetParticipant(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT_ASSOCIATION:
+            return basicSetParticipantAssociation(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT_MULTIPLICITY:
+            return basicSetParticipantMultiplicity(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__PARTNER_ENTITY:
+            return basicSetPartnerEntity(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__PARTNER_ROLE:
+            return basicSetPartnerRole(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__POTENTIAL_OWNER:
+            return basicSetPotentialOwner(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__PROCESS:
+            return basicSetProcess(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__PROPERTY:
+            return basicSetProperty(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__RECEIVE_TASK:
+            return basicSetReceiveTask(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__RELATIONSHIP:
+            return basicSetRelationship(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__RENDERING:
+            return basicSetRendering(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__RESOURCE:
+            return basicSetResource(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_ASSIGNMENT_EXPRESSION:
+            return basicSetResourceAssignmentExpression(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_PARAMETER:
+            return basicSetResourceParameter(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_PARAMETER_BINDING:
+            return basicSetResourceParameterBinding(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__SCRIPT:
+            return basicSetScript(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__SCRIPT_TASK:
+            return basicSetScriptTask(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__SEND_TASK:
+            return basicSetSendTask(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__SEQUENCE_FLOW:
+            return basicSetSequenceFlow(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__SERVICE_TASK:
+            return basicSetServiceTask(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__SIGNAL:
+            return basicSetSignal(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__SIGNAL_EVENT_DEFINITION:
+            return basicSetSignalEventDefinition(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__STANDARD_LOOP_CHARACTERISTICS:
+            return basicSetStandardLoopCharacteristics(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__START_EVENT:
+            return basicSetStartEvent(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__SUB_CHOREOGRAPHY:
+            return basicSetSubChoreography(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__SUB_CONVERSATION:
+            return basicSetSubConversation(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__SUB_PROCESS:
+            return basicSetSubProcess(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__TASK:
+            return basicSetTask(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__TERMINATE_EVENT_DEFINITION:
+            return basicSetTerminateEventDefinition(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__TEXT:
+            return basicSetText(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__TEXT_ANNOTATION:
+            return basicSetTextAnnotation(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__THROW_EVENT:
+            return basicSetThrowEvent(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__TIMER_EVENT_DEFINITION:
+            return basicSetTimerEventDefinition(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__TRANSACTION:
+            return basicSetTransaction(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__USER_TASK:
+            return basicSetUserTask(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -4199,290 +4715,290 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.DOCUMENT_ROOT__MIXED:
-                if (coreType)
-                    return getMixed();
-                return ((FeatureMap.Internal)getMixed()).getWrapper();
-            case Bpmn2Package.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
-                if (coreType)
-                    return ((EMap.InternalMapView<String, String>)getXMLNSPrefixMap()).eMap();
-                else
-                    return getXMLNSPrefixMap();
-            case Bpmn2Package.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
-                if (coreType)
-                    return ((EMap.InternalMapView<String, String>)getXSISchemaLocation()).eMap();
-                else
-                    return getXSISchemaLocation();
-            case Bpmn2Package.DOCUMENT_ROOT__ACTIVITY:
-                return getActivity();
-            case Bpmn2Package.DOCUMENT_ROOT__AD_HOC_SUB_PROCESS:
-                return getAdHocSubProcess();
-            case Bpmn2Package.DOCUMENT_ROOT__FLOW_ELEMENT:
-                return getFlowElement();
-            case Bpmn2Package.DOCUMENT_ROOT__ARTIFACT:
-                return getArtifact();
-            case Bpmn2Package.DOCUMENT_ROOT__ASSIGNMENT:
-                return getAssignment();
-            case Bpmn2Package.DOCUMENT_ROOT__ASSOCIATION:
-                return getAssociation();
-            case Bpmn2Package.DOCUMENT_ROOT__AUDITING:
-                return getAuditing();
-            case Bpmn2Package.DOCUMENT_ROOT__BASE_ELEMENT:
-                return getBaseElement();
-            case Bpmn2Package.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT:
-                return getBaseElementWithMixedContent();
-            case Bpmn2Package.DOCUMENT_ROOT__BOUNDARY_EVENT:
-                return getBoundaryEvent();
-            case Bpmn2Package.DOCUMENT_ROOT__BUSINESS_RULE_TASK:
-                return getBusinessRuleTask();
-            case Bpmn2Package.DOCUMENT_ROOT__CALLABLE_ELEMENT:
-                return getCallableElement();
-            case Bpmn2Package.DOCUMENT_ROOT__CALL_ACTIVITY:
-                return getCallActivity();
-            case Bpmn2Package.DOCUMENT_ROOT__CALL_CHOREOGRAPHY:
-                return getCallChoreography();
-            case Bpmn2Package.DOCUMENT_ROOT__CALL_CONVERSATION:
-                return getCallConversation();
-            case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_NODE:
-                return getConversationNode();
-            case Bpmn2Package.DOCUMENT_ROOT__CANCEL_EVENT_DEFINITION:
-                return getCancelEventDefinition();
-            case Bpmn2Package.DOCUMENT_ROOT__EVENT_DEFINITION:
-                return getEventDefinition();
-            case Bpmn2Package.DOCUMENT_ROOT__ROOT_ELEMENT:
-                return getRootElement();
-            case Bpmn2Package.DOCUMENT_ROOT__CATCH_EVENT:
-                return getCatchEvent();
-            case Bpmn2Package.DOCUMENT_ROOT__CATEGORY:
-                return getCategory();
-            case Bpmn2Package.DOCUMENT_ROOT__CATEGORY_VALUE:
-                return getCategoryValue();
-            case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY:
-                return getChoreography();
-            case Bpmn2Package.DOCUMENT_ROOT__COLLABORATION:
-                return getCollaboration();
-            case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY_ACTIVITY:
-                return getChoreographyActivity();
-            case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY_TASK:
-                return getChoreographyTask();
-            case Bpmn2Package.DOCUMENT_ROOT__COMPENSATE_EVENT_DEFINITION:
-                return getCompensateEventDefinition();
-            case Bpmn2Package.DOCUMENT_ROOT__COMPLEX_BEHAVIOR_DEFINITION:
-                return getComplexBehaviorDefinition();
-            case Bpmn2Package.DOCUMENT_ROOT__COMPLEX_GATEWAY:
-                return getComplexGateway();
-            case Bpmn2Package.DOCUMENT_ROOT__CONDITIONAL_EVENT_DEFINITION:
-                return getConditionalEventDefinition();
-            case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION:
-                return getConversation();
-            case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_ASSOCIATION:
-                return getConversationAssociation();
-            case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_LINK:
-                return getConversationLink();
-            case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_KEY:
-                return getCorrelationKey();
-            case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY:
-                return getCorrelationProperty();
-            case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY_BINDING:
-                return getCorrelationPropertyBinding();
-            case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
-                return getCorrelationPropertyRetrievalExpression();
-            case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_SUBSCRIPTION:
-                return getCorrelationSubscription();
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_ASSOCIATION:
-                return getDataAssociation();
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_INPUT:
-                return getDataInput();
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_INPUT_ASSOCIATION:
-                return getDataInputAssociation();
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_OBJECT:
-                return getDataObject();
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_OBJECT_REFERENCE:
-                return getDataObjectReference();
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_OUTPUT:
-                return getDataOutput();
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_OUTPUT_ASSOCIATION:
-                return getDataOutputAssociation();
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_STATE:
-                return getDataState();
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_STORE:
-                return getDataStore();
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_STORE_REFERENCE:
-                return getDataStoreReference();
-            case Bpmn2Package.DOCUMENT_ROOT__DEFINITIONS:
-                return getDefinitions();
-            case Bpmn2Package.DOCUMENT_ROOT__DOCUMENTATION:
-                return getDocumentation();
-            case Bpmn2Package.DOCUMENT_ROOT__END_EVENT:
-                return getEndEvent();
-            case Bpmn2Package.DOCUMENT_ROOT__END_POINT:
-                return getEndPoint();
-            case Bpmn2Package.DOCUMENT_ROOT__ERROR:
-                return getError();
-            case Bpmn2Package.DOCUMENT_ROOT__ERROR_EVENT_DEFINITION:
-                return getErrorEventDefinition();
-            case Bpmn2Package.DOCUMENT_ROOT__ESCALATION:
-                return getEscalation();
-            case Bpmn2Package.DOCUMENT_ROOT__ESCALATION_EVENT_DEFINITION:
-                return getEscalationEventDefinition();
-            case Bpmn2Package.DOCUMENT_ROOT__EVENT:
-                return getEvent();
-            case Bpmn2Package.DOCUMENT_ROOT__EVENT_BASED_GATEWAY:
-                return getEventBasedGateway();
-            case Bpmn2Package.DOCUMENT_ROOT__EXCLUSIVE_GATEWAY:
-                return getExclusiveGateway();
-            case Bpmn2Package.DOCUMENT_ROOT__EXPRESSION:
-                return getExpression();
-            case Bpmn2Package.DOCUMENT_ROOT__EXTENSION:
-                return getExtension();
-            case Bpmn2Package.DOCUMENT_ROOT__EXTENSION_ELEMENTS:
-                return getExtensionElements();
-            case Bpmn2Package.DOCUMENT_ROOT__FLOW_NODE:
-                return getFlowNode();
-            case Bpmn2Package.DOCUMENT_ROOT__FORMAL_EXPRESSION:
-                return getFormalExpression();
-            case Bpmn2Package.DOCUMENT_ROOT__GATEWAY:
-                return getGateway();
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_BUSINESS_RULE_TASK:
-                return getGlobalBusinessRuleTask();
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_CHOREOGRAPHY_TASK:
-                return getGlobalChoreographyTask();
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_CONVERSATION:
-                return getGlobalConversation();
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_MANUAL_TASK:
-                return getGlobalManualTask();
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_SCRIPT_TASK:
-                return getGlobalScriptTask();
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_TASK:
-                return getGlobalTask();
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_USER_TASK:
-                return getGlobalUserTask();
-            case Bpmn2Package.DOCUMENT_ROOT__GROUP:
-                return getGroup();
-            case Bpmn2Package.DOCUMENT_ROOT__HUMAN_PERFORMER:
-                return getHumanPerformer();
-            case Bpmn2Package.DOCUMENT_ROOT__PERFORMER:
-                return getPerformer();
-            case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_ROLE:
-                return getResourceRole();
-            case Bpmn2Package.DOCUMENT_ROOT__IMPLICIT_THROW_EVENT:
-                return getImplicitThrowEvent();
-            case Bpmn2Package.DOCUMENT_ROOT__IMPORT:
-                return getImport();
-            case Bpmn2Package.DOCUMENT_ROOT__INCLUSIVE_GATEWAY:
-                return getInclusiveGateway();
-            case Bpmn2Package.DOCUMENT_ROOT__INPUT_SET:
-                return getInputSet();
-            case Bpmn2Package.DOCUMENT_ROOT__INTERFACE:
-                return getInterface();
-            case Bpmn2Package.DOCUMENT_ROOT__INTERMEDIATE_CATCH_EVENT:
-                return getIntermediateCatchEvent();
-            case Bpmn2Package.DOCUMENT_ROOT__INTERMEDIATE_THROW_EVENT:
-                return getIntermediateThrowEvent();
-            case Bpmn2Package.DOCUMENT_ROOT__IO_BINDING:
-                return getIoBinding();
-            case Bpmn2Package.DOCUMENT_ROOT__IO_SPECIFICATION:
-                return getIoSpecification();
-            case Bpmn2Package.DOCUMENT_ROOT__ITEM_DEFINITION:
-                return getItemDefinition();
-            case Bpmn2Package.DOCUMENT_ROOT__LANE:
-                return getLane();
-            case Bpmn2Package.DOCUMENT_ROOT__LANE_SET:
-                return getLaneSet();
-            case Bpmn2Package.DOCUMENT_ROOT__LINK_EVENT_DEFINITION:
-                return getLinkEventDefinition();
-            case Bpmn2Package.DOCUMENT_ROOT__LOOP_CHARACTERISTICS:
-                return getLoopCharacteristics();
-            case Bpmn2Package.DOCUMENT_ROOT__MANUAL_TASK:
-                return getManualTask();
-            case Bpmn2Package.DOCUMENT_ROOT__MESSAGE:
-                return getMessage();
-            case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_EVENT_DEFINITION:
-                return getMessageEventDefinition();
-            case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_FLOW:
-                return getMessageFlow();
-            case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_FLOW_ASSOCIATION:
-                return getMessageFlowAssociation();
-            case Bpmn2Package.DOCUMENT_ROOT__MONITORING:
-                return getMonitoring();
-            case Bpmn2Package.DOCUMENT_ROOT__MULTI_INSTANCE_LOOP_CHARACTERISTICS:
-                return getMultiInstanceLoopCharacteristics();
-            case Bpmn2Package.DOCUMENT_ROOT__OPERATION:
-                return getOperation();
-            case Bpmn2Package.DOCUMENT_ROOT__OUTPUT_SET:
-                return getOutputSet();
-            case Bpmn2Package.DOCUMENT_ROOT__PARALLEL_GATEWAY:
-                return getParallelGateway();
-            case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT:
-                return getParticipant();
-            case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT_ASSOCIATION:
-                return getParticipantAssociation();
-            case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT_MULTIPLICITY:
-                return getParticipantMultiplicity();
-            case Bpmn2Package.DOCUMENT_ROOT__PARTNER_ENTITY:
-                return getPartnerEntity();
-            case Bpmn2Package.DOCUMENT_ROOT__PARTNER_ROLE:
-                return getPartnerRole();
-            case Bpmn2Package.DOCUMENT_ROOT__POTENTIAL_OWNER:
-                return getPotentialOwner();
-            case Bpmn2Package.DOCUMENT_ROOT__PROCESS:
-                return getProcess();
-            case Bpmn2Package.DOCUMENT_ROOT__PROPERTY:
-                return getProperty();
-            case Bpmn2Package.DOCUMENT_ROOT__RECEIVE_TASK:
-                return getReceiveTask();
-            case Bpmn2Package.DOCUMENT_ROOT__RELATIONSHIP:
-                return getRelationship();
-            case Bpmn2Package.DOCUMENT_ROOT__RENDERING:
-                return getRendering();
-            case Bpmn2Package.DOCUMENT_ROOT__RESOURCE:
-                return getResource();
-            case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_ASSIGNMENT_EXPRESSION:
-                return getResourceAssignmentExpression();
-            case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_PARAMETER:
-                return getResourceParameter();
-            case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_PARAMETER_BINDING:
-                return getResourceParameterBinding();
-            case Bpmn2Package.DOCUMENT_ROOT__SCRIPT:
-                return getScript();
-            case Bpmn2Package.DOCUMENT_ROOT__SCRIPT_TASK:
-                return getScriptTask();
-            case Bpmn2Package.DOCUMENT_ROOT__SEND_TASK:
-                return getSendTask();
-            case Bpmn2Package.DOCUMENT_ROOT__SEQUENCE_FLOW:
-                return getSequenceFlow();
-            case Bpmn2Package.DOCUMENT_ROOT__SERVICE_TASK:
-                return getServiceTask();
-            case Bpmn2Package.DOCUMENT_ROOT__SIGNAL:
-                return getSignal();
-            case Bpmn2Package.DOCUMENT_ROOT__SIGNAL_EVENT_DEFINITION:
-                return getSignalEventDefinition();
-            case Bpmn2Package.DOCUMENT_ROOT__STANDARD_LOOP_CHARACTERISTICS:
-                return getStandardLoopCharacteristics();
-            case Bpmn2Package.DOCUMENT_ROOT__START_EVENT:
-                return getStartEvent();
-            case Bpmn2Package.DOCUMENT_ROOT__SUB_CHOREOGRAPHY:
-                return getSubChoreography();
-            case Bpmn2Package.DOCUMENT_ROOT__SUB_CONVERSATION:
-                return getSubConversation();
-            case Bpmn2Package.DOCUMENT_ROOT__SUB_PROCESS:
-                return getSubProcess();
-            case Bpmn2Package.DOCUMENT_ROOT__TASK:
-                return getTask();
-            case Bpmn2Package.DOCUMENT_ROOT__TERMINATE_EVENT_DEFINITION:
-                return getTerminateEventDefinition();
-            case Bpmn2Package.DOCUMENT_ROOT__TEXT:
-                return getText();
-            case Bpmn2Package.DOCUMENT_ROOT__TEXT_ANNOTATION:
-                return getTextAnnotation();
-            case Bpmn2Package.DOCUMENT_ROOT__THROW_EVENT:
-                return getThrowEvent();
-            case Bpmn2Package.DOCUMENT_ROOT__TIMER_EVENT_DEFINITION:
-                return getTimerEventDefinition();
-            case Bpmn2Package.DOCUMENT_ROOT__TRANSACTION:
-                return getTransaction();
-            case Bpmn2Package.DOCUMENT_ROOT__USER_TASK:
-                return getUserTask();
+        case Bpmn2Package.DOCUMENT_ROOT__MIXED:
+            if (coreType)
+                return getMixed();
+            return ((FeatureMap.Internal) getMixed()).getWrapper();
+        case Bpmn2Package.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
+            if (coreType)
+                return ((EMap.InternalMapView<String, String>) getXMLNSPrefixMap()).eMap();
+            else
+                return getXMLNSPrefixMap();
+        case Bpmn2Package.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
+            if (coreType)
+                return ((EMap.InternalMapView<String, String>) getXSISchemaLocation()).eMap();
+            else
+                return getXSISchemaLocation();
+        case Bpmn2Package.DOCUMENT_ROOT__ACTIVITY:
+            return getActivity();
+        case Bpmn2Package.DOCUMENT_ROOT__AD_HOC_SUB_PROCESS:
+            return getAdHocSubProcess();
+        case Bpmn2Package.DOCUMENT_ROOT__FLOW_ELEMENT:
+            return getFlowElement();
+        case Bpmn2Package.DOCUMENT_ROOT__ARTIFACT:
+            return getArtifact();
+        case Bpmn2Package.DOCUMENT_ROOT__ASSIGNMENT:
+            return getAssignment();
+        case Bpmn2Package.DOCUMENT_ROOT__ASSOCIATION:
+            return getAssociation();
+        case Bpmn2Package.DOCUMENT_ROOT__AUDITING:
+            return getAuditing();
+        case Bpmn2Package.DOCUMENT_ROOT__BASE_ELEMENT:
+            return getBaseElement();
+        case Bpmn2Package.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT:
+            return getBaseElementWithMixedContent();
+        case Bpmn2Package.DOCUMENT_ROOT__BOUNDARY_EVENT:
+            return getBoundaryEvent();
+        case Bpmn2Package.DOCUMENT_ROOT__BUSINESS_RULE_TASK:
+            return getBusinessRuleTask();
+        case Bpmn2Package.DOCUMENT_ROOT__CALLABLE_ELEMENT:
+            return getCallableElement();
+        case Bpmn2Package.DOCUMENT_ROOT__CALL_ACTIVITY:
+            return getCallActivity();
+        case Bpmn2Package.DOCUMENT_ROOT__CALL_CHOREOGRAPHY:
+            return getCallChoreography();
+        case Bpmn2Package.DOCUMENT_ROOT__CALL_CONVERSATION:
+            return getCallConversation();
+        case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_NODE:
+            return getConversationNode();
+        case Bpmn2Package.DOCUMENT_ROOT__CANCEL_EVENT_DEFINITION:
+            return getCancelEventDefinition();
+        case Bpmn2Package.DOCUMENT_ROOT__EVENT_DEFINITION:
+            return getEventDefinition();
+        case Bpmn2Package.DOCUMENT_ROOT__ROOT_ELEMENT:
+            return getRootElement();
+        case Bpmn2Package.DOCUMENT_ROOT__CATCH_EVENT:
+            return getCatchEvent();
+        case Bpmn2Package.DOCUMENT_ROOT__CATEGORY:
+            return getCategory();
+        case Bpmn2Package.DOCUMENT_ROOT__CATEGORY_VALUE:
+            return getCategoryValue();
+        case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY:
+            return getChoreography();
+        case Bpmn2Package.DOCUMENT_ROOT__COLLABORATION:
+            return getCollaboration();
+        case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY_ACTIVITY:
+            return getChoreographyActivity();
+        case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY_TASK:
+            return getChoreographyTask();
+        case Bpmn2Package.DOCUMENT_ROOT__COMPENSATE_EVENT_DEFINITION:
+            return getCompensateEventDefinition();
+        case Bpmn2Package.DOCUMENT_ROOT__COMPLEX_BEHAVIOR_DEFINITION:
+            return getComplexBehaviorDefinition();
+        case Bpmn2Package.DOCUMENT_ROOT__COMPLEX_GATEWAY:
+            return getComplexGateway();
+        case Bpmn2Package.DOCUMENT_ROOT__CONDITIONAL_EVENT_DEFINITION:
+            return getConditionalEventDefinition();
+        case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION:
+            return getConversation();
+        case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_ASSOCIATION:
+            return getConversationAssociation();
+        case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_LINK:
+            return getConversationLink();
+        case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_KEY:
+            return getCorrelationKey();
+        case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY:
+            return getCorrelationProperty();
+        case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY_BINDING:
+            return getCorrelationPropertyBinding();
+        case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
+            return getCorrelationPropertyRetrievalExpression();
+        case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_SUBSCRIPTION:
+            return getCorrelationSubscription();
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_ASSOCIATION:
+            return getDataAssociation();
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_INPUT:
+            return getDataInput();
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_INPUT_ASSOCIATION:
+            return getDataInputAssociation();
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_OBJECT:
+            return getDataObject();
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_OBJECT_REFERENCE:
+            return getDataObjectReference();
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_OUTPUT:
+            return getDataOutput();
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_OUTPUT_ASSOCIATION:
+            return getDataOutputAssociation();
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_STATE:
+            return getDataState();
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_STORE:
+            return getDataStore();
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_STORE_REFERENCE:
+            return getDataStoreReference();
+        case Bpmn2Package.DOCUMENT_ROOT__DEFINITIONS:
+            return getDefinitions();
+        case Bpmn2Package.DOCUMENT_ROOT__DOCUMENTATION:
+            return getDocumentation();
+        case Bpmn2Package.DOCUMENT_ROOT__END_EVENT:
+            return getEndEvent();
+        case Bpmn2Package.DOCUMENT_ROOT__END_POINT:
+            return getEndPoint();
+        case Bpmn2Package.DOCUMENT_ROOT__ERROR:
+            return getError();
+        case Bpmn2Package.DOCUMENT_ROOT__ERROR_EVENT_DEFINITION:
+            return getErrorEventDefinition();
+        case Bpmn2Package.DOCUMENT_ROOT__ESCALATION:
+            return getEscalation();
+        case Bpmn2Package.DOCUMENT_ROOT__ESCALATION_EVENT_DEFINITION:
+            return getEscalationEventDefinition();
+        case Bpmn2Package.DOCUMENT_ROOT__EVENT:
+            return getEvent();
+        case Bpmn2Package.DOCUMENT_ROOT__EVENT_BASED_GATEWAY:
+            return getEventBasedGateway();
+        case Bpmn2Package.DOCUMENT_ROOT__EXCLUSIVE_GATEWAY:
+            return getExclusiveGateway();
+        case Bpmn2Package.DOCUMENT_ROOT__EXPRESSION:
+            return getExpression();
+        case Bpmn2Package.DOCUMENT_ROOT__EXTENSION:
+            return getExtension();
+        case Bpmn2Package.DOCUMENT_ROOT__EXTENSION_ELEMENTS:
+            return getExtensionElements();
+        case Bpmn2Package.DOCUMENT_ROOT__FLOW_NODE:
+            return getFlowNode();
+        case Bpmn2Package.DOCUMENT_ROOT__FORMAL_EXPRESSION:
+            return getFormalExpression();
+        case Bpmn2Package.DOCUMENT_ROOT__GATEWAY:
+            return getGateway();
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_BUSINESS_RULE_TASK:
+            return getGlobalBusinessRuleTask();
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_CHOREOGRAPHY_TASK:
+            return getGlobalChoreographyTask();
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_CONVERSATION:
+            return getGlobalConversation();
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_MANUAL_TASK:
+            return getGlobalManualTask();
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_SCRIPT_TASK:
+            return getGlobalScriptTask();
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_TASK:
+            return getGlobalTask();
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_USER_TASK:
+            return getGlobalUserTask();
+        case Bpmn2Package.DOCUMENT_ROOT__GROUP:
+            return getGroup();
+        case Bpmn2Package.DOCUMENT_ROOT__HUMAN_PERFORMER:
+            return getHumanPerformer();
+        case Bpmn2Package.DOCUMENT_ROOT__PERFORMER:
+            return getPerformer();
+        case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_ROLE:
+            return getResourceRole();
+        case Bpmn2Package.DOCUMENT_ROOT__IMPLICIT_THROW_EVENT:
+            return getImplicitThrowEvent();
+        case Bpmn2Package.DOCUMENT_ROOT__IMPORT:
+            return getImport();
+        case Bpmn2Package.DOCUMENT_ROOT__INCLUSIVE_GATEWAY:
+            return getInclusiveGateway();
+        case Bpmn2Package.DOCUMENT_ROOT__INPUT_SET:
+            return getInputSet();
+        case Bpmn2Package.DOCUMENT_ROOT__INTERFACE:
+            return getInterface();
+        case Bpmn2Package.DOCUMENT_ROOT__INTERMEDIATE_CATCH_EVENT:
+            return getIntermediateCatchEvent();
+        case Bpmn2Package.DOCUMENT_ROOT__INTERMEDIATE_THROW_EVENT:
+            return getIntermediateThrowEvent();
+        case Bpmn2Package.DOCUMENT_ROOT__IO_BINDING:
+            return getIoBinding();
+        case Bpmn2Package.DOCUMENT_ROOT__IO_SPECIFICATION:
+            return getIoSpecification();
+        case Bpmn2Package.DOCUMENT_ROOT__ITEM_DEFINITION:
+            return getItemDefinition();
+        case Bpmn2Package.DOCUMENT_ROOT__LANE:
+            return getLane();
+        case Bpmn2Package.DOCUMENT_ROOT__LANE_SET:
+            return getLaneSet();
+        case Bpmn2Package.DOCUMENT_ROOT__LINK_EVENT_DEFINITION:
+            return getLinkEventDefinition();
+        case Bpmn2Package.DOCUMENT_ROOT__LOOP_CHARACTERISTICS:
+            return getLoopCharacteristics();
+        case Bpmn2Package.DOCUMENT_ROOT__MANUAL_TASK:
+            return getManualTask();
+        case Bpmn2Package.DOCUMENT_ROOT__MESSAGE:
+            return getMessage();
+        case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_EVENT_DEFINITION:
+            return getMessageEventDefinition();
+        case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_FLOW:
+            return getMessageFlow();
+        case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_FLOW_ASSOCIATION:
+            return getMessageFlowAssociation();
+        case Bpmn2Package.DOCUMENT_ROOT__MONITORING:
+            return getMonitoring();
+        case Bpmn2Package.DOCUMENT_ROOT__MULTI_INSTANCE_LOOP_CHARACTERISTICS:
+            return getMultiInstanceLoopCharacteristics();
+        case Bpmn2Package.DOCUMENT_ROOT__OPERATION:
+            return getOperation();
+        case Bpmn2Package.DOCUMENT_ROOT__OUTPUT_SET:
+            return getOutputSet();
+        case Bpmn2Package.DOCUMENT_ROOT__PARALLEL_GATEWAY:
+            return getParallelGateway();
+        case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT:
+            return getParticipant();
+        case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT_ASSOCIATION:
+            return getParticipantAssociation();
+        case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT_MULTIPLICITY:
+            return getParticipantMultiplicity();
+        case Bpmn2Package.DOCUMENT_ROOT__PARTNER_ENTITY:
+            return getPartnerEntity();
+        case Bpmn2Package.DOCUMENT_ROOT__PARTNER_ROLE:
+            return getPartnerRole();
+        case Bpmn2Package.DOCUMENT_ROOT__POTENTIAL_OWNER:
+            return getPotentialOwner();
+        case Bpmn2Package.DOCUMENT_ROOT__PROCESS:
+            return getProcess();
+        case Bpmn2Package.DOCUMENT_ROOT__PROPERTY:
+            return getProperty();
+        case Bpmn2Package.DOCUMENT_ROOT__RECEIVE_TASK:
+            return getReceiveTask();
+        case Bpmn2Package.DOCUMENT_ROOT__RELATIONSHIP:
+            return getRelationship();
+        case Bpmn2Package.DOCUMENT_ROOT__RENDERING:
+            return getRendering();
+        case Bpmn2Package.DOCUMENT_ROOT__RESOURCE:
+            return getResource();
+        case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_ASSIGNMENT_EXPRESSION:
+            return getResourceAssignmentExpression();
+        case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_PARAMETER:
+            return getResourceParameter();
+        case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_PARAMETER_BINDING:
+            return getResourceParameterBinding();
+        case Bpmn2Package.DOCUMENT_ROOT__SCRIPT:
+            return getScript();
+        case Bpmn2Package.DOCUMENT_ROOT__SCRIPT_TASK:
+            return getScriptTask();
+        case Bpmn2Package.DOCUMENT_ROOT__SEND_TASK:
+            return getSendTask();
+        case Bpmn2Package.DOCUMENT_ROOT__SEQUENCE_FLOW:
+            return getSequenceFlow();
+        case Bpmn2Package.DOCUMENT_ROOT__SERVICE_TASK:
+            return getServiceTask();
+        case Bpmn2Package.DOCUMENT_ROOT__SIGNAL:
+            return getSignal();
+        case Bpmn2Package.DOCUMENT_ROOT__SIGNAL_EVENT_DEFINITION:
+            return getSignalEventDefinition();
+        case Bpmn2Package.DOCUMENT_ROOT__STANDARD_LOOP_CHARACTERISTICS:
+            return getStandardLoopCharacteristics();
+        case Bpmn2Package.DOCUMENT_ROOT__START_EVENT:
+            return getStartEvent();
+        case Bpmn2Package.DOCUMENT_ROOT__SUB_CHOREOGRAPHY:
+            return getSubChoreography();
+        case Bpmn2Package.DOCUMENT_ROOT__SUB_CONVERSATION:
+            return getSubConversation();
+        case Bpmn2Package.DOCUMENT_ROOT__SUB_PROCESS:
+            return getSubProcess();
+        case Bpmn2Package.DOCUMENT_ROOT__TASK:
+            return getTask();
+        case Bpmn2Package.DOCUMENT_ROOT__TERMINATE_EVENT_DEFINITION:
+            return getTerminateEventDefinition();
+        case Bpmn2Package.DOCUMENT_ROOT__TEXT:
+            return getText();
+        case Bpmn2Package.DOCUMENT_ROOT__TEXT_ANNOTATION:
+            return getTextAnnotation();
+        case Bpmn2Package.DOCUMENT_ROOT__THROW_EVENT:
+            return getThrowEvent();
+        case Bpmn2Package.DOCUMENT_ROOT__TIMER_EVENT_DEFINITION:
+            return getTimerEventDefinition();
+        case Bpmn2Package.DOCUMENT_ROOT__TRANSACTION:
+            return getTransaction();
+        case Bpmn2Package.DOCUMENT_ROOT__USER_TASK:
+            return getUserTask();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -4495,417 +5011,419 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.DOCUMENT_ROOT__MIXED:
-                ((FeatureMap.Internal)getMixed()).set(newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
-                ((EStructuralFeature.Setting)((EMap.InternalMapView<String, String>)getXMLNSPrefixMap()).eMap()).set(newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
-                ((EStructuralFeature.Setting)((EMap.InternalMapView<String, String>)getXSISchemaLocation()).eMap()).set(newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__ACTIVITY:
-                setActivity((Activity)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__AD_HOC_SUB_PROCESS:
-                setAdHocSubProcess((AdHocSubProcess)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__FLOW_ELEMENT:
-                setFlowElement((FlowElement)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__ARTIFACT:
-                setArtifact((Artifact)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__ASSIGNMENT:
-                setAssignment((Assignment)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__ASSOCIATION:
-                setAssociation((Association)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__AUDITING:
-                setAuditing((Auditing)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__BASE_ELEMENT:
-                setBaseElement((BaseElement)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT:
-                setBaseElementWithMixedContent((Object)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__BOUNDARY_EVENT:
-                setBoundaryEvent((BoundaryEvent)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__BUSINESS_RULE_TASK:
-                setBusinessRuleTask((BusinessRuleTask)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CALLABLE_ELEMENT:
-                setCallableElement((CallableElement)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CALL_ACTIVITY:
-                setCallActivity((CallActivity)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CALL_CHOREOGRAPHY:
-                setCallChoreography((CallChoreography)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CALL_CONVERSATION:
-                setCallConversation((CallConversation)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_NODE:
-                setConversationNode((ConversationNode)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CANCEL_EVENT_DEFINITION:
-                setCancelEventDefinition((CancelEventDefinition)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__EVENT_DEFINITION:
-                setEventDefinition((EventDefinition)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__ROOT_ELEMENT:
-                setRootElement((RootElement)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CATCH_EVENT:
-                setCatchEvent((CatchEvent)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CATEGORY:
-                setCategory((Category)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CATEGORY_VALUE:
-                setCategoryValue((CategoryValue)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY:
-                setChoreography((Choreography)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__COLLABORATION:
-                setCollaboration((Collaboration)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY_ACTIVITY:
-                setChoreographyActivity((ChoreographyActivity)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY_TASK:
-                setChoreographyTask((ChoreographyTask)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__COMPENSATE_EVENT_DEFINITION:
-                setCompensateEventDefinition((CompensateEventDefinition)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__COMPLEX_BEHAVIOR_DEFINITION:
-                setComplexBehaviorDefinition((ComplexBehaviorDefinition)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__COMPLEX_GATEWAY:
-                setComplexGateway((ComplexGateway)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CONDITIONAL_EVENT_DEFINITION:
-                setConditionalEventDefinition((ConditionalEventDefinition)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION:
-                setConversation((Conversation)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_ASSOCIATION:
-                setConversationAssociation((ConversationAssociation)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_LINK:
-                setConversationLink((ConversationLink)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_KEY:
-                setCorrelationKey((CorrelationKey)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY:
-                setCorrelationProperty((CorrelationProperty)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY_BINDING:
-                setCorrelationPropertyBinding((CorrelationPropertyBinding)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
-                setCorrelationPropertyRetrievalExpression((CorrelationPropertyRetrievalExpression)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_SUBSCRIPTION:
-                setCorrelationSubscription((CorrelationSubscription)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_ASSOCIATION:
-                setDataAssociation((DataAssociation)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_INPUT:
-                setDataInput((DataInput)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_INPUT_ASSOCIATION:
-                setDataInputAssociation((DataInputAssociation)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_OBJECT:
-                setDataObject((DataObject)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_OBJECT_REFERENCE:
-                setDataObjectReference((DataObjectReference)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_OUTPUT:
-                setDataOutput((DataOutput)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_OUTPUT_ASSOCIATION:
-                setDataOutputAssociation((DataOutputAssociation)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_STATE:
-                setDataState((DataState)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_STORE:
-                setDataStore((DataStore)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_STORE_REFERENCE:
-                setDataStoreReference((DataStoreReference)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__DEFINITIONS:
-                setDefinitions((Definitions)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__DOCUMENTATION:
-                setDocumentation((Documentation)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__END_EVENT:
-                setEndEvent((EndEvent)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__END_POINT:
-                setEndPoint((EndPoint)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__ERROR:
-                setError((org.eclipse.bpmn2.Error)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__ERROR_EVENT_DEFINITION:
-                setErrorEventDefinition((ErrorEventDefinition)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__ESCALATION:
-                setEscalation((Escalation)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__ESCALATION_EVENT_DEFINITION:
-                setEscalationEventDefinition((EscalationEventDefinition)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__EVENT:
-                setEvent((Event)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__EVENT_BASED_GATEWAY:
-                setEventBasedGateway((EventBasedGateway)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__EXCLUSIVE_GATEWAY:
-                setExclusiveGateway((ExclusiveGateway)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__EXPRESSION:
-                setExpression((Expression)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__EXTENSION:
-                setExtension((Extension)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__EXTENSION_ELEMENTS:
-                setExtensionElements((Object)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__FLOW_NODE:
-                setFlowNode((FlowNode)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__FORMAL_EXPRESSION:
-                setFormalExpression((FormalExpression)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_BUSINESS_RULE_TASK:
-                setGlobalBusinessRuleTask((GlobalBusinessRuleTask)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_CHOREOGRAPHY_TASK:
-                setGlobalChoreographyTask((GlobalChoreographyTask)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_CONVERSATION:
-                setGlobalConversation((GlobalConversation)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_MANUAL_TASK:
-                setGlobalManualTask((GlobalManualTask)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_SCRIPT_TASK:
-                setGlobalScriptTask((GlobalScriptTask)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_TASK:
-                setGlobalTask((GlobalTask)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_USER_TASK:
-                setGlobalUserTask((GlobalUserTask)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__GROUP:
-                setGroup((Group)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__HUMAN_PERFORMER:
-                setHumanPerformer((HumanPerformer)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__PERFORMER:
-                setPerformer((Performer)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_ROLE:
-                setResourceRole((ResourceRole)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__IMPLICIT_THROW_EVENT:
-                setImplicitThrowEvent((ImplicitThrowEvent)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__IMPORT:
-                setImport((Import)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__INCLUSIVE_GATEWAY:
-                setInclusiveGateway((InclusiveGateway)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__INPUT_SET:
-                setInputSet((InputSet)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__INTERFACE:
-                setInterface((Interface)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__INTERMEDIATE_CATCH_EVENT:
-                setIntermediateCatchEvent((IntermediateCatchEvent)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__INTERMEDIATE_THROW_EVENT:
-                setIntermediateThrowEvent((IntermediateThrowEvent)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__IO_BINDING:
-                setIoBinding((InputOutputBinding)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__IO_SPECIFICATION:
-                setIoSpecification((InputOutputSpecification)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__ITEM_DEFINITION:
-                setItemDefinition((ItemDefinition)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__LANE:
-                setLane((Lane)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__LANE_SET:
-                setLaneSet((LaneSet)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__LINK_EVENT_DEFINITION:
-                setLinkEventDefinition((LinkEventDefinition)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__LOOP_CHARACTERISTICS:
-                setLoopCharacteristics((LoopCharacteristics)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__MANUAL_TASK:
-                setManualTask((ManualTask)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__MESSAGE:
-                setMessage((Message)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_EVENT_DEFINITION:
-                setMessageEventDefinition((MessageEventDefinition)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_FLOW:
-                setMessageFlow((MessageFlow)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_FLOW_ASSOCIATION:
-                setMessageFlowAssociation((MessageFlowAssociation)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__MONITORING:
-                setMonitoring((Monitoring)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__MULTI_INSTANCE_LOOP_CHARACTERISTICS:
-                setMultiInstanceLoopCharacteristics((MultiInstanceLoopCharacteristics)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__OPERATION:
-                setOperation((Operation)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__OUTPUT_SET:
-                setOutputSet((OutputSet)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__PARALLEL_GATEWAY:
-                setParallelGateway((ParallelGateway)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT:
-                setParticipant((Participant)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT_ASSOCIATION:
-                setParticipantAssociation((ParticipantAssociation)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT_MULTIPLICITY:
-                setParticipantMultiplicity((ParticipantMultiplicity)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__PARTNER_ENTITY:
-                setPartnerEntity((PartnerEntity)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__PARTNER_ROLE:
-                setPartnerRole((PartnerRole)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__POTENTIAL_OWNER:
-                setPotentialOwner((PotentialOwner)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__PROCESS:
-                setProcess((org.eclipse.bpmn2.Process)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__PROPERTY:
-                setProperty((Property)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__RECEIVE_TASK:
-                setReceiveTask((ReceiveTask)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__RELATIONSHIP:
-                setRelationship((Relationship)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__RENDERING:
-                setRendering((Rendering)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__RESOURCE:
-                setResource((Resource)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_ASSIGNMENT_EXPRESSION:
-                setResourceAssignmentExpression((ResourceAssignmentExpression)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_PARAMETER:
-                setResourceParameter((ResourceParameter)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_PARAMETER_BINDING:
-                setResourceParameterBinding((ResourceParameterBinding)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__SCRIPT:
-                setScript((Object)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__SCRIPT_TASK:
-                setScriptTask((ScriptTask)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__SEND_TASK:
-                setSendTask((SendTask)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__SEQUENCE_FLOW:
-                setSequenceFlow((SequenceFlow)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__SERVICE_TASK:
-                setServiceTask((ServiceTask)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__SIGNAL:
-                setSignal((Signal)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__SIGNAL_EVENT_DEFINITION:
-                setSignalEventDefinition((SignalEventDefinition)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__STANDARD_LOOP_CHARACTERISTICS:
-                setStandardLoopCharacteristics((StandardLoopCharacteristics)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__START_EVENT:
-                setStartEvent((StartEvent)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__SUB_CHOREOGRAPHY:
-                setSubChoreography((SubChoreography)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__SUB_CONVERSATION:
-                setSubConversation((SubConversation)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__SUB_PROCESS:
-                setSubProcess((SubProcess)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__TASK:
-                setTask((Task)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__TERMINATE_EVENT_DEFINITION:
-                setTerminateEventDefinition((TerminateEventDefinition)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__TEXT:
-                setText((Object)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__TEXT_ANNOTATION:
-                setTextAnnotation((TextAnnotation)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__THROW_EVENT:
-                setThrowEvent((ThrowEvent)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__TIMER_EVENT_DEFINITION:
-                setTimerEventDefinition((TimerEventDefinition)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__TRANSACTION:
-                setTransaction((Transaction)newValue);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__USER_TASK:
-                setUserTask((UserTask)newValue);
-                return;
+        case Bpmn2Package.DOCUMENT_ROOT__MIXED:
+            ((FeatureMap.Internal) getMixed()).set(newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
+            ((EStructuralFeature.Setting) ((EMap.InternalMapView<String, String>) getXMLNSPrefixMap())
+                    .eMap()).set(newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
+            ((EStructuralFeature.Setting) ((EMap.InternalMapView<String, String>) getXSISchemaLocation())
+                    .eMap()).set(newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__ACTIVITY:
+            setActivity((Activity) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__AD_HOC_SUB_PROCESS:
+            setAdHocSubProcess((AdHocSubProcess) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__FLOW_ELEMENT:
+            setFlowElement((FlowElement) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__ARTIFACT:
+            setArtifact((Artifact) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__ASSIGNMENT:
+            setAssignment((Assignment) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__ASSOCIATION:
+            setAssociation((Association) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__AUDITING:
+            setAuditing((Auditing) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__BASE_ELEMENT:
+            setBaseElement((BaseElement) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT:
+            setBaseElementWithMixedContent((Object) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__BOUNDARY_EVENT:
+            setBoundaryEvent((BoundaryEvent) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__BUSINESS_RULE_TASK:
+            setBusinessRuleTask((BusinessRuleTask) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CALLABLE_ELEMENT:
+            setCallableElement((CallableElement) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CALL_ACTIVITY:
+            setCallActivity((CallActivity) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CALL_CHOREOGRAPHY:
+            setCallChoreography((CallChoreography) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CALL_CONVERSATION:
+            setCallConversation((CallConversation) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_NODE:
+            setConversationNode((ConversationNode) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CANCEL_EVENT_DEFINITION:
+            setCancelEventDefinition((CancelEventDefinition) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__EVENT_DEFINITION:
+            setEventDefinition((EventDefinition) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__ROOT_ELEMENT:
+            setRootElement((RootElement) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CATCH_EVENT:
+            setCatchEvent((CatchEvent) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CATEGORY:
+            setCategory((Category) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CATEGORY_VALUE:
+            setCategoryValue((CategoryValue) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY:
+            setChoreography((Choreography) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__COLLABORATION:
+            setCollaboration((Collaboration) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY_ACTIVITY:
+            setChoreographyActivity((ChoreographyActivity) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY_TASK:
+            setChoreographyTask((ChoreographyTask) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__COMPENSATE_EVENT_DEFINITION:
+            setCompensateEventDefinition((CompensateEventDefinition) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__COMPLEX_BEHAVIOR_DEFINITION:
+            setComplexBehaviorDefinition((ComplexBehaviorDefinition) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__COMPLEX_GATEWAY:
+            setComplexGateway((ComplexGateway) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CONDITIONAL_EVENT_DEFINITION:
+            setConditionalEventDefinition((ConditionalEventDefinition) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION:
+            setConversation((Conversation) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_ASSOCIATION:
+            setConversationAssociation((ConversationAssociation) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_LINK:
+            setConversationLink((ConversationLink) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_KEY:
+            setCorrelationKey((CorrelationKey) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY:
+            setCorrelationProperty((CorrelationProperty) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY_BINDING:
+            setCorrelationPropertyBinding((CorrelationPropertyBinding) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
+            setCorrelationPropertyRetrievalExpression((CorrelationPropertyRetrievalExpression) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_SUBSCRIPTION:
+            setCorrelationSubscription((CorrelationSubscription) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_ASSOCIATION:
+            setDataAssociation((DataAssociation) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_INPUT:
+            setDataInput((DataInput) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_INPUT_ASSOCIATION:
+            setDataInputAssociation((DataInputAssociation) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_OBJECT:
+            setDataObject((DataObject) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_OBJECT_REFERENCE:
+            setDataObjectReference((DataObjectReference) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_OUTPUT:
+            setDataOutput((DataOutput) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_OUTPUT_ASSOCIATION:
+            setDataOutputAssociation((DataOutputAssociation) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_STATE:
+            setDataState((DataState) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_STORE:
+            setDataStore((DataStore) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_STORE_REFERENCE:
+            setDataStoreReference((DataStoreReference) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__DEFINITIONS:
+            setDefinitions((Definitions) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__DOCUMENTATION:
+            setDocumentation((Documentation) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__END_EVENT:
+            setEndEvent((EndEvent) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__END_POINT:
+            setEndPoint((EndPoint) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__ERROR:
+            setError((org.eclipse.bpmn2.Error) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__ERROR_EVENT_DEFINITION:
+            setErrorEventDefinition((ErrorEventDefinition) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__ESCALATION:
+            setEscalation((Escalation) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__ESCALATION_EVENT_DEFINITION:
+            setEscalationEventDefinition((EscalationEventDefinition) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__EVENT:
+            setEvent((Event) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__EVENT_BASED_GATEWAY:
+            setEventBasedGateway((EventBasedGateway) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__EXCLUSIVE_GATEWAY:
+            setExclusiveGateway((ExclusiveGateway) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__EXPRESSION:
+            setExpression((Expression) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__EXTENSION:
+            setExtension((Extension) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__EXTENSION_ELEMENTS:
+            setExtensionElements((Object) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__FLOW_NODE:
+            setFlowNode((FlowNode) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__FORMAL_EXPRESSION:
+            setFormalExpression((FormalExpression) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_BUSINESS_RULE_TASK:
+            setGlobalBusinessRuleTask((GlobalBusinessRuleTask) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_CHOREOGRAPHY_TASK:
+            setGlobalChoreographyTask((GlobalChoreographyTask) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_CONVERSATION:
+            setGlobalConversation((GlobalConversation) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_MANUAL_TASK:
+            setGlobalManualTask((GlobalManualTask) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_SCRIPT_TASK:
+            setGlobalScriptTask((GlobalScriptTask) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_TASK:
+            setGlobalTask((GlobalTask) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_USER_TASK:
+            setGlobalUserTask((GlobalUserTask) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__GROUP:
+            setGroup((Group) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__HUMAN_PERFORMER:
+            setHumanPerformer((HumanPerformer) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__PERFORMER:
+            setPerformer((Performer) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_ROLE:
+            setResourceRole((ResourceRole) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__IMPLICIT_THROW_EVENT:
+            setImplicitThrowEvent((ImplicitThrowEvent) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__IMPORT:
+            setImport((Import) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__INCLUSIVE_GATEWAY:
+            setInclusiveGateway((InclusiveGateway) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__INPUT_SET:
+            setInputSet((InputSet) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__INTERFACE:
+            setInterface((Interface) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__INTERMEDIATE_CATCH_EVENT:
+            setIntermediateCatchEvent((IntermediateCatchEvent) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__INTERMEDIATE_THROW_EVENT:
+            setIntermediateThrowEvent((IntermediateThrowEvent) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__IO_BINDING:
+            setIoBinding((InputOutputBinding) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__IO_SPECIFICATION:
+            setIoSpecification((InputOutputSpecification) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__ITEM_DEFINITION:
+            setItemDefinition((ItemDefinition) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__LANE:
+            setLane((Lane) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__LANE_SET:
+            setLaneSet((LaneSet) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__LINK_EVENT_DEFINITION:
+            setLinkEventDefinition((LinkEventDefinition) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__LOOP_CHARACTERISTICS:
+            setLoopCharacteristics((LoopCharacteristics) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__MANUAL_TASK:
+            setManualTask((ManualTask) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__MESSAGE:
+            setMessage((Message) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_EVENT_DEFINITION:
+            setMessageEventDefinition((MessageEventDefinition) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_FLOW:
+            setMessageFlow((MessageFlow) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_FLOW_ASSOCIATION:
+            setMessageFlowAssociation((MessageFlowAssociation) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__MONITORING:
+            setMonitoring((Monitoring) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__MULTI_INSTANCE_LOOP_CHARACTERISTICS:
+            setMultiInstanceLoopCharacteristics((MultiInstanceLoopCharacteristics) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__OPERATION:
+            setOperation((Operation) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__OUTPUT_SET:
+            setOutputSet((OutputSet) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__PARALLEL_GATEWAY:
+            setParallelGateway((ParallelGateway) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT:
+            setParticipant((Participant) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT_ASSOCIATION:
+            setParticipantAssociation((ParticipantAssociation) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT_MULTIPLICITY:
+            setParticipantMultiplicity((ParticipantMultiplicity) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__PARTNER_ENTITY:
+            setPartnerEntity((PartnerEntity) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__PARTNER_ROLE:
+            setPartnerRole((PartnerRole) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__POTENTIAL_OWNER:
+            setPotentialOwner((PotentialOwner) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__PROCESS:
+            setProcess((org.eclipse.bpmn2.Process) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__PROPERTY:
+            setProperty((Property) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__RECEIVE_TASK:
+            setReceiveTask((ReceiveTask) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__RELATIONSHIP:
+            setRelationship((Relationship) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__RENDERING:
+            setRendering((Rendering) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__RESOURCE:
+            setResource((Resource) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_ASSIGNMENT_EXPRESSION:
+            setResourceAssignmentExpression((ResourceAssignmentExpression) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_PARAMETER:
+            setResourceParameter((ResourceParameter) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_PARAMETER_BINDING:
+            setResourceParameterBinding((ResourceParameterBinding) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__SCRIPT:
+            setScript((Object) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__SCRIPT_TASK:
+            setScriptTask((ScriptTask) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__SEND_TASK:
+            setSendTask((SendTask) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__SEQUENCE_FLOW:
+            setSequenceFlow((SequenceFlow) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__SERVICE_TASK:
+            setServiceTask((ServiceTask) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__SIGNAL:
+            setSignal((Signal) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__SIGNAL_EVENT_DEFINITION:
+            setSignalEventDefinition((SignalEventDefinition) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__STANDARD_LOOP_CHARACTERISTICS:
+            setStandardLoopCharacteristics((StandardLoopCharacteristics) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__START_EVENT:
+            setStartEvent((StartEvent) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__SUB_CHOREOGRAPHY:
+            setSubChoreography((SubChoreography) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__SUB_CONVERSATION:
+            setSubConversation((SubConversation) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__SUB_PROCESS:
+            setSubProcess((SubProcess) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__TASK:
+            setTask((Task) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__TERMINATE_EVENT_DEFINITION:
+            setTerminateEventDefinition((TerminateEventDefinition) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__TEXT:
+            setText((Object) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__TEXT_ANNOTATION:
+            setTextAnnotation((TextAnnotation) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__THROW_EVENT:
+            setThrowEvent((ThrowEvent) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__TIMER_EVENT_DEFINITION:
+            setTimerEventDefinition((TimerEventDefinition) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__TRANSACTION:
+            setTransaction((Transaction) newValue);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__USER_TASK:
+            setUserTask((UserTask) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -4918,417 +5436,417 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.DOCUMENT_ROOT__MIXED:
-                getMixed().clear();
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
-                getXMLNSPrefixMap().clear();
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
-                getXSISchemaLocation().clear();
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__ACTIVITY:
-                setActivity((Activity)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__AD_HOC_SUB_PROCESS:
-                setAdHocSubProcess((AdHocSubProcess)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__FLOW_ELEMENT:
-                setFlowElement((FlowElement)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__ARTIFACT:
-                setArtifact((Artifact)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__ASSIGNMENT:
-                setAssignment((Assignment)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__ASSOCIATION:
-                setAssociation((Association)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__AUDITING:
-                setAuditing((Auditing)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__BASE_ELEMENT:
-                setBaseElement((BaseElement)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT:
-                setBaseElementWithMixedContent((Object)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__BOUNDARY_EVENT:
-                setBoundaryEvent((BoundaryEvent)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__BUSINESS_RULE_TASK:
-                setBusinessRuleTask((BusinessRuleTask)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CALLABLE_ELEMENT:
-                setCallableElement((CallableElement)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CALL_ACTIVITY:
-                setCallActivity((CallActivity)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CALL_CHOREOGRAPHY:
-                setCallChoreography((CallChoreography)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CALL_CONVERSATION:
-                setCallConversation((CallConversation)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_NODE:
-                setConversationNode((ConversationNode)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CANCEL_EVENT_DEFINITION:
-                setCancelEventDefinition((CancelEventDefinition)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__EVENT_DEFINITION:
-                setEventDefinition((EventDefinition)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__ROOT_ELEMENT:
-                setRootElement((RootElement)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CATCH_EVENT:
-                setCatchEvent((CatchEvent)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CATEGORY:
-                setCategory((Category)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CATEGORY_VALUE:
-                setCategoryValue((CategoryValue)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY:
-                setChoreography((Choreography)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__COLLABORATION:
-                setCollaboration((Collaboration)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY_ACTIVITY:
-                setChoreographyActivity((ChoreographyActivity)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY_TASK:
-                setChoreographyTask((ChoreographyTask)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__COMPENSATE_EVENT_DEFINITION:
-                setCompensateEventDefinition((CompensateEventDefinition)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__COMPLEX_BEHAVIOR_DEFINITION:
-                setComplexBehaviorDefinition((ComplexBehaviorDefinition)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__COMPLEX_GATEWAY:
-                setComplexGateway((ComplexGateway)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CONDITIONAL_EVENT_DEFINITION:
-                setConditionalEventDefinition((ConditionalEventDefinition)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION:
-                setConversation((Conversation)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_ASSOCIATION:
-                setConversationAssociation((ConversationAssociation)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_LINK:
-                setConversationLink((ConversationLink)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_KEY:
-                setCorrelationKey((CorrelationKey)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY:
-                setCorrelationProperty((CorrelationProperty)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY_BINDING:
-                setCorrelationPropertyBinding((CorrelationPropertyBinding)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
-                setCorrelationPropertyRetrievalExpression((CorrelationPropertyRetrievalExpression)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_SUBSCRIPTION:
-                setCorrelationSubscription((CorrelationSubscription)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_ASSOCIATION:
-                setDataAssociation((DataAssociation)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_INPUT:
-                setDataInput((DataInput)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_INPUT_ASSOCIATION:
-                setDataInputAssociation((DataInputAssociation)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_OBJECT:
-                setDataObject((DataObject)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_OBJECT_REFERENCE:
-                setDataObjectReference((DataObjectReference)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_OUTPUT:
-                setDataOutput((DataOutput)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_OUTPUT_ASSOCIATION:
-                setDataOutputAssociation((DataOutputAssociation)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_STATE:
-                setDataState((DataState)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_STORE:
-                setDataStore((DataStore)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_STORE_REFERENCE:
-                setDataStoreReference((DataStoreReference)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__DEFINITIONS:
-                setDefinitions((Definitions)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__DOCUMENTATION:
-                setDocumentation((Documentation)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__END_EVENT:
-                setEndEvent((EndEvent)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__END_POINT:
-                setEndPoint((EndPoint)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__ERROR:
-                setError((org.eclipse.bpmn2.Error)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__ERROR_EVENT_DEFINITION:
-                setErrorEventDefinition((ErrorEventDefinition)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__ESCALATION:
-                setEscalation((Escalation)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__ESCALATION_EVENT_DEFINITION:
-                setEscalationEventDefinition((EscalationEventDefinition)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__EVENT:
-                setEvent((Event)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__EVENT_BASED_GATEWAY:
-                setEventBasedGateway((EventBasedGateway)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__EXCLUSIVE_GATEWAY:
-                setExclusiveGateway((ExclusiveGateway)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__EXPRESSION:
-                setExpression((Expression)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__EXTENSION:
-                setExtension((Extension)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__EXTENSION_ELEMENTS:
-                setExtensionElements((Object)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__FLOW_NODE:
-                setFlowNode((FlowNode)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__FORMAL_EXPRESSION:
-                setFormalExpression((FormalExpression)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_BUSINESS_RULE_TASK:
-                setGlobalBusinessRuleTask((GlobalBusinessRuleTask)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_CHOREOGRAPHY_TASK:
-                setGlobalChoreographyTask((GlobalChoreographyTask)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_CONVERSATION:
-                setGlobalConversation((GlobalConversation)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_MANUAL_TASK:
-                setGlobalManualTask((GlobalManualTask)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_SCRIPT_TASK:
-                setGlobalScriptTask((GlobalScriptTask)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_TASK:
-                setGlobalTask((GlobalTask)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_USER_TASK:
-                setGlobalUserTask((GlobalUserTask)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__GROUP:
-                setGroup((Group)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__HUMAN_PERFORMER:
-                setHumanPerformer((HumanPerformer)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__PERFORMER:
-                setPerformer((Performer)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_ROLE:
-                setResourceRole((ResourceRole)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__IMPLICIT_THROW_EVENT:
-                setImplicitThrowEvent((ImplicitThrowEvent)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__IMPORT:
-                setImport((Import)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__INCLUSIVE_GATEWAY:
-                setInclusiveGateway((InclusiveGateway)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__INPUT_SET:
-                setInputSet((InputSet)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__INTERFACE:
-                setInterface((Interface)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__INTERMEDIATE_CATCH_EVENT:
-                setIntermediateCatchEvent((IntermediateCatchEvent)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__INTERMEDIATE_THROW_EVENT:
-                setIntermediateThrowEvent((IntermediateThrowEvent)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__IO_BINDING:
-                setIoBinding((InputOutputBinding)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__IO_SPECIFICATION:
-                setIoSpecification((InputOutputSpecification)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__ITEM_DEFINITION:
-                setItemDefinition((ItemDefinition)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__LANE:
-                setLane((Lane)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__LANE_SET:
-                setLaneSet((LaneSet)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__LINK_EVENT_DEFINITION:
-                setLinkEventDefinition((LinkEventDefinition)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__LOOP_CHARACTERISTICS:
-                setLoopCharacteristics((LoopCharacteristics)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__MANUAL_TASK:
-                setManualTask((ManualTask)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__MESSAGE:
-                setMessage((Message)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_EVENT_DEFINITION:
-                setMessageEventDefinition((MessageEventDefinition)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_FLOW:
-                setMessageFlow((MessageFlow)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_FLOW_ASSOCIATION:
-                setMessageFlowAssociation((MessageFlowAssociation)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__MONITORING:
-                setMonitoring((Monitoring)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__MULTI_INSTANCE_LOOP_CHARACTERISTICS:
-                setMultiInstanceLoopCharacteristics((MultiInstanceLoopCharacteristics)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__OPERATION:
-                setOperation((Operation)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__OUTPUT_SET:
-                setOutputSet((OutputSet)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__PARALLEL_GATEWAY:
-                setParallelGateway((ParallelGateway)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT:
-                setParticipant((Participant)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT_ASSOCIATION:
-                setParticipantAssociation((ParticipantAssociation)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT_MULTIPLICITY:
-                setParticipantMultiplicity((ParticipantMultiplicity)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__PARTNER_ENTITY:
-                setPartnerEntity((PartnerEntity)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__PARTNER_ROLE:
-                setPartnerRole((PartnerRole)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__POTENTIAL_OWNER:
-                setPotentialOwner((PotentialOwner)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__PROCESS:
-                setProcess((org.eclipse.bpmn2.Process)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__PROPERTY:
-                setProperty((Property)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__RECEIVE_TASK:
-                setReceiveTask((ReceiveTask)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__RELATIONSHIP:
-                setRelationship((Relationship)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__RENDERING:
-                setRendering((Rendering)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__RESOURCE:
-                setResource((Resource)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_ASSIGNMENT_EXPRESSION:
-                setResourceAssignmentExpression((ResourceAssignmentExpression)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_PARAMETER:
-                setResourceParameter((ResourceParameter)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_PARAMETER_BINDING:
-                setResourceParameterBinding((ResourceParameterBinding)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__SCRIPT:
-                setScript((Object)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__SCRIPT_TASK:
-                setScriptTask((ScriptTask)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__SEND_TASK:
-                setSendTask((SendTask)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__SEQUENCE_FLOW:
-                setSequenceFlow((SequenceFlow)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__SERVICE_TASK:
-                setServiceTask((ServiceTask)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__SIGNAL:
-                setSignal((Signal)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__SIGNAL_EVENT_DEFINITION:
-                setSignalEventDefinition((SignalEventDefinition)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__STANDARD_LOOP_CHARACTERISTICS:
-                setStandardLoopCharacteristics((StandardLoopCharacteristics)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__START_EVENT:
-                setStartEvent((StartEvent)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__SUB_CHOREOGRAPHY:
-                setSubChoreography((SubChoreography)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__SUB_CONVERSATION:
-                setSubConversation((SubConversation)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__SUB_PROCESS:
-                setSubProcess((SubProcess)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__TASK:
-                setTask((Task)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__TERMINATE_EVENT_DEFINITION:
-                setTerminateEventDefinition((TerminateEventDefinition)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__TEXT:
-                setText((Object)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__TEXT_ANNOTATION:
-                setTextAnnotation((TextAnnotation)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__THROW_EVENT:
-                setThrowEvent((ThrowEvent)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__TIMER_EVENT_DEFINITION:
-                setTimerEventDefinition((TimerEventDefinition)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__TRANSACTION:
-                setTransaction((Transaction)null);
-                return;
-            case Bpmn2Package.DOCUMENT_ROOT__USER_TASK:
-                setUserTask((UserTask)null);
-                return;
+        case Bpmn2Package.DOCUMENT_ROOT__MIXED:
+            getMixed().clear();
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
+            getXMLNSPrefixMap().clear();
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
+            getXSISchemaLocation().clear();
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__ACTIVITY:
+            setActivity((Activity) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__AD_HOC_SUB_PROCESS:
+            setAdHocSubProcess((AdHocSubProcess) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__FLOW_ELEMENT:
+            setFlowElement((FlowElement) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__ARTIFACT:
+            setArtifact((Artifact) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__ASSIGNMENT:
+            setAssignment((Assignment) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__ASSOCIATION:
+            setAssociation((Association) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__AUDITING:
+            setAuditing((Auditing) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__BASE_ELEMENT:
+            setBaseElement((BaseElement) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT:
+            setBaseElementWithMixedContent((Object) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__BOUNDARY_EVENT:
+            setBoundaryEvent((BoundaryEvent) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__BUSINESS_RULE_TASK:
+            setBusinessRuleTask((BusinessRuleTask) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CALLABLE_ELEMENT:
+            setCallableElement((CallableElement) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CALL_ACTIVITY:
+            setCallActivity((CallActivity) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CALL_CHOREOGRAPHY:
+            setCallChoreography((CallChoreography) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CALL_CONVERSATION:
+            setCallConversation((CallConversation) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_NODE:
+            setConversationNode((ConversationNode) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CANCEL_EVENT_DEFINITION:
+            setCancelEventDefinition((CancelEventDefinition) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__EVENT_DEFINITION:
+            setEventDefinition((EventDefinition) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__ROOT_ELEMENT:
+            setRootElement((RootElement) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CATCH_EVENT:
+            setCatchEvent((CatchEvent) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CATEGORY:
+            setCategory((Category) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CATEGORY_VALUE:
+            setCategoryValue((CategoryValue) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY:
+            setChoreography((Choreography) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__COLLABORATION:
+            setCollaboration((Collaboration) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY_ACTIVITY:
+            setChoreographyActivity((ChoreographyActivity) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY_TASK:
+            setChoreographyTask((ChoreographyTask) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__COMPENSATE_EVENT_DEFINITION:
+            setCompensateEventDefinition((CompensateEventDefinition) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__COMPLEX_BEHAVIOR_DEFINITION:
+            setComplexBehaviorDefinition((ComplexBehaviorDefinition) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__COMPLEX_GATEWAY:
+            setComplexGateway((ComplexGateway) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CONDITIONAL_EVENT_DEFINITION:
+            setConditionalEventDefinition((ConditionalEventDefinition) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION:
+            setConversation((Conversation) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_ASSOCIATION:
+            setConversationAssociation((ConversationAssociation) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_LINK:
+            setConversationLink((ConversationLink) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_KEY:
+            setCorrelationKey((CorrelationKey) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY:
+            setCorrelationProperty((CorrelationProperty) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY_BINDING:
+            setCorrelationPropertyBinding((CorrelationPropertyBinding) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
+            setCorrelationPropertyRetrievalExpression((CorrelationPropertyRetrievalExpression) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_SUBSCRIPTION:
+            setCorrelationSubscription((CorrelationSubscription) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_ASSOCIATION:
+            setDataAssociation((DataAssociation) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_INPUT:
+            setDataInput((DataInput) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_INPUT_ASSOCIATION:
+            setDataInputAssociation((DataInputAssociation) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_OBJECT:
+            setDataObject((DataObject) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_OBJECT_REFERENCE:
+            setDataObjectReference((DataObjectReference) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_OUTPUT:
+            setDataOutput((DataOutput) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_OUTPUT_ASSOCIATION:
+            setDataOutputAssociation((DataOutputAssociation) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_STATE:
+            setDataState((DataState) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_STORE:
+            setDataStore((DataStore) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_STORE_REFERENCE:
+            setDataStoreReference((DataStoreReference) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__DEFINITIONS:
+            setDefinitions((Definitions) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__DOCUMENTATION:
+            setDocumentation((Documentation) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__END_EVENT:
+            setEndEvent((EndEvent) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__END_POINT:
+            setEndPoint((EndPoint) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__ERROR:
+            setError((org.eclipse.bpmn2.Error) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__ERROR_EVENT_DEFINITION:
+            setErrorEventDefinition((ErrorEventDefinition) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__ESCALATION:
+            setEscalation((Escalation) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__ESCALATION_EVENT_DEFINITION:
+            setEscalationEventDefinition((EscalationEventDefinition) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__EVENT:
+            setEvent((Event) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__EVENT_BASED_GATEWAY:
+            setEventBasedGateway((EventBasedGateway) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__EXCLUSIVE_GATEWAY:
+            setExclusiveGateway((ExclusiveGateway) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__EXPRESSION:
+            setExpression((Expression) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__EXTENSION:
+            setExtension((Extension) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__EXTENSION_ELEMENTS:
+            setExtensionElements((Object) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__FLOW_NODE:
+            setFlowNode((FlowNode) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__FORMAL_EXPRESSION:
+            setFormalExpression((FormalExpression) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_BUSINESS_RULE_TASK:
+            setGlobalBusinessRuleTask((GlobalBusinessRuleTask) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_CHOREOGRAPHY_TASK:
+            setGlobalChoreographyTask((GlobalChoreographyTask) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_CONVERSATION:
+            setGlobalConversation((GlobalConversation) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_MANUAL_TASK:
+            setGlobalManualTask((GlobalManualTask) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_SCRIPT_TASK:
+            setGlobalScriptTask((GlobalScriptTask) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_TASK:
+            setGlobalTask((GlobalTask) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_USER_TASK:
+            setGlobalUserTask((GlobalUserTask) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__GROUP:
+            setGroup((Group) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__HUMAN_PERFORMER:
+            setHumanPerformer((HumanPerformer) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__PERFORMER:
+            setPerformer((Performer) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_ROLE:
+            setResourceRole((ResourceRole) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__IMPLICIT_THROW_EVENT:
+            setImplicitThrowEvent((ImplicitThrowEvent) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__IMPORT:
+            setImport((Import) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__INCLUSIVE_GATEWAY:
+            setInclusiveGateway((InclusiveGateway) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__INPUT_SET:
+            setInputSet((InputSet) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__INTERFACE:
+            setInterface((Interface) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__INTERMEDIATE_CATCH_EVENT:
+            setIntermediateCatchEvent((IntermediateCatchEvent) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__INTERMEDIATE_THROW_EVENT:
+            setIntermediateThrowEvent((IntermediateThrowEvent) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__IO_BINDING:
+            setIoBinding((InputOutputBinding) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__IO_SPECIFICATION:
+            setIoSpecification((InputOutputSpecification) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__ITEM_DEFINITION:
+            setItemDefinition((ItemDefinition) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__LANE:
+            setLane((Lane) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__LANE_SET:
+            setLaneSet((LaneSet) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__LINK_EVENT_DEFINITION:
+            setLinkEventDefinition((LinkEventDefinition) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__LOOP_CHARACTERISTICS:
+            setLoopCharacteristics((LoopCharacteristics) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__MANUAL_TASK:
+            setManualTask((ManualTask) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__MESSAGE:
+            setMessage((Message) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_EVENT_DEFINITION:
+            setMessageEventDefinition((MessageEventDefinition) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_FLOW:
+            setMessageFlow((MessageFlow) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_FLOW_ASSOCIATION:
+            setMessageFlowAssociation((MessageFlowAssociation) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__MONITORING:
+            setMonitoring((Monitoring) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__MULTI_INSTANCE_LOOP_CHARACTERISTICS:
+            setMultiInstanceLoopCharacteristics((MultiInstanceLoopCharacteristics) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__OPERATION:
+            setOperation((Operation) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__OUTPUT_SET:
+            setOutputSet((OutputSet) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__PARALLEL_GATEWAY:
+            setParallelGateway((ParallelGateway) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT:
+            setParticipant((Participant) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT_ASSOCIATION:
+            setParticipantAssociation((ParticipantAssociation) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT_MULTIPLICITY:
+            setParticipantMultiplicity((ParticipantMultiplicity) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__PARTNER_ENTITY:
+            setPartnerEntity((PartnerEntity) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__PARTNER_ROLE:
+            setPartnerRole((PartnerRole) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__POTENTIAL_OWNER:
+            setPotentialOwner((PotentialOwner) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__PROCESS:
+            setProcess((org.eclipse.bpmn2.Process) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__PROPERTY:
+            setProperty((Property) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__RECEIVE_TASK:
+            setReceiveTask((ReceiveTask) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__RELATIONSHIP:
+            setRelationship((Relationship) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__RENDERING:
+            setRendering((Rendering) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__RESOURCE:
+            setResource((Resource) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_ASSIGNMENT_EXPRESSION:
+            setResourceAssignmentExpression((ResourceAssignmentExpression) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_PARAMETER:
+            setResourceParameter((ResourceParameter) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_PARAMETER_BINDING:
+            setResourceParameterBinding((ResourceParameterBinding) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__SCRIPT:
+            setScript((Object) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__SCRIPT_TASK:
+            setScriptTask((ScriptTask) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__SEND_TASK:
+            setSendTask((SendTask) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__SEQUENCE_FLOW:
+            setSequenceFlow((SequenceFlow) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__SERVICE_TASK:
+            setServiceTask((ServiceTask) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__SIGNAL:
+            setSignal((Signal) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__SIGNAL_EVENT_DEFINITION:
+            setSignalEventDefinition((SignalEventDefinition) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__STANDARD_LOOP_CHARACTERISTICS:
+            setStandardLoopCharacteristics((StandardLoopCharacteristics) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__START_EVENT:
+            setStartEvent((StartEvent) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__SUB_CHOREOGRAPHY:
+            setSubChoreography((SubChoreography) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__SUB_CONVERSATION:
+            setSubConversation((SubConversation) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__SUB_PROCESS:
+            setSubProcess((SubProcess) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__TASK:
+            setTask((Task) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__TERMINATE_EVENT_DEFINITION:
+            setTerminateEventDefinition((TerminateEventDefinition) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__TEXT:
+            setText((Object) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__TEXT_ANNOTATION:
+            setTextAnnotation((TextAnnotation) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__THROW_EVENT:
+            setThrowEvent((ThrowEvent) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__TIMER_EVENT_DEFINITION:
+            setTimerEventDefinition((TimerEventDefinition) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__TRANSACTION:
+            setTransaction((Transaction) null);
+            return;
+        case Bpmn2Package.DOCUMENT_ROOT__USER_TASK:
+            setUserTask((UserTask) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -5341,282 +5859,282 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.DOCUMENT_ROOT__MIXED:
-                return mixed != null && !mixed.isEmpty();
-            case Bpmn2Package.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
-                return xMLNSPrefixMap != null && !xMLNSPrefixMap.isEmpty();
-            case Bpmn2Package.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
-                return xSISchemaLocation != null && !xSISchemaLocation.isEmpty();
-            case Bpmn2Package.DOCUMENT_ROOT__ACTIVITY:
-                return getActivity() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__AD_HOC_SUB_PROCESS:
-                return getAdHocSubProcess() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__FLOW_ELEMENT:
-                return getFlowElement() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__ARTIFACT:
-                return getArtifact() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__ASSIGNMENT:
-                return getAssignment() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__ASSOCIATION:
-                return getAssociation() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__AUDITING:
-                return getAuditing() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__BASE_ELEMENT:
-                return getBaseElement() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT:
-                return getBaseElementWithMixedContent() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__BOUNDARY_EVENT:
-                return getBoundaryEvent() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__BUSINESS_RULE_TASK:
-                return getBusinessRuleTask() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__CALLABLE_ELEMENT:
-                return getCallableElement() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__CALL_ACTIVITY:
-                return getCallActivity() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__CALL_CHOREOGRAPHY:
-                return getCallChoreography() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__CALL_CONVERSATION:
-                return getCallConversation() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_NODE:
-                return getConversationNode() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__CANCEL_EVENT_DEFINITION:
-                return getCancelEventDefinition() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__EVENT_DEFINITION:
-                return getEventDefinition() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__ROOT_ELEMENT:
-                return getRootElement() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__CATCH_EVENT:
-                return getCatchEvent() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__CATEGORY:
-                return getCategory() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__CATEGORY_VALUE:
-                return getCategoryValue() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY:
-                return getChoreography() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__COLLABORATION:
-                return getCollaboration() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY_ACTIVITY:
-                return getChoreographyActivity() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY_TASK:
-                return getChoreographyTask() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__COMPENSATE_EVENT_DEFINITION:
-                return getCompensateEventDefinition() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__COMPLEX_BEHAVIOR_DEFINITION:
-                return getComplexBehaviorDefinition() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__COMPLEX_GATEWAY:
-                return getComplexGateway() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__CONDITIONAL_EVENT_DEFINITION:
-                return getConditionalEventDefinition() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION:
-                return getConversation() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_ASSOCIATION:
-                return getConversationAssociation() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_LINK:
-                return getConversationLink() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_KEY:
-                return getCorrelationKey() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY:
-                return getCorrelationProperty() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY_BINDING:
-                return getCorrelationPropertyBinding() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
-                return getCorrelationPropertyRetrievalExpression() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_SUBSCRIPTION:
-                return getCorrelationSubscription() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_ASSOCIATION:
-                return getDataAssociation() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_INPUT:
-                return getDataInput() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_INPUT_ASSOCIATION:
-                return getDataInputAssociation() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_OBJECT:
-                return getDataObject() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_OBJECT_REFERENCE:
-                return getDataObjectReference() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_OUTPUT:
-                return getDataOutput() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_OUTPUT_ASSOCIATION:
-                return getDataOutputAssociation() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_STATE:
-                return getDataState() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_STORE:
-                return getDataStore() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__DATA_STORE_REFERENCE:
-                return getDataStoreReference() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__DEFINITIONS:
-                return getDefinitions() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__DOCUMENTATION:
-                return getDocumentation() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__END_EVENT:
-                return getEndEvent() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__END_POINT:
-                return getEndPoint() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__ERROR:
-                return getError() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__ERROR_EVENT_DEFINITION:
-                return getErrorEventDefinition() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__ESCALATION:
-                return getEscalation() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__ESCALATION_EVENT_DEFINITION:
-                return getEscalationEventDefinition() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__EVENT:
-                return getEvent() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__EVENT_BASED_GATEWAY:
-                return getEventBasedGateway() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__EXCLUSIVE_GATEWAY:
-                return getExclusiveGateway() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__EXPRESSION:
-                return getExpression() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__EXTENSION:
-                return getExtension() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__EXTENSION_ELEMENTS:
-                return getExtensionElements() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__FLOW_NODE:
-                return getFlowNode() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__FORMAL_EXPRESSION:
-                return getFormalExpression() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__GATEWAY:
-                return getGateway() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_BUSINESS_RULE_TASK:
-                return getGlobalBusinessRuleTask() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_CHOREOGRAPHY_TASK:
-                return getGlobalChoreographyTask() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_CONVERSATION:
-                return getGlobalConversation() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_MANUAL_TASK:
-                return getGlobalManualTask() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_SCRIPT_TASK:
-                return getGlobalScriptTask() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_TASK:
-                return getGlobalTask() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_USER_TASK:
-                return getGlobalUserTask() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__GROUP:
-                return getGroup() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__HUMAN_PERFORMER:
-                return getHumanPerformer() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__PERFORMER:
-                return getPerformer() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_ROLE:
-                return getResourceRole() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__IMPLICIT_THROW_EVENT:
-                return getImplicitThrowEvent() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__IMPORT:
-                return getImport() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__INCLUSIVE_GATEWAY:
-                return getInclusiveGateway() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__INPUT_SET:
-                return getInputSet() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__INTERFACE:
-                return getInterface() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__INTERMEDIATE_CATCH_EVENT:
-                return getIntermediateCatchEvent() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__INTERMEDIATE_THROW_EVENT:
-                return getIntermediateThrowEvent() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__IO_BINDING:
-                return getIoBinding() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__IO_SPECIFICATION:
-                return getIoSpecification() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__ITEM_DEFINITION:
-                return getItemDefinition() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__LANE:
-                return getLane() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__LANE_SET:
-                return getLaneSet() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__LINK_EVENT_DEFINITION:
-                return getLinkEventDefinition() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__LOOP_CHARACTERISTICS:
-                return getLoopCharacteristics() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__MANUAL_TASK:
-                return getManualTask() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__MESSAGE:
-                return getMessage() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_EVENT_DEFINITION:
-                return getMessageEventDefinition() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_FLOW:
-                return getMessageFlow() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_FLOW_ASSOCIATION:
-                return getMessageFlowAssociation() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__MONITORING:
-                return getMonitoring() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__MULTI_INSTANCE_LOOP_CHARACTERISTICS:
-                return getMultiInstanceLoopCharacteristics() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__OPERATION:
-                return getOperation() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__OUTPUT_SET:
-                return getOutputSet() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__PARALLEL_GATEWAY:
-                return getParallelGateway() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT:
-                return getParticipant() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT_ASSOCIATION:
-                return getParticipantAssociation() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT_MULTIPLICITY:
-                return getParticipantMultiplicity() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__PARTNER_ENTITY:
-                return getPartnerEntity() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__PARTNER_ROLE:
-                return getPartnerRole() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__POTENTIAL_OWNER:
-                return getPotentialOwner() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__PROCESS:
-                return getProcess() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__PROPERTY:
-                return getProperty() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__RECEIVE_TASK:
-                return getReceiveTask() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__RELATIONSHIP:
-                return getRelationship() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__RENDERING:
-                return getRendering() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__RESOURCE:
-                return getResource() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_ASSIGNMENT_EXPRESSION:
-                return getResourceAssignmentExpression() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_PARAMETER:
-                return getResourceParameter() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_PARAMETER_BINDING:
-                return getResourceParameterBinding() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__SCRIPT:
-                return getScript() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__SCRIPT_TASK:
-                return getScriptTask() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__SEND_TASK:
-                return getSendTask() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__SEQUENCE_FLOW:
-                return getSequenceFlow() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__SERVICE_TASK:
-                return getServiceTask() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__SIGNAL:
-                return getSignal() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__SIGNAL_EVENT_DEFINITION:
-                return getSignalEventDefinition() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__STANDARD_LOOP_CHARACTERISTICS:
-                return getStandardLoopCharacteristics() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__START_EVENT:
-                return getStartEvent() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__SUB_CHOREOGRAPHY:
-                return getSubChoreography() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__SUB_CONVERSATION:
-                return getSubConversation() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__SUB_PROCESS:
-                return getSubProcess() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__TASK:
-                return getTask() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__TERMINATE_EVENT_DEFINITION:
-                return getTerminateEventDefinition() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__TEXT:
-                return getText() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__TEXT_ANNOTATION:
-                return getTextAnnotation() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__THROW_EVENT:
-                return getThrowEvent() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__TIMER_EVENT_DEFINITION:
-                return getTimerEventDefinition() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__TRANSACTION:
-                return getTransaction() != null;
-            case Bpmn2Package.DOCUMENT_ROOT__USER_TASK:
-                return getUserTask() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__MIXED:
+            return mixed != null && !mixed.isEmpty();
+        case Bpmn2Package.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
+            return xMLNSPrefixMap != null && !xMLNSPrefixMap.isEmpty();
+        case Bpmn2Package.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
+            return xSISchemaLocation != null && !xSISchemaLocation.isEmpty();
+        case Bpmn2Package.DOCUMENT_ROOT__ACTIVITY:
+            return getActivity() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__AD_HOC_SUB_PROCESS:
+            return getAdHocSubProcess() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__FLOW_ELEMENT:
+            return getFlowElement() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__ARTIFACT:
+            return getArtifact() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__ASSIGNMENT:
+            return getAssignment() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__ASSOCIATION:
+            return getAssociation() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__AUDITING:
+            return getAuditing() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__BASE_ELEMENT:
+            return getBaseElement() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT:
+            return getBaseElementWithMixedContent() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__BOUNDARY_EVENT:
+            return getBoundaryEvent() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__BUSINESS_RULE_TASK:
+            return getBusinessRuleTask() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__CALLABLE_ELEMENT:
+            return getCallableElement() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__CALL_ACTIVITY:
+            return getCallActivity() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__CALL_CHOREOGRAPHY:
+            return getCallChoreography() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__CALL_CONVERSATION:
+            return getCallConversation() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_NODE:
+            return getConversationNode() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__CANCEL_EVENT_DEFINITION:
+            return getCancelEventDefinition() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__EVENT_DEFINITION:
+            return getEventDefinition() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__ROOT_ELEMENT:
+            return getRootElement() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__CATCH_EVENT:
+            return getCatchEvent() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__CATEGORY:
+            return getCategory() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__CATEGORY_VALUE:
+            return getCategoryValue() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY:
+            return getChoreography() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__COLLABORATION:
+            return getCollaboration() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY_ACTIVITY:
+            return getChoreographyActivity() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__CHOREOGRAPHY_TASK:
+            return getChoreographyTask() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__COMPENSATE_EVENT_DEFINITION:
+            return getCompensateEventDefinition() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__COMPLEX_BEHAVIOR_DEFINITION:
+            return getComplexBehaviorDefinition() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__COMPLEX_GATEWAY:
+            return getComplexGateway() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__CONDITIONAL_EVENT_DEFINITION:
+            return getConditionalEventDefinition() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION:
+            return getConversation() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_ASSOCIATION:
+            return getConversationAssociation() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__CONVERSATION_LINK:
+            return getConversationLink() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_KEY:
+            return getCorrelationKey() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY:
+            return getCorrelationProperty() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY_BINDING:
+            return getCorrelationPropertyBinding() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
+            return getCorrelationPropertyRetrievalExpression() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__CORRELATION_SUBSCRIPTION:
+            return getCorrelationSubscription() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_ASSOCIATION:
+            return getDataAssociation() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_INPUT:
+            return getDataInput() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_INPUT_ASSOCIATION:
+            return getDataInputAssociation() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_OBJECT:
+            return getDataObject() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_OBJECT_REFERENCE:
+            return getDataObjectReference() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_OUTPUT:
+            return getDataOutput() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_OUTPUT_ASSOCIATION:
+            return getDataOutputAssociation() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_STATE:
+            return getDataState() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_STORE:
+            return getDataStore() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__DATA_STORE_REFERENCE:
+            return getDataStoreReference() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__DEFINITIONS:
+            return getDefinitions() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__DOCUMENTATION:
+            return getDocumentation() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__END_EVENT:
+            return getEndEvent() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__END_POINT:
+            return getEndPoint() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__ERROR:
+            return getError() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__ERROR_EVENT_DEFINITION:
+            return getErrorEventDefinition() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__ESCALATION:
+            return getEscalation() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__ESCALATION_EVENT_DEFINITION:
+            return getEscalationEventDefinition() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__EVENT:
+            return getEvent() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__EVENT_BASED_GATEWAY:
+            return getEventBasedGateway() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__EXCLUSIVE_GATEWAY:
+            return getExclusiveGateway() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__EXPRESSION:
+            return getExpression() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__EXTENSION:
+            return getExtension() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__EXTENSION_ELEMENTS:
+            return getExtensionElements() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__FLOW_NODE:
+            return getFlowNode() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__FORMAL_EXPRESSION:
+            return getFormalExpression() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__GATEWAY:
+            return getGateway() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_BUSINESS_RULE_TASK:
+            return getGlobalBusinessRuleTask() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_CHOREOGRAPHY_TASK:
+            return getGlobalChoreographyTask() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_CONVERSATION:
+            return getGlobalConversation() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_MANUAL_TASK:
+            return getGlobalManualTask() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_SCRIPT_TASK:
+            return getGlobalScriptTask() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_TASK:
+            return getGlobalTask() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__GLOBAL_USER_TASK:
+            return getGlobalUserTask() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__GROUP:
+            return getGroup() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__HUMAN_PERFORMER:
+            return getHumanPerformer() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__PERFORMER:
+            return getPerformer() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_ROLE:
+            return getResourceRole() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__IMPLICIT_THROW_EVENT:
+            return getImplicitThrowEvent() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__IMPORT:
+            return getImport() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__INCLUSIVE_GATEWAY:
+            return getInclusiveGateway() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__INPUT_SET:
+            return getInputSet() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__INTERFACE:
+            return getInterface() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__INTERMEDIATE_CATCH_EVENT:
+            return getIntermediateCatchEvent() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__INTERMEDIATE_THROW_EVENT:
+            return getIntermediateThrowEvent() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__IO_BINDING:
+            return getIoBinding() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__IO_SPECIFICATION:
+            return getIoSpecification() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__ITEM_DEFINITION:
+            return getItemDefinition() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__LANE:
+            return getLane() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__LANE_SET:
+            return getLaneSet() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__LINK_EVENT_DEFINITION:
+            return getLinkEventDefinition() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__LOOP_CHARACTERISTICS:
+            return getLoopCharacteristics() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__MANUAL_TASK:
+            return getManualTask() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__MESSAGE:
+            return getMessage() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_EVENT_DEFINITION:
+            return getMessageEventDefinition() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_FLOW:
+            return getMessageFlow() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__MESSAGE_FLOW_ASSOCIATION:
+            return getMessageFlowAssociation() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__MONITORING:
+            return getMonitoring() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__MULTI_INSTANCE_LOOP_CHARACTERISTICS:
+            return getMultiInstanceLoopCharacteristics() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__OPERATION:
+            return getOperation() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__OUTPUT_SET:
+            return getOutputSet() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__PARALLEL_GATEWAY:
+            return getParallelGateway() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT:
+            return getParticipant() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT_ASSOCIATION:
+            return getParticipantAssociation() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__PARTICIPANT_MULTIPLICITY:
+            return getParticipantMultiplicity() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__PARTNER_ENTITY:
+            return getPartnerEntity() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__PARTNER_ROLE:
+            return getPartnerRole() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__POTENTIAL_OWNER:
+            return getPotentialOwner() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__PROCESS:
+            return getProcess() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__PROPERTY:
+            return getProperty() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__RECEIVE_TASK:
+            return getReceiveTask() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__RELATIONSHIP:
+            return getRelationship() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__RENDERING:
+            return getRendering() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__RESOURCE:
+            return getResource() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_ASSIGNMENT_EXPRESSION:
+            return getResourceAssignmentExpression() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_PARAMETER:
+            return getResourceParameter() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__RESOURCE_PARAMETER_BINDING:
+            return getResourceParameterBinding() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__SCRIPT:
+            return getScript() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__SCRIPT_TASK:
+            return getScriptTask() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__SEND_TASK:
+            return getSendTask() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__SEQUENCE_FLOW:
+            return getSequenceFlow() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__SERVICE_TASK:
+            return getServiceTask() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__SIGNAL:
+            return getSignal() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__SIGNAL_EVENT_DEFINITION:
+            return getSignalEventDefinition() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__STANDARD_LOOP_CHARACTERISTICS:
+            return getStandardLoopCharacteristics() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__START_EVENT:
+            return getStartEvent() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__SUB_CHOREOGRAPHY:
+            return getSubChoreography() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__SUB_CONVERSATION:
+            return getSubConversation() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__SUB_PROCESS:
+            return getSubProcess() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__TASK:
+            return getTask() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__TERMINATE_EVENT_DEFINITION:
+            return getTerminateEventDefinition() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__TEXT:
+            return getText() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__TEXT_ANNOTATION:
+            return getTextAnnotation() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__THROW_EVENT:
+            return getThrowEvent() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__TIMER_EVENT_DEFINITION:
+            return getTimerEventDefinition() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__TRANSACTION:
+            return getTransaction() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__USER_TASK:
+            return getUserTask() != null;
         }
         return super.eIsSet(featureID);
     }

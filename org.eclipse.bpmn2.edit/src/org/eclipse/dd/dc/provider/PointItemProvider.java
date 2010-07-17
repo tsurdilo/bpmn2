@@ -41,7 +41,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class PointItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class PointItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider,
+        IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -76,7 +78,13 @@ public class PointItemProvider extends ItemProviderAdapter implements IEditingDo
      * @generated
      */
     protected void addXPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Point_x_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Point_x_feature", "_UI_Point_type"), DcPackage.Literals.POINT__X, true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Point_x_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Point_x_feature",
+                        "_UI_Point_type"), DcPackage.Literals.POINT__X, true, false, false,
+                ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -86,7 +94,13 @@ public class PointItemProvider extends ItemProviderAdapter implements IEditingDo
      * @generated
      */
     protected void addYPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Point_y_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Point_y_feature", "_UI_Point_type"), DcPackage.Literals.POINT__Y, true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Point_y_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Point_y_feature",
+                        "_UI_Point_type"), DcPackage.Literals.POINT__Y, true, false, false,
+                ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -112,7 +126,7 @@ public class PointItemProvider extends ItemProviderAdapter implements IEditingDo
      */
     @Override
     public String getText(Object object) {
-        Point point = (Point)object;
+        Point point = (Point) object;
         return getString("_UI_Point_type") + " " + point.getX();
     }
 
@@ -128,10 +142,11 @@ public class PointItemProvider extends ItemProviderAdapter implements IEditingDo
         updateChildren(notification);
 
         switch (notification.getFeatureID(Point.class)) {
-            case DcPackage.POINT__X:
-            case DcPackage.POINT__Y:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case DcPackage.POINT__X:
+        case DcPackage.POINT__Y:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }

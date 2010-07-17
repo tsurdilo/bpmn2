@@ -38,7 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class GlobalScriptTaskItemProvider extends GlobalTaskItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class GlobalScriptTaskItemProvider extends GlobalTaskItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -73,7 +75,14 @@ public class GlobalScriptTaskItemProvider extends GlobalTaskItemProvider impleme
      * @generated
      */
     protected void addScriptPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_GlobalScriptTask_script_feature"), getString("_UI_PropertyDescriptor_description", "_UI_GlobalScriptTask_script_feature", "_UI_GlobalScriptTask_type"), Bpmn2Package.Literals.GLOBAL_SCRIPT_TASK__SCRIPT, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_GlobalScriptTask_script_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_GlobalScriptTask_script_feature", "_UI_GlobalScriptTask_type"),
+                Bpmn2Package.Literals.GLOBAL_SCRIPT_TASK__SCRIPT, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -83,7 +92,16 @@ public class GlobalScriptTaskItemProvider extends GlobalTaskItemProvider impleme
      * @generated
      */
     protected void addScriptLanguagePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_GlobalScriptTask_scriptLanguage_feature"), getString("_UI_PropertyDescriptor_description", "_UI_GlobalScriptTask_scriptLanguage_feature", "_UI_GlobalScriptTask_type"), Bpmn2Package.Literals.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors
+                .add(createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                        getResourceLocator(),
+                        getString("_UI_GlobalScriptTask_scriptLanguage_feature"),
+                        getString("_UI_PropertyDescriptor_description",
+                                "_UI_GlobalScriptTask_scriptLanguage_feature",
+                                "_UI_GlobalScriptTask_type"),
+                        Bpmn2Package.Literals.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE, true, false,
+                        false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -95,9 +113,11 @@ public class GlobalScriptTaskItemProvider extends GlobalTaskItemProvider impleme
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/GlobalScriptTask.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/GlobalScriptTask.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/GlobalScriptTask.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/GlobalScriptTask.gif"));
         }
     }
 
@@ -109,8 +129,9 @@ public class GlobalScriptTaskItemProvider extends GlobalTaskItemProvider impleme
      */
     @Override
     public String getText(Object object) {
-        String label = ((GlobalScriptTask)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_GlobalScriptTask_type") : getString("_UI_GlobalScriptTask_type") + " " + label;
+        String label = ((GlobalScriptTask) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_GlobalScriptTask_type")
+                : getString("_UI_GlobalScriptTask_type") + " " + label;
     }
 
     /**
@@ -125,10 +146,11 @@ public class GlobalScriptTaskItemProvider extends GlobalTaskItemProvider impleme
         updateChildren(notification);
 
         switch (notification.getFeatureID(GlobalScriptTask.class)) {
-            case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT:
-            case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT:
+        case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }

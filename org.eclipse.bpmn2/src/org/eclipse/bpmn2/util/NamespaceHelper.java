@@ -7,7 +7,7 @@
  *
  * Contributors:
  *    Henning Heitkoetter - initial API and implementation
- */ 
+ */
 package org.eclipse.bpmn2.util;
 
 public class NamespaceHelper {

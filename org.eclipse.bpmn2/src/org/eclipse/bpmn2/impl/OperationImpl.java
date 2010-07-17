@@ -132,11 +132,12 @@ public class OperationImpl extends BaseElementImpl implements Operation {
      */
     public Message getInMessageRef() {
         if (inMessageRef != null && inMessageRef.eIsProxy()) {
-            InternalEObject oldInMessageRef = (InternalEObject)inMessageRef;
-            inMessageRef = (Message)eResolveProxy(oldInMessageRef);
+            InternalEObject oldInMessageRef = (InternalEObject) inMessageRef;
+            inMessageRef = (Message) eResolveProxy(oldInMessageRef);
             if (inMessageRef != oldInMessageRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.OPERATION__IN_MESSAGE_REF, oldInMessageRef, inMessageRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.OPERATION__IN_MESSAGE_REF, oldInMessageRef, inMessageRef));
             }
         }
         return inMessageRef;
@@ -160,7 +161,8 @@ public class OperationImpl extends BaseElementImpl implements Operation {
         Message oldInMessageRef = inMessageRef;
         inMessageRef = newInMessageRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.OPERATION__IN_MESSAGE_REF, oldInMessageRef, inMessageRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.OPERATION__IN_MESSAGE_REF, oldInMessageRef, inMessageRef));
     }
 
     /**
@@ -170,11 +172,13 @@ public class OperationImpl extends BaseElementImpl implements Operation {
      */
     public Message getOutMessageRef() {
         if (outMessageRef != null && outMessageRef.eIsProxy()) {
-            InternalEObject oldOutMessageRef = (InternalEObject)outMessageRef;
-            outMessageRef = (Message)eResolveProxy(oldOutMessageRef);
+            InternalEObject oldOutMessageRef = (InternalEObject) outMessageRef;
+            outMessageRef = (Message) eResolveProxy(oldOutMessageRef);
             if (outMessageRef != oldOutMessageRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.OPERATION__OUT_MESSAGE_REF, oldOutMessageRef, outMessageRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.OPERATION__OUT_MESSAGE_REF, oldOutMessageRef,
+                            outMessageRef));
             }
         }
         return outMessageRef;
@@ -198,7 +202,8 @@ public class OperationImpl extends BaseElementImpl implements Operation {
         Message oldOutMessageRef = outMessageRef;
         outMessageRef = newOutMessageRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.OPERATION__OUT_MESSAGE_REF, oldOutMessageRef, outMessageRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.OPERATION__OUT_MESSAGE_REF, oldOutMessageRef, outMessageRef));
     }
 
     /**
@@ -208,7 +213,8 @@ public class OperationImpl extends BaseElementImpl implements Operation {
      */
     public List<org.eclipse.bpmn2.Error> getErrorRefs() {
         if (errorRefs == null) {
-            errorRefs = new EObjectResolvingEList<org.eclipse.bpmn2.Error>(org.eclipse.bpmn2.Error.class, this, Bpmn2Package.OPERATION__ERROR_REFS);
+            errorRefs = new EObjectResolvingEList<org.eclipse.bpmn2.Error>(
+                    org.eclipse.bpmn2.Error.class, this, Bpmn2Package.OPERATION__ERROR_REFS);
         }
         return errorRefs;
     }
@@ -220,11 +226,13 @@ public class OperationImpl extends BaseElementImpl implements Operation {
      */
     public Object getImplementationRef() {
         if (implementationRef != null && implementationRef.eIsProxy()) {
-            InternalEObject oldImplementationRef = (InternalEObject)implementationRef;
+            InternalEObject oldImplementationRef = (InternalEObject) implementationRef;
             implementationRef = eResolveProxy(oldImplementationRef);
             if (implementationRef != oldImplementationRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.OPERATION__IMPLEMENTATION_REF, oldImplementationRef, implementationRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.OPERATION__IMPLEMENTATION_REF, oldImplementationRef,
+                            implementationRef));
             }
         }
         return implementationRef;
@@ -246,9 +254,11 @@ public class OperationImpl extends BaseElementImpl implements Operation {
      */
     public void setImplementationRef(Object newImplementationRef) {
         Object oldImplementationRef = implementationRef;
-        implementationRef = (EObject)newImplementationRef;
+        implementationRef = (EObject) newImplementationRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.OPERATION__IMPLEMENTATION_REF, oldImplementationRef, implementationRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.OPERATION__IMPLEMENTATION_REF, oldImplementationRef,
+                    implementationRef));
     }
 
     /**
@@ -269,7 +279,8 @@ public class OperationImpl extends BaseElementImpl implements Operation {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.OPERATION__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.OPERATION__NAME,
+                    oldName, name));
     }
 
     /**
@@ -280,22 +291,22 @@ public class OperationImpl extends BaseElementImpl implements Operation {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.OPERATION__IN_MESSAGE_REF:
-                if (resolve)
-                    return getInMessageRef();
-                return basicGetInMessageRef();
-            case Bpmn2Package.OPERATION__OUT_MESSAGE_REF:
-                if (resolve)
-                    return getOutMessageRef();
-                return basicGetOutMessageRef();
-            case Bpmn2Package.OPERATION__ERROR_REFS:
-                return getErrorRefs();
-            case Bpmn2Package.OPERATION__IMPLEMENTATION_REF:
-                if (resolve)
-                    return getImplementationRef();
-                return basicGetImplementationRef();
-            case Bpmn2Package.OPERATION__NAME:
-                return getName();
+        case Bpmn2Package.OPERATION__IN_MESSAGE_REF:
+            if (resolve)
+                return getInMessageRef();
+            return basicGetInMessageRef();
+        case Bpmn2Package.OPERATION__OUT_MESSAGE_REF:
+            if (resolve)
+                return getOutMessageRef();
+            return basicGetOutMessageRef();
+        case Bpmn2Package.OPERATION__ERROR_REFS:
+            return getErrorRefs();
+        case Bpmn2Package.OPERATION__IMPLEMENTATION_REF:
+            if (resolve)
+                return getImplementationRef();
+            return basicGetImplementationRef();
+        case Bpmn2Package.OPERATION__NAME:
+            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -309,22 +320,22 @@ public class OperationImpl extends BaseElementImpl implements Operation {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.OPERATION__IN_MESSAGE_REF:
-                setInMessageRef((Message)newValue);
-                return;
-            case Bpmn2Package.OPERATION__OUT_MESSAGE_REF:
-                setOutMessageRef((Message)newValue);
-                return;
-            case Bpmn2Package.OPERATION__ERROR_REFS:
-                getErrorRefs().clear();
-                getErrorRefs().addAll((Collection<? extends org.eclipse.bpmn2.Error>)newValue);
-                return;
-            case Bpmn2Package.OPERATION__IMPLEMENTATION_REF:
-                setImplementationRef((Object)newValue);
-                return;
-            case Bpmn2Package.OPERATION__NAME:
-                setName((String)newValue);
-                return;
+        case Bpmn2Package.OPERATION__IN_MESSAGE_REF:
+            setInMessageRef((Message) newValue);
+            return;
+        case Bpmn2Package.OPERATION__OUT_MESSAGE_REF:
+            setOutMessageRef((Message) newValue);
+            return;
+        case Bpmn2Package.OPERATION__ERROR_REFS:
+            getErrorRefs().clear();
+            getErrorRefs().addAll((Collection<? extends org.eclipse.bpmn2.Error>) newValue);
+            return;
+        case Bpmn2Package.OPERATION__IMPLEMENTATION_REF:
+            setImplementationRef((Object) newValue);
+            return;
+        case Bpmn2Package.OPERATION__NAME:
+            setName((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -337,21 +348,21 @@ public class OperationImpl extends BaseElementImpl implements Operation {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.OPERATION__IN_MESSAGE_REF:
-                setInMessageRef((Message)null);
-                return;
-            case Bpmn2Package.OPERATION__OUT_MESSAGE_REF:
-                setOutMessageRef((Message)null);
-                return;
-            case Bpmn2Package.OPERATION__ERROR_REFS:
-                getErrorRefs().clear();
-                return;
-            case Bpmn2Package.OPERATION__IMPLEMENTATION_REF:
-                setImplementationRef((Object)null);
-                return;
-            case Bpmn2Package.OPERATION__NAME:
-                setName(NAME_EDEFAULT);
-                return;
+        case Bpmn2Package.OPERATION__IN_MESSAGE_REF:
+            setInMessageRef((Message) null);
+            return;
+        case Bpmn2Package.OPERATION__OUT_MESSAGE_REF:
+            setOutMessageRef((Message) null);
+            return;
+        case Bpmn2Package.OPERATION__ERROR_REFS:
+            getErrorRefs().clear();
+            return;
+        case Bpmn2Package.OPERATION__IMPLEMENTATION_REF:
+            setImplementationRef((Object) null);
+            return;
+        case Bpmn2Package.OPERATION__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -364,16 +375,16 @@ public class OperationImpl extends BaseElementImpl implements Operation {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.OPERATION__IN_MESSAGE_REF:
-                return inMessageRef != null;
-            case Bpmn2Package.OPERATION__OUT_MESSAGE_REF:
-                return outMessageRef != null;
-            case Bpmn2Package.OPERATION__ERROR_REFS:
-                return errorRefs != null && !errorRefs.isEmpty();
-            case Bpmn2Package.OPERATION__IMPLEMENTATION_REF:
-                return implementationRef != null;
-            case Bpmn2Package.OPERATION__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case Bpmn2Package.OPERATION__IN_MESSAGE_REF:
+            return inMessageRef != null;
+        case Bpmn2Package.OPERATION__OUT_MESSAGE_REF:
+            return outMessageRef != null;
+        case Bpmn2Package.OPERATION__ERROR_REFS:
+            return errorRefs != null && !errorRefs.isEmpty();
+        case Bpmn2Package.OPERATION__IMPLEMENTATION_REF:
+            return implementationRef != null;
+        case Bpmn2Package.OPERATION__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }

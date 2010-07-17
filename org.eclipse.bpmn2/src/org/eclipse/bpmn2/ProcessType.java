@@ -119,7 +119,8 @@ public enum ProcessType implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final List<ProcessType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+    public static final List<ProcessType> VALUES = Collections.unmodifiableList(Arrays
+            .asList(VALUES_ARRAY));
 
     /**
      * Returns the '<em><b>Process Type</b></em>' literal with the specified literal value.
@@ -161,12 +162,12 @@ public enum ProcessType implements Enumerator {
      */
     public static ProcessType get(int value) {
         switch (value) {
-            case NONE_VALUE:
-                return NONE;
-            case PUBLIC_VALUE:
-                return PUBLIC;
-            case PRIVATE_VALUE:
-                return PRIVATE;
+        case NONE_VALUE:
+            return NONE;
+        case PUBLIC_VALUE:
+            return PUBLIC;
+        case PRIVATE_VALUE:
+            return PRIVATE;
         }
         return null;
     }

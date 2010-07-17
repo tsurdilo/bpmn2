@@ -38,7 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ServiceTaskItemProvider extends TaskItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ServiceTaskItemProvider extends TaskItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -73,7 +75,14 @@ public class ServiceTaskItemProvider extends TaskItemProvider implements IEditin
      * @generated
      */
     protected void addImplementationPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_ServiceTask_implementation_feature"), getString("_UI_PropertyDescriptor_description", "_UI_ServiceTask_implementation_feature", "_UI_ServiceTask_type"), Bpmn2Package.Literals.SERVICE_TASK__IMPLEMENTATION, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_ServiceTask_implementation_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_ServiceTask_implementation_feature", "_UI_ServiceTask_type"),
+                Bpmn2Package.Literals.SERVICE_TASK__IMPLEMENTATION, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -83,7 +92,14 @@ public class ServiceTaskItemProvider extends TaskItemProvider implements IEditin
      * @generated
      */
     protected void addOperationRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_ServiceTask_operationRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_ServiceTask_operationRef_feature", "_UI_ServiceTask_type"), Bpmn2Package.Literals.SERVICE_TASK__OPERATION_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_ServiceTask_operationRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_ServiceTask_operationRef_feature", "_UI_ServiceTask_type"),
+                Bpmn2Package.Literals.SERVICE_TASK__OPERATION_REF, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -109,8 +125,9 @@ public class ServiceTaskItemProvider extends TaskItemProvider implements IEditin
      */
     @Override
     public String getText(Object object) {
-        String label = ((ServiceTask)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_ServiceTask_type") : getString("_UI_ServiceTask_type") + " " + label;
+        String label = ((ServiceTask) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_ServiceTask_type")
+                : getString("_UI_ServiceTask_type") + " " + label;
     }
 
     /**
@@ -125,9 +142,10 @@ public class ServiceTaskItemProvider extends TaskItemProvider implements IEditin
         updateChildren(notification);
 
         switch (notification.getFeatureID(ServiceTask.class)) {
-            case Bpmn2Package.SERVICE_TASK__IMPLEMENTATION:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case Bpmn2Package.SERVICE_TASK__IMPLEMENTATION:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }

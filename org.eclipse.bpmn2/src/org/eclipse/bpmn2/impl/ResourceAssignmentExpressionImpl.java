@@ -37,7 +37,8 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *
  * @generated
  */
-public class ResourceAssignmentExpressionImpl extends EObjectImpl implements ResourceAssignmentExpression {
+public class ResourceAssignmentExpressionImpl extends EObjectImpl implements
+        ResourceAssignmentExpression {
     /**
      * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference.
      * <!-- begin-user-doc -->
@@ -85,7 +86,9 @@ public class ResourceAssignmentExpressionImpl extends EObjectImpl implements Res
         Expression oldExpression = expression;
         expression = newExpression;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION, oldExpression, newExpression);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION, oldExpression,
+                    newExpression);
             if (msgs == null)
                 msgs = notification;
             else
@@ -103,14 +106,18 @@ public class ResourceAssignmentExpressionImpl extends EObjectImpl implements Res
         if (newExpression != expression) {
             NotificationChain msgs = null;
             if (expression != null)
-                msgs = ((InternalEObject)expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION, null, msgs);
+                msgs = ((InternalEObject) expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION, null, msgs);
             if (newExpression != null)
-                msgs = ((InternalEObject)newExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION, null, msgs);
+                msgs = ((InternalEObject) newExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION, null, msgs);
             msgs = basicSetExpression(newExpression, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION, newExpression, newExpression));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION, newExpression,
+                    newExpression));
     }
 
     /**
@@ -119,10 +126,11 @@ public class ResourceAssignmentExpressionImpl extends EObjectImpl implements Res
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION:
-                return basicSetExpression(null, msgs);
+        case Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION:
+            return basicSetExpression(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -135,8 +143,8 @@ public class ResourceAssignmentExpressionImpl extends EObjectImpl implements Res
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION:
-                return getExpression();
+        case Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION:
+            return getExpression();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -149,9 +157,9 @@ public class ResourceAssignmentExpressionImpl extends EObjectImpl implements Res
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION:
-                setExpression((Expression)newValue);
-                return;
+        case Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION:
+            setExpression((Expression) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -164,9 +172,9 @@ public class ResourceAssignmentExpressionImpl extends EObjectImpl implements Res
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION:
-                setExpression((Expression)null);
-                return;
+        case Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION:
+            setExpression((Expression) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -179,8 +187,8 @@ public class ResourceAssignmentExpressionImpl extends EObjectImpl implements Res
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION:
-                return expression != null;
+        case Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION:
+            return expression != null;
         }
         return super.eIsSet(featureID);
     }

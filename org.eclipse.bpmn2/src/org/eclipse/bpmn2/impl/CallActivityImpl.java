@@ -72,11 +72,13 @@ public class CallActivityImpl extends ActivityImpl implements CallActivity {
      */
     public CallableElement getCalledElementRef() {
         if (calledElementRef != null && calledElementRef.eIsProxy()) {
-            InternalEObject oldCalledElementRef = (InternalEObject)calledElementRef;
-            calledElementRef = (CallableElement)eResolveProxy(oldCalledElementRef);
+            InternalEObject oldCalledElementRef = (InternalEObject) calledElementRef;
+            calledElementRef = (CallableElement) eResolveProxy(oldCalledElementRef);
             if (calledElementRef != oldCalledElementRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF, oldCalledElementRef, calledElementRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF, oldCalledElementRef,
+                            calledElementRef));
             }
         }
         return calledElementRef;
@@ -100,7 +102,9 @@ public class CallActivityImpl extends ActivityImpl implements CallActivity {
         CallableElement oldCalledElementRef = calledElementRef;
         calledElementRef = newCalledElementRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF, oldCalledElementRef, calledElementRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF, oldCalledElementRef,
+                    calledElementRef));
     }
 
     /**
@@ -111,10 +115,10 @@ public class CallActivityImpl extends ActivityImpl implements CallActivity {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF:
-                if (resolve)
-                    return getCalledElementRef();
-                return basicGetCalledElementRef();
+        case Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF:
+            if (resolve)
+                return getCalledElementRef();
+            return basicGetCalledElementRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -127,9 +131,9 @@ public class CallActivityImpl extends ActivityImpl implements CallActivity {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF:
-                setCalledElementRef((CallableElement)newValue);
-                return;
+        case Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF:
+            setCalledElementRef((CallableElement) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -142,9 +146,9 @@ public class CallActivityImpl extends ActivityImpl implements CallActivity {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF:
-                setCalledElementRef((CallableElement)null);
-                return;
+        case Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF:
+            setCalledElementRef((CallableElement) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -157,8 +161,8 @@ public class CallActivityImpl extends ActivityImpl implements CallActivity {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF:
-                return calledElementRef != null;
+        case Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF:
+            return calledElementRef != null;
         }
         return super.eIsSet(featureID);
     }

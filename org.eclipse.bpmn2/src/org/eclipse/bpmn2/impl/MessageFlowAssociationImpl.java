@@ -83,11 +83,13 @@ public class MessageFlowAssociationImpl extends BaseElementImpl implements Messa
      */
     public MessageFlow getInnerMessageFlowRef() {
         if (innerMessageFlowRef != null && innerMessageFlowRef.eIsProxy()) {
-            InternalEObject oldInnerMessageFlowRef = (InternalEObject)innerMessageFlowRef;
-            innerMessageFlowRef = (MessageFlow)eResolveProxy(oldInnerMessageFlowRef);
+            InternalEObject oldInnerMessageFlowRef = (InternalEObject) innerMessageFlowRef;
+            innerMessageFlowRef = (MessageFlow) eResolveProxy(oldInnerMessageFlowRef);
             if (innerMessageFlowRef != oldInnerMessageFlowRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF, oldInnerMessageFlowRef, innerMessageFlowRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF,
+                            oldInnerMessageFlowRef, innerMessageFlowRef));
             }
         }
         return innerMessageFlowRef;
@@ -111,7 +113,9 @@ public class MessageFlowAssociationImpl extends BaseElementImpl implements Messa
         MessageFlow oldInnerMessageFlowRef = innerMessageFlowRef;
         innerMessageFlowRef = newInnerMessageFlowRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF, oldInnerMessageFlowRef, innerMessageFlowRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF,
+                    oldInnerMessageFlowRef, innerMessageFlowRef));
     }
 
     /**
@@ -121,11 +125,13 @@ public class MessageFlowAssociationImpl extends BaseElementImpl implements Messa
      */
     public MessageFlow getOuterMessageFlowRef() {
         if (outerMessageFlowRef != null && outerMessageFlowRef.eIsProxy()) {
-            InternalEObject oldOuterMessageFlowRef = (InternalEObject)outerMessageFlowRef;
-            outerMessageFlowRef = (MessageFlow)eResolveProxy(oldOuterMessageFlowRef);
+            InternalEObject oldOuterMessageFlowRef = (InternalEObject) outerMessageFlowRef;
+            outerMessageFlowRef = (MessageFlow) eResolveProxy(oldOuterMessageFlowRef);
             if (outerMessageFlowRef != oldOuterMessageFlowRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF, oldOuterMessageFlowRef, outerMessageFlowRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF,
+                            oldOuterMessageFlowRef, outerMessageFlowRef));
             }
         }
         return outerMessageFlowRef;
@@ -149,7 +155,9 @@ public class MessageFlowAssociationImpl extends BaseElementImpl implements Messa
         MessageFlow oldOuterMessageFlowRef = outerMessageFlowRef;
         outerMessageFlowRef = newOuterMessageFlowRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF, oldOuterMessageFlowRef, outerMessageFlowRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF,
+                    oldOuterMessageFlowRef, outerMessageFlowRef));
     }
 
     /**
@@ -160,14 +168,14 @@ public class MessageFlowAssociationImpl extends BaseElementImpl implements Messa
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF:
-                if (resolve)
-                    return getInnerMessageFlowRef();
-                return basicGetInnerMessageFlowRef();
-            case Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF:
-                if (resolve)
-                    return getOuterMessageFlowRef();
-                return basicGetOuterMessageFlowRef();
+        case Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF:
+            if (resolve)
+                return getInnerMessageFlowRef();
+            return basicGetInnerMessageFlowRef();
+        case Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF:
+            if (resolve)
+                return getOuterMessageFlowRef();
+            return basicGetOuterMessageFlowRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -180,12 +188,12 @@ public class MessageFlowAssociationImpl extends BaseElementImpl implements Messa
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF:
-                setInnerMessageFlowRef((MessageFlow)newValue);
-                return;
-            case Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF:
-                setOuterMessageFlowRef((MessageFlow)newValue);
-                return;
+        case Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF:
+            setInnerMessageFlowRef((MessageFlow) newValue);
+            return;
+        case Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF:
+            setOuterMessageFlowRef((MessageFlow) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -198,12 +206,12 @@ public class MessageFlowAssociationImpl extends BaseElementImpl implements Messa
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF:
-                setInnerMessageFlowRef((MessageFlow)null);
-                return;
-            case Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF:
-                setOuterMessageFlowRef((MessageFlow)null);
-                return;
+        case Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF:
+            setInnerMessageFlowRef((MessageFlow) null);
+            return;
+        case Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF:
+            setOuterMessageFlowRef((MessageFlow) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -216,10 +224,10 @@ public class MessageFlowAssociationImpl extends BaseElementImpl implements Messa
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF:
-                return innerMessageFlowRef != null;
-            case Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF:
-                return outerMessageFlowRef != null;
+        case Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF:
+            return innerMessageFlowRef != null;
+        case Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF:
+            return outerMessageFlowRef != null;
         }
         return super.eIsSet(featureID);
     }

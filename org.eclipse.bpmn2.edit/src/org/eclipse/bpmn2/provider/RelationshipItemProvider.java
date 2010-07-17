@@ -38,7 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class RelationshipItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class RelationshipItemProvider extends BaseElementItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -75,7 +77,13 @@ public class RelationshipItemProvider extends BaseElementItemProvider implements
      * @generated
      */
     protected void addSourcesPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Relationship_sources_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Relationship_sources_feature", "_UI_Relationship_type"), Bpmn2Package.Literals.RELATIONSHIP__SOURCES, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Relationship_sources_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Relationship_sources_feature",
+                        "_UI_Relationship_type"), Bpmn2Package.Literals.RELATIONSHIP__SOURCES,
+                true, false, true, null, null, null));
     }
 
     /**
@@ -85,7 +93,13 @@ public class RelationshipItemProvider extends BaseElementItemProvider implements
      * @generated
      */
     protected void addTargetsPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Relationship_targets_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Relationship_targets_feature", "_UI_Relationship_type"), Bpmn2Package.Literals.RELATIONSHIP__TARGETS, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Relationship_targets_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Relationship_targets_feature",
+                        "_UI_Relationship_type"), Bpmn2Package.Literals.RELATIONSHIP__TARGETS,
+                true, false, true, null, null, null));
     }
 
     /**
@@ -95,7 +109,14 @@ public class RelationshipItemProvider extends BaseElementItemProvider implements
      * @generated
      */
     protected void addDirectionPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Relationship_direction_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Relationship_direction_feature", "_UI_Relationship_type"), Bpmn2Package.Literals.RELATIONSHIP__DIRECTION, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Relationship_direction_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_Relationship_direction_feature", "_UI_Relationship_type"),
+                Bpmn2Package.Literals.RELATIONSHIP__DIRECTION, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -105,7 +126,13 @@ public class RelationshipItemProvider extends BaseElementItemProvider implements
      * @generated
      */
     protected void addTypePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Relationship_type_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Relationship_type_feature", "_UI_Relationship_type"), Bpmn2Package.Literals.RELATIONSHIP__TYPE, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Relationship_type_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Relationship_type_feature",
+                        "_UI_Relationship_type"), Bpmn2Package.Literals.RELATIONSHIP__TYPE, true,
+                false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -117,9 +144,11 @@ public class RelationshipItemProvider extends BaseElementItemProvider implements
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/Relationship.png"));
+            return overlayImage(object, getResourceLocator()
+                    .getImage("full/obj16/Relationship.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/Relationship.gif"));
+            return overlayImage(object, getResourceLocator()
+                    .getImage("full/obj16/Relationship.gif"));
         }
     }
 
@@ -131,8 +160,9 @@ public class RelationshipItemProvider extends BaseElementItemProvider implements
      */
     @Override
     public String getText(Object object) {
-        String label = ((Relationship)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_Relationship_type") : getString("_UI_Relationship_type") + " " + label;
+        String label = ((Relationship) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_Relationship_type")
+                : getString("_UI_Relationship_type") + " " + label;
     }
 
     /**
@@ -147,10 +177,11 @@ public class RelationshipItemProvider extends BaseElementItemProvider implements
         updateChildren(notification);
 
         switch (notification.getFeatureID(Relationship.class)) {
-            case Bpmn2Package.RELATIONSHIP__DIRECTION:
-            case Bpmn2Package.RELATIONSHIP__TYPE:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case Bpmn2Package.RELATIONSHIP__DIRECTION:
+        case Bpmn2Package.RELATIONSHIP__TYPE:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }

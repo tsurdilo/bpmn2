@@ -39,7 +39,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EdgeItemProvider extends DiagramElementItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class EdgeItemProvider extends DiagramElementItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -74,7 +76,13 @@ public class EdgeItemProvider extends DiagramElementItemProvider implements IEdi
      * @generated
      */
     protected void addSourcePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Edge_source_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Edge_source_feature", "_UI_Edge_type"), DiPackage.Literals.EDGE__SOURCE, true, false, false, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Edge_source_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Edge_source_feature",
+                        "_UI_Edge_type"), DiPackage.Literals.EDGE__SOURCE, true, false, false,
+                null, null, null));
     }
 
     /**
@@ -84,7 +92,13 @@ public class EdgeItemProvider extends DiagramElementItemProvider implements IEdi
      * @generated
      */
     protected void addTargetPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Edge_target_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Edge_target_feature", "_UI_Edge_type"), DiPackage.Literals.EDGE__TARGET, true, false, false, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Edge_target_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Edge_target_feature",
+                        "_UI_Edge_type"), DiPackage.Literals.EDGE__TARGET, true, false, false,
+                null, null, null));
     }
 
     /**
@@ -140,8 +154,9 @@ public class EdgeItemProvider extends DiagramElementItemProvider implements IEdi
      */
     @Override
     public String getText(Object object) {
-        String label = ((Edge)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_Edge_type") : getString("_UI_Edge_type") + " " + label;
+        String label = ((Edge) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_Edge_type")
+                : getString("_UI_Edge_type") + " " + label;
     }
 
     /**
@@ -156,13 +171,15 @@ public class EdgeItemProvider extends DiagramElementItemProvider implements IEdi
         updateChildren(notification);
 
         switch (notification.getFeatureID(Edge.class)) {
-            case DiPackage.EDGE__SOURCE:
-            case DiPackage.EDGE__TARGET:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
-            case DiPackage.EDGE__WAYPOINT:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case DiPackage.EDGE__SOURCE:
+        case DiPackage.EDGE__TARGET:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
+        case DiPackage.EDGE__WAYPOINT:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -178,7 +195,8 @@ public class EdgeItemProvider extends DiagramElementItemProvider implements IEdi
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(DiPackage.Literals.EDGE__WAYPOINT, DcFactory.eINSTANCE.createPoint()));
+        newChildDescriptors.add(createChildParameter(DiPackage.Literals.EDGE__WAYPOINT,
+                DcFactory.eINSTANCE.createPoint()));
     }
 
 }

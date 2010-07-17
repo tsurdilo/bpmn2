@@ -100,7 +100,8 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
      */
     public List<Rendering> getRenderings() {
         if (renderings == null) {
-            renderings = new EObjectContainmentEList<Rendering>(Rendering.class, this, Bpmn2Package.USER_TASK__RENDERINGS);
+            renderings = new EObjectContainmentEList<Rendering>(Rendering.class, this,
+                    Bpmn2Package.USER_TASK__RENDERINGS);
         }
         return renderings;
     }
@@ -123,7 +124,8 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
         String oldImplementation = implementation;
         implementation = newImplementation;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.USER_TASK__IMPLEMENTATION, oldImplementation, implementation));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.USER_TASK__IMPLEMENTATION, oldImplementation, implementation));
     }
 
     /**
@@ -132,10 +134,11 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.USER_TASK__RENDERINGS:
-                return ((InternalEList<?>)getRenderings()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.USER_TASK__RENDERINGS:
+            return ((InternalEList<?>) getRenderings()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -148,10 +151,10 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.USER_TASK__RENDERINGS:
-                return getRenderings();
-            case Bpmn2Package.USER_TASK__IMPLEMENTATION:
-                return getImplementation();
+        case Bpmn2Package.USER_TASK__RENDERINGS:
+            return getRenderings();
+        case Bpmn2Package.USER_TASK__IMPLEMENTATION:
+            return getImplementation();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -165,13 +168,13 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.USER_TASK__RENDERINGS:
-                getRenderings().clear();
-                getRenderings().addAll((Collection<? extends Rendering>)newValue);
-                return;
-            case Bpmn2Package.USER_TASK__IMPLEMENTATION:
-                setImplementation((String)newValue);
-                return;
+        case Bpmn2Package.USER_TASK__RENDERINGS:
+            getRenderings().clear();
+            getRenderings().addAll((Collection<? extends Rendering>) newValue);
+            return;
+        case Bpmn2Package.USER_TASK__IMPLEMENTATION:
+            setImplementation((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -184,12 +187,12 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.USER_TASK__RENDERINGS:
-                getRenderings().clear();
-                return;
-            case Bpmn2Package.USER_TASK__IMPLEMENTATION:
-                setImplementation(IMPLEMENTATION_EDEFAULT);
-                return;
+        case Bpmn2Package.USER_TASK__RENDERINGS:
+            getRenderings().clear();
+            return;
+        case Bpmn2Package.USER_TASK__IMPLEMENTATION:
+            setImplementation(IMPLEMENTATION_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -202,10 +205,11 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.USER_TASK__RENDERINGS:
-                return renderings != null && !renderings.isEmpty();
-            case Bpmn2Package.USER_TASK__IMPLEMENTATION:
-                return IMPLEMENTATION_EDEFAULT == null ? implementation != null : !IMPLEMENTATION_EDEFAULT.equals(implementation);
+        case Bpmn2Package.USER_TASK__RENDERINGS:
+            return renderings != null && !renderings.isEmpty();
+        case Bpmn2Package.USER_TASK__IMPLEMENTATION:
+            return IMPLEMENTATION_EDEFAULT == null ? implementation != null
+                    : !IMPLEMENTATION_EDEFAULT.equals(implementation);
         }
         return super.eIsSet(featureID);
     }

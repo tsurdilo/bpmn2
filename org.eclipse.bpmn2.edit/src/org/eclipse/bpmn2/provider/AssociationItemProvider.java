@@ -38,7 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AssociationItemProvider extends ArtifactItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class AssociationItemProvider extends ArtifactItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -74,7 +76,14 @@ public class AssociationItemProvider extends ArtifactItemProvider implements IEd
      * @generated
      */
     protected void addAssociationDirectionPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Association_associationDirection_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Association_associationDirection_feature", "_UI_Association_type"), Bpmn2Package.Literals.ASSOCIATION__ASSOCIATION_DIRECTION, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Association_associationDirection_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_Association_associationDirection_feature", "_UI_Association_type"),
+                Bpmn2Package.Literals.ASSOCIATION__ASSOCIATION_DIRECTION, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -84,7 +93,15 @@ public class AssociationItemProvider extends ArtifactItemProvider implements IEd
      * @generated
      */
     protected void addSourceRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Association_sourceRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Association_sourceRef_feature", "_UI_Association_type"), Bpmn2Package.Literals.ASSOCIATION__SOURCE_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors
+                .add(createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                        getResourceLocator(),
+                        getString("_UI_Association_sourceRef_feature"),
+                        getString("_UI_PropertyDescriptor_description",
+                                "_UI_Association_sourceRef_feature", "_UI_Association_type"),
+                        Bpmn2Package.Literals.ASSOCIATION__SOURCE_REF, true, false, true, null,
+                        null, null));
     }
 
     /**
@@ -94,7 +111,15 @@ public class AssociationItemProvider extends ArtifactItemProvider implements IEd
      * @generated
      */
     protected void addTargetRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Association_targetRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Association_targetRef_feature", "_UI_Association_type"), Bpmn2Package.Literals.ASSOCIATION__TARGET_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors
+                .add(createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                        getResourceLocator(),
+                        getString("_UI_Association_targetRef_feature"),
+                        getString("_UI_PropertyDescriptor_description",
+                                "_UI_Association_targetRef_feature", "_UI_Association_type"),
+                        Bpmn2Package.Literals.ASSOCIATION__TARGET_REF, true, false, true, null,
+                        null, null));
     }
 
     /**
@@ -120,8 +145,9 @@ public class AssociationItemProvider extends ArtifactItemProvider implements IEd
      */
     @Override
     public String getText(Object object) {
-        String label = ((Association)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_Association_type") : getString("_UI_Association_type") + " " + label;
+        String label = ((Association) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_Association_type")
+                : getString("_UI_Association_type") + " " + label;
     }
 
     /**
@@ -136,9 +162,10 @@ public class AssociationItemProvider extends ArtifactItemProvider implements IEd
         updateChildren(notification);
 
         switch (notification.getFeatureID(Association.class)) {
-            case Bpmn2Package.ASSOCIATION__ASSOCIATION_DIRECTION:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case Bpmn2Package.ASSOCIATION__ASSOCIATION_DIRECTION:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }

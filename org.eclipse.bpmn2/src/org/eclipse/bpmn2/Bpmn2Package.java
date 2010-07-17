@@ -23338,7 +23338,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__XSI_SCHEMA_LOCATION = eINSTANCE.getDocumentRoot_XSISchemaLocation();
+        EReference DOCUMENT_ROOT__XSI_SCHEMA_LOCATION = eINSTANCE
+                .getDocumentRoot_XSISchemaLocation();
 
         /**
          * The meta object literal for the '<em><b>Activity</b></em>' containment reference feature.
@@ -23410,7 +23411,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT = eINSTANCE.getDocumentRoot_BaseElementWithMixedContent();
+        EReference DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT = eINSTANCE
+                .getDocumentRoot_BaseElementWithMixedContent();
 
         /**
          * The meta object literal for the '<em><b>Boundary Event</b></em>' containment reference feature.
@@ -23474,7 +23476,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__CANCEL_EVENT_DEFINITION = eINSTANCE.getDocumentRoot_CancelEventDefinition();
+        EReference DOCUMENT_ROOT__CANCEL_EVENT_DEFINITION = eINSTANCE
+                .getDocumentRoot_CancelEventDefinition();
 
         /**
          * The meta object literal for the '<em><b>Event Definition</b></em>' containment reference feature.
@@ -23538,7 +23541,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__CHOREOGRAPHY_ACTIVITY = eINSTANCE.getDocumentRoot_ChoreographyActivity();
+        EReference DOCUMENT_ROOT__CHOREOGRAPHY_ACTIVITY = eINSTANCE
+                .getDocumentRoot_ChoreographyActivity();
 
         /**
          * The meta object literal for the '<em><b>Choreography Task</b></em>' containment reference feature.
@@ -23554,7 +23558,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__COMPENSATE_EVENT_DEFINITION = eINSTANCE.getDocumentRoot_CompensateEventDefinition();
+        EReference DOCUMENT_ROOT__COMPENSATE_EVENT_DEFINITION = eINSTANCE
+                .getDocumentRoot_CompensateEventDefinition();
 
         /**
          * The meta object literal for the '<em><b>Complex Behavior Definition</b></em>' containment reference feature.
@@ -23562,7 +23567,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__COMPLEX_BEHAVIOR_DEFINITION = eINSTANCE.getDocumentRoot_ComplexBehaviorDefinition();
+        EReference DOCUMENT_ROOT__COMPLEX_BEHAVIOR_DEFINITION = eINSTANCE
+                .getDocumentRoot_ComplexBehaviorDefinition();
 
         /**
          * The meta object literal for the '<em><b>Complex Gateway</b></em>' containment reference feature.
@@ -23578,7 +23584,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__CONDITIONAL_EVENT_DEFINITION = eINSTANCE.getDocumentRoot_ConditionalEventDefinition();
+        EReference DOCUMENT_ROOT__CONDITIONAL_EVENT_DEFINITION = eINSTANCE
+                .getDocumentRoot_ConditionalEventDefinition();
 
         /**
          * The meta object literal for the '<em><b>Conversation</b></em>' containment reference feature.
@@ -23594,7 +23601,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__CONVERSATION_ASSOCIATION = eINSTANCE.getDocumentRoot_ConversationAssociation();
+        EReference DOCUMENT_ROOT__CONVERSATION_ASSOCIATION = eINSTANCE
+                .getDocumentRoot_ConversationAssociation();
 
         /**
          * The meta object literal for the '<em><b>Conversation Link</b></em>' containment reference feature.
@@ -23618,7 +23626,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__CORRELATION_PROPERTY = eINSTANCE.getDocumentRoot_CorrelationProperty();
+        EReference DOCUMENT_ROOT__CORRELATION_PROPERTY = eINSTANCE
+                .getDocumentRoot_CorrelationProperty();
 
         /**
          * The meta object literal for the '<em><b>Correlation Property Binding</b></em>' containment reference feature.
@@ -23626,7 +23635,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__CORRELATION_PROPERTY_BINDING = eINSTANCE.getDocumentRoot_CorrelationPropertyBinding();
+        EReference DOCUMENT_ROOT__CORRELATION_PROPERTY_BINDING = eINSTANCE
+                .getDocumentRoot_CorrelationPropertyBinding();
 
         /**
          * The meta object literal for the '<em><b>Correlation Property Retrieval Expression</b></em>' containment reference feature.
@@ -23634,7 +23644,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION = eINSTANCE.getDocumentRoot_CorrelationPropertyRetrievalExpression();
+        EReference DOCUMENT_ROOT__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION = eINSTANCE
+                .getDocumentRoot_CorrelationPropertyRetrievalExpression();
 
         /**
          * The meta object literal for the '<em><b>Correlation Subscription</b></em>' containment reference feature.
@@ -23642,7 +23653,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__CORRELATION_SUBSCRIPTION = eINSTANCE.getDocumentRoot_CorrelationSubscription();
+        EReference DOCUMENT_ROOT__CORRELATION_SUBSCRIPTION = eINSTANCE
+                .getDocumentRoot_CorrelationSubscription();
 
         /**
          * The meta object literal for the '<em><b>Data Association</b></em>' containment reference feature.
@@ -23666,7 +23678,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__DATA_INPUT_ASSOCIATION = eINSTANCE.getDocumentRoot_DataInputAssociation();
+        EReference DOCUMENT_ROOT__DATA_INPUT_ASSOCIATION = eINSTANCE
+                .getDocumentRoot_DataInputAssociation();
 
         /**
          * The meta object literal for the '<em><b>Data Object</b></em>' containment reference feature.
@@ -23682,7 +23695,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__DATA_OBJECT_REFERENCE = eINSTANCE.getDocumentRoot_DataObjectReference();
+        EReference DOCUMENT_ROOT__DATA_OBJECT_REFERENCE = eINSTANCE
+                .getDocumentRoot_DataObjectReference();
 
         /**
          * The meta object literal for the '<em><b>Data Output</b></em>' containment reference feature.
@@ -23698,7 +23712,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__DATA_OUTPUT_ASSOCIATION = eINSTANCE.getDocumentRoot_DataOutputAssociation();
+        EReference DOCUMENT_ROOT__DATA_OUTPUT_ASSOCIATION = eINSTANCE
+                .getDocumentRoot_DataOutputAssociation();
 
         /**
          * The meta object literal for the '<em><b>Data State</b></em>' containment reference feature.
@@ -23722,7 +23737,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__DATA_STORE_REFERENCE = eINSTANCE.getDocumentRoot_DataStoreReference();
+        EReference DOCUMENT_ROOT__DATA_STORE_REFERENCE = eINSTANCE
+                .getDocumentRoot_DataStoreReference();
 
         /**
          * The meta object literal for the '<em><b>Definitions</b></em>' containment reference feature.
@@ -23770,7 +23786,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__ERROR_EVENT_DEFINITION = eINSTANCE.getDocumentRoot_ErrorEventDefinition();
+        EReference DOCUMENT_ROOT__ERROR_EVENT_DEFINITION = eINSTANCE
+                .getDocumentRoot_ErrorEventDefinition();
 
         /**
          * The meta object literal for the '<em><b>Escalation</b></em>' containment reference feature.
@@ -23786,7 +23803,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__ESCALATION_EVENT_DEFINITION = eINSTANCE.getDocumentRoot_EscalationEventDefinition();
+        EReference DOCUMENT_ROOT__ESCALATION_EVENT_DEFINITION = eINSTANCE
+                .getDocumentRoot_EscalationEventDefinition();
 
         /**
          * The meta object literal for the '<em><b>Event</b></em>' containment reference feature.
@@ -23802,7 +23820,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__EVENT_BASED_GATEWAY = eINSTANCE.getDocumentRoot_EventBasedGateway();
+        EReference DOCUMENT_ROOT__EVENT_BASED_GATEWAY = eINSTANCE
+                .getDocumentRoot_EventBasedGateway();
 
         /**
          * The meta object literal for the '<em><b>Exclusive Gateway</b></em>' containment reference feature.
@@ -23834,7 +23853,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__EXTENSION_ELEMENTS = eINSTANCE.getDocumentRoot_ExtensionElements();
+        EReference DOCUMENT_ROOT__EXTENSION_ELEMENTS = eINSTANCE
+                .getDocumentRoot_ExtensionElements();
 
         /**
          * The meta object literal for the '<em><b>Flow Node</b></em>' containment reference feature.
@@ -23866,7 +23886,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__GLOBAL_BUSINESS_RULE_TASK = eINSTANCE.getDocumentRoot_GlobalBusinessRuleTask();
+        EReference DOCUMENT_ROOT__GLOBAL_BUSINESS_RULE_TASK = eINSTANCE
+                .getDocumentRoot_GlobalBusinessRuleTask();
 
         /**
          * The meta object literal for the '<em><b>Global Choreography Task</b></em>' containment reference feature.
@@ -23874,7 +23895,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__GLOBAL_CHOREOGRAPHY_TASK = eINSTANCE.getDocumentRoot_GlobalChoreographyTask();
+        EReference DOCUMENT_ROOT__GLOBAL_CHOREOGRAPHY_TASK = eINSTANCE
+                .getDocumentRoot_GlobalChoreographyTask();
 
         /**
          * The meta object literal for the '<em><b>Global Conversation</b></em>' containment reference feature.
@@ -23882,7 +23904,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__GLOBAL_CONVERSATION = eINSTANCE.getDocumentRoot_GlobalConversation();
+        EReference DOCUMENT_ROOT__GLOBAL_CONVERSATION = eINSTANCE
+                .getDocumentRoot_GlobalConversation();
 
         /**
          * The meta object literal for the '<em><b>Global Manual Task</b></em>' containment reference feature.
@@ -23954,7 +23977,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__IMPLICIT_THROW_EVENT = eINSTANCE.getDocumentRoot_ImplicitThrowEvent();
+        EReference DOCUMENT_ROOT__IMPLICIT_THROW_EVENT = eINSTANCE
+                .getDocumentRoot_ImplicitThrowEvent();
 
         /**
          * The meta object literal for the '<em><b>Import</b></em>' containment reference feature.
@@ -23994,7 +24018,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__INTERMEDIATE_CATCH_EVENT = eINSTANCE.getDocumentRoot_IntermediateCatchEvent();
+        EReference DOCUMENT_ROOT__INTERMEDIATE_CATCH_EVENT = eINSTANCE
+                .getDocumentRoot_IntermediateCatchEvent();
 
         /**
          * The meta object literal for the '<em><b>Intermediate Throw Event</b></em>' containment reference feature.
@@ -24002,7 +24027,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__INTERMEDIATE_THROW_EVENT = eINSTANCE.getDocumentRoot_IntermediateThrowEvent();
+        EReference DOCUMENT_ROOT__INTERMEDIATE_THROW_EVENT = eINSTANCE
+                .getDocumentRoot_IntermediateThrowEvent();
 
         /**
          * The meta object literal for the '<em><b>Io Binding</b></em>' containment reference feature.
@@ -24050,7 +24076,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__LINK_EVENT_DEFINITION = eINSTANCE.getDocumentRoot_LinkEventDefinition();
+        EReference DOCUMENT_ROOT__LINK_EVENT_DEFINITION = eINSTANCE
+                .getDocumentRoot_LinkEventDefinition();
 
         /**
          * The meta object literal for the '<em><b>Loop Characteristics</b></em>' containment reference feature.
@@ -24058,7 +24085,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__LOOP_CHARACTERISTICS = eINSTANCE.getDocumentRoot_LoopCharacteristics();
+        EReference DOCUMENT_ROOT__LOOP_CHARACTERISTICS = eINSTANCE
+                .getDocumentRoot_LoopCharacteristics();
 
         /**
          * The meta object literal for the '<em><b>Manual Task</b></em>' containment reference feature.
@@ -24082,7 +24110,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__MESSAGE_EVENT_DEFINITION = eINSTANCE.getDocumentRoot_MessageEventDefinition();
+        EReference DOCUMENT_ROOT__MESSAGE_EVENT_DEFINITION = eINSTANCE
+                .getDocumentRoot_MessageEventDefinition();
 
         /**
          * The meta object literal for the '<em><b>Message Flow</b></em>' containment reference feature.
@@ -24098,7 +24127,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__MESSAGE_FLOW_ASSOCIATION = eINSTANCE.getDocumentRoot_MessageFlowAssociation();
+        EReference DOCUMENT_ROOT__MESSAGE_FLOW_ASSOCIATION = eINSTANCE
+                .getDocumentRoot_MessageFlowAssociation();
 
         /**
          * The meta object literal for the '<em><b>Monitoring</b></em>' containment reference feature.
@@ -24114,7 +24144,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__MULTI_INSTANCE_LOOP_CHARACTERISTICS = eINSTANCE.getDocumentRoot_MultiInstanceLoopCharacteristics();
+        EReference DOCUMENT_ROOT__MULTI_INSTANCE_LOOP_CHARACTERISTICS = eINSTANCE
+                .getDocumentRoot_MultiInstanceLoopCharacteristics();
 
         /**
          * The meta object literal for the '<em><b>Operation</b></em>' containment reference feature.
@@ -24154,7 +24185,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__PARTICIPANT_ASSOCIATION = eINSTANCE.getDocumentRoot_ParticipantAssociation();
+        EReference DOCUMENT_ROOT__PARTICIPANT_ASSOCIATION = eINSTANCE
+                .getDocumentRoot_ParticipantAssociation();
 
         /**
          * The meta object literal for the '<em><b>Participant Multiplicity</b></em>' containment reference feature.
@@ -24162,7 +24194,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__PARTICIPANT_MULTIPLICITY = eINSTANCE.getDocumentRoot_ParticipantMultiplicity();
+        EReference DOCUMENT_ROOT__PARTICIPANT_MULTIPLICITY = eINSTANCE
+                .getDocumentRoot_ParticipantMultiplicity();
 
         /**
          * The meta object literal for the '<em><b>Partner Entity</b></em>' containment reference feature.
@@ -24242,7 +24275,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__RESOURCE_ASSIGNMENT_EXPRESSION = eINSTANCE.getDocumentRoot_ResourceAssignmentExpression();
+        EReference DOCUMENT_ROOT__RESOURCE_ASSIGNMENT_EXPRESSION = eINSTANCE
+                .getDocumentRoot_ResourceAssignmentExpression();
 
         /**
          * The meta object literal for the '<em><b>Resource Parameter</b></em>' containment reference feature.
@@ -24250,7 +24284,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__RESOURCE_PARAMETER = eINSTANCE.getDocumentRoot_ResourceParameter();
+        EReference DOCUMENT_ROOT__RESOURCE_PARAMETER = eINSTANCE
+                .getDocumentRoot_ResourceParameter();
 
         /**
          * The meta object literal for the '<em><b>Resource Parameter Binding</b></em>' containment reference feature.
@@ -24258,7 +24293,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__RESOURCE_PARAMETER_BINDING = eINSTANCE.getDocumentRoot_ResourceParameterBinding();
+        EReference DOCUMENT_ROOT__RESOURCE_PARAMETER_BINDING = eINSTANCE
+                .getDocumentRoot_ResourceParameterBinding();
 
         /**
          * The meta object literal for the '<em><b>Script</b></em>' containment reference feature.
@@ -24314,7 +24350,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__SIGNAL_EVENT_DEFINITION = eINSTANCE.getDocumentRoot_SignalEventDefinition();
+        EReference DOCUMENT_ROOT__SIGNAL_EVENT_DEFINITION = eINSTANCE
+                .getDocumentRoot_SignalEventDefinition();
 
         /**
          * The meta object literal for the '<em><b>Standard Loop Characteristics</b></em>' containment reference feature.
@@ -24322,7 +24359,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__STANDARD_LOOP_CHARACTERISTICS = eINSTANCE.getDocumentRoot_StandardLoopCharacteristics();
+        EReference DOCUMENT_ROOT__STANDARD_LOOP_CHARACTERISTICS = eINSTANCE
+                .getDocumentRoot_StandardLoopCharacteristics();
 
         /**
          * The meta object literal for the '<em><b>Start Event</b></em>' containment reference feature.
@@ -24370,7 +24408,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__TERMINATE_EVENT_DEFINITION = eINSTANCE.getDocumentRoot_TerminateEventDefinition();
+        EReference DOCUMENT_ROOT__TERMINATE_EVENT_DEFINITION = eINSTANCE
+                .getDocumentRoot_TerminateEventDefinition();
 
         /**
          * The meta object literal for the '<em><b>Text</b></em>' containment reference feature.
@@ -24402,7 +24441,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DOCUMENT_ROOT__TIMER_EVENT_DEFINITION = eINSTANCE.getDocumentRoot_TimerEventDefinition();
+        EReference DOCUMENT_ROOT__TIMER_EVENT_DEFINITION = eINSTANCE
+                .getDocumentRoot_TimerEventDefinition();
 
         /**
          * The meta object literal for the '<em><b>Transaction</b></em>' containment reference feature.
@@ -24460,7 +24500,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference ACTIVITY__DATA_INPUT_ASSOCIATIONS = eINSTANCE.getActivity_DataInputAssociations();
+        EReference ACTIVITY__DATA_INPUT_ASSOCIATIONS = eINSTANCE
+                .getActivity_DataInputAssociations();
 
         /**
          * The meta object literal for the '<em><b>Data Output Associations</b></em>' containment reference list feature.
@@ -24468,7 +24509,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference ACTIVITY__DATA_OUTPUT_ASSOCIATIONS = eINSTANCE.getActivity_DataOutputAssociations();
+        EReference ACTIVITY__DATA_OUTPUT_ASSOCIATIONS = eINSTANCE
+                .getActivity_DataOutputAssociations();
 
         /**
          * The meta object literal for the '<em><b>Resources</b></em>' containment reference list feature.
@@ -24534,7 +24576,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference AD_HOC_SUB_PROCESS__COMPLETION_CONDITION = eINSTANCE.getAdHocSubProcess_CompletionCondition();
+        EReference AD_HOC_SUB_PROCESS__COMPLETION_CONDITION = eINSTANCE
+                .getAdHocSubProcess_CompletionCondition();
 
         /**
          * The meta object literal for the '<em><b>Cancel Remaining Instances</b></em>' attribute feature.
@@ -24542,7 +24585,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES = eINSTANCE.getAdHocSubProcess_CancelRemainingInstances();
+        EAttribute AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES = eINSTANCE
+                .getAdHocSubProcess_CancelRemainingInstances();
 
         /**
          * The meta object literal for the '<em><b>Ordering</b></em>' attribute feature.
@@ -24604,7 +24648,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute ASSOCIATION__ASSOCIATION_DIRECTION = eINSTANCE.getAssociation_AssociationDirection();
+        EAttribute ASSOCIATION__ASSOCIATION_DIRECTION = eINSTANCE
+                .getAssociation_AssociationDirection();
 
         /**
          * The meta object literal for the '<em><b>Source Ref</b></em>' reference feature.
@@ -24664,7 +24709,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference BASE_ELEMENT__EXTENSION_DEFINITIONS = eINSTANCE.getBaseElement_ExtensionDefinitions();
+        EReference BASE_ELEMENT__EXTENSION_DEFINITIONS = eINSTANCE
+                .getBaseElement_ExtensionDefinitions();
 
         /**
          * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
@@ -24716,7 +24762,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute BUSINESS_RULE_TASK__IMPLEMENTATION = eINSTANCE.getBusinessRuleTask_Implementation();
+        EAttribute BUSINESS_RULE_TASK__IMPLEMENTATION = eINSTANCE
+                .getBusinessRuleTask_Implementation();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.CallActivityImpl <em>Call Activity</em>}' class.
@@ -24752,7 +24799,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS = eINSTANCE.getCallChoreography_ParticipantAssociations();
+        EReference CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS = eINSTANCE
+                .getCallChoreography_ParticipantAssociations();
 
         /**
          * The meta object literal for the '<em><b>Called Choreography Ref</b></em>' reference feature.
@@ -24760,7 +24808,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF = eINSTANCE.getCallChoreography_CalledChoreographyRef();
+        EReference CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF = eINSTANCE
+                .getCallChoreography_CalledChoreographyRef();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.CallConversationImpl <em>Call Conversation</em>}' class.
@@ -24778,7 +24827,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CALL_CONVERSATION__PARTICIPANT_ASSOCIATIONS = eINSTANCE.getCallConversation_ParticipantAssociations();
+        EReference CALL_CONVERSATION__PARTICIPANT_ASSOCIATIONS = eINSTANCE
+                .getCallConversation_ParticipantAssociations();
 
         /**
          * The meta object literal for the '<em><b>Called Collaboration Ref</b></em>' reference feature.
@@ -24786,7 +24836,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CALL_CONVERSATION__CALLED_COLLABORATION_REF = eINSTANCE.getCallConversation_CalledCollaborationRef();
+        EReference CALL_CONVERSATION__CALLED_COLLABORATION_REF = eINSTANCE
+                .getCallConversation_CalledCollaborationRef();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.CallableElementImpl <em>Callable Element</em>}' class.
@@ -24804,7 +24855,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS = eINSTANCE.getCallableElement_SupportedInterfaceRefs();
+        EReference CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS = eINSTANCE
+                .getCallableElement_SupportedInterfaceRefs();
 
         /**
          * The meta object literal for the '<em><b>Io Specification</b></em>' containment reference feature.
@@ -24812,7 +24864,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CALLABLE_ELEMENT__IO_SPECIFICATION = eINSTANCE.getCallableElement_IoSpecification();
+        EReference CALLABLE_ELEMENT__IO_SPECIFICATION = eINSTANCE
+                .getCallableElement_IoSpecification();
 
         /**
          * The meta object literal for the '<em><b>Io Binding</b></em>' containment reference list feature.
@@ -24864,7 +24917,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CATCH_EVENT__DATA_OUTPUT_ASSOCIATION = eINSTANCE.getCatchEvent_DataOutputAssociation();
+        EReference CATCH_EVENT__DATA_OUTPUT_ASSOCIATION = eINSTANCE
+                .getCatchEvent_DataOutputAssociation();
 
         /**
          * The meta object literal for the '<em><b>Output Set</b></em>' containment reference feature.
@@ -24888,7 +24942,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CATCH_EVENT__EVENT_DEFINITION_REFS = eINSTANCE.getCatchEvent_EventDefinitionRefs();
+        EReference CATCH_EVENT__EVENT_DEFINITION_REFS = eINSTANCE
+                .getCatchEvent_EventDefinitionRefs();
 
         /**
          * The meta object literal for the '<em><b>Parallel Multiple</b></em>' attribute feature.
@@ -24948,7 +25003,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS = eINSTANCE.getCategoryValue_CategorizedFlowElements();
+        EReference CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS = eINSTANCE
+                .getCategoryValue_CategorizedFlowElements();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.ChoreographyImpl <em>Choreography</em>}' class.
@@ -24976,7 +25032,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REFS = eINSTANCE.getChoreographyActivity_ParticipantRefs();
+        EReference CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REFS = eINSTANCE
+                .getChoreographyActivity_ParticipantRefs();
 
         /**
          * The meta object literal for the '<em><b>Correlation Keys</b></em>' containment reference list feature.
@@ -24984,7 +25041,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CHOREOGRAPHY_ACTIVITY__CORRELATION_KEYS = eINSTANCE.getChoreographyActivity_CorrelationKeys();
+        EReference CHOREOGRAPHY_ACTIVITY__CORRELATION_KEYS = eINSTANCE
+                .getChoreographyActivity_CorrelationKeys();
 
         /**
          * The meta object literal for the '<em><b>Initiating Participant Ref</b></em>' reference feature.
@@ -24992,7 +25050,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF = eINSTANCE.getChoreographyActivity_InitiatingParticipantRef();
+        EReference CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF = eINSTANCE
+                .getChoreographyActivity_InitiatingParticipantRef();
 
         /**
          * The meta object literal for the '<em><b>Loop Type</b></em>' attribute feature.
@@ -25018,7 +25077,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF = eINSTANCE.getChoreographyTask_MessageFlowRef();
+        EReference CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF = eINSTANCE
+                .getChoreographyTask_MessageFlowRef();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.CollaborationImpl <em>Collaboration</em>}' class.
@@ -25068,7 +25128,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference COLLABORATION__CONVERSATION_ASSOCIATIONS = eINSTANCE.getCollaboration_ConversationAssociations();
+        EReference COLLABORATION__CONVERSATION_ASSOCIATIONS = eINSTANCE
+                .getCollaboration_ConversationAssociations();
 
         /**
          * The meta object literal for the '<em><b>Participant Associations</b></em>' containment reference list feature.
@@ -25076,7 +25137,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference COLLABORATION__PARTICIPANT_ASSOCIATIONS = eINSTANCE.getCollaboration_ParticipantAssociations();
+        EReference COLLABORATION__PARTICIPANT_ASSOCIATIONS = eINSTANCE
+                .getCollaboration_ParticipantAssociations();
 
         /**
          * The meta object literal for the '<em><b>Message Flow Associations</b></em>' containment reference list feature.
@@ -25084,7 +25146,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference COLLABORATION__MESSAGE_FLOW_ASSOCIATIONS = eINSTANCE.getCollaboration_MessageFlowAssociations();
+        EReference COLLABORATION__MESSAGE_FLOW_ASSOCIATIONS = eINSTANCE
+                .getCollaboration_MessageFlowAssociations();
 
         /**
          * The meta object literal for the '<em><b>Correlation Keys</b></em>' containment reference list feature.
@@ -25108,7 +25171,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference COLLABORATION__CONVERSATION_LINKS = eINSTANCE.getCollaboration_ConversationLinks();
+        EReference COLLABORATION__CONVERSATION_LINKS = eINSTANCE
+                .getCollaboration_ConversationLinks();
 
         /**
          * The meta object literal for the '<em><b>Is Closed</b></em>' attribute feature.
@@ -25142,7 +25206,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF = eINSTANCE.getCompensateEventDefinition_ActivityRef();
+        EReference COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF = eINSTANCE
+                .getCompensateEventDefinition_ActivityRef();
 
         /**
          * The meta object literal for the '<em><b>Wait For Completion</b></em>' attribute feature.
@@ -25150,7 +25215,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION = eINSTANCE.getCompensateEventDefinition_WaitForCompletion();
+        EAttribute COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION = eINSTANCE
+                .getCompensateEventDefinition_WaitForCompletion();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.ComplexBehaviorDefinitionImpl <em>Complex Behavior Definition</em>}' class.
@@ -25168,7 +25234,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference COMPLEX_BEHAVIOR_DEFINITION__CONDITION = eINSTANCE.getComplexBehaviorDefinition_Condition();
+        EReference COMPLEX_BEHAVIOR_DEFINITION__CONDITION = eINSTANCE
+                .getComplexBehaviorDefinition_Condition();
 
         /**
          * The meta object literal for the '<em><b>Event</b></em>' containment reference feature.
@@ -25176,7 +25243,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference COMPLEX_BEHAVIOR_DEFINITION__EVENT = eINSTANCE.getComplexBehaviorDefinition_Event();
+        EReference COMPLEX_BEHAVIOR_DEFINITION__EVENT = eINSTANCE
+                .getComplexBehaviorDefinition_Event();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.ComplexGatewayImpl <em>Complex Gateway</em>}' class.
@@ -25194,7 +25262,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference COMPLEX_GATEWAY__ACTIVATION_CONDITION = eINSTANCE.getComplexGateway_ActivationCondition();
+        EReference COMPLEX_GATEWAY__ACTIVATION_CONDITION = eINSTANCE
+                .getComplexGateway_ActivationCondition();
 
         /**
          * The meta object literal for the '<em><b>Default</b></em>' reference feature.
@@ -25220,7 +25289,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CONDITIONAL_EVENT_DEFINITION__CONDITION = eINSTANCE.getConditionalEventDefinition_Condition();
+        EReference CONDITIONAL_EVENT_DEFINITION__CONDITION = eINSTANCE
+                .getConditionalEventDefinition_Condition();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.ConversationImpl <em>Conversation</em>}' class.
@@ -25248,7 +25318,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF = eINSTANCE.getConversationAssociation_InnerConversationNodeRef();
+        EReference CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF = eINSTANCE
+                .getConversationAssociation_InnerConversationNodeRef();
 
         /**
          * The meta object literal for the '<em><b>Outer Conversation Node Ref</b></em>' reference feature.
@@ -25256,7 +25327,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF = eINSTANCE.getConversationAssociation_OuterConversationNodeRef();
+        EReference CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF = eINSTANCE
+                .getConversationAssociation_OuterConversationNodeRef();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.ConversationLinkImpl <em>Conversation Link</em>}' class.
@@ -25308,7 +25380,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CONVERSATION_NODE__PARTICIPANT_REFS = eINSTANCE.getConversationNode_ParticipantRefs();
+        EReference CONVERSATION_NODE__PARTICIPANT_REFS = eINSTANCE
+                .getConversationNode_ParticipantRefs();
 
         /**
          * The meta object literal for the '<em><b>Message Flow Refs</b></em>' reference list feature.
@@ -25316,7 +25389,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CONVERSATION_NODE__MESSAGE_FLOW_REFS = eINSTANCE.getConversationNode_MessageFlowRefs();
+        EReference CONVERSATION_NODE__MESSAGE_FLOW_REFS = eINSTANCE
+                .getConversationNode_MessageFlowRefs();
 
         /**
          * The meta object literal for the '<em><b>Correlation Keys</b></em>' containment reference list feature.
@@ -25324,7 +25398,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CONVERSATION_NODE__CORRELATION_KEYS = eINSTANCE.getConversationNode_CorrelationKeys();
+        EReference CONVERSATION_NODE__CORRELATION_KEYS = eINSTANCE
+                .getConversationNode_CorrelationKeys();
 
         /**
          * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -25350,7 +25425,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CORRELATION_KEY__CORRELATION_PROPERTY_REF = eINSTANCE.getCorrelationKey_CorrelationPropertyRef();
+        EReference CORRELATION_KEY__CORRELATION_PROPERTY_REF = eINSTANCE
+                .getCorrelationKey_CorrelationPropertyRef();
 
         /**
          * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -25376,7 +25452,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION = eINSTANCE.getCorrelationProperty_CorrelationPropertyRetrievalExpression();
+        EReference CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION = eINSTANCE
+                .getCorrelationProperty_CorrelationPropertyRetrievalExpression();
 
         /**
          * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -25410,7 +25487,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CORRELATION_PROPERTY_BINDING__DATA_PATH = eINSTANCE.getCorrelationPropertyBinding_DataPath();
+        EReference CORRELATION_PROPERTY_BINDING__DATA_PATH = eINSTANCE
+                .getCorrelationPropertyBinding_DataPath();
 
         /**
          * The meta object literal for the '<em><b>Correlation Property Ref</b></em>' reference feature.
@@ -25418,7 +25496,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF = eINSTANCE.getCorrelationPropertyBinding_CorrelationPropertyRef();
+        EReference CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF = eINSTANCE
+                .getCorrelationPropertyBinding_CorrelationPropertyRef();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.CorrelationPropertyRetrievalExpressionImpl <em>Correlation Property Retrieval Expression</em>}' class.
@@ -25428,7 +25507,8 @@ public interface Bpmn2Package extends EPackage {
          * @see org.eclipse.bpmn2.impl.Bpmn2PackageImpl#getCorrelationPropertyRetrievalExpression()
          * @generated
          */
-        EClass CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION = eINSTANCE.getCorrelationPropertyRetrievalExpression();
+        EClass CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION = eINSTANCE
+                .getCorrelationPropertyRetrievalExpression();
 
         /**
          * The meta object literal for the '<em><b>Message Path</b></em>' containment reference feature.
@@ -25436,7 +25516,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH = eINSTANCE.getCorrelationPropertyRetrievalExpression_MessagePath();
+        EReference CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH = eINSTANCE
+                .getCorrelationPropertyRetrievalExpression_MessagePath();
 
         /**
          * The meta object literal for the '<em><b>Message Ref</b></em>' reference feature.
@@ -25444,7 +25525,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_REF = eINSTANCE.getCorrelationPropertyRetrievalExpression_MessageRef();
+        EReference CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_REF = eINSTANCE
+                .getCorrelationPropertyRetrievalExpression_MessageRef();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.CorrelationSubscriptionImpl <em>Correlation Subscription</em>}' class.
@@ -25462,7 +25544,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CORRELATION_SUBSCRIPTION__CORRELATION_PROPERTY_BINDING = eINSTANCE.getCorrelationSubscription_CorrelationPropertyBinding();
+        EReference CORRELATION_SUBSCRIPTION__CORRELATION_PROPERTY_BINDING = eINSTANCE
+                .getCorrelationSubscription_CorrelationPropertyBinding();
 
         /**
          * The meta object literal for the '<em><b>Correlation Key Ref</b></em>' reference feature.
@@ -25470,7 +25553,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF = eINSTANCE.getCorrelationSubscription_CorrelationKeyRef();
+        EReference CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF = eINSTANCE
+                .getCorrelationSubscription_CorrelationKeyRef();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.DataAssociationImpl <em>Data Association</em>}' class.
@@ -25530,7 +25614,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DATA_INPUT__INPUT_SET_WITH_OPTIONAL = eINSTANCE.getDataInput_InputSetWithOptional();
+        EReference DATA_INPUT__INPUT_SET_WITH_OPTIONAL = eINSTANCE
+                .getDataInput_InputSetWithOptional();
 
         /**
          * The meta object literal for the '<em><b>Input Set With While Executing</b></em>' reference list feature.
@@ -25538,7 +25623,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING = eINSTANCE.getDataInput_InputSetWithWhileExecuting();
+        EReference DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING = eINSTANCE
+                .getDataInput_InputSetWithWhileExecuting();
 
         /**
          * The meta object literal for the '<em><b>Input Set Refs</b></em>' reference list feature.
@@ -25608,7 +25694,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DATA_OBJECT_REFERENCE__DATA_OBJECT_REF = eINSTANCE.getDataObjectReference_DataObjectRef();
+        EReference DATA_OBJECT_REFERENCE__DATA_OBJECT_REF = eINSTANCE
+                .getDataObjectReference_DataObjectRef();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.DataOutputImpl <em>Data Output</em>}' class.
@@ -25626,7 +25713,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DATA_OUTPUT__OUTPUT_SET_WITH_OPTIONAL = eINSTANCE.getDataOutput_OutputSetWithOptional();
+        EReference DATA_OUTPUT__OUTPUT_SET_WITH_OPTIONAL = eINSTANCE
+                .getDataOutput_OutputSetWithOptional();
 
         /**
          * The meta object literal for the '<em><b>Output Set With While Executing</b></em>' reference list feature.
@@ -25634,7 +25722,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DATA_OUTPUT__OUTPUT_SET_WITH_WHILE_EXECUTING = eINSTANCE.getDataOutput_OutputSetWithWhileExecuting();
+        EReference DATA_OUTPUT__OUTPUT_SET_WITH_WHILE_EXECUTING = eINSTANCE
+                .getDataOutput_OutputSetWithWhileExecuting();
 
         /**
          * The meta object literal for the '<em><b>Output Set Refs</b></em>' reference list feature.
@@ -25738,7 +25827,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DATA_STORE_REFERENCE__DATA_STORE_REF = eINSTANCE.getDataStoreReference_DataStoreRef();
+        EReference DATA_STORE_REFERENCE__DATA_STORE_REF = eINSTANCE
+                .getDataStoreReference_DataStoreRef();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.DefinitionsImpl <em>Definitions</em>}' class.
@@ -25986,7 +26076,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference ESCALATION_EVENT_DEFINITION__ESCALATION_REF = eINSTANCE.getEscalationEventDefinition_EscalationRef();
+        EReference ESCALATION_EVENT_DEFINITION__ESCALATION_REF = eINSTANCE
+                .getEscalationEventDefinition_EscalationRef();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.EventImpl <em>Event</em>}' class.
@@ -26022,7 +26113,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE = eINSTANCE.getEventBasedGateway_EventGatewayType();
+        EAttribute EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE = eINSTANCE
+                .getEventBasedGateway_EventGatewayType();
 
         /**
          * The meta object literal for the '<em><b>Instantiate</b></em>' attribute feature.
@@ -26112,7 +26204,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute EXTENSION_ATTRIBUTE_DEFINITION__NAME = eINSTANCE.getExtensionAttributeDefinition_Name();
+        EAttribute EXTENSION_ATTRIBUTE_DEFINITION__NAME = eINSTANCE
+                .getExtensionAttributeDefinition_Name();
 
         /**
          * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
@@ -26120,7 +26213,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute EXTENSION_ATTRIBUTE_DEFINITION__TYPE = eINSTANCE.getExtensionAttributeDefinition_Type();
+        EAttribute EXTENSION_ATTRIBUTE_DEFINITION__TYPE = eINSTANCE
+                .getExtensionAttributeDefinition_Type();
 
         /**
          * The meta object literal for the '<em><b>Is Reference</b></em>' attribute feature.
@@ -26128,7 +26222,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute EXTENSION_ATTRIBUTE_DEFINITION__IS_REFERENCE = eINSTANCE.getExtensionAttributeDefinition_IsReference();
+        EAttribute EXTENSION_ATTRIBUTE_DEFINITION__IS_REFERENCE = eINSTANCE
+                .getExtensionAttributeDefinition_IsReference();
 
         /**
          * The meta object literal for the '<em><b>Extension Definition</b></em>' container reference feature.
@@ -26136,7 +26231,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference EXTENSION_ATTRIBUTE_DEFINITION__EXTENSION_DEFINITION = eINSTANCE.getExtensionAttributeDefinition_ExtensionDefinition();
+        EReference EXTENSION_ATTRIBUTE_DEFINITION__EXTENSION_DEFINITION = eINSTANCE
+                .getExtensionAttributeDefinition_ExtensionDefinition();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.ExtensionAttributeValueImpl <em>Extension Attribute Value</em>}' class.
@@ -26154,7 +26250,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference EXTENSION_ATTRIBUTE_VALUE__VALUE_REF = eINSTANCE.getExtensionAttributeValue_ValueRef();
+        EReference EXTENSION_ATTRIBUTE_VALUE__VALUE_REF = eINSTANCE
+                .getExtensionAttributeValue_ValueRef();
 
         /**
          * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
@@ -26170,7 +26267,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION = eINSTANCE.getExtensionAttributeValue_ExtensionAttributeDefinition();
+        EReference EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION = eINSTANCE
+                .getExtensionAttributeValue_ExtensionAttributeDefinition();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.ExtensionDefinitionImpl <em>Extension Definition</em>}' class.
@@ -26196,7 +26294,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS = eINSTANCE.getExtensionDefinition_ExtensionAttributeDefinitions();
+        EReference EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS = eINSTANCE
+                .getExtensionDefinition_ExtensionAttributeDefinitions();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.FlowElementImpl <em>Flow Element</em>}' class.
@@ -26256,7 +26355,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference FLOW_ELEMENTS_CONTAINER__LANE_SETS = eINSTANCE.getFlowElementsContainer_LaneSets();
+        EReference FLOW_ELEMENTS_CONTAINER__LANE_SETS = eINSTANCE
+                .getFlowElementsContainer_LaneSets();
 
         /**
          * The meta object literal for the '<em><b>Flow Elements</b></em>' containment reference list feature.
@@ -26264,7 +26364,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS = eINSTANCE.getFlowElementsContainer_FlowElements();
+        EReference FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS = eINSTANCE
+                .getFlowElementsContainer_FlowElements();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.FlowNodeImpl <em>Flow Node</em>}' class.
@@ -26324,7 +26425,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF = eINSTANCE.getFormalExpression_EvaluatesToTypeRef();
+        EReference FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF = eINSTANCE
+                .getFormalExpression_EvaluatesToTypeRef();
 
         /**
          * The meta object literal for the '<em><b>Language</b></em>' attribute feature.
@@ -26368,7 +26470,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute GLOBAL_BUSINESS_RULE_TASK__IMPLEMENTATION = eINSTANCE.getGlobalBusinessRuleTask_Implementation();
+        EAttribute GLOBAL_BUSINESS_RULE_TASK__IMPLEMENTATION = eINSTANCE
+                .getGlobalBusinessRuleTask_Implementation();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.GlobalChoreographyTaskImpl <em>Global Choreography Task</em>}' class.
@@ -26386,7 +26489,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF = eINSTANCE.getGlobalChoreographyTask_InitiatingParticipantRef();
+        EReference GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF = eINSTANCE
+                .getGlobalChoreographyTask_InitiatingParticipantRef();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.GlobalConversationImpl <em>Global Conversation</em>}' class.
@@ -26432,7 +26536,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE = eINSTANCE.getGlobalScriptTask_ScriptLanguage();
+        EAttribute GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE = eINSTANCE
+                .getGlobalScriptTask_ScriptLanguage();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.GlobalTaskImpl <em>Global Task</em>}' class.
@@ -26584,7 +26689,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference INPUT_OUTPUT_BINDING__INPUT_DATA_REF = eINSTANCE.getInputOutputBinding_InputDataRef();
+        EReference INPUT_OUTPUT_BINDING__INPUT_DATA_REF = eINSTANCE
+                .getInputOutputBinding_InputDataRef();
 
         /**
          * The meta object literal for the '<em><b>Operation Ref</b></em>' reference feature.
@@ -26592,7 +26698,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference INPUT_OUTPUT_BINDING__OPERATION_REF = eINSTANCE.getInputOutputBinding_OperationRef();
+        EReference INPUT_OUTPUT_BINDING__OPERATION_REF = eINSTANCE
+                .getInputOutputBinding_OperationRef();
 
         /**
          * The meta object literal for the '<em><b>Output Data Ref</b></em>' reference feature.
@@ -26600,7 +26707,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF = eINSTANCE.getInputOutputBinding_OutputDataRef();
+        EReference INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF = eINSTANCE
+                .getInputOutputBinding_OutputDataRef();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.InputOutputSpecificationImpl <em>Input Output Specification</em>}' class.
@@ -26618,7 +26726,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS = eINSTANCE.getInputOutputSpecification_DataInputs();
+        EReference INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS = eINSTANCE
+                .getInputOutputSpecification_DataInputs();
 
         /**
          * The meta object literal for the '<em><b>Data Outputs</b></em>' containment reference list feature.
@@ -26626,7 +26735,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS = eINSTANCE.getInputOutputSpecification_DataOutputs();
+        EReference INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS = eINSTANCE
+                .getInputOutputSpecification_DataOutputs();
 
         /**
          * The meta object literal for the '<em><b>Input Sets</b></em>' containment reference list feature.
@@ -26634,7 +26744,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference INPUT_OUTPUT_SPECIFICATION__INPUT_SETS = eINSTANCE.getInputOutputSpecification_InputSets();
+        EReference INPUT_OUTPUT_SPECIFICATION__INPUT_SETS = eINSTANCE
+                .getInputOutputSpecification_InputSets();
 
         /**
          * The meta object literal for the '<em><b>Output Sets</b></em>' containment reference list feature.
@@ -26642,7 +26753,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS = eINSTANCE.getInputOutputSpecification_OutputSets();
+        EReference INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS = eINSTANCE
+                .getInputOutputSpecification_OutputSets();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.InputSetImpl <em>Input Set</em>}' class.
@@ -26676,7 +26788,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference INPUT_SET__WHILE_EXECUTING_INPUT_REFS = eINSTANCE.getInputSet_WhileExecutingInputRefs();
+        EReference INPUT_SET__WHILE_EXECUTING_INPUT_REFS = eINSTANCE
+                .getInputSet_WhileExecutingInputRefs();
 
         /**
          * The meta object literal for the '<em><b>Output Set Refs</b></em>' reference list feature.
@@ -26710,7 +26823,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference INTERACTION_NODE__INCOMING_CONVERSATION_LINKS = eINSTANCE.getInteractionNode_IncomingConversationLinks();
+        EReference INTERACTION_NODE__INCOMING_CONVERSATION_LINKS = eINSTANCE
+                .getInteractionNode_IncomingConversationLinks();
 
         /**
          * The meta object literal for the '<em><b>Outgoing Conversation Links</b></em>' reference list feature.
@@ -26718,7 +26832,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS = eINSTANCE.getInteractionNode_OutgoingConversationLinks();
+        EReference INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS = eINSTANCE
+                .getInteractionNode_OutgoingConversationLinks();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.InterfaceImpl <em>Interface</em>}' class.
@@ -26798,7 +26913,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF = eINSTANCE.getItemAwareElement_ItemSubjectRef();
+        EReference ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF = eINSTANCE
+                .getItemAwareElement_ItemSubjectRef();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.ItemDefinitionImpl <em>Item Definition</em>}' class.
@@ -27014,7 +27130,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference MESSAGE_EVENT_DEFINITION__OPERATION_REF = eINSTANCE.getMessageEventDefinition_OperationRef();
+        EReference MESSAGE_EVENT_DEFINITION__OPERATION_REF = eINSTANCE
+                .getMessageEventDefinition_OperationRef();
 
         /**
          * The meta object literal for the '<em><b>Message Ref</b></em>' reference feature.
@@ -27022,7 +27139,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference MESSAGE_EVENT_DEFINITION__MESSAGE_REF = eINSTANCE.getMessageEventDefinition_MessageRef();
+        EReference MESSAGE_EVENT_DEFINITION__MESSAGE_REF = eINSTANCE
+                .getMessageEventDefinition_MessageRef();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.MessageFlowImpl <em>Message Flow</em>}' class.
@@ -27082,7 +27200,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF = eINSTANCE.getMessageFlowAssociation_InnerMessageFlowRef();
+        EReference MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF = eINSTANCE
+                .getMessageFlowAssociation_InnerMessageFlowRef();
 
         /**
          * The meta object literal for the '<em><b>Outer Message Flow Ref</b></em>' reference feature.
@@ -27090,7 +27209,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF = eINSTANCE.getMessageFlowAssociation_OuterMessageFlowRef();
+        EReference MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF = eINSTANCE
+                .getMessageFlowAssociation_OuterMessageFlowRef();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.MonitoringImpl <em>Monitoring</em>}' class.
@@ -27110,7 +27230,8 @@ public interface Bpmn2Package extends EPackage {
          * @see org.eclipse.bpmn2.impl.Bpmn2PackageImpl#getMultiInstanceLoopCharacteristics()
          * @generated
          */
-        EClass MULTI_INSTANCE_LOOP_CHARACTERISTICS = eINSTANCE.getMultiInstanceLoopCharacteristics();
+        EClass MULTI_INSTANCE_LOOP_CHARACTERISTICS = eINSTANCE
+                .getMultiInstanceLoopCharacteristics();
 
         /**
          * The meta object literal for the '<em><b>Loop Cardinality</b></em>' containment reference feature.
@@ -27118,7 +27239,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY = eINSTANCE.getMultiInstanceLoopCharacteristics_LoopCardinality();
+        EReference MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY = eINSTANCE
+                .getMultiInstanceLoopCharacteristics_LoopCardinality();
 
         /**
          * The meta object literal for the '<em><b>Loop Data Input Ref</b></em>' reference feature.
@@ -27126,7 +27248,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_INPUT_REF = eINSTANCE.getMultiInstanceLoopCharacteristics_LoopDataInputRef();
+        EReference MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_INPUT_REF = eINSTANCE
+                .getMultiInstanceLoopCharacteristics_LoopDataInputRef();
 
         /**
          * The meta object literal for the '<em><b>Loop Data Output Ref</b></em>' reference feature.
@@ -27134,7 +27257,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_OUTPUT_REF = eINSTANCE.getMultiInstanceLoopCharacteristics_LoopDataOutputRef();
+        EReference MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_DATA_OUTPUT_REF = eINSTANCE
+                .getMultiInstanceLoopCharacteristics_LoopDataOutputRef();
 
         /**
          * The meta object literal for the '<em><b>Input Data Item</b></em>' containment reference feature.
@@ -27142,7 +27266,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM = eINSTANCE.getMultiInstanceLoopCharacteristics_InputDataItem();
+        EReference MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM = eINSTANCE
+                .getMultiInstanceLoopCharacteristics_InputDataItem();
 
         /**
          * The meta object literal for the '<em><b>Output Data Item</b></em>' containment reference feature.
@@ -27150,7 +27275,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM = eINSTANCE.getMultiInstanceLoopCharacteristics_OutputDataItem();
+        EReference MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM = eINSTANCE
+                .getMultiInstanceLoopCharacteristics_OutputDataItem();
 
         /**
          * The meta object literal for the '<em><b>Complex Behavior Definition</b></em>' containment reference list feature.
@@ -27158,7 +27284,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION = eINSTANCE.getMultiInstanceLoopCharacteristics_ComplexBehaviorDefinition();
+        EReference MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION = eINSTANCE
+                .getMultiInstanceLoopCharacteristics_ComplexBehaviorDefinition();
 
         /**
          * The meta object literal for the '<em><b>Completion Condition</b></em>' containment reference feature.
@@ -27166,7 +27293,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION = eINSTANCE.getMultiInstanceLoopCharacteristics_CompletionCondition();
+        EReference MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION = eINSTANCE
+                .getMultiInstanceLoopCharacteristics_CompletionCondition();
 
         /**
          * The meta object literal for the '<em><b>Behavior</b></em>' attribute feature.
@@ -27174,7 +27302,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute MULTI_INSTANCE_LOOP_CHARACTERISTICS__BEHAVIOR = eINSTANCE.getMultiInstanceLoopCharacteristics_Behavior();
+        EAttribute MULTI_INSTANCE_LOOP_CHARACTERISTICS__BEHAVIOR = eINSTANCE
+                .getMultiInstanceLoopCharacteristics_Behavior();
 
         /**
          * The meta object literal for the '<em><b>Is Sequential</b></em>' attribute feature.
@@ -27182,7 +27311,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute MULTI_INSTANCE_LOOP_CHARACTERISTICS__IS_SEQUENTIAL = eINSTANCE.getMultiInstanceLoopCharacteristics_IsSequential();
+        EAttribute MULTI_INSTANCE_LOOP_CHARACTERISTICS__IS_SEQUENTIAL = eINSTANCE
+                .getMultiInstanceLoopCharacteristics_IsSequential();
 
         /**
          * The meta object literal for the '<em><b>None Behavior Event Ref</b></em>' reference feature.
@@ -27190,7 +27320,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference MULTI_INSTANCE_LOOP_CHARACTERISTICS__NONE_BEHAVIOR_EVENT_REF = eINSTANCE.getMultiInstanceLoopCharacteristics_NoneBehaviorEventRef();
+        EReference MULTI_INSTANCE_LOOP_CHARACTERISTICS__NONE_BEHAVIOR_EVENT_REF = eINSTANCE
+                .getMultiInstanceLoopCharacteristics_NoneBehaviorEventRef();
 
         /**
          * The meta object literal for the '<em><b>One Behavior Event Ref</b></em>' reference feature.
@@ -27198,7 +27329,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference MULTI_INSTANCE_LOOP_CHARACTERISTICS__ONE_BEHAVIOR_EVENT_REF = eINSTANCE.getMultiInstanceLoopCharacteristics_OneBehaviorEventRef();
+        EReference MULTI_INSTANCE_LOOP_CHARACTERISTICS__ONE_BEHAVIOR_EVENT_REF = eINSTANCE
+                .getMultiInstanceLoopCharacteristics_OneBehaviorEventRef();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.OperationImpl <em>Operation</em>}' class.
@@ -27282,7 +27414,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS = eINSTANCE.getOutputSet_WhileExecutingOutputRefs();
+        EReference OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS = eINSTANCE
+                .getOutputSet_WhileExecutingOutputRefs();
 
         /**
          * The meta object literal for the '<em><b>Input Set Refs</b></em>' reference list feature.
@@ -27342,7 +27475,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference PARTICIPANT__PARTICIPANT_MULTIPLICITY = eINSTANCE.getParticipant_ParticipantMultiplicity();
+        EReference PARTICIPANT__PARTICIPANT_MULTIPLICITY = eINSTANCE
+                .getParticipant_ParticipantMultiplicity();
 
         /**
          * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -27376,7 +27510,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF = eINSTANCE.getParticipantAssociation_InnerParticipantRef();
+        EReference PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF = eINSTANCE
+                .getParticipantAssociation_InnerParticipantRef();
 
         /**
          * The meta object literal for the '<em><b>Outer Participant Ref</b></em>' reference feature.
@@ -27384,7 +27519,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF = eINSTANCE.getParticipantAssociation_OuterParticipantRef();
+        EReference PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF = eINSTANCE
+                .getParticipantAssociation_OuterParticipantRef();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.ParticipantMultiplicityImpl <em>Participant Multiplicity</em>}' class.
@@ -27402,7 +27538,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute PARTICIPANT_MULTIPLICITY__MAXIMUM = eINSTANCE.getParticipantMultiplicity_Maximum();
+        EAttribute PARTICIPANT_MULTIPLICITY__MAXIMUM = eINSTANCE
+                .getParticipantMultiplicity_Maximum();
 
         /**
          * The meta object literal for the '<em><b>Minimum</b></em>' attribute feature.
@@ -27410,7 +27547,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute PARTICIPANT_MULTIPLICITY__MINIMUM = eINSTANCE.getParticipantMultiplicity_Minimum();
+        EAttribute PARTICIPANT_MULTIPLICITY__MINIMUM = eINSTANCE
+                .getParticipantMultiplicity_Minimum();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.PartnerEntityImpl <em>Partner Entity</em>}' class.
@@ -27540,7 +27678,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference PROCESS__CORRELATION_SUBSCRIPTIONS = eINSTANCE.getProcess_CorrelationSubscriptions();
+        EReference PROCESS__CORRELATION_SUBSCRIPTIONS = eINSTANCE
+                .getProcess_CorrelationSubscriptions();
 
         /**
          * The meta object literal for the '<em><b>Supports</b></em>' reference list feature.
@@ -27556,7 +27695,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference PROCESS__DEFINITIONAL_COLLABORATION_REF = eINSTANCE.getProcess_DefinitionalCollaborationRef();
+        EReference PROCESS__DEFINITIONAL_COLLABORATION_REF = eINSTANCE
+                .getProcess_DefinitionalCollaborationRef();
 
         /**
          * The meta object literal for the '<em><b>Is Closed</b></em>' attribute feature.
@@ -27736,7 +27876,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION = eINSTANCE.getResourceAssignmentExpression_Expression();
+        EReference RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION = eINSTANCE
+                .getResourceAssignmentExpression_Expression();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.ResourceParameterImpl <em>Resource Parameter</em>}' class.
@@ -27788,7 +27929,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference RESOURCE_PARAMETER_BINDING__EXPRESSION = eINSTANCE.getResourceParameterBinding_Expression();
+        EReference RESOURCE_PARAMETER_BINDING__EXPRESSION = eINSTANCE
+                .getResourceParameterBinding_Expression();
 
         /**
          * The meta object literal for the '<em><b>Parameter Ref</b></em>' reference feature.
@@ -27796,7 +27938,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference RESOURCE_PARAMETER_BINDING__PARAMETER_REF = eINSTANCE.getResourceParameterBinding_ParameterRef();
+        EReference RESOURCE_PARAMETER_BINDING__PARAMETER_REF = eINSTANCE
+                .getResourceParameterBinding_ParameterRef();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.ResourceRoleImpl <em>Resource Role</em>}' class.
@@ -27822,7 +27965,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference RESOURCE_ROLE__RESOURCE_PARAMETER_BINDINGS = eINSTANCE.getResourceRole_ResourceParameterBindings();
+        EReference RESOURCE_ROLE__RESOURCE_PARAMETER_BINDINGS = eINSTANCE
+                .getResourceRole_ResourceParameterBindings();
 
         /**
          * The meta object literal for the '<em><b>Resource Assignment Expression</b></em>' containment reference feature.
@@ -27830,7 +27974,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference RESOURCE_ROLE__RESOURCE_ASSIGNMENT_EXPRESSION = eINSTANCE.getResourceRole_ResourceAssignmentExpression();
+        EReference RESOURCE_ROLE__RESOURCE_ASSIGNMENT_EXPRESSION = eINSTANCE
+                .getResourceRole_ResourceAssignmentExpression();
 
         /**
          * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -27926,7 +28071,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference SEQUENCE_FLOW__CONDITION_EXPRESSION = eINSTANCE.getSequenceFlow_ConditionExpression();
+        EReference SEQUENCE_FLOW__CONDITION_EXPRESSION = eINSTANCE
+                .getSequenceFlow_ConditionExpression();
 
         /**
          * The meta object literal for the '<em><b>Is Immediate</b></em>' attribute feature.
@@ -28020,7 +28166,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference SIGNAL_EVENT_DEFINITION__SIGNAL_REF = eINSTANCE.getSignalEventDefinition_SignalRef();
+        EReference SIGNAL_EVENT_DEFINITION__SIGNAL_REF = eINSTANCE
+                .getSignalEventDefinition_SignalRef();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.StandardLoopCharacteristicsImpl <em>Standard Loop Characteristics</em>}' class.
@@ -28038,7 +28185,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION = eINSTANCE.getStandardLoopCharacteristics_LoopCondition();
+        EReference STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION = eINSTANCE
+                .getStandardLoopCharacteristics_LoopCondition();
 
         /**
          * The meta object literal for the '<em><b>Loop Maximum</b></em>' containment reference feature.
@@ -28046,7 +28194,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM = eINSTANCE.getStandardLoopCharacteristics_LoopMaximum();
+        EReference STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM = eINSTANCE
+                .getStandardLoopCharacteristics_LoopMaximum();
 
         /**
          * The meta object literal for the '<em><b>Test Before</b></em>' attribute feature.
@@ -28054,7 +28203,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE = eINSTANCE.getStandardLoopCharacteristics_TestBefore();
+        EAttribute STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE = eINSTANCE
+                .getStandardLoopCharacteristics_TestBefore();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.StartEventImpl <em>Start Event</em>}' class.
@@ -28108,7 +28258,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference SUB_CONVERSATION__CONVERSATION_NODES = eINSTANCE.getSubConversation_ConversationNodes();
+        EReference SUB_CONVERSATION__CONVERSATION_NODES = eINSTANCE
+                .getSubConversation_ConversationNodes();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.SubProcessImpl <em>Sub Process</em>}' class.
@@ -28206,7 +28357,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference THROW_EVENT__DATA_INPUT_ASSOCIATION = eINSTANCE.getThrowEvent_DataInputAssociation();
+        EReference THROW_EVENT__DATA_INPUT_ASSOCIATION = eINSTANCE
+                .getThrowEvent_DataInputAssociation();
 
         /**
          * The meta object literal for the '<em><b>Input Set</b></em>' containment reference feature.
@@ -28230,7 +28382,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference THROW_EVENT__EVENT_DEFINITION_REFS = eINSTANCE.getThrowEvent_EventDefinitionRefs();
+        EReference THROW_EVENT__EVENT_DEFINITION_REFS = eINSTANCE
+                .getThrowEvent_EventDefinitionRefs();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.TimerEventDefinitionImpl <em>Timer Event Definition</em>}' class.
@@ -28256,7 +28409,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference TIMER_EVENT_DEFINITION__TIME_DURATION = eINSTANCE.getTimerEventDefinition_TimeDuration();
+        EReference TIMER_EVENT_DEFINITION__TIME_DURATION = eINSTANCE
+                .getTimerEventDefinition_TimeDuration();
 
         /**
          * The meta object literal for the '<em><b>Time Cycle</b></em>' containment reference feature.
@@ -28264,7 +28418,8 @@ public interface Bpmn2Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference TIMER_EVENT_DEFINITION__TIME_CYCLE = eINSTANCE.getTimerEventDefinition_TimeCycle();
+        EReference TIMER_EVENT_DEFINITION__TIME_CYCLE = eINSTANCE
+                .getTimerEventDefinition_TimeCycle();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.TransactionImpl <em>Transaction</em>}' class.

@@ -74,7 +74,8 @@ public class ChoreographyTaskImpl extends ChoreographyActivityImpl implements Ch
      */
     public List<MessageFlow> getMessageFlowRef() {
         if (messageFlowRef == null) {
-            messageFlowRef = new EObjectResolvingEList<MessageFlow>(MessageFlow.class, this, Bpmn2Package.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF);
+            messageFlowRef = new EObjectResolvingEList<MessageFlow>(MessageFlow.class, this,
+                    Bpmn2Package.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF);
         }
         return messageFlowRef;
     }
@@ -87,8 +88,8 @@ public class ChoreographyTaskImpl extends ChoreographyActivityImpl implements Ch
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF:
-                return getMessageFlowRef();
+        case Bpmn2Package.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF:
+            return getMessageFlowRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -102,10 +103,10 @@ public class ChoreographyTaskImpl extends ChoreographyActivityImpl implements Ch
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF:
-                getMessageFlowRef().clear();
-                getMessageFlowRef().addAll((Collection<? extends MessageFlow>)newValue);
-                return;
+        case Bpmn2Package.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF:
+            getMessageFlowRef().clear();
+            getMessageFlowRef().addAll((Collection<? extends MessageFlow>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -118,9 +119,9 @@ public class ChoreographyTaskImpl extends ChoreographyActivityImpl implements Ch
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF:
-                getMessageFlowRef().clear();
-                return;
+        case Bpmn2Package.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF:
+            getMessageFlowRef().clear();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -133,8 +134,8 @@ public class ChoreographyTaskImpl extends ChoreographyActivityImpl implements Ch
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF:
-                return messageFlowRef != null && !messageFlowRef.isEmpty();
+        case Bpmn2Package.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF:
+            return messageFlowRef != null && !messageFlowRef.isEmpty();
         }
         return super.eIsSet(featureID);
     }

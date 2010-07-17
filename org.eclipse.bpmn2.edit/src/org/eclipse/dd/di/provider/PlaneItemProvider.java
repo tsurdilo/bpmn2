@@ -38,7 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class PlaneItemProvider extends NodeItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class PlaneItemProvider extends NodeItemProvider implements IEditingDomainItemProvider,
+        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider,
+        IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -117,8 +119,9 @@ public class PlaneItemProvider extends NodeItemProvider implements IEditingDomai
      */
     @Override
     public String getText(Object object) {
-        String label = ((Plane)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_Plane_type") : getString("_UI_Plane_type") + " " + label;
+        String label = ((Plane) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_Plane_type")
+                : getString("_UI_Plane_type") + " " + label;
     }
 
     /**
@@ -133,9 +136,10 @@ public class PlaneItemProvider extends NodeItemProvider implements IEditingDomai
         updateChildren(notification);
 
         switch (notification.getFeatureID(Plane.class)) {
-            case DiPackage.PLANE__PLANE_ELEMENT:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case DiPackage.PLANE__PLANE_ELEMENT:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -151,13 +155,17 @@ public class PlaneItemProvider extends NodeItemProvider implements IEditingDomai
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(DiPackage.Literals.PLANE__PLANE_ELEMENT, BpmnDiFactory.eINSTANCE.createBPMNEdge()));
+        newChildDescriptors.add(createChildParameter(DiPackage.Literals.PLANE__PLANE_ELEMENT,
+                BpmnDiFactory.eINSTANCE.createBPMNEdge()));
 
-        newChildDescriptors.add(createChildParameter(DiPackage.Literals.PLANE__PLANE_ELEMENT, BpmnDiFactory.eINSTANCE.createBPMNLabel()));
+        newChildDescriptors.add(createChildParameter(DiPackage.Literals.PLANE__PLANE_ELEMENT,
+                BpmnDiFactory.eINSTANCE.createBPMNLabel()));
 
-        newChildDescriptors.add(createChildParameter(DiPackage.Literals.PLANE__PLANE_ELEMENT, BpmnDiFactory.eINSTANCE.createBPMNPlane()));
+        newChildDescriptors.add(createChildParameter(DiPackage.Literals.PLANE__PLANE_ELEMENT,
+                BpmnDiFactory.eINSTANCE.createBPMNPlane()));
 
-        newChildDescriptors.add(createChildParameter(DiPackage.Literals.PLANE__PLANE_ELEMENT, BpmnDiFactory.eINSTANCE.createBPMNShape()));
+        newChildDescriptors.add(createChildParameter(DiPackage.Literals.PLANE__PLANE_ELEMENT,
+                BpmnDiFactory.eINSTANCE.createBPMNShape()));
     }
 
 }

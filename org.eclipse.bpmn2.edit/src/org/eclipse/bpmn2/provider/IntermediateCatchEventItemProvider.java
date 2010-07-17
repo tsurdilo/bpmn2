@@ -34,7 +34,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class IntermediateCatchEventItemProvider extends CatchEventItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class IntermediateCatchEventItemProvider extends CatchEventItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -69,9 +71,11 @@ public class IntermediateCatchEventItemProvider extends CatchEventItemProvider i
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/IntermediateCatchEvent.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/IntermediateCatchEvent.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/IntermediateCatchEvent.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/IntermediateCatchEvent.gif"));
         }
     }
 
@@ -83,8 +87,9 @@ public class IntermediateCatchEventItemProvider extends CatchEventItemProvider i
      */
     @Override
     public String getText(Object object) {
-        String label = ((IntermediateCatchEvent)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_IntermediateCatchEvent_type") : getString("_UI_IntermediateCatchEvent_type") + " " + label;
+        String label = ((IntermediateCatchEvent) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_IntermediateCatchEvent_type")
+                : getString("_UI_IntermediateCatchEvent_type") + " " + label;
     }
 
     /**

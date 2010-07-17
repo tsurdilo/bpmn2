@@ -105,18 +105,19 @@ public class DcValidator extends EObjectValidator {
      * @generated
      */
     @Override
-    protected boolean validate(int classifierID, Object value, DiagnosticChain diagnostics, Map<Object, Object> context) {
+    protected boolean validate(int classifierID, Object value, DiagnosticChain diagnostics,
+            Map<Object, Object> context) {
         switch (classifierID) {
-            case DcPackage.DOCUMENT_ROOT:
-                return validateDocumentRoot((DocumentRoot)value, diagnostics, context);
-            case DcPackage.BOUNDS:
-                return validateBounds((Bounds)value, diagnostics, context);
-            case DcPackage.FONT:
-                return validateFont((Font)value, diagnostics, context);
-            case DcPackage.POINT:
-                return validatePoint((Point)value, diagnostics, context);
-            default:
-                return true;
+        case DcPackage.DOCUMENT_ROOT:
+            return validateDocumentRoot((DocumentRoot) value, diagnostics, context);
+        case DcPackage.BOUNDS:
+            return validateBounds((Bounds) value, diagnostics, context);
+        case DcPackage.FONT:
+            return validateFont((Font) value, diagnostics, context);
+        case DcPackage.POINT:
+            return validatePoint((Point) value, diagnostics, context);
+        default:
+            return true;
         }
     }
 
@@ -125,7 +126,8 @@ public class DcValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateDocumentRoot(DocumentRoot documentRoot, DiagnosticChain diagnostics, Map<Object, Object> context) {
+    public boolean validateDocumentRoot(DocumentRoot documentRoot, DiagnosticChain diagnostics,
+            Map<Object, Object> context) {
         return validate_EveryDefaultConstraint(documentRoot, diagnostics, context);
     }
 
@@ -134,7 +136,8 @@ public class DcValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateBounds(Bounds bounds, DiagnosticChain diagnostics, Map<Object, Object> context) {
+    public boolean validateBounds(Bounds bounds, DiagnosticChain diagnostics,
+            Map<Object, Object> context) {
         return validate_EveryDefaultConstraint(bounds, diagnostics, context);
     }
 
@@ -172,7 +175,8 @@ public class DcValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateFont_non_negative_size(Font font, DiagnosticChain diagnostics, Map<Object, Object> context) {
+    public boolean validateFont_non_negative_size(Font font, DiagnosticChain diagnostics,
+            Map<Object, Object> context) {
         return font.non_negative_size(diagnostics, context);
     }
 
@@ -181,7 +185,8 @@ public class DcValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validatePoint(Point point, DiagnosticChain diagnostics, Map<Object, Object> context) {
+    public boolean validatePoint(Point point, DiagnosticChain diagnostics,
+            Map<Object, Object> context) {
         return validate_EveryDefaultConstraint(point, diagnostics, context);
     }
 

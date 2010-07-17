@@ -103,7 +103,9 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
      */
     public List<ConversationLink> getIncomingConversationLinks() {
         if (incomingConversationLinks == null) {
-            incomingConversationLinks = new EObjectWithInverseEList<ConversationLink>(ConversationLink.class, this, Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS, Bpmn2Package.CONVERSATION_LINK__TARGET_REF);
+            incomingConversationLinks = new EObjectWithInverseEList<ConversationLink>(
+                    ConversationLink.class, this, Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS,
+                    Bpmn2Package.CONVERSATION_LINK__TARGET_REF);
         }
         return incomingConversationLinks;
     }
@@ -115,7 +117,9 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
      */
     public List<ConversationLink> getOutgoingConversationLinks() {
         if (outgoingConversationLinks == null) {
-            outgoingConversationLinks = new EObjectWithInverseResolvingEList<ConversationLink>(ConversationLink.class, this, Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS, Bpmn2Package.CONVERSATION_LINK__SOURCE_REF);
+            outgoingConversationLinks = new EObjectWithInverseResolvingEList<ConversationLink>(
+                    ConversationLink.class, this, Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS,
+                    Bpmn2Package.CONVERSATION_LINK__SOURCE_REF);
         }
         return outgoingConversationLinks;
     }
@@ -127,7 +131,8 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
      */
     public List<Property> getProperties() {
         if (properties == null) {
-            properties = new EObjectContainmentEList<Property>(Property.class, this, Bpmn2Package.EVENT__PROPERTIES);
+            properties = new EObjectContainmentEList<Property>(Property.class, this,
+                    Bpmn2Package.EVENT__PROPERTIES);
         }
         return properties;
     }
@@ -139,12 +144,15 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
      */
     @SuppressWarnings("unchecked")
     @Override
-    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS:
-                return ((InternalEList<InternalEObject>)(InternalEList<?>)getIncomingConversationLinks()).basicAdd(otherEnd, msgs);
-            case Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS:
-                return ((InternalEList<InternalEObject>)(InternalEList<?>)getOutgoingConversationLinks()).basicAdd(otherEnd, msgs);
+        case Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getIncomingConversationLinks())
+                    .basicAdd(otherEnd, msgs);
+        case Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getOutgoingConversationLinks())
+                    .basicAdd(otherEnd, msgs);
         }
         return super.eInverseAdd(otherEnd, featureID, msgs);
     }
@@ -155,14 +163,15 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
         switch (featureID) {
-            case Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS:
-                return ((InternalEList<?>)getIncomingConversationLinks()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS:
-                return ((InternalEList<?>)getOutgoingConversationLinks()).basicRemove(otherEnd, msgs);
-            case Bpmn2Package.EVENT__PROPERTIES:
-                return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS:
+            return ((InternalEList<?>) getIncomingConversationLinks()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS:
+            return ((InternalEList<?>) getOutgoingConversationLinks()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.EVENT__PROPERTIES:
+            return ((InternalEList<?>) getProperties()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -175,12 +184,12 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS:
-                return getIncomingConversationLinks();
-            case Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS:
-                return getOutgoingConversationLinks();
-            case Bpmn2Package.EVENT__PROPERTIES:
-                return getProperties();
+        case Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS:
+            return getIncomingConversationLinks();
+        case Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS:
+            return getOutgoingConversationLinks();
+        case Bpmn2Package.EVENT__PROPERTIES:
+            return getProperties();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -194,18 +203,20 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS:
-                getIncomingConversationLinks().clear();
-                getIncomingConversationLinks().addAll((Collection<? extends ConversationLink>)newValue);
-                return;
-            case Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS:
-                getOutgoingConversationLinks().clear();
-                getOutgoingConversationLinks().addAll((Collection<? extends ConversationLink>)newValue);
-                return;
-            case Bpmn2Package.EVENT__PROPERTIES:
-                getProperties().clear();
-                getProperties().addAll((Collection<? extends Property>)newValue);
-                return;
+        case Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS:
+            getIncomingConversationLinks().clear();
+            getIncomingConversationLinks()
+                    .addAll((Collection<? extends ConversationLink>) newValue);
+            return;
+        case Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS:
+            getOutgoingConversationLinks().clear();
+            getOutgoingConversationLinks()
+                    .addAll((Collection<? extends ConversationLink>) newValue);
+            return;
+        case Bpmn2Package.EVENT__PROPERTIES:
+            getProperties().clear();
+            getProperties().addAll((Collection<? extends Property>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -218,15 +229,15 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS:
-                getIncomingConversationLinks().clear();
-                return;
-            case Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS:
-                getOutgoingConversationLinks().clear();
-                return;
-            case Bpmn2Package.EVENT__PROPERTIES:
-                getProperties().clear();
-                return;
+        case Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS:
+            getIncomingConversationLinks().clear();
+            return;
+        case Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS:
+            getOutgoingConversationLinks().clear();
+            return;
+        case Bpmn2Package.EVENT__PROPERTIES:
+            getProperties().clear();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -239,12 +250,12 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS:
-                return incomingConversationLinks != null && !incomingConversationLinks.isEmpty();
-            case Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS:
-                return outgoingConversationLinks != null && !outgoingConversationLinks.isEmpty();
-            case Bpmn2Package.EVENT__PROPERTIES:
-                return properties != null && !properties.isEmpty();
+        case Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS:
+            return incomingConversationLinks != null && !incomingConversationLinks.isEmpty();
+        case Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS:
+            return outgoingConversationLinks != null && !outgoingConversationLinks.isEmpty();
+        case Bpmn2Package.EVENT__PROPERTIES:
+            return properties != null && !properties.isEmpty();
         }
         return super.eIsSet(featureID);
     }
@@ -258,12 +269,12 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
     public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == InteractionNode.class) {
             switch (derivedFeatureID) {
-                case Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS:
-                    return Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS;
-                case Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS:
-                    return Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS;
-                default:
-                    return -1;
+            case Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS:
+                return Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS;
+            case Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS:
+                return Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS;
+            default:
+                return -1;
             }
         }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
@@ -278,12 +289,12 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
     public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == InteractionNode.class) {
             switch (baseFeatureID) {
-                case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
-                    return Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS;
-                case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
-                    return Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS;
-                default:
-                    return -1;
+            case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
+                return Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS;
+            case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
+                return Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS;
+            default:
+                return -1;
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);

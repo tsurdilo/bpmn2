@@ -42,7 +42,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DcItemProviderAdapterFactory extends DcAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier {
+public class DcItemProviderAdapterFactory extends DcAdapterFactory implements
+        ComposeableAdapterFactory, IChangeNotifier {
     /**
      * This keeps track of the root adapter factory that delegates to this adapter factory.
      * <!-- begin-user-doc -->
@@ -223,7 +224,7 @@ public class DcItemProviderAdapterFactory extends DcAdapterFactory implements Co
     public Object adapt(Object object, Object type) {
         if (isFactoryForType(type)) {
             Object adapter = super.adapt(object, type);
-            if (!(type instanceof Class<?>) || (((Class<?>)type).isInstance(adapter))) {
+            if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
                 return adapter;
             }
         }

@@ -38,7 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class LabelItemProvider extends NodeItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class LabelItemProvider extends NodeItemProvider implements IEditingDomainItemProvider,
+        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider,
+        IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -117,8 +119,9 @@ public class LabelItemProvider extends NodeItemProvider implements IEditingDomai
      */
     @Override
     public String getText(Object object) {
-        String label = ((Label)object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_Label_type") : getString("_UI_Label_type") + " " + label;
+        String label = ((Label) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_Label_type")
+                : getString("_UI_Label_type") + " " + label;
     }
 
     /**
@@ -133,9 +136,10 @@ public class LabelItemProvider extends NodeItemProvider implements IEditingDomai
         updateChildren(notification);
 
         switch (notification.getFeatureID(Label.class)) {
-            case DiPackage.LABEL__BOUNDS:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
+        case DiPackage.LABEL__BOUNDS:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -151,7 +155,8 @@ public class LabelItemProvider extends NodeItemProvider implements IEditingDomai
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(DiPackage.Literals.LABEL__BOUNDS, DcFactory.eINSTANCE.createBounds()));
+        newChildDescriptors.add(createChildParameter(DiPackage.Literals.LABEL__BOUNDS,
+                DcFactory.eINSTANCE.createBounds()));
     }
 
 }

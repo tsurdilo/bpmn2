@@ -83,11 +83,13 @@ public class ParticipantAssociationImpl extends BaseElementImpl implements Parti
      */
     public Participant getInnerParticipantRef() {
         if (innerParticipantRef != null && innerParticipantRef.eIsProxy()) {
-            InternalEObject oldInnerParticipantRef = (InternalEObject)innerParticipantRef;
-            innerParticipantRef = (Participant)eResolveProxy(oldInnerParticipantRef);
+            InternalEObject oldInnerParticipantRef = (InternalEObject) innerParticipantRef;
+            innerParticipantRef = (Participant) eResolveProxy(oldInnerParticipantRef);
             if (innerParticipantRef != oldInnerParticipantRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF, oldInnerParticipantRef, innerParticipantRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF,
+                            oldInnerParticipantRef, innerParticipantRef));
             }
         }
         return innerParticipantRef;
@@ -111,7 +113,9 @@ public class ParticipantAssociationImpl extends BaseElementImpl implements Parti
         Participant oldInnerParticipantRef = innerParticipantRef;
         innerParticipantRef = newInnerParticipantRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF, oldInnerParticipantRef, innerParticipantRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF,
+                    oldInnerParticipantRef, innerParticipantRef));
     }
 
     /**
@@ -121,11 +125,13 @@ public class ParticipantAssociationImpl extends BaseElementImpl implements Parti
      */
     public Participant getOuterParticipantRef() {
         if (outerParticipantRef != null && outerParticipantRef.eIsProxy()) {
-            InternalEObject oldOuterParticipantRef = (InternalEObject)outerParticipantRef;
-            outerParticipantRef = (Participant)eResolveProxy(oldOuterParticipantRef);
+            InternalEObject oldOuterParticipantRef = (InternalEObject) outerParticipantRef;
+            outerParticipantRef = (Participant) eResolveProxy(oldOuterParticipantRef);
             if (outerParticipantRef != oldOuterParticipantRef) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF, oldOuterParticipantRef, outerParticipantRef));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF,
+                            oldOuterParticipantRef, outerParticipantRef));
             }
         }
         return outerParticipantRef;
@@ -149,7 +155,9 @@ public class ParticipantAssociationImpl extends BaseElementImpl implements Parti
         Participant oldOuterParticipantRef = outerParticipantRef;
         outerParticipantRef = newOuterParticipantRef;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF, oldOuterParticipantRef, outerParticipantRef));
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF,
+                    oldOuterParticipantRef, outerParticipantRef));
     }
 
     /**
@@ -160,14 +168,14 @@ public class ParticipantAssociationImpl extends BaseElementImpl implements Parti
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF:
-                if (resolve)
-                    return getInnerParticipantRef();
-                return basicGetInnerParticipantRef();
-            case Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF:
-                if (resolve)
-                    return getOuterParticipantRef();
-                return basicGetOuterParticipantRef();
+        case Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF:
+            if (resolve)
+                return getInnerParticipantRef();
+            return basicGetInnerParticipantRef();
+        case Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF:
+            if (resolve)
+                return getOuterParticipantRef();
+            return basicGetOuterParticipantRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -180,12 +188,12 @@ public class ParticipantAssociationImpl extends BaseElementImpl implements Parti
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF:
-                setInnerParticipantRef((Participant)newValue);
-                return;
-            case Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF:
-                setOuterParticipantRef((Participant)newValue);
-                return;
+        case Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF:
+            setInnerParticipantRef((Participant) newValue);
+            return;
+        case Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF:
+            setOuterParticipantRef((Participant) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -198,12 +206,12 @@ public class ParticipantAssociationImpl extends BaseElementImpl implements Parti
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF:
-                setInnerParticipantRef((Participant)null);
-                return;
-            case Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF:
-                setOuterParticipantRef((Participant)null);
-                return;
+        case Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF:
+            setInnerParticipantRef((Participant) null);
+            return;
+        case Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF:
+            setOuterParticipantRef((Participant) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -216,10 +224,10 @@ public class ParticipantAssociationImpl extends BaseElementImpl implements Parti
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF:
-                return innerParticipantRef != null;
-            case Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF:
-                return outerParticipantRef != null;
+        case Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF:
+            return innerParticipantRef != null;
+        case Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF:
+            return outerParticipantRef != null;
         }
         return super.eIsSet(featureID);
     }

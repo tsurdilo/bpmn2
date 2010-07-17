@@ -38,7 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ReceiveTaskItemProvider extends TaskItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ReceiveTaskItemProvider extends TaskItemProvider implements
+        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -75,7 +77,14 @@ public class ReceiveTaskItemProvider extends TaskItemProvider implements IEditin
      * @generated
      */
     protected void addImplementationPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_ReceiveTask_implementation_feature"), getString("_UI_PropertyDescriptor_description", "_UI_ReceiveTask_implementation_feature", "_UI_ReceiveTask_type"), Bpmn2Package.Literals.RECEIVE_TASK__IMPLEMENTATION, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_ReceiveTask_implementation_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_ReceiveTask_implementation_feature", "_UI_ReceiveTask_type"),
+                Bpmn2Package.Literals.RECEIVE_TASK__IMPLEMENTATION, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -85,7 +94,14 @@ public class ReceiveTaskItemProvider extends TaskItemProvider implements IEditin
      * @generated
      */
     protected void addInstantiatePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_ReceiveTask_instantiate_feature"), getString("_UI_PropertyDescriptor_description", "_UI_ReceiveTask_instantiate_feature", "_UI_ReceiveTask_type"), Bpmn2Package.Literals.RECEIVE_TASK__INSTANTIATE, true, false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_ReceiveTask_instantiate_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_ReceiveTask_instantiate_feature", "_UI_ReceiveTask_type"),
+                Bpmn2Package.Literals.RECEIVE_TASK__INSTANTIATE, true, false, false,
+                ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -95,7 +111,14 @@ public class ReceiveTaskItemProvider extends TaskItemProvider implements IEditin
      * @generated
      */
     protected void addMessageRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_ReceiveTask_messageRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_ReceiveTask_messageRef_feature", "_UI_ReceiveTask_type"), Bpmn2Package.Literals.RECEIVE_TASK__MESSAGE_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_ReceiveTask_messageRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_ReceiveTask_messageRef_feature", "_UI_ReceiveTask_type"),
+                Bpmn2Package.Literals.RECEIVE_TASK__MESSAGE_REF, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -105,7 +128,14 @@ public class ReceiveTaskItemProvider extends TaskItemProvider implements IEditin
      * @generated
      */
     protected void addOperationRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_ReceiveTask_operationRef_feature"), getString("_UI_PropertyDescriptor_description", "_UI_ReceiveTask_operationRef_feature", "_UI_ReceiveTask_type"), Bpmn2Package.Literals.RECEIVE_TASK__OPERATION_REF, true, false, true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_ReceiveTask_operationRef_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_ReceiveTask_operationRef_feature", "_UI_ReceiveTask_type"),
+                Bpmn2Package.Literals.RECEIVE_TASK__OPERATION_REF, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -131,8 +161,9 @@ public class ReceiveTaskItemProvider extends TaskItemProvider implements IEditin
      */
     @Override
     public String getText(Object object) {
-        String label = ((ReceiveTask)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_ReceiveTask_type") : getString("_UI_ReceiveTask_type") + " " + label;
+        String label = ((ReceiveTask) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_ReceiveTask_type")
+                : getString("_UI_ReceiveTask_type") + " " + label;
     }
 
     /**
@@ -147,10 +178,11 @@ public class ReceiveTaskItemProvider extends TaskItemProvider implements IEditin
         updateChildren(notification);
 
         switch (notification.getFeatureID(ReceiveTask.class)) {
-            case Bpmn2Package.RECEIVE_TASK__IMPLEMENTATION:
-            case Bpmn2Package.RECEIVE_TASK__INSTANTIATE:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
+        case Bpmn2Package.RECEIVE_TASK__IMPLEMENTATION:
+        case Bpmn2Package.RECEIVE_TASK__INSTANTIATE:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    false, true));
+            return;
         }
         super.notifyChanged(notification);
     }
