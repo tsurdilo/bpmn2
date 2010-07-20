@@ -2,7 +2,7 @@ require "buildr4osgi"
 
 repositories.remote = ["http://repo1.maven.org/maven2", "file:///shared/common/m2repo"]
 
-repositories.release_to[:url] ||= "file:///shared/common/m2repo"
+repositories.release_to[:url] ||= "file:///home/data/users/atoulme/downloads/modeling/mdt/bpmn2"
 
 VERSION_NUMBER = "0.7.0.000-SNAPSHOT"
 
