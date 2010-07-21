@@ -18,8 +18,11 @@ import java.util.List;
 
 import org.eclipse.bpmn2.Bpmn2Factory;
 import org.eclipse.bpmn2.Bpmn2Package;
+import org.eclipse.bpmn2.Collaboration;
 import org.eclipse.bpmn2.Definitions;
 import org.eclipse.bpmn2.DocumentRoot;
+import org.eclipse.bpmn2.Process;
+import org.eclipse.bpmn2.RootElement;
 import org.eclipse.bpmn2.util.Bpmn2ResourceFactoryImpl;
 import org.eclipse.bpmn2.util.NamespaceHelper;
 import org.eclipse.emf.common.EMFPlugin;
@@ -28,6 +31,7 @@ import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.xmi.FeatureNotFoundException;
 import org.eclipse.emf.ecore.xmi.PackageNotFoundException;
 import org.junit.After;
 import org.junit.Before;
@@ -139,6 +143,13 @@ public class XMLSerializationTest {
         createdFiles.add(fileUri);
     }
 
+    protected Definitions getRootDefinitionElement(Resource res) {
+        EObject root = res.getContents().get(0);
+        if (root instanceof DocumentRoot)
+            return ((DocumentRoot) root).getDefinitions();
+        return (Definitions) root;
+    }
+
     // Tests
 
     /**
@@ -173,5 +184,50 @@ public class XMLSerializationTest {
             assertNotNull("No definitions object in doc root", docRoot.getDefinitions());
         } else
             fail("Root element is not DocumentRoot");
+    }
+
+    /**
+     * Tests if an ID is generated upon save if necessary.
+     * @throws Exception
+     */
+    @Test
+    public void testIdSerialization() throws Exception {
+        Collaboration c = Bpmn2Factory.eINSTANCE.createCollaboration();
+        c.setName("collab1");
+        Process p = Bpmn2Factory.eINSTANCE.createProcess();
+        p.setDefinitionalCollaborationRef(c);
+        model.getRootElements().add(c);
+        model.getRootElements().add(p);
+        Resource res = createWithContentAndLoad("idOK", model);
+
+        Definitions d = getRootDefinitionElement(res);
+        // Technically, only collab1 needs to have an ID, because it is referenced by another element
+        for (RootElement cur : d.getRootElements())
+            if (cur instanceof Collaboration && ((Collaboration) cur).getName().equals("collab1")) {
+                assertNotNull(
+                        "No id generated for element \"collab1\", although it is referenced by another element",
+                        cur.getId());
+                break;
+            }
+    }
+
+    /**
+     * Asserts that no ID is generated for elements that don't have a corresponding feature.
+     * @throws IOException 
+     */
+    @Test
+    public void testNoIDForImport() throws IOException {
+        model.getImports().add(Bpmn2Factory.eINSTANCE.createImport());
+        try {
+            Resource res = createWithContentAndLoad("noIDForImport", model);
+        } catch (WrappedException e) {
+            if (e.exception() instanceof FeatureNotFoundException) {
+                FeatureNotFoundException fnfe = ((FeatureNotFoundException) e.exception());
+                if (fnfe.getName().equals("id")) {
+                    fail("ID was generated for an import element (Import does not have an ID feature)");
+                }
+            } else
+                throw e;
+        }
     }
 }

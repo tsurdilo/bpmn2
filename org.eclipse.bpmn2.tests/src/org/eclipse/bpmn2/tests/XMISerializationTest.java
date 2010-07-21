@@ -65,4 +65,9 @@ public class XMISerializationTest extends XMLSerializationTest {
             throw new RuntimeException(e);
         }
     }
+
+    @Override
+    public void testIdSerialization() throws Exception {
+        // Success (no IDs needed in XMI)
+    }
 }
