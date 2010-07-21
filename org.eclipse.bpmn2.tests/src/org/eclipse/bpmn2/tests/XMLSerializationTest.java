@@ -36,6 +36,7 @@ import org.eclipse.emf.ecore.xmi.PackageNotFoundException;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.xml.sax.SAXParseException;
 
 /**
  * Tests serialization as XML.
@@ -229,5 +230,20 @@ public class XMLSerializationTest {
             } else
                 throw e;
         }
+    }
+
+    @Test
+    public void testIDAlreadySet() throws Exception {
+        model.setId("id1");
+        Resource res = null;
+        try {
+            res = createWithContentAndLoad("idAlreadySet", model);
+        } catch (WrappedException e) {
+            if (e.exception() instanceof SAXParseException)
+                fail("Duplicate attribute 'id'.");
+            else
+                throw e;
+        }
+        assertEquals("id1", getRootDefinitionElement(res).getId());
     }
 }
