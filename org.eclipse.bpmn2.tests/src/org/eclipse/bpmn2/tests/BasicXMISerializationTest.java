@@ -66,6 +66,6 @@ public class BasicXMISerializationTest extends BasicSerializationTest {
         assertTrue("Root element is not Definitions",
                 res.getContents().get(0) instanceof Definitions);
         assertTrue(String.format("Namespace uri (%s) not found in result", NS_URI_EXPECTED),
-                search(getFileURI(), NS_URI_EXPECTED));
+                TestHelper.search(getFileURI(), NS_URI_EXPECTED));
     }
 }

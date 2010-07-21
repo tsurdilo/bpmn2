@@ -10,9 +10,6 @@
  */
 package org.eclipse.bpmn2.tests;
 
-import java.io.BufferedInputStream;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 
 import org.eclipse.bpmn2.impl.Bpmn2FactoryImpl;
@@ -69,28 +66,7 @@ public abstract class BasicSerializationTest {
      */
     @After
     public void moveFile() throws IOException {
-        File f = new File(getFileURI().toString());
-        if (f.exists()) {
-            File dest = new File("lastResult/" + f.getName()/*String.format("result/%tQ/", new Date())*/);
-            dest.delete();
-            f.renameTo(dest);
-        }
-    }
-
-    /**
-     * Searches for the specified String within the specified file.
-     * @param fileURI URI of the file.
-     * @param toFind String to find.
-     * @return {@code true}, if the contents of the file include {@code toFind}.
-     * @throws IOException
-     */
-    public static boolean search(URI fileURI, String toFind) throws IOException {
-        File file = new File(fileURI.toString());
-        byte[] buffer = new byte[(int) file.length()];
-        BufferedInputStream f = new BufferedInputStream(new FileInputStream(file));
-        f.read(buffer);
-        f.close();
-        return new String(buffer).indexOf(toFind) != -1;
+        TestHelper.moveFile(getFileURI());
     }
 
 }
