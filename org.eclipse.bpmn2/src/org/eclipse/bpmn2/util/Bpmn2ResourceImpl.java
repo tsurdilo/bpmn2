@@ -14,7 +14,13 @@
  */
 package org.eclipse.bpmn2.util;
 
+import java.util.Iterator;
+
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.xmi.XMLSave;
 import org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl;
 
 /**
@@ -36,25 +42,28 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl {
         super(uri);
     }
 
-    /**
-     * @generated NOT
-     */
+    // This method is called by all save methods - save(Document,...), doSave(Writer/OutputStream, ...) - in superclasses.
     @Override
-    protected boolean useUUIDs() {
-        // We better have a UUID generated instead of having XMLResourceImpl writing URIs, that
-        // are not schema compliant
-        return true;
+    protected XMLSave createXMLSave() {
+        prepareSave();
+        return super.createXMLSave();
     }
 
     /**
-     * @generated NOT
+     * Prepares this resource for saving.
+     * 
+     * Sets all ID attributes, that are not set, to a generated UUID.
      */
-    @Override
-    protected boolean assignIDsWhileLoading() {
-        // For some reason this must be false. 
-        // Else both, DocumentRoot and Definitions would create an ID (which is useless)
-        // which is then both written into the root element.
-        return false;
+    protected void prepareSave() {
+        EObject cur;
+        for (Iterator<EObject> iter = getAllContents(); iter.hasNext();) {
+            cur = iter.next();
+
+            EStructuralFeature idAttr = cur.eClass().getEIDAttribute();
+            if (idAttr != null && !cur.eIsSet(idAttr)) {
+                cur.eSet(idAttr, EcoreUtil.generateUUID());
+            }
+        }
     }
 
 } //Bpmn2ResourceImpl
