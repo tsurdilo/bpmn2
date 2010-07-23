@@ -183,7 +183,8 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
 
         // Obtain or create and register package
         DiPackageImpl theDiPackage = (DiPackageImpl) (EPackage.Registry.INSTANCE.get(eNS_URI) instanceof DiPackageImpl ? EPackage.Registry.INSTANCE
-                .get(eNS_URI) : new DiPackageImpl());
+                .get(eNS_URI)
+                : new DiPackageImpl());
 
         isInited = true;
 
@@ -193,13 +194,16 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
         // Obtain or create and register interdependencies
         Bpmn2PackageImpl theBpmn2Package = (Bpmn2PackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(Bpmn2Package.eNS_URI) instanceof Bpmn2PackageImpl ? EPackage.Registry.INSTANCE
-                .getEPackage(Bpmn2Package.eNS_URI) : Bpmn2Package.eINSTANCE);
+                .getEPackage(Bpmn2Package.eNS_URI)
+                : Bpmn2Package.eINSTANCE);
         BpmnDiPackageImpl theBpmnDiPackage = (BpmnDiPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(BpmnDiPackage.eNS_URI) instanceof BpmnDiPackageImpl ? EPackage.Registry.INSTANCE
-                .getEPackage(BpmnDiPackage.eNS_URI) : BpmnDiPackage.eINSTANCE);
+                .getEPackage(BpmnDiPackage.eNS_URI)
+                : BpmnDiPackage.eINSTANCE);
         DcPackageImpl theDcPackage = (DcPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(DcPackage.eNS_URI) instanceof DcPackageImpl ? EPackage.Registry.INSTANCE
-                .getEPackage(DcPackage.eNS_URI) : DcPackage.eINSTANCE);
+                .getEPackage(DcPackage.eNS_URI)
+                : DcPackage.eINSTANCE);
 
         // Load packages
         theBpmn2Package.loadPackage();
@@ -776,9 +780,9 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
                 null, "xMLNSPrefixMap", null, 0, -1, null, IS_TRANSIENT, !IS_VOLATILE,
                 IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
                 !IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_XSISchemaLocation(),
-                ecorePackage.getEStringToStringMapEntry(), null, "xSISchemaLocation", null, 0, -1,
-                null, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+        initEReference(getDocumentRoot_XSISchemaLocation(), ecorePackage
+                .getEStringToStringMapEntry(), null, "xSISchemaLocation", null, 0, -1, null,
+                IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getDocumentRoot_DiagramElement(), this.getDiagramElement(), null,
                 "diagramElement", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE,
@@ -821,8 +825,8 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
         initEReference(getDiagram_OwnedStyle(), this.getStyle(), null, "ownedStyle", null, 0, -1,
                 Diagram.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
                 IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-        initEReference(getDiagram_RootElement(), this.getDiagramElement(),
-                this.getDiagramElement_OwningDiagram(), "rootElement", null, 1, 1, Diagram.class,
+        initEReference(getDiagram_RootElement(), this.getDiagramElement(), this
+                .getDiagramElement_OwningDiagram(), "rootElement", null, 1, 1, Diagram.class,
                 IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
         initEAttribute(getDiagram_Id(), theXMLTypePackage.getID(), "id", null, 0, 1, Diagram.class,
@@ -837,16 +841,16 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
 
         initEClass(diagramElementEClass, DiagramElement.class, "DiagramElement", IS_ABSTRACT,
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getDiagramElement_OwningDiagram(), this.getDiagram(),
-                this.getDiagram_RootElement(), "owningDiagram", null, 0, 1, DiagramElement.class,
+        initEReference(getDiagramElement_OwningDiagram(), this.getDiagram(), this
+                .getDiagram_RootElement(), "owningDiagram", null, 0, 1, DiagramElement.class,
                 IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-        initEReference(getDiagramElement_OwningElement(), this.getDiagramElement(),
-                this.getDiagramElement_OwnedElement(), "owningElement", null, 0, 1,
+        initEReference(getDiagramElement_OwningElement(), this.getDiagramElement(), this
+                .getDiagramElement_OwnedElement(), "owningElement", null, 0, 1,
                 DiagramElement.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
                 !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-        initEReference(getDiagramElement_OwnedElement(), this.getDiagramElement(),
-                this.getDiagramElement_OwningElement(), "ownedElement", null, 0, -1,
+        initEReference(getDiagramElement_OwnedElement(), this.getDiagramElement(), this
+                .getDiagramElement_OwningElement(), "ownedElement", null, 0, -1,
                 DiagramElement.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
                 !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
         initEReference(getDiagramElement_ModelElement(), ecorePackage.getEObject(), null,

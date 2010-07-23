@@ -333,8 +333,7 @@ public class FontImpl extends EObjectImpl implements Font {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR,
                         DcValidator.DIAGNOSTIC_SOURCE, DcValidator.FONT__NON_NEGATIVE_SIZE,
-                        EcorePlugin.INSTANCE.getString(
-                                "_UI_GenericInvariant_diagnostic",
+                        EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic",
                                 new Object[] { "non_negative_size",
                                         EObjectValidator.getObjectLabel(this, context) }),
                         new Object[] { this }));

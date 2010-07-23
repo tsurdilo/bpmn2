@@ -25,6 +25,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.EObjectWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -126,7 +127,7 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
      */
     public List<SequenceFlow> getOutgoing() {
         if (outgoing == null) {
-            outgoing = new EObjectWithInverseResolvingEList<SequenceFlow>(SequenceFlow.class, this,
+            outgoing = new EObjectWithInverseEList<SequenceFlow>(SequenceFlow.class, this,
                     Bpmn2Package.FLOW_NODE__OUTGOING, Bpmn2Package.SEQUENCE_FLOW__SOURCE_REF);
         }
         return outgoing;

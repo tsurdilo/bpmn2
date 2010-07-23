@@ -15,14 +15,9 @@
 package org.eclipse.bpmn2.util;
 
 import org.eclipse.bpmn2.Bpmn2Factory;
-import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Definitions;
 import org.eclipse.bpmn2.DocumentRoot;
-import org.eclipse.bpmn2.di.BpmnDiPackage;
-import org.eclipse.dd.dc.DcPackage;
-import org.eclipse.dd.di.DiPackage;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceFactoryImpl;
 import org.eclipse.emf.ecore.util.ExtendedMetaData;

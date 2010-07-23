@@ -16,7 +16,6 @@ package org.eclipse.dd.dc.util;
 
 import java.util.Map;
 
-import org.eclipse.dd.dc.*;
 import org.eclipse.dd.dc.Bounds;
 import org.eclipse.dd.dc.DcPackage;
 import org.eclipse.dd.dc.DocumentRoot;

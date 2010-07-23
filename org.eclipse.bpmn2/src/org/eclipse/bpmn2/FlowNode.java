@@ -86,7 +86,7 @@ public interface FlowNode extends FlowElement {
      * @return the value of the '<em>Outgoing</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getFlowNode_Outgoing()
      * @see org.eclipse.bpmn2.SequenceFlow#getSourceRef
-     * @model opposite="sourceRef"
+     * @model opposite="sourceRef" resolveProxies="false"
      *        extendedMetaData="kind='element' name='outgoing' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */

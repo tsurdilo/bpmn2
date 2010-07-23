@@ -126,20 +126,24 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
 
         // Obtain or create and register package
         DcPackageImpl theDcPackage = (DcPackageImpl) (EPackage.Registry.INSTANCE.get(eNS_URI) instanceof DcPackageImpl ? EPackage.Registry.INSTANCE
-                .get(eNS_URI) : new DcPackageImpl());
+                .get(eNS_URI)
+                : new DcPackageImpl());
 
         isInited = true;
 
         // Obtain or create and register interdependencies
         Bpmn2PackageImpl theBpmn2Package = (Bpmn2PackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(Bpmn2Package.eNS_URI) instanceof Bpmn2PackageImpl ? EPackage.Registry.INSTANCE
-                .getEPackage(Bpmn2Package.eNS_URI) : Bpmn2Package.eINSTANCE);
+                .getEPackage(Bpmn2Package.eNS_URI)
+                : Bpmn2Package.eINSTANCE);
         BpmnDiPackageImpl theBpmnDiPackage = (BpmnDiPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(BpmnDiPackage.eNS_URI) instanceof BpmnDiPackageImpl ? EPackage.Registry.INSTANCE
-                .getEPackage(BpmnDiPackage.eNS_URI) : BpmnDiPackage.eINSTANCE);
+                .getEPackage(BpmnDiPackage.eNS_URI)
+                : BpmnDiPackage.eINSTANCE);
         DiPackageImpl theDiPackage = (DiPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(DiPackage.eNS_URI) instanceof DiPackageImpl ? EPackage.Registry.INSTANCE
-                .getEPackage(DiPackage.eNS_URI) : DiPackage.eINSTANCE);
+                .getEPackage(DiPackage.eNS_URI)
+                : DiPackage.eINSTANCE);
 
         // Load packages
         theBpmn2Package.loadPackage();
@@ -466,9 +470,9 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
                 null, "xMLNSPrefixMap", null, 0, -1, null, IS_TRANSIENT, !IS_VOLATILE,
                 IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
                 !IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_XSISchemaLocation(),
-                ecorePackage.getEStringToStringMapEntry(), null, "xSISchemaLocation", null, 0, -1,
-                null, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+        initEReference(getDocumentRoot_XSISchemaLocation(), ecorePackage
+                .getEStringToStringMapEntry(), null, "xSISchemaLocation", null, 0, -1, null,
+                IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getDocumentRoot_Bounds(), this.getBounds(), null, "bounds", null, 0, -2,
                 null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
