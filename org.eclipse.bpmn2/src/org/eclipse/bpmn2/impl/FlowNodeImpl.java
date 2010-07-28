@@ -101,7 +101,7 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
      */
     public List<SequenceFlow> getIncoming() {
         if (incoming == null) {
-            incoming = new EObjectWithInverseResolvingEList<SequenceFlow>(SequenceFlow.class, this,
+            incoming = new EObjectWithInverseEList<SequenceFlow>(SequenceFlow.class, this,
                     Bpmn2Package.FLOW_NODE__INCOMING, Bpmn2Package.SEQUENCE_FLOW__TARGET_REF);
         }
         return incoming;

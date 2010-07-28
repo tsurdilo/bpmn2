@@ -49,7 +49,7 @@ public interface FlowNode extends FlowElement {
      * @return the value of the '<em>Incoming</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getFlowNode_Incoming()
      * @see org.eclipse.bpmn2.SequenceFlow#getTargetRef
-     * @model opposite="targetRef" ordered="false"
+     * @model opposite="targetRef" resolveProxies="false" ordered="false"
      *        extendedMetaData="kind='element' name='incoming' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */

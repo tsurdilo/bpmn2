@@ -2774,7 +2774,7 @@
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="incoming" ordered="false"
-        upperBound="-1" eType="#//SequenceFlow" eOpposite="#//SequenceFlow/targetRef">
+        upperBound="-1" eType="#//SequenceFlow" resolveProxies="false" eOpposite="#//SequenceFlow/targetRef">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
         <details key="name" value="incoming"/>
