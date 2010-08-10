@@ -71,4 +71,9 @@ public class XMISerializationTest extends XMLSerializationTest {
     public void testIdSerialization() throws Exception {
         // Success (no IDs needed in XMI)
     }
+
+    @Override
+    public void testDocumentationText() throws Exception {
+        // Success (text attribute is allowed and necessary)
+    }
 }

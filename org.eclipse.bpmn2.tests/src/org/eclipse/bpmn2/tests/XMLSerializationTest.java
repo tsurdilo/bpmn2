@@ -12,15 +12,20 @@ package org.eclipse.bpmn2.tests;
 
 import static org.junit.Assert.*;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
+
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.validation.Validator;
 
 import org.eclipse.bpmn2.Bpmn2Factory;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Collaboration;
 import org.eclipse.bpmn2.Definitions;
 import org.eclipse.bpmn2.DocumentRoot;
+import org.eclipse.bpmn2.Documentation;
 import org.eclipse.bpmn2.Process;
 import org.eclipse.bpmn2.RootElement;
 import org.eclipse.bpmn2.util.Bpmn2ResourceFactoryImpl;
@@ -36,6 +41,8 @@ import org.eclipse.emf.ecore.xmi.PackageNotFoundException;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
 import org.xml.sax.SAXParseException;
 
 /**
@@ -245,5 +252,34 @@ public class XMLSerializationTest {
                 throw e;
         }
         assertEquals("id1", getRootDefinitionElement(res).getId());
+    }
+
+    @Test
+    public void testDocumentationText() throws Exception {
+        final String docId = "doc1";
+        final String docText = "Documentation text";
+
+        model.setExporter("Exporter");
+        model.setExporterVersion("1");
+        model.setName("Name");
+        model.setTargetNamespace("tns1");
+        Process p = Bpmn2Factory.eINSTANCE.createProcess();
+        p.setName("Name");
+        Documentation doc = Bpmn2Factory.eINSTANCE.createDocumentation();
+        doc.setText(docText);
+        doc.setId(docId);
+        p.getDocumentation().add(doc);
+        model.getRootElements().add(p);
+        Resource res = createWithContentAndLoad("documentationText", model);
+
+        EObject docLoaded = res.getEObject(docId);
+        assertTrue(docLoaded instanceof Documentation);
+        assertEquals(docText, ((Documentation) docLoaded).getText());
+
+        DocumentBuilderFactory fact = DocumentBuilderFactory.newInstance();
+        Document xml = fact.newDocumentBuilder().parse(new File(res.getURI().toFileString()));
+        Node docNode = xml.getElementsByTagName("bpmn2:documentation").item(0);
+        assertNull("Documentation has an attribute 'text' (invalid acc. to XML schema)", docNode
+                .getAttributes().getNamedItem("text"));
     }
 }
