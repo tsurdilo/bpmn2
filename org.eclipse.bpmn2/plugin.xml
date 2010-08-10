@@ -23,6 +23,11 @@
             class="org.eclipse.bpmn2.Bpmn2Package"
             genModel="model/BPMN20.genmodel"
             uri="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI"/>
+      <package
+            class="org.eclipse.bpmn2.Bpmn2Package"
+            genModel="model/BPMN20.genmodel"
+            uri="http://www.omg.org/spec/BPMN/20100524/MODEL">
+      </package>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.extension_parser">
@@ -36,6 +41,11 @@
             class="org.eclipse.bpmn2.di.BpmnDiPackage"
             genModel="model/BPMN20.genmodel"
             uri="http://www.omg.org/spec/BPMN/20100524/DI-XMI"/>
+      <package
+            class="org.eclipse.bpmn2.di.BpmnDiPackage"
+            genModel="model/BPMN20.genmodel"
+            uri="http://www.omg.org/spec/BPMN/20100524/DI">
+      </package>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.extension_parser">
@@ -49,6 +59,11 @@
             class="org.eclipse.dd.di.DiPackage"
             genModel="model/BPMN20.genmodel"
             uri="http://www.omg.org/spec/DD/20100524/DI-XMI"/>
+      <package
+            class="org.eclipse.dd.di.DiPackage"
+            genModel="model/BPMN20.genmodel"
+            uri="http://www.omg.org/spec/DD/20100524/DI">
+      </package>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.extension_parser">
@@ -62,6 +77,11 @@
             class="org.eclipse.dd.dc.DcPackage"
             genModel="model/BPMN20.genmodel"
             uri="http://www.omg.org/spec/DD/20100524/DC-XMI"/>
+      <package
+            class="org.eclipse.dd.dc.DcPackage"
+            genModel="model/BPMN20.genmodel"
+            uri="http://www.omg.org/spec/DD/20100524/DC">
+      </package>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.extension_parser">
