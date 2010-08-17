@@ -18,6 +18,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.validation.Validator;
 
 import org.eclipse.bpmn2.Bpmn2Factory;
@@ -43,6 +44,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
+import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
 /**
@@ -276,6 +278,11 @@ public class XMLSerializationTest {
         assertTrue(docLoaded instanceof Documentation);
         assertEquals(docText, ((Documentation) docLoaded).getText());
 
+        checkSerializationDocText(res);
+    }
+
+    protected void checkSerializationDocText(Resource res) throws SAXException, IOException,
+            ParserConfigurationException {
         DocumentBuilderFactory fact = DocumentBuilderFactory.newInstance();
         Document xml = fact.newDocumentBuilder().parse(new File(res.getURI().toFileString()));
         Node docNode = xml.getElementsByTagName("bpmn2:documentation").item(0);

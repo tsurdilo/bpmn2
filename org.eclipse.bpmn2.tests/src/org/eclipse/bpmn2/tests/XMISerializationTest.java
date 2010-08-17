@@ -14,6 +14,8 @@ import static org.junit.Assert.*;
 
 import java.io.IOException;
 
+import javax.xml.parsers.ParserConfigurationException;
+
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Definitions;
 import org.eclipse.bpmn2.util.Bpmn2XMIResourceFactoryImpl;
@@ -21,6 +23,7 @@ import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.XMIResource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.xml.sax.SAXException;
 
 /**
  * Tests serialization as XMI.
@@ -73,7 +76,8 @@ public class XMISerializationTest extends XMLSerializationTest {
     }
 
     @Override
-    public void testDocumentationText() throws Exception {
-        // Success (text attribute is allowed and necessary)
+    protected void checkSerializationDocText(Resource res) throws SAXException, IOException,
+            ParserConfigurationException {
+        // Success (no check needed)
     }
 }
