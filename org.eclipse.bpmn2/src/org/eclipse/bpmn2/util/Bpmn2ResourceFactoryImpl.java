@@ -50,7 +50,7 @@ public class Bpmn2ResourceFactoryImpl extends ResourceFactoryImpl {
      */
     @Override
     public Resource createResource(URI uri) {
-        XMLResource result = new Bpmn2ResourceImpl(uri);
+        Bpmn2ResourceImpl result = new Bpmn2ResourceImpl(uri);
         ExtendedMetaData extendedMetadata = new XmlExtendedMetadata();
         result.getDefaultSaveOptions().put(XMLResource.OPTION_EXTENDED_META_DATA, extendedMetadata);
         result.getDefaultLoadOptions().put(XMLResource.OPTION_EXTENDED_META_DATA, extendedMetadata);
@@ -64,9 +64,6 @@ public class Bpmn2ResourceFactoryImpl extends ResourceFactoryImpl {
                 Boolean.TRUE);
 
         result.getDefaultLoadOptions().put(XMLResource.OPTION_USE_LEXICAL_HANDLER, Boolean.TRUE);
-
-        result.getDefaultLoadOptions().put(XMLResource.OPTION_URI_HANDLER, new QNameURIHandler());
-        result.getDefaultSaveOptions().put(XMLResource.OPTION_URI_HANDLER, new QNameURIHandler());
 
         result.getDefaultSaveOptions().put(XMLResource.OPTION_ELEMENT_HANDLER,
                 new ElementHandlerImpl(true));

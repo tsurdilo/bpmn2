@@ -16,40 +16,80 @@
  */
 package org.eclipse.bpmn2.util;
 
+import org.eclipse.bpmn2.util.Bpmn2ResourceImpl.BpmnXmlHelper;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.xmi.impl.URIHandlerImpl;
 
 /**
  * This simple XMLResource URI Handler converts between the QName-based reference model in BPMN 2.0 and the URI based model in EMF.
  * 
- * Currently only local references are implemented. Finally a cross-file reference in BPMN is a QName. The prefix can be resolved using the
- * prefix declaration in the file, then going to the "imports" element, searching for a fitting import and taking this file as baseURI.
+ * The prefix can be resolved using the prefix declaration in the file, then going to the "imports" element, searching for a fitting import and taking this file as baseURI.
  * 
- * @author d023588
+ * @author Reiner Hille (SAP)
  */
 public class QNameURIHandler extends URIHandlerImpl {
+
+    private final BpmnXmlHelper xmlHelper;
 
     /**
      * 
      */
-    public QNameURIHandler() {
+    public QNameURIHandler(Bpmn2ResourceImpl.BpmnXmlHelper xmlHelper) {
+        this.xmlHelper = xmlHelper;
     }
 
+    /**
+     * The method converts a QName, e.g. "ns:element1" to a URI string, e.g. file1.bpmn#element1.
+     * The method os called during load.
+     * @param qName
+     * @return
+     */
+    public String convertQNameToUri(String qName) {
+        if (qName.contains("#")) {
+            // We already have an URI and not QName
+            return qName;
+        }
+        String path = "";
+        String fragment = qName;
+
+        String[] parts = qName.split(":");
+        if (parts.length > 1) {
+            fragment = parts[1];
+            if (!xmlHelper.isTargnetNamespace(parts[0])) {
+                path = xmlHelper.getPathForPrefix(parts[0]);
+            }
+        }
+        return path + "#" + fragment;
+    }
+
+    /**
+     * Called from the framework during load. We will resolve to an absolute URI after - necessarily creating
+     * a relative URI from a QName.
+     */
     @Override
     public URI resolve(URI uri) {
-        // In the local case we receive the pure ID as URI. In EMF this must be an URI with the ID as fragment.
-        return super.resolve(URI.createURI("#" + uri.toString()));
+        return super.resolve(URI.createURI(convertQNameToUri(uri.toString())));
     }
 
+    /**
+     * Called from the framework during save. We deresolve absolute URIs to relative ones. Then we try to
+     * convert to QName
+     */
     @Override
     public URI deresolve(URI uri) {
         URI deresolved = super.deresolve(uri);
-        String deresolvedString = deresolved.toString();
-        if (deresolvedString.startsWith("#")) // pure fragment
+        String frament = deresolved.fragment();
+        if (!frament.startsWith("/")) // We better don't try to QName XPath references to e.g. XML or WSDL context for now.
         {
-            return URI.createURI(deresolvedString.substring(1)); // cut off "#"
+            String prefix = "";
+
+            if (deresolved.hasPath()) {
+                prefix = xmlHelper.getNsPrefix(deresolved.trimFragment().toString());
+            }
+            if (prefix.length() > 0) {
+                return URI.createURI(prefix + ":" + frament);
+            }
         }
         return deresolved;
     }
-
 }
