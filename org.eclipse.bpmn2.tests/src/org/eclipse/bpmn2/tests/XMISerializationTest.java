@@ -12,8 +12,10 @@ package org.eclipse.bpmn2.tests;
 
 import static org.junit.Assert.*;
 
+import java.io.File;
 import java.io.IOException;
 
+import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.eclipse.bpmn2.Bpmn2Package;
@@ -23,6 +25,8 @@ import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.XMIResource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
 /**
@@ -75,9 +79,25 @@ public class XMISerializationTest extends XMLSerializationTest {
         // Success (no IDs needed in XMI)
     }
 
+    /**
+     * Checks the XMI serialization of the Documentation element.
+     * 
+     * It should not contain text or CDATA content, as this is already handled
+     * through the text attribute.
+     */
     @Override
     protected void checkSerializationDocText(Resource res) throws SAXException, IOException,
             ParserConfigurationException {
-        // Success (no check needed)
+        DocumentBuilderFactory fact = DocumentBuilderFactory.newInstance();
+        Document xml = fact.newDocumentBuilder().parse(new File(res.getURI().toFileString()));
+        Node docNode = xml.getElementsByTagName("documentation").item(0);
+
+        for (int i = 0; i < docNode.getChildNodes().getLength(); i++) {
+            short nodeType = docNode.getChildNodes().item(i).getNodeType();
+            assertFalse("Documentation has text content (not valid in XMI)",
+                    Node.TEXT_NODE == nodeType);
+            assertFalse("Documentation has CDATA content (not valid in XMI)",
+                    Node.CDATA_SECTION_NODE == nodeType);
+        }
     }
 }
