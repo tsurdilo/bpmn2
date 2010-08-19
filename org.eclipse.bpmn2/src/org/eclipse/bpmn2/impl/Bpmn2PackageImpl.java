@@ -4123,7 +4123,7 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EAttribute getDocumentation_Text() {
+    public EAttribute getDocumentation_Mixed() {
         return (EAttribute) getDocumentation().getEStructuralFeatures().get(0);
     }
 
@@ -4132,8 +4132,17 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EAttribute getDocumentation_TextFormat() {
+    public EAttribute getDocumentation_Text() {
         return (EAttribute) getDocumentation().getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getDocumentation_TextFormat() {
+        return (EAttribute) getDocumentation().getEStructuralFeatures().get(2);
     }
 
     /**

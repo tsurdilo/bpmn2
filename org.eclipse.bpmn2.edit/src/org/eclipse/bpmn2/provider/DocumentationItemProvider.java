@@ -22,6 +22,10 @@ import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Documentation;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.util.FeatureMapUtil;
+import org.eclipse.emf.ecore.xml.type.XMLTypeFactory;
+import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -102,6 +106,36 @@ public class DocumentationItemProvider extends BaseElementItemProvider implement
     }
 
     /**
+     * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+     * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+     * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+        if (childrenFeatures == null) {
+            super.getChildrenFeatures(object);
+            childrenFeatures.add(Bpmn2Package.Literals.DOCUMENTATION__MIXED);
+        }
+        return childrenFeatures;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EStructuralFeature getChildFeature(Object object, Object child) {
+        // Check the type of the specified child object and return the proper feature to use for
+        // adding (see {@link AddCommand}) it as a child.
+
+        return super.getChildFeature(object, child);
+    }
+
+    /**
      * This returns Documentation.png.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -148,6 +182,10 @@ public class DocumentationItemProvider extends BaseElementItemProvider implement
             fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
                     false, true));
             return;
+        case Bpmn2Package.DOCUMENTATION__MIXED:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -162,6 +200,26 @@ public class DocumentationItemProvider extends BaseElementItemProvider implement
     @Override
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
+
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DOCUMENTATION__MIXED,
+                FeatureMapUtil.createEntry(XMLTypePackage.Literals.XML_TYPE_DOCUMENT_ROOT__COMMENT,
+                        "")));
+
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DOCUMENTATION__MIXED,
+                FeatureMapUtil
+                        .createEntry(XMLTypePackage.Literals.XML_TYPE_DOCUMENT_ROOT__TEXT, "")));
+
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DOCUMENTATION__MIXED,
+                FeatureMapUtil.createEntry(
+                        XMLTypePackage.Literals.XML_TYPE_DOCUMENT_ROOT__PROCESSING_INSTRUCTION,
+                        XMLTypeFactory.eINSTANCE.createProcessingInstruction())));
+
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DOCUMENTATION__MIXED,
+                FeatureMapUtil.createEntry(XMLTypePackage.Literals.XML_TYPE_DOCUMENT_ROOT__CDATA,
+                        "")));
+
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DOCUMENTATION__MIXED,
+                FeatureMapUtil.createEntry(Bpmn2Package.Literals.DOCUMENTATION__TEXT, "")));
     }
 
 }

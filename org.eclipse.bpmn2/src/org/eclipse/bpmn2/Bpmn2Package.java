@@ -7766,13 +7766,22 @@ public interface Bpmn2Package extends EPackage {
     int DOCUMENTATION__ID = BASE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Mixed</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DOCUMENTATION__MIXED = BASE_ELEMENT_FEATURE_COUNT + 0;
+
+    /**
      * The feature id for the '<em><b>Text</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int DOCUMENTATION__TEXT = BASE_ELEMENT_FEATURE_COUNT + 0;
+    int DOCUMENTATION__TEXT = BASE_ELEMENT_FEATURE_COUNT + 1;
 
     /**
      * The feature id for the '<em><b>Text Format</b></em>' attribute.
@@ -7781,7 +7790,7 @@ public interface Bpmn2Package extends EPackage {
      * @generated
      * @ordered
      */
-    int DOCUMENTATION__TEXT_FORMAT = BASE_ELEMENT_FEATURE_COUNT + 1;
+    int DOCUMENTATION__TEXT_FORMAT = BASE_ELEMENT_FEATURE_COUNT + 2;
 
     /**
      * The number of structural features of the '<em>Documentation</em>' class.
@@ -7790,7 +7799,7 @@ public interface Bpmn2Package extends EPackage {
      * @generated
      * @ordered
      */
-    int DOCUMENTATION_FEATURE_COUNT = BASE_ELEMENT_FEATURE_COUNT + 2;
+    int DOCUMENTATION_FEATURE_COUNT = BASE_ELEMENT_FEATURE_COUNT + 3;
 
     /**
      * The meta object id for the '{@link org.eclipse.bpmn2.impl.ThrowEventImpl <em>Throw Event</em>}' class.
@@ -20140,6 +20149,17 @@ public interface Bpmn2Package extends EPackage {
     EClass getDocumentation();
 
     /**
+     * Returns the meta object for the attribute list '{@link org.eclipse.bpmn2.Documentation#getMixed <em>Mixed</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute list '<em>Mixed</em>'.
+     * @see org.eclipse.bpmn2.Documentation#getMixed()
+     * @see #getDocumentation()
+     * @generated
+     */
+    EAttribute getDocumentation_Mixed();
+
+    /**
      * Returns the meta object for the attribute '{@link org.eclipse.bpmn2.Documentation#getText <em>Text</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -25937,6 +25957,14 @@ public interface Bpmn2Package extends EPackage {
          * @generated
          */
         EClass DOCUMENTATION = eINSTANCE.getDocumentation();
+
+        /**
+         * The meta object literal for the '<em><b>Mixed</b></em>' attribute list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute DOCUMENTATION__MIXED = eINSTANCE.getDocumentation_Mixed();
 
         /**
          * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
