@@ -16,6 +16,7 @@ import java.io.IOException;
 
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Definitions;
+import org.eclipse.bpmn2.util.Bpmn2XMIResourceFactoryImpl;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.XMIResource;
@@ -30,7 +31,7 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
  *
  */
 public class XMISerializationTest extends XMLSerializationTest {
-    private static final String EXTENSION_XMI = "xmi";
+    private static final String EXTENSION_XMI = "bpmn2xmi";
 
     /**
      * Overrides the superclass method, instead registering the default XMI resource factory. 
@@ -39,7 +40,7 @@ public class XMISerializationTest extends XMLSerializationTest {
     public void setUpResourceFactoryRegistry() {
         if (!EMFPlugin.IS_ECLIPSE_RUNNING)
             Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put(EXTENSION_XMI,
-                    new XMIResourceFactoryImpl());
+                    new Bpmn2XMIResourceFactoryImpl());
     }
 
     /**

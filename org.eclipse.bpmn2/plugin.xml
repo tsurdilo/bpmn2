@@ -34,6 +34,10 @@
       <parser
             type="bpmn2"
             class="org.eclipse.bpmn2.util.Bpmn2ResourceFactoryImpl"/>
+      <parser
+            class="org.eclipse.bpmn2.util.Bpmn2XMIResourceFactoryImpl"
+            type="bpmn2xmi">
+      </parser>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
