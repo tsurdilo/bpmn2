@@ -40,7 +40,7 @@ public class QNameURIHandler extends URIHandlerImpl {
 
     /**
      * The method converts a QName, e.g. "ns:element1" to a URI string, e.g. file1.bpmn#element1.
-     * The method os called during load.
+     * The method is called during load.
      * @param qName
      * @return
      */
@@ -55,7 +55,7 @@ public class QNameURIHandler extends URIHandlerImpl {
         String[] parts = qName.split(":");
         if (parts.length > 1) {
             fragment = parts[1];
-            if (!xmlHelper.isTargnetNamespace(parts[0])) {
+            if (!xmlHelper.isTargetNamespace(parts[0])) {
                 path = xmlHelper.getPathForPrefix(parts[0]);
             }
         }
@@ -78,8 +78,8 @@ public class QNameURIHandler extends URIHandlerImpl {
     @Override
     public URI deresolve(URI uri) {
         URI deresolved = super.deresolve(uri);
-        String frament = deresolved.fragment();
-        if (!frament.startsWith("/")) // We better don't try to QName XPath references to e.g. XML or WSDL context for now.
+        String fragment = deresolved.fragment();
+        if (!fragment.startsWith("/")) // We better don't try to QName XPath references to e.g. XML or WSDL context for now.
         {
             String prefix = "";
 
@@ -87,8 +87,10 @@ public class QNameURIHandler extends URIHandlerImpl {
                 prefix = xmlHelper.getNsPrefix(deresolved.trimFragment().toString());
             }
             if (prefix.length() > 0) {
-                return URI.createURI(prefix + ":" + frament);
-            }
+                return URI.createURI(prefix + ":" + fragment);
+            } else
+                // no prefix, just fragment (i.e. without the '#')
+                return URI.createURI(fragment);
         }
         return deresolved;
     }

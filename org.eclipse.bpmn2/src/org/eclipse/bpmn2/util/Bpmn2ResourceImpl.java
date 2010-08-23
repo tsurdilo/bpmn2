@@ -137,7 +137,7 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl {
      */
     protected class BpmnXmlHelper extends XMLHelperImpl {
 
-        private Definitions defintions;
+        private Definitions definitions;
         private String targetNsPrefix;
 
         public BpmnXmlHelper(Bpmn2ResourceImpl resource) {
@@ -151,7 +151,7 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl {
         public void setValue(EObject object, EStructuralFeature feature, Object value, int position) {
             super.setValue(object, feature, value, position);
             if (object instanceof Definitions) {
-                this.defintions = (Definitions) object;
+                this.definitions = (Definitions) object;
                 if (feature.equals(Bpmn2Package.Literals.DEFINITIONS__TARGET_NAMESPACE)) {
                     this.targetNsPrefix = getPrefix((String) value);
                 }
@@ -160,12 +160,12 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl {
         }
 
         /**
-         * Checks of the given prefix is pointing to the current target namespace and thus is optional.
+         * Checks if the given prefix is pointing to the current target namespace and thus is optional.
          * The method is called during load.
          * @param prefix
          * @return
          */
-        public boolean isTargnetNamespace(String prefix) {
+        public boolean isTargetNamespace(String prefix) {
             return prefix.equals(this.targetNsPrefix);
         }
 
@@ -178,7 +178,7 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl {
         public String getPathForPrefix(String prefix) {
             String ns = this.getNamespaceURI(prefix);
             if (ns != null) {
-                for (Import imp : this.defintions.getImports()) {
+                for (Import imp : this.definitions.getImports()) {
                     if (ns.equals(imp.getNamespace())) {
                         // TODO: Also check that imp.getType() is BPMN
                         return imp.getLocation();
@@ -220,7 +220,7 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl {
         public String getNsPrefix(String filePath) {
             String ns = null;
             String prefix = "";
-            for (Import imp : this.defintions.getImports()) {
+            for (Import imp : this.definitions.getImports()) {
                 if (filePath.equals(imp.getLocation())) {
                     // TODO: Also check that imp.getType() is BPMN
                     ns = imp.getNamespace();
