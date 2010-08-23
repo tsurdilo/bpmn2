@@ -53,7 +53,7 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @param uri the URI of the new resource.
-     * @generated
+     * @generated NOT
      */
     public Bpmn2ResourceImpl(URI uri) {
         super(uri);
@@ -61,7 +61,6 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl {
         this.uriHandler = new QNameURIHandler(xmlHelper);
         this.getDefaultLoadOptions().put(XMLResource.OPTION_URI_HANDLER, uriHandler);
         this.getDefaultSaveOptions().put(XMLResource.OPTION_URI_HANDLER, uriHandler);
-
     }
 
     // This method is called by all save methods - save(Document,...), doSave(Writer/OutputStream, ...) - in superclasses.

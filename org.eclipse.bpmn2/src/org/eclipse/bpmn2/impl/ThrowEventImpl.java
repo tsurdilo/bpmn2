@@ -30,6 +30,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -217,8 +218,8 @@ public abstract class ThrowEventImpl extends EventImpl implements ThrowEvent {
      */
     public List<EventDefinition> getEventDefinitionRefs() {
         if (eventDefinitionRefs == null) {
-            eventDefinitionRefs = new EObjectEList<EventDefinition>(EventDefinition.class, this,
-                    Bpmn2Package.THROW_EVENT__EVENT_DEFINITION_REFS);
+            eventDefinitionRefs = new EObjectResolvingEList<EventDefinition>(EventDefinition.class,
+                    this, Bpmn2Package.THROW_EVENT__EVENT_DEFINITION_REFS);
         }
         return eventDefinitionRefs;
     }

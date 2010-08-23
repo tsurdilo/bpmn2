@@ -104,7 +104,8 @@ public abstract class PlaneImpl extends NodeImpl implements Plane {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR,
                         DiValidator.DIAGNOSTIC_SOURCE, DiValidator.PLANE__PLANE_ELEMENT_TYPE,
-                        EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic",
+                        EcorePlugin.INSTANCE.getString(
+                                "_UI_GenericInvariant_diagnostic",
                                 new Object[] { "plane_element_type",
                                         EObjectValidator.getObjectLabel(this, context) }),
                         new Object[] { this }));

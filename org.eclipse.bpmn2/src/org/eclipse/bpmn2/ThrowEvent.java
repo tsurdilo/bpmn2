@@ -127,7 +127,7 @@ public interface ThrowEvent extends Event {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Event Definition Refs</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getThrowEvent_EventDefinitionRefs()
-     * @model resolveProxies="false" ordered="false"
+     * @model ordered="false"
      *        extendedMetaData="kind='element' name='eventDefinitionRef' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */

@@ -73,7 +73,7 @@ public interface ConversationLink extends BaseElement {
      * @see #setSourceRef(InteractionNode)
      * @see org.eclipse.bpmn2.Bpmn2Package#getConversationLink_SourceRef()
      * @see org.eclipse.bpmn2.InteractionNode#getOutgoingConversationLinks
-     * @model opposite="outgoingConversationLinks" resolveProxies="false" required="true" ordered="false"
+     * @model opposite="outgoingConversationLinks" required="true" transient="true" ordered="false"
      *        extendedMetaData="kind='attribute' name='sourceRef'"
      * @generated
      */
@@ -102,7 +102,7 @@ public interface ConversationLink extends BaseElement {
      * @see #setTargetRef(InteractionNode)
      * @see org.eclipse.bpmn2.Bpmn2Package#getConversationLink_TargetRef()
      * @see org.eclipse.bpmn2.InteractionNode#getIncomingConversationLinks
-     * @model opposite="incomingConversationLinks" resolveProxies="false" required="true" ordered="false"
+     * @model opposite="incomingConversationLinks" required="true" transient="true" ordered="false"
      *        extendedMetaData="kind='attribute' name='targetRef'"
      * @generated
      */

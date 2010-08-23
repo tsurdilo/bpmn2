@@ -14,6 +14,139 @@
  */
 package org.eclipse.bpmn2.impl;
 
+import org.eclipse.bpmn2.Activity;
+import org.eclipse.bpmn2.AdHocOrdering;
+import org.eclipse.bpmn2.AdHocSubProcess;
+import org.eclipse.bpmn2.Assignment;
+import org.eclipse.bpmn2.Association;
+import org.eclipse.bpmn2.AssociationDirection;
+import org.eclipse.bpmn2.Auditing;
+import org.eclipse.bpmn2.BoundaryEvent;
+import org.eclipse.bpmn2.Bpmn2Factory;
+import org.eclipse.bpmn2.Bpmn2Package;
+import org.eclipse.bpmn2.BusinessRuleTask;
+import org.eclipse.bpmn2.CallActivity;
+import org.eclipse.bpmn2.CallChoreography;
+import org.eclipse.bpmn2.CallConversation;
+import org.eclipse.bpmn2.CancelEventDefinition;
+import org.eclipse.bpmn2.Category;
+import org.eclipse.bpmn2.CategoryValue;
+import org.eclipse.bpmn2.Choreography;
+import org.eclipse.bpmn2.ChoreographyLoopType;
+import org.eclipse.bpmn2.ChoreographyTask;
+import org.eclipse.bpmn2.Collaboration;
+import org.eclipse.bpmn2.CompensateEventDefinition;
+import org.eclipse.bpmn2.ComplexBehaviorDefinition;
+import org.eclipse.bpmn2.ComplexGateway;
+import org.eclipse.bpmn2.ConditionalEventDefinition;
+import org.eclipse.bpmn2.Conversation;
+import org.eclipse.bpmn2.ConversationAssociation;
+import org.eclipse.bpmn2.ConversationLink;
+import org.eclipse.bpmn2.CorrelationKey;
+import org.eclipse.bpmn2.CorrelationProperty;
+import org.eclipse.bpmn2.CorrelationPropertyBinding;
+import org.eclipse.bpmn2.CorrelationPropertyRetrievalExpression;
+import org.eclipse.bpmn2.CorrelationSubscription;
+import org.eclipse.bpmn2.DataAssociation;
+import org.eclipse.bpmn2.DataInput;
+import org.eclipse.bpmn2.DataInputAssociation;
+import org.eclipse.bpmn2.DataObject;
+import org.eclipse.bpmn2.DataObjectReference;
+import org.eclipse.bpmn2.DataOutput;
+import org.eclipse.bpmn2.DataOutputAssociation;
+import org.eclipse.bpmn2.DataState;
+import org.eclipse.bpmn2.DataStore;
+import org.eclipse.bpmn2.DataStoreReference;
+import org.eclipse.bpmn2.Definitions;
+import org.eclipse.bpmn2.DocumentRoot;
+import org.eclipse.bpmn2.Documentation;
+import org.eclipse.bpmn2.EndEvent;
+import org.eclipse.bpmn2.EndPoint;
+import org.eclipse.bpmn2.ErrorEventDefinition;
+import org.eclipse.bpmn2.Escalation;
+import org.eclipse.bpmn2.EscalationEventDefinition;
+import org.eclipse.bpmn2.EventBasedGateway;
+import org.eclipse.bpmn2.EventBasedGatewayType;
+import org.eclipse.bpmn2.EventDefinition;
+import org.eclipse.bpmn2.ExclusiveGateway;
+import org.eclipse.bpmn2.Expression;
+import org.eclipse.bpmn2.Extension;
+import org.eclipse.bpmn2.ExtensionAttributeDefinition;
+import org.eclipse.bpmn2.ExtensionAttributeValue;
+import org.eclipse.bpmn2.ExtensionDefinition;
+import org.eclipse.bpmn2.FormalExpression;
+import org.eclipse.bpmn2.GatewayDirection;
+import org.eclipse.bpmn2.GlobalBusinessRuleTask;
+import org.eclipse.bpmn2.GlobalChoreographyTask;
+import org.eclipse.bpmn2.GlobalConversation;
+import org.eclipse.bpmn2.GlobalManualTask;
+import org.eclipse.bpmn2.GlobalScriptTask;
+import org.eclipse.bpmn2.GlobalTask;
+import org.eclipse.bpmn2.GlobalUserTask;
+import org.eclipse.bpmn2.Group;
+import org.eclipse.bpmn2.HumanPerformer;
+import org.eclipse.bpmn2.ImplicitThrowEvent;
+import org.eclipse.bpmn2.Import;
+import org.eclipse.bpmn2.InclusiveGateway;
+import org.eclipse.bpmn2.InputOutputBinding;
+import org.eclipse.bpmn2.InputOutputSpecification;
+import org.eclipse.bpmn2.InputSet;
+import org.eclipse.bpmn2.InteractionNode;
+import org.eclipse.bpmn2.Interface;
+import org.eclipse.bpmn2.IntermediateCatchEvent;
+import org.eclipse.bpmn2.IntermediateThrowEvent;
+import org.eclipse.bpmn2.ItemAwareElement;
+import org.eclipse.bpmn2.ItemDefinition;
+import org.eclipse.bpmn2.ItemKind;
+import org.eclipse.bpmn2.Lane;
+import org.eclipse.bpmn2.LaneSet;
+import org.eclipse.bpmn2.LinkEventDefinition;
+import org.eclipse.bpmn2.ManualTask;
+import org.eclipse.bpmn2.Message;
+import org.eclipse.bpmn2.MessageEventDefinition;
+import org.eclipse.bpmn2.MessageFlow;
+import org.eclipse.bpmn2.MessageFlowAssociation;
+import org.eclipse.bpmn2.Monitoring;
+import org.eclipse.bpmn2.MultiInstanceBehavior;
+import org.eclipse.bpmn2.MultiInstanceLoopCharacteristics;
+import org.eclipse.bpmn2.Operation;
+import org.eclipse.bpmn2.OutputSet;
+import org.eclipse.bpmn2.ParallelGateway;
+import org.eclipse.bpmn2.Participant;
+import org.eclipse.bpmn2.ParticipantAssociation;
+import org.eclipse.bpmn2.ParticipantMultiplicity;
+import org.eclipse.bpmn2.PartnerEntity;
+import org.eclipse.bpmn2.PartnerRole;
+import org.eclipse.bpmn2.Performer;
+import org.eclipse.bpmn2.PotentialOwner;
+import org.eclipse.bpmn2.ProcessType;
+import org.eclipse.bpmn2.Property;
+import org.eclipse.bpmn2.ReceiveTask;
+import org.eclipse.bpmn2.Relationship;
+import org.eclipse.bpmn2.RelationshipDirection;
+import org.eclipse.bpmn2.Rendering;
+import org.eclipse.bpmn2.Resource;
+import org.eclipse.bpmn2.ResourceAssignmentExpression;
+import org.eclipse.bpmn2.ResourceParameter;
+import org.eclipse.bpmn2.ResourceParameterBinding;
+import org.eclipse.bpmn2.ResourceRole;
+import org.eclipse.bpmn2.ScriptTask;
+import org.eclipse.bpmn2.SendTask;
+import org.eclipse.bpmn2.SequenceFlow;
+import org.eclipse.bpmn2.ServiceTask;
+import org.eclipse.bpmn2.Signal;
+import org.eclipse.bpmn2.SignalEventDefinition;
+import org.eclipse.bpmn2.StandardLoopCharacteristics;
+import org.eclipse.bpmn2.StartEvent;
+import org.eclipse.bpmn2.SubChoreography;
+import org.eclipse.bpmn2.SubConversation;
+import org.eclipse.bpmn2.SubProcess;
+import org.eclipse.bpmn2.Task;
+import org.eclipse.bpmn2.TerminateEventDefinition;
+import org.eclipse.bpmn2.TextAnnotation;
+import org.eclipse.bpmn2.TimerEventDefinition;
+import org.eclipse.bpmn2.Transaction;
+import org.eclipse.bpmn2.UserTask;
 import org.eclipse.bpmn2.*;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -68,6 +201,8 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
         switch (eClass.getClassifierID()) {
         case Bpmn2Package.DOCUMENT_ROOT:
             return createDocumentRoot();
+        case Bpmn2Package.ACTIVITY:
+            return createActivity();
         case Bpmn2Package.AD_HOC_SUB_PROCESS:
             return createAdHocSubProcess();
         case Bpmn2Package.ASSIGNMENT:
@@ -160,6 +295,8 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
             return createEscalationEventDefinition();
         case Bpmn2Package.EVENT_BASED_GATEWAY:
             return createEventBasedGateway();
+        case Bpmn2Package.EVENT_DEFINITION:
+            return createEventDefinition();
         case Bpmn2Package.EXCLUSIVE_GATEWAY:
             return createExclusiveGateway();
         case Bpmn2Package.EXPRESSION:
@@ -204,6 +341,8 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
             return createInputOutputSpecification();
         case Bpmn2Package.INPUT_SET:
             return createInputSet();
+        case Bpmn2Package.INTERACTION_NODE:
+            return createInteractionNode();
         case Bpmn2Package.INTERFACE:
             return createInterface();
         case Bpmn2Package.INTERMEDIATE_CATCH_EVENT:
@@ -386,6 +525,16 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
     public DocumentRoot createDocumentRoot() {
         DocumentRootImpl documentRoot = new DocumentRootImpl();
         return documentRoot;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Activity createActivity() {
+        ActivityImpl activity = new ActivityImpl();
+        return activity;
     }
 
     /**
@@ -853,6 +1002,16 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EventDefinition createEventDefinition() {
+        EventDefinitionImpl eventDefinition = new EventDefinitionImpl();
+        return eventDefinition;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public ExclusiveGateway createExclusiveGateway() {
         ExclusiveGatewayImpl exclusiveGateway = new ExclusiveGatewayImpl();
         return exclusiveGateway;
@@ -1066,6 +1225,16 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
     public InputSet createInputSet() {
         InputSetImpl inputSet = new InputSetImpl();
         return inputSet;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public InteractionNode createInteractionNode() {
+        InteractionNodeImpl interactionNode = new InteractionNodeImpl();
+        return interactionNode;
     }
 
     /**

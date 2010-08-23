@@ -93,6 +93,25 @@ public class BoundaryEventImpl extends CatchEventImpl implements BoundaryEvent {
      * @generated
      */
     public Activity getAttachedToRef() {
+        if (attachedToRef != null && attachedToRef.eIsProxy()) {
+            InternalEObject oldAttachedToRef = (InternalEObject) attachedToRef;
+            attachedToRef = (Activity) eResolveProxy(oldAttachedToRef);
+            if (attachedToRef != oldAttachedToRef) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF, oldAttachedToRef,
+                            attachedToRef));
+            }
+        }
+        return attachedToRef;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Activity basicGetAttachedToRef() {
         return attachedToRef;
     }
 
@@ -203,7 +222,9 @@ public class BoundaryEventImpl extends CatchEventImpl implements BoundaryEvent {
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
         case Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF:
-            return getAttachedToRef();
+            if (resolve)
+                return getAttachedToRef();
+            return basicGetAttachedToRef();
         case Bpmn2Package.BOUNDARY_EVENT__CANCEL_ACTIVITY:
             return isCancelActivity();
         }

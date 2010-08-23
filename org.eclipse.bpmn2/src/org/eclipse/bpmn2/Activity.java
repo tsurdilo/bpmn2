@@ -39,8 +39,7 @@ import java.util.List;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getActivity()
- * @model abstract="true"
- *        extendedMetaData="name='tActivity' kind='elementOnly'"
+ * @model extendedMetaData="name='tActivity' kind='elementOnly'"
  * @generated
  */
 public interface Activity extends FlowNode {

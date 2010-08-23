@@ -28,6 +28,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -224,7 +225,7 @@ public abstract class FlowElementImpl extends BaseElementImpl implements FlowEle
      */
     public List<CategoryValue> getCategoryValueRef() {
         if (categoryValueRef == null) {
-            categoryValueRef = new EObjectWithInverseEList.ManyInverse<CategoryValue>(
+            categoryValueRef = new EObjectWithInverseResolvingEList.ManyInverse<CategoryValue>(
                     CategoryValue.class, this, Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF,
                     Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS);
         }

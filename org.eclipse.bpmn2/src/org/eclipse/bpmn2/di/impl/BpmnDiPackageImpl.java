@@ -172,16 +172,13 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
         // Obtain or create and register interdependencies
         Bpmn2PackageImpl theBpmn2Package = (Bpmn2PackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(Bpmn2Package.eNS_URI) instanceof Bpmn2PackageImpl ? EPackage.Registry.INSTANCE
-                .getEPackage(Bpmn2Package.eNS_URI)
-                : Bpmn2Package.eINSTANCE);
+                .getEPackage(Bpmn2Package.eNS_URI) : Bpmn2Package.eINSTANCE);
         DiPackageImpl theDiPackage = (DiPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(DiPackage.eNS_URI) instanceof DiPackageImpl ? EPackage.Registry.INSTANCE
-                .getEPackage(DiPackage.eNS_URI)
-                : DiPackage.eINSTANCE);
+                .getEPackage(DiPackage.eNS_URI) : DiPackage.eINSTANCE);
         DcPackageImpl theDcPackage = (DcPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(DcPackage.eNS_URI) instanceof DcPackageImpl ? EPackage.Registry.INSTANCE
-                .getEPackage(DcPackage.eNS_URI)
-                : DcPackage.eINSTANCE);
+                .getEPackage(DcPackage.eNS_URI) : DcPackage.eINSTANCE);
 
         // Load packages
         theBpmn2Package.loadPackage();
@@ -660,9 +657,9 @@ public class BpmnDiPackageImpl extends EPackageImpl implements BpmnDiPackage {
                 null, "xMLNSPrefixMap", null, 0, -1, null, IS_TRANSIENT, !IS_VOLATILE,
                 IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
                 !IS_DERIVED, IS_ORDERED);
-        initEReference(getDocumentRoot_XSISchemaLocation(), ecorePackage
-                .getEStringToStringMapEntry(), null, "xSISchemaLocation", null, 0, -1, null,
-                IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+        initEReference(getDocumentRoot_XSISchemaLocation(),
+                ecorePackage.getEStringToStringMapEntry(), null, "xSISchemaLocation", null, 0, -1,
+                null, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getDocumentRoot_BPMNDiagram(), this.getBPMNDiagram(), null, "bPMNDiagram",
                 null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,

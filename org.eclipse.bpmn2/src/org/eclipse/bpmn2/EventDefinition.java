@@ -21,8 +21,7 @@ package org.eclipse.bpmn2;
  *
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getEventDefinition()
- * @model abstract="true"
- *        extendedMetaData="name='tEventDefinition' kind='elementOnly'"
+ * @model extendedMetaData="name='tEventDefinition' kind='elementOnly'"
  * @generated
  */
 public interface EventDefinition extends RootElement {
