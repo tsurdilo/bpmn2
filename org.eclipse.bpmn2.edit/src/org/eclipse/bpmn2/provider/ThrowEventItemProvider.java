@@ -188,10 +188,6 @@ public class ThrowEventItemProvider extends EventItemProvider implements
 
         newChildDescriptors.add(createChildParameter(
                 Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITIONS,
-                Bpmn2Factory.eINSTANCE.createEventDefinition()));
-
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITIONS,
                 Bpmn2Factory.eINSTANCE.createCancelEventDefinition()));
 
         newChildDescriptors.add(createChildParameter(

@@ -988,7 +988,7 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EventDefinition createEventDefinition() {
+    protected EventDefinition createEventDefinition() {
         EventDefinitionImpl eventDefinition = new EventDefinitionImpl();
         return eventDefinition;
     }

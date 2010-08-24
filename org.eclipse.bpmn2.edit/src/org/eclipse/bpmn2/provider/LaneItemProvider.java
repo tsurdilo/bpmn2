@@ -259,9 +259,6 @@ public class LaneItemProvider extends BaseElementItemProvider implements
                 Bpmn2Factory.eINSTANCE.createCallConversation()));
 
         newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
-                Bpmn2Factory.eINSTANCE.createEventDefinition()));
-
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
                 Bpmn2Factory.eINSTANCE.createCancelEventDefinition()));
 
         newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,

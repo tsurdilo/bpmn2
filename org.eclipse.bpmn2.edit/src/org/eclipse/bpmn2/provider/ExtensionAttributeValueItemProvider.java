@@ -254,10 +254,6 @@ public class ExtensionAttributeValueItemProvider extends ItemProviderAdapter imp
 
         newChildDescriptors.add(createChildParameter(
                 Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE,
-                Bpmn2Factory.eINSTANCE.createEventDefinition()));
-
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE,
                 Bpmn2Factory.eINSTANCE.createCancelEventDefinition()));
 
         newChildDescriptors.add(createChildParameter(

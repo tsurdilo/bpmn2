@@ -205,12 +205,17 @@ public interface <%=genPackage.getFactoryInterfaceName()%><%if (!genModel.isSupp
 <%}%>
 <%for (GenClass genClass : genPackage.getGenClasses()) {%>
   <%if (!genClass.isAbstract()) {%>
+    <%String visibility = "public";%>
+    <%org.eclipse.emf.ecore.EAnnotation metadata = genClass.getEcoreModelElement().getEAnnotation("http:///org/eclipse/emf/ecore/util/ExtendedMetaData");%>
+    <%if (metadata != null && metadata.getDetails() != null) {%>
+      <%visibility = "true".equals(metadata.getDetails().get("abstract")) ? "protected" : "public";%>
+    <%}%>
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public <%=genClass.getTypeParameters()%><%=genClass.getImportedInterfaceName()%><%=genClass.getInterfaceTypeArguments()%> create<%=genClass.getName()%>()
+	<%=visibility%> <%=genClass.getTypeParameters()%><%=genClass.getImportedInterfaceName()%><%=genClass.getInterfaceTypeArguments()%> create<%=genClass.getName()%>()
 	{
     <%if (genClass.isDynamic()) {%>
 		<%=genClass.getImportedInterfaceName()%><%=genClass.getInterfaceTypeArguments()%> <%=genClass.getSafeUncapName()%> = <%=genClass.getCastFromEObject()%>super.create(<%=genClass.getQualifiedClassifierAccessor()%>);
@@ -629,6 +634,8 @@ public interface <%=genPackage.getFactoryInterfaceName()%><%if (!genModel.isSupp
 <%} else {%>
   <%for (GenClass genClass : genPackage.getGenClasses()) {%>
     <%if (genClass.hasFactoryInterfaceCreateMethod()) {%>
+      <%org.eclipse.emf.ecore.EAnnotation metadata = genClass.getEcoreModelElement().getEAnnotation("http:///org/eclipse/emf/ecore/util/ExtendedMetaData");%>
+      <%if (metadata == null || metadata.getDetails() == null || !"true".equals(metadata.getDetails().get("abstract"))) {%>
 	/**
 	 * Returns a new object of class '<em><%=genClass.getFormattedName()%></em>'.
 	 * <!-- begin-user-doc -->
@@ -638,6 +645,7 @@ public interface <%=genPackage.getFactoryInterfaceName()%><%if (!genModel.isSupp
 	 */
 	<%=genClass.getTypeParameters()%><%=genClass.getImportedInterfaceName()%><%=genClass.getInterfaceTypeArguments()%> create<%=genClass.getName()%>();
 
+      <%}%>
     <%}%>
   <%}%>
   <%if (genPackage.isDataTypeConverters()) {%>

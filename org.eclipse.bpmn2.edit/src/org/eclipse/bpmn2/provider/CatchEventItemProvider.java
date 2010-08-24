@@ -211,10 +211,6 @@ public class CatchEventItemProvider extends EventItemProvider implements
 
         newChildDescriptors.add(createChildParameter(
                 Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS,
-                Bpmn2Factory.eINSTANCE.createEventDefinition()));
-
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS,
                 Bpmn2Factory.eINSTANCE.createCancelEventDefinition()));
 
         newChildDescriptors.add(createChildParameter(

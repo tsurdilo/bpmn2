@@ -457,15 +457,6 @@ public interface Bpmn2Factory extends EFactory {
     EventBasedGateway createEventBasedGateway();
 
     /**
-     * Returns a new object of class '<em>Event Definition</em>'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return a new object of class '<em>Event Definition</em>'.
-     * @generated
-     */
-    EventDefinition createEventDefinition();
-
-    /**
      * Returns a new object of class '<em>Exclusive Gateway</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

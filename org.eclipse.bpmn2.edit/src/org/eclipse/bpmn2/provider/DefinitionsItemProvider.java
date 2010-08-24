@@ -299,10 +299,6 @@ public class DefinitionsItemProvider extends BaseElementItemProvider implements
 
         newChildDescriptors.add(createChildParameter(
                 Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
-                Bpmn2Factory.eINSTANCE.createEventDefinition()));
-
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
                 Bpmn2Factory.eINSTANCE.createCancelEventDefinition()));
 
         newChildDescriptors.add(createChildParameter(
