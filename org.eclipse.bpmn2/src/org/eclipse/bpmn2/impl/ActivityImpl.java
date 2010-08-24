@@ -34,6 +34,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -60,7 +61,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ActivityImpl extends FlowNodeImpl implements Activity {
+public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
     /**
      * The cached value of the '{@link #getIoSpecification() <em>Io Specification</em>}' containment reference.
      * <!-- begin-user-doc -->
@@ -280,8 +281,8 @@ public class ActivityImpl extends FlowNodeImpl implements Activity {
      */
     public List<BoundaryEvent> getBoundaryEventRefs() {
         if (boundaryEventRefs == null) {
-            boundaryEventRefs = new EObjectWithInverseResolvingEList<BoundaryEvent>(
-                    BoundaryEvent.class, this, Bpmn2Package.ACTIVITY__BOUNDARY_EVENT_REFS,
+            boundaryEventRefs = new EObjectWithInverseEList<BoundaryEvent>(BoundaryEvent.class,
+                    this, Bpmn2Package.ACTIVITY__BOUNDARY_EVENT_REFS,
                     Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF);
         }
         return boundaryEventRefs;

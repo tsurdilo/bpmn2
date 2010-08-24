@@ -126,24 +126,6 @@ public class ConversationLinkImpl extends BaseElementImpl implements Conversatio
      * @generated
      */
     public InteractionNode getSourceRef() {
-        if (sourceRef != null && sourceRef.eIsProxy()) {
-            InternalEObject oldSourceRef = (InternalEObject) sourceRef;
-            sourceRef = (InteractionNode) eResolveProxy(oldSourceRef);
-            if (sourceRef != oldSourceRef) {
-                if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            Bpmn2Package.CONVERSATION_LINK__SOURCE_REF, oldSourceRef, sourceRef));
-            }
-        }
-        return sourceRef;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public InteractionNode basicGetSourceRef() {
         return sourceRef;
     }
 
@@ -196,24 +178,6 @@ public class ConversationLinkImpl extends BaseElementImpl implements Conversatio
      * @generated
      */
     public InteractionNode getTargetRef() {
-        if (targetRef != null && targetRef.eIsProxy()) {
-            InternalEObject oldTargetRef = (InternalEObject) targetRef;
-            targetRef = (InteractionNode) eResolveProxy(oldTargetRef);
-            if (targetRef != oldTargetRef) {
-                if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            Bpmn2Package.CONVERSATION_LINK__TARGET_REF, oldTargetRef, targetRef));
-            }
-        }
-        return targetRef;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public InteractionNode basicGetTargetRef() {
         return targetRef;
     }
 
@@ -313,13 +277,9 @@ public class ConversationLinkImpl extends BaseElementImpl implements Conversatio
         case Bpmn2Package.CONVERSATION_LINK__NAME:
             return getName();
         case Bpmn2Package.CONVERSATION_LINK__SOURCE_REF:
-            if (resolve)
-                return getSourceRef();
-            return basicGetSourceRef();
+            return getSourceRef();
         case Bpmn2Package.CONVERSATION_LINK__TARGET_REF:
-            if (resolve)
-                return getTargetRef();
-            return basicGetTargetRef();
+            return getTargetRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }

@@ -39,7 +39,8 @@ import java.util.List;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getActivity()
- * @model extendedMetaData="name='tActivity' kind='elementOnly'"
+ * @model abstract="true"
+ *        extendedMetaData="name='tActivity' kind='elementOnly'"
  * @generated
  */
 public interface Activity extends FlowNode {
@@ -83,7 +84,7 @@ public interface Activity extends FlowNode {
      * @return the value of the '<em>Boundary Event Refs</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getActivity_BoundaryEventRefs()
      * @see org.eclipse.bpmn2.BoundaryEvent#getAttachedToRef
-     * @model opposite="attachedToRef" transient="true" derived="true" ordered="false"
+     * @model opposite="attachedToRef" resolveProxies="false" transient="true" derived="true" ordered="false"
      * @generated
      */
     List<BoundaryEvent> getBoundaryEventRefs();

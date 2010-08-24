@@ -43,7 +43,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class InteractionNodeImpl extends EObjectImpl implements InteractionNode {
+public abstract class InteractionNodeImpl extends EObjectImpl implements InteractionNode {
     /**
      * The cached value of the '{@link #getIncomingConversationLinks() <em>Incoming Conversation Links</em>}' reference list.
      * <!-- begin-user-doc -->

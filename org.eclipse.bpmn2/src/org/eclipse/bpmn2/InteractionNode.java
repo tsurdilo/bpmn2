@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getInteractionNode()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface InteractionNode extends EObject {

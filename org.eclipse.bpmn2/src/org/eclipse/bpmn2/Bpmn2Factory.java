@@ -43,15 +43,6 @@ public interface Bpmn2Factory extends EFactory {
     DocumentRoot createDocumentRoot();
 
     /**
-     * Returns a new object of class '<em>Activity</em>'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return a new object of class '<em>Activity</em>'.
-     * @generated
-     */
-    Activity createActivity();
-
-    /**
      * Returns a new object of class '<em>Ad Hoc Sub Process</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -671,15 +662,6 @@ public interface Bpmn2Factory extends EFactory {
      * @generated
      */
     InputSet createInputSet();
-
-    /**
-     * Returns a new object of class '<em>Interaction Node</em>'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return a new object of class '<em>Interaction Node</em>'.
-     * @generated
-     */
-    InteractionNode createInteractionNode();
 
     /**
      * Returns a new object of class '<em>Interface</em>'.

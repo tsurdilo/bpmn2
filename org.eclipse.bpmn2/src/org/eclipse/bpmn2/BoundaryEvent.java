@@ -45,7 +45,7 @@ public interface BoundaryEvent extends CatchEvent {
      * @see #setAttachedToRef(Activity)
      * @see org.eclipse.bpmn2.Bpmn2Package#getBoundaryEvent_AttachedToRef()
      * @see org.eclipse.bpmn2.Activity#getBoundaryEventRefs
-     * @model opposite="boundaryEventRefs" required="true" transient="true" ordered="false"
+     * @model opposite="boundaryEventRefs" resolveProxies="false" required="true" ordered="false"
      *        extendedMetaData="kind='attribute' name='attachedToRef'"
      * @generated
      */

@@ -225,7 +225,7 @@ public abstract class FlowElementImpl extends BaseElementImpl implements FlowEle
      */
     public List<CategoryValue> getCategoryValueRef() {
         if (categoryValueRef == null) {
-            categoryValueRef = new EObjectWithInverseResolvingEList.ManyInverse<CategoryValue>(
+            categoryValueRef = new EObjectWithInverseEList.ManyInverse<CategoryValue>(
                     CategoryValue.class, this, Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF,
                     Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS);
         }

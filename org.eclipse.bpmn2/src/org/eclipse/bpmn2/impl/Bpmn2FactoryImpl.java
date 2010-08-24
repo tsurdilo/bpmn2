@@ -201,8 +201,6 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
         switch (eClass.getClassifierID()) {
         case Bpmn2Package.DOCUMENT_ROOT:
             return createDocumentRoot();
-        case Bpmn2Package.ACTIVITY:
-            return createActivity();
         case Bpmn2Package.AD_HOC_SUB_PROCESS:
             return createAdHocSubProcess();
         case Bpmn2Package.ASSIGNMENT:
@@ -341,8 +339,6 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
             return createInputOutputSpecification();
         case Bpmn2Package.INPUT_SET:
             return createInputSet();
-        case Bpmn2Package.INTERACTION_NODE:
-            return createInteractionNode();
         case Bpmn2Package.INTERFACE:
             return createInterface();
         case Bpmn2Package.INTERMEDIATE_CATCH_EVENT:
@@ -525,16 +521,6 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
     public DocumentRoot createDocumentRoot() {
         DocumentRootImpl documentRoot = new DocumentRootImpl();
         return documentRoot;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public Activity createActivity() {
-        ActivityImpl activity = new ActivityImpl();
-        return activity;
     }
 
     /**
@@ -1225,16 +1211,6 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
     public InputSet createInputSet() {
         InputSetImpl inputSet = new InputSetImpl();
         return inputSet;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public InteractionNode createInteractionNode() {
-        InteractionNodeImpl interactionNode = new InteractionNodeImpl();
-        return interactionNode;
     }
 
     /**
