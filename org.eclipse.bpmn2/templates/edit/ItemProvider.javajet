@@ -216,6 +216,21 @@ public class <%=genClass.getProviderClassName()%>
 	}
 
 <%}%>
+<%if (genModel.getRuntimeVersion().getValue() >= GenRuntimeVersion.EMF26_VALUE && !genModel.isCreationIcons()) {%>
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+<%if (genModel.useClassOverrideAnnotation()) {%>
+	@Override
+<%}%>
+	protected boolean shouldComposeCreationImage() 
+	{
+		return true;
+	}
+
+<%}%>
 	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->

@@ -157,6 +157,16 @@ public class ExtensionAttributeValueItemProvider extends ItemProviderAdapter imp
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -241,6 +251,10 @@ public class ExtensionAttributeValueItemProvider extends ItemProviderAdapter imp
         newChildDescriptors.add(createChildParameter(
                 Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE,
                 Bpmn2Factory.eINSTANCE.createCallConversation()));
+
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE,
+                Bpmn2Factory.eINSTANCE.createEventDefinition()));
 
         newChildDescriptors.add(createChildParameter(
                 Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE,

@@ -225,6 +225,16 @@ public class DefinitionsItemProvider extends BaseElementItemProvider implements
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -286,6 +296,10 @@ public class DefinitionsItemProvider extends BaseElementItemProvider implements
 
         newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DEFINITIONS__EXTENSIONS,
                 Bpmn2Factory.eINSTANCE.createExtension()));
+
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createEventDefinition()));
 
         newChildDescriptors.add(createChildParameter(
                 Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,

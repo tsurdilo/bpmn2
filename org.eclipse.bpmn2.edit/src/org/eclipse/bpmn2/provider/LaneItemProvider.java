@@ -167,6 +167,16 @@ public class LaneItemProvider extends BaseElementItemProvider implements
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -247,6 +257,9 @@ public class LaneItemProvider extends BaseElementItemProvider implements
 
         newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
                 Bpmn2Factory.eINSTANCE.createCallConversation()));
+
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createEventDefinition()));
 
         newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
                 Bpmn2Factory.eINSTANCE.createCancelEventDefinition()));

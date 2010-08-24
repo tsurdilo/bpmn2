@@ -21,10 +21,13 @@ import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Factory;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.DocumentRoot;
+import org.eclipse.bpmn2.di.BpmnDiFactory;
+import org.eclipse.dd.dc.DcFactory;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.xml.type.XMLTypeFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -114,6 +117,16 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements
             return overlayImage(object, getResourceLocator()
                     .getImage("full/obj16/DocumentRoot.gif"));
         }
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
     }
 
     /**
@@ -227,9 +240,9 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__AUDITING
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_CONVERSATION
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION_NODE
-                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CANCEL_EVENT_DEFINITION
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT_DEFINITION
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ROOT_ELEMENT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CANCEL_EVENT_DEFINITION
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CATEGORY
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CATEGORY_VALUE
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__COLLABORATION

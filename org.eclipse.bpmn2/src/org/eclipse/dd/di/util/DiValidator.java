@@ -227,9 +227,9 @@ public class DiValidator extends EObjectValidator {
      */
     public boolean validatePlane(Plane plane, DiagnosticChain diagnostics,
             Map<Object, Object> context) {
-        boolean result = validate_NoCircularContainment(plane, diagnostics, context);
-        if (result || diagnostics != null)
-            result &= validate_EveryMultiplicityConforms(plane, diagnostics, context);
+        if (!validate_NoCircularContainment(plane, diagnostics, context))
+            return false;
+        boolean result = validate_EveryMultiplicityConforms(plane, diagnostics, context);
         if (result || diagnostics != null)
             result &= validate_EveryDataValueConforms(plane, diagnostics, context);
         if (result || diagnostics != null)

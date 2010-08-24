@@ -1168,6 +1168,29 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory impleme
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.bpmn2.EventDefinition} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected EventDefinitionItemProvider eventDefinitionItemProvider;
+
+    /**
+     * This creates an adapter for a {@link org.eclipse.bpmn2.EventDefinition}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createEventDefinitionAdapter() {
+        if (eventDefinitionItemProvider == null) {
+            eventDefinitionItemProvider = new EventDefinitionItemProvider(this);
+        }
+
+        return eventDefinitionItemProvider;
+    }
+
+    /**
      * This keeps track of the one adapter used for all {@link org.eclipse.bpmn2.ExclusiveGateway} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3066,6 +3089,8 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory impleme
             escalationEventDefinitionItemProvider.dispose();
         if (eventBasedGatewayItemProvider != null)
             eventBasedGatewayItemProvider.dispose();
+        if (eventDefinitionItemProvider != null)
+            eventDefinitionItemProvider.dispose();
         if (exclusiveGatewayItemProvider != null)
             exclusiveGatewayItemProvider.dispose();
         if (expressionItemProvider != null)

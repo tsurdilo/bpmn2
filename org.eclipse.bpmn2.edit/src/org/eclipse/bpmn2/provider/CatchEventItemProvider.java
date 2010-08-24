@@ -138,6 +138,16 @@ public class CatchEventItemProvider extends EventItemProvider implements
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -198,6 +208,10 @@ public class CatchEventItemProvider extends EventItemProvider implements
 
         newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.CATCH_EVENT__OUTPUT_SET,
                 Bpmn2Factory.eINSTANCE.createOutputSet()));
+
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS,
+                Bpmn2Factory.eINSTANCE.createEventDefinition()));
 
         newChildDescriptors.add(createChildParameter(
                 Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS,

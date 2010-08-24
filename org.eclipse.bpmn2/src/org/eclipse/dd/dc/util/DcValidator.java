@@ -147,9 +147,9 @@ public class DcValidator extends EObjectValidator {
      * @generated
      */
     public boolean validateFont(Font font, DiagnosticChain diagnostics, Map<Object, Object> context) {
-        boolean result = validate_NoCircularContainment(font, diagnostics, context);
-        if (result || diagnostics != null)
-            result &= validate_EveryMultiplicityConforms(font, diagnostics, context);
+        if (!validate_NoCircularContainment(font, diagnostics, context))
+            return false;
+        boolean result = validate_EveryMultiplicityConforms(font, diagnostics, context);
         if (result || diagnostics != null)
             result &= validate_EveryDataValueConforms(font, diagnostics, context);
         if (result || diagnostics != null)
