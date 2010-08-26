@@ -17,7 +17,6 @@ package org.eclipse.bpmn2.util;
 import java.util.Iterator;
 import java.util.Map;
 
-import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Definitions;
 import org.eclipse.bpmn2.Import;
 import org.eclipse.emf.common.util.URI;
@@ -124,8 +123,8 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl {
         @Override
         protected void setValueFromId(EObject object, EReference eReference, String ids) {
 
-            super.setValueFromId(object, eReference,
-                    ((QNameURIHandler) uriHandler).convertQNameToUri(ids));
+            super.setValueFromId(object, eReference, ((QNameURIHandler) uriHandler)
+                    .convertQNameToUri(ids));
         }
 
     }
@@ -137,26 +136,17 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl {
      */
     protected class BpmnXmlHelper extends XMLHelperImpl {
 
-        private Definitions definitions;
-        private String targetNsPrefix;
-
         public BpmnXmlHelper(Bpmn2ResourceImpl resource) {
             super(resource);
         }
 
-        /**
-         * Override to gain easy access to the Definitions root object and its targetNamespace attribute
-         */
-        @Override
-        public void setValue(EObject object, EStructuralFeature feature, Object value, int position) {
-            super.setValue(object, feature, value, position);
-            if (object instanceof Definitions) {
-                this.definitions = (Definitions) object;
-                if (feature.equals(Bpmn2Package.Literals.DEFINITIONS__TARGET_NAMESPACE)) {
-                    this.targetNsPrefix = getPrefix((String) value);
+        private Definitions getDefinitions() {
+            for (EObject eobj : getResource().getContents()) {
+                if (eobj instanceof Definitions) {
+                    return (Definitions) eobj;
                 }
             }
-
+            return null;
         }
 
         /**
@@ -166,7 +156,7 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl {
          * @return
          */
         public boolean isTargetNamespace(String prefix) {
-            return prefix.equals(this.targetNsPrefix);
+            return prefix.equals(getDefinitions().getTargetNamespace());
         }
 
         /**
@@ -178,7 +168,7 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl {
         public String getPathForPrefix(String prefix) {
             String ns = this.getNamespaceURI(prefix);
             if (ns != null) {
-                for (Import imp : this.definitions.getImports()) {
+                for (Import imp : getDefinitions().getImports()) {
                     if (ns.equals(imp.getNamespace())) {
                         // TODO: Also check that imp.getType() is BPMN
                         return imp.getLocation();
@@ -220,7 +210,7 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl {
         public String getNsPrefix(String filePath) {
             String ns = null;
             String prefix = "";
-            for (Import imp : this.definitions.getImports()) {
+            for (Import imp : getDefinitions().getImports()) {
                 if (filePath.equals(imp.getLocation())) {
                     // TODO: Also check that imp.getType() is BPMN
                     ns = imp.getNamespace();
