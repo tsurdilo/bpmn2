@@ -18,6 +18,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 import org.eclipse.bpmn2.Definitions;
+import org.eclipse.bpmn2.DocumentRoot;
 import org.eclipse.bpmn2.Import;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
@@ -144,6 +145,8 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl {
             for (EObject eobj : getResource().getContents()) {
                 if (eobj instanceof Definitions) {
                     return (Definitions) eobj;
+                } else if (eobj instanceof DocumentRoot) {
+                    return ((DocumentRoot) eobj).getDefinitions();
                 }
             }
             return null;
