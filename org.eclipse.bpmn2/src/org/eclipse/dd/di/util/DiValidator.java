@@ -223,19 +223,18 @@ public class DiValidator extends EObjectValidator {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated NOT
+     * Comment out the code that doesn't compile on Eclipse 3.5
      */
     public boolean validatePlane(Plane plane, DiagnosticChain diagnostics,
             Map<Object, Object> context) {
-        if (!validate_NoCircularContainment(plane, diagnostics, context))
-            return false;
         boolean result = validate_EveryMultiplicityConforms(plane, diagnostics, context);
         if (result || diagnostics != null)
             result &= validate_EveryDataValueConforms(plane, diagnostics, context);
         if (result || diagnostics != null)
             result &= validate_EveryReferenceIsContained(plane, diagnostics, context);
-        if (result || diagnostics != null)
-            result &= validate_EveryBidirectionalReferenceIsPaired(plane, diagnostics, context);
+        //  if (result || diagnostics != null)
+        //     result &= validate_EveryBidirectionalReferenceIsPaired(plane, diagnostics, context);
         if (result || diagnostics != null)
             result &= validate_EveryProxyResolves(plane, diagnostics, context);
         if (result || diagnostics != null)

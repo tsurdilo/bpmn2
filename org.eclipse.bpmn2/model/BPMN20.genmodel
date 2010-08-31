@@ -5,7 +5,7 @@
     modelDirectory="/org.eclipse.bpmn2/src" creationIcons="false" modelPluginID="org.eclipse.bpmn2"
     templateDirectory="org.eclipse.bpmn2/templates" dynamicTemplates="true" modelName="bpmn2"
     modelPluginClass="" suppressEMFTypes="true" codeFormatting="true" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="5.0" copyrightFields="false" language="en">
+    complianceLevel="5.0" copyrightFields="false" runtimeVersion="2.4" language="en">
   <foreignModel>BPMN20.ecore</foreignModel>
   <genPackages prefix="Bpmn2" basePackage="org.eclipse" resource="XML" disposableProviderFactory="true"
       loadInitialization="true" multipleEditorPages="false" ecorePackage="BPMN20.ecore#/">

@@ -144,18 +144,17 @@ public class DcValidator extends EObjectValidator {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated NOT
+     * Commented out the code that doesn't compile on Eclipse 3.5  (R Hille)
      */
     public boolean validateFont(Font font, DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (!validate_NoCircularContainment(font, diagnostics, context))
-            return false;
         boolean result = validate_EveryMultiplicityConforms(font, diagnostics, context);
         if (result || diagnostics != null)
             result &= validate_EveryDataValueConforms(font, diagnostics, context);
         if (result || diagnostics != null)
             result &= validate_EveryReferenceIsContained(font, diagnostics, context);
-        if (result || diagnostics != null)
-            result &= validate_EveryBidirectionalReferenceIsPaired(font, diagnostics, context);
+        //if (result || diagnostics != null)
+        //    result &= validate_EveryBidirectionalReferenceIsPaired(font, diagnostics, context);
         if (result || diagnostics != null)
             result &= validate_EveryProxyResolves(font, diagnostics, context);
         if (result || diagnostics != null)
