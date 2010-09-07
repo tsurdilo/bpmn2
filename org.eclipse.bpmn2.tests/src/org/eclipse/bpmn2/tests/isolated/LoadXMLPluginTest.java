@@ -8,7 +8,7 @@
  * Contributors:
  *    Henning Heitkoetter - initial API and implementation
  */
-package org.eclipse.bpmn2.tests;
+package org.eclipse.bpmn2.tests.isolated;
 
 import static org.junit.Assert.fail;
 

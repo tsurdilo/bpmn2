@@ -1,4 +1,4 @@
-package org.eclipse.bpmn2.tests;
+package org.eclipse.bpmn2.tests.isolated;
 
 public class LoadXMIPluginTest extends LoadXMLPluginTest {
     protected String getFilename() {
