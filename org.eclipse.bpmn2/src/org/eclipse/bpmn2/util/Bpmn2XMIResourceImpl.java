@@ -37,4 +37,16 @@ public class Bpmn2XMIResourceImpl extends XMIResourceImpl {
         super(uri);
     }
 
+    @Override
+    protected XMLSave createXMLSave() {
+        return new XMISaveImpl(createXMLHelper()) {
+            @Override
+            protected boolean shouldSaveFeature(EObject o, EStructuralFeature f) {
+                if (Bpmn2Package.eINSTANCE.getDocumentation_Mixed().equals(f))
+                    return false;
+                return super.shouldSaveFeature(o, f);
+            }
+        };
+    }
+
 } //Bpmn2ResourceImpl

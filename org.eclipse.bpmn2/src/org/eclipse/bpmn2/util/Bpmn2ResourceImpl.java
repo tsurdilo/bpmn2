@@ -17,6 +17,7 @@ package org.eclipse.bpmn2.util;
 import java.util.Iterator;
 import java.util.Map;
 
+import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Definitions;
 import org.eclipse.bpmn2.DocumentRoot;
 import org.eclipse.bpmn2.Import;
@@ -34,6 +35,7 @@ import org.eclipse.emf.ecore.xmi.impl.SAXXMLHandler;
 import org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl;
+import org.eclipse.emf.ecore.xmi.impl.XMLSaveImpl;
 import org.xml.sax.helpers.DefaultHandler;
 
 /**
@@ -67,7 +69,14 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl {
     @Override
     protected XMLSave createXMLSave() {
         prepareSave();
-        return super.createXMLSave();
+        return new XMLSaveImpl(createXMLHelper()) {
+            @Override
+            protected boolean shouldSaveFeature(EObject o, EStructuralFeature f) {
+                if (Bpmn2Package.eINSTANCE.getDocumentation_Text().equals(f))
+                    return false;
+                return super.shouldSaveFeature(o, f);
+            }
+        };
     }
 
     /**
@@ -124,8 +133,8 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl {
         @Override
         protected void setValueFromId(EObject object, EReference eReference, String ids) {
 
-            super.setValueFromId(object, eReference, ((QNameURIHandler) uriHandler)
-                    .convertQNameToUri(ids));
+            super.setValueFromId(object, eReference,
+                    ((QNameURIHandler) uriHandler).convertQNameToUri(ids));
         }
 
     }
