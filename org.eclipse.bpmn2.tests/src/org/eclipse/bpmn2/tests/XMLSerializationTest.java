@@ -29,6 +29,8 @@ import org.eclipse.bpmn2.DocumentRoot;
 import org.eclipse.bpmn2.Documentation;
 import org.eclipse.bpmn2.Process;
 import org.eclipse.bpmn2.RootElement;
+import org.eclipse.bpmn2.ScriptTask;
+import org.eclipse.bpmn2.ServiceTask;
 import org.eclipse.bpmn2.util.Bpmn2ResourceFactoryImpl;
 import org.eclipse.bpmn2.util.NamespaceHelper;
 import org.eclipse.emf.common.EMFPlugin;
@@ -77,6 +79,10 @@ public class XMLSerializationTest {
     @Before
     public void setUpFields() {
         model = Bpmn2Factory.eINSTANCE.createDefinitions();
+        model.setExporter("Exporter");
+        model.setExporterVersion("1");
+        model.setName("Name");
+        model.setTargetNamespace("tns1");
         createdFiles = new LinkedList<URI>();
     }
 
@@ -261,10 +267,6 @@ public class XMLSerializationTest {
         final String docId = "doc1";
         final String docText = "Documentation text";
 
-        model.setExporter("Exporter");
-        model.setExporterVersion("1");
-        model.setName("Name");
-        model.setTargetNamespace("tns1");
         Process p = Bpmn2Factory.eINSTANCE.createProcess();
         p.setName("Name");
         Documentation doc = Bpmn2Factory.eINSTANCE.createDocumentation();
@@ -288,5 +290,37 @@ public class XMLSerializationTest {
         Node docNode = xml.getElementsByTagName("bpmn2:documentation").item(0);
         assertNull("Documentation has an attribute 'text' (invalid acc. to XML schema)", docNode
                 .getAttributes().getNamedItem("text"));
+    }
+
+    @Test
+    public void testScript() throws Exception {
+        final String scriptId = "st1";
+        final String scriptContent = "Script content";
+
+        Process p = Bpmn2Factory.eINSTANCE.createProcess();
+        p.setName("Name");
+        ScriptTask st = Bpmn2Factory.eINSTANCE.createScriptTask();
+        st.setId(scriptId);
+        st.setName("Name");
+        st.setScript(scriptContent);
+        st.setScriptFormat("Script format");
+        p.getFlowElements().add(st);
+        model.getRootElements().add(p);
+
+        Resource res = createWithContentAndLoad("scriptContent", model);
+        EObject stLoaded = res.getEObject(scriptId);
+        assertTrue(stLoaded instanceof ScriptTask);
+        assertEquals(scriptContent, ((ScriptTask) stLoaded).getScript());
+
+        checkSerializationScriptContent(res);
+    }
+
+    protected void checkSerializationScriptContent(Resource res) throws SAXException, IOException,
+            ParserConfigurationException {
+        DocumentBuilderFactory fact = DocumentBuilderFactory.newInstance();
+        Document xml = fact.newDocumentBuilder().parse(new File(res.getURI().toFileString()));
+        Node scriptNode = xml.getElementsByTagName("bpmn2:scriptTask").item(0);
+        assertNull("ScriptTask has an attribute 'script' (invalid acc. to XML schema)", scriptNode
+                .getAttributes().getNamedItem("script"));
     }
 }

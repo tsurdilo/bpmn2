@@ -100,4 +100,23 @@ public class XMISerializationTest extends XMLSerializationTest {
                     Node.CDATA_SECTION_NODE == nodeType);
         }
     }
+
+    @Override
+    protected void checkSerializationScriptContent(Resource res) throws SAXException, IOException,
+            ParserConfigurationException {
+        DocumentBuilderFactory fact = DocumentBuilderFactory.newInstance();
+        Document xml = fact.newDocumentBuilder().parse(new File(res.getURI().toFileString()));
+        Node scriptNode = xml.getElementsByTagName("flowElements").item(0);
+
+        for (int i = 0; i < scriptNode.getChildNodes().getLength(); i++) {
+            Node cur = scriptNode.getChildNodes().item(i);
+            short nodeType = cur.getNodeType();
+            assertFalse("Documentation has text content (not valid in XMI)",
+                    Node.TEXT_NODE == nodeType && cur.getTextContent().trim().length() > 0);
+            assertFalse("Documentation has CDATA content (not valid in XMI)",
+                    Node.CDATA_SECTION_NODE == nodeType);
+            assertFalse("Documentation has element content 'script' (not valid in XMI)",
+                    "script".equals(cur.getNodeName()));
+        }
+    }
 }
