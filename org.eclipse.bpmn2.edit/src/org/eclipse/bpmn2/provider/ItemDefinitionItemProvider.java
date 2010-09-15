@@ -79,8 +79,7 @@ public class ItemDefinitionItemProvider extends RootElementItemProvider implemen
     protected void addIsCollectionPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_ItemDefinition_isCollection_feature"),
+                getResourceLocator(), getString("_UI_ItemDefinition_isCollection_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_ItemDefinition_isCollection_feature", "_UI_ItemDefinition_type"),
                 Bpmn2Package.Literals.ITEM_DEFINITION__IS_COLLECTION, true, false, false,
@@ -94,15 +93,12 @@ public class ItemDefinitionItemProvider extends RootElementItemProvider implemen
      * @generated
      */
     protected void addImportPropertyDescriptor(Object object) {
-        itemPropertyDescriptors
-                .add(createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                        getResourceLocator(),
-                        getString("_UI_ItemDefinition_import_feature"),
-                        getString("_UI_PropertyDescriptor_description",
-                                "_UI_ItemDefinition_import_feature", "_UI_ItemDefinition_type"),
-                        Bpmn2Package.Literals.ITEM_DEFINITION__IMPORT, true, false, true, null,
-                        null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(), getString("_UI_ItemDefinition_import_feature"), getString(
+                        "_UI_PropertyDescriptor_description", "_UI_ItemDefinition_import_feature",
+                        "_UI_ItemDefinition_type"), Bpmn2Package.Literals.ITEM_DEFINITION__IMPORT,
+                true, false, true, null, null, null));
     }
 
     /**
@@ -114,9 +110,8 @@ public class ItemDefinitionItemProvider extends RootElementItemProvider implemen
     protected void addItemKindPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_ItemDefinition_itemKind_feature"),
-                getString("_UI_PropertyDescriptor_description",
+                getResourceLocator(), getString("_UI_ItemDefinition_itemKind_feature"), getString(
+                        "_UI_PropertyDescriptor_description",
                         "_UI_ItemDefinition_itemKind_feature", "_UI_ItemDefinition_type"),
                 Bpmn2Package.Literals.ITEM_DEFINITION__ITEM_KIND, true, false, false,
                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
@@ -131,12 +126,11 @@ public class ItemDefinitionItemProvider extends RootElementItemProvider implemen
     protected void addStructureRefPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_ItemDefinition_structureRef_feature"),
+                getResourceLocator(), getString("_UI_ItemDefinition_StructureRef_feature"),
                 getString("_UI_PropertyDescriptor_description",
-                        "_UI_ItemDefinition_structureRef_feature", "_UI_ItemDefinition_type"),
-                Bpmn2Package.Literals.ITEM_DEFINITION__STRUCTURE_REF, true, false, true, null,
-                null, null));
+                        "_UI_ItemDefinition_StructureRef_feature", "_UI_ItemDefinition_type"),
+                Bpmn2Package.Literals.ITEM_DEFINITION__STRUCTURE_REF, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -148,11 +142,11 @@ public class ItemDefinitionItemProvider extends RootElementItemProvider implemen
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object,
-                    getResourceLocator().getImage("full/obj16/ItemDefinition.png"));
+            return overlayImage(object, getResourceLocator().getImage(
+                    "full/obj16/ItemDefinition.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object,
-                    getResourceLocator().getImage("full/obj16/ItemDefinition.gif"));
+            return overlayImage(object, getResourceLocator().getImage(
+                    "full/obj16/ItemDefinition.gif"));
         }
     }
 
@@ -183,6 +177,7 @@ public class ItemDefinitionItemProvider extends RootElementItemProvider implemen
         switch (notification.getFeatureID(ItemDefinition.class)) {
         case Bpmn2Package.ITEM_DEFINITION__IS_COLLECTION:
         case Bpmn2Package.ITEM_DEFINITION__ITEM_KIND:
+        case Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF:
             fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
                     false, true));
             return;

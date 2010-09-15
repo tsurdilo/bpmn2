@@ -37,6 +37,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
+import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -1139,16 +1140,22 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
 
         isInited = true;
 
+        // Initialize simple dependencies
+        XMLTypePackage.eINSTANCE.eClass();
+
         // Obtain or create and register interdependencies
         BpmnDiPackageImpl theBpmnDiPackage = (BpmnDiPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(BpmnDiPackage.eNS_URI) instanceof BpmnDiPackageImpl ? EPackage.Registry.INSTANCE
-                .getEPackage(BpmnDiPackage.eNS_URI) : BpmnDiPackage.eINSTANCE);
+                .getEPackage(BpmnDiPackage.eNS_URI)
+                : BpmnDiPackage.eINSTANCE);
         DiPackageImpl theDiPackage = (DiPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(DiPackage.eNS_URI) instanceof DiPackageImpl ? EPackage.Registry.INSTANCE
-                .getEPackage(DiPackage.eNS_URI) : DiPackage.eINSTANCE);
+                .getEPackage(DiPackage.eNS_URI)
+                : DiPackage.eINSTANCE);
         DcPackageImpl theDcPackage = (DcPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(DcPackage.eNS_URI) instanceof DcPackageImpl ? EPackage.Registry.INSTANCE
-                .getEPackage(DcPackage.eNS_URI) : DcPackage.eINSTANCE);
+                .getEPackage(DcPackage.eNS_URI)
+                : DcPackage.eINSTANCE);
 
         // Load packages
         theBpmn2Package.loadPackage();
@@ -1181,8 +1188,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getDocumentRoot() {
         if (documentRootEClass == null) {
-            documentRootEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(0);
+            documentRootEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(0);
         }
         return documentRootEClass;
     }
@@ -2548,8 +2555,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getAdHocSubProcess() {
         if (adHocSubProcessEClass == null) {
-            adHocSubProcessEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(3);
+            adHocSubProcessEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(3);
         }
         return adHocSubProcessEClass;
     }
@@ -2632,8 +2639,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getAssociation() {
         if (associationEClass == null) {
-            associationEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(6);
+            associationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(6);
         }
         return associationEClass;
     }
@@ -2685,8 +2692,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getBaseElement() {
         if (baseElementEClass == null) {
-            baseElementEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(9);
+            baseElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(9);
         }
         return baseElementEClass;
     }
@@ -2734,8 +2741,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getBoundaryEvent() {
         if (boundaryEventEClass == null) {
-            boundaryEventEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(10);
+            boundaryEventEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(10);
         }
         return boundaryEventEClass;
     }
@@ -2765,8 +2772,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getBusinessRuleTask() {
         if (businessRuleTaskEClass == null) {
-            businessRuleTaskEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(11);
+            businessRuleTaskEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(11);
         }
         return businessRuleTaskEClass;
     }
@@ -2787,8 +2794,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getCallActivity() {
         if (callActivityEClass == null) {
-            callActivityEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(12);
+            callActivityEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(12);
         }
         return callActivityEClass;
     }
@@ -2809,8 +2816,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getCallChoreography() {
         if (callChoreographyEClass == null) {
-            callChoreographyEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(13);
+            callChoreographyEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(13);
         }
         return callChoreographyEClass;
     }
@@ -2840,8 +2847,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getCallConversation() {
         if (callConversationEClass == null) {
-            callConversationEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(14);
+            callConversationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(14);
         }
         return callConversationEClass;
     }
@@ -2871,8 +2878,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getCallableElement() {
         if (callableElementEClass == null) {
-            callableElementEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(15);
+            callableElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(15);
         }
         return callableElementEClass;
     }
@@ -2920,8 +2927,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getCancelEventDefinition() {
         if (cancelEventDefinitionEClass == null) {
-            cancelEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(16);
+            cancelEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(16);
         }
         return cancelEventDefinitionEClass;
     }
@@ -3031,8 +3038,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getCategoryValue() {
         if (categoryValueEClass == null) {
-            categoryValueEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(19);
+            categoryValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(19);
         }
         return categoryValueEClass;
     }
@@ -3062,8 +3069,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getChoreography() {
         if (choreographyEClass == null) {
-            choreographyEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(20);
+            choreographyEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(20);
         }
         return choreographyEClass;
     }
@@ -3075,8 +3082,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getChoreographyActivity() {
         if (choreographyActivityEClass == null) {
-            choreographyActivityEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(21);
+            choreographyActivityEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(21);
         }
         return choreographyActivityEClass;
     }
@@ -3124,8 +3131,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getChoreographyTask() {
         if (choreographyTaskEClass == null) {
-            choreographyTaskEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(23);
+            choreographyTaskEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(23);
         }
         return choreographyTaskEClass;
     }
@@ -3146,8 +3153,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getCollaboration() {
         if (collaborationEClass == null) {
-            collaborationEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(24);
+            collaborationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(24);
         }
         return collaborationEClass;
     }
@@ -3267,8 +3274,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getCompensateEventDefinition() {
         if (compensateEventDefinitionEClass == null) {
-            compensateEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(25);
+            compensateEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(25);
         }
         return compensateEventDefinitionEClass;
     }
@@ -3298,8 +3305,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getComplexBehaviorDefinition() {
         if (complexBehaviorDefinitionEClass == null) {
-            complexBehaviorDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(26);
+            complexBehaviorDefinitionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(26);
         }
         return complexBehaviorDefinitionEClass;
     }
@@ -3329,8 +3336,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getComplexGateway() {
         if (complexGatewayEClass == null) {
-            complexGatewayEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(27);
+            complexGatewayEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(27);
         }
         return complexGatewayEClass;
     }
@@ -3360,8 +3367,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getConditionalEventDefinition() {
         if (conditionalEventDefinitionEClass == null) {
-            conditionalEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(28);
+            conditionalEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(28);
         }
         return conditionalEventDefinitionEClass;
     }
@@ -3382,8 +3389,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getConversation() {
         if (conversationEClass == null) {
-            conversationEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(29);
+            conversationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(29);
         }
         return conversationEClass;
     }
@@ -3395,8 +3402,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getConversationAssociation() {
         if (conversationAssociationEClass == null) {
-            conversationAssociationEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(30);
+            conversationAssociationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(30);
         }
         return conversationAssociationEClass;
     }
@@ -3426,8 +3433,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getConversationLink() {
         if (conversationLinkEClass == null) {
-            conversationLinkEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(31);
+            conversationLinkEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(31);
         }
         return conversationLinkEClass;
     }
@@ -3466,8 +3473,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getConversationNode() {
         if (conversationNodeEClass == null) {
-            conversationNodeEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(32);
+            conversationNodeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(32);
         }
         return conversationNodeEClass;
     }
@@ -3515,8 +3522,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getCorrelationKey() {
         if (correlationKeyEClass == null) {
-            correlationKeyEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(33);
+            correlationKeyEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(33);
         }
         return correlationKeyEClass;
     }
@@ -3546,8 +3553,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getCorrelationProperty() {
         if (correlationPropertyEClass == null) {
-            correlationPropertyEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(34);
+            correlationPropertyEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(34);
         }
         return correlationPropertyEClass;
     }
@@ -3586,8 +3593,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getCorrelationPropertyBinding() {
         if (correlationPropertyBindingEClass == null) {
-            correlationPropertyBindingEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(35);
+            correlationPropertyBindingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(35);
         }
         return correlationPropertyBindingEClass;
     }
@@ -3650,8 +3657,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getCorrelationSubscription() {
         if (correlationSubscriptionEClass == null) {
-            correlationSubscriptionEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(37);
+            correlationSubscriptionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(37);
         }
         return correlationSubscriptionEClass;
     }
@@ -3681,8 +3688,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getDataAssociation() {
         if (dataAssociationEClass == null) {
-            dataAssociationEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(38);
+            dataAssociationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(38);
         }
         return dataAssociationEClass;
     }
@@ -3788,8 +3795,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getDataInputAssociation() {
         if (dataInputAssociationEClass == null) {
-            dataInputAssociationEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(40);
+            dataInputAssociationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(40);
         }
         return dataInputAssociationEClass;
     }
@@ -3823,8 +3830,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getDataObjectReference() {
         if (dataObjectReferenceEClass == null) {
-            dataObjectReferenceEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(42);
+            dataObjectReferenceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(42);
         }
         return dataObjectReferenceEClass;
     }
@@ -3903,8 +3910,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getDataOutputAssociation() {
         if (dataOutputAssociationEClass == null) {
-            dataOutputAssociationEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(44);
+            dataOutputAssociationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(44);
         }
         return dataOutputAssociationEClass;
     }
@@ -3978,8 +3985,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getDataStoreReference() {
         if (dataStoreReferenceEClass == null) {
-            dataStoreReferenceEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(47);
+            dataStoreReferenceEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(47);
         }
         return dataStoreReferenceEClass;
     }
@@ -4000,8 +4007,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getDefinitions() {
         if (definitionsEClass == null) {
-            definitionsEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(48);
+            definitionsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(48);
         }
         return definitionsEClass;
     }
@@ -4112,8 +4119,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getDocumentation() {
         if (documentationEClass == null) {
-            documentationEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(49);
+            documentationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(49);
         }
         return documentationEClass;
     }
@@ -4218,8 +4225,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getErrorEventDefinition() {
         if (errorEventDefinitionEClass == null) {
-            errorEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(53);
+            errorEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(53);
         }
         return errorEventDefinitionEClass;
     }
@@ -4280,8 +4287,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getEscalationEventDefinition() {
         if (escalationEventDefinitionEClass == null) {
-            escalationEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(55);
+            escalationEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(55);
         }
         return escalationEventDefinitionEClass;
     }
@@ -4324,8 +4331,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getEventBasedGateway() {
         if (eventBasedGatewayEClass == null) {
-            eventBasedGatewayEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(57);
+            eventBasedGatewayEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(57);
         }
         return eventBasedGatewayEClass;
     }
@@ -4355,8 +4362,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getEventDefinition() {
         if (eventDefinitionEClass == null) {
-            eventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(59);
+            eventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(59);
         }
         return eventDefinitionEClass;
     }
@@ -4368,8 +4375,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getExclusiveGateway() {
         if (exclusiveGatewayEClass == null) {
-            exclusiveGatewayEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(60);
+            exclusiveGatewayEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(60);
         }
         return exclusiveGatewayEClass;
     }
@@ -4434,8 +4441,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getExtensionAttributeDefinition() {
         if (extensionAttributeDefinitionEClass == null) {
-            extensionAttributeDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(63);
+            extensionAttributeDefinitionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(63);
         }
         return extensionAttributeDefinitionEClass;
     }
@@ -4483,8 +4490,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getExtensionAttributeValue() {
         if (extensionAttributeValueEClass == null) {
-            extensionAttributeValueEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(64);
+            extensionAttributeValueEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(64);
         }
         return extensionAttributeValueEClass;
     }
@@ -4523,8 +4530,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getExtensionDefinition() {
         if (extensionDefinitionEClass == null) {
-            extensionDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(65);
+            extensionDefinitionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(65);
         }
         return extensionDefinitionEClass;
     }
@@ -4554,8 +4561,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getFlowElement() {
         if (flowElementEClass == null) {
-            flowElementEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(66);
+            flowElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(66);
         }
         return flowElementEClass;
     }
@@ -4603,8 +4610,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getFlowElementsContainer() {
         if (flowElementsContainerEClass == null) {
-            flowElementsContainerEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(67);
+            flowElementsContainerEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(67);
         }
         return flowElementsContainerEClass;
     }
@@ -4674,8 +4681,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getFormalExpression() {
         if (formalExpressionEClass == null) {
-            formalExpressionEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(69);
+            formalExpressionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(69);
         }
         return formalExpressionEClass;
     }
@@ -4736,8 +4743,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getGlobalBusinessRuleTask() {
         if (globalBusinessRuleTaskEClass == null) {
-            globalBusinessRuleTaskEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(72);
+            globalBusinessRuleTaskEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(72);
         }
         return globalBusinessRuleTaskEClass;
     }
@@ -4758,8 +4765,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getGlobalChoreographyTask() {
         if (globalChoreographyTaskEClass == null) {
-            globalChoreographyTaskEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(73);
+            globalChoreographyTaskEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(73);
         }
         return globalChoreographyTaskEClass;
     }
@@ -4780,8 +4787,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getGlobalConversation() {
         if (globalConversationEClass == null) {
-            globalConversationEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(74);
+            globalConversationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(74);
         }
         return globalConversationEClass;
     }
@@ -4793,8 +4800,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getGlobalManualTask() {
         if (globalManualTaskEClass == null) {
-            globalManualTaskEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(75);
+            globalManualTaskEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(75);
         }
         return globalManualTaskEClass;
     }
@@ -4806,8 +4813,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getGlobalScriptTask() {
         if (globalScriptTaskEClass == null) {
-            globalScriptTaskEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(76);
+            globalScriptTaskEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(76);
         }
         return globalScriptTaskEClass;
     }
@@ -4859,8 +4866,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getGlobalUserTask() {
         if (globalUserTaskEClass == null) {
-            globalUserTaskEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(78);
+            globalUserTaskEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(78);
         }
         return globalUserTaskEClass;
     }
@@ -4912,8 +4919,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getHumanPerformer() {
         if (humanPerformerEClass == null) {
-            humanPerformerEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(80);
+            humanPerformerEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(80);
         }
         return humanPerformerEClass;
     }
@@ -4925,8 +4932,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getImplicitThrowEvent() {
         if (implicitThrowEventEClass == null) {
-            implicitThrowEventEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(81);
+            implicitThrowEventEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(81);
         }
         return implicitThrowEventEClass;
     }
@@ -4978,8 +4985,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getInclusiveGateway() {
         if (inclusiveGatewayEClass == null) {
-            inclusiveGatewayEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(83);
+            inclusiveGatewayEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(83);
         }
         return inclusiveGatewayEClass;
     }
@@ -5000,8 +5007,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getInputOutputBinding() {
         if (inputOutputBindingEClass == null) {
-            inputOutputBindingEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(84);
+            inputOutputBindingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(84);
         }
         return inputOutputBindingEClass;
     }
@@ -5040,8 +5047,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getInputOutputSpecification() {
         if (inputOutputSpecificationEClass == null) {
-            inputOutputSpecificationEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(85);
+            inputOutputSpecificationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(85);
         }
         return inputOutputSpecificationEClass;
     }
@@ -5147,8 +5154,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getInteractionNode() {
         if (interactionNodeEClass == null) {
-            interactionNodeEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(87);
+            interactionNodeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(87);
         }
         return interactionNodeEClass;
     }
@@ -5218,8 +5225,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getIntermediateCatchEvent() {
         if (intermediateCatchEventEClass == null) {
-            intermediateCatchEventEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(89);
+            intermediateCatchEventEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(89);
         }
         return intermediateCatchEventEClass;
     }
@@ -5231,8 +5238,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getIntermediateThrowEvent() {
         if (intermediateThrowEventEClass == null) {
-            intermediateThrowEventEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(90);
+            intermediateThrowEventEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(90);
         }
         return intermediateThrowEventEClass;
     }
@@ -5244,8 +5251,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getItemAwareElement() {
         if (itemAwareElementEClass == null) {
-            itemAwareElementEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(91);
+            itemAwareElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(91);
         }
         return itemAwareElementEClass;
     }
@@ -5275,8 +5282,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getItemDefinition() {
         if (itemDefinitionEClass == null) {
-            itemDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(92);
+            itemDefinitionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(92);
         }
         return itemDefinitionEClass;
     }
@@ -5313,8 +5320,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getItemDefinition_StructureRef() {
-        return (EReference) getItemDefinition().getEStructuralFeatures().get(3);
+    public EAttribute getItemDefinition_StructureRef() {
+        return (EAttribute) getItemDefinition().getEStructuralFeatures().get(3);
     }
 
     /**
@@ -5413,8 +5420,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getLinkEventDefinition() {
         if (linkEventDefinitionEClass == null) {
-            linkEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(96);
+            linkEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(96);
         }
         return linkEventDefinitionEClass;
     }
@@ -5453,8 +5460,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getLoopCharacteristics() {
         if (loopCharacteristicsEClass == null) {
-            loopCharacteristicsEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(97);
+            loopCharacteristicsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(97);
         }
         return loopCharacteristicsEClass;
     }
@@ -5510,8 +5517,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getMessageEventDefinition() {
         if (messageEventDefinitionEClass == null) {
-            messageEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(100);
+            messageEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(100);
         }
         return messageEventDefinitionEClass;
     }
@@ -5541,8 +5548,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getMessageFlow() {
         if (messageFlowEClass == null) {
-            messageFlowEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(101);
+            messageFlowEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(101);
         }
         return messageFlowEClass;
     }
@@ -5590,8 +5597,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getMessageFlowAssociation() {
         if (messageFlowAssociationEClass == null) {
-            messageFlowAssociationEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(102);
+            messageFlowAssociationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(102);
         }
         return messageFlowAssociationEClass;
     }
@@ -5862,8 +5869,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getParallelGateway() {
         if (parallelGatewayEClass == null) {
-            parallelGatewayEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(108);
+            parallelGatewayEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(108);
         }
         return parallelGatewayEClass;
     }
@@ -5875,8 +5882,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getParticipant() {
         if (participantEClass == null) {
-            participantEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(109);
+            participantEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(109);
         }
         return participantEClass;
     }
@@ -5933,8 +5940,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getParticipantAssociation() {
         if (participantAssociationEClass == null) {
-            participantAssociationEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(110);
+            participantAssociationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(110);
         }
         return participantAssociationEClass;
     }
@@ -5964,8 +5971,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getParticipantMultiplicity() {
         if (participantMultiplicityEClass == null) {
-            participantMultiplicityEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(111);
+            participantMultiplicityEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(111);
         }
         return participantMultiplicityEClass;
     }
@@ -5995,8 +6002,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getPartnerEntity() {
         if (partnerEntityEClass == null) {
-            partnerEntityEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(112);
+            partnerEntityEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(112);
         }
         return partnerEntityEClass;
     }
@@ -6026,8 +6033,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getPartnerRole() {
         if (partnerRoleEClass == null) {
-            partnerRoleEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(113);
+            partnerRoleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(113);
         }
         return partnerRoleEClass;
     }
@@ -6070,8 +6077,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getPotentialOwner() {
         if (potentialOwnerEClass == null) {
-            potentialOwnerEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(115);
+            potentialOwnerEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(115);
         }
         return potentialOwnerEClass;
     }
@@ -6217,8 +6224,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getReceiveTask() {
         if (receiveTaskEClass == null) {
-            receiveTaskEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(119);
+            receiveTaskEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(119);
         }
         return receiveTaskEClass;
     }
@@ -6266,8 +6273,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getRelationship() {
         if (relationshipEClass == null) {
-            relationshipEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(120);
+            relationshipEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(120);
         }
         return relationshipEClass;
     }
@@ -6359,8 +6366,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getResourceAssignmentExpression() {
         if (resourceAssignmentExpressionEClass == null) {
-            resourceAssignmentExpressionEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(124);
+            resourceAssignmentExpressionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(124);
         }
         return resourceAssignmentExpressionEClass;
     }
@@ -6381,8 +6388,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getResourceParameter() {
         if (resourceParameterEClass == null) {
-            resourceParameterEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(125);
+            resourceParameterEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(125);
         }
         return resourceParameterEClass;
     }
@@ -6421,8 +6428,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getResourceParameterBinding() {
         if (resourceParameterBindingEClass == null) {
-            resourceParameterBindingEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(126);
+            resourceParameterBindingEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(126);
         }
         return resourceParameterBindingEClass;
     }
@@ -6452,8 +6459,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getResourceRole() {
         if (resourceRoleEClass == null) {
-            resourceRoleEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(127);
+            resourceRoleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(127);
         }
         return resourceRoleEClass;
     }
@@ -6501,8 +6508,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getRootElement() {
         if (rootElementEClass == null) {
-            rootElementEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(128);
+            rootElementEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(128);
         }
         return rootElementEClass;
     }
@@ -6585,8 +6592,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getSequenceFlow() {
         if (sequenceFlowEClass == null) {
-            sequenceFlowEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(131);
+            sequenceFlowEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(131);
         }
         return sequenceFlowEClass;
     }
@@ -6634,8 +6641,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getServiceTask() {
         if (serviceTaskEClass == null) {
-            serviceTaskEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(132);
+            serviceTaskEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(132);
         }
         return serviceTaskEClass;
     }
@@ -6696,8 +6703,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getSignalEventDefinition() {
         if (signalEventDefinitionEClass == null) {
-            signalEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(134);
+            signalEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(134);
         }
         return signalEventDefinitionEClass;
     }
@@ -6718,8 +6725,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getStandardLoopCharacteristics() {
         if (standardLoopCharacteristicsEClass == null) {
-            standardLoopCharacteristicsEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(135);
+            standardLoopCharacteristicsEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(135);
         }
         return standardLoopCharacteristicsEClass;
     }
@@ -6780,8 +6787,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getSubChoreography() {
         if (subChoreographyEClass == null) {
-            subChoreographyEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(137);
+            subChoreographyEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(137);
         }
         return subChoreographyEClass;
     }
@@ -6802,8 +6809,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getSubConversation() {
         if (subConversationEClass == null) {
-            subConversationEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(138);
+            subConversationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(138);
         }
         return subConversationEClass;
     }
@@ -6868,8 +6875,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getTerminateEventDefinition() {
         if (terminateEventDefinitionEClass == null) {
-            terminateEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(141);
+            terminateEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(141);
         }
         return terminateEventDefinitionEClass;
     }
@@ -6881,8 +6888,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getTextAnnotation() {
         if (textAnnotationEClass == null) {
-            textAnnotationEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(142);
+            textAnnotationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(142);
         }
         return textAnnotationEClass;
     }
@@ -6970,8 +6977,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getTimerEventDefinition() {
         if (timerEventDefinitionEClass == null) {
-            timerEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(144);
+            timerEventDefinitionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(144);
         }
         return timerEventDefinitionEClass;
     }
@@ -7010,8 +7017,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EClass getTransaction() {
         if (transactionEClass == null) {
-            transactionEClass = (EClass) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(145);
+            transactionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(145);
         }
         return transactionEClass;
     }
@@ -7072,8 +7079,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EEnum getAdHocOrdering() {
         if (adHocOrderingEEnum == null) {
-            adHocOrderingEEnum = (EEnum) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(2);
+            adHocOrderingEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(2);
         }
         return adHocOrderingEEnum;
     }
@@ -7085,8 +7092,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EEnum getAssociationDirection() {
         if (associationDirectionEEnum == null) {
-            associationDirectionEEnum = (EEnum) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(7);
+            associationDirectionEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(7);
         }
         return associationDirectionEEnum;
     }
@@ -7098,8 +7105,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EEnum getChoreographyLoopType() {
         if (choreographyLoopTypeEEnum == null) {
-            choreographyLoopTypeEEnum = (EEnum) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(22);
+            choreographyLoopTypeEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(22);
         }
         return choreographyLoopTypeEEnum;
     }
@@ -7111,8 +7118,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EEnum getEventBasedGatewayType() {
         if (eventBasedGatewayTypeEEnum == null) {
-            eventBasedGatewayTypeEEnum = (EEnum) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(58);
+            eventBasedGatewayTypeEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(58);
         }
         return eventBasedGatewayTypeEEnum;
     }
@@ -7124,8 +7131,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EEnum getGatewayDirection() {
         if (gatewayDirectionEEnum == null) {
-            gatewayDirectionEEnum = (EEnum) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(71);
+            gatewayDirectionEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(71);
         }
         return gatewayDirectionEEnum;
     }
@@ -7150,8 +7157,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EEnum getMultiInstanceBehavior() {
         if (multiInstanceBehaviorEEnum == null) {
-            multiInstanceBehaviorEEnum = (EEnum) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(104);
+            multiInstanceBehaviorEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(104);
         }
         return multiInstanceBehaviorEEnum;
     }
@@ -7176,8 +7183,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EEnum getRelationshipDirection() {
         if (relationshipDirectionEEnum == null) {
-            relationshipDirectionEEnum = (EEnum) EPackage.Registry.INSTANCE
-                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(121);
+            relationshipDirectionEEnum = (EEnum) EPackage.Registry.INSTANCE.getEPackage(
+                    Bpmn2Package.eNS_URI).getEClassifiers().get(121);
         }
         return relationshipDirectionEEnum;
     }
