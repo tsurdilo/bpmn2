@@ -126,9 +126,9 @@ public class ItemDefinitionItemProvider extends RootElementItemProvider implemen
     protected void addStructureRefPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_ItemDefinition_StructureRef_feature"),
+                getResourceLocator(), getString("_UI_ItemDefinition_structureRef_feature"),
                 getString("_UI_PropertyDescriptor_description",
-                        "_UI_ItemDefinition_StructureRef_feature", "_UI_ItemDefinition_type"),
+                        "_UI_ItemDefinition_structureRef_feature", "_UI_ItemDefinition_type"),
                 Bpmn2Package.Literals.ITEM_DEFINITION__STRUCTURE_REF, true, false, false,
                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }

@@ -3202,7 +3202,7 @@
         <details key="name" value="itemKind"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="StructureRef" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="structureRef" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//QName"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ItemKind">

@@ -343,7 +343,7 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
         result.append(isCollection);
         result.append(", itemKind: ");
         result.append(itemKind);
-        result.append(", StructureRef: ");
+        result.append(", structureRef: ");
         result.append(structureRef);
         result.append(')');
         return result.toString();
