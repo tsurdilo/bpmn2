@@ -14,8 +14,6 @@
  */
 package org.eclipse.bpmn2;
 
-import javax.xml.namespace.QName;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Item Definition</b></em>'.
@@ -121,29 +119,30 @@ public interface ItemDefinition extends RootElement {
     void setItemKind(ItemKind value);
 
     /**
-     * Returns the value of the '<em><b>Structure Ref</b></em>' attribute.
+     * Returns the value of the '<em><b>Structure Ref</b></em>' reference.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Structure Ref</em>' reference isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Structure Ref</em>' attribute.
-     * @see #setStructureRef(QName)
+     * @return the value of the '<em>Structure Ref</em>' reference.
+     * @see #setStructureRef(Object)
      * @see org.eclipse.bpmn2.Bpmn2Package#getItemDefinition_StructureRef()
-     * @model dataType="org.eclipse.emf.ecore.xml.type.QName" required="true"
+     * @model required="true" ordered="false"
+     *        extendedMetaData="kind='attribute' name='structureRef'"
      * @generated
      */
-    QName getStructureRef();
+    Object getStructureRef();
 
     /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.ItemDefinition#getStructureRef <em>Structure Ref</em>}' attribute.
+     * Sets the value of the '{@link org.eclipse.bpmn2.ItemDefinition#getStructureRef <em>Structure Ref</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Structure Ref</em>' attribute.
+     * @param value the new value of the '<em>Structure Ref</em>' reference.
      * @see #getStructureRef()
      * @generated
      */
-    void setStructureRef(QName value);
+    void setStructureRef(Object value);
 
 } // ItemDefinition
