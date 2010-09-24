@@ -16,12 +16,33 @@
  */
 package org.eclipse.bpmn2.util;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import org.eclipse.bpmn2.Bpmn2Package;
+import org.eclipse.bpmn2.di.BpmnDiPackage;
+import org.eclipse.dd.dc.DcPackage;
+import org.eclipse.dd.di.DiPackage;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.BasicExtendedMetaData;
 
 public class XmlExtendedMetadata extends BasicExtendedMetaData {
+
+    /** Mapping between XMI and XML namespaces of packages of the BPMN specification */
+    private static Map<String, String> xmiToXmlNamespaceMap;
+
+    /**
+     * Initializes the {@linkplain #xmiToXmlNamespaceMap map between XMI and XML namespaces} of BPMN packages.
+     */
+    private static void initXmiToXmlNamespaceMap() {
+        xmiToXmlNamespaceMap = new HashMap<String, String>(6);
+        String[] namespaces = { Bpmn2Package.eNS_URI, BpmnDiPackage.eNS_URI, DiPackage.eNS_URI,
+                DcPackage.eNS_URI };
+        for (String curNs : namespaces)
+            xmiToXmlNamespaceMap.put(curNs, NamespaceHelper.xmiToXsdNamespaceUri(curNs));
+    }
 
     /**
      * 
@@ -31,21 +52,13 @@ public class XmlExtendedMetadata extends BasicExtendedMetaData {
 
     @Override
     public String getNamespace(EPackage ePackage) {
-        /*
-         * Unfortunately XMLSaveImpl.addNamespaceDeclarations does not consider the XML namespaces that are declared on features to
-         * calculate correct prefixes. Instead it calls this method for all packages and assumes that namespace and prefix of the package is
-         * correct. In our case the namespace of the package is different to the namespace of all features. We correct this my returning the
-         * namespace of a "typical" feature.
-         */
-        EClass docRoot = getDocumentRoot(ePackage);
-        if (docRoot != null) {
-            for (EStructuralFeature feature : docRoot.getEStructuralFeatures()) {
-                String namespace = getNamespace(feature);
-                if (namespace != null && !namespace.equals(ePackage.getNsURI()))
-                    return namespace;
-            }
-        }
+        if (xmiToXmlNamespaceMap == null)
+            initXmiToXmlNamespaceMap();
 
-        return super.getNamespace(ePackage);
+        String ns = super.getNamespace(ePackage);
+        String xmlNs;
+        if ((xmlNs = xmiToXmlNamespaceMap.get(ns)) != null)
+            return xmlNs;
+        return ns;
     }
 }
