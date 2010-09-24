@@ -27,6 +27,8 @@ import org.eclipse.bpmn2.Collaboration;
 import org.eclipse.bpmn2.Definitions;
 import org.eclipse.bpmn2.DocumentRoot;
 import org.eclipse.bpmn2.Documentation;
+import org.eclipse.bpmn2.Import;
+import org.eclipse.bpmn2.ItemDefinition;
 import org.eclipse.bpmn2.Process;
 import org.eclipse.bpmn2.RootElement;
 import org.eclipse.bpmn2.ScriptTask;
@@ -37,6 +39,9 @@ import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.DynamicEObjectImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.FeatureNotFoundException;
@@ -322,5 +327,75 @@ public class XMLSerializationTest {
         Node scriptNode = xml.getElementsByTagName("bpmn2:scriptTask").item(0);
         assertNull("ScriptTask has an attribute 'script' (invalid acc. to XML schema)", scriptNode
                 .getAttributes().getNamedItem("script"));
+    }
+
+    @Test
+    public void testItemDefinitionXSD() throws Exception {
+        /*
+         * TODO: This test FAILS currently (XSD&XMI).
+         * XSD-EMF does not support lookup by ID - wrong element (whole schema) resolved.
+         * We need to handle this to not lose the original reference.
+         */
+        testItemDefinition("res/DataDefinitions.xsd", "http://www.example.org/Messages",
+                "reqForQuot", "xsd");
+    }
+
+    @Test
+    public void testItemDefinitionBPMN() throws Exception {
+        // should resolve to Definitions element
+        testItemDefinition("res/basic.bpmn2", "urn:basic", "_DqjcgKCwEd-AVfJ3FSSMwg", "bpmn");
+    }
+
+    @Test
+    public void testItemDefinitionElement() throws Exception {
+        // does not exist, should be handled gracefully
+        testItemDefinition("test.abc", "urn:test", "id", "element");
+    }
+
+    /**
+     * Tests the structureRef feature of ItemDefinition.
+     * 
+     * @param location Location of the file in which the structure element is located.
+     * @param namespace Namespace for the import element pointing to the file.
+     * @param id ID of the structure.
+     * @param name Name of the test, used in the filename of the resource.
+     * @throws Exception
+     */
+    public void testItemDefinition(String location, String namespace, String id, String name)
+            throws Exception {
+        Import xsdImport = Bpmn2Factory.eINSTANCE.createImport();
+        xsdImport.setNamespace(namespace);
+        xsdImport.setLocation(location);
+        model.getImports().add(xsdImport);
+
+        ItemDefinition xsdItem = Bpmn2Factory.eINSTANCE.createItemDefinition();
+        final String xsdItemId = "xsdItemID";
+        xsdItem.setId(xsdItemId);
+        InternalEObject value = new DynamicEObjectImpl();
+        final URI uri = URI.createURI(location + "#" + id);
+        value.eSetProxyURI(uri);
+        xsdItem.setStructureRef(value);
+        model.getRootElements().add(xsdItem);
+
+        Resource res = createWithContentAndLoad("itemDef_" + name, model);
+
+        ItemDefinition xsdItemNew = (ItemDefinition) res.getEObject(xsdItemId);
+        checkStructureRef(uri, xsdItemNew);
+    }
+
+    /**
+     * Checks if the structureRef feature of itemDef points (after resolution) to the given URI.
+     * @param uriExpected The expected URI.
+     * @param itemDef The Item Definition.
+     */
+    protected void checkStructureRef(final URI uriExpected, ItemDefinition itemDef) {
+        final InternalEObject xsdStructure = (InternalEObject) itemDef.getStructureRef();
+        assertNotNull(xsdStructure);
+        if (xsdStructure.eIsProxy())
+            assertEquals(uriExpected, xsdStructure.eProxyURI());
+        else {
+            final Resource res = xsdStructure.eResource();
+            assertEquals(uriExpected, res.getURI().appendFragment(res.getURIFragment(xsdStructure)));
+        }
     }
 }
