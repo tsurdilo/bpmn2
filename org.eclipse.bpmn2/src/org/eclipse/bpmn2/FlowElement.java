@@ -94,7 +94,6 @@ public interface FlowElement extends BaseElement {
     /**
      * Returns the value of the '<em><b>Category Value Ref</b></em>' reference list.
      * The list contents are of type {@link org.eclipse.bpmn2.CategoryValue}.
-     * It is bidirectional and its opposite is '{@link org.eclipse.bpmn2.CategoryValue#getCategorizedFlowElements <em>Categorized Flow Elements</em>}'.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Category Value Ref</em>' reference list isn't clear,
@@ -103,8 +102,7 @@ public interface FlowElement extends BaseElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Category Value Ref</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getFlowElement_CategoryValueRef()
-     * @see org.eclipse.bpmn2.CategoryValue#getCategorizedFlowElements
-     * @model opposite="categorizedFlowElements" resolveProxies="false" ordered="false"
+     * @model ordered="false"
      *        extendedMetaData="kind='element' name='categoryValueRef' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */

@@ -28,9 +28,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
-import org.eclipse.emf.ecore.util.EObjectWithInverseEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -225,9 +223,8 @@ public abstract class FlowElementImpl extends BaseElementImpl implements FlowEle
      */
     public List<CategoryValue> getCategoryValueRef() {
         if (categoryValueRef == null) {
-            categoryValueRef = new EObjectWithInverseEList.ManyInverse<CategoryValue>(
-                    CategoryValue.class, this, Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF,
-                    Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS);
+            categoryValueRef = new EObjectResolvingEList<CategoryValue>(CategoryValue.class, this,
+                    Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF);
         }
         return categoryValueRef;
     }
@@ -259,23 +256,6 @@ public abstract class FlowElementImpl extends BaseElementImpl implements FlowEle
      * <!-- end-user-doc -->
      * @generated
      */
-    @SuppressWarnings("unchecked")
-    @Override
-    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID,
-            NotificationChain msgs) {
-        switch (featureID) {
-        case Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF:
-            return ((InternalEList<InternalEObject>) (InternalEList<?>) getCategoryValueRef())
-                    .basicAdd(otherEnd, msgs);
-        }
-        return super.eInverseAdd(otherEnd, featureID, msgs);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
             NotificationChain msgs) {
@@ -284,8 +264,6 @@ public abstract class FlowElementImpl extends BaseElementImpl implements FlowEle
             return basicSetAuditing(null, msgs);
         case Bpmn2Package.FLOW_ELEMENT__MONITORING:
             return basicSetMonitoring(null, msgs);
-        case Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF:
-            return ((InternalEList<?>) getCategoryValueRef()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }

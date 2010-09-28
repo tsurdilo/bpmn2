@@ -62,7 +62,6 @@ public interface ConversationLink extends BaseElement {
 
     /**
      * Returns the value of the '<em><b>Source Ref</b></em>' reference.
-     * It is bidirectional and its opposite is '{@link org.eclipse.bpmn2.InteractionNode#getOutgoingConversationLinks <em>Outgoing Conversation Links</em>}'.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Source Ref</em>' reference isn't clear,
@@ -72,8 +71,7 @@ public interface ConversationLink extends BaseElement {
      * @return the value of the '<em>Source Ref</em>' reference.
      * @see #setSourceRef(InteractionNode)
      * @see org.eclipse.bpmn2.Bpmn2Package#getConversationLink_SourceRef()
-     * @see org.eclipse.bpmn2.InteractionNode#getOutgoingConversationLinks
-     * @model opposite="outgoingConversationLinks" resolveProxies="false" required="true" ordered="false"
+     * @model required="true" ordered="false"
      *        extendedMetaData="kind='attribute' name='sourceRef'"
      * @generated
      */
@@ -91,7 +89,6 @@ public interface ConversationLink extends BaseElement {
 
     /**
      * Returns the value of the '<em><b>Target Ref</b></em>' reference.
-     * It is bidirectional and its opposite is '{@link org.eclipse.bpmn2.InteractionNode#getIncomingConversationLinks <em>Incoming Conversation Links</em>}'.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Target Ref</em>' reference isn't clear,
@@ -101,8 +98,7 @@ public interface ConversationLink extends BaseElement {
      * @return the value of the '<em>Target Ref</em>' reference.
      * @see #setTargetRef(InteractionNode)
      * @see org.eclipse.bpmn2.Bpmn2Package#getConversationLink_TargetRef()
-     * @see org.eclipse.bpmn2.InteractionNode#getIncomingConversationLinks
-     * @model opposite="incomingConversationLinks" resolveProxies="false" required="true" ordered="false"
+     * @model required="true" ordered="false"
      *        extendedMetaData="kind='attribute' name='targetRef'"
      * @generated
      */

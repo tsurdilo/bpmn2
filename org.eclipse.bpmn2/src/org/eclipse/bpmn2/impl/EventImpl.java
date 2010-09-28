@@ -48,26 +48,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public abstract class EventImpl extends FlowNodeImpl implements Event {
     /**
-     * The cached value of the '{@link #getIncomingConversationLinks() <em>Incoming Conversation Links</em>}' reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getIncomingConversationLinks()
-     * @generated
-     * @ordered
-     */
-    protected EList<ConversationLink> incomingConversationLinks;
-
-    /**
-     * The cached value of the '{@link #getOutgoingConversationLinks() <em>Outgoing Conversation Links</em>}' reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getOutgoingConversationLinks()
-     * @generated
-     * @ordered
-     */
-    protected EList<ConversationLink> outgoingConversationLinks;
-
-    /**
      * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -98,30 +78,30 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
 
     /**
      * <!-- begin-user-doc -->
+     * TODO: implement as virtual opposite to Bpmn2Package.CONVERSATION_LINK__TARGET_REF
      * <!-- end-user-doc -->
      * @generated
      */
     public List<ConversationLink> getIncomingConversationLinks() {
-        if (incomingConversationLinks == null) {
-            incomingConversationLinks = new EObjectWithInverseEList<ConversationLink>(
-                    ConversationLink.class, this, Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS,
-                    Bpmn2Package.CONVERSATION_LINK__TARGET_REF);
-        }
-        return incomingConversationLinks;
+        // TODO: implement this method to return the 'Incoming Conversation Links' reference list
+        // Ensure that you remove @generated or mark it @generated NOT
+        // The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
+        // so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
+        throw new UnsupportedOperationException();
     }
 
     /**
      * <!-- begin-user-doc -->
+     * TODO: implement as virtual opposite to Bpmn2Package.CONVERSATION_LINK__SOURCE_REF
      * <!-- end-user-doc -->
      * @generated
      */
     public List<ConversationLink> getOutgoingConversationLinks() {
-        if (outgoingConversationLinks == null) {
-            outgoingConversationLinks = new EObjectWithInverseResolvingEList<ConversationLink>(
-                    ConversationLink.class, this, Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS,
-                    Bpmn2Package.CONVERSATION_LINK__SOURCE_REF);
-        }
-        return outgoingConversationLinks;
+        // TODO: implement this method to return the 'Outgoing Conversation Links' reference list
+        // Ensure that you remove @generated or mark it @generated NOT
+        // The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
+        // so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
+        throw new UnsupportedOperationException();
     }
 
     /**
@@ -142,34 +122,10 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
      * <!-- end-user-doc -->
      * @generated
      */
-    @SuppressWarnings("unchecked")
-    @Override
-    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID,
-            NotificationChain msgs) {
-        switch (featureID) {
-        case Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS:
-            return ((InternalEList<InternalEObject>) (InternalEList<?>) getIncomingConversationLinks())
-                    .basicAdd(otherEnd, msgs);
-        case Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS:
-            return ((InternalEList<InternalEObject>) (InternalEList<?>) getOutgoingConversationLinks())
-                    .basicAdd(otherEnd, msgs);
-        }
-        return super.eInverseAdd(otherEnd, featureID, msgs);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
             NotificationChain msgs) {
         switch (featureID) {
-        case Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS:
-            return ((InternalEList<?>) getIncomingConversationLinks()).basicRemove(otherEnd, msgs);
-        case Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS:
-            return ((InternalEList<?>) getOutgoingConversationLinks()).basicRemove(otherEnd, msgs);
         case Bpmn2Package.EVENT__PROPERTIES:
             return ((InternalEList<?>) getProperties()).basicRemove(otherEnd, msgs);
         }
@@ -203,16 +159,6 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS:
-            getIncomingConversationLinks().clear();
-            getIncomingConversationLinks()
-                    .addAll((Collection<? extends ConversationLink>) newValue);
-            return;
-        case Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS:
-            getOutgoingConversationLinks().clear();
-            getOutgoingConversationLinks()
-                    .addAll((Collection<? extends ConversationLink>) newValue);
-            return;
         case Bpmn2Package.EVENT__PROPERTIES:
             getProperties().clear();
             getProperties().addAll((Collection<? extends Property>) newValue);
@@ -229,12 +175,6 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS:
-            getIncomingConversationLinks().clear();
-            return;
-        case Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS:
-            getOutgoingConversationLinks().clear();
-            return;
         case Bpmn2Package.EVENT__PROPERTIES:
             getProperties().clear();
             return;
@@ -251,9 +191,9 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS:
-            return incomingConversationLinks != null && !incomingConversationLinks.isEmpty();
+            return !getIncomingConversationLinks().isEmpty();
         case Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS:
-            return outgoingConversationLinks != null && !outgoingConversationLinks.isEmpty();
+            return !getOutgoingConversationLinks().isEmpty();
         case Bpmn2Package.EVENT__PROPERTIES:
             return properties != null && !properties.isEmpty();
         }

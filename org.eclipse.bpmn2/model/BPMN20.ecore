@@ -1762,8 +1762,8 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="categorizedFlowElements"
-        ordered="false" upperBound="-1" eType="#//FlowElement" transient="true" derived="true"
-        resolveProxies="false" eOpposite="#//FlowElement/categoryValueRef"/>
+        ordered="false" upperBound="-1" eType="#//FlowElement" changeable="false"
+        volatile="true" transient="true" derived="true" resolveProxies="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Choreography" eSuperTypes="#//Collaboration #//FlowElementsContainer">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
@@ -2045,14 +2045,14 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourceRef" ordered="false"
-        lowerBound="1" eType="#//InteractionNode" resolveProxies="false" eOpposite="#//InteractionNode/outgoingConversationLinks">
+        lowerBound="1" eType="#//InteractionNode">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="attribute"/>
         <details key="name" value="sourceRef"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetRef" ordered="false"
-        lowerBound="1" eType="#//InteractionNode" resolveProxies="false" eOpposite="#//InteractionNode/incomingConversationLinks">
+        lowerBound="1" eType="#//InteractionNode">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="attribute"/>
         <details key="name" value="targetRef"/>
@@ -2742,7 +2742,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="categoryValueRef" ordered="false"
-        upperBound="-1" eType="#//CategoryValue" resolveProxies="false" eOpposite="#//CategoryValue/categorizedFlowElements">
+        upperBound="-1" eType="#//CategoryValue">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
         <details key="name" value="categoryValueRef"/>
@@ -3116,11 +3116,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InteractionNode" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="incomingConversationLinks"
-        ordered="false" upperBound="-1" eType="#//ConversationLink" transient="true"
-        derived="true" resolveProxies="false" eOpposite="#//ConversationLink/targetRef"/>
+        ordered="false" upperBound="-1" eType="#//ConversationLink" changeable="false"
+        volatile="true" transient="true" derived="true" resolveProxies="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outgoingConversationLinks"
-        ordered="false" upperBound="-1" eType="#//ConversationLink" transient="true"
-        derived="true" eOpposite="#//ConversationLink/sourceRef"/>
+        ordered="false" upperBound="-1" eType="#//ConversationLink" changeable="false"
+        volatile="true" transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Interface" eSuperTypes="#//RootElement">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
