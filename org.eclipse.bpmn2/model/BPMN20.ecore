@@ -1321,10 +1321,11 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Activity" abstract="true" eSuperTypes="#//FlowNode">
+  <eClassifiers xsi:type="ecore:EClass" name="Activity" eSuperTypes="#//FlowNode">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="tActivity"/>
       <details key="kind" value="elementOnly"/>
+      <details key="abstract" value="true"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ioSpecification" ordered="false"
         eType="#//InputOutputSpecification" containment="true">
@@ -1510,10 +1511,11 @@
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BaseElement" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="BaseElement">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="tBaseElement"/>
       <details key="kind" value="elementOnly"/>
+      <details key="abstract" value="true"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="extensionValues" ordered="false"
         upperBound="-1" eType="#//ExtensionAttributeValue" transient="true" derived="true"
@@ -1631,10 +1633,11 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CallableElement" abstract="true" eSuperTypes="#//RootElement">
+  <eClassifiers xsi:type="ecore:EClass" name="CallableElement" eSuperTypes="#//RootElement">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="tCallableElement"/>
       <details key="kind" value="elementOnly"/>
+      <details key="abstract" value="true"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="supportedInterfaceRefs"
         ordered="false" upperBound="-1" eType="#//Interface">
@@ -2059,10 +2062,11 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ConversationNode" abstract="true" eSuperTypes="#//BaseElement #//InteractionNode">
+  <eClassifiers xsi:type="ecore:EClass" name="ConversationNode" eSuperTypes="#//BaseElement #//InteractionNode">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="tConversationNode"/>
       <details key="kind" value="elementOnly"/>
+      <details key="abstract" value="true"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="participantRefs" ordered="false"
         lowerBound="2" upperBound="-1" eType="#//Participant">
@@ -3114,7 +3118,10 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InteractionNode" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="InteractionNode">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="abstract" value="true"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="incomingConversationLinks"
         ordered="false" upperBound="-1" eType="#//ConversationLink" changeable="false"
         volatile="true" transient="true" derived="true" resolveProxies="false"/>

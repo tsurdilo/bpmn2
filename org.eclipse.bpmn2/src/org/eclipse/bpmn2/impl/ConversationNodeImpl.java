@@ -54,7 +54,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public abstract class ConversationNodeImpl extends BaseElementImpl implements ConversationNode {
+public class ConversationNodeImpl extends BaseElementImpl implements ConversationNode {
     /**
      * The cached value of the '{@link #getParticipantRefs() <em>Participant Refs</em>}' reference list.
      * <!-- begin-user-doc -->

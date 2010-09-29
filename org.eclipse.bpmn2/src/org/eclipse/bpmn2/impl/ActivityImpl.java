@@ -61,7 +61,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
+public class ActivityImpl extends FlowNodeImpl implements Activity {
     /**
      * The cached value of the '{@link #getIoSpecification() <em>Io Specification</em>}' containment reference.
      * <!-- begin-user-doc -->

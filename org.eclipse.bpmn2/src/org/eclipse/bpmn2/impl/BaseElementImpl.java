@@ -49,7 +49,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public abstract class BaseElementImpl extends EObjectImpl implements BaseElement {
+public class BaseElementImpl extends EObjectImpl implements BaseElement {
     /**
      * The cached value of the '{@link #getExtensionValues() <em>Extension Values</em>}' containment reference list.
      * <!-- begin-user-doc -->

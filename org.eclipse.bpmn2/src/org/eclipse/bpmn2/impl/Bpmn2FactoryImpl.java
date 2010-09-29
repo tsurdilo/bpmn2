@@ -21,6 +21,7 @@ import org.eclipse.bpmn2.Assignment;
 import org.eclipse.bpmn2.Association;
 import org.eclipse.bpmn2.AssociationDirection;
 import org.eclipse.bpmn2.Auditing;
+import org.eclipse.bpmn2.BaseElement;
 import org.eclipse.bpmn2.BoundaryEvent;
 import org.eclipse.bpmn2.Bpmn2Factory;
 import org.eclipse.bpmn2.Bpmn2Package;
@@ -28,6 +29,7 @@ import org.eclipse.bpmn2.BusinessRuleTask;
 import org.eclipse.bpmn2.CallActivity;
 import org.eclipse.bpmn2.CallChoreography;
 import org.eclipse.bpmn2.CallConversation;
+import org.eclipse.bpmn2.CallableElement;
 import org.eclipse.bpmn2.CancelEventDefinition;
 import org.eclipse.bpmn2.Category;
 import org.eclipse.bpmn2.CategoryValue;
@@ -42,6 +44,7 @@ import org.eclipse.bpmn2.ConditionalEventDefinition;
 import org.eclipse.bpmn2.Conversation;
 import org.eclipse.bpmn2.ConversationAssociation;
 import org.eclipse.bpmn2.ConversationLink;
+import org.eclipse.bpmn2.ConversationNode;
 import org.eclipse.bpmn2.CorrelationKey;
 import org.eclipse.bpmn2.CorrelationProperty;
 import org.eclipse.bpmn2.CorrelationPropertyBinding;
@@ -201,6 +204,8 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
         switch (eClass.getClassifierID()) {
         case Bpmn2Package.DOCUMENT_ROOT:
             return createDocumentRoot();
+        case Bpmn2Package.ACTIVITY:
+            return createActivity();
         case Bpmn2Package.AD_HOC_SUB_PROCESS:
             return createAdHocSubProcess();
         case Bpmn2Package.ASSIGNMENT:
@@ -209,6 +214,8 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
             return createAssociation();
         case Bpmn2Package.AUDITING:
             return createAuditing();
+        case Bpmn2Package.BASE_ELEMENT:
+            return createBaseElement();
         case Bpmn2Package.BOUNDARY_EVENT:
             return createBoundaryEvent();
         case Bpmn2Package.BUSINESS_RULE_TASK:
@@ -219,6 +226,8 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
             return createCallChoreography();
         case Bpmn2Package.CALL_CONVERSATION:
             return createCallConversation();
+        case Bpmn2Package.CALLABLE_ELEMENT:
+            return createCallableElement();
         case Bpmn2Package.CANCEL_EVENT_DEFINITION:
             return createCancelEventDefinition();
         case Bpmn2Package.CATEGORY:
@@ -245,6 +254,8 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
             return createConversationAssociation();
         case Bpmn2Package.CONVERSATION_LINK:
             return createConversationLink();
+        case Bpmn2Package.CONVERSATION_NODE:
+            return createConversationNode();
         case Bpmn2Package.CORRELATION_KEY:
             return createCorrelationKey();
         case Bpmn2Package.CORRELATION_PROPERTY:
@@ -339,6 +350,8 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
             return createInputOutputSpecification();
         case Bpmn2Package.INPUT_SET:
             return createInputSet();
+        case Bpmn2Package.INTERACTION_NODE:
+            return createInteractionNode();
         case Bpmn2Package.INTERFACE:
             return createInterface();
         case Bpmn2Package.INTERMEDIATE_CATCH_EVENT:
@@ -528,6 +541,16 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    protected Activity createActivity() {
+        ActivityImpl activity = new ActivityImpl();
+        return activity;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public AdHocSubProcess createAdHocSubProcess() {
         AdHocSubProcessImpl adHocSubProcess = new AdHocSubProcessImpl();
         return adHocSubProcess;
@@ -561,6 +584,16 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
     public Auditing createAuditing() {
         AuditingImpl auditing = new AuditingImpl();
         return auditing;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected BaseElement createBaseElement() {
+        BaseElementImpl baseElement = new BaseElementImpl();
+        return baseElement;
     }
 
     /**
@@ -611,6 +644,16 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
     public CallConversation createCallConversation() {
         CallConversationImpl callConversation = new CallConversationImpl();
         return callConversation;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected CallableElement createCallableElement() {
+        CallableElementImpl callableElement = new CallableElementImpl();
+        return callableElement;
     }
 
     /**
@@ -741,6 +784,16 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
     public ConversationLink createConversationLink() {
         ConversationLinkImpl conversationLink = new ConversationLinkImpl();
         return conversationLink;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ConversationNode createConversationNode() {
+        ConversationNodeImpl conversationNode = new ConversationNodeImpl();
+        return conversationNode;
     }
 
     /**
@@ -1211,6 +1264,16 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
     public InputSet createInputSet() {
         InputSetImpl inputSet = new InputSetImpl();
         return inputSet;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected InteractionNode createInteractionNode() {
+        InteractionNodeImpl interactionNode = new InteractionNodeImpl();
+        return interactionNode;
     }
 
     /**

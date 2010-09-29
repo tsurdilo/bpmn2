@@ -32,8 +32,7 @@ import java.util.List;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getConversationNode()
- * @model abstract="true"
- *        extendedMetaData="name='tConversationNode' kind='elementOnly'"
+ * @model extendedMetaData="name='tConversationNode' kind='elementOnly' abstract='true'"
  * @generated
  */
 public interface ConversationNode extends BaseElement, InteractionNode {

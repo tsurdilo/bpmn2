@@ -32,8 +32,7 @@ import java.util.List;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getCallableElement()
- * @model abstract="true"
- *        extendedMetaData="name='tCallableElement' kind='elementOnly'"
+ * @model extendedMetaData="name='tCallableElement' kind='elementOnly' abstract='true'"
  * @generated
  */
 public interface CallableElement extends RootElement {

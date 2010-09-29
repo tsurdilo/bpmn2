@@ -48,7 +48,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public abstract class CallableElementImpl extends RootElementImpl implements CallableElement {
+public class CallableElementImpl extends RootElementImpl implements CallableElement {
     /**
      * The cached value of the '{@link #getSupportedInterfaceRefs() <em>Supported Interface Refs</em>}' reference list.
      * <!-- begin-user-doc -->

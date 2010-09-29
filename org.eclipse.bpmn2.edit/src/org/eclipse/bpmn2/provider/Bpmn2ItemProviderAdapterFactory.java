@@ -107,6 +107,29 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory impleme
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.bpmn2.Activity} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ActivityItemProvider activityItemProvider;
+
+    /**
+     * This creates an adapter for a {@link org.eclipse.bpmn2.Activity}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createActivityAdapter() {
+        if (activityItemProvider == null) {
+            activityItemProvider = new ActivityItemProvider(this);
+        }
+
+        return activityItemProvider;
+    }
+
+    /**
      * This keeps track of the one adapter used for all {@link org.eclipse.bpmn2.AdHocSubProcess} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -196,6 +219,29 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory impleme
         }
 
         return auditingItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.bpmn2.BaseElement} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected BaseElementItemProvider baseElementItemProvider;
+
+    /**
+     * This creates an adapter for a {@link org.eclipse.bpmn2.BaseElement}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createBaseElementAdapter() {
+        if (baseElementItemProvider == null) {
+            baseElementItemProvider = new BaseElementItemProvider(this);
+        }
+
+        return baseElementItemProvider;
     }
 
     /**
@@ -311,6 +357,29 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory impleme
         }
 
         return callConversationItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.bpmn2.CallableElement} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected CallableElementItemProvider callableElementItemProvider;
+
+    /**
+     * This creates an adapter for a {@link org.eclipse.bpmn2.CallableElement}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createCallableElementAdapter() {
+        if (callableElementItemProvider == null) {
+            callableElementItemProvider = new CallableElementItemProvider(this);
+        }
+
+        return callableElementItemProvider;
     }
 
     /**
@@ -611,6 +680,29 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory impleme
         }
 
         return conversationLinkItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.bpmn2.ConversationNode} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ConversationNodeItemProvider conversationNodeItemProvider;
+
+    /**
+     * This creates an adapter for a {@link org.eclipse.bpmn2.ConversationNode}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createConversationNodeAdapter() {
+        if (conversationNodeItemProvider == null) {
+            conversationNodeItemProvider = new ConversationNodeItemProvider(this);
+        }
+
+        return conversationNodeItemProvider;
     }
 
     /**
@@ -1695,6 +1787,29 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory impleme
         }
 
         return inputSetItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.bpmn2.InteractionNode} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected InteractionNodeItemProvider interactionNodeItemProvider;
+
+    /**
+     * This creates an adapter for a {@link org.eclipse.bpmn2.InteractionNode}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createInteractionNodeAdapter() {
+        if (interactionNodeItemProvider == null) {
+            interactionNodeItemProvider = new InteractionNodeItemProvider(this);
+        }
+
+        return interactionNodeItemProvider;
     }
 
     /**
@@ -2997,6 +3112,8 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory impleme
     public void dispose() {
         if (documentRootItemProvider != null)
             documentRootItemProvider.dispose();
+        if (activityItemProvider != null)
+            activityItemProvider.dispose();
         if (adHocSubProcessItemProvider != null)
             adHocSubProcessItemProvider.dispose();
         if (assignmentItemProvider != null)
@@ -3005,6 +3122,8 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory impleme
             associationItemProvider.dispose();
         if (auditingItemProvider != null)
             auditingItemProvider.dispose();
+        if (baseElementItemProvider != null)
+            baseElementItemProvider.dispose();
         if (boundaryEventItemProvider != null)
             boundaryEventItemProvider.dispose();
         if (businessRuleTaskItemProvider != null)
@@ -3015,6 +3134,8 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory impleme
             callChoreographyItemProvider.dispose();
         if (callConversationItemProvider != null)
             callConversationItemProvider.dispose();
+        if (callableElementItemProvider != null)
+            callableElementItemProvider.dispose();
         if (cancelEventDefinitionItemProvider != null)
             cancelEventDefinitionItemProvider.dispose();
         if (categoryItemProvider != null)
@@ -3041,6 +3162,8 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory impleme
             conversationAssociationItemProvider.dispose();
         if (conversationLinkItemProvider != null)
             conversationLinkItemProvider.dispose();
+        if (conversationNodeItemProvider != null)
+            conversationNodeItemProvider.dispose();
         if (correlationKeyItemProvider != null)
             correlationKeyItemProvider.dispose();
         if (correlationPropertyItemProvider != null)
@@ -3135,6 +3258,8 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory impleme
             inputOutputSpecificationItemProvider.dispose();
         if (inputSetItemProvider != null)
             inputSetItemProvider.dispose();
+        if (interactionNodeItemProvider != null)
+            interactionNodeItemProvider.dispose();
         if (interfaceItemProvider != null)
             interfaceItemProvider.dispose();
         if (intermediateCatchEventItemProvider != null)

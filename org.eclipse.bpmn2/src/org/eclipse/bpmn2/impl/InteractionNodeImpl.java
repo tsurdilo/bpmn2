@@ -43,7 +43,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public abstract class InteractionNodeImpl extends EObjectImpl implements InteractionNode {
+public class InteractionNodeImpl extends EObjectImpl implements InteractionNode {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

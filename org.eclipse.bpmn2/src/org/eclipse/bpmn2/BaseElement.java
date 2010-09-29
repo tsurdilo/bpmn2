@@ -34,8 +34,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getBaseElement()
- * @model abstract="true"
- *        extendedMetaData="name='tBaseElement' kind='elementOnly'"
+ * @model extendedMetaData="name='tBaseElement' kind='elementOnly' abstract='true'"
  * @generated
  */
 public interface BaseElement extends EObject {

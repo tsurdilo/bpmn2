@@ -187,8 +187,8 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__EXTENSION_ELEMENTS
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__FLOW_NODE
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__SCRIPT
-                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__SUB_PROCESS
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__TEXT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__SUB_PROCESS
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__AD_HOC_SUB_PROCESS
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__TASK
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__BUSINESS_RULE_TASK
@@ -228,10 +228,11 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__TEXT_ANNOTATION
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ASSIGNMENT
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__AUDITING
-                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_CONVERSATION
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION_NODE
-                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT_DEFINITION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_CONVERSATION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CALLABLE_ELEMENT
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ROOT_ELEMENT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT_DEFINITION
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CANCEL_EVENT_DEFINITION
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CATEGORY
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CATEGORY_VALUE
@@ -263,7 +264,6 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ESCALATION_EVENT_DEFINITION
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__EXPRESSION
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__FORMAL_EXPRESSION
-                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CALLABLE_ELEMENT
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_TASK
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_BUSINESS_RULE_TASK
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__GLOBAL_CHOREOGRAPHY_TASK
