@@ -100,6 +100,7 @@ public class SubProcessItemProvider extends ActivityItemProvider implements
             super.getChildrenFeatures(object);
             childrenFeatures.add(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__LANE_SETS);
             childrenFeatures.add(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS);
+            childrenFeatures.add(Bpmn2Package.Literals.SUB_PROCESS__ARTIFACTS);
         }
         return childrenFeatures;
     }
@@ -163,6 +164,7 @@ public class SubProcessItemProvider extends ActivityItemProvider implements
             return;
         case Bpmn2Package.SUB_PROCESS__LANE_SETS:
         case Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS:
+        case Bpmn2Package.SUB_PROCESS__ARTIFACTS:
             fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
                     true, false));
             return;
@@ -304,6 +306,15 @@ public class SubProcessItemProvider extends ActivityItemProvider implements
         newChildDescriptors.add(createChildParameter(
                 Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
                 Bpmn2Factory.eINSTANCE.createUserTask()));
+
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.SUB_PROCESS__ARTIFACTS,
+                Bpmn2Factory.eINSTANCE.createAssociation()));
+
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.SUB_PROCESS__ARTIFACTS,
+                Bpmn2Factory.eINSTANCE.createGroup()));
+
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.SUB_PROCESS__ARTIFACTS,
+                Bpmn2Factory.eINSTANCE.createTextAnnotation()));
     }
 
 }

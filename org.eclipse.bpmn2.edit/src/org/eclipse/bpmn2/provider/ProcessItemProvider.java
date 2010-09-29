@@ -167,6 +167,7 @@ public class ProcessItemProvider extends CallableElementItemProvider implements
             childrenFeatures.add(Bpmn2Package.Literals.PROCESS__AUDITING);
             childrenFeatures.add(Bpmn2Package.Literals.PROCESS__MONITORING);
             childrenFeatures.add(Bpmn2Package.Literals.PROCESS__PROPERTIES);
+            childrenFeatures.add(Bpmn2Package.Literals.PROCESS__ARTIFACTS);
             childrenFeatures.add(Bpmn2Package.Literals.PROCESS__RESOURCES);
             childrenFeatures.add(Bpmn2Package.Literals.PROCESS__CORRELATION_SUBSCRIPTIONS);
         }
@@ -235,6 +236,7 @@ public class ProcessItemProvider extends CallableElementItemProvider implements
         case Bpmn2Package.PROCESS__AUDITING:
         case Bpmn2Package.PROCESS__MONITORING:
         case Bpmn2Package.PROCESS__PROPERTIES:
+        case Bpmn2Package.PROCESS__ARTIFACTS:
         case Bpmn2Package.PROCESS__RESOURCES:
         case Bpmn2Package.PROCESS__CORRELATION_SUBSCRIPTIONS:
             fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
@@ -387,6 +389,15 @@ public class ProcessItemProvider extends CallableElementItemProvider implements
 
         newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.PROCESS__PROPERTIES,
                 Bpmn2Factory.eINSTANCE.createProperty()));
+
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.PROCESS__ARTIFACTS,
+                Bpmn2Factory.eINSTANCE.createAssociation()));
+
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.PROCESS__ARTIFACTS,
+                Bpmn2Factory.eINSTANCE.createGroup()));
+
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.PROCESS__ARTIFACTS,
+                Bpmn2Factory.eINSTANCE.createTextAnnotation()));
 
         newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.PROCESS__RESOURCES,
                 Bpmn2Factory.eINSTANCE.createResourceRole()));

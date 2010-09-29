@@ -80,6 +80,7 @@ public class SubChoreographyItemProvider extends ChoreographyActivityItemProvide
             super.getChildrenFeatures(object);
             childrenFeatures.add(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__LANE_SETS);
             childrenFeatures.add(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS);
+            childrenFeatures.add(Bpmn2Package.Literals.SUB_CHOREOGRAPHY__ARTIFACTS);
         }
         return childrenFeatures;
     }
@@ -141,6 +142,7 @@ public class SubChoreographyItemProvider extends ChoreographyActivityItemProvide
         switch (notification.getFeatureID(SubChoreography.class)) {
         case Bpmn2Package.SUB_CHOREOGRAPHY__LANE_SETS:
         case Bpmn2Package.SUB_CHOREOGRAPHY__FLOW_ELEMENTS:
+        case Bpmn2Package.SUB_CHOREOGRAPHY__ARTIFACTS:
             fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
                     true, false));
             return;
@@ -282,6 +284,18 @@ public class SubChoreographyItemProvider extends ChoreographyActivityItemProvide
         newChildDescriptors.add(createChildParameter(
                 Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
                 Bpmn2Factory.eINSTANCE.createUserTask()));
+
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.SUB_CHOREOGRAPHY__ARTIFACTS,
+                Bpmn2Factory.eINSTANCE.createAssociation()));
+
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.SUB_CHOREOGRAPHY__ARTIFACTS,
+                Bpmn2Factory.eINSTANCE.createGroup()));
+
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.SUB_CHOREOGRAPHY__ARTIFACTS,
+                Bpmn2Factory.eINSTANCE.createTextAnnotation()));
     }
 
 }
