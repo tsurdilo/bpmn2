@@ -19,16 +19,18 @@ import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.bpmn2.Assignment;
+import org.eclipse.bpmn2.Bpmn2Factory;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.bpmn2.Assignment} object.
@@ -60,42 +62,39 @@ public class AssignmentItemProvider extends BaseElementItemProvider implements
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            addFromPropertyDescriptor(object);
-            addToPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
 
     /**
-     * This adds a property descriptor for the From feature.
+     * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+     * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+     * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected void addFromPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Assignment_from_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Assignment_from_feature",
-                        "_UI_Assignment_type"), Bpmn2Package.Literals.ASSIGNMENT__FROM, true,
-                false, true, null, null, null));
+    @Override
+    public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+        if (childrenFeatures == null) {
+            super.getChildrenFeatures(object);
+            childrenFeatures.add(Bpmn2Package.Literals.ASSIGNMENT__FROM);
+            childrenFeatures.add(Bpmn2Package.Literals.ASSIGNMENT__TO);
+        }
+        return childrenFeatures;
     }
 
     /**
-     * This adds a property descriptor for the To feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected void addToPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Assignment_to_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Assignment_to_feature",
-                        "_UI_Assignment_type"), Bpmn2Package.Literals.ASSIGNMENT__TO, true, false,
-                true, null, null, null));
+    @Override
+    protected EStructuralFeature getChildFeature(Object object, Object child) {
+        // Check the type of the specified child object and return the proper feature to use for
+        // adding (see {@link AddCommand}) it as a child.
+
+        return super.getChildFeature(object, child);
     }
 
     /**
@@ -136,6 +135,14 @@ public class AssignmentItemProvider extends BaseElementItemProvider implements
     @Override
     public void notifyChanged(Notification notification) {
         updateChildren(notification);
+
+        switch (notification.getFeatureID(Assignment.class)) {
+        case Bpmn2Package.ASSIGNMENT__FROM:
+        case Bpmn2Package.ASSIGNMENT__TO:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
+        }
         super.notifyChanged(notification);
     }
 
@@ -149,6 +156,40 @@ public class AssignmentItemProvider extends BaseElementItemProvider implements
     @Override
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
+
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ASSIGNMENT__FROM,
+                Bpmn2Factory.eINSTANCE.createExpression()));
+
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ASSIGNMENT__FROM,
+                Bpmn2Factory.eINSTANCE.createFormalExpression()));
+
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ASSIGNMENT__TO,
+                Bpmn2Factory.eINSTANCE.createExpression()));
+
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ASSIGNMENT__TO,
+                Bpmn2Factory.eINSTANCE.createFormalExpression()));
+    }
+
+    /**
+     * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public String getCreateChildText(Object owner, Object feature, Object child,
+            Collection<?> selection) {
+        Object childFeature = feature;
+        Object childObject = child;
+
+        boolean qualify = childFeature == Bpmn2Package.Literals.ASSIGNMENT__FROM
+                || childFeature == Bpmn2Package.Literals.ASSIGNMENT__TO;
+
+        if (qualify) {
+            return getString("_UI_CreateChild_text2", new Object[] { getTypeText(childObject),
+                    getFeatureText(childFeature), getTypeText(owner) });
+        }
+        return super.getCreateChildText(owner, feature, child, selection);
     }
 
 }
