@@ -1,0 +1,60 @@
+<%@ jet package="org.eclipse.bpmn2.tools.xsltFromEcore.jet" class="XMIToXML" imports="org.eclipse.emf.ecore.*" skeleton="generator.skeleton"%>
+<% JetInput input = (JetInput) argument; %>
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="2.0"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:xmi="http://schema.omg.org/spec/XMI"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+	xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+	xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+	xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" 
+	xmlns:bpmnxmi="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI"
+	xmlns:bpmndixmi="http://www.omg.org/spec/BPMN/20100524/DI-XMI"
+	xmlns:dixmi="http://www.omg.org/spec/DD/20100524/DI-XMI"
+	xmlns:dcxmi="http://www.omg.org/spec/DD/20100524/DC-XMI"> 
+
+	<xsl:template match="/">
+	  <xsl:apply-templates/>
+	</xsl:template>
+		
+	<xsl:template name="EObjectTemplate">
+	  <!-- TODO: Add your copy logic for extension attributes-->
+	</xsl:template>
+
+<% for(EClass c: input.getClasses()) { %>
+	<xsl:template name="<%=c.getName()%>Template" <%if("Definitions".equals(c.getName())){%> match="//bpmnxmi:Definitions" <%}%>>
+<%if("Definitions".equals(c.getName())){%>   <bpmn:definitions><%}%>
+<%for(EClass superClass: c.getESuperTypes()) {%>
+	 <xsl:call-template name="<%=superClass.getName()%>Template"/> 
+<%}%>
+<% for(EStructuralFeature feature: input.getAllFeatureThatAreAttributesInXml(c)) { %>
+			<xsl:if test="<%=input.getXPathForXMI(feature)%>"><xsl:attribute name="<%=feature.getName() %>"> <xsl:value-of select="<%=input.getXPathForXMI(feature)%>" /> </xsl:attribute></xsl:if>			
+<% } %>
+<% for(EStructuralFeature feature: input.getAllElementsInXml(c)) { %>
+
+<% if(input.isReference(feature)) { %>
+			<xsl:if test="<%=input.getXPathForXMI(feature)%>"><xsl:attribute name="<%=feature.getName() %>"> <xsl:value-of select="<%=input.getXPathForXMI(feature) %>" /> </xsl:attribute></xsl:if>			
+<% } else if(input.isSimpleElement(feature)) { %>
+			<<%=input.getPrefix(feature)%>:<%=feature.getName()%>><xsl:value-of select="<%=input.getXPathForXMI(feature)%>"/></<%=input.getPrefix(feature)%>:<%=feature.getName()%>>
+<% } else {
+      for(EStructuralFeature subFeature: input.getAllSubFeatures(feature)) { 
+%>			
+<%if(feature.equals(subFeature)){%>
+			<xsl:for-each select="<%=feature.getName()%>">
+<%} else {%>
+			<xsl:for-each select="<%=feature.getName()%>[contains(@xmi:type, '<%=subFeature.getEType().getName()%>') or contains(@xsi:type, '<%=subFeature.getEType().getName()%>')]">
+<%}%>
+ 			  <<%=input.getPrefix(subFeature)%>:<%=input.getExtendedMetadata().getName(subFeature)%>>
+			    <xsl:call-template name="<%=subFeature.getEType().getName()%>Template" />			   
+			  </<%=input.getPrefix(subFeature)%>:<%=input.getExtendedMetadata().getName(subFeature)%>>
+			</xsl:for-each>
+<% } %>
+			
+<% } } %>
+<%if("Definitions".equals(c.getName())){%>   </bpmn:definitions><%}%>
+	</xsl:template>
+	
+<% }%>
+
+</xsl:stylesheet>
