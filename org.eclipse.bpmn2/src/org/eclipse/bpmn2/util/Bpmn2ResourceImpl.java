@@ -21,11 +21,13 @@ import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Definitions;
 import org.eclipse.bpmn2.DocumentRoot;
 import org.eclipse.bpmn2.Import;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.XMLHelper;
 import org.eclipse.emf.ecore.xmi.XMLLoad;
@@ -45,10 +47,18 @@ import org.xml.sax.helpers.DefaultHandler;
  * @see org.eclipse.bpmn2.util.Bpmn2ResourceFactoryImpl
  * @generated
  */
-public class Bpmn2ResourceImpl extends XMLResourceImpl {
+public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource {
 
     private QNameURIHandler uriHandler;
     private BpmnXmlHelper xmlHelper;
+
+    // CHECK: make this optional (as it adds notification overhead) 
+    // ... or lazy (also works if added later on, because it attaches itself to the whole tree at once)
+    protected Bpmn2OppositeReferenceAdapter oppositeReferenceAdapter = new Bpmn2OppositeReferenceAdapter();
+
+    public Bpmn2OppositeReferenceAdapter getOppositeReferenceAdapter() {
+        return oppositeReferenceAdapter;
+    }
 
     /**
      * Creates an instance of the resource.
@@ -63,6 +73,16 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl {
         this.uriHandler = new QNameURIHandler(xmlHelper);
         this.getDefaultLoadOptions().put(XMLResource.OPTION_URI_HANDLER, uriHandler);
         this.getDefaultSaveOptions().put(XMLResource.OPTION_URI_HANDLER, uriHandler);
+
+        // only necessary if this resource will not be added to a ResourceSet instantly
+        this.eAdapters().add(oppositeReferenceAdapter);
+    }
+
+    @Override
+    public NotificationChain basicSetResourceSet(ResourceSet resourceSet,
+            NotificationChain notifications) {
+        resourceSet.eAdapters().add(oppositeReferenceAdapter);
+        return super.basicSetResourceSet(resourceSet, notifications);
     }
 
     // This method is called by all save methods - save(Document,...), doSave(Writer/OutputStream, ...) - in superclasses.

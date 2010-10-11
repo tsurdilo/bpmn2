@@ -24,6 +24,7 @@ import org.eclipse.bpmn2.CorrelationKey;
 import org.eclipse.bpmn2.InteractionNode;
 import org.eclipse.bpmn2.MessageFlow;
 import org.eclipse.bpmn2.Participant;
+import org.eclipse.bpmn2.util.Bpmn2Resource;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -32,8 +33,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.emf.ecore.util.EObjectWithInverseEList;
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -126,29 +125,33 @@ public class ConversationNodeImpl extends BaseElementImpl implements Conversatio
 
     /**
      * <!-- begin-user-doc -->
-     * TODO: implement as virtual opposite to Bpmn2Package.CONVERSATION_LINK__TARGET_REF
+     * Virtual opposite of {@link ConversationLink#getTargetRef()}.
+     * For general information about virtual opposites see {@link CategoryValueImpl#getCategorizedFlowElements()}
      * <!-- end-user-doc -->
-     * @generated
+     * @generated NOT
      */
     public List<ConversationLink> getIncomingConversationLinks() {
-        // TODO: implement this method to return the 'Incoming Conversation Links' reference list
-        // Ensure that you remove @generated or mark it @generated NOT
-        // The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-        // so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
+        if (eResource() instanceof Bpmn2Resource) {
+            return ((Bpmn2Resource) eResource()).getOppositeReferenceAdapter().getOppositeList(
+                    ConversationLink.class, this,
+                    Bpmn2Package.Literals.CONVERSATION_LINK__TARGET_REF);
+        }
         throw new UnsupportedOperationException();
     }
 
     /**
      * <!-- begin-user-doc -->
-     * TODO: implement as virtual opposite to Bpmn2Package.CONVERSATION_LINK__SOURCE_REF
+     * Virtual opposite of {@link ConversationLink#getSourceRef()}.
+     * For general information about virtual opposites see {@link CategoryValueImpl#getCategorizedFlowElements()}
      * <!-- end-user-doc -->
-     * @generated
+     * @generated NOT
      */
     public List<ConversationLink> getOutgoingConversationLinks() {
-        // TODO: implement this method to return the 'Outgoing Conversation Links' reference list
-        // Ensure that you remove @generated or mark it @generated NOT
-        // The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-        // so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
+        if (eResource() instanceof Bpmn2Resource) {
+            return ((Bpmn2Resource) eResource()).getOppositeReferenceAdapter().getOppositeList(
+                    ConversationLink.class, this,
+                    Bpmn2Package.Literals.CONVERSATION_LINK__SOURCE_REF);
+        }
         throw new UnsupportedOperationException();
     }
 

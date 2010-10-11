@@ -77,10 +77,8 @@ public class TaskItemProvider extends ActivityItemProvider implements IEditingDo
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
                 getResourceLocator(),
                 getString("_UI_InteractionNode_incomingConversationLinks_feature"),
-                getString("_UI_PropertyDescriptor_description",
-                        "_UI_InteractionNode_incomingConversationLinks_feature",
-                        "_UI_InteractionNode_type"),
-                Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS, true, false,
+                getString("_UI_InteractionNode_incomingConversationLinks_description"),
+                Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS, false, false,
                 true, null, null, null));
     }
 
@@ -95,10 +93,8 @@ public class TaskItemProvider extends ActivityItemProvider implements IEditingDo
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
                 getResourceLocator(),
                 getString("_UI_InteractionNode_outgoingConversationLinks_feature"),
-                getString("_UI_PropertyDescriptor_description",
-                        "_UI_InteractionNode_outgoingConversationLinks_feature",
-                        "_UI_InteractionNode_type"),
-                Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS, true, false,
+                getString("_UI_InteractionNode_outgoingConversationLinks_description"),
+                Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS, false, false,
                 true, null, null, null));
     }
 

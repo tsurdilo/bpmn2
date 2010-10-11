@@ -11,9 +11,11 @@
 package org.eclipse.bpmn2.util;
 
 import org.eclipse.bpmn2.Bpmn2Package;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.xmi.XMLSave;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMISaveImpl;
@@ -25,7 +27,14 @@ import org.eclipse.emf.ecore.xmi.impl.XMISaveImpl;
  * @see org.eclipse.bpmn2.util.Bpmn2ResourceFactoryImpl
  * @generated
  */
-public class Bpmn2XMIResourceImpl extends XMIResourceImpl {
+public class Bpmn2XMIResourceImpl extends XMIResourceImpl implements Bpmn2Resource {
+
+    protected Bpmn2OppositeReferenceAdapter oppositeReferenceAdapter = new Bpmn2OppositeReferenceAdapter();
+
+    public Bpmn2OppositeReferenceAdapter getOppositeReferenceAdapter() {
+        return oppositeReferenceAdapter;
+    }
+
     /**
      * Creates an instance of the resource.
      * <!-- begin-user-doc -->
@@ -35,6 +44,15 @@ public class Bpmn2XMIResourceImpl extends XMIResourceImpl {
      */
     public Bpmn2XMIResourceImpl(URI uri) {
         super(uri);
+
+        this.eAdapters().add(oppositeReferenceAdapter);
+    }
+
+    @Override
+    public NotificationChain basicSetResourceSet(ResourceSet resourceSet,
+            NotificationChain notifications) {
+        resourceSet.eAdapters().add(oppositeReferenceAdapter);
+        return super.basicSetResourceSet(resourceSet, notifications);
     }
 
     @Override
@@ -49,4 +67,4 @@ public class Bpmn2XMIResourceImpl extends XMIResourceImpl {
         };
     }
 
-} //Bpmn2ResourceImpl
+} //Bpmn2XMIResourceImpl

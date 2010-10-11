@@ -269,7 +269,8 @@
     </genClasses>
     <genClasses ecoreClass="BPMN20.ecore#//CategoryValue">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BPMN20.ecore#//CategoryValue/value"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BPMN20.ecore#//CategoryValue/categorizedFlowElements"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" propertyDescription="(limited to flow elements which have been loaded into this resource set)"
+          propertySortChoices="true" ecoreFeature="ecore:EReference BPMN20.ecore#//CategoryValue/categorizedFlowElements"/>
     </genClasses>
     <genClasses ecoreClass="BPMN20.ecore#//Choreography"/>
     <genClasses image="false" ecoreClass="BPMN20.ecore#//ChoreographyActivity">
@@ -527,8 +528,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BPMN20.ecore#//InputSet/name"/>
     </genClasses>
     <genClasses image="false" ecoreClass="BPMN20.ecore#//InteractionNode">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BPMN20.ecore#//InteractionNode/incomingConversationLinks"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BPMN20.ecore#//InteractionNode/outgoingConversationLinks"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" propertyDescription="(limited to flow elements which have been loaded into this resource set)"
+          propertySortChoices="true" ecoreFeature="ecore:EReference BPMN20.ecore#//InteractionNode/incomingConversationLinks"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" propertyDescription="(limited to flow elements which have been loaded into this resource set)"
+          propertySortChoices="true" ecoreFeature="ecore:EReference BPMN20.ecore#//InteractionNode/outgoingConversationLinks"/>
     </genClasses>
     <genClasses ecoreClass="BPMN20.ecore#//Interface">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BPMN20.ecore#//Interface/operations"/>

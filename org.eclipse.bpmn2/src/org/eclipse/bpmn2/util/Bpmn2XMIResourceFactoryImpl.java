@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceFactoryImpl;
  * <!-- begin-user-doc -->
  * The <b>Resource Factory</b> associated with the package.
  * <!-- end-user-doc -->
- * @see org.eclipse.bpmn2.util.Bpmn2ResourceImpl
+ * @see org.eclipse.bpmn2.util.Bpmn2XMIResourceImpl
  * @generated
  */
 public class Bpmn2XMIResourceFactoryImpl extends ResourceFactoryImpl {
@@ -44,4 +44,4 @@ public class Bpmn2XMIResourceFactoryImpl extends ResourceFactoryImpl {
         return result;
     }
 
-} //Bpmn2ResourceFactoryImpl
+} //Bpmn2XMIResourceFactoryImpl

@@ -23,16 +23,22 @@ import javax.xml.validation.Validator;
 
 import org.eclipse.bpmn2.Bpmn2Factory;
 import org.eclipse.bpmn2.Bpmn2Package;
+import org.eclipse.bpmn2.Category;
+import org.eclipse.bpmn2.CategoryValue;
 import org.eclipse.bpmn2.Collaboration;
+import org.eclipse.bpmn2.ConversationLink;
 import org.eclipse.bpmn2.Definitions;
 import org.eclipse.bpmn2.DocumentRoot;
 import org.eclipse.bpmn2.Documentation;
+import org.eclipse.bpmn2.FlowElement;
 import org.eclipse.bpmn2.Import;
 import org.eclipse.bpmn2.ItemDefinition;
+import org.eclipse.bpmn2.Participant;
 import org.eclipse.bpmn2.Process;
 import org.eclipse.bpmn2.RootElement;
 import org.eclipse.bpmn2.ScriptTask;
 import org.eclipse.bpmn2.ServiceTask;
+import org.eclipse.bpmn2.Task;
 import org.eclipse.bpmn2.util.Bpmn2ResourceFactoryImpl;
 import org.eclipse.bpmn2.util.NamespaceHelper;
 import org.eclipse.emf.common.EMFPlugin;
@@ -396,6 +402,66 @@ public class XMLSerializationTest {
         else {
             final Resource res = xsdStructure.eResource();
             assertEquals(uriExpected, res.getURI().appendFragment(res.getURIFragment(xsdStructure)));
+        }
+    }
+
+    @Test
+    public void testOppositeReferenceCategoryValue() throws Exception {
+        Category cat = Bpmn2Factory.eINSTANCE.createCategory();
+        CategoryValue catValue = Bpmn2Factory.eINSTANCE.createCategoryValue();
+        cat.getCategoryValue().add(catValue);
+        model.getRootElements().add(cat);
+
+        Process proc = Bpmn2Factory.eINSTANCE.createProcess();
+        Task task = Bpmn2Factory.eINSTANCE.createTask();
+        proc.getFlowElements().add(task);
+        model.getRootElements().add(proc);
+
+        task.getCategoryValueRef().add(catValue);
+        createWithContentAndLoad("oppositeRefCategoryValue", model);
+
+        List<FlowElement> result = null;
+        try {
+            result = catValue.getCategorizedFlowElements();
+        } catch (UnsupportedOperationException e) {
+            fail("getCategorizedFlowElements not implemented");
+        }
+        assertTrue("Task not found in list", result.contains(task));
+    }
+
+    @Test
+    public void testOppositeReferenceInteractionNode() throws Exception {
+        Collaboration collab = Bpmn2Factory.eINSTANCE.createCollaboration();
+        Participant part1 = Bpmn2Factory.eINSTANCE.createParticipant();
+        collab.getParticipants().add(part1);
+        Participant part2 = Bpmn2Factory.eINSTANCE.createParticipant();
+        collab.getParticipants().add(part2);
+        model.getRootElements().add(collab);
+
+        ConversationLink link1 = Bpmn2Factory.eINSTANCE.createConversationLink();
+        link1.setSourceRef(part1);
+        link1.setTargetRef(part2);
+        collab.getConversationLinks().add(link1);
+
+        ConversationLink link2 = Bpmn2Factory.eINSTANCE.createConversationLink();
+        link2.setTargetRef(part1);
+        link2.setSourceRef(part2);
+        collab.getConversationLinks().add(link2);
+
+        createWithContentAndLoad("oppositeRefInteractionNode", model);
+
+        try {
+            List<ConversationLink> tmp = part1.getIncomingConversationLinks();
+            assertTrue(tmp.size() == 1 && tmp.contains(link2));
+            tmp = part1.getOutgoingConversationLinks();
+            assertTrue(tmp.size() == 1 && tmp.contains(link1));
+
+            tmp = part2.getIncomingConversationLinks();
+            assertTrue(tmp.size() == 1 && tmp.contains(link1));
+            tmp = part2.getOutgoingConversationLinks();
+            assertTrue(tmp.size() == 1 && tmp.contains(link2));
+        } catch (UnsupportedOperationException e) {
+            fail("getIncoming/OutgoingConversationLinks not implemented");
         }
     }
 }

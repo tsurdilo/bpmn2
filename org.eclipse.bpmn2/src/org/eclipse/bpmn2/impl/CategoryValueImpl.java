@@ -14,20 +14,15 @@
  */
 package org.eclipse.bpmn2.impl;
 
-import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.CategoryValue;
 import org.eclipse.bpmn2.FlowElement;
+import org.eclipse.bpmn2.util.Bpmn2Resource;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectWithInverseEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -107,15 +102,25 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
 
     /**
      * <!-- begin-user-doc -->
-     * TODO: Implement as virtual opposite to Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF
+     * Returns a computed list of flow elements where {@link FlowElement#getCategoryValueRef()}
+     * contains this CategoryValue.
+     * 
+     * This object has to be contained in a BPMN2 resource. The resource needs to have attached a
+     * {@linkplain Bpmn2Resource#getOppositeReferenceAdapter() OppositeReferenceAdapter} that
+     * observes (probably among others) the reference {@link FlowElement#getCategoryValueRef()},
+     * which is the default state.
+     * 
+     * The result only includes those FlowElements that are contained in the same resource or
+     * resource set.
      * <!-- end-user-doc -->
-     * @generated
+     * @generated NOT
      */
     public List<FlowElement> getCategorizedFlowElements() {
-        // TODO: implement this method to return the 'Categorized Flow Elements' reference list
-        // Ensure that you remove @generated or mark it @generated NOT
-        // The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-        // so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
+        if (eResource() instanceof Bpmn2Resource) {
+            return ((Bpmn2Resource) eResource()).getOppositeReferenceAdapter()
+                    .getOppositeList(FlowElement.class, this,
+                            Bpmn2Package.Literals.FLOW_ELEMENT__CATEGORY_VALUE_REF);
+        }
         throw new UnsupportedOperationException();
     }
 
