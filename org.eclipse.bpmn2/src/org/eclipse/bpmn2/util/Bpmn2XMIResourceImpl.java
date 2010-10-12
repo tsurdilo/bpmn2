@@ -51,7 +51,8 @@ public class Bpmn2XMIResourceImpl extends XMIResourceImpl implements Bpmn2Resour
     @Override
     public NotificationChain basicSetResourceSet(ResourceSet resourceSet,
             NotificationChain notifications) {
-        resourceSet.eAdapters().add(oppositeReferenceAdapter);
+        if (resourceSet != null)
+            resourceSet.eAdapters().add(oppositeReferenceAdapter);
         return super.basicSetResourceSet(resourceSet, notifications);
     }
 

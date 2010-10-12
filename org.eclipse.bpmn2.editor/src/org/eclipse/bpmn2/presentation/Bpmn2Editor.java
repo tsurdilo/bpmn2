@@ -29,6 +29,7 @@ import java.util.Map;
 
 import org.eclipse.bpmn2.di.provider.BpmnDiItemProviderAdapterFactory;
 import org.eclipse.bpmn2.provider.Bpmn2ItemProviderAdapterFactory;
+import org.eclipse.bpmn2.util.Bpmn2XMIResourceImpl;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IMarker;
 import org.eclipse.core.resources.IResource;
@@ -1259,9 +1260,8 @@ public class Bpmn2Editor extends MultiPageEditorPart implements IEditingDomainPr
     protected void doSaveAs(URI uri, IEditorInput editorInput) {
         if (uri.toString().endsWith("xmi")) {
             Resource oldResource = editingDomain.getResourceSet().getResources().get(0);
-            XMIResource newResource = new XMIResourceImpl();
+            XMIResource newResource = new Bpmn2XMIResourceImpl(uri);
             editingDomain.getResourceSet().getResources().add(newResource);
-            newResource.setURI(uri);
             List<EObject> content = new ArrayList<EObject>(oldResource.getContents());
             for (EObject eObject : content) {
                 if (eObject.eClass().getName().equals("DocumentRoot")) {

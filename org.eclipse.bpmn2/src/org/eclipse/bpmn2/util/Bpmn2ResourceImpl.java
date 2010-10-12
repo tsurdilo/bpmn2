@@ -81,7 +81,8 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
     @Override
     public NotificationChain basicSetResourceSet(ResourceSet resourceSet,
             NotificationChain notifications) {
-        resourceSet.eAdapters().add(oppositeReferenceAdapter);
+        if (resourceSet != null)
+            resourceSet.eAdapters().add(oppositeReferenceAdapter);
         return super.basicSetResourceSet(resourceSet, notifications);
     }
 
