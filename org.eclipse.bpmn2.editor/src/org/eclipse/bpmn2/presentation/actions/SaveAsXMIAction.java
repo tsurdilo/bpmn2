@@ -23,7 +23,7 @@ import org.eclipse.ui.IEditorActionDelegate;
 import org.eclipse.ui.IEditorPart;
 
 /**
- * @author d023588
+ * @author Reiner Hille-Doering
  * 
  */
 public class SaveAsXMIAction implements IEditorActionDelegate {
@@ -41,7 +41,7 @@ public class SaveAsXMIAction implements IEditorActionDelegate {
      * 
      * @see org.eclipse.ui.IEditorActionDelegate#setActiveEditor(org.eclipse.jface.action.IAction, org.eclipse.ui.IEditorPart)
      */
-    @Override
+    //@Override
     public void setActiveEditor(IAction action, IEditorPart targetEditor) {
         if (targetEditor instanceof Bpmn2Editor) {
             this.editor = (Bpmn2Editor) targetEditor;
@@ -53,7 +53,7 @@ public class SaveAsXMIAction implements IEditorActionDelegate {
      * 
      * @see org.eclipse.ui.IActionDelegate#run(org.eclipse.jface.action.IAction)
      */
-    @Override
+    //@Override
     public void run(IAction action) {
         if (editor != null) {
             editor.saveAsXMI();
@@ -66,7 +66,7 @@ public class SaveAsXMIAction implements IEditorActionDelegate {
      * 
      * @see org.eclipse.ui.IActionDelegate#selectionChanged(org.eclipse.jface.action.IAction, org.eclipse.jface.viewers.ISelection)
      */
-    @Override
+    //@Override
     public void selectionChanged(IAction action, ISelection selection) {
     }
 

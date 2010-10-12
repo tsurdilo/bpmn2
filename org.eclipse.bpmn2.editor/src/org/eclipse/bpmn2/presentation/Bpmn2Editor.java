@@ -1262,7 +1262,7 @@ public class Bpmn2Editor extends MultiPageEditorPart implements IEditingDomainPr
      * @generated not
      */
     protected void doSaveAs(URI uri, IEditorInput editorInput) {
-        if (uri.toString().endsWith("xmi") || uri.toString().endsWith(BPMN_XMI_FILE_EXTENSION)) {
+        if (uri.toString().endsWith("xmi")) {
             Resource oldResource = editingDomain.getResourceSet().getResources().get(0);
             XMIResource newResource = new Bpmn2XMIResourceImpl(uri);
             editingDomain.getResourceSet().getResources().add(newResource);
