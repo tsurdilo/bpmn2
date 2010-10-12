@@ -37,11 +37,14 @@ import org.eclipse.core.resources.IResourceChangeEvent;
 import org.eclipse.core.resources.IResourceChangeListener;
 import org.eclipse.core.resources.IResourceDelta;
 import org.eclipse.core.resources.IResourceDeltaVisitor;
+import org.eclipse.core.resources.IWorkspace;
+import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
+import org.eclipse.core.runtime.Path;
 import org.eclipse.dd.dc.provider.DcItemProviderAdapterFactory;
 import org.eclipse.dd.di.provider.DiItemProviderAdapterFactory;
 import org.eclipse.emf.common.command.BasicCommandStack;
@@ -63,7 +66,6 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.XMIResource;
-import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.domain.IEditingDomainProvider;
@@ -136,6 +138,8 @@ import org.eclipse.ui.views.properties.PropertySheetPage;
  */
 public class Bpmn2Editor extends MultiPageEditorPart implements IEditingDomainProvider,
         ISelectionProvider, IMenuListener, IViewerProvider, IGotoMarker {
+    private static final String BPMN_XMI_FILE_EXTENSION = "bpmn2xmi";
+
     /**
      * This keeps track of the editing domain that is used to track all changes to the model.
      * <!-- begin-user-doc -->
@@ -1258,7 +1262,7 @@ public class Bpmn2Editor extends MultiPageEditorPart implements IEditingDomainPr
      * @generated not
      */
     protected void doSaveAs(URI uri, IEditorInput editorInput) {
-        if (uri.toString().endsWith("xmi")) {
+        if (uri.toString().endsWith("xmi") || uri.toString().endsWith(BPMN_XMI_FILE_EXTENSION)) {
             Resource oldResource = editingDomain.getResourceSet().getResources().get(0);
             XMIResource newResource = new Bpmn2XMIResourceImpl(uri);
             editingDomain.getResourceSet().getResources().add(newResource);
@@ -1510,5 +1514,18 @@ public class Bpmn2Editor extends MultiPageEditorPart implements IEditingDomainPr
      */
     protected boolean showOutlineView() {
         return false;
+    }
+
+    public void saveAsXMI() {
+        if (editingDomain.getResourceSet() != null
+                && editingDomain.getResourceSet().getResources().size() >= 1) {
+            URI oldUri = editingDomain.getResourceSet().getResources().get(0).getURI();
+            URI newUri = oldUri.trimFileExtension().appendFileExtension(BPMN_XMI_FILE_EXTENSION);
+
+            IWorkspaceRoot workspaceRoot = ResourcesPlugin.getWorkspace().getRoot();
+            IFile file = workspaceRoot.getFile(new Path(newUri.toPlatformString(true)));
+            doSaveAs(newUri, new FileEditorInput(file));
+        }
+
     }
 }

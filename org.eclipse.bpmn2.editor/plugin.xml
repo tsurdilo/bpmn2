@@ -43,6 +43,19 @@
             contributorClass="org.eclipse.bpmn2.presentation.Bpmn2ActionBarContributor">
       </editor>
    </extension>
+   
+   <extension point="org.eclipse.ui.editorActions">
+     <editorContribution 
+           id="org.eclipse.bpmn2.presentation.editorContribution1" 
+           targetID="org.eclipse.bpmn2.presentation.Bpmn2EditorID">
+       <action 
+             class="org.eclipse.bpmn2.presentation.actions.SaveAsXMIAction" 
+             id="org.eclipse.bpmn2.presentation.actions.saveasXMI" 
+             label="%_UI_BpmnEditorSaveAsXMILabel" 
+             style="push" 
+             toolbarPath="Normal/bpmnEditorActions" /> 
+     </editorContribution>
+   </extension>
 
 
 
