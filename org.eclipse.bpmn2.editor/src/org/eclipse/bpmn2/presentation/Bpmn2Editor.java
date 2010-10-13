@@ -61,6 +61,7 @@ import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EValidator;
+import org.eclipse.emf.ecore.impl.EStringToStringMapEntryImpl;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EContentAdapter;
@@ -1269,7 +1270,11 @@ public class Bpmn2Editor extends MultiPageEditorPart implements IEditingDomainPr
             List<EObject> content = new ArrayList<EObject>(oldResource.getContents());
             for (EObject eObject : content) {
                 if (eObject.eClass().getName().equals("DocumentRoot")) {
-                    newResource.getContents().addAll(eObject.eContents());
+                    for (EObject cur : eObject.eContents()) {
+                        if (cur instanceof EStringToStringMapEntryImpl)
+                            continue;
+                        newResource.getContents().add(cur);
+                    }
                 } else {
                     newResource.getContents().add(eObject);
                 }
