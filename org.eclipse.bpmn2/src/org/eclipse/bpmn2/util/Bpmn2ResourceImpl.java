@@ -43,6 +43,7 @@ import org.xml.sax.helpers.DefaultHandler;
 /**
  * <!-- begin-user-doc -->
  * The <b>Resource </b> associated with the package.
+ * @implements Bpmn2Resource
  * <!-- end-user-doc -->
  * @see org.eclipse.bpmn2.util.Bpmn2ResourceFactoryImpl
  * @generated
