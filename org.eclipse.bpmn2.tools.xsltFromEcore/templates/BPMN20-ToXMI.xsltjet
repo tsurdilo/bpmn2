@@ -4,11 +4,11 @@
 <xsl:stylesheet version="2.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
 	xmlns:xmi="http://schema.omg.org/spec/XMI"
-	xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+	xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL"
 	xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
 	xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
 	xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" 
-	xmlns:bpmnxmi="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI"
+	xmlns:bpmn2xmi="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI"
 	xmlns:bpmndixmi="http://www.omg.org/spec/BPMN/20100524/DI-XMI"
 	xmlns:dixmi="http://www.omg.org/spec/DD/20100524/DI-XMI"
 	xmlns:dcxmi="http://www.omg.org/spec/DD/20100524/DC-XMI"> 
@@ -28,10 +28,10 @@
 			
 	<xsl:template match="/">
 		<xmi:XMI xmi:version="2.0">
-			<xsl:for-each select="bpmn:definitions">
-			  <bpmnxmi:Definitions>			
+			<xsl:for-each select="bpmn2:definitions">
+			  <bpmn2xmi:Definitions>			
 				<xsl:call-template name="DefinitionsTemplate" />
-			  </bpmnxmi:Definitions>				
+			  </bpmn2xmi:Definitions>				
 			</xsl:for-each>
 		</xmi:XMI>
 	</xsl:template>

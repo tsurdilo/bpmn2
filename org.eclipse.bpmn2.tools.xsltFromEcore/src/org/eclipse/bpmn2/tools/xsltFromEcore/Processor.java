@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 
 public class Processor {
 
@@ -50,12 +50,9 @@ public class Processor {
 			if (resource != null) {
 				resource.unload();
 			}
-
+			
 			URI fileUri = URI.createFileURI(path);
-			XMIResourceFactoryImpl factory = new XMIResourceFactoryImpl();			
-			resource = factory.createResource(fileUri);
-			resource.load(null);
-			resourceSet.getResources().add(resource);
+			resource = resourceSet.getResource(fileUri, true);
 		}
 
 	}
@@ -70,10 +67,9 @@ public class Processor {
 
 	public Processor() {
 		this.resourceSet = new ResourceSetImpl();
-
+		Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().
+	    put("ecore", new EcoreResourceFactoryImpl());
 	}
-
-
 
 	public List<EClass> getMofContent() {
 		ArrayList<EClass> result = new ArrayList<EClass>();

@@ -124,7 +124,7 @@ public class JetInput {
 	}
 
 	public String getPrefix(EStructuralFeature feature) {
-		String prefix = "bpmn";
+		String prefix = "bpmn2";
 		String ns = extendedMetadata.getNamespace(feature);
 		if (ns != null) {
 			if (!ns.endsWith("-XMI")) {
@@ -137,6 +137,11 @@ public class JetInput {
 		}
 		return prefix;
 	}
+	public String getNamespace(EStructuralFeature feature) {
+		return extendedMetadata.getNamespace(feature);
+
+	}
+	
 
 	private Map<EStructuralFeature, List<EStructuralFeature>> affiliations;
 
