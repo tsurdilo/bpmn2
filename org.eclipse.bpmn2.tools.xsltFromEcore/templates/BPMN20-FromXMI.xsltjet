@@ -13,6 +13,7 @@
 	xmlns:bpmndixmi="http://www.omg.org/spec/BPMN/20100524/DI-XMI"
 	xmlns:dixmi="http://www.omg.org/spec/DD/20100524/DI-XMI"
 	xmlns:dcxmi="http://www.omg.org/spec/DD/20100524/DC-XMI"> 
+	<xsl:output method="xml" indent="yes"/>
 
 	<xsl:template match="/">
 	  <xsl:apply-templates/>
@@ -73,18 +74,22 @@
      <<%=input.getPrefix(feature)%>:<%=feature.getName()%>><xsl:value-of select="<%=input.getXPathForXMI(feature)%>"/></<%=input.getPrefix(feature)%>:<%=feature.getName()%>>
 <% } else { %>
      <xsl:for-each select="<%=feature.getName()%>">			
+<% if (input.hasSubFeatures(feature)) { %>
+      <xsl:choose>
 <%  for(EStructuralFeature subFeature: input.getAllSubFeatures(feature)) {  %>
-<% if (subFeature != feature) { %>
-       <xsl:if test="substring-after(@xmi:type, ':') = '<%=subFeature.getEType().getName()%>' or substring-after(@xsi:type, ':') = '<%=subFeature.getEType().getName()%>'">
-<% } %>
+       <xsl:when test="substring-after(@xmi:type, ':') = '<%=subFeature.getEType().getName()%>' or substring-after(@xsi:type, ':') = '<%=subFeature.getEType().getName()%>'">
          <<%=input.getPrefix(subFeature)%>:<%=input.getExtendedMetadata().getName(subFeature)%>>
 	       <xsl:call-template name="<%=subFeature.getEType().getName()%>Template" />			   
 	     </<%=input.getPrefix(subFeature)%>:<%=input.getExtendedMetadata().getName(subFeature)%>>
-<% if (subFeature != feature) { %>
-	   </xsl:if>
-<% } 
- } 
-%>
+	   </xsl:when>
+<%  } %>
+      </xsl:choose>
+<% } else {%>
+      <<%=input.getPrefix(feature)%>:<%=input.getExtendedMetadata().getName(feature)%>>
+        <xsl:call-template name="<%=feature.getEType().getName()%>Template" />			   
+      </<%=input.getPrefix(feature)%>:<%=input.getExtendedMetadata().getName(feature)%>>
+<% }%>
+
 	 </xsl:for-each>						
 <% } } %>
 <%if("Definitions".equals(c.getName())){%>   </bpmn2:definitions><%}%>
