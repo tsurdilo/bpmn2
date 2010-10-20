@@ -39,17 +39,24 @@
 	</xsl:template>
 
 <% for(EClass c: input.getClasses()) { %>
-	<xsl:template name="<%=c.getName()%>Template">
+	<xsl:template name="<%=c.getName()%>AttributesTemplate">
 <%for(EClass superClass: c.getESuperTypes()) {%>
-	  <xsl:call-template name="<%=superClass.getName()%>Template"/> 
+	  <xsl:call-template name="<%=superClass.getName()%>AttributesTemplate"/> 
 <%}%>
 <% for(EStructuralFeature feature: input.getAllFeatureThatAreAttributesInXMI(c)) { %>
 	  <xsl:if test="<%=input.getXPathForXml(feature)%>"><xsl:attribute name="<%=feature.getName() %>"> <xsl:value-of select="<%=input.getXPathForXml(feature) %>" /> </xsl:attribute></xsl:if>			
 <% } %>
 <% for(EStructuralFeature feature: input.getAllFeatureThatAreReferences(c)) { %>
       <xsl:if test="<%=input.getXPathForXml(feature)%>"><xsl:attribute name="<%=feature.getName() %>"><xsl:call-template name="concat"><xsl:with-param name="nodeset" select="<%=input.getXPathForXml(feature)%>"/></xsl:call-template></xsl:attribute></xsl:if>			
-<% } 
- for(EStructuralFeature feature: input.getAllOtherFeaturesInXMI(c)) { %>
+<% } %>
+	</xsl:template>
+
+	<xsl:template name="<%=c.getName()%>Template">
+	  <xsl:call-template name="<%=c.getName()%>AttributesTemplate"/> 	
+<%for(EClass superClass: c.getESuperTypes()) {%>
+	  <xsl:call-template name="<%=superClass.getName()%>Template"/> 
+<%}%>
+<% for(EStructuralFeature feature: input.getAllOtherFeaturesInXMI(c)) { %>
       <xsl:for-each select="<%=input.getSubFeaturesXPath(feature)%>">
 <%if(input.hasSubFeatures(feature)){ %>
         <xsl:choose>		

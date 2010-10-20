@@ -55,23 +55,31 @@
 	</xsl:template>
 
 <% for(EClass c: input.getClasses()) { %>
+	<xsl:template name="<%=c.getName()%>AttributesTemplate">
+<%for(EClass superClass: c.getESuperTypes()) {%>
+     <xsl:call-template name="<%=superClass.getName()%>AttributesTemplate"/> 
+<%}
+ for(EStructuralFeature feature: input.getAllFeatureThatAreAttributesInXml(c)) { %>
+     <xsl:if test="<%=input.getXPathForXMI(feature)%>"><xsl:attribute name="<%=input.getExtendedMetadata().getName(feature)%>"> <xsl:value-of select="<%=input.getXPathForXMI(feature)%>" /> </xsl:attribute></xsl:if>			
+<% } %>
+	</xsl:template>
+
 	<xsl:template name="<%=c.getName()%>Template" <%if("Definitions".equals(c.getName())){%> match="//bpmn2xmi:Definitions" <%}%>>
 <%if("Definitions".equals(c.getName())){%>   <bpmn2:definitions><%}%>
+     <xsl:call-template name="<%=c.getName()%>AttributesTemplate"/> 
 <%for(EClass superClass: c.getESuperTypes()) {%>
      <xsl:call-template name="<%=superClass.getName()%>Template"/> 
 <%}
- for(EStructuralFeature feature: input.getAllFeatureThatAreAttributesInXml(c)) { %>
-     <xsl:if test="<%=input.getXPathForXMI(feature)%>"><xsl:attribute name="<%=feature.getName() %>"> <xsl:value-of select="<%=input.getXPathForXMI(feature)%>" /> </xsl:attribute></xsl:if>			
-<% } 
+
   for(EStructuralFeature feature: input.getAllElementsInXml(c)) { 
   if(input.isReference(feature)) { %>
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="<%=input.getXPathForXMI(feature)%>" />
-       <xsl:with-param name="elementName" select="'<%=input.getPrefix(feature)%>:<%=feature.getName()%>'" />
+       <xsl:with-param name="elementName" select="'<%=input.getPrefix(feature)%>:<%=input.getExtendedMetadata().getName(feature)%>'" />
        <xsl:with-param name="elementNamespace" select="'<%=input.getNamespace(feature)%>'" />
      </xsl:call-template>
 <% } else if(input.isSimpleElement(feature)) { %>
-     <<%=input.getPrefix(feature)%>:<%=feature.getName()%>><xsl:value-of select="<%=input.getXPathForXMI(feature)%>"/></<%=input.getPrefix(feature)%>:<%=feature.getName()%>>
+     <<%=input.getPrefix(feature)%>:<%=input.getExtendedMetadata().getName(feature)%>><xsl:value-of select="<%=input.getXPathForXMI(feature)%>"/></<%=input.getPrefix(feature)%>:<%=feature.getName()%>>
 <% } else { %>
      <xsl:for-each select="<%=feature.getName()%>">			
 <% if (input.hasSubFeatures(feature)) { %>
@@ -89,7 +97,6 @@
         <xsl:call-template name="<%=feature.getEType().getName()%>Template" />			   
       </<%=input.getPrefix(feature)%>:<%=input.getExtendedMetadata().getName(feature)%>>
 <% }%>
-
 	 </xsl:for-each>						
 <% } } %>
 <%if("Definitions".equals(c.getName())){%>   </bpmn2:definitions><%}%>
