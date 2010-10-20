@@ -65,17 +65,17 @@
       </xsl:for-each>
       <xsl:for-each select="bpmn2:performer|bpmn2:humanPerformer|bpmn2:potentialOwner">
         <xsl:choose>		 
-          <xsl:when test="name() = 'bpmn2:performer'">
+          <xsl:when test="self::bpmn2:performer">
             <resources xmi:type="bpmn2xmi:Performer">			    
 			  <xsl:call-template name="PerformerTemplate" />			   
 			</resources>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:humanPerformer'">
+          <xsl:when test="self::bpmn2:humanPerformer">
             <resources xmi:type="bpmn2xmi:HumanPerformer">			    
 			  <xsl:call-template name="HumanPerformerTemplate" />			   
 			</resources>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:potentialOwner'">
+          <xsl:when test="self::bpmn2:potentialOwner">
             <resources xmi:type="bpmn2xmi:PotentialOwner">			    
 			  <xsl:call-template name="PotentialOwnerTemplate" />			   
 			</resources>
@@ -84,12 +84,12 @@
       </xsl:for-each>
       <xsl:for-each select="bpmn2:multiInstanceLoopCharacteristics|bpmn2:standardLoopCharacteristics">
         <xsl:choose>		 
-          <xsl:when test="name() = 'bpmn2:multiInstanceLoopCharacteristics'">
+          <xsl:when test="self::bpmn2:multiInstanceLoopCharacteristics">
             <loopCharacteristics xmi:type="bpmn2xmi:MultiInstanceLoopCharacteristics">			    
 			  <xsl:call-template name="MultiInstanceLoopCharacteristicsTemplate" />			   
 			</loopCharacteristics>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:standardLoopCharacteristics'">
+          <xsl:when test="self::bpmn2:standardLoopCharacteristics">
             <loopCharacteristics xmi:type="bpmn2xmi:StandardLoopCharacteristics">			    
 			  <xsl:call-template name="StandardLoopCharacteristicsTemplate" />			   
 			</loopCharacteristics>
@@ -230,52 +230,52 @@
       </xsl:for-each>
       <xsl:for-each select="bpmn2:cancelEventDefinition|bpmn2:compensateEventDefinition|bpmn2:conditionalEventDefinition|bpmn2:errorEventDefinition|bpmn2:escalationEventDefinition|bpmn2:linkEventDefinition|bpmn2:messageEventDefinition|bpmn2:signalEventDefinition|bpmn2:terminateEventDefinition|bpmn2:timerEventDefinition">
         <xsl:choose>		 
-          <xsl:when test="name() = 'bpmn2:cancelEventDefinition'">
+          <xsl:when test="self::bpmn2:cancelEventDefinition">
             <eventDefinitions xmi:type="bpmn2xmi:CancelEventDefinition">			    
 			  <xsl:call-template name="CancelEventDefinitionTemplate" />			   
 			</eventDefinitions>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:compensateEventDefinition'">
+          <xsl:when test="self::bpmn2:compensateEventDefinition">
             <eventDefinitions xmi:type="bpmn2xmi:CompensateEventDefinition">			    
 			  <xsl:call-template name="CompensateEventDefinitionTemplate" />			   
 			</eventDefinitions>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:conditionalEventDefinition'">
+          <xsl:when test="self::bpmn2:conditionalEventDefinition">
             <eventDefinitions xmi:type="bpmn2xmi:ConditionalEventDefinition">			    
 			  <xsl:call-template name="ConditionalEventDefinitionTemplate" />			   
 			</eventDefinitions>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:errorEventDefinition'">
+          <xsl:when test="self::bpmn2:errorEventDefinition">
             <eventDefinitions xmi:type="bpmn2xmi:ErrorEventDefinition">			    
 			  <xsl:call-template name="ErrorEventDefinitionTemplate" />			   
 			</eventDefinitions>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:escalationEventDefinition'">
+          <xsl:when test="self::bpmn2:escalationEventDefinition">
             <eventDefinitions xmi:type="bpmn2xmi:EscalationEventDefinition">			    
 			  <xsl:call-template name="EscalationEventDefinitionTemplate" />			   
 			</eventDefinitions>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:linkEventDefinition'">
+          <xsl:when test="self::bpmn2:linkEventDefinition">
             <eventDefinitions xmi:type="bpmn2xmi:LinkEventDefinition">			    
 			  <xsl:call-template name="LinkEventDefinitionTemplate" />			   
 			</eventDefinitions>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:messageEventDefinition'">
+          <xsl:when test="self::bpmn2:messageEventDefinition">
             <eventDefinitions xmi:type="bpmn2xmi:MessageEventDefinition">			    
 			  <xsl:call-template name="MessageEventDefinitionTemplate" />			   
 			</eventDefinitions>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:signalEventDefinition'">
+          <xsl:when test="self::bpmn2:signalEventDefinition">
             <eventDefinitions xmi:type="bpmn2xmi:SignalEventDefinition">			    
 			  <xsl:call-template name="SignalEventDefinitionTemplate" />			   
 			</eventDefinitions>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:terminateEventDefinition'">
+          <xsl:when test="self::bpmn2:terminateEventDefinition">
             <eventDefinitions xmi:type="bpmn2xmi:TerminateEventDefinition">			    
 			  <xsl:call-template name="TerminateEventDefinitionTemplate" />			   
 			</eventDefinitions>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:timerEventDefinition'">
+          <xsl:when test="self::bpmn2:timerEventDefinition">
             <eventDefinitions xmi:type="bpmn2xmi:TimerEventDefinition">			    
 			  <xsl:call-template name="TimerEventDefinitionTemplate" />			   
 			</eventDefinitions>
@@ -339,17 +339,17 @@
       </xsl:for-each>
       <xsl:for-each select="bpmn2:association|bpmn2:group|bpmn2:textAnnotation">
         <xsl:choose>		 
-          <xsl:when test="name() = 'bpmn2:association'">
+          <xsl:when test="self::bpmn2:association">
             <artifacts xmi:type="bpmn2xmi:Association">			    
 			  <xsl:call-template name="AssociationTemplate" />			   
 			</artifacts>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:group'">
+          <xsl:when test="self::bpmn2:group">
             <artifacts xmi:type="bpmn2xmi:Group">			    
 			  <xsl:call-template name="GroupTemplate" />			   
 			</artifacts>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:textAnnotation'">
+          <xsl:when test="self::bpmn2:textAnnotation">
             <artifacts xmi:type="bpmn2xmi:TextAnnotation">			    
 			  <xsl:call-template name="TextAnnotationTemplate" />			   
 			</artifacts>
@@ -358,17 +358,17 @@
       </xsl:for-each>
       <xsl:for-each select="bpmn2:callConversation|bpmn2:conversation|bpmn2:subConversation">
         <xsl:choose>		 
-          <xsl:when test="name() = 'bpmn2:callConversation'">
+          <xsl:when test="self::bpmn2:callConversation">
             <conversations xmi:type="bpmn2xmi:CallConversation">			    
 			  <xsl:call-template name="CallConversationTemplate" />			   
 			</conversations>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:conversation'">
+          <xsl:when test="self::bpmn2:conversation">
             <conversations xmi:type="bpmn2xmi:Conversation">			    
 			  <xsl:call-template name="ConversationTemplate" />			   
 			</conversations>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:subConversation'">
+          <xsl:when test="self::bpmn2:subConversation">
             <conversations xmi:type="bpmn2xmi:SubConversation">			    
 			  <xsl:call-template name="SubConversationTemplate" />			   
 			</conversations>
@@ -611,172 +611,172 @@
       </xsl:for-each>
       <xsl:for-each select="bpmn2:eventDefinition|bpmn2:category|bpmn2:collaboration|bpmn2:correlationProperty|bpmn2:dataStore|bpmn2:endPoint|bpmn2:error|bpmn2:escalation|bpmn2:globalBusinessRuleTask|bpmn2:globalManualTask|bpmn2:globalScriptTask|bpmn2:globalTask|bpmn2:globalUserTask|bpmn2:interface|bpmn2:itemDefinition|bpmn2:message|bpmn2:partnerEntity|bpmn2:partnerRole|bpmn2:process|bpmn2:resource|bpmn2:signal|bpmn2:cancelEventDefinition|bpmn2:compensateEventDefinition|bpmn2:conditionalEventDefinition|bpmn2:errorEventDefinition|bpmn2:escalationEventDefinition|bpmn2:linkEventDefinition|bpmn2:messageEventDefinition|bpmn2:signalEventDefinition|bpmn2:terminateEventDefinition|bpmn2:timerEventDefinition|bpmn2:choreography|bpmn2:globalConversation|bpmn2:globalChoreographyTask">
         <xsl:choose>		 
-          <xsl:when test="name() = 'bpmn2:eventDefinition'">
+          <xsl:when test="self::bpmn2:eventDefinition">
             <rootElements xmi:type="bpmn2xmi:EventDefinition">			    
 			  <xsl:call-template name="EventDefinitionTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:category'">
+          <xsl:when test="self::bpmn2:category">
             <rootElements xmi:type="bpmn2xmi:Category">			    
 			  <xsl:call-template name="CategoryTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:collaboration'">
+          <xsl:when test="self::bpmn2:collaboration">
             <rootElements xmi:type="bpmn2xmi:Collaboration">			    
 			  <xsl:call-template name="CollaborationTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:correlationProperty'">
+          <xsl:when test="self::bpmn2:correlationProperty">
             <rootElements xmi:type="bpmn2xmi:CorrelationProperty">			    
 			  <xsl:call-template name="CorrelationPropertyTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:dataStore'">
+          <xsl:when test="self::bpmn2:dataStore">
             <rootElements xmi:type="bpmn2xmi:DataStore">			    
 			  <xsl:call-template name="DataStoreTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:endPoint'">
+          <xsl:when test="self::bpmn2:endPoint">
             <rootElements xmi:type="bpmn2xmi:EndPoint">			    
 			  <xsl:call-template name="EndPointTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:error'">
+          <xsl:when test="self::bpmn2:error">
             <rootElements xmi:type="bpmn2xmi:Error">			    
 			  <xsl:call-template name="ErrorTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:escalation'">
+          <xsl:when test="self::bpmn2:escalation">
             <rootElements xmi:type="bpmn2xmi:Escalation">			    
 			  <xsl:call-template name="EscalationTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:globalBusinessRuleTask'">
+          <xsl:when test="self::bpmn2:globalBusinessRuleTask">
             <rootElements xmi:type="bpmn2xmi:GlobalBusinessRuleTask">			    
 			  <xsl:call-template name="GlobalBusinessRuleTaskTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:globalManualTask'">
+          <xsl:when test="self::bpmn2:globalManualTask">
             <rootElements xmi:type="bpmn2xmi:GlobalManualTask">			    
 			  <xsl:call-template name="GlobalManualTaskTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:globalScriptTask'">
+          <xsl:when test="self::bpmn2:globalScriptTask">
             <rootElements xmi:type="bpmn2xmi:GlobalScriptTask">			    
 			  <xsl:call-template name="GlobalScriptTaskTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:globalTask'">
+          <xsl:when test="self::bpmn2:globalTask">
             <rootElements xmi:type="bpmn2xmi:GlobalTask">			    
 			  <xsl:call-template name="GlobalTaskTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:globalUserTask'">
+          <xsl:when test="self::bpmn2:globalUserTask">
             <rootElements xmi:type="bpmn2xmi:GlobalUserTask">			    
 			  <xsl:call-template name="GlobalUserTaskTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:interface'">
+          <xsl:when test="self::bpmn2:interface">
             <rootElements xmi:type="bpmn2xmi:Interface">			    
 			  <xsl:call-template name="InterfaceTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:itemDefinition'">
+          <xsl:when test="self::bpmn2:itemDefinition">
             <rootElements xmi:type="bpmn2xmi:ItemDefinition">			    
 			  <xsl:call-template name="ItemDefinitionTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:message'">
+          <xsl:when test="self::bpmn2:message">
             <rootElements xmi:type="bpmn2xmi:Message">			    
 			  <xsl:call-template name="MessageTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:partnerEntity'">
+          <xsl:when test="self::bpmn2:partnerEntity">
             <rootElements xmi:type="bpmn2xmi:PartnerEntity">			    
 			  <xsl:call-template name="PartnerEntityTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:partnerRole'">
+          <xsl:when test="self::bpmn2:partnerRole">
             <rootElements xmi:type="bpmn2xmi:PartnerRole">			    
 			  <xsl:call-template name="PartnerRoleTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:process'">
+          <xsl:when test="self::bpmn2:process">
             <rootElements xmi:type="bpmn2xmi:Process">			    
 			  <xsl:call-template name="ProcessTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:resource'">
+          <xsl:when test="self::bpmn2:resource">
             <rootElements xmi:type="bpmn2xmi:Resource">			    
 			  <xsl:call-template name="ResourceTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:signal'">
+          <xsl:when test="self::bpmn2:signal">
             <rootElements xmi:type="bpmn2xmi:Signal">			    
 			  <xsl:call-template name="SignalTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:cancelEventDefinition'">
+          <xsl:when test="self::bpmn2:cancelEventDefinition">
             <rootElements xmi:type="bpmn2xmi:CancelEventDefinition">			    
 			  <xsl:call-template name="CancelEventDefinitionTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:compensateEventDefinition'">
+          <xsl:when test="self::bpmn2:compensateEventDefinition">
             <rootElements xmi:type="bpmn2xmi:CompensateEventDefinition">			    
 			  <xsl:call-template name="CompensateEventDefinitionTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:conditionalEventDefinition'">
+          <xsl:when test="self::bpmn2:conditionalEventDefinition">
             <rootElements xmi:type="bpmn2xmi:ConditionalEventDefinition">			    
 			  <xsl:call-template name="ConditionalEventDefinitionTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:errorEventDefinition'">
+          <xsl:when test="self::bpmn2:errorEventDefinition">
             <rootElements xmi:type="bpmn2xmi:ErrorEventDefinition">			    
 			  <xsl:call-template name="ErrorEventDefinitionTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:escalationEventDefinition'">
+          <xsl:when test="self::bpmn2:escalationEventDefinition">
             <rootElements xmi:type="bpmn2xmi:EscalationEventDefinition">			    
 			  <xsl:call-template name="EscalationEventDefinitionTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:linkEventDefinition'">
+          <xsl:when test="self::bpmn2:linkEventDefinition">
             <rootElements xmi:type="bpmn2xmi:LinkEventDefinition">			    
 			  <xsl:call-template name="LinkEventDefinitionTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:messageEventDefinition'">
+          <xsl:when test="self::bpmn2:messageEventDefinition">
             <rootElements xmi:type="bpmn2xmi:MessageEventDefinition">			    
 			  <xsl:call-template name="MessageEventDefinitionTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:signalEventDefinition'">
+          <xsl:when test="self::bpmn2:signalEventDefinition">
             <rootElements xmi:type="bpmn2xmi:SignalEventDefinition">			    
 			  <xsl:call-template name="SignalEventDefinitionTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:terminateEventDefinition'">
+          <xsl:when test="self::bpmn2:terminateEventDefinition">
             <rootElements xmi:type="bpmn2xmi:TerminateEventDefinition">			    
 			  <xsl:call-template name="TerminateEventDefinitionTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:timerEventDefinition'">
+          <xsl:when test="self::bpmn2:timerEventDefinition">
             <rootElements xmi:type="bpmn2xmi:TimerEventDefinition">			    
 			  <xsl:call-template name="TimerEventDefinitionTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:choreography'">
+          <xsl:when test="self::bpmn2:choreography">
             <rootElements xmi:type="bpmn2xmi:Choreography">			    
 			  <xsl:call-template name="ChoreographyTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:globalConversation'">
+          <xsl:when test="self::bpmn2:globalConversation">
             <rootElements xmi:type="bpmn2xmi:GlobalConversation">			    
 			  <xsl:call-template name="GlobalConversationTemplate" />			   
 			</rootElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:globalChoreographyTask'">
+          <xsl:when test="self::bpmn2:globalChoreographyTask">
             <rootElements xmi:type="bpmn2xmi:GlobalChoreographyTask">			    
 			  <xsl:call-template name="GlobalChoreographyTaskTemplate" />			   
 			</rootElements>
@@ -921,157 +921,157 @@
       </xsl:for-each>
       <xsl:for-each select="bpmn2:adHocSubProcess|bpmn2:boundaryEvent|bpmn2:businessRuleTask|bpmn2:callActivity|bpmn2:callChoreography|bpmn2:choreographyTask|bpmn2:complexGateway|bpmn2:dataObject|bpmn2:dataObjectReference|bpmn2:dataStoreReference|bpmn2:endEvent|bpmn2:event|bpmn2:eventBasedGateway|bpmn2:exclusiveGateway|bpmn2:implicitThrowEvent|bpmn2:inclusiveGateway|bpmn2:intermediateCatchEvent|bpmn2:intermediateThrowEvent|bpmn2:manualTask|bpmn2:parallelGateway|bpmn2:receiveTask|bpmn2:scriptTask|bpmn2:sendTask|bpmn2:sequenceFlow|bpmn2:serviceTask|bpmn2:startEvent|bpmn2:subChoreography|bpmn2:subProcess|bpmn2:task|bpmn2:transaction|bpmn2:userTask">
         <xsl:choose>		 
-          <xsl:when test="name() = 'bpmn2:adHocSubProcess'">
+          <xsl:when test="self::bpmn2:adHocSubProcess">
             <flowElements xmi:type="bpmn2xmi:AdHocSubProcess">			    
 			  <xsl:call-template name="AdHocSubProcessTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:boundaryEvent'">
+          <xsl:when test="self::bpmn2:boundaryEvent">
             <flowElements xmi:type="bpmn2xmi:BoundaryEvent">			    
 			  <xsl:call-template name="BoundaryEventTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:businessRuleTask'">
+          <xsl:when test="self::bpmn2:businessRuleTask">
             <flowElements xmi:type="bpmn2xmi:BusinessRuleTask">			    
 			  <xsl:call-template name="BusinessRuleTaskTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:callActivity'">
+          <xsl:when test="self::bpmn2:callActivity">
             <flowElements xmi:type="bpmn2xmi:CallActivity">			    
 			  <xsl:call-template name="CallActivityTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:callChoreography'">
+          <xsl:when test="self::bpmn2:callChoreography">
             <flowElements xmi:type="bpmn2xmi:CallChoreography">			    
 			  <xsl:call-template name="CallChoreographyTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:choreographyTask'">
+          <xsl:when test="self::bpmn2:choreographyTask">
             <flowElements xmi:type="bpmn2xmi:ChoreographyTask">			    
 			  <xsl:call-template name="ChoreographyTaskTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:complexGateway'">
+          <xsl:when test="self::bpmn2:complexGateway">
             <flowElements xmi:type="bpmn2xmi:ComplexGateway">			    
 			  <xsl:call-template name="ComplexGatewayTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:dataObject'">
+          <xsl:when test="self::bpmn2:dataObject">
             <flowElements xmi:type="bpmn2xmi:DataObject">			    
 			  <xsl:call-template name="DataObjectTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:dataObjectReference'">
+          <xsl:when test="self::bpmn2:dataObjectReference">
             <flowElements xmi:type="bpmn2xmi:DataObjectReference">			    
 			  <xsl:call-template name="DataObjectReferenceTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:dataStoreReference'">
+          <xsl:when test="self::bpmn2:dataStoreReference">
             <flowElements xmi:type="bpmn2xmi:DataStoreReference">			    
 			  <xsl:call-template name="DataStoreReferenceTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:endEvent'">
+          <xsl:when test="self::bpmn2:endEvent">
             <flowElements xmi:type="bpmn2xmi:EndEvent">			    
 			  <xsl:call-template name="EndEventTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:event'">
+          <xsl:when test="self::bpmn2:event">
             <flowElements xmi:type="bpmn2xmi:Event">			    
 			  <xsl:call-template name="EventTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:eventBasedGateway'">
+          <xsl:when test="self::bpmn2:eventBasedGateway">
             <flowElements xmi:type="bpmn2xmi:EventBasedGateway">			    
 			  <xsl:call-template name="EventBasedGatewayTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:exclusiveGateway'">
+          <xsl:when test="self::bpmn2:exclusiveGateway">
             <flowElements xmi:type="bpmn2xmi:ExclusiveGateway">			    
 			  <xsl:call-template name="ExclusiveGatewayTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:implicitThrowEvent'">
+          <xsl:when test="self::bpmn2:implicitThrowEvent">
             <flowElements xmi:type="bpmn2xmi:ImplicitThrowEvent">			    
 			  <xsl:call-template name="ImplicitThrowEventTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:inclusiveGateway'">
+          <xsl:when test="self::bpmn2:inclusiveGateway">
             <flowElements xmi:type="bpmn2xmi:InclusiveGateway">			    
 			  <xsl:call-template name="InclusiveGatewayTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:intermediateCatchEvent'">
+          <xsl:when test="self::bpmn2:intermediateCatchEvent">
             <flowElements xmi:type="bpmn2xmi:IntermediateCatchEvent">			    
 			  <xsl:call-template name="IntermediateCatchEventTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:intermediateThrowEvent'">
+          <xsl:when test="self::bpmn2:intermediateThrowEvent">
             <flowElements xmi:type="bpmn2xmi:IntermediateThrowEvent">			    
 			  <xsl:call-template name="IntermediateThrowEventTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:manualTask'">
+          <xsl:when test="self::bpmn2:manualTask">
             <flowElements xmi:type="bpmn2xmi:ManualTask">			    
 			  <xsl:call-template name="ManualTaskTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:parallelGateway'">
+          <xsl:when test="self::bpmn2:parallelGateway">
             <flowElements xmi:type="bpmn2xmi:ParallelGateway">			    
 			  <xsl:call-template name="ParallelGatewayTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:receiveTask'">
+          <xsl:when test="self::bpmn2:receiveTask">
             <flowElements xmi:type="bpmn2xmi:ReceiveTask">			    
 			  <xsl:call-template name="ReceiveTaskTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:scriptTask'">
+          <xsl:when test="self::bpmn2:scriptTask">
             <flowElements xmi:type="bpmn2xmi:ScriptTask">			    
 			  <xsl:call-template name="ScriptTaskTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:sendTask'">
+          <xsl:when test="self::bpmn2:sendTask">
             <flowElements xmi:type="bpmn2xmi:SendTask">			    
 			  <xsl:call-template name="SendTaskTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:sequenceFlow'">
+          <xsl:when test="self::bpmn2:sequenceFlow">
             <flowElements xmi:type="bpmn2xmi:SequenceFlow">			    
 			  <xsl:call-template name="SequenceFlowTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:serviceTask'">
+          <xsl:when test="self::bpmn2:serviceTask">
             <flowElements xmi:type="bpmn2xmi:ServiceTask">			    
 			  <xsl:call-template name="ServiceTaskTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:startEvent'">
+          <xsl:when test="self::bpmn2:startEvent">
             <flowElements xmi:type="bpmn2xmi:StartEvent">			    
 			  <xsl:call-template name="StartEventTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:subChoreography'">
+          <xsl:when test="self::bpmn2:subChoreography">
             <flowElements xmi:type="bpmn2xmi:SubChoreography">			    
 			  <xsl:call-template name="SubChoreographyTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:subProcess'">
+          <xsl:when test="self::bpmn2:subProcess">
             <flowElements xmi:type="bpmn2xmi:SubProcess">			    
 			  <xsl:call-template name="SubProcessTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:task'">
+          <xsl:when test="self::bpmn2:task">
             <flowElements xmi:type="bpmn2xmi:Task">			    
 			  <xsl:call-template name="TaskTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:transaction'">
+          <xsl:when test="self::bpmn2:transaction">
             <flowElements xmi:type="bpmn2xmi:Transaction">			    
 			  <xsl:call-template name="TransactionTemplate" />			   
 			</flowElements>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:userTask'">
+          <xsl:when test="self::bpmn2:userTask">
             <flowElements xmi:type="bpmn2xmi:UserTask">			    
 			  <xsl:call-template name="UserTaskTemplate" />			   
 			</flowElements>
@@ -1127,17 +1127,17 @@
 	  <xsl:call-template name="CallableElementTemplate"/> 
       <xsl:for-each select="bpmn2:performer|bpmn2:humanPerformer|bpmn2:potentialOwner">
         <xsl:choose>		 
-          <xsl:when test="name() = 'bpmn2:performer'">
+          <xsl:when test="self::bpmn2:performer">
             <resources xmi:type="bpmn2xmi:Performer">			    
 			  <xsl:call-template name="PerformerTemplate" />			   
 			</resources>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:humanPerformer'">
+          <xsl:when test="self::bpmn2:humanPerformer">
             <resources xmi:type="bpmn2xmi:HumanPerformer">			    
 			  <xsl:call-template name="HumanPerformerTemplate" />			   
 			</resources>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:potentialOwner'">
+          <xsl:when test="self::bpmn2:potentialOwner">
             <resources xmi:type="bpmn2xmi:PotentialOwner">			    
 			  <xsl:call-template name="PotentialOwnerTemplate" />			   
 			</resources>
@@ -1460,17 +1460,17 @@
       </xsl:for-each>
       <xsl:for-each select="bpmn2:association|bpmn2:group|bpmn2:textAnnotation">
         <xsl:choose>		 
-          <xsl:when test="name() = 'bpmn2:association'">
+          <xsl:when test="self::bpmn2:association">
             <artifacts xmi:type="bpmn2xmi:Association">			    
 			  <xsl:call-template name="AssociationTemplate" />			   
 			</artifacts>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:group'">
+          <xsl:when test="self::bpmn2:group">
             <artifacts xmi:type="bpmn2xmi:Group">			    
 			  <xsl:call-template name="GroupTemplate" />			   
 			</artifacts>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:textAnnotation'">
+          <xsl:when test="self::bpmn2:textAnnotation">
             <artifacts xmi:type="bpmn2xmi:TextAnnotation">			    
 			  <xsl:call-template name="TextAnnotationTemplate" />			   
 			</artifacts>
@@ -1479,17 +1479,17 @@
       </xsl:for-each>
       <xsl:for-each select="bpmn2:performer|bpmn2:humanPerformer|bpmn2:potentialOwner">
         <xsl:choose>		 
-          <xsl:when test="name() = 'bpmn2:performer'">
+          <xsl:when test="self::bpmn2:performer">
             <resources xmi:type="bpmn2xmi:Performer">			    
 			  <xsl:call-template name="PerformerTemplate" />			   
 			</resources>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:humanPerformer'">
+          <xsl:when test="self::bpmn2:humanPerformer">
             <resources xmi:type="bpmn2xmi:HumanPerformer">			    
 			  <xsl:call-template name="HumanPerformerTemplate" />			   
 			</resources>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:potentialOwner'">
+          <xsl:when test="self::bpmn2:potentialOwner">
             <resources xmi:type="bpmn2xmi:PotentialOwner">			    
 			  <xsl:call-template name="PotentialOwnerTemplate" />			   
 			</resources>
@@ -1541,7 +1541,7 @@
 	<xsl:template name="ResourceAssignmentExpressionTemplate">
       <xsl:for-each select="bpmn2:formalExpression">
         <xsl:choose>		 
-          <xsl:when test="name() = 'bpmn2:formalExpression'">
+          <xsl:when test="self::bpmn2:formalExpression">
             <expression xmi:type="bpmn2xmi:FormalExpression">			    
 			  <xsl:call-template name="FormalExpressionTemplate" />			   
 			</expression>
@@ -1561,7 +1561,7 @@
       <xsl:if test="@parameterRef"><xsl:attribute name="parameterRef"><xsl:call-template name="concat"><xsl:with-param name="nodeset" select="@parameterRef"/></xsl:call-template></xsl:attribute></xsl:if>			
       <xsl:for-each select="bpmn2:formalExpression">
         <xsl:choose>		 
-          <xsl:when test="name() = 'bpmn2:formalExpression'">
+          <xsl:when test="self::bpmn2:formalExpression">
             <expression xmi:type="bpmn2xmi:FormalExpression">			    
 			  <xsl:call-template name="FormalExpressionTemplate" />			   
 			</expression>
@@ -1657,17 +1657,17 @@
 	  <xsl:call-template name="FlowElementsContainerTemplate"/> 
       <xsl:for-each select="bpmn2:association|bpmn2:group|bpmn2:textAnnotation">
         <xsl:choose>		 
-          <xsl:when test="name() = 'bpmn2:association'">
+          <xsl:when test="self::bpmn2:association">
             <artifacts xmi:type="bpmn2xmi:Association">			    
 			  <xsl:call-template name="AssociationTemplate" />			   
 			</artifacts>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:group'">
+          <xsl:when test="self::bpmn2:group">
             <artifacts xmi:type="bpmn2xmi:Group">			    
 			  <xsl:call-template name="GroupTemplate" />			   
 			</artifacts>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:textAnnotation'">
+          <xsl:when test="self::bpmn2:textAnnotation">
             <artifacts xmi:type="bpmn2xmi:TextAnnotation">			    
 			  <xsl:call-template name="TextAnnotationTemplate" />			   
 			</artifacts>
@@ -1680,17 +1680,17 @@
 	  <xsl:call-template name="ConversationNodeTemplate"/> 
       <xsl:for-each select="bpmn2:callConversation|bpmn2:conversation|bpmn2:subConversation">
         <xsl:choose>		 
-          <xsl:when test="name() = 'bpmn2:callConversation'">
+          <xsl:when test="self::bpmn2:callConversation">
             <conversationNodes xmi:type="bpmn2xmi:CallConversation">			    
 			  <xsl:call-template name="CallConversationTemplate" />			   
 			</conversationNodes>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:conversation'">
+          <xsl:when test="self::bpmn2:conversation">
             <conversationNodes xmi:type="bpmn2xmi:Conversation">			    
 			  <xsl:call-template name="ConversationTemplate" />			   
 			</conversationNodes>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:subConversation'">
+          <xsl:when test="self::bpmn2:subConversation">
             <conversationNodes xmi:type="bpmn2xmi:SubConversation">			    
 			  <xsl:call-template name="SubConversationTemplate" />			   
 			</conversationNodes>
@@ -1705,17 +1705,17 @@
 	  <xsl:if test="@triggeredByEvent"><xsl:attribute name="triggeredByEvent"> <xsl:value-of select="@triggeredByEvent" /> </xsl:attribute></xsl:if>			
       <xsl:for-each select="bpmn2:association|bpmn2:group|bpmn2:textAnnotation">
         <xsl:choose>		 
-          <xsl:when test="name() = 'bpmn2:association'">
+          <xsl:when test="self::bpmn2:association">
             <artifacts xmi:type="bpmn2xmi:Association">			    
 			  <xsl:call-template name="AssociationTemplate" />			   
 			</artifacts>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:group'">
+          <xsl:when test="self::bpmn2:group">
             <artifacts xmi:type="bpmn2xmi:Group">			    
 			  <xsl:call-template name="GroupTemplate" />			   
 			</artifacts>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:textAnnotation'">
+          <xsl:when test="self::bpmn2:textAnnotation">
             <artifacts xmi:type="bpmn2xmi:TextAnnotation">			    
 			  <xsl:call-template name="TextAnnotationTemplate" />			   
 			</artifacts>
@@ -1759,52 +1759,52 @@
       </xsl:for-each>
       <xsl:for-each select="bpmn2:cancelEventDefinition|bpmn2:compensateEventDefinition|bpmn2:conditionalEventDefinition|bpmn2:errorEventDefinition|bpmn2:escalationEventDefinition|bpmn2:linkEventDefinition|bpmn2:messageEventDefinition|bpmn2:signalEventDefinition|bpmn2:terminateEventDefinition|bpmn2:timerEventDefinition">
         <xsl:choose>		 
-          <xsl:when test="name() = 'bpmn2:cancelEventDefinition'">
+          <xsl:when test="self::bpmn2:cancelEventDefinition">
             <eventDefinitions xmi:type="bpmn2xmi:CancelEventDefinition">			    
 			  <xsl:call-template name="CancelEventDefinitionTemplate" />			   
 			</eventDefinitions>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:compensateEventDefinition'">
+          <xsl:when test="self::bpmn2:compensateEventDefinition">
             <eventDefinitions xmi:type="bpmn2xmi:CompensateEventDefinition">			    
 			  <xsl:call-template name="CompensateEventDefinitionTemplate" />			   
 			</eventDefinitions>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:conditionalEventDefinition'">
+          <xsl:when test="self::bpmn2:conditionalEventDefinition">
             <eventDefinitions xmi:type="bpmn2xmi:ConditionalEventDefinition">			    
 			  <xsl:call-template name="ConditionalEventDefinitionTemplate" />			   
 			</eventDefinitions>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:errorEventDefinition'">
+          <xsl:when test="self::bpmn2:errorEventDefinition">
             <eventDefinitions xmi:type="bpmn2xmi:ErrorEventDefinition">			    
 			  <xsl:call-template name="ErrorEventDefinitionTemplate" />			   
 			</eventDefinitions>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:escalationEventDefinition'">
+          <xsl:when test="self::bpmn2:escalationEventDefinition">
             <eventDefinitions xmi:type="bpmn2xmi:EscalationEventDefinition">			    
 			  <xsl:call-template name="EscalationEventDefinitionTemplate" />			   
 			</eventDefinitions>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:linkEventDefinition'">
+          <xsl:when test="self::bpmn2:linkEventDefinition">
             <eventDefinitions xmi:type="bpmn2xmi:LinkEventDefinition">			    
 			  <xsl:call-template name="LinkEventDefinitionTemplate" />			   
 			</eventDefinitions>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:messageEventDefinition'">
+          <xsl:when test="self::bpmn2:messageEventDefinition">
             <eventDefinitions xmi:type="bpmn2xmi:MessageEventDefinition">			    
 			  <xsl:call-template name="MessageEventDefinitionTemplate" />			   
 			</eventDefinitions>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:signalEventDefinition'">
+          <xsl:when test="self::bpmn2:signalEventDefinition">
             <eventDefinitions xmi:type="bpmn2xmi:SignalEventDefinition">			    
 			  <xsl:call-template name="SignalEventDefinitionTemplate" />			   
 			</eventDefinitions>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:terminateEventDefinition'">
+          <xsl:when test="self::bpmn2:terminateEventDefinition">
             <eventDefinitions xmi:type="bpmn2xmi:TerminateEventDefinition">			    
 			  <xsl:call-template name="TerminateEventDefinitionTemplate" />			   
 			</eventDefinitions>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmn2:timerEventDefinition'">
+          <xsl:when test="self::bpmn2:timerEventDefinition">
             <eventDefinitions xmi:type="bpmn2xmi:TimerEventDefinition">			    
 			  <xsl:call-template name="TimerEventDefinitionTemplate" />			   
 			</eventDefinitions>
@@ -1966,12 +1966,12 @@
 	  <xsl:call-template name="NodeTemplate"/> 
       <xsl:for-each select="bpmndi:BPMNEdge|bpmndi:BPMNShape">
         <xsl:choose>		 
-          <xsl:when test="name() = 'bpmndi:BPMNEdge'">
+          <xsl:when test="self::bpmndi:BPMNEdge">
             <planeElement xmi:type="bpmndixmi:BPMNEdge">			    
 			  <xsl:call-template name="BPMNEdgeTemplate" />			   
 			</planeElement>
           </xsl:when > 
-          <xsl:when test="name() = 'bpmndi:BPMNShape'">
+          <xsl:when test="self::bpmndi:BPMNShape">
             <planeElement xmi:type="bpmndixmi:BPMNShape">			    
 			  <xsl:call-template name="BPMNShapeTemplate" />			   
 			</planeElement>

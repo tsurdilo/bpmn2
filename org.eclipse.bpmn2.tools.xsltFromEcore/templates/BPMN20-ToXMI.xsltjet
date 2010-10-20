@@ -54,7 +54,7 @@
 <%if(input.hasSubFeatures(feature)){ %>
         <xsl:choose>		
 <%for(EStructuralFeature subFeature: input.getAllSubFeatures(feature)) {%> 
-          <xsl:when test="name() = '<%=input.getXPathForXml(subFeature)%>'">
+          <xsl:when test="self::<%=input.getXPathForXml(subFeature)%>">
             <<%=feature.getName()%> xmi:type="<%=input.getPrefix(subFeature)%>xmi:<%=subFeature.getEType().getName()%>">			    
 			  <xsl:call-template name="<%=subFeature.getEType().getName()%>Template" />			   
 			</<%=feature.getName()%>>

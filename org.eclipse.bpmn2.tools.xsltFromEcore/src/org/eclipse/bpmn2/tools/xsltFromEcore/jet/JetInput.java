@@ -21,38 +21,40 @@ import java.util.List;
 import java.util.Map;
 
 import org.eclipse.bpmn2.tools.xsltFromEcore.Processor;
+import org.eclipse.bpmn2.util.NamespaceHelper;
+import org.eclipse.bpmn2.util.XmlExtendedMetadata;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.ecore.util.BasicExtendedMetaData;
 import org.eclipse.emf.ecore.util.ExtendedMetaData;
 
 public class JetInput {
 
     public JetInput(Processor processor) {
         this.processor = processor;
+
+        // Register XMI and XML packages
         EPackage pack = processor.mofBpmnModel.getPackage();
         this.extendedMetadata.putPackage(pack.getNsURI(), pack);
-        this.extendedMetadata.putPackage(
-                pack.getNsURI().substring(0, pack.getNsURI().length() - 4), pack); // Hack: Also register non-XMI
+        this.extendedMetadata.putPackage(NamespaceHelper.xmiToXsdNamespaceUri(pack.getNsURI()),
+                pack);
 
         pack = processor.mofBpmndiModel.getPackage();
         this.extendedMetadata.putPackage(pack.getNsURI(), pack);
-        this.extendedMetadata.putPackage(
-                pack.getNsURI().substring(0, pack.getNsURI().length() - 4), pack); // Hack: Also register non-XMI
+        this.extendedMetadata.putPackage(NamespaceHelper.xmiToXsdNamespaceUri(pack.getNsURI()),
+                pack);
 
         pack = processor.mofDiModel.getPackage();
         this.extendedMetadata.putPackage(pack.getNsURI(), pack);
-        this.extendedMetadata.putPackage(
-                pack.getNsURI().substring(0, pack.getNsURI().length() - 4), pack); // Hack: Also register non-XMI
+        this.extendedMetadata.putPackage(NamespaceHelper.xmiToXsdNamespaceUri(pack.getNsURI()),
+                pack);
 
         pack = processor.mofDcModel.getPackage();
         this.extendedMetadata.putPackage(pack.getNsURI(), pack);
-        this.extendedMetadata.putPackage(
-                pack.getNsURI().substring(0, pack.getNsURI().length() - 4), pack); // Hack: Also register non-XMI
-
+        this.extendedMetadata.putPackage(NamespaceHelper.xmiToXsdNamespaceUri(pack.getNsURI()),
+                pack);
     }
 
     private Processor processor;
@@ -61,7 +63,7 @@ public class JetInput {
         return processor.getMofContent();
     }
 
-    private ExtendedMetaData extendedMetadata = new BasicExtendedMetaData();
+    private ExtendedMetaData extendedMetadata = new XmlExtendedMetadata();
 
     public String getElementName(EClass c) {
         return getExtendedMetadata().getName(c);
@@ -143,7 +145,11 @@ public class JetInput {
     }
 
     public String getNamespace(EStructuralFeature feature) {
-        return extendedMetadata.getNamespace(feature);
+        String result = extendedMetadata.getNamespace(feature);
+        if (result == null) {
+            result = extendedMetadata.getNamespace(feature.getEContainingClass());
+        }
+        return result;
 
     }
 

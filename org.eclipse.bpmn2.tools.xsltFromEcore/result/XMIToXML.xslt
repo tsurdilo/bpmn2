@@ -67,7 +67,7 @@
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@boundaryEventRefs" />
        <xsl:with-param name="elementName" select="'bpmn2:boundaryEventRefs'" />
-       <xsl:with-param name="elementNamespace" select="'null'" />
+       <xsl:with-param name="elementNamespace" select="'http://www.omg.org/spec/BPMN/20100524/MODEL'" />
      </xsl:call-template>
      <xsl:for-each select="properties">			
       <bpmn2:property>
@@ -352,7 +352,7 @@
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@categorizedFlowElements" />
        <xsl:with-param name="elementName" select="'bpmn2:categorizedFlowElements'" />
-       <xsl:with-param name="elementNamespace" select="'null'" />
+       <xsl:with-param name="elementNamespace" select="'http://www.omg.org/spec/BPMN/20100524/MODEL'" />
      </xsl:call-template>
 	</xsl:template>
 	
@@ -650,17 +650,17 @@
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@inputSetWithOptional" />
        <xsl:with-param name="elementName" select="'bpmn2:inputSetWithOptional'" />
-       <xsl:with-param name="elementNamespace" select="'null'" />
+       <xsl:with-param name="elementNamespace" select="'http://www.omg.org/spec/BPMN/20100524/MODEL'" />
      </xsl:call-template>
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@inputSetWithWhileExecuting" />
        <xsl:with-param name="elementName" select="'bpmn2:inputSetWithWhileExecuting'" />
-       <xsl:with-param name="elementNamespace" select="'null'" />
+       <xsl:with-param name="elementNamespace" select="'http://www.omg.org/spec/BPMN/20100524/MODEL'" />
      </xsl:call-template>
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@inputSetRefs" />
        <xsl:with-param name="elementName" select="'bpmn2:inputSetRefs'" />
-       <xsl:with-param name="elementNamespace" select="'null'" />
+       <xsl:with-param name="elementNamespace" select="'http://www.omg.org/spec/BPMN/20100524/MODEL'" />
      </xsl:call-template>
 	</xsl:template>
 	
@@ -687,17 +687,17 @@
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@outputSetWithOptional" />
        <xsl:with-param name="elementName" select="'bpmn2:outputSetWithOptional'" />
-       <xsl:with-param name="elementNamespace" select="'null'" />
+       <xsl:with-param name="elementNamespace" select="'http://www.omg.org/spec/BPMN/20100524/MODEL'" />
      </xsl:call-template>
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@outputSetWithWhileExecuting" />
        <xsl:with-param name="elementName" select="'bpmn2:outputSetWithWhileExecuting'" />
-       <xsl:with-param name="elementNamespace" select="'null'" />
+       <xsl:with-param name="elementNamespace" select="'http://www.omg.org/spec/BPMN/20100524/MODEL'" />
      </xsl:call-template>
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@outputSetRefs" />
        <xsl:with-param name="elementName" select="'bpmn2:outputSetRefs'" />
-       <xsl:with-param name="elementNamespace" select="'null'" />
+       <xsl:with-param name="elementNamespace" select="'http://www.omg.org/spec/BPMN/20100524/MODEL'" />
      </xsl:call-template>
 	</xsl:template>
 	
@@ -1012,7 +1012,7 @@
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@extensionDefinition" />
        <xsl:with-param name="elementName" select="'bpmn2:extensionDefinition'" />
-       <xsl:with-param name="elementNamespace" select="'null'" />
+       <xsl:with-param name="elementNamespace" select="'http://www.omg.org/spec/BPMN/20100524/MODEL'" />
      </xsl:call-template>
 	</xsl:template>
 	
@@ -1020,7 +1020,7 @@
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@valueRef" />
        <xsl:with-param name="elementName" select="'bpmn2:valueRef'" />
-       <xsl:with-param name="elementNamespace" select="'null'" />
+       <xsl:with-param name="elementNamespace" select="'http://www.omg.org/spec/BPMN/20100524/MODEL'" />
      </xsl:call-template>
      <xsl:for-each select="value">			
       <bpmn2:value>
@@ -1031,7 +1031,7 @@
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@extensionAttributeDefinition" />
        <xsl:with-param name="elementName" select="'bpmn2:extensionAttributeDefinition'" />
-       <xsl:with-param name="elementNamespace" select="'null'" />
+       <xsl:with-param name="elementNamespace" select="'http://www.omg.org/spec/BPMN/20100524/MODEL'" />
      </xsl:call-template>
 	</xsl:template>
 	
@@ -1247,7 +1247,7 @@
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@lanes" />
        <xsl:with-param name="elementName" select="'bpmn2:lanes'" />
-       <xsl:with-param name="elementNamespace" select="'null'" />
+       <xsl:with-param name="elementNamespace" select="'http://www.omg.org/spec/BPMN/20100524/MODEL'" />
      </xsl:call-template>
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@outgoing" />
@@ -1263,7 +1263,7 @@
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@body" />
        <xsl:with-param name="elementName" select="'bpmn2:body'" />
-       <xsl:with-param name="elementNamespace" select="'null'" />
+       <xsl:with-param name="elementNamespace" select="'http://www.omg.org/spec/BPMN/20100524/MODEL'" />
      </xsl:call-template>
 	</xsl:template>
 	
@@ -1418,12 +1418,12 @@
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@incomingConversationLinks" />
        <xsl:with-param name="elementName" select="'bpmn2:incomingConversationLinks'" />
-       <xsl:with-param name="elementNamespace" select="'null'" />
+       <xsl:with-param name="elementNamespace" select="'http://www.omg.org/spec/BPMN/20100524/MODEL'" />
      </xsl:call-template>
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@outgoingConversationLinks" />
        <xsl:with-param name="elementName" select="'bpmn2:outgoingConversationLinks'" />
-       <xsl:with-param name="elementNamespace" select="'null'" />
+       <xsl:with-param name="elementNamespace" select="'http://www.omg.org/spec/BPMN/20100524/MODEL'" />
      </xsl:call-template>
 	</xsl:template>
 	
@@ -1466,7 +1466,7 @@
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@import" />
        <xsl:with-param name="elementName" select="'bpmn2:import'" />
-       <xsl:with-param name="elementNamespace" select="'null'" />
+       <xsl:with-param name="elementNamespace" select="'http://www.omg.org/spec/BPMN/20100524/MODEL'" />
      </xsl:call-template>
 	</xsl:template>
 	
@@ -2257,12 +2257,12 @@
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@ownedStyle" />
        <xsl:with-param name="elementName" select="'bpmn2:ownedStyle'" />
-       <xsl:with-param name="elementNamespace" select="'null'" />
+       <xsl:with-param name="elementNamespace" select="'http://www.omg.org/spec/DD/20100524/DI'" />
      </xsl:call-template>
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@rootElement" />
        <xsl:with-param name="elementName" select="'bpmn2:rootElement'" />
-       <xsl:with-param name="elementNamespace" select="'null'" />
+       <xsl:with-param name="elementNamespace" select="'http://www.omg.org/spec/DD/20100524/DI'" />
      </xsl:call-template>
 	</xsl:template>
 	
@@ -2271,27 +2271,27 @@
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@owningDiagram" />
        <xsl:with-param name="elementName" select="'bpmn2:owningDiagram'" />
-       <xsl:with-param name="elementNamespace" select="'null'" />
+       <xsl:with-param name="elementNamespace" select="'http://www.omg.org/spec/DD/20100524/DI'" />
      </xsl:call-template>
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@owningElement" />
        <xsl:with-param name="elementName" select="'bpmn2:owningElement'" />
-       <xsl:with-param name="elementNamespace" select="'null'" />
+       <xsl:with-param name="elementNamespace" select="'http://www.omg.org/spec/DD/20100524/DI'" />
      </xsl:call-template>
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@ownedElement" />
        <xsl:with-param name="elementName" select="'bpmn2:ownedElement'" />
-       <xsl:with-param name="elementNamespace" select="'null'" />
+       <xsl:with-param name="elementNamespace" select="'http://www.omg.org/spec/DD/20100524/DI'" />
      </xsl:call-template>
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@modelElement" />
        <xsl:with-param name="elementName" select="'bpmn2:modelElement'" />
-       <xsl:with-param name="elementNamespace" select="'null'" />
+       <xsl:with-param name="elementNamespace" select="'http://www.omg.org/spec/DD/20100524/DI'" />
      </xsl:call-template>
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@style" />
        <xsl:with-param name="elementName" select="'bpmn2:style'" />
-       <xsl:with-param name="elementNamespace" select="'null'" />
+       <xsl:with-param name="elementNamespace" select="'http://www.omg.org/spec/DD/20100524/DI'" />
      </xsl:call-template>
 	</xsl:template>
 	
@@ -2300,12 +2300,12 @@
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@source" />
        <xsl:with-param name="elementName" select="'bpmn2:source'" />
-       <xsl:with-param name="elementNamespace" select="'null'" />
+       <xsl:with-param name="elementNamespace" select="'http://www.omg.org/spec/DD/20100524/DI'" />
      </xsl:call-template>
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@target" />
        <xsl:with-param name="elementName" select="'bpmn2:target'" />
-       <xsl:with-param name="elementNamespace" select="'null'" />
+       <xsl:with-param name="elementNamespace" select="'http://www.omg.org/spec/DD/20100524/DI'" />
      </xsl:call-template>
      <xsl:for-each select="waypoint">			
       <di:waypoint>
@@ -2330,7 +2330,7 @@
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@ownedLabel" />
        <xsl:with-param name="elementName" select="'bpmn2:ownedLabel'" />
-       <xsl:with-param name="elementNamespace" select="'null'" />
+       <xsl:with-param name="elementNamespace" select="'http://www.omg.org/spec/DD/20100524/DI'" />
      </xsl:call-template>
 	</xsl:template>
 	
@@ -2339,7 +2339,7 @@
      <xsl:call-template name="SplitString">
        <xsl:with-param name="list" select="@ownedLabel" />
        <xsl:with-param name="elementName" select="'bpmn2:ownedLabel'" />
-       <xsl:with-param name="elementNamespace" select="'null'" />
+       <xsl:with-param name="elementNamespace" select="'http://www.omg.org/spec/DD/20100524/DI'" />
      </xsl:call-template>
 	</xsl:template>
 	
