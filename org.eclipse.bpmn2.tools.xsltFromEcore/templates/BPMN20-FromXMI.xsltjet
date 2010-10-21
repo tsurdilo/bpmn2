@@ -50,12 +50,16 @@
 	</xsl:template>
 
 		
-	<xsl:template name="EObjectTemplate">
+	<xsl:template name="EObjectAttributesTemplate">
 	  <!-- TODO: Add your copy logic for extension attributes-->
 	</xsl:template>
 
+	<xsl:template name="EObjectTemplate">
+	  <!-- TODO: Add your copy logic for extension elements-->
+	</xsl:template>
+
 <% for(EClass c: input.getClasses()) { %>
-	<xsl:template name="<%=c.getName()%>AttributesTemplate">
+    <xsl:template name="<%=c.getName()%>AttributesTemplate">
 <%for(EClass superClass: c.getESuperTypes()) {%>
      <xsl:call-template name="<%=superClass.getName()%>AttributesTemplate"/> 
 <%}
@@ -64,9 +68,10 @@
 <% } %>
 	</xsl:template>
 
-	<xsl:template name="<%=c.getName()%>Template" <%if("Definitions".equals(c.getName())){%> match="//bpmn2xmi:Definitions" <%}%>>
-<%if("Definitions".equals(c.getName())){%>   <bpmn2:definitions><%}%>
-     <xsl:call-template name="<%=c.getName()%>AttributesTemplate"/> 
+    <xsl:template name="<%=c.getName()%>Template" <%if("Definitions".equals(c.getName())){%> match="//bpmn2xmi:Definitions">
+      <bpmn2:definitions>
+        <xsl:call-template name="DefinitionsAttributesTemplate"/>
+<%} else { %> > <% } %>
 <%for(EClass superClass: c.getESuperTypes()) {%>
      <xsl:call-template name="<%=superClass.getName()%>Template"/> 
 <%}
@@ -87,13 +92,15 @@
 <%  for(EStructuralFeature subFeature: input.getAllSubFeatures(feature)) {  %>
        <xsl:when test="substring-after(@xmi:type, ':') = '<%=subFeature.getEType().getName()%>' or substring-after(@xsi:type, ':') = '<%=subFeature.getEType().getName()%>'">
          <<%=input.getPrefix(subFeature)%>:<%=input.getExtendedMetadata().getName(subFeature)%>>
-	       <xsl:call-template name="<%=subFeature.getEType().getName()%>Template" />			   
+           <xsl:call-template name="<%=subFeature.getEType().getName()%>AttributesTemplate"/> 
+           <xsl:call-template name="<%=subFeature.getEType().getName()%>Template" />	       		   
 	     </<%=input.getPrefix(subFeature)%>:<%=input.getExtendedMetadata().getName(subFeature)%>>
 	   </xsl:when>
 <%  } %>
       </xsl:choose>
 <% } else {%>
       <<%=input.getPrefix(feature)%>:<%=input.getExtendedMetadata().getName(feature)%>>
+        <xsl:call-template name="<%=feature.getEType().getName()%>AttributesTemplate"/> 
         <xsl:call-template name="<%=feature.getEType().getName()%>Template" />			   
       </<%=input.getPrefix(feature)%>:<%=input.getExtendedMetadata().getName(feature)%>>
 <% }%>
