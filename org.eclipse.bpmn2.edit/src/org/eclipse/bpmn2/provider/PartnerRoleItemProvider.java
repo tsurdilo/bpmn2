@@ -2,6 +2,7 @@ package org.eclipse.bpmn2.provider;
 
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.PartnerRole;
 import org.eclipse.emf.common.notify.AdapterFactory;
