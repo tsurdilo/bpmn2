@@ -438,7 +438,7 @@ public class Bpmn2Editor extends MultiPageEditorPart implements IEditingDomainPr
                     });
                 }
             } catch (CoreException exception) {
-                bpmn2EditorPlugin.INSTANCE.log(exception);
+                Bpmn2EditorPlugin.INSTANCE.log(exception);
             }
         }
     };
@@ -546,7 +546,7 @@ public class Bpmn2Editor extends MultiPageEditorPart implements IEditingDomainPr
                     setActivePage(lastEditorPage);
                     showTabs();
                 } catch (PartInitException exception) {
-                    bpmn2EditorPlugin.INSTANCE.log(exception);
+                    Bpmn2EditorPlugin.INSTANCE.log(exception);
                 }
             }
 
@@ -556,7 +556,7 @@ public class Bpmn2Editor extends MultiPageEditorPart implements IEditingDomainPr
                     try {
                         markerHelper.createMarkers(diagnostic);
                     } catch (CoreException exception) {
-                        bpmn2EditorPlugin.INSTANCE.log(exception);
+                        Bpmn2EditorPlugin.INSTANCE.log(exception);
                     }
                 }
             }
@@ -1198,7 +1198,7 @@ public class Bpmn2Editor extends MultiPageEditorPart implements IEditingDomainPr
         } catch (Exception exception) {
             // Something went wrong that shouldn't.
             //
-            bpmn2EditorPlugin.INSTANCE.log(exception);
+            Bpmn2EditorPlugin.INSTANCE.log(exception);
         }
         updateProblemIndication = true;
         updateProblemIndication();
@@ -1311,7 +1311,7 @@ public class Bpmn2Editor extends MultiPageEditorPart implements IEditingDomainPr
                 }
             }
         } catch (CoreException exception) {
-            bpmn2EditorPlugin.INSTANCE.log(exception);
+            Bpmn2EditorPlugin.INSTANCE.log(exception);
         }
     }
 
@@ -1431,7 +1431,7 @@ public class Bpmn2Editor extends MultiPageEditorPart implements IEditingDomainPr
      * @generated
      */
     private static String getString(String key) {
-        return bpmn2EditorPlugin.INSTANCE.getString(key);
+        return Bpmn2EditorPlugin.INSTANCE.getString(key);
     }
 
     /**
@@ -1441,7 +1441,7 @@ public class Bpmn2Editor extends MultiPageEditorPart implements IEditingDomainPr
      * @generated
      */
     private static String getString(String key, Object s1) {
-        return bpmn2EditorPlugin.INSTANCE.getString(key, new Object[] { s1 });
+        return Bpmn2EditorPlugin.INSTANCE.getString(key, new Object[] { s1 });
     }
 
     /**

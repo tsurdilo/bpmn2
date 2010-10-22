@@ -197,7 +197,7 @@ public class ExtensionAttributeDefinitionItemProvider extends ItemProviderAdapte
      */
     @Override
     public ResourceLocator getResourceLocator() {
-        return bpmn2EditPlugin.INSTANCE;
+        return Bpmn2EditPlugin.INSTANCE;
     }
 
 }

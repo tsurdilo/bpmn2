@@ -20,7 +20,7 @@ import java.util.List;
 
 import org.eclipse.bpmn2.di.BPMNPlane;
 import org.eclipse.bpmn2.di.BpmnDiPackage;
-import org.eclipse.bpmn2.provider.bpmn2EditPlugin;
+import org.eclipse.bpmn2.provider.Bpmn2EditPlugin;
 import org.eclipse.dd.di.provider.PlaneItemProvider;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -146,7 +146,7 @@ public class BPMNPlaneItemProvider extends PlaneItemProvider implements IEditing
      */
     @Override
     public ResourceLocator getResourceLocator() {
-        return bpmn2EditPlugin.INSTANCE;
+        return Bpmn2EditPlugin.INSTANCE;
     }
 
 }

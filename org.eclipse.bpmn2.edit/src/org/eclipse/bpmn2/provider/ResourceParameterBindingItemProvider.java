@@ -194,7 +194,7 @@ public class ResourceParameterBindingItemProvider extends ItemProviderAdapter im
      */
     @Override
     public ResourceLocator getResourceLocator() {
-        return bpmn2EditPlugin.INSTANCE;
+        return Bpmn2EditPlugin.INSTANCE;
     }
 
 }

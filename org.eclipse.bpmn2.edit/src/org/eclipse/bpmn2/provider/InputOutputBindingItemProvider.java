@@ -183,7 +183,7 @@ public class InputOutputBindingItemProvider extends ItemProviderAdapter implemen
      */
     @Override
     public ResourceLocator getResourceLocator() {
-        return bpmn2EditPlugin.INSTANCE;
+        return Bpmn2EditPlugin.INSTANCE;
     }
 
 }

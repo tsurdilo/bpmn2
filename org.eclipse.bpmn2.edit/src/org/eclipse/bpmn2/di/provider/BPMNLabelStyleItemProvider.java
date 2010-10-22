@@ -20,7 +20,7 @@ import java.util.List;
 
 import org.eclipse.bpmn2.di.BPMNLabelStyle;
 import org.eclipse.bpmn2.di.BpmnDiPackage;
-import org.eclipse.bpmn2.provider.bpmn2EditPlugin;
+import org.eclipse.bpmn2.provider.Bpmn2EditPlugin;
 import org.eclipse.dd.dc.DcFactory;
 import org.eclipse.dd.di.provider.StyleItemProvider;
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -172,7 +172,7 @@ public class BPMNLabelStyleItemProvider extends StyleItemProvider implements
      */
     @Override
     public ResourceLocator getResourceLocator() {
-        return bpmn2EditPlugin.INSTANCE;
+        return Bpmn2EditPlugin.INSTANCE;
     }
 
 }

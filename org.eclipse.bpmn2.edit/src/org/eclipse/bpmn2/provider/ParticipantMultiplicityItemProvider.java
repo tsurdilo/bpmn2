@@ -177,7 +177,7 @@ public class ParticipantMultiplicityItemProvider extends ItemProviderAdapter imp
      */
     @Override
     public ResourceLocator getResourceLocator() {
-        return bpmn2EditPlugin.INSTANCE;
+        return Bpmn2EditPlugin.INSTANCE;
     }
 
 }

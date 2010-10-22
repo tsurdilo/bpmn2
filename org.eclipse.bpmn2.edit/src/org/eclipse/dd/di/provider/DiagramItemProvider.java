@@ -18,7 +18,7 @@ package org.eclipse.dd.di.provider;
 import java.util.Collection;
 import java.util.List;
 
-import org.eclipse.bpmn2.provider.bpmn2EditPlugin;
+import org.eclipse.bpmn2.provider.Bpmn2EditPlugin;
 import org.eclipse.dd.di.DiPackage;
 import org.eclipse.dd.di.Diagram;
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -243,7 +243,7 @@ public class DiagramItemProvider extends ItemProviderAdapter implements IEditing
      */
     @Override
     public ResourceLocator getResourceLocator() {
-        return bpmn2EditPlugin.INSTANCE;
+        return Bpmn2EditPlugin.INSTANCE;
     }
 
 }

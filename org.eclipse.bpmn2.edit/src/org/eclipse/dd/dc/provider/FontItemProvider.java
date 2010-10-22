@@ -18,7 +18,7 @@ package org.eclipse.dd.dc.provider;
 import java.util.Collection;
 import java.util.List;
 
-import org.eclipse.bpmn2.provider.bpmn2EditPlugin;
+import org.eclipse.bpmn2.provider.Bpmn2EditPlugin;
 import org.eclipse.dd.dc.DcPackage;
 import org.eclipse.dd.dc.Font;
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -244,7 +244,7 @@ public class FontItemProvider extends ItemProviderAdapter implements IEditingDom
      */
     @Override
     public ResourceLocator getResourceLocator() {
-        return bpmn2EditPlugin.INSTANCE;
+        return Bpmn2EditPlugin.INSTANCE;
     }
 
 }

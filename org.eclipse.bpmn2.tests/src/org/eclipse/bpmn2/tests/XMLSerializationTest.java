@@ -107,8 +107,7 @@ public class XMLSerializationTest {
         if (!EMFPlugin.IS_ECLIPSE_RUNNING)
             Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().clear();
 
-        for (URI cur : createdFiles)
-            TestHelper.moveFile(cur);
+        TestHelper.moveFiles(createdFiles);
     }
 
     // Utility methods
@@ -246,7 +245,7 @@ public class XMLSerializationTest {
     public void testNoIDForImport() throws IOException {
         model.getImports().add(Bpmn2Factory.eINSTANCE.createImport());
         try {
-            Resource res = createWithContentAndLoad("noIDForImport", model);
+            createWithContentAndLoad("noIDForImport", model);
         } catch (WrappedException e) {
             if (e.exception() instanceof FeatureNotFoundException) {
                 FeatureNotFoundException fnfe = ((FeatureNotFoundException) e.exception());

@@ -18,7 +18,7 @@ package org.eclipse.dd.dc.provider;
 import java.util.Collection;
 import java.util.List;
 
-import org.eclipse.bpmn2.provider.bpmn2EditPlugin;
+import org.eclipse.bpmn2.provider.Bpmn2EditPlugin;
 import org.eclipse.dd.dc.DcFactory;
 import org.eclipse.dd.dc.DcPackage;
 import org.eclipse.dd.dc.DocumentRoot;
@@ -180,7 +180,7 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements
      */
     @Override
     public ResourceLocator getResourceLocator() {
-        return bpmn2EditPlugin.INSTANCE;
+        return Bpmn2EditPlugin.INSTANCE;
     }
 
 }

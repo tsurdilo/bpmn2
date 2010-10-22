@@ -21,7 +21,7 @@ import java.util.List;
 import org.eclipse.bpmn2.di.BPMNDiagram;
 import org.eclipse.bpmn2.di.BpmnDiFactory;
 import org.eclipse.bpmn2.di.BpmnDiPackage;
-import org.eclipse.bpmn2.provider.bpmn2EditPlugin;
+import org.eclipse.bpmn2.provider.Bpmn2EditPlugin;
 import org.eclipse.dd.di.provider.DiagramItemProvider;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -176,7 +176,7 @@ public class BPMNDiagramItemProvider extends DiagramItemProvider implements
      */
     @Override
     public ResourceLocator getResourceLocator() {
-        return bpmn2EditPlugin.INSTANCE;
+        return Bpmn2EditPlugin.INSTANCE;
     }
 
 }

@@ -42,7 +42,7 @@ public class LoadXMLPluginTest {
             return;
 
         try {
-            Resource r = new ResourceSetImpl().getResource(URI.createFileURI(getFilename()), true);
+            new ResourceSetImpl().getResource(URI.createFileURI(getFilename()), true);
         } catch (WrappedException e) {
             if (e.exception() instanceof PackageNotFoundException)
                 fail("Package not found during load.");

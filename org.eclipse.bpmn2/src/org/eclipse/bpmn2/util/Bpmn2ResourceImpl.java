@@ -141,7 +141,7 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
      * @author Reiner Hille
      *
      */
-    protected class BpmnXmlHandler extends SAXXMLHandler {
+    protected static class BpmnXmlHandler extends SAXXMLHandler {
 
         public BpmnXmlHandler(XMLResource xmiResource, XMLHelper helper, Map<?, ?> options) {
             super(xmiResource, helper, options);
@@ -166,7 +166,7 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
      * @author Reiner Hille
      *
      */
-    protected class BpmnXmlHelper extends XMLHelperImpl {
+    protected static class BpmnXmlHelper extends XMLHelperImpl {
 
         public BpmnXmlHelper(Bpmn2ResourceImpl resource) {
             super(resource);

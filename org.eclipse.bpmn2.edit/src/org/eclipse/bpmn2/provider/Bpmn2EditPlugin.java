@@ -13,28 +13,25 @@
  * </copyright>
  *
  */
-package org.eclipse.bpmn2.presentation;
+package org.eclipse.bpmn2.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
-
-import org.eclipse.emf.common.ui.EclipseUIPlugin;
-
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**
- * This is the central singleton for the bpmn2 editor plugin.
+ * This is the central singleton for the Bpmn2 edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class bpmn2EditorPlugin extends EMFPlugin {
+public final class Bpmn2EditPlugin extends EMFPlugin {
     /**
      * Keep track of the singleton.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final bpmn2EditorPlugin INSTANCE = new bpmn2EditorPlugin();
+    public static final Bpmn2EditPlugin INSTANCE = new Bpmn2EditPlugin();
 
     /**
      * Keep track of the singleton.
@@ -50,7 +47,7 @@ public final class bpmn2EditorPlugin extends EMFPlugin {
      * <!-- end-user-doc -->
      * @generated
      */
-    public bpmn2EditorPlugin() {
+    public Bpmn2EditPlugin() {
         super(new ResourceLocator[] {});
     }
 
@@ -83,7 +80,7 @@ public final class bpmn2EditorPlugin extends EMFPlugin {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static class Implementation extends EclipseUIPlugin {
+    public static class Implementation extends EclipsePlugin {
         /**
          * Creates an instance.
          * <!-- begin-user-doc -->

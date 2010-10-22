@@ -189,7 +189,7 @@ public class ImportItemProvider extends ItemProviderAdapter implements IEditingD
      */
     @Override
     public ResourceLocator getResourceLocator() {
-        return bpmn2EditPlugin.INSTANCE;
+        return Bpmn2EditPlugin.INSTANCE;
     }
 
 }

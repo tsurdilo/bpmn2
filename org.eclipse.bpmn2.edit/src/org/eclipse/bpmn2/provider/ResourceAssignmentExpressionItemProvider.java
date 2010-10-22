@@ -174,7 +174,7 @@ public class ResourceAssignmentExpressionItemProvider extends ItemProviderAdapte
      */
     @Override
     public ResourceLocator getResourceLocator() {
-        return bpmn2EditPlugin.INSTANCE;
+        return Bpmn2EditPlugin.INSTANCE;
     }
 
 }

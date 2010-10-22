@@ -4,7 +4,7 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.bpmn2.edit;singleton:=true
 Bundle-Version: 0.7.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.eclipse.bpmn2.provider.bpmn2EditPlugin$Implementation
+Bundle-Activator: org.eclipse.bpmn2.provider.Bpmn2EditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5

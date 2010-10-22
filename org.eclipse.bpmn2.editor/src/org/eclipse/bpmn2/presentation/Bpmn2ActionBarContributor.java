@@ -83,13 +83,13 @@ public class Bpmn2ActionBarContributor extends EditingDomainActionBarContributor
      * @generated
      */
     protected IAction showPropertiesViewAction = new Action(
-            bpmn2EditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
+            Bpmn2EditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
         @Override
         public void run() {
             try {
                 getPage().showView("org.eclipse.ui.views.PropertySheet");
             } catch (PartInitException exception) {
-                bpmn2EditorPlugin.INSTANCE.log(exception);
+                Bpmn2EditorPlugin.INSTANCE.log(exception);
             }
         }
     };
@@ -102,7 +102,7 @@ public class Bpmn2ActionBarContributor extends EditingDomainActionBarContributor
      * @generated
      */
     protected IAction refreshViewerAction = new Action(
-            bpmn2EditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
+            Bpmn2EditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
         @Override
         public boolean isEnabled() {
             return activeEditorPart instanceof IViewerProvider;
@@ -190,7 +190,7 @@ public class Bpmn2ActionBarContributor extends EditingDomainActionBarContributor
         super.contributeToMenu(menuManager);
 
         IMenuManager submenuManager = new MenuManager(
-                bpmn2EditorPlugin.INSTANCE.getString("_UI_Bpmn2Editor_menu"),
+                Bpmn2EditorPlugin.INSTANCE.getString("_UI_Bpmn2Editor_menu"),
                 "org.eclipse.bpmn2MenuID");
         menuManager.insertAfter("additions", submenuManager);
         submenuManager.add(new Separator("settings"));
@@ -201,13 +201,13 @@ public class Bpmn2ActionBarContributor extends EditingDomainActionBarContributor
         // Prepare for CreateChild item addition or removal.
         //
         createChildMenuManager = new MenuManager(
-                bpmn2EditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
+                Bpmn2EditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
         submenuManager.insertBefore("additions", createChildMenuManager);
 
         // Prepare for CreateSibling item addition or removal.
         //
         createSiblingMenuManager = new MenuManager(
-                bpmn2EditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
+                Bpmn2EditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
         submenuManager.insertBefore("additions", createSiblingMenuManager);
 
         // Force an update because Eclipse hides empty menus now.
@@ -402,12 +402,12 @@ public class Bpmn2ActionBarContributor extends EditingDomainActionBarContributor
         MenuManager submenuManager = null;
 
         submenuManager = new MenuManager(
-                bpmn2EditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
+                Bpmn2EditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
         populateManager(submenuManager, createChildActions, null);
         menuManager.insertBefore("edit", submenuManager);
 
         submenuManager = new MenuManager(
-                bpmn2EditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
+                Bpmn2EditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
         populateManager(submenuManager, createSiblingActions, null);
         menuManager.insertBefore("edit", submenuManager);
     }
