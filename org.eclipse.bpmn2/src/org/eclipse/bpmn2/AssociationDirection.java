@@ -38,7 +38,7 @@ public enum AssociationDirection implements Enumerator {
      * @generated
      * @ordered
      */
-    NONE(0, "None", "None"),
+    NONE(0, "None", "none"),
 
     /**
      * The '<em><b>One</b></em>' literal object.
@@ -48,7 +48,7 @@ public enum AssociationDirection implements Enumerator {
      * @generated
      * @ordered
      */
-    ONE(1, "One", "One"),
+    ONE(1, "One", "one"),
 
     /**
      * The '<em><b>Both</b></em>' literal object.
@@ -58,7 +58,7 @@ public enum AssociationDirection implements Enumerator {
      * @generated
      * @ordered
      */
-    BOTH(2, "Both", "Both");
+    BOTH(2, "Both", "both");
 
     /**
      * The '<em><b>None</b></em>' literal value.
@@ -69,7 +69,7 @@ public enum AssociationDirection implements Enumerator {
      * </p>
      * <!-- end-user-doc -->
      * @see #NONE
-     * @model name="None"
+     * @model name="None" literal="none"
      * @generated
      * @ordered
      */
@@ -84,7 +84,7 @@ public enum AssociationDirection implements Enumerator {
      * </p>
      * <!-- end-user-doc -->
      * @see #ONE
-     * @model name="One"
+     * @model name="One" literal="one"
      * @generated
      * @ordered
      */
@@ -99,7 +99,7 @@ public enum AssociationDirection implements Enumerator {
      * </p>
      * <!-- end-user-doc -->
      * @see #BOTH
-     * @model name="Both"
+     * @model name="Both" literal="both"
      * @generated
      * @ordered
      */

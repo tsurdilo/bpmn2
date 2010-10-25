@@ -1501,9 +1501,9 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="AssociationDirection">
-    <eLiterals name="None"/>
-    <eLiterals name="One" value="1"/>
-    <eLiterals name="Both" value="2"/>
+    <eLiterals name="None" literal="none"/>
+    <eLiterals name="One" value="1" literal="one"/>
+    <eLiterals name="Both" value="2" literal="both"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Auditing" eSuperTypes="#//BaseElement">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
