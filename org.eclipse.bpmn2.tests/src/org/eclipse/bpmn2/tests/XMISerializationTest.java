@@ -20,8 +20,6 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Definitions;
-import org.eclipse.bpmn2.util.Bpmn2XMIResourceFactoryImpl;
-import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.XMIResource;
 import org.w3c.dom.Document;
@@ -37,24 +35,12 @@ import org.xml.sax.SAXException;
  *
  */
 public class XMISerializationTest extends XMLSerializationTest {
-    private static final String EXTENSION_XMI = "bpmn2xmi";
-
-    /**
-     * Overrides the superclass method, instead registering the default XMI resource factory. 
-     */
-    @Override
-    public void setUpResourceFactoryRegistry() {
-        if (!EMFPlugin.IS_ECLIPSE_RUNNING)
-            Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put(EXTENSION_XMI,
-                    new Bpmn2XMIResourceFactoryImpl());
-    }
-
     /**
      * @return {@code xmi}
      */
     @Override
     protected String getFileExtension() {
-        return EXTENSION_XMI;
+        return EXTENSION_BPMN2_XMI;
     }
 
     @Override

@@ -10,13 +10,24 @@
  */
 package org.eclipse.bpmn2.tests;
 
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.fail;
+
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
 
+import org.eclipse.bpmn2.Bpmn2Factory;
+import org.eclipse.bpmn2.Definitions;
+import org.eclipse.bpmn2.DocumentRoot;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.common.util.WrappedException;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.xmi.PackageNotFoundException;
 
 /**
  * Helper class for tests.
@@ -79,6 +90,66 @@ public class TestHelper {
         f.read(buffer);
         f.close();
         return new String(buffer).indexOf(toFind) != -1;
+    }
+
+    /**
+     * Loads the resource from the specified URI.
+     * @param fileUri The URI of the file.
+     * @return The resource.
+     */
+    protected static Resource getResource(URI fileUri) {
+        try {
+            return new ResourceSetImpl().getResource(fileUri, true);
+        } catch (WrappedException e) {
+            if (e.exception() instanceof PackageNotFoundException)
+                fail(String.format("Package %s not registered",
+                        ((PackageNotFoundException) e.exception()).uri()));
+            else
+                throw e;
+        }
+        return null; // never reached.
+    }
+
+    /**
+     * Creates a resource with the specified name, sets its content and saves it.
+     * 
+     * @param fileUri Filename, without folder and extension.
+     * @param content Designated content of the resource.
+     * @throws IOException
+     */
+    protected static void createResourceWithContent(URI fileUri, EObject content)
+            throws IOException {
+        Resource res = new ResourceSetImpl().createResource(fileUri);
+        assertNotNull("No resource factory registered for " + fileUri, res);
+        res.getContents().add(content);
+        res.save(null);
+    }
+
+    /**
+     * Retrieves the root definition element from a resource.
+     * @param res A BPMN2 resource.
+     * @return The root definition element representing the model contained in the resource.
+     */
+    protected static Definitions getRootDefinitionElement(Resource res) {
+        EObject root = res.getContents().get(0);
+        if (root instanceof DocumentRoot)
+            return ((DocumentRoot) root).getDefinitions();
+        return (Definitions) root;
+    }
+
+    /**
+     * Creates and initializes a basic model consisting of a Definitions element with the specified
+     * target namespace and the following attributes set: name, exporter, exporter version. 
+     * @param targetNamespace The namespace to use as target namespace.
+     * @return A Definitions object representing a basic BPMN2 model.
+     */
+    protected static Definitions initBasicModel(String targetNamespace) {
+        Definitions result = Bpmn2Factory.eINSTANCE.createDefinitions();
+        result.setExporter("org.eclipse.bpmn2");
+        result.setExporterVersion("0.7.0");
+        result.setName("Model name");
+        result.setTargetNamespace(targetNamespace);
+        return result;
     }
 
 }
