@@ -104,16 +104,31 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
     /**
      * Prepares this resource for saving.
      * 
-     * Sets all ID attributes, that are not set, to a generated UUID.
+     * Sets all ID attributes of contained and referenced objects 
+     * that are not yet set, to a generated UUID.
      */
     protected void prepareSave() {
         EObject cur;
         for (Iterator<EObject> iter = getAllContents(); iter.hasNext();) {
             cur = iter.next();
 
-            EStructuralFeature idAttr = cur.eClass().getEIDAttribute();
-            if (idAttr != null && !cur.eIsSet(idAttr)) {
-                cur.eSet(idAttr, EcoreUtil.generateUUID());
+            setIdIfNotSet(cur);
+
+            for (EObject referenced : cur.eCrossReferences()) {
+                setIdIfNotSet(referenced);
+            }
+        }
+    }
+
+    /**
+     * Set the ID attribute of cur to a generated ID, if it is not already set.
+     * @param obj The object whose ID should be set.
+     */
+    protected static void setIdIfNotSet(EObject obj) {
+        if (obj.eClass() != null) {
+            EStructuralFeature idAttr = obj.eClass().getEIDAttribute();
+            if (idAttr != null && !obj.eIsSet(idAttr)) {
+                obj.eSet(idAttr, EcoreUtil.generateUUID());
             }
         }
     }
