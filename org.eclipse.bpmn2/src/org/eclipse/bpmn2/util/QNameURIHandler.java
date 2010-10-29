@@ -49,17 +49,24 @@ public class QNameURIHandler extends URIHandlerImpl {
             // We already have an URI and not QName
             return qName;
         }
-        String path = "";
-        String fragment = qName;
 
+        // Split into prefix and local part (fragment)
         String[] parts = qName.split(":");
-        if (parts.length > 1) {
+        String prefix, fragment;
+        if (parts.length == 1) {
+            prefix = null;
+            fragment = qName;
+        } else if (parts.length == 2) {
+            prefix = parts[0];
             fragment = parts[1];
-            if (!xmlHelper.isTargetNamespace(parts[0])) {
-                path = xmlHelper.getPathForPrefix(parts[0]);
-            }
-        }
-        return path + "#" + fragment;
+        } else
+            throw new IllegalArgumentException("Illegal QName: " + qName);
+
+        if (prefix != null && !xmlHelper.isTargetNamespace(prefix))
+            return xmlHelper.getPathForPrefix(prefix) + "#" + fragment;
+        else
+            // TODO: no prefix does not imply target namespace, but default namespace
+            return baseURI.appendFragment(fragment).toString();
     }
 
     /**
