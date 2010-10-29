@@ -18,6 +18,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import org.eclipse.bpmn2.Bpmn2Factory;
 import org.eclipse.bpmn2.Definitions;
@@ -26,6 +28,7 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.PackageNotFoundException;
 
@@ -123,6 +126,28 @@ public class TestHelper {
         assertNotNull("No resource factory registered for " + fileUri, res);
         res.getContents().add(content);
         res.save(null);
+    }
+
+    /**
+     * Creates a resource for each URI-content combination in the map, sets its respective content
+     * and saves it.
+     * 
+     * @param uriToContentMap A list of pairs of URI and EObject to save under that URI.
+     * @throws IOException
+     */
+    protected static void createResourcesWithContent(Map<URI, EObject> uriToContentMap)
+            throws IOException {
+        ResourceSet resSet = new ResourceSetImpl();
+        Resource curRes;
+
+        for (Entry<URI, EObject> curEntry : uriToContentMap.entrySet()) {
+            curRes = resSet.createResource(curEntry.getKey());
+            assertNotNull("No resource factory registered for " + curEntry.getKey(), curRes);
+            curRes.getContents().add(curEntry.getValue());
+        }
+
+        for (Resource cur : resSet.getResources())
+            cur.save(null);
     }
 
     /**
