@@ -205,7 +205,14 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
          * @return
          */
         public boolean isTargetNamespace(String prefix) {
-            return prefix.equals(getDefinitions().getTargetNamespace());
+            final String prefixNs = this.getNamespaceURI(prefix);
+
+            // "prefixNs == null" means: invalid prefix (not declared or xmlns:prefix="").
+            if (prefixNs == null)
+                throw new IllegalArgumentException(String.format("The prefix '%s' is not valid.",
+                        prefix));
+
+            return prefixNs.equals(getDefinitions().getTargetNamespace());
         }
 
         /**
