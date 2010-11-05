@@ -169,9 +169,11 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
          */
         @Override
         protected void setValueFromId(EObject object, EReference eReference, String ids) {
-
-            super.setValueFromId(object, eReference,
-                    ((QNameURIHandler) uriHandler).convertQNameToUri(ids));
+            super.setValueFromId(
+                    object,
+                    eReference,
+                    eReference.isResolveProxies() ? ((QNameURIHandler) uriHandler)
+                            .convertQNameToUri(ids) : ids);
         }
 
     }

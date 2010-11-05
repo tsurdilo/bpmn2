@@ -61,7 +61,7 @@ public class TestHelper {
      * @throws IOException
      */
     public static void moveFile(URI fileURI, File destFolder) throws IOException {
-        File f = new File(fileURI.toString());
+        File f = new File(fileURI.toFileString());
         if (f.exists()) {
 
             File dest = new File(destFolder, f.getName()/*String.format("result/%tQ/", new Date())*/);
@@ -76,7 +76,8 @@ public class TestHelper {
             else
                 System.out.println("Test output could not be cleaned from folder 'tmp': "
                         + f.getName());
-        }
+        } else
+            System.out.println("Test output was not found:" + f.getName());
     }
 
     /**

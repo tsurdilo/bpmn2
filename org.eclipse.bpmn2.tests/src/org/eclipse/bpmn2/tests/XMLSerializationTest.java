@@ -31,6 +31,8 @@ import org.eclipse.bpmn2.Documentation;
 import org.eclipse.bpmn2.FlowElement;
 import org.eclipse.bpmn2.Import;
 import org.eclipse.bpmn2.ItemDefinition;
+import org.eclipse.bpmn2.Lane;
+import org.eclipse.bpmn2.LaneSet;
 import org.eclipse.bpmn2.Participant;
 import org.eclipse.bpmn2.Process;
 import org.eclipse.bpmn2.RootElement;
@@ -43,6 +45,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.DynamicEObjectImpl;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.xmi.ClassNotFoundException;
 import org.eclipse.emf.ecore.xmi.FeatureNotFoundException;
 import org.junit.Before;
 import org.junit.Test;
@@ -361,6 +364,35 @@ public class XMLSerializationTest extends Bpmn2SerializationTest {
             assertTrue(tmp.size() == 1 && tmp.contains(link2));
         } catch (UnsupportedOperationException e) {
             fail("getIncoming/OutgoingConversationLinks not implemented");
+        }
+    }
+
+    @Test
+    public void testIDReferenceToAbstractType() throws Exception {
+        Process p = Bpmn2Factory.eINSTANCE.createProcess();
+        model.getRootElements().add(p);
+        Task t = Bpmn2Factory.eINSTANCE.createTask();
+        p.getFlowElements().add(t);
+        LaneSet ls = Bpmn2Factory.eINSTANCE.createLaneSet();
+        p.getLaneSets().add(ls);
+        Lane l = Bpmn2Factory.eINSTANCE.createLane();
+        ls.getLanes().add(l);
+
+        l.getFlowNodeRefs().add(t);
+
+        try {
+            Resource res = saveAndLoadModel("idRefToAbstract", model);
+        } catch (WrappedException e) {
+            if (e.exception() instanceof ClassNotFoundException)
+                fail("Class EventDefinition was recognized as abstract.");
+            else
+                throw e;
+        } catch (IllegalArgumentException e) {
+            // different error in Eclipse 3.4
+            if (e.getMessage().endsWith("not a valid classifier"))
+                fail("Class EventDefinition was recognized as abstract.");
+            else
+                throw e;
         }
     }
 }

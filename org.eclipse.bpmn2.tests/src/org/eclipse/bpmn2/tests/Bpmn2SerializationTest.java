@@ -1,5 +1,6 @@
 package org.eclipse.bpmn2.tests;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
@@ -64,7 +65,24 @@ public abstract class Bpmn2SerializationTest {
      * @throws IOException
      */
     public Resource saveAndLoadModel(final String name, Definitions model) throws IOException {
-        URI fileUri = URI.createFileURI("tmp/" + name + "." + getFileExtension());
+        return saveAndLoadModel(name, model, false);
+    }
+
+    /**
+     * Creates a resource with the specified name, sets its content and saves it.
+     * Afterwards, loads the thus created resource from a fresh resource set and returns it.
+     * 
+     * @param name Filename, without folder and extension.
+     * @param model The model to store.
+     * @param useAbsoluteUri Use an absolute instead of a relative URI.
+     * @return The loaded resource.
+     * @throws IOException
+     */
+    public Resource saveAndLoadModel(final String name, Definitions model, boolean useAbsoluteUri)
+            throws IOException {
+        String fileName = "tmp/" + name + "." + getFileExtension();
+        URI fileUri = URI.createFileURI(useAbsoluteUri ? new File(fileName).getAbsolutePath()
+                : fileName);
         TestHelper.createResourceWithContent(fileUri, model);
         createdFiles.add(fileUri);
 

@@ -69,8 +69,8 @@ public class QNameURIHandler extends URIHandlerImpl {
         if (prefix != null && !xmlHelper.isTargetNamespace(prefix))
             return xmlHelper.getPathForPrefix(prefix) + "#" + fragment;
         else
-            // TODO: no prefix does not imply target namespace, but default namespace - assume that the default implementation does it correctly.
-            return fragment;
+            // TODO: no prefix does not imply target namespace, but default namespace
+            return baseURI.appendFragment(fragment).toString();
     }
 
     /**

@@ -92,13 +92,23 @@ public class QNameReferenceTest extends Bpmn2SerializationTest {
         B_resource = TestHelper.getResource(B_fileUri);
     }
 
+    @Test
+    public void testIntraModelReferencesRelative() throws Exception {
+        testIntraModelReferences(false);
+    }
+
+    @Test
+    public void testIntraModelReferencesAbsolute() throws Exception {
+        testIntraModelReferences(true);
+    }
+
     /**
      * Test proxy-resolving references (i.e. potentially cross-file references) when
      * they point to objects within the same file.
+     * @param absolute Determines if the model is saved and loaded with an absolute or relative URI.
      * @throws IOException
      */
-    @Test
-    public void testIntraModelReferences() throws IOException {
+    public void testIntraModelReferences(boolean absolute) throws IOException {
         // single @ XML attribute
         A_process.setDefinitionalCollaborationRef(A_collab);
 
@@ -117,7 +127,7 @@ public class QNameReferenceTest extends Bpmn2SerializationTest {
         A_model.getRootElements().add(A_process2);
         A_process.getSupports().add(A_process2);
 
-        Resource res = saveAndLoadModel("qname_intra", A_model);
+        Resource res = saveAndLoadModel("qname_intra", A_model, absolute);
 
         Process A_processNew = (Process) res.getEObject(A_process.getId());
         LinkEventDefinition A_led1New = (LinkEventDefinition) res.getEObject(A_led1.getId());
