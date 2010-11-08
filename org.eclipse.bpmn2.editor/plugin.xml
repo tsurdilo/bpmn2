@@ -35,12 +35,19 @@
 
    <extension point="org.eclipse.ui.editors">
       <editor
-            id="org.eclipse.bpmn2.presentation.Bpmn2EditorID"
-            name="%_UI_Bpmn2Editor_label"
-            icon="icons/full/obj16/Bpmn2ModelFile.gif"
-            extensions="bpmn2"
             class="org.eclipse.bpmn2.presentation.Bpmn2Editor"
-            contributorClass="org.eclipse.bpmn2.presentation.Bpmn2ActionBarContributor">
+            contributorClass="org.eclipse.bpmn2.presentation.Bpmn2ActionBarContributor"
+            default="true"
+            extensions="bpmn2"
+            icon="icons/full/obj16/Bpmn2ModelFile.gif"
+            id="org.eclipse.bpmn2.presentation.Bpmn2EditorID"
+            name="%_UI_Bpmn2Editor_label">
+         <contentTypeBinding
+               contentTypeId="org.eclipse.bpmn2.content-type.xml">
+         </contentTypeBinding>
+         <contentTypeBinding
+               contentTypeId="org.eclipse.bpmn2.content-type.xmi">
+         </contentTypeBinding>
       </editor>
    </extension>
    
