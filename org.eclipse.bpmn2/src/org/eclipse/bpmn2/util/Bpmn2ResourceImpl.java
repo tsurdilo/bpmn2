@@ -244,12 +244,23 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
          * @return
          */
         private String getPrefixDuringSave(String namespace) {
+            if (urisToPrefixes.containsKey(namespace))
+                return urisToPrefixes.get(namespace).get(0);
+
             EPackage ePackage = extendedMetaData.getPackage(namespace);
             if (ePackage == null) {
                 ePackage = extendedMetaData.demandPackage(namespace);
                 // This will internally create a nice prefix
             }
             String prefix = ePackage.getNsPrefix();
+
+            // Make prefix unique
+            String originalPrefix = prefix + "_";
+            int discr = 0;
+            while (prefixesToURIs.containsKey(prefix)
+                    && !prefixesToURIs.get(prefix).equals(namespace))
+                prefix = originalPrefix + discr++;
+
             // I'm not sure if the following code is needed, but I keep it to avoid inconsistencies
             if (!packages.containsKey(ePackage)) {
                 packages.put(ePackage, prefix);
