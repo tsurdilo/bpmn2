@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" id="defAId" 
+    exporter="org.eclipse.bpmn2" exporterVersion="0.7.0" name="Model A">
+  <bpmn2:collaboration id="colId"/>
+  <bpmn2:process id="proc1Id" definitionalCollaborationRef="colId"/>
+</bpmn2:definitions>

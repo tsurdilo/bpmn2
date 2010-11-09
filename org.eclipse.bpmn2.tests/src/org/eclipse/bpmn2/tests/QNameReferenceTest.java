@@ -12,13 +12,17 @@ package org.eclipse.bpmn2.tests;
 
 import static org.junit.Assert.*;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+import javax.xml.parsers.DocumentBuilderFactory;
+
 import org.eclipse.bpmn2.Bpmn2Factory;
 import org.eclipse.bpmn2.Collaboration;
 import org.eclipse.bpmn2.Definitions;
+import org.eclipse.bpmn2.DocumentRoot;
 import org.eclipse.bpmn2.EventDefinition;
 import org.eclipse.bpmn2.Import;
 import org.eclipse.bpmn2.LinkEventDefinition;
@@ -31,6 +35,8 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.ClassNotFoundException;
 import org.junit.Before;
 import org.junit.Test;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
 
 /**
  * Tests our QName (de)resolution mechanism both for intra- and inter-model references.
@@ -214,5 +220,133 @@ public class QNameReferenceTest extends Bpmn2SerializationTest {
         assertFalse("Proxy could not be resolved (many elem)", A_processNew.getSupports().get(0)
                 .eIsProxy());
         assertEquals(B_process.getId(), A_processNew.getSupports().get(0).getId());
+    }
+
+    @Test
+    public void testQNameSerialization() throws Exception {
+        A_process.setId("A_process_id");
+        A_process.setDefinitionalCollaborationRef(A_collab);
+        A_process.getSupports().add(B_process);
+
+        saveAndLoadModels("serialization");
+
+        DocumentBuilderFactory fact = DocumentBuilderFactory.newInstance();
+        Document xml = fact.newDocumentBuilder()
+                .parse(new File(A_resource.getURI().toFileString()));
+        Node pNode = xml.getElementsByTagName("bpmn2:process").item(0);
+
+        String ref = pNode.getAttributes().getNamedItem("definitionalCollaborationRef")
+                .getNodeValue();
+        String prefixLocal = ref.indexOf(":") == -1 ? "" : ref.split(":")[0];
+        assertEquals("The prefix for local references is not mapped to the target namespace.",
+                A_model.getTargetNamespace(), ((DocumentRoot) A_resource.getContents().get(0))
+                        .getXMLNSPrefixMap().get(prefixLocal));
+
+        ref = pNode.getChildNodes().item(1).getTextContent();
+        String prefixModelB = ref.indexOf(":") == -1 ? "" : ref.split(":")[0];
+        assertEquals("The prefix for references to model b is not mapped to its target namespace.",
+                B_model.getTargetNamespace(), ((DocumentRoot) A_resource.getContents().get(0))
+                        .getXMLNSPrefixMap().get(prefixModelB));
+    }
+
+    /**
+     * Tests the standard case for the mapping of prefixes to namespaces:
+     * - the default namespace is set to the target namespace and local references do not use a prefix
+     * - cross-file references use a prefix associated with an imported namespace
+     */
+    @Test
+    public void testPrefixNamespaceMapping() {
+        testQNameResolve("normal", true);
+    }
+
+    /**
+     * Tests the inverse case for the mapping of prefixes to namespaces:
+     * - an explicit prefix is associated with the target namespace and used in local references
+     * - the default namespace point to an imported namespace and cross-file reference do not use a prefix
+     */
+    @Test
+    public void testPrefixNamespaceMappingInverse() {
+        testQNameResolve("inverse", true);
+    }
+
+    /**
+     * Tests the special case for the mapping of prefixes to namespaces:
+     * - neither a default namespace nor a target namespace are defined, unprefixed QNames thus point to local elements 
+     */
+    @Test
+    public void testPrefixNamespaceMappingNoNs() {
+        testQNameResolve("noNs", false);
+    }
+
+    /**
+     * Tests the special case for the mapping of prefixes to namespaces:
+     * - no default namespace but a target namespace is defined, unprefixed QNames are invalid (strict interpretation)
+     * - chosen fallback behavior: unprefixed QNames should be interpreted as references to local elements
+     */
+    @Test
+    public void testPrefixNamespaceMappingNoDefaultButTarget() {
+        testQNameResolve("noDefaultButTarget", false);
+    }
+
+    /**
+     * Tests the special case for the mapping of prefixes to namespaces:
+     * - the default namespace is neither the target namespace nor mapped by an import element
+     * - strict interpretation: unprefixed QNames can not be resolved
+     * - chosen fallback behavior (?): unprefixed QNames should be interpreted as references to local elements
+     * -- guideline: treat unprefixed QNames as local (guess), unless default namespace is mapped by import element
+     */
+    @Test
+    public void testPrefixNamespaceMappingDefaultNotResolvable() {
+        testQNameResolve("defaultNotResolvable", true);
+    }
+
+    /**
+     * Tests if QNames are correctly resolved in the specified test case.
+     * @param testCase Identifier of the test case, pointing to a BPMN2 file 
+     * under 'res/qname_prefixNs_<i>testCase</i>.bpmn2' (with defined content).
+     * @param crossFile <code>true</code>, if this test case features a cross-file reference
+     * to be checked (Process.supports).
+     */
+    protected void testQNameResolve(String testCase, boolean crossFile) {
+        Resource res = TestHelper.getResource(URI.createFileURI("res/qname_prefixNs_" + testCase
+                + ".bpmn2"));
+        Process p = (Process) res.getEObject("proc1Id");
+        assertFalse("Resolution of local reference failed, test case: " + testCase, p
+                .getDefinitionalCollaborationRef().eIsProxy());
+        if (crossFile)
+            assertFalse("Resolution of cross-file reference failed, test case: " + testCase, p
+                    .getSupports().get(0).eIsProxy());
+    }
+
+    /**
+     * Tests the automated generation of prefixes in case multiple imports would use the same prefix (as 
+     * automatically generated from the namespace).
+     * @throws Exception
+     */
+    @Test
+    public void testPrefixClash() throws Exception {
+        Definitions C_model = TestHelper.initBasicModel("urn:path:modelB"); // same ns ending as B_model
+        Process C_process = Bpmn2Factory.eINSTANCE.createProcess();
+        C_model.getRootElements().add(C_process);
+        Resource C_resource = saveAndLoadModel("qname_prefixClash_C", C_model);
+
+        Import importCintoA = Bpmn2Factory.eINSTANCE.createImport();
+        importCintoA.setImportType("http://www.omg.org/spec/BPMN/20100524/MODEL");
+        importCintoA.setLocation(C_resource.getURI().toString());
+        importCintoA.setNamespace(C_model.getTargetNamespace());
+        A_model.getImports().add(importCintoA);
+
+        A_process.getSupports().add(B_process);
+        A_process.getSupports().add(C_process);
+        saveAndLoadModels("prefixClash");
+
+        Process A_processNew = (Process) A_resource.getEObject(A_process.getId());
+        assertFalse("Reference to element of model B could not be resolved", A_processNew
+                .getSupports().get(0).eIsProxy());
+        assertEquals(B_process.getId(), A_processNew.getSupports().get(0).getId());
+
+        assertFalse("Reference to element of model C could not be resolved", A_processNew
+                .getSupports().get(1).eIsProxy());
+        assertEquals(C_process.getId(), A_processNew.getSupports().get(1).getId());
     }
 }
