@@ -62,14 +62,12 @@ public class QNameURIHandler extends URIHandlerImpl {
             if (fragment.startsWith("/")) { // We have probably found a URL. Better leave it alone
                 return qName;
             }
-
         } else
             throw new IllegalArgumentException("Illegal QName: " + qName);
 
-        if (prefix != null && !xmlHelper.isTargetNamespace(prefix))
+        if (!xmlHelper.isTargetNamespace(prefix))
             return xmlHelper.getPathForPrefix(prefix) + "#" + fragment;
         else
-            // TODO: no prefix does not imply target namespace, but default namespace
             return baseURI.appendFragment(fragment).toString();
     }
 

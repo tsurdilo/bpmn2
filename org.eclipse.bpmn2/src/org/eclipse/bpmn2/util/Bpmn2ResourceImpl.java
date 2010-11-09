@@ -17,6 +17,8 @@ package org.eclipse.bpmn2.util;
 import java.util.Iterator;
 import java.util.Map;
 
+import javax.xml.XMLConstants;
+
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Definitions;
 import org.eclipse.bpmn2.DocumentRoot;
@@ -203,18 +205,55 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
         /**
          * Checks if the given prefix is pointing to the current target namespace and thus is optional.
          * The method is called during load.
-         * @param prefix
-         * @return
+         * @param prefix The prefix or null, if no prefix is given (interpreted as default namespace).
+         * @return <code>true</code>, if the namespace associated with the prefix equals the target namespace 
+         * of this Definitions.
+         * If prefix is null or the empty string, then the default namespace is compared with the target namespace.
+         * If prefix is null/empty and default namespace is not defined, <code>true</code> if the target namespace 
+         * is not defined either.
+         * 
+         * <p>
+         * The above rules describe a strict interpretation of the rules for QName resolution. 
+         * This method relaxes these rules and additionally returns <code>true</code> in the following cases:
+         * <ul>
+         * <li>prefix is null/empty, no default namespace (regardless of target namespace)</li>
+         * <li>prefix is null/empty, default namespace is not {@linkplain #findImportForNamespace(String) mapped by an import element}.</li>
+         * </ul>
+         * </p>
          */
         public boolean isTargetNamespace(String prefix) {
+            if (prefix == null)
+                prefix = XMLConstants.DEFAULT_NS_PREFIX;
             final String prefixNs = this.getNamespaceURI(prefix);
 
-            // "prefixNs == null" means: invalid prefix (not declared or xmlns:prefix="").
-            if (prefixNs == null)
+            if (prefixNs == null) {
+                if (XMLConstants.DEFAULT_NS_PREFIX.equals(prefix))
+                    /*
+                     * The (empty) prefix points to {no namespace}, because no default namespace is defined.
+                     * This would be OK if target namespace is undefined as well (meaning {no namespace}).
+                     * 
+                     * However, we employ a relaxed interpretation and do not require that 
+                     *   getDefinitions().getTargetNamespace() == null (i.e. target namespace == {no namespace})
+                     * Every unprefixed QName is interpreted as local reference, if the default namespace is not defined.
+                     */
+                    return true;
+
+                // the non-empty prefix is not mapped to a namespace
                 throw new IllegalArgumentException(String.format("The prefix '%s' is not valid.",
                         prefix));
+            }
 
-            return prefixNs.equals(getDefinitions().getTargetNamespace());
+            // result with strict evaluation: return prefixNs.equals(getDefinitions().getTargetNamespace())
+            if (prefixNs.equals(getDefinitions().getTargetNamespace()))
+                return true;
+            else if (XMLConstants.DEFAULT_NS_PREFIX.equals(prefix)
+                    && findImportForNamespace(prefixNs) == null) {
+                // The default namespace is not mapped to a location by an import element.
+                // Guess that the unprefixed QName should point to a local element (relaxed interpretation)
+                // TODO: emit warning
+                return true;
+            } else
+                return false;
         }
 
         /**
@@ -224,16 +263,30 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
          * @return
          */
         public String getPathForPrefix(String prefix) {
-            String ns = this.getNamespaceURI(prefix);
+            String ns = this.getNamespaceURI(prefix == null ? XMLConstants.DEFAULT_NS_PREFIX
+                    : prefix);
             if (ns != null) {
-                for (Import imp : getDefinitions().getImports()) {
-                    if (ns.equals(imp.getNamespace())) {
-                        // TODO: Also check that imp.getType() is BPMN
-                        return imp.getLocation();
-                    }
-                }
+                Import imp = findImportForNamespace(ns);
+                if (imp != null)
+                    return imp.getLocation();
             }
             return "";
+        }
+
+        /**
+         * Looks up the list of import elements in this definitions for an import of the given namespace.
+         * @param namespace The namespace to look for in {@link Import#getNamespace()}.
+         * @return The first import element in {@link Definitions#getImports()} with {@link Import#getNamespace()}
+         * equal to the given namespace.
+         */
+        protected Import findImportForNamespace(String namespace) {
+            for (Import imp : getDefinitions().getImports()) {
+                if (namespace.equals(imp.getNamespace())) {
+                    // TODO: Also check that imp.getType() is BPMN
+                    return imp;
+                }
+            }
+            return null;
         }
 
         /**
@@ -252,7 +305,13 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
                 ePackage = extendedMetaData.demandPackage(namespace);
                 // This will internally create a nice prefix
             }
-            String prefix = ePackage.getNsPrefix();
+
+            String prefix;
+            if (namespace.equals(getDefinitions().getTargetNamespace()))
+                // try to use the default namespace (xmlns="...") for local references
+                prefix = XMLConstants.DEFAULT_NS_PREFIX;
+            else
+                prefix = ePackage.getNsPrefix();
 
             // Make prefix unique
             String originalPrefix = prefix + "_";
@@ -279,11 +338,17 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
         public String getNsPrefix(String filePath) {
             String ns = null;
             String prefix = "";
-            for (Import imp : getDefinitions().getImports()) {
-                if (filePath.equals(imp.getLocation())) {
-                    // TODO: Also check that imp.getType() is BPMN
-                    ns = imp.getNamespace();
-                    break;
+
+            if (filePath.equals(getResource().getURI().toString())) // TODO: this needs to operate on "canonical paths"
+                // reference to local element
+                ns = getDefinitions().getTargetNamespace();
+            else {
+                for (Import imp : getDefinitions().getImports()) {
+                    if (filePath.equals(imp.getLocation())) {
+                        // TODO: Also check that imp.getType() is BPMN
+                        ns = imp.getNamespace();
+                        break;
+                    }
                 }
             }
             if (ns != null) {
