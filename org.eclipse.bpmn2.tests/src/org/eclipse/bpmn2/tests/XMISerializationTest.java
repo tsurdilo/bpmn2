@@ -44,6 +44,11 @@ public class XMISerializationTest extends XMLSerializationTest {
     }
 
     @Override
+    protected String getSubDirectory() {
+        return "xmi";
+    }
+
+    @Override
     protected void checkBasicSerialization(Resource res) {
         assertTrue("Resource is not XMI", res instanceof XMIResource);
         assertTrue("Resource loaded with errors", res.getErrors().isEmpty());

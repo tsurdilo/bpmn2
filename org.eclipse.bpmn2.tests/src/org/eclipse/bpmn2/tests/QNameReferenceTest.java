@@ -71,6 +71,11 @@ public class QNameReferenceTest extends Bpmn2SerializationTest {
         return EXTENSION_BPMN2_XML;
     }
 
+    @Override
+    protected String getSubDirectory() {
+        return "qname";
+    }
+
     /**
      * Saves both models (A and B). Creates a import element in A pointing to B.
      * Loads the created resources into {@link #A_resource} and {@link #B_resource}, respectively.
@@ -80,8 +85,10 @@ public class QNameReferenceTest extends Bpmn2SerializationTest {
      */
     protected void saveAndLoadModels(String name) throws IOException {
         Map<URI, EObject> uriToContentMap = new LinkedHashMap<URI, EObject>();
-        URI A_fileUri = URI.createFileURI("tmp/qname_" + name + "_A." + getFileExtension());
-        URI B_fileUri = URI.createFileURI("tmp/qname_" + name + "_B." + getFileExtension());
+        URI A_fileUri = URI.createFileURI("tmp/" + getSubDirectory() + "/" + name + "_A."
+                + getFileExtension());
+        URI B_fileUri = URI.createFileURI("tmp/" + getSubDirectory() + "/" + name + "_B."
+                + getFileExtension());
         uriToContentMap.put(A_fileUri, A_model);
         uriToContentMap.put(B_fileUri, B_model);
 
@@ -146,7 +153,7 @@ public class QNameReferenceTest extends Bpmn2SerializationTest {
         A_model.getRootElements().add(A_process2);
         A_process.getSupports().add(A_process2);
 
-        Resource res = saveAndLoadModel("qname_intra", A_model, absolute);
+        Resource res = saveAndLoadModel("intra", A_model, absolute);
 
         Process A_processNew = (Process) res.getEObject(A_process.getId());
         LinkEventDefinition A_led1New = (LinkEventDefinition) res.getEObject(A_led1.getId());
@@ -174,7 +181,7 @@ public class QNameReferenceTest extends Bpmn2SerializationTest {
         A_process.getFlowElements().add(A_event);
 
         try {
-            Resource res = saveAndLoadModel("qname_toAbstract", A_model);
+            Resource res = saveAndLoadModel("toAbstract", A_model);
             StartEvent A_eventNew = (StartEvent) res.getEObject(A_event.getId());
             assertResolvesTo("Proxy could not be resolved (abstract)", A_eventNew
                     .getEventDefinitionRefs().get(0), A_eventDef);
@@ -334,7 +341,7 @@ public class QNameReferenceTest extends Bpmn2SerializationTest {
         Definitions C_model = TestHelper.initBasicModel("urn:path:modelB"); // same ns ending as B_model
         Process C_process = Bpmn2Factory.eINSTANCE.createProcess();
         C_model.getRootElements().add(C_process);
-        Resource C_resource = saveAndLoadModel("qname_prefixClash_C", C_model);
+        Resource C_resource = saveAndLoadModel("prefixClash_C", C_model);
 
         Import importCintoA = Bpmn2Factory.eINSTANCE.createImport();
         importCintoA.setImportType("http://www.omg.org/spec/BPMN/20100524/MODEL");

@@ -80,13 +80,18 @@ public abstract class Bpmn2SerializationTest {
      */
     public Resource saveAndLoadModel(final String name, Definitions model, boolean useAbsoluteUri)
             throws IOException {
-        String fileName = "tmp/" + name + "." + getFileExtension();
+        String fileName = "tmp/" + (getSubDirectory() != null ? getSubDirectory() + "/" : "")
+                + name + "." + getFileExtension();
         URI fileUri = URI.createFileURI(useAbsoluteUri ? new File(fileName).getAbsolutePath()
                 : fileName);
         TestHelper.createResourceWithContent(fileUri, model);
         createdFiles.add(fileUri);
 
         return TestHelper.getResource(fileUri);
+    }
+
+    protected String getSubDirectory() {
+        return null;
     }
 
     protected abstract String getFileExtension();

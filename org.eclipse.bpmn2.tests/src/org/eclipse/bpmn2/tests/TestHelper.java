@@ -17,6 +17,7 @@ import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -39,19 +40,18 @@ import org.eclipse.emf.ecore.xmi.PackageNotFoundException;
  */
 public class TestHelper {
 
+    private static final String DEST_FOLDER_NAME = "lastResults";
+    private static final String DATE_AND_TIME = String.format("%1$tY%1$tm%1$td%1$tH%1$tM%1$tS",
+            new Date());
+
     /**
      * Cleans the test directory by moving all files from the list to another directory.
      * @param fileUris List of URIs of the files.
      * @throws IOException
      */
     public static void moveFiles(List<URI> fileUris) throws IOException {
-        File destFolder = new File("lastResult");
-        if (!destFolder.exists())
-            if (!destFolder.mkdir())
-                System.out.println("Folder 'lastResult' does not exist and could not be created.");
-
         for (URI cur : fileUris)
-            moveFile(cur, destFolder);
+            moveFile(cur);
     }
 
     /**
@@ -60,24 +60,47 @@ public class TestHelper {
      * @param destFolder The target directory.
      * @throws IOException
      */
-    public static void moveFile(URI fileURI, File destFolder) throws IOException {
+    public static void moveFile(URI fileURI) throws IOException {
         File f = new File(fileURI.toFileString());
         if (f.exists()) {
-
-            File dest = new File(destFolder, f.getName()/*String.format("result/%tQ/", new Date())*/);
+            File dest = calculateDestination(f);
             if (!dest.exists() || dest.delete()) {
-                if (f.renameTo(dest))
-                    return;
+                File parentDir = dest.getParentFile();
+                if (parentDir.exists() || parentDir.mkdirs())
+                    if (f.renameTo(dest))
+                        return;
             }
             if (f.delete())
                 System.out
-                        .println("Test output could not be moved to folder 'lastResult' and has been deleted: "
+                        .println("Test output could not be moved to folder 'lastResults' and has been deleted: "
                                 + f.getName());
             else
                 System.out.println("Test output could not be cleaned from folder 'tmp': "
                         + f.getName());
         } else
             System.out.println("Test output was not found:" + f.getName());
+    }
+
+    /**
+     * Calculates the location the given file should be moved to during test clean up.
+     * This replaces the first element of the relative path of file
+     * with the archive folder name and a date-and-time-identifier.
+     * 
+     * Example: <...>tmp/qname/file.bpmn2 => <...>lastResults/201011101100/qname/file.bpmn2
+     * @param file The file to move.
+     * @return The location (path+filename) to which <code>file</code> should be moved.
+     * @throws IOException
+     */
+    protected static File calculateDestination(File file) throws IOException {
+        String[] relPath = URI.createFileURI(file.getCanonicalPath())
+                .deresolve(URI.createFileURI(new File(DEST_FOLDER_NAME).getCanonicalPath()))
+                .segments();
+        String[] destPath = new String[relPath.length + 1];
+        // Replace tmp by "lastResults", <Date and Time>
+        System.arraycopy(relPath, 1, destPath, 2, relPath.length - 1);
+        destPath[0] = DEST_FOLDER_NAME;
+        destPath[1] = DATE_AND_TIME;
+        return new File(URI.createHierarchicalURI(destPath, null, null).toFileString());
     }
 
     /**

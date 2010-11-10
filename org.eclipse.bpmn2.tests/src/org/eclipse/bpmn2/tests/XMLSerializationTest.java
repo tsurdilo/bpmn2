@@ -81,6 +81,11 @@ public class XMLSerializationTest extends Bpmn2SerializationTest {
         return EXTENSION_BPMN2_XML;
     }
 
+    @Override
+    protected String getSubDirectory() {
+        return "xml";
+    }
+
     /**
      * Checks if serialization works at all.
      * @throws Exception
