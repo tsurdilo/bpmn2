@@ -20,6 +20,8 @@ public abstract class Bpmn2SerializationTest {
 
     protected static final String EXTENSION_BPMN2_XMI = "bpmn2xmi";
 
+    protected static final String TMP_DIR = "tmp";
+
     protected List<URI> createdFiles;
 
     /**
@@ -80,14 +82,29 @@ public abstract class Bpmn2SerializationTest {
      */
     public Resource saveAndLoadModel(final String name, Definitions model, boolean useAbsoluteUri)
             throws IOException {
-        String fileName = "tmp/" + (getSubDirectory() != null ? getSubDirectory() + "/" : "")
-                + name + "." + getFileExtension();
-        URI fileUri = URI.createFileURI(useAbsoluteUri ? new File(fileName).getAbsolutePath()
-                : fileName);
+        URI fileUri = getCompletePathURI(name, useAbsoluteUri);
         TestHelper.createResourceWithContent(fileUri, model);
         createdFiles.add(fileUri);
 
         return TestHelper.getResource(fileUri);
+    }
+
+    /**
+     * Composes the complete URI for a test file with the given name by prepending the
+     * test directory ("{@linkplain #TMP_DIR tmp}" and the {@linkplain #getSubDirectory() sub directory})
+     * and appending the {@linkplain #getFileExtension() file extension}.
+     * @param filename The name of the file, may include further directories.
+     * @param absolute If <code>true</code>, an absolute URI is returned (as determined by <code>new File(uri)</code>).
+     * Otherwise, a relative URI.
+     * @return The URI denoting the complete path for the test file.
+     */
+    protected URI getCompletePathURI(String filename, boolean absolute) {
+        StringBuilder builder = new StringBuilder(TMP_DIR).append('/');
+        if (getSubDirectory() != null)
+            builder.append(getSubDirectory()).append('/');
+        builder.append(filename).append('.').append(getFileExtension());
+        return URI.createFileURI(absolute ? new File(builder.toString()).getAbsolutePath()
+                : builder.toString());
     }
 
     protected String getSubDirectory() {

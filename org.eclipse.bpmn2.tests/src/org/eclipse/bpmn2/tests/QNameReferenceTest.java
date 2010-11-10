@@ -85,10 +85,8 @@ public class QNameReferenceTest extends Bpmn2SerializationTest {
      */
     protected void saveAndLoadModels(String name) throws IOException {
         Map<URI, EObject> uriToContentMap = new LinkedHashMap<URI, EObject>();
-        URI A_fileUri = URI.createFileURI("tmp/" + getSubDirectory() + "/" + name + "_A."
-                + getFileExtension());
-        URI B_fileUri = URI.createFileURI("tmp/" + getSubDirectory() + "/" + name + "_B."
-                + getFileExtension());
+        URI A_fileUri = getCompletePathURI(name + "_A", false);
+        URI B_fileUri = getCompletePathURI(name + "_B", false);
         uriToContentMap.put(A_fileUri, A_model);
         uriToContentMap.put(B_fileUri, B_model);
 
