@@ -19,6 +19,7 @@ import java.util.Map;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import org.eclipse.bpmn2.BaseElement;
 import org.eclipse.bpmn2.Bpmn2Factory;
 import org.eclipse.bpmn2.Collaboration;
 import org.eclipse.bpmn2.Definitions;
@@ -98,6 +99,18 @@ public class QNameReferenceTest extends Bpmn2SerializationTest {
         B_resource = TestHelper.getResource(B_fileUri);
     }
 
+    /**
+     * Asserts that obj can be resolved and resolves to expected.
+     * @param message Message if obj is a proxy (not resolved).  
+     * @param obj The obj to check.
+     * @param expected obj is expected to be equivalent to this parameter, as
+     * determined by their {@linkplain BaseElement#getId() ID}.
+     */
+    protected static void assertResolvesTo(String message, BaseElement obj, BaseElement expected) {
+        assertFalse(message, obj.eIsProxy());
+        assertEquals(expected.getId(), obj.getId());
+    }
+
     @Test
     public void testIntraModelReferencesRelative() throws Exception {
         testIntraModelReferences(false);
@@ -138,16 +151,13 @@ public class QNameReferenceTest extends Bpmn2SerializationTest {
         Process A_processNew = (Process) res.getEObject(A_process.getId());
         LinkEventDefinition A_led1New = (LinkEventDefinition) res.getEObject(A_led1.getId());
 
-        assertFalse("Proxy could not be resolved (single attr)", A_processNew
-                .getDefinitionalCollaborationRef().eIsProxy());
-        assertEquals(A_collab.getId(), A_processNew.getDefinitionalCollaborationRef().getId());
+        assertResolvesTo("Proxy could not be resolved (single attr)",
+                A_processNew.getDefinitionalCollaborationRef(), A_collab);
 
-        assertFalse("Proxy could not be resolved (single elem)", A_led1New.getTarget().eIsProxy());
-        assertEquals(A_led2.getId(), A_led1New.getTarget().getId());
+        assertResolvesTo("Proxy could not be resolved (single elem)", A_led1New.getTarget(), A_led2);
 
-        assertFalse("Proxy could not be resolved (many elem)", A_processNew.getSupports().get(0)
-                .eIsProxy());
-        assertEquals(A_process2.getId(), A_processNew.getSupports().get(0).getId());
+        assertResolvesTo("Proxy could not be resolved (many elem)",
+                A_processNew.getSupports().get(0), A_process2);
     }
 
     /**
@@ -166,9 +176,8 @@ public class QNameReferenceTest extends Bpmn2SerializationTest {
         try {
             Resource res = saveAndLoadModel("qname_toAbstract", A_model);
             StartEvent A_eventNew = (StartEvent) res.getEObject(A_event.getId());
-            assertFalse("Proxy could not be resolved (abstract)", A_eventNew
-                    .getEventDefinitionRefs().get(0).eIsProxy());
-            assertEquals(A_eventDef.getId(), A_eventNew.getEventDefinitionRefs().get(0).getId());
+            assertResolvesTo("Proxy could not be resolved (abstract)", A_eventNew
+                    .getEventDefinitionRefs().get(0), A_eventDef);
         } catch (WrappedException e) {
             if (e.exception() instanceof ClassNotFoundException)
                 fail("Class EventDefinition was recognized as abstract.");
@@ -210,16 +219,13 @@ public class QNameReferenceTest extends Bpmn2SerializationTest {
         Process A_processNew = (Process) A_resource.getEObject(A_process.getId());
         LinkEventDefinition A_ledNew = (LinkEventDefinition) A_resource.getEObject(A_led.getId());
 
-        assertFalse("Proxy could not be resolved (single attr)", A_processNew
-                .getDefinitionalCollaborationRef().eIsProxy());
-        assertEquals(B_collab.getId(), A_processNew.getDefinitionalCollaborationRef().getId());
+        assertResolvesTo("Proxy could not be resolved (single attr)",
+                A_processNew.getDefinitionalCollaborationRef(), B_collab);
 
-        assertFalse("Proxy could not be resolved (single elem)", A_ledNew.getTarget().eIsProxy());
-        assertEquals(B_led.getId(), A_ledNew.getTarget().getId());
+        assertResolvesTo("Proxy could not be resolved (single elem)", A_ledNew.getTarget(), B_led);
 
-        assertFalse("Proxy could not be resolved (many elem)", A_processNew.getSupports().get(0)
-                .eIsProxy());
-        assertEquals(B_process.getId(), A_processNew.getSupports().get(0).getId());
+        assertResolvesTo("Proxy could not be resolved (many elem)",
+                A_processNew.getSupports().get(0), B_process);
     }
 
     @Test
@@ -341,12 +347,10 @@ public class QNameReferenceTest extends Bpmn2SerializationTest {
         saveAndLoadModels("prefixClash");
 
         Process A_processNew = (Process) A_resource.getEObject(A_process.getId());
-        assertFalse("Reference to element of model B could not be resolved", A_processNew
-                .getSupports().get(0).eIsProxy());
-        assertEquals(B_process.getId(), A_processNew.getSupports().get(0).getId());
+        assertResolvesTo("Reference to element of model B could not be resolved", A_processNew
+                .getSupports().get(0), B_process);
 
-        assertFalse("Reference to element of model C could not be resolved", A_processNew
-                .getSupports().get(1).eIsProxy());
-        assertEquals(C_process.getId(), A_processNew.getSupports().get(1).getId());
+        assertResolvesTo("Reference to element of model C could not be resolved", A_processNew
+                .getSupports().get(1), C_process);
     }
 }
