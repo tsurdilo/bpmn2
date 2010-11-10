@@ -77,22 +77,42 @@ public class QNameReferenceTest extends Bpmn2SerializationTest {
     }
 
     /**
+     * Equivalent to {@link #saveAndLoadModels(String, boolean) saveAndLoadModels(name, false)}
+     */
+    protected void saveAndLoadModels(String name) throws IOException {
+        saveAndLoadModels(name, false);
+    }
+
+    /**
+     * Equivalent to {@link #saveAndLoadModels(String, String, boolean, String) saveAndLoadModels(name"_A", name"_B", absolute, ...)}
+     */
+    protected void saveAndLoadModels(String name, boolean absolute) throws IOException {
+        saveAndLoadModels(name + "_A", name + "_B", absolute,
+                getCompletePathURI(name + "_B", absolute).toString()); // TODO: Should just be <name>+"_B.bpmn2". 
+    }
+
+    /**
      * Saves both models (A and B). Creates a import element in A pointing to B.
      * Loads the created resources into {@link #A_resource} and {@link #B_resource}, respectively.
      *  
-     * @param name Part of the file name that is used to identify different tests.
+     * @param nameA Part of the file name for model A that is used to identify different tests.
+     * @param nameB Part of the file name for model B.
+     * @param absolute <code>true</code>, if absolute URIs should be used to construct the resources.
+     * @param importLocation The value for the location attribute of the import element created (should be the location 
+     * of B relative to A).
      * @throws IOException
      */
-    protected void saveAndLoadModels(String name) throws IOException {
+    protected void saveAndLoadModels(String nameA, String nameB, boolean absolute,
+            String importLocation) throws IOException {
         Map<URI, EObject> uriToContentMap = new LinkedHashMap<URI, EObject>();
-        URI A_fileUri = getCompletePathURI(name + "_A", false);
-        URI B_fileUri = getCompletePathURI(name + "_B", false);
+        URI A_fileUri = getCompletePathURI(nameA, absolute);
+        URI B_fileUri = getCompletePathURI(nameB, absolute);
         uriToContentMap.put(A_fileUri, A_model);
         uriToContentMap.put(B_fileUri, B_model);
 
         Import importBintoA = Bpmn2Factory.eINSTANCE.createImport();
         importBintoA.setImportType("http://www.omg.org/spec/BPMN/20100524/MODEL");
-        importBintoA.setLocation(B_fileUri.toString());
+        importBintoA.setLocation(importLocation != null ? importLocation : B_fileUri.toString());
         importBintoA.setNamespace("urn:modelB");
         A_model.getImports().add(importBintoA);
 
