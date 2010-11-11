@@ -12,5 +12,8 @@ Require-Bundle: org.eclipse.emf,
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: 
- org.eclipse.bpmn2.tools.ecoremerger
+ org.eclipse.bpmn2.tools.ecoremerger,
+ org.eclipse.bpmn2.tools.ecoremerger.exceptions,
+ org.eclipse.bpmn2.tools.ecoremerger.exceptions.impl,
+ org.eclipse.bpmn2.tools.ecoremerger.exceptions.util
 

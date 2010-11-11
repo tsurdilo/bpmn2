@@ -24,6 +24,8 @@ import org.eclipse.bpmn2.StandardLoopCharacteristics;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.util.FeatureMap;
+import org.eclipse.emf.ecore.util.FeatureMapUtil;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -213,6 +215,13 @@ public class StandardLoopCharacteristicsItemProvider extends LoopCharacteristics
             Collection<?> selection) {
         Object childFeature = feature;
         Object childObject = child;
+
+        if (childFeature instanceof EStructuralFeature
+                && FeatureMapUtil.isFeatureMap((EStructuralFeature) childFeature)) {
+            FeatureMap.Entry entry = (FeatureMap.Entry) childObject;
+            childFeature = entry.getEStructuralFeature();
+            childObject = entry.getValue();
+        }
 
         boolean qualify = childFeature == Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION
                 || childFeature == Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM;

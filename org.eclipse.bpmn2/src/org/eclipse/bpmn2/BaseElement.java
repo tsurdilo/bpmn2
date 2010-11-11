@@ -17,6 +17,7 @@ package org.eclipse.bpmn2;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.util.FeatureMap;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,6 +31,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.bpmn2.BaseElement#getDocumentation <em>Documentation</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.BaseElement#getExtensionDefinitions <em>Extension Definitions</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.BaseElement#getId <em>Id</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.BaseElement#getAnyAttribute <em>Any Attribute</em>}</li>
  * </ul>
  * </p>
  *
@@ -50,6 +52,7 @@ public interface BaseElement extends EObject {
      * @return the value of the '<em>Extension Values</em>' containment reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getBaseElement_ExtensionValues()
      * @model containment="true" transient="true" derived="true" ordered="false"
+     *        extendedMetaData="kind='element' name='extensionElements' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     List<ExtensionAttributeValue> getExtensionValues();
@@ -83,7 +86,6 @@ public interface BaseElement extends EObject {
      * @return the value of the '<em>Extension Definitions</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getBaseElement_ExtensionDefinitions()
      * @model ordered="false"
-     *        extendedMetaData="kind='element' name='extensionElements' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     List<ExtensionDefinition> getExtensionDefinitions();
@@ -114,5 +116,22 @@ public interface BaseElement extends EObject {
      * @generated
      */
     void setId(String value);
+
+    /**
+     * Returns the value of the '<em><b>Any Attribute</b></em>' attribute list.
+     * The list contents are of type {@link org.eclipse.emf.ecore.util.FeatureMap.Entry}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Any Attribute</em>' attribute list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Any Attribute</em>' attribute list.
+     * @see org.eclipse.bpmn2.Bpmn2Package#getBaseElement_AnyAttribute()
+     * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
+     *        extendedMetaData="kind='attributeWildcard' wildcards='##other' name=':3' processing='lax'"
+     * @generated
+     */
+    FeatureMap getAnyAttribute();
 
 } // BaseElement

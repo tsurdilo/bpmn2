@@ -14,16 +14,23 @@
  */
 package org.eclipse.bpmn2.impl;
 
+import java.util.Collection;
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.ExtensionAttributeDefinition;
 import org.eclipse.bpmn2.ExtensionAttributeValue;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.BasicFeatureMap;
+import org.eclipse.emf.ecore.util.FeatureMap;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -52,14 +59,14 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
     protected EObject valueRef;
 
     /**
-     * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
+     * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see #getValue()
      * @generated
      * @ordered
      */
-    protected EObject value;
+    protected EList<EObject> value;
 
     /**
      * The cached value of the '{@link #getExtensionAttributeDefinition() <em>Extension Attribute Definition</em>}' reference.
@@ -136,49 +143,12 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
      * <!-- end-user-doc -->
      * @generated
      */
-    public Object getValue() {
-        return value;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetValue(EObject newValue, NotificationChain msgs) {
-        Object oldValue = value;
-        value = newValue;
-        if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE, oldValue, newValue);
-            if (msgs == null)
-                msgs = notification;
-            else
-                msgs.add(notification);
+    public List<EObject> getValue() {
+        if (value == null) {
+            value = new EObjectContainmentEList<EObject>(EObject.class, this,
+                    Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE);
         }
-        return msgs;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setValue(Object newValue) {
-        if (newValue != value) {
-            NotificationChain msgs = null;
-            if (value != null)
-                msgs = ((InternalEObject) value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                        - Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE, null, msgs);
-            if (newValue != null)
-                msgs = ((InternalEObject) newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                        - Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE, null, msgs);
-            msgs = basicSetValue((EObject) newValue, msgs);
-            if (msgs != null)
-                msgs.dispatch();
-        } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE, newValue, newValue));
+        return value;
     }
 
     /**
@@ -234,7 +204,7 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
             NotificationChain msgs) {
         switch (featureID) {
         case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE:
-            return basicSetValue(null, msgs);
+            return ((InternalEList<?>) getValue()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -266,6 +236,7 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
      * <!-- end-user-doc -->
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
@@ -273,7 +244,8 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
             setValueRef((Object) newValue);
             return;
         case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE:
-            setValue((Object) newValue);
+            getValue().clear();
+            getValue().addAll((Collection<? extends EObject>) newValue);
             return;
         case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION:
             setExtensionAttributeDefinition((ExtensionAttributeDefinition) newValue);
@@ -294,7 +266,7 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
             setValueRef((Object) null);
             return;
         case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE:
-            setValue((Object) null);
+            getValue().clear();
             return;
         case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION:
             setExtensionAttributeDefinition((ExtensionAttributeDefinition) null);
@@ -314,7 +286,7 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
         case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE_REF:
             return valueRef != null;
         case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE:
-            return value != null;
+            return value != null && !value.isEmpty();
         case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION:
             return extensionAttributeDefinition != null;
         }

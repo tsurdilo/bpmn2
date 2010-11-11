@@ -24,6 +24,7 @@ import org.eclipse.bpmn2.di.BpmnDiPackage;
 import org.eclipse.dd.dc.DcPackage;
 import org.eclipse.dd.di.DiPackage;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.BasicExtendedMetaData;
 
 public class XmlExtendedMetadata extends BasicExtendedMetaData {
@@ -58,5 +59,12 @@ public class XmlExtendedMetadata extends BasicExtendedMetaData {
         if ((xmlNs = xmiToXmlNamespaceMap.get(ns)) != null)
             return xmlNs;
         return ns;
+    }
+
+    @Override
+    public EStructuralFeature getElement(String namespace, String name) {
+        // TODO In the case of "Inheritance Extensions" (see Sample+Instance from Beta 1) we 
+        // need to look for affiliations to BPMN substitution groups in external extension schemas
+        return super.getElement(namespace, name);
     }
 }

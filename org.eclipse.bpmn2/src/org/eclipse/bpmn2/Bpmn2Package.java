@@ -1376,13 +1376,22 @@ public interface Bpmn2Package extends EPackage {
     int BASE_ELEMENT__ID = 3;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BASE_ELEMENT__ANY_ATTRIBUTE = 4;
+
+    /**
      * The number of structural features of the '<em>Base Element</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int BASE_ELEMENT_FEATURE_COUNT = 4;
+    int BASE_ELEMENT_FEATURE_COUNT = 5;
 
     /**
      * The meta object id for the '{@link org.eclipse.bpmn2.impl.FlowElementImpl <em>Flow Element</em>}' class.
@@ -1429,6 +1438,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int FLOW_ELEMENT__ID = BASE_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FLOW_ELEMENT__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -1520,6 +1538,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int FLOW_NODE__ID = FLOW_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FLOW_NODE__ANY_ATTRIBUTE = FLOW_ELEMENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -1638,6 +1665,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int ACTIVITY__ID = FLOW_NODE__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ACTIVITY__ANY_ATTRIBUTE = FLOW_NODE__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -1855,6 +1891,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int SUB_PROCESS__ID = ACTIVITY__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUB_PROCESS__ANY_ATTRIBUTE = ACTIVITY__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -2108,6 +2153,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int AD_HOC_SUB_PROCESS__ID = SUB_PROCESS__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AD_HOC_SUB_PROCESS__ANY_ATTRIBUTE = SUB_PROCESS__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -2390,6 +2444,15 @@ public interface Bpmn2Package extends EPackage {
     int ARTIFACT__ID = BASE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ARTIFACT__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The number of structural features of the '<em>Artifact</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2443,6 +2506,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int ASSIGNMENT__ID = BASE_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ASSIGNMENT__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>From</b></em>' containment reference.
@@ -2516,6 +2588,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int ASSOCIATION__ID = ARTIFACT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ASSOCIATION__ANY_ATTRIBUTE = ARTIFACT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Association Direction</b></em>' attribute.
@@ -2600,6 +2681,15 @@ public interface Bpmn2Package extends EPackage {
     int AUDITING__ID = BASE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AUDITING__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The number of structural features of the '<em>Auditing</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2653,6 +2743,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int EVENT__ID = FLOW_NODE__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT__ANY_ATTRIBUTE = FLOW_NODE__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -2798,6 +2897,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CATCH_EVENT__ID = EVENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CATCH_EVENT__ANY_ATTRIBUTE = EVENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -2997,6 +3105,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int BOUNDARY_EVENT__ID = CATCH_EVENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BOUNDARY_EVENT__ANY_ATTRIBUTE = CATCH_EVENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -3214,6 +3331,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int TASK__ID = ACTIVITY__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TASK__ANY_ATTRIBUTE = ACTIVITY__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -3449,6 +3575,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int BUSINESS_RULE_TASK__ID = TASK__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BUSINESS_RULE_TASK__ANY_ATTRIBUTE = TASK__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -3695,6 +3830,15 @@ public interface Bpmn2Package extends EPackage {
     int CALL_ACTIVITY__ID = ACTIVITY__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CALL_ACTIVITY__ANY_ATTRIBUTE = ACTIVITY__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3921,6 +4065,15 @@ public interface Bpmn2Package extends EPackage {
     int CHOREOGRAPHY_ACTIVITY__ID = FLOW_NODE__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CHOREOGRAPHY_ACTIVITY__ANY_ATTRIBUTE = FLOW_NODE__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4073,6 +4226,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CALL_CHOREOGRAPHY__ID = CHOREOGRAPHY_ACTIVITY__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CALL_CHOREOGRAPHY__ANY_ATTRIBUTE = CHOREOGRAPHY_ACTIVITY__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -4247,6 +4409,15 @@ public interface Bpmn2Package extends EPackage {
     int CONVERSATION_NODE__ID = BASE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONVERSATION_NODE__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4354,6 +4525,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CALL_CONVERSATION__ID = CONVERSATION_NODE__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CALL_CONVERSATION__ANY_ATTRIBUTE = CONVERSATION_NODE__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
@@ -4483,6 +4663,15 @@ public interface Bpmn2Package extends EPackage {
     int ROOT_ELEMENT__ID = BASE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ROOT_ELEMENT__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The number of structural features of the '<em>Root Element</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4536,6 +4725,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CALLABLE_ELEMENT__ID = ROOT_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CALLABLE_ELEMENT__ANY_ATTRIBUTE = ROOT_ELEMENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Supported Interface Refs</b></em>' reference list.
@@ -4629,6 +4827,15 @@ public interface Bpmn2Package extends EPackage {
     int EVENT_DEFINITION__ID = ROOT_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_DEFINITION__ANY_ATTRIBUTE = ROOT_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The number of structural features of the '<em>Event Definition</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4684,6 +4891,15 @@ public interface Bpmn2Package extends EPackage {
     int CANCEL_EVENT_DEFINITION__ID = EVENT_DEFINITION__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CANCEL_EVENT_DEFINITION__ANY_ATTRIBUTE = EVENT_DEFINITION__ANY_ATTRIBUTE;
+
+    /**
      * The number of structural features of the '<em>Cancel Event Definition</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4737,6 +4953,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CATEGORY__ID = ROOT_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CATEGORY__ANY_ATTRIBUTE = ROOT_ELEMENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Category Value</b></em>' containment reference list.
@@ -4812,6 +5037,15 @@ public interface Bpmn2Package extends EPackage {
     int CATEGORY_VALUE__ID = BASE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CATEGORY_VALUE__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Value</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4883,6 +5117,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int COLLABORATION__ID = ROOT_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COLLABORATION__ANY_ATTRIBUTE = ROOT_ELEMENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Participants</b></em>' containment reference list.
@@ -5046,6 +5289,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CHOREOGRAPHY__ID = COLLABORATION__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CHOREOGRAPHY__ANY_ATTRIBUTE = COLLABORATION__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Participants</b></em>' containment reference list.
@@ -5229,6 +5481,15 @@ public interface Bpmn2Package extends EPackage {
     int CHOREOGRAPHY_TASK__ID = CHOREOGRAPHY_ACTIVITY__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CHOREOGRAPHY_TASK__ANY_ATTRIBUTE = CHOREOGRAPHY_ACTIVITY__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5392,6 +5653,15 @@ public interface Bpmn2Package extends EPackage {
     int COMPENSATE_EVENT_DEFINITION__ID = EVENT_DEFINITION__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMPENSATE_EVENT_DEFINITION__ANY_ATTRIBUTE = EVENT_DEFINITION__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Activity Ref</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5465,6 +5735,15 @@ public interface Bpmn2Package extends EPackage {
     int COMPLEX_BEHAVIOR_DEFINITION__ID = BASE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMPLEX_BEHAVIOR_DEFINITION__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Condition</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5536,6 +5815,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int GATEWAY__ID = FLOW_NODE__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GATEWAY__ANY_ATTRIBUTE = FLOW_NODE__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -5663,6 +5951,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int COMPLEX_GATEWAY__ID = GATEWAY__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMPLEX_GATEWAY__ANY_ATTRIBUTE = GATEWAY__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -5810,6 +6107,15 @@ public interface Bpmn2Package extends EPackage {
     int CONDITIONAL_EVENT_DEFINITION__ID = EVENT_DEFINITION__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONDITIONAL_EVENT_DEFINITION__ANY_ATTRIBUTE = EVENT_DEFINITION__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Condition</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5872,6 +6178,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CONVERSATION__ID = CONVERSATION_NODE__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONVERSATION__ANY_ATTRIBUTE = CONVERSATION_NODE__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
@@ -5983,6 +6298,15 @@ public interface Bpmn2Package extends EPackage {
     int CONVERSATION_ASSOCIATION__ID = BASE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONVERSATION_ASSOCIATION__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Inner Conversation Node Ref</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6054,6 +6378,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CONVERSATION_LINK__ID = BASE_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONVERSATION_LINK__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6138,6 +6471,15 @@ public interface Bpmn2Package extends EPackage {
     int CORRELATION_KEY__ID = BASE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CORRELATION_KEY__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Correlation Property Ref</b></em>' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6209,6 +6551,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CORRELATION_PROPERTY__ID = ROOT_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CORRELATION_PROPERTY__ANY_ATTRIBUTE = ROOT_ELEMENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Correlation Property Retrieval Expression</b></em>' containment reference list.
@@ -6293,6 +6644,15 @@ public interface Bpmn2Package extends EPackage {
     int CORRELATION_PROPERTY_BINDING__ID = BASE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CORRELATION_PROPERTY_BINDING__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Data Path</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6364,6 +6724,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__ID = BASE_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Message Path</b></em>' containment reference.
@@ -6439,6 +6808,15 @@ public interface Bpmn2Package extends EPackage {
     int CORRELATION_SUBSCRIPTION__ID = BASE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CORRELATION_SUBSCRIPTION__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Correlation Property Binding</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6510,6 +6888,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int DATA_ASSOCIATION__ID = BASE_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATA_ASSOCIATION__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Source Ref</b></em>' reference list.
@@ -6603,6 +6990,15 @@ public interface Bpmn2Package extends EPackage {
     int ITEM_AWARE_ELEMENT__ID = BASE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ITEM_AWARE_ELEMENT__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Data State</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6674,6 +7070,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int DATA_INPUT__ID = ITEM_AWARE_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATA_INPUT__ANY_ATTRIBUTE = ITEM_AWARE_ELEMENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Data State</b></em>' containment reference.
@@ -6794,6 +7199,15 @@ public interface Bpmn2Package extends EPackage {
     int DATA_INPUT_ASSOCIATION__ID = DATA_ASSOCIATION__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATA_INPUT_ASSOCIATION__ANY_ATTRIBUTE = DATA_ASSOCIATION__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Source Ref</b></em>' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6883,6 +7297,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int DATA_OBJECT__ID = FLOW_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATA_OBJECT__ANY_ATTRIBUTE = FLOW_ELEMENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -7003,6 +7426,15 @@ public interface Bpmn2Package extends EPackage {
     int DATA_OBJECT_REFERENCE__ID = FLOW_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATA_OBJECT_REFERENCE__ANY_ATTRIBUTE = FLOW_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -7119,6 +7551,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int DATA_OUTPUT__ID = ITEM_AWARE_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATA_OUTPUT__ANY_ATTRIBUTE = ITEM_AWARE_ELEMENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Data State</b></em>' containment reference.
@@ -7239,6 +7680,15 @@ public interface Bpmn2Package extends EPackage {
     int DATA_OUTPUT_ASSOCIATION__ID = DATA_ASSOCIATION__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATA_OUTPUT_ASSOCIATION__ANY_ATTRIBUTE = DATA_ASSOCIATION__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Source Ref</b></em>' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -7330,6 +7780,15 @@ public interface Bpmn2Package extends EPackage {
     int DATA_STATE__ID = BASE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATA_STATE__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -7392,6 +7851,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int DATA_STORE__ID = ITEM_AWARE_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATA_STORE__ANY_ATTRIBUTE = ITEM_AWARE_ELEMENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Data State</b></em>' containment reference.
@@ -7492,6 +7960,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int DATA_STORE_REFERENCE__ID = FLOW_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATA_STORE_REFERENCE__ANY_ATTRIBUTE = FLOW_ELEMENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -7610,6 +8087,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int DEFINITIONS__ID = BASE_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFINITIONS__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Imports</b></em>' containment reference list.
@@ -7766,6 +8252,15 @@ public interface Bpmn2Package extends EPackage {
     int DOCUMENTATION__ID = BASE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DOCUMENTATION__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Mixed</b></em>' attribute list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -7846,6 +8341,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int THROW_EVENT__ID = EVENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int THROW_EVENT__ANY_ATTRIBUTE = EVENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -8038,6 +8542,15 @@ public interface Bpmn2Package extends EPackage {
     int END_EVENT__ID = THROW_EVENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int END_EVENT__ANY_ATTRIBUTE = THROW_EVENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -8228,6 +8741,15 @@ public interface Bpmn2Package extends EPackage {
     int END_POINT__ID = ROOT_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int END_POINT__ANY_ATTRIBUTE = ROOT_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The number of structural features of the '<em>End Point</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -8281,6 +8803,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int ERROR__ID = ROOT_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ERROR__ANY_ATTRIBUTE = ROOT_ELEMENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Error Code</b></em>' attribute.
@@ -8363,6 +8894,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int ERROR_EVENT_DEFINITION__ID = EVENT_DEFINITION__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ERROR_EVENT_DEFINITION__ANY_ATTRIBUTE = EVENT_DEFINITION__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Error Ref</b></em>' reference.
@@ -8475,6 +9015,15 @@ public interface Bpmn2Package extends EPackage {
     int ESCALATION_EVENT_DEFINITION__ID = EVENT_DEFINITION__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ESCALATION_EVENT_DEFINITION__ANY_ATTRIBUTE = EVENT_DEFINITION__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Escalation Ref</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -8537,6 +9086,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int EVENT_BASED_GATEWAY__ID = GATEWAY__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_BASED_GATEWAY__ANY_ATTRIBUTE = GATEWAY__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -8684,6 +9242,15 @@ public interface Bpmn2Package extends EPackage {
     int EXCLUSIVE_GATEWAY__ID = GATEWAY__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EXCLUSIVE_GATEWAY__ANY_ATTRIBUTE = GATEWAY__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -8820,6 +9387,15 @@ public interface Bpmn2Package extends EPackage {
     int EXPRESSION__ID = BASE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EXPRESSION__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The number of structural features of the '<em>Expression</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -8940,7 +9516,7 @@ public interface Bpmn2Package extends EPackage {
     int EXTENSION_ATTRIBUTE_VALUE__VALUE_REF = 0;
 
     /**
-     * The feature id for the '<em><b>Value</b></em>' containment reference.
+     * The feature id for the '<em><b>Value</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -9050,6 +9626,15 @@ public interface Bpmn2Package extends EPackage {
     int FLOW_ELEMENTS_CONTAINER__ID = BASE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FLOW_ELEMENTS_CONTAINER__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Lane Sets</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -9121,6 +9706,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int FORMAL_EXPRESSION__ID = EXPRESSION__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FORMAL_EXPRESSION__ANY_ATTRIBUTE = EXPRESSION__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Body</b></em>' reference.
@@ -9203,6 +9797,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int GLOBAL_TASK__ID = CALLABLE_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GLOBAL_TASK__ANY_ATTRIBUTE = CALLABLE_ELEMENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Supported Interface Refs</b></em>' reference list.
@@ -9303,6 +9906,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int GLOBAL_BUSINESS_RULE_TASK__ID = GLOBAL_TASK__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GLOBAL_BUSINESS_RULE_TASK__ANY_ATTRIBUTE = GLOBAL_TASK__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Supported Interface Refs</b></em>' reference list.
@@ -9412,6 +10024,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int GLOBAL_CHOREOGRAPHY_TASK__ID = CHOREOGRAPHY__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GLOBAL_CHOREOGRAPHY_TASK__ANY_ATTRIBUTE = CHOREOGRAPHY__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Participants</b></em>' containment reference list.
@@ -9604,6 +10225,15 @@ public interface Bpmn2Package extends EPackage {
     int GLOBAL_CONVERSATION__ID = COLLABORATION__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GLOBAL_CONVERSATION__ANY_ATTRIBUTE = COLLABORATION__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Participants</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -9767,6 +10397,15 @@ public interface Bpmn2Package extends EPackage {
     int GLOBAL_MANUAL_TASK__ID = GLOBAL_TASK__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GLOBAL_MANUAL_TASK__ANY_ATTRIBUTE = GLOBAL_TASK__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Supported Interface Refs</b></em>' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -9865,6 +10504,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int GLOBAL_SCRIPT_TASK__ID = GLOBAL_TASK__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GLOBAL_SCRIPT_TASK__ANY_ATTRIBUTE = GLOBAL_TASK__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Supported Interface Refs</b></em>' reference list.
@@ -9985,6 +10633,15 @@ public interface Bpmn2Package extends EPackage {
     int GLOBAL_USER_TASK__ID = GLOBAL_TASK__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GLOBAL_USER_TASK__ANY_ATTRIBUTE = GLOBAL_TASK__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Supported Interface Refs</b></em>' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -10103,6 +10760,15 @@ public interface Bpmn2Package extends EPackage {
     int GROUP__ID = ARTIFACT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GROUP__ANY_ATTRIBUTE = ARTIFACT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Category Value Ref</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -10165,6 +10831,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int RESOURCE_ROLE__ID = BASE_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RESOURCE_ROLE__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Resource Ref</b></em>' reference.
@@ -10258,6 +10933,15 @@ public interface Bpmn2Package extends EPackage {
     int PERFORMER__ID = RESOURCE_ROLE__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERFORMER__ANY_ATTRIBUTE = RESOURCE_ROLE__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Resource Ref</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -10349,6 +11033,15 @@ public interface Bpmn2Package extends EPackage {
     int HUMAN_PERFORMER__ID = PERFORMER__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HUMAN_PERFORMER__ANY_ATTRIBUTE = PERFORMER__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Resource Ref</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -10438,6 +11131,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int IMPLICIT_THROW_EVENT__ID = THROW_EVENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int IMPLICIT_THROW_EVENT__ANY_ATTRIBUTE = THROW_EVENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -10676,6 +11378,15 @@ public interface Bpmn2Package extends EPackage {
     int INCLUSIVE_GATEWAY__ID = GATEWAY__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INCLUSIVE_GATEWAY__ANY_ATTRIBUTE = GATEWAY__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -10858,6 +11569,15 @@ public interface Bpmn2Package extends EPackage {
     int INPUT_OUTPUT_SPECIFICATION__ID = BASE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INPUT_OUTPUT_SPECIFICATION__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Data Inputs</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -10947,6 +11667,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int INPUT_SET__ID = BASE_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INPUT_SET__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Data Input Refs</b></em>' reference list.
@@ -11086,6 +11815,15 @@ public interface Bpmn2Package extends EPackage {
     int INTERFACE__ID = ROOT_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERFACE__ANY_ATTRIBUTE = ROOT_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Operations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11166,6 +11904,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int INTERMEDIATE_CATCH_EVENT__ID = CATCH_EVENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERMEDIATE_CATCH_EVENT__ANY_ATTRIBUTE = CATCH_EVENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -11367,6 +12114,15 @@ public interface Bpmn2Package extends EPackage {
     int INTERMEDIATE_THROW_EVENT__ID = THROW_EVENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERMEDIATE_THROW_EVENT__ANY_ATTRIBUTE = THROW_EVENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11557,6 +12313,15 @@ public interface Bpmn2Package extends EPackage {
     int ITEM_DEFINITION__ID = ROOT_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ITEM_DEFINITION__ANY_ATTRIBUTE = ROOT_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Is Collection</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11646,6 +12411,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int LANE__ID = BASE_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LANE__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Partition Element</b></em>' containment reference.
@@ -11748,6 +12522,15 @@ public interface Bpmn2Package extends EPackage {
     int LANE_SET__ID = BASE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LANE_SET__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Lanes</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11819,6 +12602,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int LINK_EVENT_DEFINITION__ID = EVENT_DEFINITION__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LINK_EVENT_DEFINITION__ANY_ATTRIBUTE = EVENT_DEFINITION__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Source</b></em>' reference list.
@@ -11903,6 +12695,15 @@ public interface Bpmn2Package extends EPackage {
     int LOOP_CHARACTERISTICS__ID = BASE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LOOP_CHARACTERISTICS__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The number of structural features of the '<em>Loop Characteristics</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11956,6 +12757,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int MANUAL_TASK__ID = TASK__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MANUAL_TASK__ANY_ATTRIBUTE = TASK__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -12193,6 +13003,15 @@ public interface Bpmn2Package extends EPackage {
     int MESSAGE__ID = ROOT_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MESSAGE__ANY_ATTRIBUTE = ROOT_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Item Ref</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -12266,6 +13085,15 @@ public interface Bpmn2Package extends EPackage {
     int MESSAGE_EVENT_DEFINITION__ID = EVENT_DEFINITION__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MESSAGE_EVENT_DEFINITION__ANY_ATTRIBUTE = EVENT_DEFINITION__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Operation Ref</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -12337,6 +13165,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int MESSAGE_FLOW__ID = BASE_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MESSAGE_FLOW__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Message Ref</b></em>' reference.
@@ -12430,6 +13267,15 @@ public interface Bpmn2Package extends EPackage {
     int MESSAGE_FLOW_ASSOCIATION__ID = BASE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MESSAGE_FLOW_ASSOCIATION__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Inner Message Flow Ref</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -12503,6 +13349,15 @@ public interface Bpmn2Package extends EPackage {
     int MONITORING__ID = BASE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MONITORING__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The number of structural features of the '<em>Monitoring</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -12556,6 +13411,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int MULTI_INSTANCE_LOOP_CHARACTERISTICS__ID = LOOP_CHARACTERISTICS__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MULTI_INSTANCE_LOOP_CHARACTERISTICS__ANY_ATTRIBUTE = LOOP_CHARACTERISTICS__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Loop Cardinality</b></em>' containment reference.
@@ -12712,6 +13576,15 @@ public interface Bpmn2Package extends EPackage {
     int OPERATION__ID = BASE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int OPERATION__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>In Message Ref</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -12812,6 +13685,15 @@ public interface Bpmn2Package extends EPackage {
     int OUTPUT_SET__ID = BASE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int OUTPUT_SET__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Data Output Refs</b></em>' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -12910,6 +13792,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int PARALLEL_GATEWAY__ID = GATEWAY__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PARALLEL_GATEWAY__ANY_ATTRIBUTE = GATEWAY__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -13039,6 +13930,15 @@ public interface Bpmn2Package extends EPackage {
     int PARTICIPANT__ID = BASE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PARTICIPANT__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -13157,6 +14057,15 @@ public interface Bpmn2Package extends EPackage {
     int PARTICIPANT_ASSOCIATION__ID = BASE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PARTICIPANT_ASSOCIATION__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Inner Participant Ref</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -13267,6 +14176,15 @@ public interface Bpmn2Package extends EPackage {
     int PARTNER_ENTITY__ID = ROOT_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PARTNER_ENTITY__ANY_ATTRIBUTE = ROOT_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Participant Ref</b></em>' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -13340,6 +14258,15 @@ public interface Bpmn2Package extends EPackage {
     int PARTNER_ROLE__ID = ROOT_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PARTNER_ROLE__ANY_ATTRIBUTE = ROOT_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Participant Ref</b></em>' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -13411,6 +14338,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int POTENTIAL_OWNER__ID = HUMAN_PERFORMER__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int POTENTIAL_OWNER__ANY_ATTRIBUTE = HUMAN_PERFORMER__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Resource Ref</b></em>' reference.
@@ -13502,6 +14438,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int PROCESS__ID = CALLABLE_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROCESS__ANY_ATTRIBUTE = CALLABLE_ELEMENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Supported Interface Refs</b></em>' reference list.
@@ -13712,6 +14657,15 @@ public interface Bpmn2Package extends EPackage {
     int PROPERTY__ID = ITEM_AWARE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROPERTY__ANY_ATTRIBUTE = ITEM_AWARE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Data State</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -13792,6 +14746,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int RECEIVE_TASK__ID = TASK__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RECEIVE_TASK__ANY_ATTRIBUTE = TASK__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -14065,6 +15028,15 @@ public interface Bpmn2Package extends EPackage {
     int RELATIONSHIP__ID = BASE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RELATIONSHIP__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Sources</b></em>' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -14156,6 +15128,15 @@ public interface Bpmn2Package extends EPackage {
     int RENDERING__ID = BASE_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RENDERING__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The number of structural features of the '<em>Rendering</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -14209,6 +15190,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int RESOURCE__ID = ROOT_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RESOURCE__ANY_ATTRIBUTE = ROOT_ELEMENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Resource Parameters</b></em>' containment reference list.
@@ -14310,6 +15300,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int RESOURCE_PARAMETER__ID = BASE_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RESOURCE_PARAMETER__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Is Required</b></em>' attribute.
@@ -14429,6 +15428,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int SCRIPT_TASK__ID = TASK__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SCRIPT_TASK__ANY_ATTRIBUTE = TASK__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -14682,6 +15690,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int SEND_TASK__ID = TASK__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SEND_TASK__ANY_ATTRIBUTE = TASK__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -14946,6 +15963,15 @@ public interface Bpmn2Package extends EPackage {
     int SEQUENCE_FLOW__ID = FLOW_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SEQUENCE_FLOW__ANY_ATTRIBUTE = FLOW_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -15071,6 +16097,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int SERVICE_TASK__ID = TASK__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SERVICE_TASK__ANY_ATTRIBUTE = TASK__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -15326,6 +16361,15 @@ public interface Bpmn2Package extends EPackage {
     int SIGNAL__ID = ROOT_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIGNAL__ANY_ATTRIBUTE = ROOT_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -15399,6 +16443,15 @@ public interface Bpmn2Package extends EPackage {
     int SIGNAL_EVENT_DEFINITION__ID = EVENT_DEFINITION__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIGNAL_EVENT_DEFINITION__ANY_ATTRIBUTE = EVENT_DEFINITION__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Signal Ref</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -15461,6 +16514,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int STANDARD_LOOP_CHARACTERISTICS__ID = LOOP_CHARACTERISTICS__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STANDARD_LOOP_CHARACTERISTICS__ANY_ATTRIBUTE = LOOP_CHARACTERISTICS__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Loop Condition</b></em>' containment reference.
@@ -15543,6 +16605,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int START_EVENT__ID = CATCH_EVENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int START_EVENT__ANY_ATTRIBUTE = CATCH_EVENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -15753,6 +16824,15 @@ public interface Bpmn2Package extends EPackage {
     int SUB_CHOREOGRAPHY__ID = CHOREOGRAPHY_ACTIVITY__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUB_CHOREOGRAPHY__ANY_ATTRIBUTE = CHOREOGRAPHY_ACTIVITY__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -15934,6 +17014,15 @@ public interface Bpmn2Package extends EPackage {
     int SUB_CONVERSATION__ID = CONVERSATION_NODE__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUB_CONVERSATION__ANY_ATTRIBUTE = CONVERSATION_NODE__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -16052,6 +17141,15 @@ public interface Bpmn2Package extends EPackage {
     int TERMINATE_EVENT_DEFINITION__ID = EVENT_DEFINITION__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TERMINATE_EVENT_DEFINITION__ANY_ATTRIBUTE = EVENT_DEFINITION__ANY_ATTRIBUTE;
+
+    /**
      * The number of structural features of the '<em>Terminate Event Definition</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -16105,6 +17203,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int TEXT_ANNOTATION__ID = ARTIFACT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TEXT_ANNOTATION__ANY_ATTRIBUTE = ARTIFACT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -16178,6 +17285,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int TIMER_EVENT_DEFINITION__ID = EVENT_DEFINITION__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TIMER_EVENT_DEFINITION__ANY_ATTRIBUTE = EVENT_DEFINITION__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Time Date</b></em>' containment reference.
@@ -16260,6 +17376,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int TRANSACTION__ID = SUB_PROCESS__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRANSACTION__ANY_ATTRIBUTE = SUB_PROCESS__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -16531,6 +17656,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int USER_TASK__ID = TASK__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int USER_TASK__ANY_ATTRIBUTE = TASK__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Auditing</b></em>' containment reference.
@@ -18681,6 +19815,17 @@ public interface Bpmn2Package extends EPackage {
     EAttribute getBaseElement_Id();
 
     /**
+     * Returns the meta object for the attribute list '{@link org.eclipse.bpmn2.BaseElement#getAnyAttribute <em>Any Attribute</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute list '<em>Any Attribute</em>'.
+     * @see org.eclipse.bpmn2.BaseElement#getAnyAttribute()
+     * @see #getBaseElement()
+     * @generated
+     */
+    EAttribute getBaseElement_AnyAttribute();
+
+    /**
      * Returns the meta object for class '{@link org.eclipse.bpmn2.BoundaryEvent <em>Boundary Event</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -20531,10 +21676,10 @@ public interface Bpmn2Package extends EPackage {
     EReference getExtensionAttributeValue_ValueRef();
 
     /**
-     * Returns the meta object for the containment reference '{@link org.eclipse.bpmn2.ExtensionAttributeValue#getValue <em>Value</em>}'.
+     * Returns the meta object for the containment reference list '{@link org.eclipse.bpmn2.ExtensionAttributeValue#getValue <em>Value</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the containment reference '<em>Value</em>'.
+     * @return the meta object for the containment reference list '<em>Value</em>'.
      * @see org.eclipse.bpmn2.ExtensionAttributeValue#getValue()
      * @see #getExtensionAttributeValue()
      * @generated
@@ -24741,6 +25886,14 @@ public interface Bpmn2Package extends EPackage {
         EAttribute BASE_ELEMENT__ID = eINSTANCE.getBaseElement_Id();
 
         /**
+         * The meta object literal for the '<em><b>Any Attribute</b></em>' attribute list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute BASE_ELEMENT__ANY_ATTRIBUTE = eINSTANCE.getBaseElement_AnyAttribute();
+
+        /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.BoundaryEventImpl <em>Boundary Event</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -26282,7 +27435,7 @@ public interface Bpmn2Package extends EPackage {
                 .getExtensionAttributeValue_ValueRef();
 
         /**
-         * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
+         * The meta object literal for the '<em><b>Value</b></em>' containment reference list feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated

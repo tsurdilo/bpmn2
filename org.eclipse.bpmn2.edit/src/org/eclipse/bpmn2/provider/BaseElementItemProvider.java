@@ -119,6 +119,7 @@ public class BaseElementItemProvider extends ItemProviderAdapter implements
             super.getChildrenFeatures(object);
             childrenFeatures.add(Bpmn2Package.Literals.BASE_ELEMENT__EXTENSION_VALUES);
             childrenFeatures.add(Bpmn2Package.Literals.BASE_ELEMENT__DOCUMENTATION);
+            childrenFeatures.add(Bpmn2Package.Literals.BASE_ELEMENT__ANY_ATTRIBUTE);
         }
         return childrenFeatures;
     }
@@ -167,6 +168,7 @@ public class BaseElementItemProvider extends ItemProviderAdapter implements
             return;
         case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
         case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
+        case Bpmn2Package.BASE_ELEMENT__ANY_ATTRIBUTE:
             fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
                     true, false));
             return;

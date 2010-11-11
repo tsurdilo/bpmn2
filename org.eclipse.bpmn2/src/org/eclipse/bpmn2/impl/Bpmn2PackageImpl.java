@@ -2732,6 +2732,15 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EAttribute getBaseElement_AnyAttribute() {
+        return (EAttribute) getBaseElement().getEStructuralFeatures().get(4);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getBoundaryEvent() {
         if (boundaryEventEClass == null) {
             boundaryEventEClass = (EClass) EPackage.Registry.INSTANCE

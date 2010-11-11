@@ -26,11 +26,14 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.util.BasicFeatureMap;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -44,6 +47,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link org.eclipse.bpmn2.impl.BaseElementImpl#getDocumentation <em>Documentation</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.BaseElementImpl#getExtensionDefinitions <em>Extension Definitions</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.BaseElementImpl#getId <em>Id</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.BaseElementImpl#getAnyAttribute <em>Any Attribute</em>}</li>
  * </ul>
  * </p>
  *
@@ -99,6 +103,16 @@ public class BaseElementImpl extends EObjectImpl implements BaseElement {
      * @ordered
      */
     protected String id = ID_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getAnyAttribute() <em>Any Attribute</em>}' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getAnyAttribute()
+     * @generated
+     * @ordered
+     */
+    protected FeatureMap anyAttribute;
 
     /**
      * <!-- begin-user-doc -->
@@ -187,6 +201,18 @@ public class BaseElementImpl extends EObjectImpl implements BaseElement {
      * <!-- end-user-doc -->
      * @generated
      */
+    public FeatureMap getAnyAttribute() {
+        if (anyAttribute == null) {
+            anyAttribute = new BasicFeatureMap(this, Bpmn2Package.BASE_ELEMENT__ANY_ATTRIBUTE);
+        }
+        return anyAttribute;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
             NotificationChain msgs) {
@@ -195,6 +221,8 @@ public class BaseElementImpl extends EObjectImpl implements BaseElement {
             return ((InternalEList<?>) getExtensionValues()).basicRemove(otherEnd, msgs);
         case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
             return ((InternalEList<?>) getDocumentation()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.BASE_ELEMENT__ANY_ATTRIBUTE:
+            return ((InternalEList<?>) getAnyAttribute()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -215,6 +243,10 @@ public class BaseElementImpl extends EObjectImpl implements BaseElement {
             return getExtensionDefinitions();
         case Bpmn2Package.BASE_ELEMENT__ID:
             return getId();
+        case Bpmn2Package.BASE_ELEMENT__ANY_ATTRIBUTE:
+            if (coreType)
+                return getAnyAttribute();
+            return ((FeatureMap.Internal) getAnyAttribute()).getWrapper();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -243,6 +275,9 @@ public class BaseElementImpl extends EObjectImpl implements BaseElement {
         case Bpmn2Package.BASE_ELEMENT__ID:
             setId((String) newValue);
             return;
+        case Bpmn2Package.BASE_ELEMENT__ANY_ATTRIBUTE:
+            ((FeatureMap.Internal) getAnyAttribute()).set(newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -267,6 +302,9 @@ public class BaseElementImpl extends EObjectImpl implements BaseElement {
         case Bpmn2Package.BASE_ELEMENT__ID:
             setId(ID_EDEFAULT);
             return;
+        case Bpmn2Package.BASE_ELEMENT__ANY_ATTRIBUTE:
+            getAnyAttribute().clear();
+            return;
         }
         super.eUnset(featureID);
     }
@@ -287,6 +325,8 @@ public class BaseElementImpl extends EObjectImpl implements BaseElement {
             return extensionDefinitions != null && !extensionDefinitions.isEmpty();
         case Bpmn2Package.BASE_ELEMENT__ID:
             return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+        case Bpmn2Package.BASE_ELEMENT__ANY_ATTRIBUTE:
+            return anyAttribute != null && !anyAttribute.isEmpty();
         }
         return super.eIsSet(featureID);
     }
@@ -304,6 +344,8 @@ public class BaseElementImpl extends EObjectImpl implements BaseElement {
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (id: ");
         result.append(id);
+        result.append(", anyAttribute: ");
+        result.append(anyAttribute);
         result.append(')');
         return result.toString();
     }

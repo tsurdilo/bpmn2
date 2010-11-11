@@ -14,7 +14,9 @@
  */
 package org.eclipse.bpmn2;
 
+import java.util.List;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.util.FeatureMap;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +33,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getExtensionAttributeValue()
- * @model
+ * @model extendedMetaData="name='tExtensionElements' kind='elementOnly'"
  * @generated
  */
 public interface ExtensionAttributeValue extends EObject {
@@ -62,30 +64,21 @@ public interface ExtensionAttributeValue extends EObject {
     void setValueRef(Object value);
 
     /**
-     * Returns the value of the '<em><b>Value</b></em>' containment reference.
+     * Returns the value of the '<em><b>Value</b></em>' containment reference list.
+     * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Value</em>' containment reference isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Value</em>' containment reference.
-     * @see #setValue(Object)
+     * @return the value of the '<em>Value</em>' containment reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getExtensionAttributeValue_Value()
-     * @model containment="true" transient="true" derived="true" ordered="false"
+     * @model containment="true" ordered="false"
+     *        extendedMetaData="kind='elementWildcard' wildcards='##other' name=':0' processing='lax'"
      * @generated
      */
-    Object getValue();
-
-    /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.ExtensionAttributeValue#getValue <em>Value</em>}' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Value</em>' containment reference.
-     * @see #getValue()
-     * @generated
-     */
-    void setValue(Object value);
+    List<EObject> getValue();
 
     /**
      * Returns the value of the '<em><b>Extension Attribute Definition</b></em>' reference.

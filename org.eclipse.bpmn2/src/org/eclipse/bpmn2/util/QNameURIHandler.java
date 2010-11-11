@@ -88,7 +88,7 @@ public class QNameURIHandler extends URIHandlerImpl {
     public URI deresolve(URI uri) {
         URI deresolved = super.deresolve(uri);
         String fragment = deresolved.fragment();
-        if (!fragment.startsWith("/")) // We better don't try to QName XPath references to e.g. XML or WSDL context for now.
+        if (fragment != null && !fragment.startsWith("/")) // We better don't try to QName XPath references to e.g. XML or WSDL context for now.
         {
             String prefix = "";
 

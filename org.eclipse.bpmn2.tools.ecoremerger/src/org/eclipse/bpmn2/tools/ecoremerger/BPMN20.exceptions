@@ -7,8 +7,9 @@
     <attributeExceptions xsdAttributeName="import" mofAttributeName="imports"/>
   </ex:ClassMappingException>
   <ex:ClassMappingException xsdClassName="TBaseElement" mofClassName="BaseElement">
-    <attributeExceptions xsdAttributeName="extensionElements" mofAttributeName="extensionDefinitions"/>
-    <attributeExceptions xsdAttributeName="anyAttribute" mofAttributeName="extensionValues"/>
+    <attributeExceptions xsdAttributeName="extensionElements" mofAttributeName="extensionValues"/>
+    <attributeExceptions xsdAttributeName="anyAttribute" mofAttributeName="anyAttribute"/>
+    <attributeExceptions mofAttributeName="extensionDefinitions"/>
   </ex:ClassMappingException>
   <ex:ClassMappingException xsdClassName="TOperation" mofClassName="Operation">
     <attributeExceptions xsdAttributeName="errorRef" mofAttributeName="errorRefs"/>
@@ -142,5 +143,8 @@
   </ex:ClassMappingException>
   <ex:ClassMappingException xsdClassName="Plane" mofClassName="Plane">
     <attributeExceptions xsdAttributeName="diagramElement" mofAttributeName="planeElement"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TExtensionElements" mofClassName="ExtensionAttributeValue">
+    <attributeExceptions xsdAttributeName="any" mofAttributeName="value"/>
   </ex:ClassMappingException>
 </xmi:XMI>

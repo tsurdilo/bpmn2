@@ -1519,7 +1519,13 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="extensionValues" ordered="false"
         upperBound="-1" eType="#//ExtensionAttributeValue" transient="true" derived="true"
-        containment="true"/>
+        containment="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="extensionElements"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>        
     <eStructuralFeatures xsi:type="ecore:EReference" name="documentation" ordered="false"
         upperBound="-1" eType="#//Documentation" containment="true">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
@@ -1527,14 +1533,9 @@
         <details key="name" value="documentation"/>
         <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
       </eAnnotations>
-    </eStructuralFeatures>
+    </eStructuralFeatures>        
     <eStructuralFeatures xsi:type="ecore:EReference" name="extensionDefinitions" ordered="false"
         upperBound="-1" eType="#//ExtensionDefinition">
-      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-        <details key="kind" value="element"/>
-        <details key="name" value="extensionElements"/>
-        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
-      </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true">
@@ -1543,6 +1544,16 @@
         <details key="name" value="id"/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="anyAttribute" unique="false"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFeatureMapEntry">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="attributeWildcard"/>
+        <details key="wildcards" value="##other"/>
+        <details key="name" value=":3"/>
+        <details key="processing" value="lax"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BoundaryEvent" eSuperTypes="#//CatchEvent">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
@@ -2707,12 +2718,23 @@
         resolveProxies="false" eOpposite="#//ExtensionDefinition/extensionAttributeDefinitions"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExtensionAttributeValue">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="tExtensionElements"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="valueRef" ordered="false"
         eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject" transient="true"
         derived="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" ordered="false"
-        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject" transient="true"
-        derived="true" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" ordered="false" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        containment="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="elementWildcard"/>
+        <details key="wildcards" value="##other"/>
+        <details key="name" value=":0"/>
+        <details key="processing" value="lax"/>
+      </eAnnotations>
+    </eStructuralFeatures>              
     <eStructuralFeatures xsi:type="ecore:EReference" name="extensionAttributeDefinition"
         ordered="false" lowerBound="1" eType="#//ExtensionAttributeDefinition" transient="true"
         derived="true"/>
