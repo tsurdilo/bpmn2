@@ -66,7 +66,7 @@ public class QNameURIHandler extends URIHandlerImpl {
             throw new IllegalArgumentException("Illegal QName: " + qName);
 
         if (!xmlHelper.isTargetNamespace(prefix))
-            return xmlHelper.getPathForPrefix(prefix) + "#" + fragment;
+            return xmlHelper.getPathForPrefix(prefix).appendFragment(fragment).toString();
         else
             return baseURI.appendFragment(fragment).toString();
     }
@@ -86,14 +86,13 @@ public class QNameURIHandler extends URIHandlerImpl {
      */
     @Override
     public URI deresolve(URI uri) {
-        URI deresolved = super.deresolve(uri);
-        String fragment = deresolved.fragment();
+        String fragment = uri.fragment();
         if (fragment != null && !fragment.startsWith("/")) // We better don't try to QName XPath references to e.g. XML or WSDL context for now.
         {
             String prefix = "";
 
-            if (deresolved.hasPath()) {
-                prefix = xmlHelper.getNsPrefix(deresolved.trimFragment().toString());
+            if (uri.hasPath()) {
+                prefix = xmlHelper.getNsPrefix(uri.trimFragment());
             }
             if (prefix.length() > 0) {
                 return URI.createURI(prefix + ":" + fragment);
@@ -101,6 +100,6 @@ public class QNameURIHandler extends URIHandlerImpl {
                 // no prefix, just fragment (i.e. without the '#')
                 return URI.createURI(fragment);
         }
-        return deresolved;
+        return super.deresolve(uri);
     }
 }

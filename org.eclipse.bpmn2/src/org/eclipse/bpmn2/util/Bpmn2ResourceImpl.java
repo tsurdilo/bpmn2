@@ -14,6 +14,8 @@
  */
 package org.eclipse.bpmn2.util;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -262,15 +264,16 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
          * @param prefix
          * @return
          */
-        public String getPathForPrefix(String prefix) {
+        public URI getPathForPrefix(String prefix) {
             String ns = this.getNamespaceURI(prefix == null ? XMLConstants.DEFAULT_NS_PREFIX
                     : prefix);
             if (ns != null) {
                 Import imp = findImportForNamespace(ns);
                 if (imp != null)
-                    return imp.getLocation();
+                    return URI.createURI(imp.getLocation()).resolve(
+                            getCanonicalURI(getResource().getURI()));
             }
-            return "";
+            return URI.createURI("");
         }
 
         /**
@@ -332,22 +335,28 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
          * This is called on save to convert from a file-based URI to a namespace prefix.
          * It might be necessary to add a new namespace declaration to the file, if  the 
          * namespace was not known to far.
-         * @param filePath
+         * @param referenced Absolute or relative to current working directory.
          * @return
          */
-        public String getNsPrefix(String filePath) {
+        public String getNsPrefix(URI referenced) {
             String ns = null;
             String prefix = "";
 
-            if (filePath.equals(getResource().getURI().toString())) // TODO: this needs to operate on "canonical paths"
+            URI referencedAbs = getCanonicalURI(referenced);
+            URI thisAbs = getCanonicalURI(getResource().getURI());
+            URI relativeToThis = referencedAbs.deresolve(thisAbs);
+            if (relativeToThis.isEmpty())
                 // reference to local element
                 ns = getDefinitions().getTargetNamespace();
             else {
                 for (Import imp : getDefinitions().getImports()) {
-                    if (filePath.equals(imp.getLocation())) { // TODO: this needs to operate on "canonical paths" as well
-                        // TODO: Also check that imp.getType() is BPMN
-                        ns = imp.getNamespace();
-                        break;
+                    if (imp.getLocation() != null) {
+                        URI importUri = URI.createURI(imp.getLocation()).resolve(thisAbs);
+                        if (importUri.equals(referencedAbs)) {
+                            // TODO: Also check that imp.getType() is BPMN
+                            ns = imp.getNamespace();
+                            break;
+                        }
                     }
                 }
             }
@@ -355,6 +364,27 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
                 prefix = getPrefixDuringSave(ns);
             }
             return prefix;
+        }
+
+        /**
+         * Returns an absolute canonical representation of the given URI.
+         * 
+         * A relative uri is interpreted as relative to the working directory and made absolute. Furthermore,
+         * redundant segments ("./") from the path are removed.
+         * @param uri A relative or absolute URI.
+         * @return <code>uri</code> in absolute and canonical form, obtained by creating a {@linkplain File file} 
+         * from it and taking its {@linkplain File#getCanonicalPath() canonical path}.
+         */
+        private URI getCanonicalURI(URI uri) {
+            if (uri.isFile()) {
+                File tmpFile = new File(uri.toFileString());
+                try {
+                    return URI.createFileURI(tmpFile.getCanonicalPath());
+                } catch (IOException e) {
+                    return URI.createFileURI(tmpFile.getAbsolutePath());
+                }
+            } else
+                return uri;
         }
     }
 
