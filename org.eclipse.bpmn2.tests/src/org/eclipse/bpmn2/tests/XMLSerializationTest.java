@@ -278,7 +278,7 @@ public class XMLSerializationTest extends Bpmn2SerializationTest {
             throws Exception {
         Import xsdImport = Bpmn2Factory.eINSTANCE.createImport();
         xsdImport.setNamespace(namespace);
-        xsdImport.setLocation(location);
+        xsdImport.setLocation("../../" + location); // Relative to resource during test run.
         model.getImports().add(xsdImport);
 
         ItemDefinition xsdItem = Bpmn2Factory.eINSTANCE.createItemDefinition();
@@ -305,10 +305,14 @@ public class XMLSerializationTest extends Bpmn2SerializationTest {
         final InternalEObject xsdStructure = (InternalEObject) itemDef.getStructureRef();
         assertNotNull(xsdStructure);
         if (xsdStructure.eIsProxy())
-            assertEquals(uriExpected, xsdStructure.eProxyURI());
+            assertTrue(String.format("Proxy and expected URI differ (expected: %s, actual: %s)",
+                    uriExpected, xsdStructure.eProxyURI()), xsdStructure.eProxyURI().toString()
+                    .endsWith(uriExpected.toString()));
         else {
             final Resource res = xsdStructure.eResource();
-            assertEquals(uriExpected, res.getURI().appendFragment(res.getURIFragment(xsdStructure)));
+            URI actual = res.getURI().appendFragment(res.getURIFragment(xsdStructure));
+            assertTrue(String.format("Actual and expected URI differ (expected: %s, actual: %s)",
+                    uriExpected, actual), actual.toString().endsWith(uriExpected.toString()));
         }
     }
 

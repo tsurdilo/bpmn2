@@ -87,8 +87,7 @@ public class QNameReferenceTest extends Bpmn2SerializationTest {
      * Equivalent to {@link #saveAndLoadModels(String, String, boolean, String) saveAndLoadModels(name"_A", name"_B", absolute, ...)}
      */
     protected void saveAndLoadModels(String name, boolean absolute) throws IOException {
-        saveAndLoadModels(name + "_A", name + "_B", absolute,
-                getCompletePathURI(name + "_B", absolute).toString()); // TODO: Should just be <name>+"_B.bpmn2". 
+        saveAndLoadModels(name + "_A", name + "_B", absolute, name + "_B." + getFileExtension());
     }
 
     /**
@@ -171,7 +170,7 @@ public class QNameReferenceTest extends Bpmn2SerializationTest {
         A_model.getRootElements().add(A_process2);
         A_process.getSupports().add(A_process2);
 
-        Resource res = saveAndLoadModel("intra", A_model, absolute);
+        Resource res = saveAndLoadModel("intra" + (absolute ? "Abs" : "Rel"), A_model, absolute);
 
         Process A_processNew = (Process) res.getEObject(A_process.getId());
         LinkEventDefinition A_led1New = (LinkEventDefinition) res.getEObject(A_led1.getId());
@@ -217,12 +216,22 @@ public class QNameReferenceTest extends Bpmn2SerializationTest {
         }
     }
 
+    @Test
+    public void testInterModelReferencesRelative() throws IOException {
+        testInterModelReferences(false);
+    }
+
+    @Test
+    public void testInterModelReferencesAbsolute() throws IOException {
+        testInterModelReferences(true);
+    }
+
     /**
      * Test cross-file references.
+     * @param absolute Determines if the models are saved and loaded with absolute or relative URIs.
      * @throws IOException
      */
-    @Test
-    public void testInterModelReferences() throws IOException {
+    public void testInterModelReferences(boolean absolute) throws IOException {
         // single @ XML attribute
         A_process.setDefinitionalCollaborationRef(B_collab);
 
@@ -239,7 +248,7 @@ public class QNameReferenceTest extends Bpmn2SerializationTest {
         // many @ XML element
         A_process.getSupports().add(B_process);
 
-        saveAndLoadModels("inter");
+        saveAndLoadModels("inter" + (absolute ? "Abs" : "Rel"), absolute);
 
         Process A_processNew = (Process) A_resource.getEObject(A_process.getId());
         LinkEventDefinition A_ledNew = (LinkEventDefinition) A_resource.getEObject(A_led.getId());
@@ -363,7 +372,7 @@ public class QNameReferenceTest extends Bpmn2SerializationTest {
 
         Import importCintoA = Bpmn2Factory.eINSTANCE.createImport();
         importCintoA.setImportType("http://www.omg.org/spec/BPMN/20100524/MODEL");
-        importCintoA.setLocation(C_resource.getURI().toString());
+        importCintoA.setLocation("prefixClash_C.bpmn2");
         importCintoA.setNamespace(C_model.getTargetNamespace());
         A_model.getImports().add(importCintoA);
 
@@ -377,5 +386,114 @@ public class QNameReferenceTest extends Bpmn2SerializationTest {
 
         assertResolvesTo("Reference to element of model C could not be resolved", A_processNew
                 .getSupports().get(1), C_process);
+    }
+
+    /*
+     * Tests with different scenarios for the location attribute of import elements
+     */
+
+    @Test
+    public void testImportLocationSubfolderRelative() throws Exception {
+        testImportLocationSubfolder(false);
+    }
+
+    @Test
+    public void testImportLocationSubfolderAbsolute() throws Exception {
+        testImportLocationSubfolder(true);
+    }
+
+    /**
+     * A --> folder/B
+     */
+    public void testImportLocationSubfolder(boolean absolute) throws Exception {
+        String suffix = absolute ? "_Abs" : "_Rel";
+        testImportLocation("importSub_A" + suffix, "sub/importSub_B" + suffix, absolute,
+                "sub/importSub_B" + suffix + ".bpmn2");
+    }
+
+    /**
+     * Redundant path segments in import location ("./")
+     */
+    @Test
+    public void testImportRedundant() throws Exception {
+        testImportLocation("importRedundant_A", "importRedundant_B", false,
+                "./importRedundant_B.bpmn2");
+    }
+
+    /**
+     * Redundant path segments in resource uri ("./")
+     */
+    @Test
+    public void testImportRedundantResource() throws Exception {
+        testImportLocation("importRedundant_A", "./importRedundant_B", false,
+                "importRedundant_B.bpmn2");
+    }
+
+    @Test
+    public void testImportLocationParentFolderRelative() throws Exception {
+        testImportLocationParentFolder(false);
+    }
+
+    @Test
+    public void testImportLocationParentFolderAbsolute() throws Exception {
+        testImportLocationParentFolder(true);
+    }
+
+    /**
+     * A --> ../B
+     */
+    public void testImportLocationParentFolder(boolean absolute) throws Exception {
+        String suffix = absolute ? "_Abs" : "_Rel";
+        testImportLocation("sub/importParent_A" + suffix, "importParent_B" + suffix, absolute,
+                "../importParent_B" + suffix + ".bpmn2");
+    }
+
+    @Test
+    public void testImportLocationNestedFolderRelative() throws Exception {
+        testImportLocationNestedFolder(false);
+    }
+
+    @Test
+    public void testImportLocationNestedFolderAbsolute() throws Exception {
+        testImportLocationNestedFolder(true);
+    }
+
+    /**
+     * A --> ../folder/B
+     */
+    public void testImportLocationNestedFolder(boolean absolute) throws Exception {
+        String suffix = absolute ? "_Abs" : "_Rel";
+        testImportLocation("subA/importNested_A" + suffix, "subB/importNested_B" + suffix,
+                absolute, "../subB/importNested_B" + suffix + ".bpmn2");
+    }
+
+    @Test
+    public void testImportLocationCompletePathRelative() throws Exception {
+        testImportLocationCompletePath(false);
+    }
+
+    @Test
+    public void testImportLocationCompletePathAbsolute() throws Exception {
+        testImportLocationCompletePath(true);
+    }
+
+    /**
+     * A --> /absolute/Path/To/B
+     */
+    public void testImportLocationCompletePath(boolean absolute) throws Exception {
+        String suffix = absolute ? "_Abs" : "_Rel";
+        testImportLocation("importComplete_A" + suffix, "importComplete_B" + suffix, absolute,
+                getCompletePathURI("importComplete_B" + suffix, true).toString()); // TODO: toString (file:/E:/path/to/B.bpmn2) or toFileString (E:\path\to\B.bpmn2) ??
+    }
+
+    public void testImportLocation(String nameA, String nameB, boolean absolute,
+            String importLocation) throws Exception {
+        A_process.setDefinitionalCollaborationRef(B_collab);
+
+        saveAndLoadModels(nameA, nameB, absolute, importLocation);
+
+        Process A_processNew = (Process) A_resource.getEObject(A_process.getId());
+        assertResolvesTo("Proxy could not be resolved, import location: " + importLocation,
+                A_processNew.getDefinitionalCollaborationRef(), B_collab);
     }
 }

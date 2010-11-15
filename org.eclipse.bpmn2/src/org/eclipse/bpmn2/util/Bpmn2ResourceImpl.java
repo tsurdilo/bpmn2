@@ -344,7 +344,7 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
                 ns = getDefinitions().getTargetNamespace();
             else {
                 for (Import imp : getDefinitions().getImports()) {
-                    if (filePath.equals(imp.getLocation())) {
+                    if (filePath.equals(imp.getLocation())) { // TODO: this needs to operate on "canonical paths" as well
                         // TODO: Also check that imp.getType() is BPMN
                         ns = imp.getNamespace();
                         break;

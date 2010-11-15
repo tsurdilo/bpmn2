@@ -4,7 +4,7 @@
     targetNamespace="urn:modelA"
     xmlns:a="urn:modelA" xmlns="urn:modelB">
   <bpmn2:import importType="http://www.omg.org/spec/BPMN/20100524/MODEL" 
-    location="res/qname_prefixNs_referenced.bpmn2" namespace="urn:modelB"/>
+    location="qname_prefixNs_referenced.bpmn2" namespace="urn:modelB"/>
   <bpmn2:collaboration id="colId"/>
   <bpmn2:process id="proc1Id" definitionalCollaborationRef="a:colId">
     <bpmn2:supports>proc2Id</bpmn2:supports>
