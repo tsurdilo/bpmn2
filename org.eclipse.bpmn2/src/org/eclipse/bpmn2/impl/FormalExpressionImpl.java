@@ -18,10 +18,15 @@ import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.FormalExpression;
 import org.eclipse.bpmn2.ItemDefinition;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.BasicFeatureMap;
+import org.eclipse.emf.ecore.util.FeatureMap;
+import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,6 +35,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.eclipse.bpmn2.impl.FormalExpressionImpl#getMixed <em>Mixed</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.FormalExpressionImpl#getBody <em>Body</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.FormalExpressionImpl#getEvaluatesToTypeRef <em>Evaluates To Type Ref</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.FormalExpressionImpl#getLanguage <em>Language</em>}</li>
@@ -40,14 +46,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class FormalExpressionImpl extends ExpressionImpl implements FormalExpression {
     /**
-     * The cached value of the '{@link #getBody() <em>Body</em>}' reference.
+     * The cached value of the '{@link #getMixed() <em>Mixed</em>}' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getMixed()
+     * @generated
+     * @ordered
+     */
+    protected FeatureMap mixed;
+
+    /**
+     * The default value of the '{@link #getBody() <em>Body</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see #getBody()
      * @generated
      * @ordered
      */
-    protected EObject body;
+    protected static final String BODY_EDEFAULT = null;
 
     /**
      * The cached value of the '{@link #getEvaluatesToTypeRef() <em>Evaluates To Type Ref</em>}' reference.
@@ -103,39 +119,46 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
      * <!-- end-user-doc -->
      * @generated
      */
-    public Object getBody() {
-        if (body != null && body.eIsProxy()) {
-            InternalEObject oldBody = (InternalEObject) body;
-            body = eResolveProxy(oldBody);
-            if (body != oldBody) {
-                if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            Bpmn2Package.FORMAL_EXPRESSION__BODY, oldBody, body));
-            }
+    public FeatureMap getMixed() {
+        if (mixed == null) {
+            mixed = new BasicFeatureMap(this, Bpmn2Package.FORMAL_EXPRESSION__MIXED);
         }
-        return body;
+        return mixed;
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated NOT
      */
-    public Object basicGetBody() {
-        return body;
+    public String getBody() {
+        if (mixed != null && !mixed.isEmpty()) {
+            StringBuilder result = new StringBuilder();
+            for (FeatureMap.Entry cur : mixed) {
+                switch (cur.getEStructuralFeature().getFeatureID()) {
+                case XMLTypePackage.XML_TYPE_DOCUMENT_ROOT__CDATA:
+                case XMLTypePackage.XML_TYPE_DOCUMENT_ROOT__TEXT:
+                    result.append(cur.getValue());
+                    break;
+
+                default:
+                    break;
+                }
+            }
+            return result.toString();
+        }
+
+        return null;
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated NOT
      */
-    public void setBody(Object newBody) {
-        Object oldBody = body;
-        body = (EObject) newBody;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    Bpmn2Package.FORMAL_EXPRESSION__BODY, oldBody, body));
+    public void setBody(String newBody) {
+        getMixed().clear();
+        getMixed().add(XMLTypePackage.eINSTANCE.getXMLTypeDocumentRoot_Text(), newBody);
     }
 
     /**
@@ -208,12 +231,29 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
      * @generated
      */
     @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
+        switch (featureID) {
+        case Bpmn2Package.FORMAL_EXPRESSION__MIXED:
+            return ((InternalEList<?>) getMixed()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
+        case Bpmn2Package.FORMAL_EXPRESSION__MIXED:
+            if (coreType)
+                return getMixed();
+            return ((FeatureMap.Internal) getMixed()).getWrapper();
         case Bpmn2Package.FORMAL_EXPRESSION__BODY:
-            if (resolve)
-                return getBody();
-            return basicGetBody();
+            return getBody();
         case Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF:
             if (resolve)
                 return getEvaluatesToTypeRef();
@@ -232,8 +272,11 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
+        case Bpmn2Package.FORMAL_EXPRESSION__MIXED:
+            ((FeatureMap.Internal) getMixed()).set(newValue);
+            return;
         case Bpmn2Package.FORMAL_EXPRESSION__BODY:
-            setBody((Object) newValue);
+            setBody((String) newValue);
             return;
         case Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF:
             setEvaluatesToTypeRef((ItemDefinition) newValue);
@@ -253,8 +296,11 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
+        case Bpmn2Package.FORMAL_EXPRESSION__MIXED:
+            getMixed().clear();
+            return;
         case Bpmn2Package.FORMAL_EXPRESSION__BODY:
-            setBody((Object) null);
+            setBody(BODY_EDEFAULT);
             return;
         case Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF:
             setEvaluatesToTypeRef((ItemDefinition) null);
@@ -274,8 +320,10 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
+        case Bpmn2Package.FORMAL_EXPRESSION__MIXED:
+            return mixed != null && !mixed.isEmpty();
         case Bpmn2Package.FORMAL_EXPRESSION__BODY:
-            return body != null;
+            return BODY_EDEFAULT == null ? getBody() != null : !BODY_EDEFAULT.equals(getBody());
         case Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF:
             return evaluatesToTypeRef != null;
         case Bpmn2Package.FORMAL_EXPRESSION__LANGUAGE:
@@ -296,7 +344,9 @@ public class FormalExpressionImpl extends ExpressionImpl implements FormalExpres
             return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (language: ");
+        result.append(" (mixed: ");
+        result.append(mixed);
+        result.append(", language: ");
         result.append(language);
         result.append(')');
         return result.toString();

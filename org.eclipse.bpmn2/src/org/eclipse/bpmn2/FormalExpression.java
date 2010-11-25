@@ -14,6 +14,8 @@
  */
 package org.eclipse.bpmn2;
 
+import org.eclipse.emf.ecore.util.FeatureMap;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Formal Expression</b></em>'.
@@ -22,6 +24,7 @@ package org.eclipse.bpmn2;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link org.eclipse.bpmn2.FormalExpression#getMixed <em>Mixed</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.FormalExpression#getBody <em>Body</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.FormalExpression#getEvaluatesToTypeRef <em>Evaluates To Type Ref</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.FormalExpression#getLanguage <em>Language</em>}</li>
@@ -34,30 +37,47 @@ package org.eclipse.bpmn2;
  */
 public interface FormalExpression extends Expression {
     /**
-     * Returns the value of the '<em><b>Body</b></em>' reference.
+     * Returns the value of the '<em><b>Mixed</b></em>' attribute list.
+     * The list contents are of type {@link org.eclipse.emf.ecore.util.FeatureMap.Entry}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Mixed</em>' attribute list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Mixed</em>' attribute list.
+     * @see org.eclipse.bpmn2.Bpmn2Package#getFormalExpression_Mixed()
+     * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
+     *        extendedMetaData="kind='elementWildcard' name=':mixed'"
+     * @generated
+     */
+    FeatureMap getMixed();
+
+    /**
+     * Returns the value of the '<em><b>Body</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Body</em>' reference isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Body</em>' reference.
-     * @see #setBody(Object)
+     * @return the value of the '<em>Body</em>' attribute.
+     * @see #setBody(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getFormalExpression_Body()
-     * @model required="true" transient="true" derived="true" ordered="false"
+     * @model required="true" volatile="true" derived="true" ordered="false"
      * @generated
      */
-    Object getBody();
+    String getBody();
 
     /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.FormalExpression#getBody <em>Body</em>}' reference.
+     * Sets the value of the '{@link org.eclipse.bpmn2.FormalExpression#getBody <em>Body</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Body</em>' reference.
+     * @param value the new value of the '<em>Body</em>' attribute.
      * @see #getBody()
      * @generated
      */
-    void setBody(Object value);
+    void setBody(String value);
 
     /**
      * Returns the value of the '<em><b>Evaluates To Type Ref</b></em>' reference.

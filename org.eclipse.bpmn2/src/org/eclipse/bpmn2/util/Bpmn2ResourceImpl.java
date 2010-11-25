@@ -100,6 +100,8 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
             protected boolean shouldSaveFeature(EObject o, EStructuralFeature f) {
                 if (Bpmn2Package.eINSTANCE.getDocumentation_Text().equals(f))
                     return false;
+                if (Bpmn2Package.eINSTANCE.getFormalExpression_Body().equals(f))
+                    return false;
                 return super.shouldSaveFeature(o, f);
             }
         };

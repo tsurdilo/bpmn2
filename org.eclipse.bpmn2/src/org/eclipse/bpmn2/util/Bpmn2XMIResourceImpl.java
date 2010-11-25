@@ -63,6 +63,8 @@ public class Bpmn2XMIResourceImpl extends XMIResourceImpl implements Bpmn2Resour
             protected boolean shouldSaveFeature(EObject o, EStructuralFeature f) {
                 if (Bpmn2Package.eINSTANCE.getDocumentation_Mixed().equals(f))
                     return false;
+                if (Bpmn2Package.eINSTANCE.getFormalExpression_Mixed().equals(f))
+                    return false;
                 return super.shouldSaveFeature(o, f);
             }
         };

@@ -1525,7 +1525,7 @@
         <details key="name" value="extensionElements"/>
         <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
       </eAnnotations>
-    </eStructuralFeatures>        
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="documentation" ordered="false"
         upperBound="-1" eType="#//Documentation" containment="true">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
@@ -1533,10 +1533,9 @@
         <details key="name" value="documentation"/>
         <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
       </eAnnotations>
-    </eStructuralFeatures>        
-    <eStructuralFeatures xsi:type="ecore:EReference" name="extensionDefinitions" ordered="false"
-        upperBound="-1" eType="#//ExtensionDefinition">
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extensionDefinitions" ordered="false"
+        upperBound="-1" eType="#//ExtensionDefinition"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
@@ -1553,7 +1552,6 @@
         <details key="processing" value="lax"/>
       </eAnnotations>
     </eStructuralFeatures>
-    
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BoundaryEvent" eSuperTypes="#//CatchEvent">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
@@ -2725,8 +2723,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="valueRef" ordered="false"
         eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject" transient="true"
         derived="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" ordered="false" upperBound="-1"
-        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" ordered="false"
+        upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
         containment="true">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="elementWildcard"/>
@@ -2734,7 +2732,7 @@
         <details key="name" value=":0"/>
         <details key="processing" value="lax"/>
       </eAnnotations>
-    </eStructuralFeatures>              
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="extensionAttributeDefinition"
         ordered="false" lowerBound="1" eType="#//ExtensionAttributeDefinition" transient="true"
         derived="true"/>
@@ -2832,8 +2830,15 @@
       <details key="name" value="tFormalExpression"/>
       <details key="kind" value="mixed"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="body" ordered="false" lowerBound="1"
-        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject" transient="true"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mixed" unique="false" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFeatureMapEntry">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="elementWildcard"/>
+        <details key="name" value=":mixed"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="body" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" volatile="true"
         derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="evaluatesToTypeRef" ordered="false"
         lowerBound="1" eType="#//ItemDefinition">

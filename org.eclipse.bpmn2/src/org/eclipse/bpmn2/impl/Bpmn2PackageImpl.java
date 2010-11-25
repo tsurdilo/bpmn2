@@ -4694,8 +4694,17 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getFormalExpression_Body() {
-        return (EReference) getFormalExpression().getEStructuralFeatures().get(0);
+    public EAttribute getFormalExpression_Mixed() {
+        return (EAttribute) getFormalExpression().getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getFormalExpression_Body() {
+        return (EAttribute) getFormalExpression().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -4704,7 +4713,7 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      * @generated
      */
     public EReference getFormalExpression_EvaluatesToTypeRef() {
-        return (EReference) getFormalExpression().getEStructuralFeatures().get(1);
+        return (EReference) getFormalExpression().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -4713,7 +4722,7 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      * @generated
      */
     public EAttribute getFormalExpression_Language() {
-        return (EAttribute) getFormalExpression().getEStructuralFeatures().get(2);
+        return (EAttribute) getFormalExpression().getEStructuralFeatures().get(3);
     }
 
     /**

@@ -9717,13 +9717,22 @@ public interface Bpmn2Package extends EPackage {
     int FORMAL_EXPRESSION__ANY_ATTRIBUTE = EXPRESSION__ANY_ATTRIBUTE;
 
     /**
-     * The feature id for the '<em><b>Body</b></em>' reference.
+     * The feature id for the '<em><b>Mixed</b></em>' attribute list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int FORMAL_EXPRESSION__BODY = EXPRESSION_FEATURE_COUNT + 0;
+    int FORMAL_EXPRESSION__MIXED = EXPRESSION_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Body</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FORMAL_EXPRESSION__BODY = EXPRESSION_FEATURE_COUNT + 1;
 
     /**
      * The feature id for the '<em><b>Evaluates To Type Ref</b></em>' reference.
@@ -9732,7 +9741,7 @@ public interface Bpmn2Package extends EPackage {
      * @generated
      * @ordered
      */
-    int FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF = EXPRESSION_FEATURE_COUNT + 1;
+    int FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF = EXPRESSION_FEATURE_COUNT + 2;
 
     /**
      * The feature id for the '<em><b>Language</b></em>' attribute.
@@ -9741,7 +9750,7 @@ public interface Bpmn2Package extends EPackage {
      * @generated
      * @ordered
      */
-    int FORMAL_EXPRESSION__LANGUAGE = EXPRESSION_FEATURE_COUNT + 2;
+    int FORMAL_EXPRESSION__LANGUAGE = EXPRESSION_FEATURE_COUNT + 3;
 
     /**
      * The number of structural features of the '<em>Formal Expression</em>' class.
@@ -9750,7 +9759,7 @@ public interface Bpmn2Package extends EPackage {
      * @generated
      * @ordered
      */
-    int FORMAL_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
+    int FORMAL_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 4;
 
     /**
      * The meta object id for the '{@link org.eclipse.bpmn2.impl.GlobalTaskImpl <em>Global Task</em>}' class.
@@ -21869,15 +21878,26 @@ public interface Bpmn2Package extends EPackage {
     EClass getFormalExpression();
 
     /**
-     * Returns the meta object for the reference '{@link org.eclipse.bpmn2.FormalExpression#getBody <em>Body</em>}'.
+     * Returns the meta object for the attribute list '{@link org.eclipse.bpmn2.FormalExpression#getMixed <em>Mixed</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference '<em>Body</em>'.
+     * @return the meta object for the attribute list '<em>Mixed</em>'.
+     * @see org.eclipse.bpmn2.FormalExpression#getMixed()
+     * @see #getFormalExpression()
+     * @generated
+     */
+    EAttribute getFormalExpression_Mixed();
+
+    /**
+     * Returns the meta object for the attribute '{@link org.eclipse.bpmn2.FormalExpression#getBody <em>Body</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Body</em>'.
      * @see org.eclipse.bpmn2.FormalExpression#getBody()
      * @see #getFormalExpression()
      * @generated
      */
-    EReference getFormalExpression_Body();
+    EAttribute getFormalExpression_Body();
 
     /**
      * Returns the meta object for the reference '{@link org.eclipse.bpmn2.FormalExpression#getEvaluatesToTypeRef <em>Evaluates To Type Ref</em>}'.
@@ -27593,12 +27613,20 @@ public interface Bpmn2Package extends EPackage {
         EClass FORMAL_EXPRESSION = eINSTANCE.getFormalExpression();
 
         /**
-         * The meta object literal for the '<em><b>Body</b></em>' reference feature.
+         * The meta object literal for the '<em><b>Mixed</b></em>' attribute list feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference FORMAL_EXPRESSION__BODY = eINSTANCE.getFormalExpression_Body();
+        EAttribute FORMAL_EXPRESSION__MIXED = eINSTANCE.getFormalExpression_Mixed();
+
+        /**
+         * The meta object literal for the '<em><b>Body</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute FORMAL_EXPRESSION__BODY = eINSTANCE.getFormalExpression_Body();
 
         /**
          * The meta object literal for the '<em><b>Evaluates To Type Ref</b></em>' reference feature.

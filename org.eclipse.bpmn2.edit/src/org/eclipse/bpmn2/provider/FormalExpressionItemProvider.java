@@ -22,6 +22,10 @@ import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.FormalExpression;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.util.FeatureMapUtil;
+import org.eclipse.emf.ecore.xml.type.XMLTypeFactory;
+import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -76,15 +80,14 @@ public class FormalExpressionItemProvider extends ExpressionItemProvider impleme
      * @generated
      */
     protected void addBodyPropertyDescriptor(Object object) {
-        itemPropertyDescriptors
-                .add(createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                        getResourceLocator(),
-                        getString("_UI_FormalExpression_body_feature"),
-                        getString("_UI_PropertyDescriptor_description",
-                                "_UI_FormalExpression_body_feature", "_UI_FormalExpression_type"),
-                        Bpmn2Package.Literals.FORMAL_EXPRESSION__BODY, true, false, true, null,
-                        null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_FormalExpression_body_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_FormalExpression_body_feature", "_UI_FormalExpression_type"),
+                Bpmn2Package.Literals.FORMAL_EXPRESSION__BODY, true, false, true,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -120,6 +123,36 @@ public class FormalExpressionItemProvider extends ExpressionItemProvider impleme
                         "_UI_FormalExpression_language_feature", "_UI_FormalExpression_type"),
                 Bpmn2Package.Literals.FORMAL_EXPRESSION__LANGUAGE, true, false, false,
                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+    }
+
+    /**
+     * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+     * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+     * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+        if (childrenFeatures == null) {
+            super.getChildrenFeatures(object);
+            childrenFeatures.add(Bpmn2Package.Literals.FORMAL_EXPRESSION__MIXED);
+        }
+        return childrenFeatures;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EStructuralFeature getChildFeature(Object object, Object child) {
+        // Check the type of the specified child object and return the proper feature to use for
+        // adding (see {@link AddCommand}) it as a child.
+
+        return super.getChildFeature(object, child);
     }
 
     /**
@@ -168,6 +201,10 @@ public class FormalExpressionItemProvider extends ExpressionItemProvider impleme
             fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
                     false, true));
             return;
+        case Bpmn2Package.FORMAL_EXPRESSION__MIXED:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
+                    true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -182,6 +219,27 @@ public class FormalExpressionItemProvider extends ExpressionItemProvider impleme
     @Override
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
+
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.FORMAL_EXPRESSION__MIXED, FeatureMapUtil.createEntry(
+                        XMLTypePackage.Literals.XML_TYPE_DOCUMENT_ROOT__COMMENT, "")));
+
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.FORMAL_EXPRESSION__MIXED, FeatureMapUtil.createEntry(
+                        XMLTypePackage.Literals.XML_TYPE_DOCUMENT_ROOT__TEXT, "")));
+
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.FORMAL_EXPRESSION__MIXED, FeatureMapUtil.createEntry(
+                        XMLTypePackage.Literals.XML_TYPE_DOCUMENT_ROOT__PROCESSING_INSTRUCTION,
+                        XMLTypeFactory.eINSTANCE.createProcessingInstruction())));
+
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.FORMAL_EXPRESSION__MIXED, FeatureMapUtil.createEntry(
+                        XMLTypePackage.Literals.XML_TYPE_DOCUMENT_ROOT__CDATA, "")));
+
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.FORMAL_EXPRESSION__MIXED,
+                FeatureMapUtil.createEntry(Bpmn2Package.Literals.FORMAL_EXPRESSION__BODY, "")));
     }
 
 }

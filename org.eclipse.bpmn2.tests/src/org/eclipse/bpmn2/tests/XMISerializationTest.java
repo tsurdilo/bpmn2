@@ -113,6 +113,9 @@ public class XMISerializationTest extends XMLSerializationTest {
     @Override
     protected void checkSerializationFormalExpBody(Resource res) throws SAXException, IOException,
             ParserConfigurationException {
+        /*
+         * TODO: this check fails currently - the body is stored as an attribute (see bug 323168) 
+         */
         DocumentBuilderFactory fact = DocumentBuilderFactory.newInstance();
         Document xml = fact.newDocumentBuilder().parse(new File(res.getURI().toFileString()));
         Node scriptNode = xml.getElementsByTagName("condition").item(0);
