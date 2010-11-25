@@ -24,11 +24,13 @@ import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Category;
 import org.eclipse.bpmn2.CategoryValue;
 import org.eclipse.bpmn2.Collaboration;
+import org.eclipse.bpmn2.ConditionalEventDefinition;
 import org.eclipse.bpmn2.ConversationLink;
 import org.eclipse.bpmn2.Definitions;
 import org.eclipse.bpmn2.DocumentRoot;
 import org.eclipse.bpmn2.Documentation;
 import org.eclipse.bpmn2.FlowElement;
+import org.eclipse.bpmn2.FormalExpression;
 import org.eclipse.bpmn2.Import;
 import org.eclipse.bpmn2.ItemDefinition;
 import org.eclipse.bpmn2.Lane;
@@ -42,11 +44,16 @@ import org.eclipse.bpmn2.util.NamespaceHelper;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EcoreFactory;
+import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.DynamicEObjectImpl;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.ClassNotFoundException;
 import org.eclipse.emf.ecore.xmi.FeatureNotFoundException;
+import org.eclipse.emf.ecore.xml.type.SimpleAnyType;
+import org.eclipse.emf.ecore.xml.type.XMLTypeFactory;
+import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.junit.Before;
 import org.junit.Test;
 import org.w3c.dom.Document;
@@ -243,6 +250,35 @@ public class XMLSerializationTest extends Bpmn2SerializationTest {
     }
 
     @Test
+    public void testFormalExpressionBody() throws Exception {
+        final String feId = "fe1";
+        final String feBody = "${script}";
+
+        ConditionalEventDefinition ced = Bpmn2Factory.eINSTANCE.createConditionalEventDefinition();
+        FormalExpression fe = Bpmn2Factory.eINSTANCE.createFormalExpression();
+        fe.setBody(feBody);
+        fe.setId(feId);
+        ced.setCondition(fe);
+        model.getRootElements().add(ced);
+        Resource res = saveAndLoadModel("formalExpBody", model);
+
+        EObject docLoaded = res.getEObject(feId);
+        assertTrue(docLoaded instanceof FormalExpression);
+        assertEquals(feBody, ((FormalExpression) docLoaded).getBody());
+
+        checkSerializationFormalExpBody(res);
+    }
+
+    protected void checkSerializationFormalExpBody(Resource res) throws SAXException, IOException,
+            ParserConfigurationException {
+        DocumentBuilderFactory fact = DocumentBuilderFactory.newInstance();
+        Document xml = fact.newDocumentBuilder().parse(new File(res.getURI().toFileString()));
+        Node docNode = xml.getElementsByTagName("bpmn2:condition").item(0);
+        assertNull("FormalExpression has an attribute 'body' (invalid acc. to XML schema)", docNode
+                .getAttributes().getNamedItem("body"));
+    }
+
+    @Test
     public void testItemDefinitionXSD() throws Exception {
         /*
          * TODO: This test FAILS currently (XSD&XMI).
@@ -385,12 +421,18 @@ public class XMLSerializationTest extends Bpmn2SerializationTest {
         LaneSet ls = Bpmn2Factory.eINSTANCE.createLaneSet();
         p.getLaneSets().add(ls);
         Lane l = Bpmn2Factory.eINSTANCE.createLane();
+        String laneId = "laneId";
+        l.setId(laneId);
         ls.getLanes().add(l);
 
         l.getFlowNodeRefs().add(t);
 
         try {
             Resource res = saveAndLoadModel("idRefToAbstract", model);
+            Lane lNew = (Lane) res.getEObject(laneId);
+            assertTrue(lNew.getFlowNodeRefs().size() > 0);
+            assertFalse(lNew.getFlowNodeRefs().get(0).eIsProxy());
+            assertEquals(t.getId(), lNew.getFlowNodeRefs().get(0).getId());
         } catch (WrappedException e) {
             if (e.exception() instanceof ClassNotFoundException)
                 fail("Class EventDefinition was recognized as abstract.");

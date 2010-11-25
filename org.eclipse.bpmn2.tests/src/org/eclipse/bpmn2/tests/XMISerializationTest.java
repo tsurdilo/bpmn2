@@ -109,4 +109,21 @@ public class XMISerializationTest extends XMLSerializationTest {
                     "script".equals(cur.getNodeName()));
         }
     }
+
+    @Override
+    protected void checkSerializationFormalExpBody(Resource res) throws SAXException, IOException,
+            ParserConfigurationException {
+        DocumentBuilderFactory fact = DocumentBuilderFactory.newInstance();
+        Document xml = fact.newDocumentBuilder().parse(new File(res.getURI().toFileString()));
+        Node scriptNode = xml.getElementsByTagName("condition").item(0);
+        assertNull(
+                "Condition body stored as attribute, not allowed in original XMI (non-primitive).",
+                scriptNode.getAttributes().getNamedItem("body"));
+        for (int i = 0; i < scriptNode.getChildNodes().getLength(); i++) {
+            Node cur = scriptNode.getChildNodes().item(i);
+            if (cur.getNodeName().equals("body"))
+                return;
+        }
+        fail("Condition element has no child node 'body'");
+    }
 }
