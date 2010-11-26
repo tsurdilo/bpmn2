@@ -147,4 +147,7 @@
   <ex:ClassMappingException xsdClassName="TExtensionElements" mofClassName="ExtensionAttributeValue">
     <attributeExceptions xsdAttributeName="any" mofAttributeName="value"/>
   </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TMultiInstanceFlowCondition" mofClassName="MultiInstanceBehavior">
+    <attributeExceptions xsdAttributeName="any" mofAttributeName="value"/>
+  </ex:ClassMappingException>
 </xmi:XMI>
