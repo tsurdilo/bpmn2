@@ -451,13 +451,13 @@ public interface DocumentRoot extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Base Element With Mixed Content</em>' containment reference.
-     * @see #setBaseElementWithMixedContent(Object)
+     * @see #setBaseElementWithMixedContent(BaseElement)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDocumentRoot_BaseElementWithMixedContent()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
-     *        extendedMetaData="kind='element' name='baseElementWithMixedContent' namespace='##targetNamespace'"
+     *        extendedMetaData="kind='element' name='baseElementWithMixedContent' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    Object getBaseElementWithMixedContent();
+    BaseElement getBaseElementWithMixedContent();
 
     /**
      * Sets the value of the '{@link org.eclipse.bpmn2.DocumentRoot#getBaseElementWithMixedContent <em>Base Element With Mixed Content</em>}' containment reference.
@@ -467,7 +467,7 @@ public interface DocumentRoot extends EObject {
      * @see #getBaseElementWithMixedContent()
      * @generated
      */
-    void setBaseElementWithMixedContent(Object value);
+    void setBaseElementWithMixedContent(BaseElement value);
 
     /**
      * Returns the value of the '<em><b>Boundary Event</b></em>' containment reference.
@@ -1882,13 +1882,13 @@ public interface DocumentRoot extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Extension Elements</em>' containment reference.
-     * @see #setExtensionElements(Object)
+     * @see #setExtensionElements(ExtensionAttributeValue)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDocumentRoot_ExtensionElements()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
-     *        extendedMetaData="kind='element' name='extensionElements' namespace='##targetNamespace'"
+     *        extendedMetaData="kind='element' name='extensionElements' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    Object getExtensionElements();
+    ExtensionAttributeValue getExtensionElements();
 
     /**
      * Sets the value of the '{@link org.eclipse.bpmn2.DocumentRoot#getExtensionElements <em>Extension Elements</em>}' containment reference.
@@ -1898,7 +1898,7 @@ public interface DocumentRoot extends EObject {
      * @see #getExtensionElements()
      * @generated
      */
-    void setExtensionElements(Object value);
+    void setExtensionElements(ExtensionAttributeValue value);
 
     /**
      * Returns the value of the '<em><b>Flow Node</b></em>' containment reference.
@@ -3332,7 +3332,7 @@ public interface DocumentRoot extends EObject {
      * @see #setScript(Object)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDocumentRoot_Script()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
-     *        extendedMetaData="kind='element' name='script' namespace='##targetNamespace'"
+     *        extendedMetaData="kind='element' name='script' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     Object getScript();
@@ -3710,7 +3710,7 @@ public interface DocumentRoot extends EObject {
      * @see #setText(Object)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDocumentRoot_Text()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
-     *        extendedMetaData="kind='element' name='text' namespace='##targetNamespace'"
+     *        extendedMetaData="kind='element' name='text' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     Object getText();

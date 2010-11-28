@@ -21,8 +21,7 @@ package org.eclipse.bpmn2;
  *
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getArtifact()
- * @model abstract="true"
- *        extendedMetaData="name='tArtifact' kind='elementOnly'"
+ * @model extendedMetaData="name='tArtifact' kind='elementOnly' abstract='true'"
  * @generated
  */
 public interface Artifact extends BaseElement {

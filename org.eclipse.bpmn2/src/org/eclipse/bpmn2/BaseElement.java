@@ -51,7 +51,7 @@ public interface BaseElement extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Extension Values</em>' containment reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getBaseElement_ExtensionValues()
-     * @model containment="true" transient="true" derived="true" ordered="false"
+     * @model containment="true" ordered="false"
      *        extendedMetaData="kind='element' name='extensionElements' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */

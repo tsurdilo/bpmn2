@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public abstract class ArtifactImpl extends BaseElementImpl implements Artifact {
+public class ArtifactImpl extends BaseElementImpl implements Artifact {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

@@ -67,6 +67,7 @@ public class ExtensionItemProvider extends ItemProviderAdapter implements
             super.getPropertyDescriptors(object);
 
             addMustUnderstandPropertyDescriptor(object);
+            addXsdDefinitionPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -86,6 +87,23 @@ public class ExtensionItemProvider extends ItemProviderAdapter implements
                         "_UI_Extension_mustUnderstand_feature", "_UI_Extension_type"),
                 Bpmn2Package.Literals.EXTENSION__MUST_UNDERSTAND, true, false, false,
                 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+    }
+
+    /**
+     * This adds a property descriptor for the Xsd Definition feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addXsdDefinitionPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Extension_xsdDefinition_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_Extension_xsdDefinition_feature", "_UI_Extension_type"),
+                Bpmn2Package.Literals.EXTENSION__XSD_DEFINITION, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -158,6 +176,7 @@ public class ExtensionItemProvider extends ItemProviderAdapter implements
 
         switch (notification.getFeatureID(Extension.class)) {
         case Bpmn2Package.EXTENSION__MUST_UNDERSTAND:
+        case Bpmn2Package.EXTENSION__XSD_DEFINITION:
             fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
                     false, true));
             return;

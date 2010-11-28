@@ -153,6 +153,29 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory impleme
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.bpmn2.Artifact} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ArtifactItemProvider artifactItemProvider;
+
+    /**
+     * This creates an adapter for a {@link org.eclipse.bpmn2.Artifact}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createArtifactAdapter() {
+        if (artifactItemProvider == null) {
+            artifactItemProvider = new ArtifactItemProvider(this);
+        }
+
+        return artifactItemProvider;
+    }
+
+    /**
      * This keeps track of the one adapter used for all {@link org.eclipse.bpmn2.Assignment} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2620,6 +2643,29 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory impleme
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.bpmn2.RootElement} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected RootElementItemProvider rootElementItemProvider;
+
+    /**
+     * This creates an adapter for a {@link org.eclipse.bpmn2.RootElement}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createRootElementAdapter() {
+        if (rootElementItemProvider == null) {
+            rootElementItemProvider = new RootElementItemProvider(this);
+        }
+
+        return rootElementItemProvider;
+    }
+
+    /**
      * This keeps track of the one adapter used for all {@link org.eclipse.bpmn2.ScriptTask} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3116,6 +3162,8 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory impleme
             activityItemProvider.dispose();
         if (adHocSubProcessItemProvider != null)
             adHocSubProcessItemProvider.dispose();
+        if (artifactItemProvider != null)
+            artifactItemProvider.dispose();
         if (assignmentItemProvider != null)
             assignmentItemProvider.dispose();
         if (associationItemProvider != null)
@@ -3330,6 +3378,8 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory impleme
             resourceParameterBindingItemProvider.dispose();
         if (resourceRoleItemProvider != null)
             resourceRoleItemProvider.dispose();
+        if (rootElementItemProvider != null)
+            rootElementItemProvider.dispose();
         if (scriptTaskItemProvider != null)
             scriptTaskItemProvider.dispose();
         if (sendTaskItemProvider != null)

@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public abstract class RootElementImpl extends BaseElementImpl implements RootElement {
+public class RootElementImpl extends BaseElementImpl implements RootElement {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

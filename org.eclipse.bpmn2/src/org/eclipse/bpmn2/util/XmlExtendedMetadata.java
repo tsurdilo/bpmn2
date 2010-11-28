@@ -23,8 +23,9 @@ import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.di.BpmnDiPackage;
 import org.eclipse.dd.dc.DcPackage;
 import org.eclipse.dd.di.DiPackage;
+import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.util.BasicExtendedMetaData;
 
 public class XmlExtendedMetadata extends BasicExtendedMetaData {
@@ -61,10 +62,30 @@ public class XmlExtendedMetadata extends BasicExtendedMetaData {
         return ns;
     }
 
+    /**
+     * The method handles classes or data types that exist in XSD, but not in the Ecore.
+     * The corresponding type will be "redirected" to a substitution or standard type.
+     * The code snippet is important if XSD2Ecore "accidently" loads the BPMN20.xsd
+     * into memory as Ecore, which happens e.g. from files that have a referenced extension
+     * XSD. The on-the-fly converted BPMN20.xsd must not infer with our Ecore.
+     */
     @Override
-    public EStructuralFeature getElement(String namespace, String name) {
-        // TODO In the case of "Inheritance Extensions" (see Sample+Instance from Beta 1) we 
-        // need to look for affiliations to BPMN substitution groups in external extension schemas
-        return super.getElement(namespace, name);
+    public EClassifier getType(EPackage ePackage, String name) {
+        if (Bpmn2Package.eINSTANCE.equals(ePackage)) {
+            if ("tBaseElementWithMixedContent".equals(name)) {
+                return Bpmn2Package.Literals.BASE_ELEMENT;
+            } else if ("tImplementation".equals(name)) {
+                return EcorePackage.Literals.ESTRING;
+            } else if ("tScript".equals(name)) {
+                return EcorePackage.Literals.EOBJECT;
+
+            } else if ("tText".equals(name)) {
+                return EcorePackage.Literals.EOBJECT;
+
+            } else if ("tTransactionMethod".equals(name)) {
+                return EcorePackage.Literals.ESTRING;
+            }
+        }
+        return super.getType(ePackage, name);
     }
 }

@@ -106,12 +106,12 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="baseElementWithMixedContent"
-        upperBound="-2" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
-        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+        upperBound="-2" eType="#//BaseElement" volatile="true" transient="true" derived="true"
+        containment="true" resolveProxies="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
         <details key="name" value="baseElementWithMixedContent"/>
-        <details key="namespace" value="##targetNamespace"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="boundaryEvent" upperBound="-2"
@@ -612,12 +612,12 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="extensionElements" upperBound="-2"
-        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject" volatile="true"
-        transient="true" derived="true" containment="true" resolveProxies="false">
+        eType="#//ExtensionAttributeValue" volatile="true" transient="true" derived="true"
+        containment="true" resolveProxies="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
         <details key="name" value="extensionElements"/>
-        <details key="namespace" value="##targetNamespace"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="flowNode" upperBound="-2"
@@ -1131,7 +1131,7 @@
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
         <details key="name" value="script"/>
-        <details key="namespace" value="##targetNamespace"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="scriptTask" upperBound="-2"
@@ -1268,7 +1268,7 @@
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
         <details key="name" value="text"/>
-        <details key="namespace" value="##targetNamespace"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="textAnnotation" upperBound="-2"
@@ -1413,6 +1413,9 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="AdHocOrdering">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="tAdHocOrdering"/>
+    </eAnnotations>
     <eLiterals name="Parallel"/>
     <eLiterals name="Sequential" value="1"/>
   </eClassifiers>
@@ -1445,10 +1448,11 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Artifact" abstract="true" eSuperTypes="#//BaseElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Artifact" eSuperTypes="#//BaseElement">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="tArtifact"/>
       <details key="kind" value="elementOnly"/>
+      <details key="abstract" value="true"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Assignment" eSuperTypes="#//BaseElement">
@@ -1501,6 +1505,9 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="AssociationDirection">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="tAssociationDirection"/>
+    </eAnnotations>
     <eLiterals name="None"/>
     <eLiterals name="One" value="1"/>
     <eLiterals name="Both" value="2"/>
@@ -1518,8 +1525,7 @@
       <details key="abstract" value="true"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="extensionValues" ordered="false"
-        upperBound="-1" eType="#//ExtensionAttributeValue" transient="true" derived="true"
-        containment="true">
+        upperBound="-1" eType="#//ExtensionAttributeValue" containment="true">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
         <details key="name" value="extensionElements"/>
@@ -1821,6 +1827,9 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ChoreographyLoopType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="tChoreographyLoopType"/>
+    </eAnnotations>
     <eLiterals name="None"/>
     <eLiterals name="Standard" value="1"/>
     <eLiterals name="MultiInstanceSequential" value="2"/>
@@ -2654,6 +2663,9 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="EventBasedGatewayType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="tEventBasedGatewayType"/>
+    </eAnnotations>
     <eLiterals name="Parallel"/>
     <eLiterals name="Exclusive" value="1"/>
   </eClassifiers>
@@ -2689,18 +2701,19 @@
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="definition" ordered="false"
-        lowerBound="1" eType="#//ExtensionDefinition" containment="true">
-      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-        <details key="kind" value="attribute"/>
-        <details key="name" value="definition"/>
-      </eAnnotations>
-    </eStructuralFeatures>
+        lowerBound="1" eType="#//ExtensionDefinition" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mustUnderstand" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="attribute"/>
         <details key="name" value="mustUnderstand"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="xsdDefinition" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//QName">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="attribute"/>
+        <details key="name" value="definition"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -2870,6 +2883,9 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="GatewayDirection">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="tGatewayDirection"/>
+    </eAnnotations>
     <eLiterals name="Unspecified"/>
     <eLiterals name="Converging" value="1"/>
     <eLiterals name="Diverging" value="2"/>
@@ -3245,6 +3261,9 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ItemKind">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="tItemKind"/>
+    </eAnnotations>
     <eLiterals name="Physical"/>
     <eLiterals name="Information" value="1"/>
   </eClassifiers>
@@ -3456,6 +3475,9 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="MultiInstanceBehavior">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="tMultiInstanceFlowCondition"/>
+    </eAnnotations>
     <eLiterals name="None"/>
     <eLiterals name="One" value="1"/>
     <eLiterals name="All" value="2"/>
@@ -3882,6 +3904,9 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ProcessType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="tProcessType"/>
+    </eAnnotations>
     <eLiterals name="None"/>
     <eLiterals name="Public" value="1"/>
     <eLiterals name="Private" value="2"/>
@@ -3971,6 +3996,9 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="RelationshipDirection">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="tRelationshipDirection"/>
+    </eAnnotations>
     <eLiterals name="None"/>
     <eLiterals name="Forward" value="1"/>
     <eLiterals name="Backward" value="2"/>
@@ -4103,10 +4131,11 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RootElement" abstract="true" eSuperTypes="#//BaseElement">
+  <eClassifiers xsi:type="ecore:EClass" name="RootElement" eSuperTypes="#//BaseElement">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="tRootElement"/>
       <details key="kind" value="elementOnly"/>
+      <details key="abstract" value="true"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ScriptTask" eSuperTypes="#//Task">

@@ -45,8 +45,8 @@ public class QNameURIHandler extends URIHandlerImpl {
      * @return
      */
     public String convertQNameToUri(String qName) {
-        if (qName.contains("#")) {
-            // We already have an URI and not QName
+        if (qName.contains("#") || qName.contains("/") || qName.contains(".")) {
+            // We already have an URI and not QName, e.g. URL
             return qName;
         }
 
@@ -59,9 +59,6 @@ public class QNameURIHandler extends URIHandlerImpl {
         } else if (parts.length == 2) {
             prefix = parts[0];
             fragment = parts[1];
-            if (fragment.startsWith("/")) { // We have probably found a URL. Better leave it alone
-                return qName;
-            }
         } else
             throw new IllegalArgumentException("Illegal QName: " + qName);
 

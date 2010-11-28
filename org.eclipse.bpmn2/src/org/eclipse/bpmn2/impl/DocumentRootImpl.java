@@ -75,6 +75,7 @@ import org.eclipse.bpmn2.EventDefinition;
 import org.eclipse.bpmn2.ExclusiveGateway;
 import org.eclipse.bpmn2.Expression;
 import org.eclipse.bpmn2.Extension;
+import org.eclipse.bpmn2.ExtensionAttributeValue;
 import org.eclipse.bpmn2.FlowElement;
 import org.eclipse.bpmn2.FlowNode;
 import org.eclipse.bpmn2.FormalExpression;
@@ -645,8 +646,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public Object getBaseElementWithMixedContent() {
-        return (Object) getMixed().get(
+    public BaseElement getBaseElementWithMixedContent() {
+        return (BaseElement) getMixed().get(
                 Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT, true);
     }
 
@@ -656,7 +657,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * @generated
      */
     public NotificationChain basicSetBaseElementWithMixedContent(
-            EObject newBaseElementWithMixedContent, NotificationChain msgs) {
+            BaseElement newBaseElementWithMixedContent, NotificationChain msgs) {
         return ((FeatureMap.Internal) getMixed()).basicAdd(
                 Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT,
                 newBaseElementWithMixedContent, msgs);
@@ -667,7 +668,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setBaseElementWithMixedContent(Object newBaseElementWithMixedContent) {
+    public void setBaseElementWithMixedContent(BaseElement newBaseElementWithMixedContent) {
         ((FeatureMap.Internal) getMixed()).set(
                 Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT,
                 newBaseElementWithMixedContent);
@@ -2295,9 +2296,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public Object getExtensionElements() {
-        return (Object) getMixed().get(Bpmn2Package.Literals.DOCUMENT_ROOT__EXTENSION_ELEMENTS,
-                true);
+    public ExtensionAttributeValue getExtensionElements() {
+        return (ExtensionAttributeValue) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__EXTENSION_ELEMENTS, true);
     }
 
     /**
@@ -2305,8 +2306,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetExtensionElements(EObject newExtensionElements,
-            NotificationChain msgs) {
+    public NotificationChain basicSetExtensionElements(
+            ExtensionAttributeValue newExtensionElements, NotificationChain msgs) {
         return ((FeatureMap.Internal) getMixed())
                 .basicAdd(Bpmn2Package.Literals.DOCUMENT_ROOT__EXTENSION_ELEMENTS,
                         newExtensionElements, msgs);
@@ -2317,7 +2318,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setExtensionElements(Object newExtensionElements) {
+    public void setExtensionElements(ExtensionAttributeValue newExtensionElements) {
         ((FeatureMap.Internal) getMixed()).set(
                 Bpmn2Package.Literals.DOCUMENT_ROOT__EXTENSION_ELEMENTS, newExtensionElements);
     }
@@ -5178,7 +5179,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
             setBaseElement((BaseElement) newValue);
             return;
         case Bpmn2Package.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT:
-            setBaseElementWithMixedContent((Object) newValue);
+            setBaseElementWithMixedContent((BaseElement) newValue);
             return;
         case Bpmn2Package.DOCUMENT_ROOT__BOUNDARY_EVENT:
             setBoundaryEvent((BoundaryEvent) newValue);
@@ -5337,7 +5338,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
             setExtension((Extension) newValue);
             return;
         case Bpmn2Package.DOCUMENT_ROOT__EXTENSION_ELEMENTS:
-            setExtensionElements((Object) newValue);
+            setExtensionElements((ExtensionAttributeValue) newValue);
             return;
         case Bpmn2Package.DOCUMENT_ROOT__FLOW_NODE:
             setFlowNode((FlowNode) newValue);
@@ -5601,7 +5602,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
             setBaseElement((BaseElement) null);
             return;
         case Bpmn2Package.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT:
-            setBaseElementWithMixedContent((Object) null);
+            setBaseElementWithMixedContent((BaseElement) null);
             return;
         case Bpmn2Package.DOCUMENT_ROOT__BOUNDARY_EVENT:
             setBoundaryEvent((BoundaryEvent) null);
@@ -5760,7 +5761,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
             setExtension((Extension) null);
             return;
         case Bpmn2Package.DOCUMENT_ROOT__EXTENSION_ELEMENTS:
-            setExtensionElements((Object) null);
+            setExtensionElements((ExtensionAttributeValue) null);
             return;
         case Bpmn2Package.DOCUMENT_ROOT__FLOW_NODE:
             setFlowNode((FlowNode) null);

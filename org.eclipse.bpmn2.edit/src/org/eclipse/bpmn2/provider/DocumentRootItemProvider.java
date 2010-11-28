@@ -184,7 +184,6 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__FLOW_ELEMENT
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT
-                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__EXTENSION_ELEMENTS
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__FLOW_NODE
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__SCRIPT
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__TEXT
@@ -230,8 +229,8 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__AUDITING
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CONVERSATION_NODE
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CALL_CONVERSATION
-                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CALLABLE_ELEMENT
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ROOT_ELEMENT
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CALLABLE_ELEMENT
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT_DEFINITION
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CANCEL_EVENT_DEFINITION
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__CATEGORY
@@ -309,6 +308,7 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__TIMER_EVENT_DEFINITION
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ESCALATION
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__EXTENSION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__EXTENSION_ELEMENTS
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__IMPORT
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__IO_BINDING
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT_MULTIPLICITY

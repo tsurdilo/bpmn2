@@ -16,14 +16,17 @@ package org.eclipse.bpmn2.util;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
 import javax.xml.XMLConstants;
+import javax.xml.namespace.QName;
 
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Definitions;
 import org.eclipse.bpmn2.DocumentRoot;
+import org.eclipse.bpmn2.Extension;
 import org.eclipse.bpmn2.Import;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.URI;
@@ -42,6 +45,7 @@ import org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMLSaveImpl;
+import org.eclipse.xsd.ecore.XSDEcoreBuilder;
 import org.xml.sax.helpers.DefaultHandler;
 
 /**
@@ -182,6 +186,39 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
                             .convertQNameToUri(ids) : ids);
         }
 
+        /**
+         * Used from the <extension><definition> tag to load referenced extension schemes.
+         * The extension scheme will be loaded and converted to EMF Ecore on the fly.
+         * 
+         * @param id
+         */
+        private EObject loadExtensionSchema(QName xsdQname) {
+            EPackage extensionPackage = extendedMetaData.getPackage(xsdQname.getNamespaceURI());
+            if (extensionPackage == null) {
+                URI location = urisToLocations.get(xsdQname.getNamespaceURI());
+                Map<Object, Object> options = new HashMap<Object, Object>();
+                options.put(XSDEcoreBuilder.OPTION_REUSE_REGISTERED_PACKAGES, Boolean.TRUE);
+                try {
+                    XSDEcoreBuilder builder = new XSDEcoreBuilder(extendedMetaData, options);
+                    builder.generate(location);
+                } catch (Exception e) {
+                }
+            }
+            return extendedMetaData.getElement(xsdQname.getNamespaceURI(), xsdQname.getLocalPart());
+        }
+
+        @Override
+        public void endElement(String uri, String localName, String name) {
+            // Detect Extension object
+            EObject peekObject = objects.peek();
+            if (peekObject instanceof Extension) {
+                Extension extension = (Extension) peekObject;
+                if (extension.isMustUnderstand() && null != extension.getXsdDefinition()) {
+                    loadExtensionSchema(extension.getXsdDefinition());
+                }
+            }
+            super.endElement(uri, localName, name);
+        }
     }
 
     /**
@@ -274,6 +311,9 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
                 if (imp != null)
                     return URI.createURI(imp.getLocation()).resolve(
                             getCanonicalURI(getResource().getURI()));
+                else {
+                    return URI.createURI(ns);
+                }
             }
             return URI.createURI("");
         }

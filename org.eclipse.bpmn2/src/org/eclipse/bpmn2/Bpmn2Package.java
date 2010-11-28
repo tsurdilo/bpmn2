@@ -9433,13 +9433,22 @@ public interface Bpmn2Package extends EPackage {
     int EXTENSION__MUST_UNDERSTAND = 1;
 
     /**
+     * The feature id for the '<em><b>Xsd Definition</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EXTENSION__XSD_DEFINITION = 2;
+
+    /**
      * The number of structural features of the '<em>Extension</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int EXTENSION_FEATURE_COUNT = 2;
+    int EXTENSION_FEATURE_COUNT = 3;
 
     /**
      * The meta object id for the '{@link org.eclipse.bpmn2.impl.ExtensionAttributeDefinitionImpl <em>Extension Attribute Definition</em>}' class.
@@ -21610,6 +21619,17 @@ public interface Bpmn2Package extends EPackage {
     EAttribute getExtension_MustUnderstand();
 
     /**
+     * Returns the meta object for the attribute '{@link org.eclipse.bpmn2.Extension#getXsdDefinition <em>Xsd Definition</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Xsd Definition</em>'.
+     * @see org.eclipse.bpmn2.Extension#getXsdDefinition()
+     * @see #getExtension()
+     * @generated
+     */
+    EAttribute getExtension_XsdDefinition();
+
+    /**
      * Returns the meta object for class '{@link org.eclipse.bpmn2.ExtensionAttributeDefinition <em>Extension Attribute Definition</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -27388,6 +27408,14 @@ public interface Bpmn2Package extends EPackage {
          * @generated
          */
         EAttribute EXTENSION__MUST_UNDERSTAND = eINSTANCE.getExtension_MustUnderstand();
+
+        /**
+         * The meta object literal for the '<em><b>Xsd Definition</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute EXTENSION__XSD_DEFINITION = eINSTANCE.getExtension_XsdDefinition();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.ExtensionAttributeDefinitionImpl <em>Extension Attribute Definition</em>}' class.

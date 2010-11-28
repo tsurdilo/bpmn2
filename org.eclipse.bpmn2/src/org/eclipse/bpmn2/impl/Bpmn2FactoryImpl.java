@@ -17,6 +17,7 @@ package org.eclipse.bpmn2.impl;
 import org.eclipse.bpmn2.Activity;
 import org.eclipse.bpmn2.AdHocOrdering;
 import org.eclipse.bpmn2.AdHocSubProcess;
+import org.eclipse.bpmn2.Artifact;
 import org.eclipse.bpmn2.Assignment;
 import org.eclipse.bpmn2.Association;
 import org.eclipse.bpmn2.AssociationDirection;
@@ -133,6 +134,7 @@ import org.eclipse.bpmn2.ResourceAssignmentExpression;
 import org.eclipse.bpmn2.ResourceParameter;
 import org.eclipse.bpmn2.ResourceParameterBinding;
 import org.eclipse.bpmn2.ResourceRole;
+import org.eclipse.bpmn2.RootElement;
 import org.eclipse.bpmn2.ScriptTask;
 import org.eclipse.bpmn2.SendTask;
 import org.eclipse.bpmn2.SequenceFlow;
@@ -208,6 +210,8 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
             return createActivity();
         case Bpmn2Package.AD_HOC_SUB_PROCESS:
             return createAdHocSubProcess();
+        case Bpmn2Package.ARTIFACT:
+            return createArtifact();
         case Bpmn2Package.ASSIGNMENT:
             return createAssignment();
         case Bpmn2Package.ASSOCIATION:
@@ -422,6 +426,8 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
             return createResourceParameterBinding();
         case Bpmn2Package.RESOURCE_ROLE:
             return createResourceRole();
+        case Bpmn2Package.ROOT_ELEMENT:
+            return createRootElement();
         case Bpmn2Package.SCRIPT_TASK:
             return createScriptTask();
         case Bpmn2Package.SEND_TASK:
@@ -554,6 +560,16 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
     public AdHocSubProcess createAdHocSubProcess() {
         AdHocSubProcessImpl adHocSubProcess = new AdHocSubProcessImpl();
         return adHocSubProcess;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected Artifact createArtifact() {
+        ArtifactImpl artifact = new ArtifactImpl();
+        return artifact;
     }
 
     /**
@@ -1624,6 +1640,16 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
     public ResourceRole createResourceRole() {
         ResourceRoleImpl resourceRole = new ResourceRoleImpl();
         return resourceRole;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected RootElement createRootElement() {
+        RootElementImpl rootElement = new RootElementImpl();
+        return rootElement;
     }
 
     /**

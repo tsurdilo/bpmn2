@@ -21,8 +21,7 @@ package org.eclipse.bpmn2;
  *
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getRootElement()
- * @model abstract="true"
- *        extendedMetaData="name='tRootElement' kind='elementOnly'"
+ * @model extendedMetaData="name='tRootElement' kind='elementOnly' abstract='true'"
  * @generated
  */
 public interface RootElement extends BaseElement {

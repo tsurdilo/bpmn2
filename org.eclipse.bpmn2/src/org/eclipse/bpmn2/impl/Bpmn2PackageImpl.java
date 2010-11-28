@@ -37,6 +37,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
+import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -1138,6 +1139,9 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
                 : new Bpmn2PackageImpl());
 
         isInited = true;
+
+        // Initialize simple dependencies
+        XMLTypePackage.eINSTANCE.eClass();
 
         // Obtain or create and register interdependencies
         BpmnDiPackageImpl theBpmnDiPackage = (BpmnDiPackageImpl) (EPackage.Registry.INSTANCE
@@ -4434,6 +4438,15 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EAttribute getExtension_MustUnderstand() {
         return (EAttribute) getExtension().getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getExtension_XsdDefinition() {
+        return (EAttribute) getExtension().getEStructuralFeatures().get(2);
     }
 
     /**
