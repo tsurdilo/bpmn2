@@ -25,6 +25,9 @@
       <import plugin="org.eclipse.core.resources" version="3.4.0" match="compatible"/>
       <import plugin="org.eclipse.emf.edit.ui" version="2.4.0" match="compatible"/>
       <import plugin="org.eclipse.ui.ide" version="3.4.0" match="compatible"/>
+      <import plugin="org.eclipse.xsd"/>
+      <import plugin="org.eclipse.bpmn2" version="0.7.0" match="equivalent"/>
+      <import plugin="org.eclipse.bpmn2.edit" version="0.7.0" match="equivalent"/>
    </requires>
 
    <plugin
