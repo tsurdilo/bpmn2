@@ -496,4 +496,25 @@ public class QNameReferenceTest extends Bpmn2SerializationTest {
         assertResolvesTo("Proxy could not be resolved, import location: " + importLocation,
                 A_processNew.getDefinitionalCollaborationRef(), B_collab);
     }
+
+    @Test
+    public void testImportElementCreation() throws Exception {
+        A_process.setDefinitionalCollaborationRef(B_collab);
+
+        String importLocation = "sub/importElementCreation_B";
+        B_resource = saveAndLoadModel(importLocation, B_model);
+        A_resource = saveAndLoadModel("importElementCreation_A", A_model);
+
+        Definitions A_modelNew = (Definitions) A_resource.getEObject(A_model.getId());
+        assertFalse("No import element was generated", A_modelNew.getImports().isEmpty());
+        Import newImport = A_modelNew.getImports().get(0);
+        assertEquals("Wrong namespace of import element", B_model.getTargetNamespace(),
+                newImport.getNamespace());
+        assertEquals("Wrong relative location of import element", importLocation + "."
+                + getFileExtension(), newImport.getLocation());
+
+        Process A_processNew = (Process) A_resource.getEObject(A_process.getId());
+        assertResolvesTo("Proxy could not be resolved (wrong import location?)",
+                A_processNew.getDefinitionalCollaborationRef(), B_collab);
+    }
 }
