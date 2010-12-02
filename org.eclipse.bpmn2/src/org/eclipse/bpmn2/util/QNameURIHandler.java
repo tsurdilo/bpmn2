@@ -45,7 +45,7 @@ public class QNameURIHandler extends URIHandlerImpl {
      * @return
      */
     public String convertQNameToUri(String qName) {
-        if (qName.contains("#") || qName.contains("/") || qName.contains(".")) {
+        if (qName.contains("#") || qName.contains("/")) {
             // We already have an URI and not QName, e.g. URL
             return qName;
         }
