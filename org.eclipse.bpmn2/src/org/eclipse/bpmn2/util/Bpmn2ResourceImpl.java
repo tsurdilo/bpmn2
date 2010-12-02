@@ -14,8 +14,6 @@
  */
 package org.eclipse.bpmn2.util;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -25,7 +23,6 @@ import javax.xml.namespace.QName;
 
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Definitions;
-import org.eclipse.bpmn2.DocumentRoot;
 import org.eclipse.bpmn2.Extension;
 import org.eclipse.bpmn2.Import;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -233,14 +230,7 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
         }
 
         private Definitions getDefinitions() {
-            for (EObject eobj : getResource().getContents()) {
-                if (eobj instanceof Definitions) {
-                    return (Definitions) eobj;
-                } else if (eobj instanceof DocumentRoot) {
-                    return ((DocumentRoot) eobj).getDefinitions();
-                }
-            }
-            return null;
+            return ImportHelper.getDefinitions(getResource());
         }
 
         /**
@@ -258,7 +248,7 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
          * This method relaxes these rules and additionally returns <code>true</code> in the following cases:
          * <ul>
          * <li>prefix is null/empty, no default namespace (regardless of target namespace)</li>
-         * <li>prefix is null/empty, default namespace is not {@linkplain #findImportForNamespace(String) mapped by an import element}.</li>
+         * <li>prefix is null/empty, default namespace is not {@linkplain ImportHelper#findImportForNamespace(Definitions, String) mapped by an import element}.</li>
          * </ul>
          * </p>
          */
@@ -288,7 +278,7 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
             if (prefixNs.equals(getDefinitions().getTargetNamespace()))
                 return true;
             else if (XMLConstants.DEFAULT_NS_PREFIX.equals(prefix)
-                    && findImportForNamespace(prefixNs) == null) {
+                    && ImportHelper.findImportForNamespace(getDefinitions(), prefixNs) == null) {
                 // The default namespace is not mapped to a location by an import element.
                 // Guess that the unprefixed QName should point to a local element (relaxed interpretation)
                 // TODO: emit warning
@@ -307,31 +297,15 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
             String ns = this.getNamespaceURI(prefix == null ? XMLConstants.DEFAULT_NS_PREFIX
                     : prefix);
             if (ns != null) {
-                Import imp = findImportForNamespace(ns);
+                Import imp = ImportHelper.findImportForNamespace(getDefinitions(), ns);
                 if (imp != null)
                     return URI.createURI(imp.getLocation()).resolve(
-                            getCanonicalURI(getResource().getURI()));
+                            ImportHelper.makeURICanonical(getResource().getURI()));
                 else {
                     return URI.createURI(ns);
                 }
             }
             return URI.createURI("");
-        }
-
-        /**
-         * Looks up the list of import elements in this definitions for an import of the given namespace.
-         * @param namespace The namespace to look for in {@link Import#getNamespace()}.
-         * @return The first import element in {@link Definitions#getImports()} with {@link Import#getNamespace()}
-         * equal to the given namespace.
-         */
-        protected Import findImportForNamespace(String namespace) {
-            for (Import imp : getDefinitions().getImports()) {
-                if (namespace.equals(imp.getNamespace())) {
-                    // TODO: Also check that imp.getType() is BPMN
-                    return imp;
-                }
-            }
-            return null;
         }
 
         /**
@@ -384,49 +358,21 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
             String ns = null;
             String prefix = "";
 
-            URI referencedAbs = getCanonicalURI(referenced);
-            URI thisAbs = getCanonicalURI(getResource().getURI());
+            URI referencedAbs = ImportHelper.makeURICanonical(referenced);
+            URI thisAbs = ImportHelper.makeURICanonical(getResource().getURI());
             URI relativeToThis = referencedAbs.deresolve(thisAbs);
             if (relativeToThis.isEmpty())
                 // reference to local element
                 ns = getDefinitions().getTargetNamespace();
             else {
-                for (Import imp : getDefinitions().getImports()) {
-                    if (imp.getLocation() != null) {
-                        URI importUri = URI.createURI(imp.getLocation()).resolve(thisAbs);
-                        if (importUri.equals(referencedAbs)) {
-                            // TODO: Also check that imp.getType() is BPMN
-                            ns = imp.getNamespace();
-                            break;
-                        }
-                    }
-                }
+                Import impForRef = ImportHelper.findImportForLocation(getDefinitions(), referenced);
+                if (impForRef != null)
+                    ns = impForRef.getNamespace();
             }
             if (ns != null) {
                 prefix = getPrefixDuringSave(ns);
             }
             return prefix;
-        }
-
-        /**
-         * Returns an absolute canonical representation of the given URI.
-         * 
-         * A relative uri is interpreted as relative to the working directory and made absolute. Furthermore,
-         * redundant segments ("./") from the path are removed.
-         * @param uri A relative or absolute URI.
-         * @return <code>uri</code> in absolute and canonical form, obtained by creating a {@linkplain File file} 
-         * from it and taking its {@linkplain File#getCanonicalPath() canonical path}.
-         */
-        private URI getCanonicalURI(URI uri) {
-            if (uri.isFile()) {
-                File tmpFile = new File(uri.toFileString());
-                try {
-                    return URI.createFileURI(tmpFile.getCanonicalPath());
-                } catch (IOException e) {
-                    return URI.createFileURI(tmpFile.getAbsolutePath());
-                }
-            } else
-                return uri;
         }
     }
 
