@@ -21,6 +21,7 @@ import java.util.Map;
 import javax.xml.XMLConstants;
 import javax.xml.namespace.QName;
 
+import org.eclipse.bpmn2.Bpmn2Factory;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Definitions;
 import org.eclipse.bpmn2.Extension;
@@ -31,6 +32,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.XMLHelper;
@@ -116,6 +118,7 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
      */
     protected void prepareSave() {
         EObject cur;
+        Definitions thisDefinitions = ImportHelper.getDefinitions(this);
         for (Iterator<EObject> iter = getAllContents(); iter.hasNext();) {
             cur = iter.next();
 
@@ -123,6 +126,12 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
 
             for (EObject referenced : cur.eCrossReferences()) {
                 setIdIfNotSet(referenced);
+                if (thisDefinitions != null) {
+                    Resource refResource = referenced.eResource();
+                    if (refResource != null && refResource != this) {
+                        createImportIfNecessary(thisDefinitions, refResource);
+                    }
+                }
             }
         }
     }
@@ -136,6 +145,31 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
             EStructuralFeature idAttr = obj.eClass().getEIDAttribute();
             if (idAttr != null && !obj.eIsSet(idAttr)) {
                 obj.eSet(idAttr, EcoreUtil.generateUUID());
+            }
+        }
+    }
+
+    /**
+     * Looks for an import of the referenced resource from the given definitions object.
+     * If none is found, the method creates a new import element.
+     * @param definitions The model that references an object contained in <code>reference</code> 
+     * and thus needs an import element to <code>reference</code>.
+     * @param referenced The resource which needs to be imported into <code>definitions</code>.
+     */
+    protected void createImportIfNecessary(Definitions definitions, Resource referenced) {
+        if (ImportHelper.findImportForLocation(definitions, referenced.getURI()) == null) {
+            URI referencingURI = ImportHelper.makeURICanonical(definitions.eResource().getURI());
+            URI referencedURI = ImportHelper.makeURICanonical(referenced.getURI());
+
+            Definitions importedDef = ImportHelper.getDefinitions(referenced);
+            // only handle BPMN imports (with declared target namespace)
+            if (importedDef != null && importedDef.getTargetNamespace() != null) {
+                Import newImport = Bpmn2Factory.eINSTANCE.createImport();
+                newImport.setImportType(NamespaceHelper.xmiToXsdNamespaceUri(Bpmn2Package.eNS_URI));
+                newImport.setNamespace(importedDef.getTargetNamespace());
+                // Counterpart: location.resolve(referencingURI) == referencedURI !
+                newImport.setLocation(referencedURI.deresolve(referencingURI).toString());
+                definitions.getImports().add(newImport);
             }
         }
     }
