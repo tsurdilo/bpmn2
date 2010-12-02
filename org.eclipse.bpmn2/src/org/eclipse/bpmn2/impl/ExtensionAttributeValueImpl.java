@@ -59,14 +59,14 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
     protected EObject valueRef;
 
     /**
-     * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference list.
+     * The cached value of the '{@link #getValue() <em>Value</em>}' attribute list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see #getValue()
      * @generated
      * @ordered
      */
-    protected EList<EObject> value;
+    protected FeatureMap value;
 
     /**
      * The cached value of the '{@link #getExtensionAttributeDefinition() <em>Extension Attribute Definition</em>}' reference.
@@ -143,10 +143,9 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
      * <!-- end-user-doc -->
      * @generated
      */
-    public List<EObject> getValue() {
+    public FeatureMap getValue() {
         if (value == null) {
-            value = new EObjectContainmentEList<EObject>(EObject.class, this,
-                    Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE);
+            value = new BasicFeatureMap(this, Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE);
         }
         return value;
     }
@@ -222,7 +221,9 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
                 return getValueRef();
             return basicGetValueRef();
         case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE:
-            return getValue();
+            if (coreType)
+                return getValue();
+            return ((FeatureMap.Internal) getValue()).getWrapper();
         case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION:
             if (resolve)
                 return getExtensionAttributeDefinition();
@@ -244,8 +245,7 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
             setValueRef((Object) newValue);
             return;
         case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE:
-            getValue().clear();
-            getValue().addAll((Collection<? extends EObject>) newValue);
+            ((FeatureMap.Internal) getValue()).set(newValue);
             return;
         case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION:
             setExtensionAttributeDefinition((ExtensionAttributeDefinition) newValue);
@@ -291,6 +291,23 @@ public class ExtensionAttributeValueImpl extends EObjectImpl implements Extensio
             return extensionAttributeDefinition != null;
         }
         return super.eIsSet(featureID);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public String toString() {
+        if (eIsProxy())
+            return super.toString();
+
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (value: ");
+        result.append(value);
+        result.append(')');
+        return result.toString();
     }
 
 } //ExtensionAttributeValueImpl

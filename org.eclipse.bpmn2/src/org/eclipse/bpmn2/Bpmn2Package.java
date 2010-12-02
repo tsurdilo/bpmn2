@@ -9525,7 +9525,7 @@ public interface Bpmn2Package extends EPackage {
     int EXTENSION_ATTRIBUTE_VALUE__VALUE_REF = 0;
 
     /**
-     * The feature id for the '<em><b>Value</b></em>' containment reference list.
+     * The feature id for the '<em><b>Value</b></em>' attribute list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -21705,15 +21705,15 @@ public interface Bpmn2Package extends EPackage {
     EReference getExtensionAttributeValue_ValueRef();
 
     /**
-     * Returns the meta object for the containment reference list '{@link org.eclipse.bpmn2.ExtensionAttributeValue#getValue <em>Value</em>}'.
+     * Returns the meta object for the attribute list '{@link org.eclipse.bpmn2.ExtensionAttributeValue#getValue <em>Value</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the containment reference list '<em>Value</em>'.
+     * @return the meta object for the attribute list '<em>Value</em>'.
      * @see org.eclipse.bpmn2.ExtensionAttributeValue#getValue()
      * @see #getExtensionAttributeValue()
      * @generated
      */
-    EReference getExtensionAttributeValue_Value();
+    EAttribute getExtensionAttributeValue_Value();
 
     /**
      * Returns the meta object for the reference '{@link org.eclipse.bpmn2.ExtensionAttributeValue#getExtensionAttributeDefinition <em>Extension Attribute Definition</em>}'.
@@ -27483,12 +27483,12 @@ public interface Bpmn2Package extends EPackage {
                 .getExtensionAttributeValue_ValueRef();
 
         /**
-         * The meta object literal for the '<em><b>Value</b></em>' containment reference list feature.
+         * The meta object literal for the '<em><b>Value</b></em>' attribute list feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference EXTENSION_ATTRIBUTE_VALUE__VALUE = eINSTANCE.getExtensionAttributeValue_Value();
+        EAttribute EXTENSION_ATTRIBUTE_VALUE__VALUE = eINSTANCE.getExtensionAttributeValue_Value();
 
         /**
          * The meta object literal for the '<em><b>Extension Attribute Definition</b></em>' reference feature.

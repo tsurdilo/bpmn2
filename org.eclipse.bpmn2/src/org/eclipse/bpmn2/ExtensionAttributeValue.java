@@ -64,21 +64,21 @@ public interface ExtensionAttributeValue extends EObject {
     void setValueRef(Object value);
 
     /**
-     * Returns the value of the '<em><b>Value</b></em>' containment reference list.
-     * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
+     * Returns the value of the '<em><b>Value</b></em>' attribute list.
+     * The list contents are of type {@link org.eclipse.emf.ecore.util.FeatureMap.Entry}.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Value</em>' containment reference isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Value</em>' containment reference list.
+     * @return the value of the '<em>Value</em>' attribute list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getExtensionAttributeValue_Value()
-     * @model containment="true" ordered="false"
+     * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
      *        extendedMetaData="kind='elementWildcard' wildcards='##other' name=':0' processing='lax'"
      * @generated
      */
-    List<EObject> getValue();
+    FeatureMap getValue();
 
     /**
      * Returns the value of the '<em><b>Extension Attribute Definition</b></em>' reference.

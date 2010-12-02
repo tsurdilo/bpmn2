@@ -2737,9 +2737,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="valueRef" ordered="false"
         eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject" transient="true"
         derived="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" ordered="false"
-        upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
-        containment="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" unique="false" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFeatureMapEntry">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="elementWildcard"/>
         <details key="wildcards" value="##other"/>

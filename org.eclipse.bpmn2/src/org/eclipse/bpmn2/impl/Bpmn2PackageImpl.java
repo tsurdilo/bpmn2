@@ -4525,8 +4525,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getExtensionAttributeValue_Value() {
-        return (EReference) getExtensionAttributeValue().getEStructuralFeatures().get(1);
+    public EAttribute getExtensionAttributeValue_Value() {
+        return (EAttribute) getExtensionAttributeValue().getEStructuralFeatures().get(1);
     }
 
     /**
