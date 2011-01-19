@@ -14,6 +14,8 @@
  */
 package org.eclipse.bpmn2.util;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -26,6 +28,7 @@ import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Definitions;
 import org.eclipse.bpmn2.Extension;
 import org.eclipse.bpmn2.Import;
+import org.eclipse.emf.common.CommonPlugin;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
@@ -35,6 +38,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.ExtendedMetaData;
 import org.eclipse.emf.ecore.xmi.XMLHelper;
 import org.eclipse.emf.ecore.xmi.XMLLoad;
 import org.eclipse.emf.ecore.xmi.XMLResource;
@@ -226,15 +230,28 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
         private EObject loadExtensionSchema(QName xsdQname) {
             EPackage extensionPackage = extendedMetaData.getPackage(xsdQname.getNamespaceURI());
             if (extensionPackage == null) {
-                URI location = urisToLocations.get(xsdQname.getNamespaceURI());
-                Map<Object, Object> options = new HashMap<Object, Object>();
-                options.put(XSDEcoreBuilder.OPTION_REUSE_REGISTERED_PACKAGES, Boolean.TRUE);
+
                 try {
-                    XSDEcoreBuilder builder = new XSDEcoreBuilder(extendedMetaData, options);
+                    @SuppressWarnings("unchecked")
+                    Class<XSDEcoreBuilder> theXSDEcoreBuilderClass = (Class<XSDEcoreBuilder>) CommonPlugin
+                            .loadClass("org.eclipse.xsd", "org.eclipse.xsd.ecore.XSDEcoreBuilder");
+
+                    Constructor<XSDEcoreBuilder> theXSDEcoreBuilderConstructor = theXSDEcoreBuilderClass
+                            .getConstructor(new Class[] { ExtendedMetaData.class, Map.class });
+                    Field theOptionField = theXSDEcoreBuilderClass
+                            .getField("OPTION_REUSE_REGISTERED_PACKAGES");
+                    Object theXsdOption = theOptionField.get(null);
+
+                    URI location = urisToLocations.get(xsdQname.getNamespaceURI());
+                    Map<Object, Object> options = new HashMap<Object, Object>();
+                    options.put(theXsdOption, Boolean.TRUE);
+                    XSDEcoreBuilder builder = theXSDEcoreBuilderConstructor.newInstance(
+                            extendedMetaData, options);
                     builder.generate(location);
                 } catch (Exception e) {
                 }
             }
+
             return extendedMetaData.getElement(xsdQname.getNamespaceURI(), xsdQname.getLocalPart());
         }
 

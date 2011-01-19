@@ -49,7 +49,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public abstract class DiagramElementImpl extends EObjectImpl implements DiagramElement {
+public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
     /**
      * The cached value of the '{@link #getOwningDiagram() <em>Owning Diagram</em>}' reference.
      * <!-- begin-user-doc -->

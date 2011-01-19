@@ -36,8 +36,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see org.eclipse.dd.di.DiPackage#getDiagramElement()
- * @model abstract="true"
- *        extendedMetaData="name='DiagramElement' kind='elementOnly'"
+ * @model extendedMetaData="name='DiagramElement' kind='elementOnly' abstract='true'"
  * @generated
  */
 public interface DiagramElement extends EObject {

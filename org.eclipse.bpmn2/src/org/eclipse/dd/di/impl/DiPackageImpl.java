@@ -835,7 +835,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
                 Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
                 IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-        initEClass(diagramElementEClass, DiagramElement.class, "DiagramElement", IS_ABSTRACT,
+        initEClass(diagramElementEClass, DiagramElement.class, "DiagramElement", !IS_ABSTRACT,
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getDiagramElement_OwningDiagram(), this.getDiagram(),
                 this.getDiagram_RootElement(), "owningDiagram", null, 0, 1, DiagramElement.class,
@@ -974,7 +974,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
         addAnnotation(getDiagram_Resolution(), source, new String[] { "kind", "attribute", "name",
                 "resolution" });
         addAnnotation(diagramElementEClass, source, new String[] { "name", "DiagramElement",
-                "kind", "elementOnly" });
+                "kind", "elementOnly", "abstract", "true" });
         addAnnotation(getDiagramElement_Id(), source, new String[] { "kind", "attribute", "name",
                 "id" });
         addAnnotation(edgeEClass, source, new String[] { "name", "Edge", "kind", "elementOnly" });

@@ -70,6 +70,8 @@ public class DiFactoryImpl extends EFactoryImpl implements DiFactory {
         switch (eClass.getClassifierID()) {
         case DiPackage.DOCUMENT_ROOT:
             return createDocumentRoot();
+        case DiPackage.DIAGRAM_ELEMENT:
+            return createDiagramElement();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName()
                     + "' is not a valid classifier");
@@ -84,6 +86,16 @@ public class DiFactoryImpl extends EFactoryImpl implements DiFactory {
     public DocumentRoot createDocumentRoot() {
         DocumentRootImpl documentRoot = new DocumentRootImpl();
         return documentRoot;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected DiagramElement createDiagramElement() {
+        DiagramElementImpl diagramElement = new DiagramElementImpl();
+        return diagramElement;
     }
 
     /**

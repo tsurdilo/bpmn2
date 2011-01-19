@@ -158,10 +158,11 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DiagramElement" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="DiagramElement">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="DiagramElement"/>
       <details key="kind" value="elementOnly"/>
+      <details key="abstract" value="true"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="owningDiagram" ordered="false"
         eType="#//Diagram" changeable="false" transient="true" derived="true" resolveProxies="false"

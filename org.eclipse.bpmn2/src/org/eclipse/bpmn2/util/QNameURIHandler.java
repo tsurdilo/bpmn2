@@ -62,6 +62,12 @@ public class QNameURIHandler extends URIHandlerImpl {
         } else
             throw new IllegalArgumentException("Illegal QName: " + qName);
 
+        if (fragment.contains(".")) {
+            // HACK: officially IDs can contain ".", but unfortunately XmlHandler calls resolve also for xsi:schemaLocation stuff and similar, that are
+            // NO URIs. We must not process them.
+            return qName;
+        }
+
         if (!xmlHelper.isTargetNamespace(prefix))
             return xmlHelper.getPathForPrefix(prefix).appendFragment(fragment).toString();
         else
