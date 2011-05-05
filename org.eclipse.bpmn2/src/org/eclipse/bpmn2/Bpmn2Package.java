@@ -8933,13 +8933,58 @@ public interface Bpmn2Package extends EPackage {
     int ESCALATION = 51;
 
     /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ESCALATION__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
+
+    /**
+     * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ESCALATION__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ESCALATION__EXTENSION_DEFINITIONS = ROOT_ELEMENT__EXTENSION_DEFINITIONS;
+
+    /**
+     * The feature id for the '<em><b>Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ESCALATION__ID = ROOT_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ESCALATION__ANY_ATTRIBUTE = ROOT_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Escalation Code</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int ESCALATION__ESCALATION_CODE = 0;
+    int ESCALATION__ESCALATION_CODE = ROOT_ELEMENT_FEATURE_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -8948,7 +8993,7 @@ public interface Bpmn2Package extends EPackage {
      * @generated
      * @ordered
      */
-    int ESCALATION__NAME = 1;
+    int ESCALATION__NAME = ROOT_ELEMENT_FEATURE_COUNT + 1;
 
     /**
      * The feature id for the '<em><b>Structure Ref</b></em>' reference.
@@ -8957,7 +9002,7 @@ public interface Bpmn2Package extends EPackage {
      * @generated
      * @ordered
      */
-    int ESCALATION__STRUCTURE_REF = 2;
+    int ESCALATION__STRUCTURE_REF = ROOT_ELEMENT_FEATURE_COUNT + 2;
 
     /**
      * The number of structural features of the '<em>Escalation</em>' class.
@@ -8966,7 +9011,7 @@ public interface Bpmn2Package extends EPackage {
      * @generated
      * @ordered
      */
-    int ESCALATION_FEATURE_COUNT = 3;
+    int ESCALATION_FEATURE_COUNT = ROOT_ELEMENT_FEATURE_COUNT + 3;
 
     /**
      * The meta object id for the '{@link org.eclipse.bpmn2.impl.EscalationEventDefinitionImpl <em>Escalation Event Definition</em>}' class.

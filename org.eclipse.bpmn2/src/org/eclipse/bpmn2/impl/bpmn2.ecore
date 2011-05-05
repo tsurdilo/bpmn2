@@ -2587,7 +2587,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Escalation">
+  <eClassifiers xsi:type="ecore:EClass" name="Escalation" eSuperTypes="#//RootElement">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="tEscalation"/>
       <details key="kind" value="elementOnly"/>

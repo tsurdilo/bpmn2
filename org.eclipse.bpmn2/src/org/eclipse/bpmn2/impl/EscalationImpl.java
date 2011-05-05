@@ -38,7 +38,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *
  * @generated
  */
-public class EscalationImpl extends EObjectImpl implements Escalation {
+public class EscalationImpl extends RootElementImpl implements Escalation {
     /**
      * The default value of the '{@link #getEscalationCode() <em>Escalation Code</em>}' attribute.
      * <!-- begin-user-doc -->

@@ -837,6 +837,10 @@ public class Bpmn2Switch<T> {
             Escalation escalation = (Escalation) theEObject;
             T result = caseEscalation(escalation);
             if (result == null)
+                result = caseRootElement(escalation);
+            if (result == null)
+                result = caseBaseElement(escalation);
+            if (result == null)
                 result = defaultCase(theEObject);
             return result;
         }

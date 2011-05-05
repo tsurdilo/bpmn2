@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model extendedMetaData="name='tEscalation' kind='elementOnly'"
  * @generated
  */
-public interface Escalation extends EObject {
+public interface Escalation extends RootElement {
     /**
      * Returns the value of the '<em><b>Escalation Code</b></em>' attribute.
      * <!-- begin-user-doc -->
