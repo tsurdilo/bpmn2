@@ -37,7 +37,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *
  * @generated
  */
-public class ResourceAssignmentExpressionImpl extends EObjectImpl implements
+public class ResourceAssignmentExpressionImpl extends BaseElementImpl implements
         ResourceAssignmentExpression {
     /**
      * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference.

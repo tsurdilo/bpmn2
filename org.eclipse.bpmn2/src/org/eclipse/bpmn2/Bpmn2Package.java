@@ -11550,13 +11550,58 @@ public interface Bpmn2Package extends EPackage {
     int INPUT_OUTPUT_BINDING = 79;
 
     /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INPUT_OUTPUT_BINDING__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
+
+    /**
+     * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INPUT_OUTPUT_BINDING__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INPUT_OUTPUT_BINDING__EXTENSION_DEFINITIONS = BASE_ELEMENT__EXTENSION_DEFINITIONS;
+
+    /**
+     * The feature id for the '<em><b>Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INPUT_OUTPUT_BINDING__ID = BASE_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INPUT_OUTPUT_BINDING__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Input Data Ref</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int INPUT_OUTPUT_BINDING__INPUT_DATA_REF = 0;
+    int INPUT_OUTPUT_BINDING__INPUT_DATA_REF = BASE_ELEMENT_FEATURE_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Operation Ref</b></em>' reference.
@@ -11565,7 +11610,7 @@ public interface Bpmn2Package extends EPackage {
      * @generated
      * @ordered
      */
-    int INPUT_OUTPUT_BINDING__OPERATION_REF = 1;
+    int INPUT_OUTPUT_BINDING__OPERATION_REF = BASE_ELEMENT_FEATURE_COUNT + 1;
 
     /**
      * The feature id for the '<em><b>Output Data Ref</b></em>' reference.
@@ -11574,7 +11619,7 @@ public interface Bpmn2Package extends EPackage {
      * @generated
      * @ordered
      */
-    int INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF = 2;
+    int INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF = BASE_ELEMENT_FEATURE_COUNT + 2;
 
     /**
      * The number of structural features of the '<em>Input Output Binding</em>' class.
@@ -11583,7 +11628,7 @@ public interface Bpmn2Package extends EPackage {
      * @generated
      * @ordered
      */
-    int INPUT_OUTPUT_BINDING_FEATURE_COUNT = 3;
+    int INPUT_OUTPUT_BINDING_FEATURE_COUNT = BASE_ELEMENT_FEATURE_COUNT + 3;
 
     /**
      * The meta object id for the '{@link org.eclipse.bpmn2.impl.InputOutputSpecificationImpl <em>Input Output Specification</em>}' class.
@@ -14166,13 +14211,58 @@ public interface Bpmn2Package extends EPackage {
     int PARTICIPANT_MULTIPLICITY = 104;
 
     /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PARTICIPANT_MULTIPLICITY__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
+
+    /**
+     * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PARTICIPANT_MULTIPLICITY__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PARTICIPANT_MULTIPLICITY__EXTENSION_DEFINITIONS = BASE_ELEMENT__EXTENSION_DEFINITIONS;
+
+    /**
+     * The feature id for the '<em><b>Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PARTICIPANT_MULTIPLICITY__ID = BASE_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PARTICIPANT_MULTIPLICITY__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Maximum</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int PARTICIPANT_MULTIPLICITY__MAXIMUM = 0;
+    int PARTICIPANT_MULTIPLICITY__MAXIMUM = BASE_ELEMENT_FEATURE_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Minimum</b></em>' attribute.
@@ -14181,7 +14271,7 @@ public interface Bpmn2Package extends EPackage {
      * @generated
      * @ordered
      */
-    int PARTICIPANT_MULTIPLICITY__MINIMUM = 1;
+    int PARTICIPANT_MULTIPLICITY__MINIMUM = BASE_ELEMENT_FEATURE_COUNT + 1;
 
     /**
      * The number of structural features of the '<em>Participant Multiplicity</em>' class.
@@ -14190,7 +14280,7 @@ public interface Bpmn2Package extends EPackage {
      * @generated
      * @ordered
      */
-    int PARTICIPANT_MULTIPLICITY_FEATURE_COUNT = 2;
+    int PARTICIPANT_MULTIPLICITY_FEATURE_COUNT = BASE_ELEMENT_FEATURE_COUNT + 2;
 
     /**
      * The meta object id for the '{@link org.eclipse.bpmn2.impl.PartnerEntityImpl <em>Partner Entity</em>}' class.
@@ -15301,13 +15391,58 @@ public interface Bpmn2Package extends EPackage {
     int RESOURCE_ASSIGNMENT_EXPRESSION = 115;
 
     /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RESOURCE_ASSIGNMENT_EXPRESSION__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
+
+    /**
+     * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RESOURCE_ASSIGNMENT_EXPRESSION__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RESOURCE_ASSIGNMENT_EXPRESSION__EXTENSION_DEFINITIONS = BASE_ELEMENT__EXTENSION_DEFINITIONS;
+
+    /**
+     * The feature id for the '<em><b>Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RESOURCE_ASSIGNMENT_EXPRESSION__ID = BASE_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RESOURCE_ASSIGNMENT_EXPRESSION__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Expression</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION = 0;
+    int RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION = BASE_ELEMENT_FEATURE_COUNT + 0;
 
     /**
      * The number of structural features of the '<em>Resource Assignment Expression</em>' class.
@@ -15316,7 +15451,7 @@ public interface Bpmn2Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RESOURCE_ASSIGNMENT_EXPRESSION_FEATURE_COUNT = 1;
+    int RESOURCE_ASSIGNMENT_EXPRESSION_FEATURE_COUNT = BASE_ELEMENT_FEATURE_COUNT + 1;
 
     /**
      * The meta object id for the '{@link org.eclipse.bpmn2.impl.ResourceParameterImpl <em>Resource Parameter</em>}' class.
@@ -15420,13 +15555,58 @@ public interface Bpmn2Package extends EPackage {
     int RESOURCE_PARAMETER_BINDING = 117;
 
     /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RESOURCE_PARAMETER_BINDING__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
+
+    /**
+     * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RESOURCE_PARAMETER_BINDING__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RESOURCE_PARAMETER_BINDING__EXTENSION_DEFINITIONS = BASE_ELEMENT__EXTENSION_DEFINITIONS;
+
+    /**
+     * The feature id for the '<em><b>Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RESOURCE_PARAMETER_BINDING__ID = BASE_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RESOURCE_PARAMETER_BINDING__ANY_ATTRIBUTE = BASE_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Expression</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int RESOURCE_PARAMETER_BINDING__EXPRESSION = 0;
+    int RESOURCE_PARAMETER_BINDING__EXPRESSION = BASE_ELEMENT_FEATURE_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Parameter Ref</b></em>' reference.
@@ -15435,7 +15615,7 @@ public interface Bpmn2Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RESOURCE_PARAMETER_BINDING__PARAMETER_REF = 1;
+    int RESOURCE_PARAMETER_BINDING__PARAMETER_REF = BASE_ELEMENT_FEATURE_COUNT + 1;
 
     /**
      * The number of structural features of the '<em>Resource Parameter Binding</em>' class.
@@ -15444,7 +15624,7 @@ public interface Bpmn2Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RESOURCE_PARAMETER_BINDING_FEATURE_COUNT = 2;
+    int RESOURCE_PARAMETER_BINDING_FEATURE_COUNT = BASE_ELEMENT_FEATURE_COUNT + 2;
 
     /**
      * The meta object id for the '{@link org.eclipse.bpmn2.impl.ScriptTaskImpl <em>Script Task</em>}' class.

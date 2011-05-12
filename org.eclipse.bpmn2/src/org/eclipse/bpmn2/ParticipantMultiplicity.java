@@ -33,7 +33,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model extendedMetaData="name='tParticipantMultiplicity' kind='elementOnly'"
  * @generated
  */
-public interface ParticipantMultiplicity extends EObject {
+public interface ParticipantMultiplicity extends BaseElement {
     /**
      * Returns the value of the '<em><b>Maximum</b></em>' attribute.
      * The default value is <code>"1"</code>.

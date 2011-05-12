@@ -35,7 +35,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *
  * @generated
  */
-public class ParticipantMultiplicityImpl extends EObjectImpl implements ParticipantMultiplicity {
+public class ParticipantMultiplicityImpl extends BaseElementImpl implements ParticipantMultiplicity {
     /**
      * The default value of the '{@link #getMaximum() <em>Maximum</em>}' attribute.
      * <!-- begin-user-doc -->

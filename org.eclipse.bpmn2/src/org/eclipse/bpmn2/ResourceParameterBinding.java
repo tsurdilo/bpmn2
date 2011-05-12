@@ -33,7 +33,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model extendedMetaData="name='tResourceParameterBinding' kind='elementOnly'"
  * @generated
  */
-public interface ResourceParameterBinding extends EObject {
+public interface ResourceParameterBinding extends BaseElement {
     /**
      * Returns the value of the '<em><b>Expression</b></em>' containment reference.
      * <!-- begin-user-doc -->

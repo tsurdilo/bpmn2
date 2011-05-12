@@ -40,7 +40,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *
  * @generated
  */
-public class InputOutputBindingImpl extends EObjectImpl implements InputOutputBinding {
+public class InputOutputBindingImpl extends BaseElementImpl implements InputOutputBinding {
     /**
      * The cached value of the '{@link #getInputDataRef() <em>Input Data Ref</em>}' reference.
      * <!-- begin-user-doc -->

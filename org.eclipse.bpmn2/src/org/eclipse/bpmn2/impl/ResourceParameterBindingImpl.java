@@ -39,7 +39,8 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *
  * @generated
  */
-public class ResourceParameterBindingImpl extends EObjectImpl implements ResourceParameterBinding {
+public class ResourceParameterBindingImpl extends BaseElementImpl implements
+        ResourceParameterBinding {
     /**
      * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference.
      * <!-- begin-user-doc -->

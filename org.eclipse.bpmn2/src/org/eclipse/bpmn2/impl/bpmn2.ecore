@@ -3050,7 +3050,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InputOutputBinding">
+  <eClassifiers xsi:type="ecore:EClass" name="InputOutputBinding" eSuperTypes="#//BaseElement">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="tInputOutputBinding"/>
       <details key="kind" value="elementOnly"/>
@@ -3735,7 +3735,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ParticipantMultiplicity">
+  <eClassifiers xsi:type="ecore:EClass" name="ParticipantMultiplicity" eSuperTypes="#//BaseElement">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="tParticipantMultiplicity"/>
       <details key="kind" value="elementOnly"/>
@@ -4030,7 +4030,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ResourceAssignmentExpression">
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceAssignmentExpression" eSuperTypes="#//BaseElement">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="tResourceAssignmentExpression"/>
       <details key="kind" value="elementOnly"/>
@@ -4071,7 +4071,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ResourceParameterBinding">
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceParameterBinding" eSuperTypes="#//BaseElement">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="tResourceParameterBinding"/>
       <details key="kind" value="elementOnly"/>

@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model extendedMetaData="name='tInputOutputBinding' kind='elementOnly'"
  * @generated
  */
-public interface InputOutputBinding extends EObject {
+public interface InputOutputBinding extends BaseElement {
     /**
      * Returns the value of the '<em><b>Input Data Ref</b></em>' reference.
      * <!-- begin-user-doc -->
