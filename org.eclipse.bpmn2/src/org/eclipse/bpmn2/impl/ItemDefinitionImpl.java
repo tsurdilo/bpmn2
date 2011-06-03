@@ -92,14 +92,24 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
     protected ItemKind itemKind = ITEM_KIND_EDEFAULT;
 
     /**
-     * The cached value of the '{@link #getStructureRef() <em>Structure Ref</em>}' reference.
+     * The default value of the '{@link #getStructureRef() <em>Structure Ref</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see #getStructureRef()
      * @generated
      * @ordered
      */
-    protected EObject structureRef;
+    protected static final String STRUCTURE_REF_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getStructureRef() <em>Structure Ref</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getStructureRef()
+     * @generated
+     * @ordered
+     */
+    protected String structureRef = STRUCTURE_REF_EDEFAULT;
 
     /**
      * <!-- begin-user-doc -->
@@ -209,17 +219,7 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
      * <!-- end-user-doc -->
      * @generated
      */
-    public Object getStructureRef() {
-        if (structureRef != null && structureRef.eIsProxy()) {
-            InternalEObject oldStructureRef = (InternalEObject) structureRef;
-            structureRef = eResolveProxy(oldStructureRef);
-            if (structureRef != oldStructureRef) {
-                if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF, oldStructureRef,
-                            structureRef));
-            }
-        }
+    public String getStructureRef() {
         return structureRef;
     }
 
@@ -228,18 +228,9 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
      * <!-- end-user-doc -->
      * @generated
      */
-    public Object basicGetStructureRef() {
-        return structureRef;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setStructureRef(Object newStructureRef) {
-        Object oldStructureRef = structureRef;
-        structureRef = (EObject) newStructureRef;
+    public void setStructureRef(String newStructureRef) {
+        String oldStructureRef = structureRef;
+        structureRef = newStructureRef;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
                     Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF, oldStructureRef, structureRef));
@@ -262,9 +253,7 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
         case Bpmn2Package.ITEM_DEFINITION__ITEM_KIND:
             return getItemKind();
         case Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF:
-            if (resolve)
-                return getStructureRef();
-            return basicGetStructureRef();
+            return getStructureRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -287,7 +276,7 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
             setItemKind((ItemKind) newValue);
             return;
         case Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF:
-            setStructureRef((Object) newValue);
+            setStructureRef((String) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -311,7 +300,7 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
             setItemKind(ITEM_KIND_EDEFAULT);
             return;
         case Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF:
-            setStructureRef((Object) null);
+            setStructureRef(STRUCTURE_REF_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -332,7 +321,8 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
         case Bpmn2Package.ITEM_DEFINITION__ITEM_KIND:
             return itemKind != ITEM_KIND_EDEFAULT;
         case Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF:
-            return structureRef != null;
+            return STRUCTURE_REF_EDEFAULT == null ? structureRef != null : !STRUCTURE_REF_EDEFAULT
+                    .equals(structureRef);
         }
         return super.eIsSet(featureID);
     }
@@ -352,6 +342,8 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
         result.append(isCollection);
         result.append(", itemKind: ");
         result.append(itemKind);
+        result.append(", structureRef: ");
+        result.append(structureRef);
         result.append(')');
         return result.toString();
     }

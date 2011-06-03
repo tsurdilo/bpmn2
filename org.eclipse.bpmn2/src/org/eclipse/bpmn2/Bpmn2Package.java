@@ -12457,7 +12457,7 @@ public interface Bpmn2Package extends EPackage {
     int ITEM_DEFINITION__ITEM_KIND = ROOT_ELEMENT_FEATURE_COUNT + 2;
 
     /**
-     * The feature id for the '<em><b>Structure Ref</b></em>' reference.
+     * The feature id for the '<em><b>Structure Ref</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -22772,15 +22772,15 @@ public interface Bpmn2Package extends EPackage {
     EAttribute getItemDefinition_ItemKind();
 
     /**
-     * Returns the meta object for the reference '{@link org.eclipse.bpmn2.ItemDefinition#getStructureRef <em>Structure Ref</em>}'.
+     * Returns the meta object for the attribute '{@link org.eclipse.bpmn2.ItemDefinition#getStructureRef <em>Structure Ref</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference '<em>Structure Ref</em>'.
+     * @return the meta object for the attribute '<em>Structure Ref</em>'.
      * @see org.eclipse.bpmn2.ItemDefinition#getStructureRef()
      * @see #getItemDefinition()
      * @generated
      */
-    EReference getItemDefinition_StructureRef();
+    EAttribute getItemDefinition_StructureRef();
 
     /**
      * Returns the meta object for class '{@link org.eclipse.bpmn2.Lane <em>Lane</em>}'.
@@ -28413,12 +28413,12 @@ public interface Bpmn2Package extends EPackage {
         EAttribute ITEM_DEFINITION__ITEM_KIND = eINSTANCE.getItemDefinition_ItemKind();
 
         /**
-         * The meta object literal for the '<em><b>Structure Ref</b></em>' reference feature.
+         * The meta object literal for the '<em><b>Structure Ref</b></em>' attribute feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference ITEM_DEFINITION__STRUCTURE_REF = eINSTANCE.getItemDefinition_StructureRef();
+        EAttribute ITEM_DEFINITION__STRUCTURE_REF = eINSTANCE.getItemDefinition_StructureRef();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.LaneImpl <em>Lane</em>}' class.

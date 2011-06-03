@@ -5344,8 +5344,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getItemDefinition_StructureRef() {
-        return (EReference) getItemDefinition().getEStructuralFeatures().get(3);
+    public EAttribute getItemDefinition_StructureRef() {
+        return (EAttribute) getItemDefinition().getEStructuralFeatures().get(3);
     }
 
     /**
