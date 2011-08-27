@@ -825,9 +825,9 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
                 this.getDiagramElement_OwningDiagram(), "rootElement", null, 1, 1, Diagram.class,
                 IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-        initEAttribute(getDiagram_Id(), theXMLTypePackage.getID(), "id", null, 0, 1, Diagram.class,
-                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE,
-                !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getDiagram_Id(), theXMLTypePackage.getNCName(), "id", null, 0, 1,
+                Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID,
+                IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getDiagram_Name(), ecorePackage.getEString(), "name", null, 0, 1,
                 Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
                 IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -856,7 +856,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
         initEReference(getDiagramElement_Style(), this.getStyle(), null, "style", null, 0, 1,
                 DiagramElement.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
                 IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-        initEAttribute(getDiagramElement_Id(), theXMLTypePackage.getID(), "id", null, 0, 1,
+        initEAttribute(getDiagramElement_Id(), theXMLTypePackage.getNCName(), "id", null, 0, 1,
                 DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
                 IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

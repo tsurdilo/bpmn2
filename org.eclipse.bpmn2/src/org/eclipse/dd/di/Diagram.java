@@ -112,7 +112,7 @@ public interface Diagram extends EObject {
      * @return the value of the '<em>Id</em>' attribute.
      * @see #setId(String)
      * @see org.eclipse.dd.di.DiPackage#getDiagram_Id()
-     * @model id="true" dataType="org.eclipse.emf.ecore.xml.type.ID"
+     * @model id="true" dataType="org.eclipse.emf.ecore.xml.type.NCName"
      *        extendedMetaData="kind='attribute' name='id'"
      * @generated
      */

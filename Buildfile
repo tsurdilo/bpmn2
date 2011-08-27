@@ -1,6 +1,7 @@
 require "buildr4osgi"
 
-repositories.remote ||= ["http://repo1.maven.org/maven2", "file:///shared/common/m2repo"]
+require "repositories.rb"
+#repositories.remote ||= ["http://repo1.maven.org/maven2", "file:///shared/common/m2repo"]
 
 VERSION_NUMBER = "0.7.0.000-SNAPSHOT"
 

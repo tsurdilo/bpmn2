@@ -101,7 +101,7 @@ public interface BaseElement extends EObject {
      * @return the value of the '<em>Id</em>' attribute.
      * @see #setId(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getBaseElement_Id()
-     * @model id="true" required="true" ordered="false"
+     * @model id="true" dataType="org.eclipse.emf.ecore.xml.type.NCName" required="true" ordered="false"
      *        extendedMetaData="kind='attribute' name='id'"
      * @generated
      */

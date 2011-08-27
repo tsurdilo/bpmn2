@@ -137,7 +137,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="rootElement" ordered="false"
         lowerBound="1" eType="#//DiagramElement" changeable="false" transient="true"
         derived="true" resolveProxies="false" eOpposite="#//DiagramElement/owningDiagram"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//ID"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//NCName"
         iD="true">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="attribute"/>
@@ -178,7 +178,7 @@
         transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="style" ordered="false"
         eType="#//Style" changeable="false" transient="true" derived="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//ID"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//NCName"
         iD="true">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="attribute"/>
