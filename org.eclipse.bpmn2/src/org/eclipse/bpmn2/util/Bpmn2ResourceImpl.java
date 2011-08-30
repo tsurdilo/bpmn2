@@ -123,9 +123,9 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
     protected void prepareSave() {
         EObject cur;
         Definitions thisDefinitions = ImportHelper.getDefinitions(this);
+        setIdEvenIfSet(thisDefinitions);
         for (Iterator<EObject> iter = getAllContents(); iter.hasNext();) {
             cur = iter.next();
-
             setIdIfNotSet(cur);
 
             for (EObject referenced : cur.eCrossReferences()) {
@@ -148,6 +148,15 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
         if (obj.eClass() != null) {
             EStructuralFeature idAttr = obj.eClass().getEIDAttribute();
             if (idAttr != null && !obj.eIsSet(idAttr)) {
+                obj.eSet(idAttr, EcoreUtil.generateUUID());
+            }
+        }
+    }
+
+    protected static void setIdEvenIfSet(EObject obj) {
+        if (obj.eClass() != null) {
+            EStructuralFeature idAttr = obj.eClass().getEIDAttribute();
+            if (idAttr != null) {
                 obj.eSet(idAttr, EcoreUtil.generateUUID());
             }
         }
