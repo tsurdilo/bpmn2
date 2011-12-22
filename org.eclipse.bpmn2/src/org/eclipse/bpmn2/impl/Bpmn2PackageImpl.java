@@ -2811,8 +2811,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getCallActivity_CalledElementRef() {
-        return (EReference) getCallActivity().getEStructuralFeatures().get(0);
+    public EAttribute getCallActivity_CalledElement() {
+        return (EAttribute) getCallActivity().getEStructuralFeatures().get(0);
     }
 
     /**

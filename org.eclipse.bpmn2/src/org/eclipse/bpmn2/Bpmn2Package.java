@@ -4001,13 +4001,13 @@ public interface Bpmn2Package extends EPackage {
     int CALL_ACTIVITY__START_QUANTITY = ACTIVITY__START_QUANTITY;
 
     /**
-     * The feature id for the '<em><b>Called Element Ref</b></em>' reference.
+     * The feature id for the '<em><b>Called Element</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int CALL_ACTIVITY__CALLED_ELEMENT_REF = ACTIVITY_FEATURE_COUNT + 0;
+    int CALL_ACTIVITY__CALLED_ELEMENT = ACTIVITY_FEATURE_COUNT + 0;
 
     /**
      * The number of structural features of the '<em>Call Activity</em>' class.
@@ -20132,15 +20132,15 @@ public interface Bpmn2Package extends EPackage {
     EClass getCallActivity();
 
     /**
-     * Returns the meta object for the reference '{@link org.eclipse.bpmn2.CallActivity#getCalledElementRef <em>Called Element Ref</em>}'.
+     * Returns the meta object for the attribute '{@link org.eclipse.bpmn2.CallActivity#getCalledElement <em>Called Element</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference '<em>Called Element Ref</em>'.
-     * @see org.eclipse.bpmn2.CallActivity#getCalledElementRef()
+     * @return the meta object for the attribute '<em>Called Element</em>'.
+     * @see org.eclipse.bpmn2.CallActivity#getCalledElement()
      * @see #getCallActivity()
      * @generated
      */
-    EReference getCallActivity_CalledElementRef();
+    EAttribute getCallActivity_CalledElement();
 
     /**
      * Returns the meta object for class '{@link org.eclipse.bpmn2.CallChoreography <em>Call Choreography</em>}'.
@@ -26214,12 +26214,12 @@ public interface Bpmn2Package extends EPackage {
         EClass CALL_ACTIVITY = eINSTANCE.getCallActivity();
 
         /**
-         * The meta object literal for the '<em><b>Called Element Ref</b></em>' reference feature.
+         * The meta object literal for the '<em><b>Called Element</b></em>' attribute feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CALL_ACTIVITY__CALLED_ELEMENT_REF = eINSTANCE.getCallActivity_CalledElementRef();
+        EAttribute CALL_ACTIVITY__CALLED_ELEMENT = eINSTANCE.getCallActivity_CalledElement();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.CallChoreographyImpl <em>Call Choreography</em>}' class.

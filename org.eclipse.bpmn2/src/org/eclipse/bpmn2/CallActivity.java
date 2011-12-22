@@ -22,7 +22,7 @@ package org.eclipse.bpmn2;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.CallActivity#getCalledElementRef <em>Called Element Ref</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.CallActivity#getCalledElement <em>Called Element</em>}</li>
  * </ul>
  * </p>
  *
@@ -32,30 +32,30 @@ package org.eclipse.bpmn2;
  */
 public interface CallActivity extends Activity {
     /**
-     * Returns the value of the '<em><b>Called Element Ref</b></em>' reference.
+     * Returns the value of the '<em><b>Called Element</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <p>
-     * If the meaning of the '<em>Called Element Ref</em>' reference isn't clear,
+     * If the meaning of the '<em>Called Element</em>' attribute isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Called Element Ref</em>' reference.
-     * @see #setCalledElementRef(CallableElement)
-     * @see org.eclipse.bpmn2.Bpmn2Package#getCallActivity_CalledElementRef()
-     * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='calledElement'"
+     * @return the value of the '<em>Called Element</em>' attribute.
+     * @see #setCalledElement(String)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getCallActivity_CalledElement()
+     * @model dataType="org.eclipse.emf.ecore.xml.type.NCName" required="true" ordered="false"
+     *        extendedMetaData="kind='attribute' name='name'"
      * @generated
      */
-    CallableElement getCalledElementRef();
+    String getCalledElement();
 
     /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.CallActivity#getCalledElementRef <em>Called Element Ref</em>}' reference.
+     * Sets the value of the '{@link org.eclipse.bpmn2.CallActivity#getCalledElement <em>Called Element</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Called Element Ref</em>' reference.
-     * @see #getCalledElementRef()
+     * @param value the new value of the '<em>Called Element</em>' attribute.
+     * @see #getCalledElement()
      * @generated
      */
-    void setCalledElementRef(CallableElement value);
+    void setCalledElement(String value);
 
 } // CallActivity

@@ -1598,11 +1598,11 @@
       <details key="name" value="tCallActivity"/>
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="calledElementRef" ordered="false"
-        eType="#//CallableElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="calledElement" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//NCName">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="attribute"/>
-        <details key="name" value="calledElement"/>
+        <details key="name" value="name"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
