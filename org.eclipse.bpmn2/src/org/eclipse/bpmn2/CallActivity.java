@@ -43,7 +43,6 @@ public interface CallActivity extends Activity {
      * @see #setCalledElement(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getCallActivity_CalledElement()
      * @model dataType="org.eclipse.emf.ecore.xml.type.NCName" required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='name'"
      * @generated
      */
     String getCalledElement();
