@@ -6738,8 +6738,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getSignalEventDefinition_SignalRef() {
-        return (EReference) getSignalEventDefinition().getEStructuralFeatures().get(0);
+    public EAttribute getSignalEventDefinition_SignalRef() {
+        return (EAttribute) getSignalEventDefinition().getEStructuralFeatures().get(0);
     }
 
     /**

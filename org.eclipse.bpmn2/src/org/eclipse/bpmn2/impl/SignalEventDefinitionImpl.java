@@ -37,14 +37,23 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class SignalEventDefinitionImpl extends EventDefinitionImpl implements SignalEventDefinition {
     /**
-     * The cached value of the '{@link #getSignalRef() <em>Signal Ref</em>}' reference.
+     * The default value of the '{@link #getSignalRef() <em>Signal Ref</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see #getSignalRef()
      * @generated
      * @ordered
      */
-    protected Signal signalRef;
+    protected static final String SIGNAL_REF_EDEFAULT = null;
+    /**
+     * The cached value of the '{@link #getSignalRef() <em>Signal Ref</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getSignalRef()
+     * @generated
+     * @ordered
+     */
+    protected String signalRef = SIGNAL_REF_EDEFAULT;
 
     /**
      * <!-- begin-user-doc -->
@@ -70,17 +79,7 @@ public class SignalEventDefinitionImpl extends EventDefinitionImpl implements Si
      * <!-- end-user-doc -->
      * @generated
      */
-    public Signal getSignalRef() {
-        if (signalRef != null && signalRef.eIsProxy()) {
-            InternalEObject oldSignalRef = (InternalEObject) signalRef;
-            signalRef = (Signal) eResolveProxy(oldSignalRef);
-            if (signalRef != oldSignalRef) {
-                if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            Bpmn2Package.SIGNAL_EVENT_DEFINITION__SIGNAL_REF, oldSignalRef,
-                            signalRef));
-            }
-        }
+    public String getSignalRef() {
         return signalRef;
     }
 
@@ -89,17 +88,8 @@ public class SignalEventDefinitionImpl extends EventDefinitionImpl implements Si
      * <!-- end-user-doc -->
      * @generated
      */
-    public Signal basicGetSignalRef() {
-        return signalRef;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setSignalRef(Signal newSignalRef) {
-        Signal oldSignalRef = signalRef;
+    public void setSignalRef(String newSignalRef) {
+        String oldSignalRef = signalRef;
         signalRef = newSignalRef;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
@@ -115,9 +105,7 @@ public class SignalEventDefinitionImpl extends EventDefinitionImpl implements Si
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
         case Bpmn2Package.SIGNAL_EVENT_DEFINITION__SIGNAL_REF:
-            if (resolve)
-                return getSignalRef();
-            return basicGetSignalRef();
+            return getSignalRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -131,7 +119,7 @@ public class SignalEventDefinitionImpl extends EventDefinitionImpl implements Si
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
         case Bpmn2Package.SIGNAL_EVENT_DEFINITION__SIGNAL_REF:
-            setSignalRef((Signal) newValue);
+            setSignalRef((String) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -146,7 +134,7 @@ public class SignalEventDefinitionImpl extends EventDefinitionImpl implements Si
     public void eUnset(int featureID) {
         switch (featureID) {
         case Bpmn2Package.SIGNAL_EVENT_DEFINITION__SIGNAL_REF:
-            setSignalRef((Signal) null);
+            setSignalRef(SIGNAL_REF_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -161,9 +149,27 @@ public class SignalEventDefinitionImpl extends EventDefinitionImpl implements Si
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case Bpmn2Package.SIGNAL_EVENT_DEFINITION__SIGNAL_REF:
-            return signalRef != null;
+            return SIGNAL_REF_EDEFAULT == null ? signalRef != null : !SIGNAL_REF_EDEFAULT
+                    .equals(signalRef);
         }
         return super.eIsSet(featureID);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public String toString() {
+        if (eIsProxy())
+            return super.toString();
+
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (signalRef: ");
+        result.append(signalRef);
+        result.append(')');
+        return result.toString();
     }
 
 } //SignalEventDefinitionImpl

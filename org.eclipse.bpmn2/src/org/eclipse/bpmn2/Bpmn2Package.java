@@ -16695,7 +16695,7 @@ public interface Bpmn2Package extends EPackage {
     int SIGNAL_EVENT_DEFINITION__ANY_ATTRIBUTE = EVENT_DEFINITION__ANY_ATTRIBUTE;
 
     /**
-     * The feature id for the '<em><b>Signal Ref</b></em>' reference.
+     * The feature id for the '<em><b>Signal Ref</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -24252,15 +24252,15 @@ public interface Bpmn2Package extends EPackage {
     EClass getSignalEventDefinition();
 
     /**
-     * Returns the meta object for the reference '{@link org.eclipse.bpmn2.SignalEventDefinition#getSignalRef <em>Signal Ref</em>}'.
+     * Returns the meta object for the attribute '{@link org.eclipse.bpmn2.SignalEventDefinition#getSignalRef <em>Signal Ref</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference '<em>Signal Ref</em>'.
+     * @return the meta object for the attribute '<em>Signal Ref</em>'.
      * @see org.eclipse.bpmn2.SignalEventDefinition#getSignalRef()
      * @see #getSignalEventDefinition()
      * @generated
      */
-    EReference getSignalEventDefinition_SignalRef();
+    EAttribute getSignalEventDefinition_SignalRef();
 
     /**
      * Returns the meta object for class '{@link org.eclipse.bpmn2.StandardLoopCharacteristics <em>Standard Loop Characteristics</em>}'.
@@ -29623,12 +29623,12 @@ public interface Bpmn2Package extends EPackage {
         EClass SIGNAL_EVENT_DEFINITION = eINSTANCE.getSignalEventDefinition();
 
         /**
-         * The meta object literal for the '<em><b>Signal Ref</b></em>' reference feature.
+         * The meta object literal for the '<em><b>Signal Ref</b></em>' attribute feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference SIGNAL_EVENT_DEFINITION__SIGNAL_REF = eINSTANCE
+        EAttribute SIGNAL_EVENT_DEFINITION__SIGNAL_REF = eINSTANCE
                 .getSignalEventDefinition_SignalRef();
 
         /**

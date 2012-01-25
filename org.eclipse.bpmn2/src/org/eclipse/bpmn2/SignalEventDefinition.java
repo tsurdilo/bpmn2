@@ -32,30 +32,29 @@ package org.eclipse.bpmn2;
  */
 public interface SignalEventDefinition extends EventDefinition {
     /**
-     * Returns the value of the '<em><b>Signal Ref</b></em>' reference.
+     * Returns the value of the '<em><b>Signal Ref</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Signal Ref</em>' reference isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Signal Ref</em>' reference.
-     * @see #setSignalRef(Signal)
+     * @return the value of the '<em>Signal Ref</em>' attribute.
+     * @see #setSignalRef(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getSignalEventDefinition_SignalRef()
-     * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='signalRef'"
+     * @model dataType="org.eclipse.emf.ecore.xml.type.NCName" required="true" ordered="false"
      * @generated
      */
-    Signal getSignalRef();
+    String getSignalRef();
 
     /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.SignalEventDefinition#getSignalRef <em>Signal Ref</em>}' reference.
+     * Sets the value of the '{@link org.eclipse.bpmn2.SignalEventDefinition#getSignalRef <em>Signal Ref</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Signal Ref</em>' reference.
+     * @param value the new value of the '<em>Signal Ref</em>' attribute.
      * @see #getSignalRef()
      * @generated
      */
-    void setSignalRef(Signal value);
+    void setSignalRef(String value);
 
 } // SignalEventDefinition
