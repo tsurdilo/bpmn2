@@ -5229,8 +5229,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getInterface_ImplementationRef() {
-        return (EReference) getInterface().getEStructuralFeatures().get(1);
+    public EAttribute getInterface_ImplementationRef() {
+        return (EAttribute) getInterface().getEStructuralFeatures().get(2);
     }
 
     /**
@@ -5239,7 +5239,7 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      * @generated
      */
     public EAttribute getInterface_Name() {
-        return (EAttribute) getInterface().getEStructuralFeatures().get(2);
+        return (EAttribute) getInterface().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -5815,8 +5815,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getOperation_ImplementationRef() {
-        return (EReference) getOperation().getEStructuralFeatures().get(3);
+    public EAttribute getOperation_ImplementationRef() {
+        return (EAttribute) getOperation().getEStructuralFeatures().get(4);
     }
 
     /**
@@ -5825,7 +5825,7 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      * @generated
      */
     public EAttribute getOperation_Name() {
-        return (EAttribute) getOperation().getEStructuralFeatures().get(4);
+        return (EAttribute) getOperation().getEStructuralFeatures().get(3);
     }
 
     /**

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<genmodel:GenModel xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="&lt;copyright>&#xD;&#xA;&#xD;&#xA;Copyright (c) 2010 SAP AG.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;   Reiner Hille-Doering (SAP AG) - initial API and implementation and/or initial documentation&#xD;&#xA;&#xD;&#xA;&lt;/copyright>"
     modelDirectory="/org.eclipse.bpmn2/src" creationIcons="false" modelPluginID="org.eclipse.bpmn2"
     templateDirectory="org.eclipse.bpmn2/templates" dynamicTemplates="true" modelName="Bpmn2"
@@ -538,8 +537,8 @@
     </genClasses>
     <genClasses ecoreClass="BPMN20.ecore#//Interface">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BPMN20.ecore#//Interface/operations"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BPMN20.ecore#//Interface/implementationRef"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BPMN20.ecore#//Interface/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EAttribute BPMN20.ecore#//Interface/implementationRef"/>
     </genClasses>
     <genClasses ecoreClass="BPMN20.ecore#//IntermediateCatchEvent"/>
     <genClasses ecoreClass="BPMN20.ecore#//IntermediateThrowEvent"/>
@@ -607,8 +606,8 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BPMN20.ecore#//Operation/inMessageRef"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BPMN20.ecore#//Operation/outMessageRef"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BPMN20.ecore#//Operation/errorRefs"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BPMN20.ecore#//Operation/implementationRef"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BPMN20.ecore#//Operation/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EAttribute BPMN20.ecore#//Operation/implementationRef"/>
     </genClasses>
     <genClasses ecoreClass="BPMN20.ecore#//OutputSet">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BPMN20.ecore#//OutputSet/dataOutputRefs"/>

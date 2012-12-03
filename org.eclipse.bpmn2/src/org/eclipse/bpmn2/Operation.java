@@ -27,8 +27,8 @@ import java.util.List;
  *   <li>{@link org.eclipse.bpmn2.Operation#getInMessageRef <em>In Message Ref</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.Operation#getOutMessageRef <em>Out Message Ref</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.Operation#getErrorRefs <em>Error Refs</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.Operation#getImplementationRef <em>Implementation Ref</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.Operation#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.Operation#getImplementationRef <em>Implementation Ref</em>}</li>
  * </ul>
  * </p>
  *
@@ -109,31 +109,31 @@ public interface Operation extends BaseElement {
     List<org.eclipse.bpmn2.Error> getErrorRefs();
 
     /**
-     * Returns the value of the '<em><b>Implementation Ref</b></em>' reference.
+     * Returns the value of the '<em><b>Implementation Ref</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Implementation Ref</em>' reference isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Implementation Ref</em>' reference.
-     * @see #setImplementationRef(Object)
+     * @return the value of the '<em>Implementation Ref</em>' attribute.
+     * @see #setImplementationRef(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getOperation_ImplementationRef()
-     * @model ordered="false"
+     * @model required="true" ordered="false"
      *        extendedMetaData="kind='attribute' name='implementationRef'"
      * @generated
      */
-    Object getImplementationRef();
+    String getImplementationRef();
 
     /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.Operation#getImplementationRef <em>Implementation Ref</em>}' reference.
+     * Sets the value of the '{@link org.eclipse.bpmn2.Operation#getImplementationRef <em>Implementation Ref</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Implementation Ref</em>' reference.
+     * @param value the new value of the '<em>Implementation Ref</em>' attribute.
      * @see #getImplementationRef()
      * @generated
      */
-    void setImplementationRef(Object value);
+    void setImplementationRef(String value);
 
     /**
      * Returns the value of the '<em><b>Name</b></em>' attribute.

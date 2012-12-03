@@ -11941,22 +11941,22 @@ public interface Bpmn2Package extends EPackage {
     int INTERFACE__OPERATIONS = ROOT_ELEMENT_FEATURE_COUNT + 0;
 
     /**
-     * The feature id for the '<em><b>Implementation Ref</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int INTERFACE__IMPLEMENTATION_REF = ROOT_ELEMENT_FEATURE_COUNT + 1;
-
-    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int INTERFACE__NAME = ROOT_ELEMENT_FEATURE_COUNT + 2;
+    int INTERFACE__NAME = ROOT_ELEMENT_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Implementation Ref</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERFACE__IMPLEMENTATION_REF = ROOT_ELEMENT_FEATURE_COUNT + 2;
 
     /**
      * The number of structural features of the '<em>Interface</em>' class.
@@ -13720,22 +13720,22 @@ public interface Bpmn2Package extends EPackage {
     int OPERATION__ERROR_REFS = BASE_ELEMENT_FEATURE_COUNT + 2;
 
     /**
-     * The feature id for the '<em><b>Implementation Ref</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int OPERATION__IMPLEMENTATION_REF = BASE_ELEMENT_FEATURE_COUNT + 3;
-
-    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int OPERATION__NAME = BASE_ELEMENT_FEATURE_COUNT + 4;
+    int OPERATION__NAME = BASE_ELEMENT_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Implementation Ref</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int OPERATION__IMPLEMENTATION_REF = BASE_ELEMENT_FEATURE_COUNT + 4;
 
     /**
      * The number of structural features of the '<em>Operation</em>' class.
@@ -22655,15 +22655,15 @@ public interface Bpmn2Package extends EPackage {
     EReference getInterface_Operations();
 
     /**
-     * Returns the meta object for the reference '{@link org.eclipse.bpmn2.Interface#getImplementationRef <em>Implementation Ref</em>}'.
+     * Returns the meta object for the attribute '{@link org.eclipse.bpmn2.Interface#getImplementationRef <em>Implementation Ref</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference '<em>Implementation Ref</em>'.
+     * @return the meta object for the attribute '<em>Implementation Ref</em>'.
      * @see org.eclipse.bpmn2.Interface#getImplementationRef()
      * @see #getInterface()
      * @generated
      */
-    EReference getInterface_ImplementationRef();
+    EAttribute getInterface_ImplementationRef();
 
     /**
      * Returns the meta object for the attribute '{@link org.eclipse.bpmn2.Interface#getName <em>Name</em>}'.
@@ -23277,15 +23277,15 @@ public interface Bpmn2Package extends EPackage {
     EReference getOperation_ErrorRefs();
 
     /**
-     * Returns the meta object for the reference '{@link org.eclipse.bpmn2.Operation#getImplementationRef <em>Implementation Ref</em>}'.
+     * Returns the meta object for the attribute '{@link org.eclipse.bpmn2.Operation#getImplementationRef <em>Implementation Ref</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference '<em>Implementation Ref</em>'.
+     * @return the meta object for the attribute '<em>Implementation Ref</em>'.
      * @see org.eclipse.bpmn2.Operation#getImplementationRef()
      * @see #getOperation()
      * @generated
      */
-    EReference getOperation_ImplementationRef();
+    EAttribute getOperation_ImplementationRef();
 
     /**
      * Returns the meta object for the attribute '{@link org.eclipse.bpmn2.Operation#getName <em>Name</em>}'.
@@ -28316,12 +28316,12 @@ public interface Bpmn2Package extends EPackage {
         EReference INTERFACE__OPERATIONS = eINSTANCE.getInterface_Operations();
 
         /**
-         * The meta object literal for the '<em><b>Implementation Ref</b></em>' reference feature.
+         * The meta object literal for the '<em><b>Implementation Ref</b></em>' attribute feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference INTERFACE__IMPLEMENTATION_REF = eINSTANCE.getInterface_ImplementationRef();
+        EAttribute INTERFACE__IMPLEMENTATION_REF = eINSTANCE.getInterface_ImplementationRef();
 
         /**
          * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -28829,12 +28829,12 @@ public interface Bpmn2Package extends EPackage {
         EReference OPERATION__ERROR_REFS = eINSTANCE.getOperation_ErrorRefs();
 
         /**
-         * The meta object literal for the '<em><b>Implementation Ref</b></em>' reference feature.
+         * The meta object literal for the '<em><b>Implementation Ref</b></em>' attribute feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference OPERATION__IMPLEMENTATION_REF = eINSTANCE.getOperation_ImplementationRef();
+        EAttribute OPERATION__IMPLEMENTATION_REF = eINSTANCE.getOperation_ImplementationRef();
 
         /**
          * The meta object literal for the '<em><b>Name</b></em>' attribute feature.

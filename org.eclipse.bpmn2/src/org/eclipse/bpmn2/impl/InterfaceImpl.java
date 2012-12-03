@@ -38,8 +38,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.eclipse.bpmn2.impl.InterfaceImpl#getOperations <em>Operations</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.impl.InterfaceImpl#getImplementationRef <em>Implementation Ref</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.InterfaceImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.InterfaceImpl#getImplementationRef <em>Implementation Ref</em>}</li>
  * </ul>
  * </p>
  *
@@ -55,16 +55,6 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
      * @ordered
      */
     protected EList<Operation> operations;
-
-    /**
-     * The cached value of the '{@link #getImplementationRef() <em>Implementation Ref</em>}' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getImplementationRef()
-     * @generated
-     * @ordered
-     */
-    protected EObject implementationRef;
 
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -85,6 +75,26 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
      * @ordered
      */
     protected String name = NAME_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getImplementationRef() <em>Implementation Ref</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getImplementationRef()
+     * @generated
+     * @ordered
+     */
+    protected static final String IMPLEMENTATION_REF_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getImplementationRef() <em>Implementation Ref</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getImplementationRef()
+     * @generated
+     * @ordered
+     */
+    protected String implementationRef = IMPLEMENTATION_REF_EDEFAULT;
 
     /**
      * <!-- begin-user-doc -->
@@ -123,17 +133,7 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
      * <!-- end-user-doc -->
      * @generated
      */
-    public Object getImplementationRef() {
-        if (implementationRef != null && implementationRef.eIsProxy()) {
-            InternalEObject oldImplementationRef = (InternalEObject) implementationRef;
-            implementationRef = eResolveProxy(oldImplementationRef);
-            if (implementationRef != oldImplementationRef) {
-                if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            Bpmn2Package.INTERFACE__IMPLEMENTATION_REF, oldImplementationRef,
-                            implementationRef));
-            }
-        }
+    public String getImplementationRef() {
         return implementationRef;
     }
 
@@ -142,18 +142,9 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
      * <!-- end-user-doc -->
      * @generated
      */
-    public Object basicGetImplementationRef() {
-        return implementationRef;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setImplementationRef(Object newImplementationRef) {
-        Object oldImplementationRef = implementationRef;
-        implementationRef = (EObject) newImplementationRef;
+    public void setImplementationRef(String newImplementationRef) {
+        String oldImplementationRef = implementationRef;
+        implementationRef = newImplementationRef;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
                     Bpmn2Package.INTERFACE__IMPLEMENTATION_REF, oldImplementationRef,
@@ -207,12 +198,10 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
         switch (featureID) {
         case Bpmn2Package.INTERFACE__OPERATIONS:
             return getOperations();
-        case Bpmn2Package.INTERFACE__IMPLEMENTATION_REF:
-            if (resolve)
-                return getImplementationRef();
-            return basicGetImplementationRef();
         case Bpmn2Package.INTERFACE__NAME:
             return getName();
+        case Bpmn2Package.INTERFACE__IMPLEMENTATION_REF:
+            return getImplementationRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -230,11 +219,11 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
             getOperations().clear();
             getOperations().addAll((Collection<? extends Operation>) newValue);
             return;
-        case Bpmn2Package.INTERFACE__IMPLEMENTATION_REF:
-            setImplementationRef((Object) newValue);
-            return;
         case Bpmn2Package.INTERFACE__NAME:
             setName((String) newValue);
+            return;
+        case Bpmn2Package.INTERFACE__IMPLEMENTATION_REF:
+            setImplementationRef((String) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -251,11 +240,11 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
         case Bpmn2Package.INTERFACE__OPERATIONS:
             getOperations().clear();
             return;
-        case Bpmn2Package.INTERFACE__IMPLEMENTATION_REF:
-            setImplementationRef((Object) null);
-            return;
         case Bpmn2Package.INTERFACE__NAME:
             setName(NAME_EDEFAULT);
+            return;
+        case Bpmn2Package.INTERFACE__IMPLEMENTATION_REF:
+            setImplementationRef(IMPLEMENTATION_REF_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -271,10 +260,11 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
         switch (featureID) {
         case Bpmn2Package.INTERFACE__OPERATIONS:
             return operations != null && !operations.isEmpty();
-        case Bpmn2Package.INTERFACE__IMPLEMENTATION_REF:
-            return implementationRef != null;
         case Bpmn2Package.INTERFACE__NAME:
             return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case Bpmn2Package.INTERFACE__IMPLEMENTATION_REF:
+            return IMPLEMENTATION_REF_EDEFAULT == null ? implementationRef != null
+                    : !IMPLEMENTATION_REF_EDEFAULT.equals(implementationRef);
         }
         return super.eIsSet(featureID);
     }
@@ -292,6 +282,8 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (name: ");
         result.append(name);
+        result.append(", implementationRef: ");
+        result.append(implementationRef);
         result.append(')');
         return result.toString();
     }
