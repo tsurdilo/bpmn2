@@ -72,6 +72,7 @@ import org.eclipse.bpmn2.EscalationEventDefinition;
 import org.eclipse.bpmn2.Event;
 import org.eclipse.bpmn2.EventBasedGateway;
 import org.eclipse.bpmn2.EventDefinition;
+import org.eclipse.bpmn2.EventSubprocess;
 import org.eclipse.bpmn2.ExclusiveGateway;
 import org.eclipse.bpmn2.Expression;
 import org.eclipse.bpmn2.Extension;
@@ -1898,6 +1899,25 @@ public class Bpmn2Switch<T> {
                 result = caseFlowElement(userTask);
             if (result == null)
                 result = caseBaseElement(userTask);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case Bpmn2Package.EVENT_SUBPROCESS: {
+            EventSubprocess eventSubprocess = (EventSubprocess) theEObject;
+            T result = caseEventSubprocess(eventSubprocess);
+            if (result == null)
+                result = caseSubProcess(eventSubprocess);
+            if (result == null)
+                result = caseActivity(eventSubprocess);
+            if (result == null)
+                result = caseFlowElementsContainer(eventSubprocess);
+            if (result == null)
+                result = caseFlowNode(eventSubprocess);
+            if (result == null)
+                result = caseFlowElement(eventSubprocess);
+            if (result == null)
+                result = caseBaseElement(eventSubprocess);
             if (result == null)
                 result = defaultCase(theEObject);
             return result;
@@ -3975,6 +3995,21 @@ public class Bpmn2Switch<T> {
      * @generated
      */
     public T caseUserTask(UserTask object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Event Subprocess</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Event Subprocess</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseEventSubprocess(EventSubprocess object) {
         return null;
     }
 

@@ -18117,6 +18117,268 @@ public interface Bpmn2Package extends EPackage {
     int USER_TASK_FEATURE_COUNT = TASK_FEATURE_COUNT + 2;
 
     /**
+     * The meta object id for the '{@link org.eclipse.bpmn2.impl.EventSubprocessImpl <em>Event Subprocess</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipse.bpmn2.impl.EventSubprocessImpl
+     * @see org.eclipse.bpmn2.impl.Bpmn2PackageImpl#getEventSubprocess()
+     * @generated
+     */
+    int EVENT_SUBPROCESS = 138;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__EXTENSION_VALUES = SUB_PROCESS__EXTENSION_VALUES;
+
+    /**
+     * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__DOCUMENTATION = SUB_PROCESS__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__EXTENSION_DEFINITIONS = SUB_PROCESS__EXTENSION_DEFINITIONS;
+
+    /**
+     * The feature id for the '<em><b>Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__ID = SUB_PROCESS__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__ANY_ATTRIBUTE = SUB_PROCESS__ANY_ATTRIBUTE;
+
+    /**
+     * The feature id for the '<em><b>Auditing</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__AUDITING = SUB_PROCESS__AUDITING;
+
+    /**
+     * The feature id for the '<em><b>Monitoring</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__MONITORING = SUB_PROCESS__MONITORING;
+
+    /**
+     * The feature id for the '<em><b>Category Value Ref</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__CATEGORY_VALUE_REF = SUB_PROCESS__CATEGORY_VALUE_REF;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__NAME = SUB_PROCESS__NAME;
+
+    /**
+     * The feature id for the '<em><b>Incoming</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__INCOMING = SUB_PROCESS__INCOMING;
+
+    /**
+     * The feature id for the '<em><b>Lanes</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__LANES = SUB_PROCESS__LANES;
+
+    /**
+     * The feature id for the '<em><b>Outgoing</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__OUTGOING = SUB_PROCESS__OUTGOING;
+
+    /**
+     * The feature id for the '<em><b>Io Specification</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__IO_SPECIFICATION = SUB_PROCESS__IO_SPECIFICATION;
+
+    /**
+     * The feature id for the '<em><b>Boundary Event Refs</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__BOUNDARY_EVENT_REFS = SUB_PROCESS__BOUNDARY_EVENT_REFS;
+
+    /**
+     * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__PROPERTIES = SUB_PROCESS__PROPERTIES;
+
+    /**
+     * The feature id for the '<em><b>Data Input Associations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__DATA_INPUT_ASSOCIATIONS = SUB_PROCESS__DATA_INPUT_ASSOCIATIONS;
+
+    /**
+     * The feature id for the '<em><b>Data Output Associations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__DATA_OUTPUT_ASSOCIATIONS = SUB_PROCESS__DATA_OUTPUT_ASSOCIATIONS;
+
+    /**
+     * The feature id for the '<em><b>Resources</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__RESOURCES = SUB_PROCESS__RESOURCES;
+
+    /**
+     * The feature id for the '<em><b>Loop Characteristics</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__LOOP_CHARACTERISTICS = SUB_PROCESS__LOOP_CHARACTERISTICS;
+
+    /**
+     * The feature id for the '<em><b>Completion Quantity</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__COMPLETION_QUANTITY = SUB_PROCESS__COMPLETION_QUANTITY;
+
+    /**
+     * The feature id for the '<em><b>Default</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__DEFAULT = SUB_PROCESS__DEFAULT;
+
+    /**
+     * The feature id for the '<em><b>Is For Compensation</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__IS_FOR_COMPENSATION = SUB_PROCESS__IS_FOR_COMPENSATION;
+
+    /**
+     * The feature id for the '<em><b>Start Quantity</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__START_QUANTITY = SUB_PROCESS__START_QUANTITY;
+
+    /**
+     * The feature id for the '<em><b>Lane Sets</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__LANE_SETS = SUB_PROCESS__LANE_SETS;
+
+    /**
+     * The feature id for the '<em><b>Flow Elements</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__FLOW_ELEMENTS = SUB_PROCESS__FLOW_ELEMENTS;
+
+    /**
+     * The feature id for the '<em><b>Artifacts</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__ARTIFACTS = SUB_PROCESS__ARTIFACTS;
+
+    /**
+     * The feature id for the '<em><b>Triggered By Event</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__TRIGGERED_BY_EVENT = SUB_PROCESS__TRIGGERED_BY_EVENT;
+
+    /**
+     * The number of structural features of the '<em>Event Subprocess</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS_FEATURE_COUNT = SUB_PROCESS_FEATURE_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link org.eclipse.bpmn2.AdHocOrdering <em>Ad Hoc Ordering</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -18124,7 +18386,7 @@ public interface Bpmn2Package extends EPackage {
      * @see org.eclipse.bpmn2.impl.Bpmn2PackageImpl#getAdHocOrdering()
      * @generated
      */
-    int AD_HOC_ORDERING = 138;
+    int AD_HOC_ORDERING = 139;
 
     /**
      * The meta object id for the '{@link org.eclipse.bpmn2.AssociationDirection <em>Association Direction</em>}' enum.
@@ -18134,7 +18396,7 @@ public interface Bpmn2Package extends EPackage {
      * @see org.eclipse.bpmn2.impl.Bpmn2PackageImpl#getAssociationDirection()
      * @generated
      */
-    int ASSOCIATION_DIRECTION = 139;
+    int ASSOCIATION_DIRECTION = 140;
 
     /**
      * The meta object id for the '{@link org.eclipse.bpmn2.ChoreographyLoopType <em>Choreography Loop Type</em>}' enum.
@@ -18144,7 +18406,7 @@ public interface Bpmn2Package extends EPackage {
      * @see org.eclipse.bpmn2.impl.Bpmn2PackageImpl#getChoreographyLoopType()
      * @generated
      */
-    int CHOREOGRAPHY_LOOP_TYPE = 140;
+    int CHOREOGRAPHY_LOOP_TYPE = 141;
 
     /**
      * The meta object id for the '{@link org.eclipse.bpmn2.EventBasedGatewayType <em>Event Based Gateway Type</em>}' enum.
@@ -18154,7 +18416,7 @@ public interface Bpmn2Package extends EPackage {
      * @see org.eclipse.bpmn2.impl.Bpmn2PackageImpl#getEventBasedGatewayType()
      * @generated
      */
-    int EVENT_BASED_GATEWAY_TYPE = 141;
+    int EVENT_BASED_GATEWAY_TYPE = 142;
 
     /**
      * The meta object id for the '{@link org.eclipse.bpmn2.GatewayDirection <em>Gateway Direction</em>}' enum.
@@ -18164,7 +18426,7 @@ public interface Bpmn2Package extends EPackage {
      * @see org.eclipse.bpmn2.impl.Bpmn2PackageImpl#getGatewayDirection()
      * @generated
      */
-    int GATEWAY_DIRECTION = 142;
+    int GATEWAY_DIRECTION = 143;
 
     /**
      * The meta object id for the '{@link org.eclipse.bpmn2.ItemKind <em>Item Kind</em>}' enum.
@@ -18174,7 +18436,7 @@ public interface Bpmn2Package extends EPackage {
      * @see org.eclipse.bpmn2.impl.Bpmn2PackageImpl#getItemKind()
      * @generated
      */
-    int ITEM_KIND = 143;
+    int ITEM_KIND = 144;
 
     /**
      * The meta object id for the '{@link org.eclipse.bpmn2.MultiInstanceBehavior <em>Multi Instance Behavior</em>}' enum.
@@ -18184,7 +18446,7 @@ public interface Bpmn2Package extends EPackage {
      * @see org.eclipse.bpmn2.impl.Bpmn2PackageImpl#getMultiInstanceBehavior()
      * @generated
      */
-    int MULTI_INSTANCE_BEHAVIOR = 144;
+    int MULTI_INSTANCE_BEHAVIOR = 145;
 
     /**
      * The meta object id for the '{@link org.eclipse.bpmn2.ProcessType <em>Process Type</em>}' enum.
@@ -18194,7 +18456,7 @@ public interface Bpmn2Package extends EPackage {
      * @see org.eclipse.bpmn2.impl.Bpmn2PackageImpl#getProcessType()
      * @generated
      */
-    int PROCESS_TYPE = 145;
+    int PROCESS_TYPE = 146;
 
     /**
      * The meta object id for the '{@link org.eclipse.bpmn2.RelationshipDirection <em>Relationship Direction</em>}' enum.
@@ -18204,7 +18466,7 @@ public interface Bpmn2Package extends EPackage {
      * @see org.eclipse.bpmn2.impl.Bpmn2PackageImpl#getRelationshipDirection()
      * @generated
      */
-    int RELATIONSHIP_DIRECTION = 146;
+    int RELATIONSHIP_DIRECTION = 147;
 
     /**
      * Returns the meta object for class '{@link org.eclipse.bpmn2.DocumentRoot <em>Document Root</em>}'.
@@ -24625,6 +24887,16 @@ public interface Bpmn2Package extends EPackage {
     EAttribute getUserTask_Implementation();
 
     /**
+     * Returns the meta object for class '{@link org.eclipse.bpmn2.EventSubprocess <em>Event Subprocess</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Event Subprocess</em>'.
+     * @see org.eclipse.bpmn2.EventSubprocess
+     * @generated
+     */
+    EClass getEventSubprocess();
+
+    /**
      * Returns the meta object for enum '{@link org.eclipse.bpmn2.AdHocOrdering <em>Ad Hoc Ordering</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -29934,6 +30206,16 @@ public interface Bpmn2Package extends EPackage {
          * @generated
          */
         EAttribute USER_TASK__IMPLEMENTATION = eINSTANCE.getUserTask_Implementation();
+
+        /**
+         * The meta object literal for the '{@link org.eclipse.bpmn2.impl.EventSubprocessImpl <em>Event Subprocess</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see org.eclipse.bpmn2.impl.EventSubprocessImpl
+         * @see org.eclipse.bpmn2.impl.Bpmn2PackageImpl#getEventSubprocess()
+         * @generated
+         */
+        EClass EVENT_SUBPROCESS = eINSTANCE.getEventSubprocess();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.AdHocOrdering <em>Ad Hoc Ordering</em>}' enum.

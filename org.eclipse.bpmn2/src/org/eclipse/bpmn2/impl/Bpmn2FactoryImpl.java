@@ -72,6 +72,7 @@ import org.eclipse.bpmn2.EscalationEventDefinition;
 import org.eclipse.bpmn2.EventBasedGateway;
 import org.eclipse.bpmn2.EventBasedGatewayType;
 import org.eclipse.bpmn2.EventDefinition;
+import org.eclipse.bpmn2.EventSubprocess;
 import org.eclipse.bpmn2.ExclusiveGateway;
 import org.eclipse.bpmn2.Expression;
 import org.eclipse.bpmn2.Extension;
@@ -462,6 +463,8 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
             return createTransaction();
         case Bpmn2Package.USER_TASK:
             return createUserTask();
+        case Bpmn2Package.EVENT_SUBPROCESS:
+            return createEventSubprocess();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName()
                     + "' is not a valid classifier");
@@ -1820,6 +1823,16 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
     public UserTask createUserTask() {
         UserTaskImpl userTask = new UserTaskImpl();
         return userTask;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EventSubprocess createEventSubprocess() {
+        EventSubprocessImpl eventSubprocess = new EventSubprocessImpl();
+        return eventSubprocess;
     }
 
     /**

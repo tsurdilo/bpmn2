@@ -70,6 +70,7 @@ import org.eclipse.bpmn2.EscalationEventDefinition;
 import org.eclipse.bpmn2.Event;
 import org.eclipse.bpmn2.EventBasedGateway;
 import org.eclipse.bpmn2.EventDefinition;
+import org.eclipse.bpmn2.EventSubprocess;
 import org.eclipse.bpmn2.ExclusiveGateway;
 import org.eclipse.bpmn2.Expression;
 import org.eclipse.bpmn2.Extension;
@@ -901,6 +902,11 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
         @Override
         public Adapter caseUserTask(UserTask object) {
             return createUserTaskAdapter();
+        }
+
+        @Override
+        public Adapter caseEventSubprocess(EventSubprocess object) {
+            return createEventSubprocessAdapter();
         }
 
         @Override
@@ -2851,6 +2857,20 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createUserTaskAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.EventSubprocess <em>Event Subprocess</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.EventSubprocess
+     * @generated
+     */
+    public Adapter createEventSubprocessAdapter() {
         return null;
     }
 

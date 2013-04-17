@@ -1024,6 +1024,13 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    private EClass eventSubprocessEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     private EEnum adHocOrderingEEnum = null;
 
     /**
@@ -7094,6 +7101,19 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      */
     public EAttribute getUserTask_Implementation() {
         return (EAttribute) getUserTask().getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getEventSubprocess() {
+        if (eventSubprocessEClass == null) {
+            eventSubprocessEClass = (EClass) EPackage.Registry.INSTANCE
+                    .getEPackage(Bpmn2Package.eNS_URI).getEClassifiers().get(147);
+        }
+        return eventSubprocessEClass;
     }
 
     /**

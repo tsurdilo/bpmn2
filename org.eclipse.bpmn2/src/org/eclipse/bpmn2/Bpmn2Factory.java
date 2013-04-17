@@ -1123,6 +1123,15 @@ public interface Bpmn2Factory extends EFactory {
     UserTask createUserTask();
 
     /**
+     * Returns a new object of class '<em>Event Subprocess</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Event Subprocess</em>'.
+     * @generated
+     */
+    EventSubprocess createEventSubprocess();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
