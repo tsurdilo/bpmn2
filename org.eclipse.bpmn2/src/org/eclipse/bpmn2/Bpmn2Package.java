@@ -1321,13 +1321,22 @@ public interface Bpmn2Package extends EPackage {
     int DOCUMENT_ROOT__USER_TASK = 137;
 
     /**
+     * The feature id for the '<em><b>Event Sub Process</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DOCUMENT_ROOT__EVENT_SUB_PROCESS = 138;
+
+    /**
      * The number of structural features of the '<em>Document Root</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int DOCUMENT_ROOT_FEATURE_COUNT = 138;
+    int DOCUMENT_ROOT_FEATURE_COUNT = 139;
 
     /**
      * The meta object id for the '{@link org.eclipse.bpmn2.impl.BaseElementImpl <em>Base Element</em>}' class.
@@ -19997,6 +20006,17 @@ public interface Bpmn2Package extends EPackage {
     EReference getDocumentRoot_UserTask();
 
     /**
+     * Returns the meta object for the containment reference '{@link org.eclipse.bpmn2.DocumentRoot#getEventSubProcess <em>Event Sub Process</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Event Sub Process</em>'.
+     * @see org.eclipse.bpmn2.DocumentRoot#getEventSubProcess()
+     * @see #getDocumentRoot()
+     * @generated
+     */
+    EReference getDocumentRoot_EventSubProcess();
+
+    /**
      * Returns the meta object for class '{@link org.eclipse.bpmn2.Activity <em>Activity</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -26161,6 +26181,14 @@ public interface Bpmn2Package extends EPackage {
          * @generated
          */
         EReference DOCUMENT_ROOT__USER_TASK = eINSTANCE.getDocumentRoot_UserTask();
+
+        /**
+         * The meta object literal for the '<em><b>Event Sub Process</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference DOCUMENT_ROOT__EVENT_SUB_PROCESS = eINSTANCE.getDocumentRoot_EventSubProcess();
 
         /**
          * The meta object literal for the '{@link org.eclipse.bpmn2.impl.ActivityImpl <em>Activity</em>}' class.

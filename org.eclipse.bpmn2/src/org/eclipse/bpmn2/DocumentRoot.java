@@ -165,6 +165,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  *   <li>{@link org.eclipse.bpmn2.DocumentRoot#getTimerEventDefinition <em>Timer Event Definition</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.DocumentRoot#getTransaction <em>Transaction</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.DocumentRoot#getUserTask <em>User Task</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.DocumentRoot#getEventSubProcess <em>Event Sub Process</em>}</li>
  * </ul>
  * </p>
  *
@@ -3859,5 +3860,32 @@ public interface DocumentRoot extends EObject {
      * @generated
      */
     void setUserTask(UserTask value);
+
+    /**
+     * Returns the value of the '<em><b>Event Sub Process</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Event Sub Process</em>' containment reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Event Sub Process</em>' containment reference.
+     * @see #setEventSubProcess(EventSubprocess)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getDocumentRoot_EventSubProcess()
+     * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+     *        extendedMetaData="kind='element' name='eventSubProcess\n' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL' affiliation='http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement'"
+     * @generated
+     */
+    EventSubprocess getEventSubProcess();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.bpmn2.DocumentRoot#getEventSubProcess <em>Event Sub Process</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Event Sub Process</em>' containment reference.
+     * @see #getEventSubProcess()
+     * @generated
+     */
+    void setEventSubProcess(EventSubprocess value);
 
 } // DocumentRoot

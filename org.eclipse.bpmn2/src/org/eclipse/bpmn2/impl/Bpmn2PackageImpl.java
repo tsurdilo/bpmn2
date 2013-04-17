@@ -2445,6 +2445,15 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EReference getDocumentRoot_EventSubProcess() {
+        return (EReference) getDocumentRoot().getEStructuralFeatures().get(138);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getActivity() {
         if (activityEClass == null) {
             activityEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Bpmn2Package.eNS_URI)

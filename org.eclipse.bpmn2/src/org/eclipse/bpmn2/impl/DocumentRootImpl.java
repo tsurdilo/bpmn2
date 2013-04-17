@@ -72,6 +72,7 @@ import org.eclipse.bpmn2.EscalationEventDefinition;
 import org.eclipse.bpmn2.Event;
 import org.eclipse.bpmn2.EventBasedGateway;
 import org.eclipse.bpmn2.EventDefinition;
+import org.eclipse.bpmn2.EventSubprocess;
 import org.eclipse.bpmn2.ExclusiveGateway;
 import org.eclipse.bpmn2.Expression;
 import org.eclipse.bpmn2.Extension;
@@ -308,6 +309,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link org.eclipse.bpmn2.impl.DocumentRootImpl#getTimerEventDefinition <em>Timer Event Definition</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.DocumentRootImpl#getTransaction <em>Transaction</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.DocumentRootImpl#getUserTask <em>User Task</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.DocumentRootImpl#getEventSubProcess <em>Event Sub Process</em>}</li>
  * </ul>
  * </p>
  *
@@ -4553,6 +4555,37 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EventSubprocess getEventSubProcess() {
+        return (EventSubprocess) getMixed().get(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT_SUB_PROCESS, true);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetEventSubProcess(EventSubprocess newEventSubProcess,
+            NotificationChain msgs) {
+        return ((FeatureMap.Internal) getMixed()).basicAdd(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT_SUB_PROCESS, newEventSubProcess, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setEventSubProcess(EventSubprocess newEventSubProcess) {
+        ((FeatureMap.Internal) getMixed()).set(
+                Bpmn2Package.Literals.DOCUMENT_ROOT__EVENT_SUB_PROCESS, newEventSubProcess);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
             NotificationChain msgs) {
@@ -4835,6 +4868,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
             return basicSetTransaction(null, msgs);
         case Bpmn2Package.DOCUMENT_ROOT__USER_TASK:
             return basicSetUserTask(null, msgs);
+        case Bpmn2Package.DOCUMENT_ROOT__EVENT_SUB_PROCESS:
+            return basicSetEventSubProcess(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -5131,6 +5166,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
             return getTransaction();
         case Bpmn2Package.DOCUMENT_ROOT__USER_TASK:
             return getUserTask();
+        case Bpmn2Package.DOCUMENT_ROOT__EVENT_SUB_PROCESS:
+            return getEventSubProcess();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -5556,6 +5593,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
         case Bpmn2Package.DOCUMENT_ROOT__USER_TASK:
             setUserTask((UserTask) newValue);
             return;
+        case Bpmn2Package.DOCUMENT_ROOT__EVENT_SUB_PROCESS:
+            setEventSubProcess((EventSubprocess) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -5979,6 +6019,9 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
         case Bpmn2Package.DOCUMENT_ROOT__USER_TASK:
             setUserTask((UserTask) null);
             return;
+        case Bpmn2Package.DOCUMENT_ROOT__EVENT_SUB_PROCESS:
+            setEventSubProcess((EventSubprocess) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -6267,6 +6310,8 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
             return getTransaction() != null;
         case Bpmn2Package.DOCUMENT_ROOT__USER_TASK:
             return getUserTask() != null;
+        case Bpmn2Package.DOCUMENT_ROOT__EVENT_SUB_PROCESS:
+            return getEventSubProcess() != null;
         }
         return super.eIsSet(featureID);
     }
