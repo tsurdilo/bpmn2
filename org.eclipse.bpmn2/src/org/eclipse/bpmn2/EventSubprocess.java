@@ -21,7 +21,7 @@ package org.eclipse.bpmn2;
  *
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getEventSubprocess()
- * @model extendedMetaData="name='tEventSubProcess' kind='elementOnly'"
+ * @model extendedMetaData="name='tSubProcess' kind='elementOnly'"
  * @generated
  */
 public interface EventSubprocess extends SubProcess {

@@ -3873,7 +3873,7 @@ public interface DocumentRoot extends EObject {
      * @see #setEventSubProcess(EventSubprocess)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDocumentRoot_EventSubProcess()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
-     *        extendedMetaData="kind='element' name='eventSubProcess\n' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL' affiliation='http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement'"
+     *        extendedMetaData="kind='element' name='subProcess' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL' affiliation='http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement'"
      * @generated
      */
     EventSubprocess getEventSubProcess();

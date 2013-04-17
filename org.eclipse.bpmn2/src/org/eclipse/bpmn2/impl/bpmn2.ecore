@@ -1324,7 +1324,7 @@
         containment="true" resolveProxies="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
-        <details key="name" value="eventSubProcess&#xA;"/>
+        <details key="name" value="subProcess"/>
         <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
         <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
       </eAnnotations>
@@ -4517,7 +4517,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EventSubprocess" eSuperTypes="#//SubProcess">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-      <details key="name" value="tEventSubProcess"/>
+      <details key="name" value="tSubProcess"/>
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
   </eClassifiers>
