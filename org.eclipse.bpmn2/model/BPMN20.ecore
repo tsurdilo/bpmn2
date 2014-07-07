@@ -1608,7 +1608,7 @@
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="calledElement" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//NCName"/>
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CallChoreography" eSuperTypes="#//ChoreographyActivity">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">

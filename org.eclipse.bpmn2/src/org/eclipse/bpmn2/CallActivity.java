@@ -42,7 +42,7 @@ public interface CallActivity extends Activity {
      * @return the value of the '<em>Called Element</em>' attribute.
      * @see #setCalledElement(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getCallActivity_CalledElement()
-     * @model dataType="org.eclipse.emf.ecore.xml.type.NCName" required="true" ordered="false"
+     * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true" ordered="false"
      * @generated
      */
     String getCalledElement();
