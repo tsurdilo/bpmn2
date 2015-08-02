@@ -3738,7 +3738,7 @@ public interface DocumentRoot extends EObject {
      * @see #setTextAnnotation(TextAnnotation)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDocumentRoot_TextAnnotation()
      * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
-     *        extendedMetaData="kind='element' name='textAnnotation' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL' affiliation='http://www.omg.org/spec/BPMN/20100524/MODEL#artifact'"
+     *        extendedMetaData="kind='element' name='textAnnotation' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL' affiliation='http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement'"
      * @generated
      */
     TextAnnotation getTextAnnotation();

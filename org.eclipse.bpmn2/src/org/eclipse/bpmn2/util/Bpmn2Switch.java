@@ -18,6 +18,7 @@ import java.util.List;
 
 import org.eclipse.bpmn2.Activity;
 import org.eclipse.bpmn2.AdHocSubProcess;
+import org.eclipse.bpmn2.Annotation;
 import org.eclipse.bpmn2.Artifact;
 import org.eclipse.bpmn2.Assignment;
 import org.eclipse.bpmn2.Association;
@@ -1828,7 +1829,9 @@ public class Bpmn2Switch<T> {
             TextAnnotation textAnnotation = (TextAnnotation) theEObject;
             T result = caseTextAnnotation(textAnnotation);
             if (result == null)
-                result = caseArtifact(textAnnotation);
+                result = caseFlowNode(textAnnotation);
+            if (result == null)
+                result = caseFlowElement(textAnnotation);
             if (result == null)
                 result = caseBaseElement(textAnnotation);
             if (result == null)

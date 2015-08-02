@@ -17427,7 +17427,7 @@ public interface Bpmn2Package extends EPackage {
      * @generated
      * @ordered
      */
-    int TEXT_ANNOTATION__EXTENSION_VALUES = ARTIFACT__EXTENSION_VALUES;
+    int TEXT_ANNOTATION__EXTENSION_VALUES = FLOW_NODE__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
@@ -17436,7 +17436,7 @@ public interface Bpmn2Package extends EPackage {
      * @generated
      * @ordered
      */
-    int TEXT_ANNOTATION__DOCUMENTATION = ARTIFACT__DOCUMENTATION;
+    int TEXT_ANNOTATION__DOCUMENTATION = FLOW_NODE__DOCUMENTATION;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -17445,7 +17445,7 @@ public interface Bpmn2Package extends EPackage {
      * @generated
      * @ordered
      */
-    int TEXT_ANNOTATION__EXTENSION_DEFINITIONS = ARTIFACT__EXTENSION_DEFINITIONS;
+    int TEXT_ANNOTATION__EXTENSION_DEFINITIONS = FLOW_NODE__EXTENSION_DEFINITIONS;
 
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -17454,7 +17454,7 @@ public interface Bpmn2Package extends EPackage {
      * @generated
      * @ordered
      */
-    int TEXT_ANNOTATION__ID = ARTIFACT__ID;
+    int TEXT_ANNOTATION__ID = FLOW_NODE__ID;
 
     /**
      * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
@@ -17463,7 +17463,70 @@ public interface Bpmn2Package extends EPackage {
      * @generated
      * @ordered
      */
-    int TEXT_ANNOTATION__ANY_ATTRIBUTE = ARTIFACT__ANY_ATTRIBUTE;
+    int TEXT_ANNOTATION__ANY_ATTRIBUTE = FLOW_NODE__ANY_ATTRIBUTE;
+
+    /**
+     * The feature id for the '<em><b>Auditing</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TEXT_ANNOTATION__AUDITING = FLOW_NODE__AUDITING;
+
+    /**
+     * The feature id for the '<em><b>Monitoring</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TEXT_ANNOTATION__MONITORING = FLOW_NODE__MONITORING;
+
+    /**
+     * The feature id for the '<em><b>Category Value Ref</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TEXT_ANNOTATION__CATEGORY_VALUE_REF = FLOW_NODE__CATEGORY_VALUE_REF;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TEXT_ANNOTATION__NAME = FLOW_NODE__NAME;
+
+    /**
+     * The feature id for the '<em><b>Incoming</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TEXT_ANNOTATION__INCOMING = FLOW_NODE__INCOMING;
+
+    /**
+     * The feature id for the '<em><b>Lanes</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TEXT_ANNOTATION__LANES = FLOW_NODE__LANES;
+
+    /**
+     * The feature id for the '<em><b>Outgoing</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TEXT_ANNOTATION__OUTGOING = FLOW_NODE__OUTGOING;
 
     /**
      * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -17472,7 +17535,7 @@ public interface Bpmn2Package extends EPackage {
      * @generated
      * @ordered
      */
-    int TEXT_ANNOTATION__TEXT = ARTIFACT_FEATURE_COUNT + 0;
+    int TEXT_ANNOTATION__TEXT = FLOW_NODE_FEATURE_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Text Format</b></em>' attribute.
@@ -17481,7 +17544,7 @@ public interface Bpmn2Package extends EPackage {
      * @generated
      * @ordered
      */
-    int TEXT_ANNOTATION__TEXT_FORMAT = ARTIFACT_FEATURE_COUNT + 1;
+    int TEXT_ANNOTATION__TEXT_FORMAT = FLOW_NODE_FEATURE_COUNT + 1;
 
     /**
      * The number of structural features of the '<em>Text Annotation</em>' class.
@@ -17490,7 +17553,7 @@ public interface Bpmn2Package extends EPackage {
      * @generated
      * @ordered
      */
-    int TEXT_ANNOTATION_FEATURE_COUNT = ARTIFACT_FEATURE_COUNT + 2;
+    int TEXT_ANNOTATION_FEATURE_COUNT = FLOW_NODE_FEATURE_COUNT + 2;
 
     /**
      * The meta object id for the '{@link org.eclipse.bpmn2.impl.TimerEventDefinitionImpl <em>Timer Event Definition</em>}' class.

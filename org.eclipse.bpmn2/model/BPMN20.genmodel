@@ -766,6 +766,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BPMN20.ecore#//UserTask/implementation"/>
     </genClasses>
     <genClasses ecoreClass="BPMN20.ecore#//EventSubprocess"/>
+    <genClasses image="false" ecoreClass="BPMN20.ecore#//Annotation"/>
   </genPackages>
   <genPackages prefix="BpmnDi" basePackage="org.eclipse.bpmn2" resource="XML" multipleEditorPages="false"
       generateModelWizard="false" ecorePackage="BPMNDI.ecore#/">

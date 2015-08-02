@@ -1277,7 +1277,7 @@
         <details key="kind" value="element"/>
         <details key="name" value="textAnnotation"/>
         <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
-        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#artifact"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="throwEvent" upperBound="-2"
@@ -4379,7 +4379,7 @@
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TextAnnotation" eSuperTypes="#//Artifact">
+  <eClassifiers xsi:type="ecore:EClass" name="TextAnnotation" eSuperTypes="#//FlowNode">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="tTextAnnotation"/>
       <details key="kind" value="elementOnly"/>

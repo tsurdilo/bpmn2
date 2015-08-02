@@ -31,7 +31,7 @@ package org.eclipse.bpmn2;
  * @model extendedMetaData="name='tTextAnnotation' kind='elementOnly'"
  * @generated
  */
-public interface TextAnnotation extends Artifact {
+public interface TextAnnotation extends FlowNode {
     /**
      * Returns the value of the '<em><b>Text</b></em>' attribute.
      * <!-- begin-user-doc -->

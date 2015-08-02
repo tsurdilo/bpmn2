@@ -14,7 +14,10 @@
  */
 package org.eclipse.bpmn2.impl;
 
+import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Package;
+import org.eclipse.bpmn2.ConversationLink;
+import org.eclipse.bpmn2.InteractionNode;
 import org.eclipse.bpmn2.TextAnnotation;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
@@ -34,7 +37,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class TextAnnotationImpl extends ArtifactImpl implements TextAnnotation {
+public class TextAnnotationImpl extends FlowNodeImpl implements TextAnnotation {
     /**
      * The default value of the '{@link #getText() <em>Text</em>}' attribute.
      * <!-- begin-user-doc -->
