@@ -43,8 +43,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.impl.BaseElementImpl#getExtensionValues <em>Extension Values</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.BaseElementImpl#getDocumentation <em>Documentation</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.BaseElementImpl#getExtensionValues <em>Extension Values</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.BaseElementImpl#getExtensionDefinitions <em>Extension Definitions</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.BaseElementImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.BaseElementImpl#getAnyAttribute <em>Any Attribute</em>}</li>
@@ -55,16 +55,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class BaseElementImpl extends EObjectImpl implements BaseElement {
     /**
-     * The cached value of the '{@link #getExtensionValues() <em>Extension Values</em>}' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getExtensionValues()
-     * @generated
-     * @ordered
-     */
-    protected EList<ExtensionAttributeValue> extensionValues;
-
-    /**
      * The cached value of the '{@link #getDocumentation() <em>Documentation</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -73,6 +63,16 @@ public class BaseElementImpl extends EObjectImpl implements BaseElement {
      * @ordered
      */
     protected EList<Documentation> documentation;
+
+    /**
+     * The cached value of the '{@link #getExtensionValues() <em>Extension Values</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getExtensionValues()
+     * @generated
+     * @ordered
+     */
+    protected EList<ExtensionAttributeValue> extensionValues;
 
     /**
      * The cached value of the '{@link #getExtensionDefinitions() <em>Extension Definitions</em>}' reference list.
@@ -217,10 +217,10 @@ public class BaseElementImpl extends EObjectImpl implements BaseElement {
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
             NotificationChain msgs) {
         switch (featureID) {
-        case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
-            return ((InternalEList<?>) getExtensionValues()).basicRemove(otherEnd, msgs);
         case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
             return ((InternalEList<?>) getDocumentation()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
+            return ((InternalEList<?>) getExtensionValues()).basicRemove(otherEnd, msgs);
         case Bpmn2Package.BASE_ELEMENT__ANY_ATTRIBUTE:
             return ((InternalEList<?>) getAnyAttribute()).basicRemove(otherEnd, msgs);
         }
@@ -235,10 +235,10 @@ public class BaseElementImpl extends EObjectImpl implements BaseElement {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
-            return getExtensionValues();
         case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
             return getDocumentation();
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
+            return getExtensionValues();
         case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS:
             return getExtensionDefinitions();
         case Bpmn2Package.BASE_ELEMENT__ID:
@@ -260,13 +260,13 @@ public class BaseElementImpl extends EObjectImpl implements BaseElement {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
-            getExtensionValues().clear();
-            getExtensionValues().addAll((Collection<? extends ExtensionAttributeValue>) newValue);
-            return;
         case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
             getDocumentation().clear();
             getDocumentation().addAll((Collection<? extends Documentation>) newValue);
+            return;
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
+            getExtensionValues().clear();
+            getExtensionValues().addAll((Collection<? extends ExtensionAttributeValue>) newValue);
             return;
         case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS:
             getExtensionDefinitions().clear();
@@ -290,11 +290,11 @@ public class BaseElementImpl extends EObjectImpl implements BaseElement {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
-            getExtensionValues().clear();
-            return;
         case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
             getDocumentation().clear();
+            return;
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
+            getExtensionValues().clear();
             return;
         case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS:
             getExtensionDefinitions().clear();
@@ -317,10 +317,10 @@ public class BaseElementImpl extends EObjectImpl implements BaseElement {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
-            return extensionValues != null && !extensionValues.isEmpty();
         case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
             return documentation != null && !documentation.isEmpty();
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
+            return extensionValues != null && !extensionValues.isEmpty();
         case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS:
             return extensionDefinitions != null && !extensionDefinitions.isEmpty();
         case Bpmn2Package.BASE_ELEMENT__ID:

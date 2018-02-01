@@ -16,7 +16,6 @@ package org.eclipse.bpmn2.util;
 
 import org.eclipse.bpmn2.Activity;
 import org.eclipse.bpmn2.AdHocSubProcess;
-import org.eclipse.bpmn2.Annotation;
 import org.eclipse.bpmn2.Artifact;
 import org.eclipse.bpmn2.Assignment;
 import org.eclipse.bpmn2.Association;

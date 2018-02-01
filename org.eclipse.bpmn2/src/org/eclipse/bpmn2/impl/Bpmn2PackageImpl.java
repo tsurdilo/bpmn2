@@ -2717,7 +2717,7 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      * @generated
      */
     public EReference getBaseElement_ExtensionValues() {
-        return (EReference) getBaseElement().getEStructuralFeatures().get(0);
+        return (EReference) getBaseElement().getEStructuralFeatures().get(1);
     }
 
     /**
@@ -2726,7 +2726,7 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      * @generated
      */
     public EReference getBaseElement_Documentation() {
-        return (EReference) getBaseElement().getEStructuralFeatures().get(1);
+        return (EReference) getBaseElement().getEStructuralFeatures().get(0);
     }
 
     /**

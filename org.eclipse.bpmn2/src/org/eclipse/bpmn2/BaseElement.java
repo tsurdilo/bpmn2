@@ -27,8 +27,8 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.BaseElement#getExtensionValues <em>Extension Values</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.BaseElement#getDocumentation <em>Documentation</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.BaseElement#getExtensionValues <em>Extension Values</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.BaseElement#getExtensionDefinitions <em>Extension Definitions</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.BaseElement#getId <em>Id</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.BaseElement#getAnyAttribute <em>Any Attribute</em>}</li>

@@ -1349,22 +1349,22 @@ public interface Bpmn2Package extends EPackage {
     int BASE_ELEMENT = 7;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int BASE_ELEMENT__EXTENSION_VALUES = 0;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int BASE_ELEMENT__DOCUMENTATION = 1;
+    int BASE_ELEMENT__DOCUMENTATION = 0;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BASE_ELEMENT__EXTENSION_VALUES = 1;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -1413,15 +1413,6 @@ public interface Bpmn2Package extends EPackage {
     int FLOW_ELEMENT = 62;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int FLOW_ELEMENT__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1429,6 +1420,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int FLOW_ELEMENT__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FLOW_ELEMENT__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -1513,15 +1513,6 @@ public interface Bpmn2Package extends EPackage {
     int FLOW_NODE = 64;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int FLOW_NODE__EXTENSION_VALUES = FLOW_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1529,6 +1520,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int FLOW_NODE__DOCUMENTATION = FLOW_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FLOW_NODE__EXTENSION_VALUES = FLOW_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -1640,15 +1640,6 @@ public interface Bpmn2Package extends EPackage {
     int ACTIVITY = 1;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ACTIVITY__EXTENSION_VALUES = FLOW_NODE__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1656,6 +1647,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int ACTIVITY__DOCUMENTATION = FLOW_NODE__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ACTIVITY__EXTENSION_VALUES = FLOW_NODE__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -1866,15 +1866,6 @@ public interface Bpmn2Package extends EPackage {
     int SUB_PROCESS = 130;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SUB_PROCESS__EXTENSION_VALUES = ACTIVITY__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1882,6 +1873,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int SUB_PROCESS__DOCUMENTATION = ACTIVITY__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUB_PROCESS__EXTENSION_VALUES = ACTIVITY__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -2128,15 +2128,6 @@ public interface Bpmn2Package extends EPackage {
     int AD_HOC_SUB_PROCESS = 2;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int AD_HOC_SUB_PROCESS__EXTENSION_VALUES = SUB_PROCESS__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2144,6 +2135,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int AD_HOC_SUB_PROCESS__DOCUMENTATION = SUB_PROCESS__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AD_HOC_SUB_PROCESS__EXTENSION_VALUES = SUB_PROCESS__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -2417,15 +2417,6 @@ public interface Bpmn2Package extends EPackage {
     int ARTIFACT = 3;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ARTIFACT__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2433,6 +2424,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int ARTIFACT__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ARTIFACT__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -2481,15 +2481,6 @@ public interface Bpmn2Package extends EPackage {
     int ASSIGNMENT = 4;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ASSIGNMENT__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2497,6 +2488,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int ASSIGNMENT__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ASSIGNMENT__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -2563,15 +2563,6 @@ public interface Bpmn2Package extends EPackage {
     int ASSOCIATION = 5;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ASSOCIATION__EXTENSION_VALUES = ARTIFACT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2579,6 +2570,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int ASSOCIATION__DOCUMENTATION = ARTIFACT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ASSOCIATION__EXTENSION_VALUES = ARTIFACT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -2654,15 +2654,6 @@ public interface Bpmn2Package extends EPackage {
     int AUDITING = 6;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int AUDITING__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2670,6 +2661,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int AUDITING__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AUDITING__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -2718,15 +2718,6 @@ public interface Bpmn2Package extends EPackage {
     int EVENT = 53;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int EVENT__EXTENSION_VALUES = FLOW_NODE__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2734,6 +2725,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int EVENT__DOCUMENTATION = FLOW_NODE__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT__EXTENSION_VALUES = FLOW_NODE__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -2872,15 +2872,6 @@ public interface Bpmn2Package extends EPackage {
     int CATCH_EVENT = 15;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CATCH_EVENT__EXTENSION_VALUES = EVENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2888,6 +2879,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CATCH_EVENT__DOCUMENTATION = EVENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CATCH_EVENT__EXTENSION_VALUES = EVENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -3080,15 +3080,6 @@ public interface Bpmn2Package extends EPackage {
     int BOUNDARY_EVENT = 8;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int BOUNDARY_EVENT__EXTENSION_VALUES = CATCH_EVENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3096,6 +3087,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int BOUNDARY_EVENT__DOCUMENTATION = CATCH_EVENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BOUNDARY_EVENT__EXTENSION_VALUES = CATCH_EVENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -3306,15 +3306,6 @@ public interface Bpmn2Package extends EPackage {
     int TASK = 131;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int TASK__EXTENSION_VALUES = ACTIVITY__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3322,6 +3313,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int TASK__DOCUMENTATION = ACTIVITY__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TASK__EXTENSION_VALUES = ACTIVITY__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -3550,15 +3550,6 @@ public interface Bpmn2Package extends EPackage {
     int BUSINESS_RULE_TASK = 9;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int BUSINESS_RULE_TASK__EXTENSION_VALUES = TASK__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3566,6 +3557,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int BUSINESS_RULE_TASK__DOCUMENTATION = TASK__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BUSINESS_RULE_TASK__EXTENSION_VALUES = TASK__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -3803,15 +3803,6 @@ public interface Bpmn2Package extends EPackage {
     int CALL_ACTIVITY = 10;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CALL_ACTIVITY__EXTENSION_VALUES = ACTIVITY__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3819,6 +3810,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CALL_ACTIVITY__DOCUMENTATION = ACTIVITY__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CALL_ACTIVITY__EXTENSION_VALUES = ACTIVITY__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -4038,15 +4038,6 @@ public interface Bpmn2Package extends EPackage {
     int CHOREOGRAPHY_ACTIVITY = 19;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CHOREOGRAPHY_ACTIVITY__EXTENSION_VALUES = FLOW_NODE__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4054,6 +4045,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CHOREOGRAPHY_ACTIVITY__DOCUMENTATION = FLOW_NODE__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CHOREOGRAPHY_ACTIVITY__EXTENSION_VALUES = FLOW_NODE__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -4201,15 +4201,6 @@ public interface Bpmn2Package extends EPackage {
     int CALL_CHOREOGRAPHY = 11;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CALL_CHOREOGRAPHY__EXTENSION_VALUES = CHOREOGRAPHY_ACTIVITY__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4217,6 +4208,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CALL_CHOREOGRAPHY__DOCUMENTATION = CHOREOGRAPHY_ACTIVITY__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CALL_CHOREOGRAPHY__EXTENSION_VALUES = CHOREOGRAPHY_ACTIVITY__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -4382,15 +4382,6 @@ public interface Bpmn2Package extends EPackage {
     int CONVERSATION_NODE = 29;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CONVERSATION_NODE__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4398,6 +4389,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CONVERSATION_NODE__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONVERSATION_NODE__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -4500,15 +4500,6 @@ public interface Bpmn2Package extends EPackage {
     int CALL_CONVERSATION = 12;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CALL_CONVERSATION__EXTENSION_VALUES = CONVERSATION_NODE__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4516,6 +4507,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CALL_CONVERSATION__DOCUMENTATION = CONVERSATION_NODE__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CALL_CONVERSATION__EXTENSION_VALUES = CONVERSATION_NODE__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -4636,15 +4636,6 @@ public interface Bpmn2Package extends EPackage {
     int ROOT_ELEMENT = 119;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ROOT_ELEMENT__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4652,6 +4643,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int ROOT_ELEMENT__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ROOT_ELEMENT__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -4700,15 +4700,6 @@ public interface Bpmn2Package extends EPackage {
     int CALLABLE_ELEMENT = 13;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CALLABLE_ELEMENT__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4716,6 +4707,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CALLABLE_ELEMENT__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CALLABLE_ELEMENT__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -4800,15 +4800,6 @@ public interface Bpmn2Package extends EPackage {
     int EVENT_DEFINITION = 55;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int EVENT_DEFINITION__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4816,6 +4807,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int EVENT_DEFINITION__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_DEFINITION__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -4864,15 +4864,6 @@ public interface Bpmn2Package extends EPackage {
     int CANCEL_EVENT_DEFINITION = 14;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CANCEL_EVENT_DEFINITION__EXTENSION_VALUES = EVENT_DEFINITION__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4880,6 +4871,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CANCEL_EVENT_DEFINITION__DOCUMENTATION = EVENT_DEFINITION__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CANCEL_EVENT_DEFINITION__EXTENSION_VALUES = EVENT_DEFINITION__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -4928,15 +4928,6 @@ public interface Bpmn2Package extends EPackage {
     int CATEGORY = 16;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CATEGORY__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4944,6 +4935,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CATEGORY__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CATEGORY__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -5010,15 +5010,6 @@ public interface Bpmn2Package extends EPackage {
     int CATEGORY_VALUE = 17;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CATEGORY_VALUE__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5026,6 +5017,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CATEGORY_VALUE__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CATEGORY_VALUE__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -5092,15 +5092,6 @@ public interface Bpmn2Package extends EPackage {
     int COLLABORATION = 21;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int COLLABORATION__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5108,6 +5099,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int COLLABORATION__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COLLABORATION__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -5264,15 +5264,6 @@ public interface Bpmn2Package extends EPackage {
     int CHOREOGRAPHY = 18;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CHOREOGRAPHY__EXTENSION_VALUES = COLLABORATION__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5280,6 +5271,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CHOREOGRAPHY__DOCUMENTATION = COLLABORATION__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CHOREOGRAPHY__EXTENSION_VALUES = COLLABORATION__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -5454,15 +5454,6 @@ public interface Bpmn2Package extends EPackage {
     int CHOREOGRAPHY_TASK = 20;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CHOREOGRAPHY_TASK__EXTENSION_VALUES = CHOREOGRAPHY_ACTIVITY__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5470,6 +5461,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CHOREOGRAPHY_TASK__DOCUMENTATION = CHOREOGRAPHY_ACTIVITY__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CHOREOGRAPHY_TASK__EXTENSION_VALUES = CHOREOGRAPHY_ACTIVITY__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -5626,15 +5626,6 @@ public interface Bpmn2Package extends EPackage {
     int COMPENSATE_EVENT_DEFINITION = 22;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int COMPENSATE_EVENT_DEFINITION__EXTENSION_VALUES = EVENT_DEFINITION__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5642,6 +5633,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int COMPENSATE_EVENT_DEFINITION__DOCUMENTATION = EVENT_DEFINITION__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMPENSATE_EVENT_DEFINITION__EXTENSION_VALUES = EVENT_DEFINITION__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -5708,15 +5708,6 @@ public interface Bpmn2Package extends EPackage {
     int COMPLEX_BEHAVIOR_DEFINITION = 23;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int COMPLEX_BEHAVIOR_DEFINITION__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5724,6 +5715,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int COMPLEX_BEHAVIOR_DEFINITION__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMPLEX_BEHAVIOR_DEFINITION__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -5790,15 +5790,6 @@ public interface Bpmn2Package extends EPackage {
     int GATEWAY = 66;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int GATEWAY__EXTENSION_VALUES = FLOW_NODE__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5806,6 +5797,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int GATEWAY__DOCUMENTATION = FLOW_NODE__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GATEWAY__EXTENSION_VALUES = FLOW_NODE__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -5926,15 +5926,6 @@ public interface Bpmn2Package extends EPackage {
     int COMPLEX_GATEWAY = 24;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int COMPLEX_GATEWAY__EXTENSION_VALUES = GATEWAY__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5942,6 +5933,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int COMPLEX_GATEWAY__DOCUMENTATION = GATEWAY__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMPLEX_GATEWAY__EXTENSION_VALUES = GATEWAY__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -6080,15 +6080,6 @@ public interface Bpmn2Package extends EPackage {
     int CONDITIONAL_EVENT_DEFINITION = 25;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CONDITIONAL_EVENT_DEFINITION__EXTENSION_VALUES = EVENT_DEFINITION__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6096,6 +6087,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CONDITIONAL_EVENT_DEFINITION__DOCUMENTATION = EVENT_DEFINITION__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONDITIONAL_EVENT_DEFINITION__EXTENSION_VALUES = EVENT_DEFINITION__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -6153,15 +6153,6 @@ public interface Bpmn2Package extends EPackage {
     int CONVERSATION = 26;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CONVERSATION__EXTENSION_VALUES = CONVERSATION_NODE__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6169,6 +6160,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CONVERSATION__DOCUMENTATION = CONVERSATION_NODE__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONVERSATION__EXTENSION_VALUES = CONVERSATION_NODE__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -6271,15 +6271,6 @@ public interface Bpmn2Package extends EPackage {
     int CONVERSATION_ASSOCIATION = 27;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CONVERSATION_ASSOCIATION__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6287,6 +6278,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CONVERSATION_ASSOCIATION__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONVERSATION_ASSOCIATION__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -6353,15 +6353,6 @@ public interface Bpmn2Package extends EPackage {
     int CONVERSATION_LINK = 28;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CONVERSATION_LINK__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6369,6 +6360,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CONVERSATION_LINK__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONVERSATION_LINK__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -6444,15 +6444,6 @@ public interface Bpmn2Package extends EPackage {
     int CORRELATION_KEY = 30;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CORRELATION_KEY__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6460,6 +6451,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CORRELATION_KEY__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CORRELATION_KEY__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -6526,15 +6526,6 @@ public interface Bpmn2Package extends EPackage {
     int CORRELATION_PROPERTY = 31;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CORRELATION_PROPERTY__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6542,6 +6533,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CORRELATION_PROPERTY__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CORRELATION_PROPERTY__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -6617,15 +6617,6 @@ public interface Bpmn2Package extends EPackage {
     int CORRELATION_PROPERTY_BINDING = 32;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CORRELATION_PROPERTY_BINDING__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6633,6 +6624,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CORRELATION_PROPERTY_BINDING__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CORRELATION_PROPERTY_BINDING__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -6699,15 +6699,6 @@ public interface Bpmn2Package extends EPackage {
     int CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION = 33;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6715,6 +6706,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -6781,15 +6781,6 @@ public interface Bpmn2Package extends EPackage {
     int CORRELATION_SUBSCRIPTION = 34;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CORRELATION_SUBSCRIPTION__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6797,6 +6788,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int CORRELATION_SUBSCRIPTION__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CORRELATION_SUBSCRIPTION__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -6863,15 +6863,6 @@ public interface Bpmn2Package extends EPackage {
     int DATA_ASSOCIATION = 35;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int DATA_ASSOCIATION__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6879,6 +6870,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int DATA_ASSOCIATION__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATA_ASSOCIATION__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -6963,15 +6963,6 @@ public interface Bpmn2Package extends EPackage {
     int ITEM_AWARE_ELEMENT = 86;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ITEM_AWARE_ELEMENT__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6979,6 +6970,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int ITEM_AWARE_ELEMENT__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ITEM_AWARE_ELEMENT__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -7045,15 +7045,6 @@ public interface Bpmn2Package extends EPackage {
     int DATA_INPUT = 36;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int DATA_INPUT__EXTENSION_VALUES = ITEM_AWARE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -7061,6 +7052,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int DATA_INPUT__DOCUMENTATION = ITEM_AWARE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATA_INPUT__EXTENSION_VALUES = ITEM_AWARE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -7172,15 +7172,6 @@ public interface Bpmn2Package extends EPackage {
     int DATA_INPUT_ASSOCIATION = 37;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int DATA_INPUT_ASSOCIATION__EXTENSION_VALUES = DATA_ASSOCIATION__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -7188,6 +7179,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int DATA_INPUT_ASSOCIATION__DOCUMENTATION = DATA_ASSOCIATION__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATA_INPUT_ASSOCIATION__EXTENSION_VALUES = DATA_ASSOCIATION__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -7272,15 +7272,6 @@ public interface Bpmn2Package extends EPackage {
     int DATA_OBJECT = 38;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int DATA_OBJECT__EXTENSION_VALUES = FLOW_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -7288,6 +7279,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int DATA_OBJECT__DOCUMENTATION = FLOW_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATA_OBJECT__EXTENSION_VALUES = FLOW_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -7399,15 +7399,6 @@ public interface Bpmn2Package extends EPackage {
     int DATA_OBJECT_REFERENCE = 39;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int DATA_OBJECT_REFERENCE__EXTENSION_VALUES = FLOW_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -7415,6 +7406,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int DATA_OBJECT_REFERENCE__DOCUMENTATION = FLOW_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATA_OBJECT_REFERENCE__EXTENSION_VALUES = FLOW_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -7526,15 +7526,6 @@ public interface Bpmn2Package extends EPackage {
     int DATA_OUTPUT = 40;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int DATA_OUTPUT__EXTENSION_VALUES = ITEM_AWARE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -7542,6 +7533,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int DATA_OUTPUT__DOCUMENTATION = ITEM_AWARE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATA_OUTPUT__EXTENSION_VALUES = ITEM_AWARE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -7653,15 +7653,6 @@ public interface Bpmn2Package extends EPackage {
     int DATA_OUTPUT_ASSOCIATION = 41;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int DATA_OUTPUT_ASSOCIATION__EXTENSION_VALUES = DATA_ASSOCIATION__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -7669,6 +7660,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int DATA_OUTPUT_ASSOCIATION__DOCUMENTATION = DATA_ASSOCIATION__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATA_OUTPUT_ASSOCIATION__EXTENSION_VALUES = DATA_ASSOCIATION__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -7753,15 +7753,6 @@ public interface Bpmn2Package extends EPackage {
     int DATA_STATE = 42;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int DATA_STATE__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -7769,6 +7760,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int DATA_STATE__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATA_STATE__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -7826,15 +7826,6 @@ public interface Bpmn2Package extends EPackage {
     int DATA_STORE = 43;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int DATA_STORE__EXTENSION_VALUES = ITEM_AWARE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -7842,6 +7833,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int DATA_STORE__DOCUMENTATION = ITEM_AWARE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATA_STORE__EXTENSION_VALUES = ITEM_AWARE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -7935,15 +7935,6 @@ public interface Bpmn2Package extends EPackage {
     int DATA_STORE_REFERENCE = 44;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int DATA_STORE_REFERENCE__EXTENSION_VALUES = FLOW_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -7951,6 +7942,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int DATA_STORE_REFERENCE__DOCUMENTATION = FLOW_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATA_STORE_REFERENCE__EXTENSION_VALUES = FLOW_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -8062,15 +8062,6 @@ public interface Bpmn2Package extends EPackage {
     int DEFINITIONS = 45;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int DEFINITIONS__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -8078,6 +8069,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int DEFINITIONS__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFINITIONS__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -8225,15 +8225,6 @@ public interface Bpmn2Package extends EPackage {
     int DOCUMENTATION = 46;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int DOCUMENTATION__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -8241,6 +8232,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int DOCUMENTATION__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DOCUMENTATION__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -8316,15 +8316,6 @@ public interface Bpmn2Package extends EPackage {
     int THROW_EVENT = 134;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int THROW_EVENT__EXTENSION_VALUES = EVENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -8332,6 +8323,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int THROW_EVENT__DOCUMENTATION = EVENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int THROW_EVENT__EXTENSION_VALUES = EVENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -8515,15 +8515,6 @@ public interface Bpmn2Package extends EPackage {
     int END_EVENT = 47;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int END_EVENT__EXTENSION_VALUES = THROW_EVENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -8531,6 +8522,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int END_EVENT__DOCUMENTATION = THROW_EVENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int END_EVENT__EXTENSION_VALUES = THROW_EVENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -8714,15 +8714,6 @@ public interface Bpmn2Package extends EPackage {
     int END_POINT = 48;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int END_POINT__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -8730,6 +8721,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int END_POINT__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int END_POINT__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -8778,15 +8778,6 @@ public interface Bpmn2Package extends EPackage {
     int ERROR = 49;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ERROR__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -8794,6 +8785,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int ERROR__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ERROR__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -8869,15 +8869,6 @@ public interface Bpmn2Package extends EPackage {
     int ERROR_EVENT_DEFINITION = 50;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ERROR_EVENT_DEFINITION__EXTENSION_VALUES = EVENT_DEFINITION__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -8885,6 +8876,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int ERROR_EVENT_DEFINITION__DOCUMENTATION = EVENT_DEFINITION__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ERROR_EVENT_DEFINITION__EXTENSION_VALUES = EVENT_DEFINITION__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -8942,15 +8942,6 @@ public interface Bpmn2Package extends EPackage {
     int ESCALATION = 51;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ESCALATION__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -8958,6 +8949,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int ESCALATION__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ESCALATION__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -9033,15 +9033,6 @@ public interface Bpmn2Package extends EPackage {
     int ESCALATION_EVENT_DEFINITION = 52;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ESCALATION_EVENT_DEFINITION__EXTENSION_VALUES = EVENT_DEFINITION__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -9049,6 +9040,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int ESCALATION_EVENT_DEFINITION__DOCUMENTATION = EVENT_DEFINITION__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ESCALATION_EVENT_DEFINITION__EXTENSION_VALUES = EVENT_DEFINITION__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -9106,15 +9106,6 @@ public interface Bpmn2Package extends EPackage {
     int EVENT_BASED_GATEWAY = 54;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int EVENT_BASED_GATEWAY__EXTENSION_VALUES = GATEWAY__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -9122,6 +9113,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int EVENT_BASED_GATEWAY__DOCUMENTATION = GATEWAY__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_BASED_GATEWAY__EXTENSION_VALUES = GATEWAY__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -9260,15 +9260,6 @@ public interface Bpmn2Package extends EPackage {
     int EXCLUSIVE_GATEWAY = 56;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int EXCLUSIVE_GATEWAY__EXTENSION_VALUES = GATEWAY__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -9276,6 +9267,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int EXCLUSIVE_GATEWAY__DOCUMENTATION = GATEWAY__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EXCLUSIVE_GATEWAY__EXTENSION_VALUES = GATEWAY__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -9405,15 +9405,6 @@ public interface Bpmn2Package extends EPackage {
     int EXPRESSION = 57;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int EXPRESSION__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -9421,6 +9412,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int EXPRESSION__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EXPRESSION__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -9653,15 +9653,6 @@ public interface Bpmn2Package extends EPackage {
     int FLOW_ELEMENTS_CONTAINER = 63;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int FLOW_ELEMENTS_CONTAINER__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -9669,6 +9660,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int FLOW_ELEMENTS_CONTAINER__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FLOW_ELEMENTS_CONTAINER__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -9735,15 +9735,6 @@ public interface Bpmn2Package extends EPackage {
     int FORMAL_EXPRESSION = 65;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int FORMAL_EXPRESSION__EXTENSION_VALUES = EXPRESSION__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -9751,6 +9742,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int FORMAL_EXPRESSION__DOCUMENTATION = EXPRESSION__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FORMAL_EXPRESSION__EXTENSION_VALUES = EXPRESSION__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -9835,15 +9835,6 @@ public interface Bpmn2Package extends EPackage {
     int GLOBAL_TASK = 72;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int GLOBAL_TASK__EXTENSION_VALUES = CALLABLE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -9851,6 +9842,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int GLOBAL_TASK__DOCUMENTATION = CALLABLE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GLOBAL_TASK__EXTENSION_VALUES = CALLABLE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -9944,15 +9944,6 @@ public interface Bpmn2Package extends EPackage {
     int GLOBAL_BUSINESS_RULE_TASK = 67;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int GLOBAL_BUSINESS_RULE_TASK__EXTENSION_VALUES = GLOBAL_TASK__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -9960,6 +9951,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int GLOBAL_BUSINESS_RULE_TASK__DOCUMENTATION = GLOBAL_TASK__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GLOBAL_BUSINESS_RULE_TASK__EXTENSION_VALUES = GLOBAL_TASK__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -10062,15 +10062,6 @@ public interface Bpmn2Package extends EPackage {
     int GLOBAL_CHOREOGRAPHY_TASK = 68;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int GLOBAL_CHOREOGRAPHY_TASK__EXTENSION_VALUES = CHOREOGRAPHY__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -10078,6 +10069,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int GLOBAL_CHOREOGRAPHY_TASK__DOCUMENTATION = CHOREOGRAPHY__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GLOBAL_CHOREOGRAPHY_TASK__EXTENSION_VALUES = CHOREOGRAPHY__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -10261,15 +10261,6 @@ public interface Bpmn2Package extends EPackage {
     int GLOBAL_CONVERSATION = 69;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int GLOBAL_CONVERSATION__EXTENSION_VALUES = COLLABORATION__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -10277,6 +10268,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int GLOBAL_CONVERSATION__DOCUMENTATION = COLLABORATION__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GLOBAL_CONVERSATION__EXTENSION_VALUES = COLLABORATION__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -10433,15 +10433,6 @@ public interface Bpmn2Package extends EPackage {
     int GLOBAL_MANUAL_TASK = 70;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int GLOBAL_MANUAL_TASK__EXTENSION_VALUES = GLOBAL_TASK__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -10449,6 +10440,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int GLOBAL_MANUAL_TASK__DOCUMENTATION = GLOBAL_TASK__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GLOBAL_MANUAL_TASK__EXTENSION_VALUES = GLOBAL_TASK__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -10542,15 +10542,6 @@ public interface Bpmn2Package extends EPackage {
     int GLOBAL_SCRIPT_TASK = 71;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int GLOBAL_SCRIPT_TASK__EXTENSION_VALUES = GLOBAL_TASK__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -10558,6 +10549,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int GLOBAL_SCRIPT_TASK__DOCUMENTATION = GLOBAL_TASK__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GLOBAL_SCRIPT_TASK__EXTENSION_VALUES = GLOBAL_TASK__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -10669,15 +10669,6 @@ public interface Bpmn2Package extends EPackage {
     int GLOBAL_USER_TASK = 73;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int GLOBAL_USER_TASK__EXTENSION_VALUES = GLOBAL_TASK__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -10685,6 +10676,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int GLOBAL_USER_TASK__DOCUMENTATION = GLOBAL_TASK__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GLOBAL_USER_TASK__EXTENSION_VALUES = GLOBAL_TASK__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -10796,15 +10796,6 @@ public interface Bpmn2Package extends EPackage {
     int GROUP = 74;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int GROUP__EXTENSION_VALUES = ARTIFACT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -10812,6 +10803,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int GROUP__DOCUMENTATION = ARTIFACT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GROUP__EXTENSION_VALUES = ARTIFACT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -10869,15 +10869,6 @@ public interface Bpmn2Package extends EPackage {
     int RESOURCE_ROLE = 118;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int RESOURCE_ROLE__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -10885,6 +10876,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int RESOURCE_ROLE__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RESOURCE_ROLE__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -10969,15 +10969,6 @@ public interface Bpmn2Package extends EPackage {
     int PERFORMER = 107;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PERFORMER__EXTENSION_VALUES = RESOURCE_ROLE__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -10985,6 +10976,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int PERFORMER__DOCUMENTATION = RESOURCE_ROLE__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERFORMER__EXTENSION_VALUES = RESOURCE_ROLE__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -11069,15 +11069,6 @@ public interface Bpmn2Package extends EPackage {
     int HUMAN_PERFORMER = 75;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int HUMAN_PERFORMER__EXTENSION_VALUES = PERFORMER__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11085,6 +11076,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int HUMAN_PERFORMER__DOCUMENTATION = PERFORMER__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HUMAN_PERFORMER__EXTENSION_VALUES = PERFORMER__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -11169,15 +11169,6 @@ public interface Bpmn2Package extends EPackage {
     int IMPLICIT_THROW_EVENT = 76;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int IMPLICIT_THROW_EVENT__EXTENSION_VALUES = THROW_EVENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11185,6 +11176,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int IMPLICIT_THROW_EVENT__DOCUMENTATION = THROW_EVENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int IMPLICIT_THROW_EVENT__EXTENSION_VALUES = THROW_EVENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -11414,15 +11414,6 @@ public interface Bpmn2Package extends EPackage {
     int INCLUSIVE_GATEWAY = 78;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int INCLUSIVE_GATEWAY__EXTENSION_VALUES = GATEWAY__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11430,6 +11421,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int INCLUSIVE_GATEWAY__DOCUMENTATION = GATEWAY__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INCLUSIVE_GATEWAY__EXTENSION_VALUES = GATEWAY__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -11559,15 +11559,6 @@ public interface Bpmn2Package extends EPackage {
     int INPUT_OUTPUT_BINDING = 79;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int INPUT_OUTPUT_BINDING__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11575,6 +11566,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int INPUT_OUTPUT_BINDING__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INPUT_OUTPUT_BINDING__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -11650,15 +11650,6 @@ public interface Bpmn2Package extends EPackage {
     int INPUT_OUTPUT_SPECIFICATION = 80;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int INPUT_OUTPUT_SPECIFICATION__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11666,6 +11657,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int INPUT_OUTPUT_SPECIFICATION__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INPUT_OUTPUT_SPECIFICATION__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -11750,15 +11750,6 @@ public interface Bpmn2Package extends EPackage {
     int INPUT_SET = 81;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int INPUT_SET__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11766,6 +11757,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int INPUT_SET__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INPUT_SET__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -11896,15 +11896,6 @@ public interface Bpmn2Package extends EPackage {
     int INTERFACE = 83;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int INTERFACE__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11912,6 +11903,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int INTERFACE__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERFACE__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -11987,15 +11987,6 @@ public interface Bpmn2Package extends EPackage {
     int INTERMEDIATE_CATCH_EVENT = 84;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int INTERMEDIATE_CATCH_EVENT__EXTENSION_VALUES = CATCH_EVENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -12003,6 +11994,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int INTERMEDIATE_CATCH_EVENT__DOCUMENTATION = CATCH_EVENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERMEDIATE_CATCH_EVENT__EXTENSION_VALUES = CATCH_EVENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -12195,15 +12195,6 @@ public interface Bpmn2Package extends EPackage {
     int INTERMEDIATE_THROW_EVENT = 85;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int INTERMEDIATE_THROW_EVENT__EXTENSION_VALUES = THROW_EVENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -12211,6 +12202,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int INTERMEDIATE_THROW_EVENT__DOCUMENTATION = THROW_EVENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERMEDIATE_THROW_EVENT__EXTENSION_VALUES = THROW_EVENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -12394,15 +12394,6 @@ public interface Bpmn2Package extends EPackage {
     int ITEM_DEFINITION = 87;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ITEM_DEFINITION__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -12410,6 +12401,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int ITEM_DEFINITION__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ITEM_DEFINITION__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -12494,15 +12494,6 @@ public interface Bpmn2Package extends EPackage {
     int LANE = 88;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int LANE__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -12510,6 +12501,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int LANE__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LANE__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -12603,15 +12603,6 @@ public interface Bpmn2Package extends EPackage {
     int LANE_SET = 89;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int LANE_SET__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -12619,6 +12610,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int LANE_SET__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LANE_SET__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -12685,15 +12685,6 @@ public interface Bpmn2Package extends EPackage {
     int LINK_EVENT_DEFINITION = 90;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int LINK_EVENT_DEFINITION__EXTENSION_VALUES = EVENT_DEFINITION__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -12701,6 +12692,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int LINK_EVENT_DEFINITION__DOCUMENTATION = EVENT_DEFINITION__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LINK_EVENT_DEFINITION__EXTENSION_VALUES = EVENT_DEFINITION__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -12776,15 +12776,6 @@ public interface Bpmn2Package extends EPackage {
     int LOOP_CHARACTERISTICS = 91;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int LOOP_CHARACTERISTICS__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -12792,6 +12783,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int LOOP_CHARACTERISTICS__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LOOP_CHARACTERISTICS__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -12840,15 +12840,6 @@ public interface Bpmn2Package extends EPackage {
     int MANUAL_TASK = 92;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int MANUAL_TASK__EXTENSION_VALUES = TASK__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -12856,6 +12847,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int MANUAL_TASK__DOCUMENTATION = TASK__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MANUAL_TASK__EXTENSION_VALUES = TASK__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -13084,15 +13084,6 @@ public interface Bpmn2Package extends EPackage {
     int MESSAGE = 93;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int MESSAGE__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -13100,6 +13091,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int MESSAGE__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MESSAGE__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -13166,15 +13166,6 @@ public interface Bpmn2Package extends EPackage {
     int MESSAGE_EVENT_DEFINITION = 94;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int MESSAGE_EVENT_DEFINITION__EXTENSION_VALUES = EVENT_DEFINITION__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -13182,6 +13173,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int MESSAGE_EVENT_DEFINITION__DOCUMENTATION = EVENT_DEFINITION__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MESSAGE_EVENT_DEFINITION__EXTENSION_VALUES = EVENT_DEFINITION__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -13248,15 +13248,6 @@ public interface Bpmn2Package extends EPackage {
     int MESSAGE_FLOW = 95;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int MESSAGE_FLOW__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -13264,6 +13255,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int MESSAGE_FLOW__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MESSAGE_FLOW__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -13348,15 +13348,6 @@ public interface Bpmn2Package extends EPackage {
     int MESSAGE_FLOW_ASSOCIATION = 96;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int MESSAGE_FLOW_ASSOCIATION__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -13364,6 +13355,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int MESSAGE_FLOW_ASSOCIATION__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MESSAGE_FLOW_ASSOCIATION__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -13430,15 +13430,6 @@ public interface Bpmn2Package extends EPackage {
     int MONITORING = 97;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int MONITORING__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -13446,6 +13437,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int MONITORING__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MONITORING__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -13494,15 +13494,6 @@ public interface Bpmn2Package extends EPackage {
     int MULTI_INSTANCE_LOOP_CHARACTERISTICS = 98;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int MULTI_INSTANCE_LOOP_CHARACTERISTICS__EXTENSION_VALUES = LOOP_CHARACTERISTICS__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -13510,6 +13501,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int MULTI_INSTANCE_LOOP_CHARACTERISTICS__DOCUMENTATION = LOOP_CHARACTERISTICS__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MULTI_INSTANCE_LOOP_CHARACTERISTICS__EXTENSION_VALUES = LOOP_CHARACTERISTICS__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -13657,15 +13657,6 @@ public interface Bpmn2Package extends EPackage {
     int OPERATION = 99;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int OPERATION__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -13673,6 +13664,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int OPERATION__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int OPERATION__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -13766,15 +13766,6 @@ public interface Bpmn2Package extends EPackage {
     int OUTPUT_SET = 100;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int OUTPUT_SET__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -13782,6 +13773,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int OUTPUT_SET__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int OUTPUT_SET__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -13875,15 +13875,6 @@ public interface Bpmn2Package extends EPackage {
     int PARALLEL_GATEWAY = 101;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PARALLEL_GATEWAY__EXTENSION_VALUES = GATEWAY__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -13891,6 +13882,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int PARALLEL_GATEWAY__DOCUMENTATION = GATEWAY__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PARALLEL_GATEWAY__EXTENSION_VALUES = GATEWAY__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -14011,15 +14011,6 @@ public interface Bpmn2Package extends EPackage {
     int PARTICIPANT = 102;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PARTICIPANT__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -14027,6 +14018,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int PARTICIPANT__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PARTICIPANT__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -14138,15 +14138,6 @@ public interface Bpmn2Package extends EPackage {
     int PARTICIPANT_ASSOCIATION = 103;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PARTICIPANT_ASSOCIATION__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -14154,6 +14145,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int PARTICIPANT_ASSOCIATION__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PARTICIPANT_ASSOCIATION__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -14220,15 +14220,6 @@ public interface Bpmn2Package extends EPackage {
     int PARTICIPANT_MULTIPLICITY = 104;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PARTICIPANT_MULTIPLICITY__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -14236,6 +14227,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int PARTICIPANT_MULTIPLICITY__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PARTICIPANT_MULTIPLICITY__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -14302,15 +14302,6 @@ public interface Bpmn2Package extends EPackage {
     int PARTNER_ENTITY = 105;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PARTNER_ENTITY__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -14318,6 +14309,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int PARTNER_ENTITY__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PARTNER_ENTITY__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -14384,15 +14384,6 @@ public interface Bpmn2Package extends EPackage {
     int PARTNER_ROLE = 106;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PARTNER_ROLE__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -14400,6 +14391,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int PARTNER_ROLE__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PARTNER_ROLE__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -14466,15 +14466,6 @@ public interface Bpmn2Package extends EPackage {
     int POTENTIAL_OWNER = 108;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int POTENTIAL_OWNER__EXTENSION_VALUES = HUMAN_PERFORMER__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -14482,6 +14473,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int POTENTIAL_OWNER__DOCUMENTATION = HUMAN_PERFORMER__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int POTENTIAL_OWNER__EXTENSION_VALUES = HUMAN_PERFORMER__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -14566,15 +14566,6 @@ public interface Bpmn2Package extends EPackage {
     int PROCESS = 109;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROCESS__EXTENSION_VALUES = CALLABLE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -14582,6 +14573,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int PROCESS__DOCUMENTATION = CALLABLE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROCESS__EXTENSION_VALUES = CALLABLE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -14783,15 +14783,6 @@ public interface Bpmn2Package extends EPackage {
     int PROPERTY = 110;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROPERTY__EXTENSION_VALUES = ITEM_AWARE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -14799,6 +14790,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int PROPERTY__DOCUMENTATION = ITEM_AWARE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROPERTY__EXTENSION_VALUES = ITEM_AWARE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -14874,15 +14874,6 @@ public interface Bpmn2Package extends EPackage {
     int RECEIVE_TASK = 111;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int RECEIVE_TASK__EXTENSION_VALUES = TASK__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -14890,6 +14881,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int RECEIVE_TASK__DOCUMENTATION = TASK__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RECEIVE_TASK__EXTENSION_VALUES = TASK__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -15154,15 +15154,6 @@ public interface Bpmn2Package extends EPackage {
     int RELATIONSHIP = 112;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int RELATIONSHIP__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -15170,6 +15161,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int RELATIONSHIP__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RELATIONSHIP__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -15254,15 +15254,6 @@ public interface Bpmn2Package extends EPackage {
     int RENDERING = 113;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int RENDERING__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -15270,6 +15261,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int RENDERING__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RENDERING__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -15318,15 +15318,6 @@ public interface Bpmn2Package extends EPackage {
     int RESOURCE = 114;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int RESOURCE__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -15334,6 +15325,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int RESOURCE__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RESOURCE__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -15400,15 +15400,6 @@ public interface Bpmn2Package extends EPackage {
     int RESOURCE_ASSIGNMENT_EXPRESSION = 115;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int RESOURCE_ASSIGNMENT_EXPRESSION__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -15416,6 +15407,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int RESOURCE_ASSIGNMENT_EXPRESSION__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RESOURCE_ASSIGNMENT_EXPRESSION__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -15473,15 +15473,6 @@ public interface Bpmn2Package extends EPackage {
     int RESOURCE_PARAMETER = 116;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int RESOURCE_PARAMETER__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -15489,6 +15480,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int RESOURCE_PARAMETER__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RESOURCE_PARAMETER__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -15564,15 +15564,6 @@ public interface Bpmn2Package extends EPackage {
     int RESOURCE_PARAMETER_BINDING = 117;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int RESOURCE_PARAMETER_BINDING__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -15580,6 +15571,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int RESOURCE_PARAMETER_BINDING__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RESOURCE_PARAMETER_BINDING__EXTENSION_VALUES = BASE_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -15646,15 +15646,6 @@ public interface Bpmn2Package extends EPackage {
     int SCRIPT_TASK = 120;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SCRIPT_TASK__EXTENSION_VALUES = TASK__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -15662,6 +15653,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int SCRIPT_TASK__DOCUMENTATION = TASK__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SCRIPT_TASK__EXTENSION_VALUES = TASK__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -15908,15 +15908,6 @@ public interface Bpmn2Package extends EPackage {
     int SEND_TASK = 121;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SEND_TASK__EXTENSION_VALUES = TASK__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -15924,6 +15915,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int SEND_TASK__DOCUMENTATION = TASK__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SEND_TASK__EXTENSION_VALUES = TASK__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -16179,15 +16179,6 @@ public interface Bpmn2Package extends EPackage {
     int SEQUENCE_FLOW = 122;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SEQUENCE_FLOW__EXTENSION_VALUES = FLOW_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -16195,6 +16186,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int SEQUENCE_FLOW__DOCUMENTATION = FLOW_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SEQUENCE_FLOW__EXTENSION_VALUES = FLOW_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -16315,15 +16315,6 @@ public interface Bpmn2Package extends EPackage {
     int SERVICE_TASK = 123;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SERVICE_TASK__EXTENSION_VALUES = TASK__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -16331,6 +16322,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int SERVICE_TASK__DOCUMENTATION = TASK__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SERVICE_TASK__EXTENSION_VALUES = TASK__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -16577,15 +16577,6 @@ public interface Bpmn2Package extends EPackage {
     int SIGNAL = 124;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SIGNAL__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -16593,6 +16584,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int SIGNAL__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIGNAL__EXTENSION_VALUES = ROOT_ELEMENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -16659,15 +16659,6 @@ public interface Bpmn2Package extends EPackage {
     int SIGNAL_EVENT_DEFINITION = 125;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SIGNAL_EVENT_DEFINITION__EXTENSION_VALUES = EVENT_DEFINITION__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -16675,6 +16666,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int SIGNAL_EVENT_DEFINITION__DOCUMENTATION = EVENT_DEFINITION__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIGNAL_EVENT_DEFINITION__EXTENSION_VALUES = EVENT_DEFINITION__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -16732,15 +16732,6 @@ public interface Bpmn2Package extends EPackage {
     int STANDARD_LOOP_CHARACTERISTICS = 126;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int STANDARD_LOOP_CHARACTERISTICS__EXTENSION_VALUES = LOOP_CHARACTERISTICS__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -16748,6 +16739,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int STANDARD_LOOP_CHARACTERISTICS__DOCUMENTATION = LOOP_CHARACTERISTICS__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STANDARD_LOOP_CHARACTERISTICS__EXTENSION_VALUES = LOOP_CHARACTERISTICS__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -16823,15 +16823,6 @@ public interface Bpmn2Package extends EPackage {
     int START_EVENT = 127;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int START_EVENT__EXTENSION_VALUES = CATCH_EVENT__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -16839,6 +16830,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int START_EVENT__DOCUMENTATION = CATCH_EVENT__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int START_EVENT__EXTENSION_VALUES = CATCH_EVENT__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -17040,15 +17040,6 @@ public interface Bpmn2Package extends EPackage {
     int SUB_CHOREOGRAPHY = 128;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SUB_CHOREOGRAPHY__EXTENSION_VALUES = CHOREOGRAPHY_ACTIVITY__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -17056,6 +17047,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int SUB_CHOREOGRAPHY__DOCUMENTATION = CHOREOGRAPHY_ACTIVITY__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUB_CHOREOGRAPHY__EXTENSION_VALUES = CHOREOGRAPHY_ACTIVITY__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -17230,15 +17230,6 @@ public interface Bpmn2Package extends EPackage {
     int SUB_CONVERSATION = 129;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SUB_CONVERSATION__EXTENSION_VALUES = CONVERSATION_NODE__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -17246,6 +17237,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int SUB_CONVERSATION__DOCUMENTATION = CONVERSATION_NODE__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUB_CONVERSATION__EXTENSION_VALUES = CONVERSATION_NODE__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -17357,15 +17357,6 @@ public interface Bpmn2Package extends EPackage {
     int TERMINATE_EVENT_DEFINITION = 132;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int TERMINATE_EVENT_DEFINITION__EXTENSION_VALUES = EVENT_DEFINITION__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -17373,6 +17364,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int TERMINATE_EVENT_DEFINITION__DOCUMENTATION = EVENT_DEFINITION__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TERMINATE_EVENT_DEFINITION__EXTENSION_VALUES = EVENT_DEFINITION__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -17421,15 +17421,6 @@ public interface Bpmn2Package extends EPackage {
     int TEXT_ANNOTATION = 133;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int TEXT_ANNOTATION__EXTENSION_VALUES = FLOW_NODE__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -17437,6 +17428,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int TEXT_ANNOTATION__DOCUMENTATION = FLOW_NODE__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TEXT_ANNOTATION__EXTENSION_VALUES = FLOW_NODE__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -17566,15 +17566,6 @@ public interface Bpmn2Package extends EPackage {
     int TIMER_EVENT_DEFINITION = 135;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int TIMER_EVENT_DEFINITION__EXTENSION_VALUES = EVENT_DEFINITION__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -17582,6 +17573,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int TIMER_EVENT_DEFINITION__DOCUMENTATION = EVENT_DEFINITION__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TIMER_EVENT_DEFINITION__EXTENSION_VALUES = EVENT_DEFINITION__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -17657,15 +17657,6 @@ public interface Bpmn2Package extends EPackage {
     int TRANSACTION = 136;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int TRANSACTION__EXTENSION_VALUES = SUB_PROCESS__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -17673,6 +17664,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int TRANSACTION__DOCUMENTATION = SUB_PROCESS__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRANSACTION__EXTENSION_VALUES = SUB_PROCESS__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -17937,15 +17937,6 @@ public interface Bpmn2Package extends EPackage {
     int USER_TASK = 137;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int USER_TASK__EXTENSION_VALUES = TASK__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -17953,6 +17944,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int USER_TASK__DOCUMENTATION = TASK__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int USER_TASK__EXTENSION_VALUES = TASK__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.
@@ -18199,15 +18199,6 @@ public interface Bpmn2Package extends EPackage {
     int EVENT_SUBPROCESS = 138;
 
     /**
-     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int EVENT_SUBPROCESS__EXTENSION_VALUES = SUB_PROCESS__EXTENSION_VALUES;
-
-    /**
      * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -18215,6 +18206,15 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int EVENT_SUBPROCESS__DOCUMENTATION = SUB_PROCESS__DOCUMENTATION;
+
+    /**
+     * The feature id for the '<em><b>Extension Values</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EVENT_SUBPROCESS__EXTENSION_VALUES = SUB_PROCESS__EXTENSION_VALUES;
 
     /**
      * The feature id for the '<em><b>Extension Definitions</b></em>' reference list.

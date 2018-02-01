@@ -1533,19 +1533,19 @@
       <details key="kind" value="elementOnly"/>
       <details key="abstract" value="true"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="extensionValues" ordered="false"
-        upperBound="-1" eType="#//ExtensionAttributeValue" containment="true">
-      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-        <details key="kind" value="element"/>
-        <details key="name" value="extensionElements"/>
-        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
-      </eAnnotations>
-    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="documentation" ordered="false"
         upperBound="-1" eType="#//Documentation" containment="true">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
         <details key="name" value="documentation"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extensionValues" ordered="false"
+        upperBound="-1" eType="#//ExtensionAttributeValue" containment="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="extensionElements"/>
         <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
       </eAnnotations>
     </eStructuralFeatures>
